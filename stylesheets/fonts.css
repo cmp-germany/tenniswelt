@@ -1,2 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+/* line 4, ../sass/fonts.sass */
+.white-negative-text {
+  background-color: #fff;
+  line-height: 55px;
+  padding-right: 10px;
+}
+
+/* line 9, ../sass/fonts.sass */
+h1 {
+  font-weight: lighter;
+}
+
+/* line 12, ../sass/fonts.sass */
+.text-over-background-image {
+  color: #fff;
+}
