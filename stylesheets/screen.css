@@ -2,3 +2,64 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import 'https://fonts.googleapis.com/css?family=Pacifico';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+/* line 1, ../sass/navbar.sass */
+.navbar {
+  border-radius: 0;
+}
+/* line 6, ../sass/navbar.sass */
+.navbar .navbar-brand__title {
+  font-family: "Pacifico", cursive;
+  color: #3aa6e7;
+  font-size: 30px;
+}
+/* line 11, ../sass/navbar.sass */
+.navbar .navbar-brand__subtitle {
+  color: #fff;
+}
+
+/* line 15, ../sass/navbar.sass */
+.navbar-inverse {
+  background-image: none;
+}
+
+/* line 1, ../sass/buttons.sass */
+.btn {
+  border-radius: 0;
+}
+
+/* line 4, ../sass/buttons.sass */
+.btn-important {
+  background-color: #E9002F;
+  color: #fff;
+}
+
+/* line 1, ../sass/form.sass */
+.register-form {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 5, ../sass/form.sass */
+.form-control {
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 0;
+  color: #6a6a6a;
+  box-shadow: none;
+}
+
+/* line 14, ../sass/form.sass */
+.form-control--login-navbar {
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #fff;
+}
+
+/* line 21, ../sass/form.sass */
+.form-control::-webkit-input-placeholder,
+.form-control:-moz-placeholder,
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder {
+  color: #6a6a6a;
+}

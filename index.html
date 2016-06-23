@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>starters.koeln</title>
 
     <!-- #### CSS #### -->
@@ -27,6 +29,71 @@
 
   </head>
   <body>
-    <h1 class="test">Hello World</h1>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control form-control--login-navbar" name="username" placeholder="E-Mail">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
+            </div>
+            <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <section style="background-image: url('gfx/Fotolia_60939520_L.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <h1>Trete jetzt mit der Kölner Gründerszene in Kontakt!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button type="button" name="button" class="btn btn-important"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> CallToAction</button>
+            <button type="button" name="button" class="btn btn-important"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> CallToAction</button>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1" style="">
+            <form class="register-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name des Unternehmens">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Check me out
+                </label>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
