@@ -1,0 +1,36 @@
+/* line 1, ../sass/landing-page.sass */
+.slide {
+  padding-top: 50px;
+}
+
+/* line 4, ../sass/landing-page.sass */
+.slide--with-background {
+  background: no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* line 16, ../sass/landing-page.sass */
+.slide__white-negative-text {
+  background-color: #fff;
+  line-height: 55px;
+  padding-right: 10px;
+}
+
+/* line 21, ../sass/landing-page.sass */
+.slide__register-form {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 25, ../sass/landing-page.sass */
+.text-over-background-image {
+  color: #fff;
+}

@@ -5,20 +5,15 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 /* line 4, ../sass/fonts.sass */
-.white-negative-text {
-  background-color: #fff;
-  line-height: 55px;
-  padding-right: 10px;
-}
-
-/* line 9, ../sass/fonts.sass */
 h1 {
   font-weight: lighter;
 }
 
-/* line 12, ../sass/fonts.sass */
-.text-over-background-image {
-  color: #fff;
+/* line 1, ../sass/general.sass */
+body {
+  font-family: "Open Sans", sans-serif;
+  border-top: solid 50px #000;
+  height: 2000px;
 }
 
 /* line 1, ../sass/navbar.sass */
@@ -39,6 +34,7 @@ h1 {
 /* line 15, ../sass/navbar.sass */
 .navbar-inverse {
   background-image: none;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 1, ../sass/buttons.sass */
@@ -53,11 +49,6 @@ h1 {
 }
 
 /* line 1, ../sass/form.sass */
-.register-form {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-/* line 4, ../sass/form.sass */
 .form-control {
   background-color: transparent;
   border: solid 1px #fff;
@@ -66,14 +57,14 @@ h1 {
   box-shadow: none;
 }
 
-/* line 13, ../sass/form.sass */
+/* line 10, ../sass/form.sass */
 .form-control--login-navbar {
   border: solid 1px rgba(255, 255, 255, 0.2);
   background-color: transparent;
   color: #fff;
 }
 
-/* line 20, ../sass/form.sass */
+/* line 17, ../sass/form.sass */
 .form-control::-webkit-input-placeholder,
 .form-control:-moz-placeholder,
 .form-control::-moz-placeholder,
@@ -81,7 +72,44 @@ h1 {
   color: #6a6a6a;
 }
 
-/* line 13, ../sass/screen.sass */
+/* line 1, ../sass/landing-page.sass */
+.slide {
+  padding-top: 50px;
+}
+
+/* line 4, ../sass/landing-page.sass */
+.slide--with-background {
+  background: no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* line 16, ../sass/landing-page.sass */
+.slide__white-negative-text {
+  background-color: #fff;
+  line-height: 55px;
+  padding-right: 10px;
+}
+
+/* line 21, ../sass/landing-page.sass */
+.slide__register-form {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 25, ../sass/landing-page.sass */
+.text-over-background-image {
+  color: #fff;
+}
+
+/* line 18, ../sass/screen.sass */
 .test {
   color: #fff;
 }
