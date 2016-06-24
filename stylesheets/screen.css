@@ -55,16 +55,18 @@ body {
   border-radius: 0;
   color: #6a6a6a;
   box-shadow: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
-/* line 10, ../sass/form.sass */
+/* line 13, ../sass/form.sass */
 .form-control--login-navbar {
   border: solid 1px rgba(255, 255, 255, 0.2);
   background-color: transparent;
   color: #fff;
 }
 
-/* line 17, ../sass/form.sass */
+/* line 20, ../sass/form.sass */
 .form-control::-webkit-input-placeholder,
 .form-control:-moz-placeholder,
 .form-control::-moz-placeholder,
@@ -72,12 +74,13 @@ body {
   color: #6a6a6a;
 }
 
-/* line 1, ../sass/landing-page.sass */
+/* line 6, ../sass/landing-page.sass */
 .slide {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* line 4, ../sass/landing-page.sass */
+/* line 10, ../sass/landing-page.sass */
 .slide--with-background {
   background: no-repeat center center;
   -webkit-background-size: 100%;
@@ -91,22 +94,50 @@ body {
   background-attachment: fixed;
 }
 
-/* line 16, ../sass/landing-page.sass */
+/* line 22, ../sass/landing-page.sass */
+.slide--with-background__inner-div {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -50px;
+  padding-top: 50px;
+  margin-bottom: -50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 31, ../sass/landing-page.sass */
+.slide--with-background__text {
+  color: #fff;
+  font-weight: lighter;
+}
+
+/* line 35, ../sass/landing-page.sass */
 .slide__white-negative-text {
   background-color: #fff;
   line-height: 55px;
   padding-right: 10px;
 }
 
-/* line 21, ../sass/landing-page.sass */
-.slide__register-form {
-  margin-top: 50px;
-  background-color: rgba(255, 255, 255, 0.7);
+/* line 40, ../sass/landing-page.sass */
+.slide__title-introduction {
+  margin-bottom: 40px;
 }
 
-/* line 25, ../sass/landing-page.sass */
-.text-over-background-image {
-  color: #fff;
+/* line 46, ../sass/landing-page.sass */
+.register-form {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+}
+
+/* line 51, ../sass/landing-page.sass */
+.register-form__intro-text {
+  color: #000;
+  font-size: 20px;
+}
+
+/* line 55, ../sass/landing-page.sass */
+.register-form__info-text {
+  font-size: 12px;
 }
 
 /* line 18, ../sass/screen.sass */
