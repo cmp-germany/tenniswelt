@@ -4,7 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
-/* line 4, ../sass/fonts.sass */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+/* line 5, ../sass/fonts.sass */
 h1 {
   font-weight: lighter;
 }
@@ -74,13 +75,13 @@ body {
   color: #6a6a6a;
 }
 
-/* line 6, ../sass/landing-page.sass */
+/* line 8, ../sass/landing-page.sass */
 .slide {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 10, ../sass/landing-page.sass */
+/* line 12, ../sass/landing-page.sass */
 .slide--with-background {
   background: no-repeat center center;
   -webkit-background-size: 100%;
@@ -94,7 +95,7 @@ body {
   background-attachment: fixed;
 }
 
-/* line 22, ../sass/landing-page.sass */
+/* line 24, ../sass/landing-page.sass */
 .slide--with-background__inner-div {
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: -50px;
@@ -105,39 +106,69 @@ body {
   height: 100%;
 }
 
-/* line 31, ../sass/landing-page.sass */
+/* line 33, ../sass/landing-page.sass */
 .slide--with-background__text {
   color: #fff;
   font-weight: lighter;
 }
 
-/* line 35, ../sass/landing-page.sass */
+/* line 37, ../sass/landing-page.sass */
+.slide--statement {
+  height: 900px;
+}
+
+/* line 40, ../sass/landing-page.sass */
+.slide__statement {
+  margin-top: 80px;
+}
+
+/* line 48, ../sass/landing-page.sass */
 .slide__white-negative-text {
   background-color: #fff;
   line-height: 55px;
   padding-right: 10px;
 }
 
-/* line 40, ../sass/landing-page.sass */
+/* line 53, ../sass/landing-page.sass */
 .slide__title-introduction {
   margin-bottom: 40px;
 }
 
-/* line 46, ../sass/landing-page.sass */
+/* line 59, ../sass/landing-page.sass */
 .register-form {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 40px;
 }
 
-/* line 51, ../sass/landing-page.sass */
+/* line 64, ../sass/landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 55, ../sass/landing-page.sass */
+/* line 68, ../sass/landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
+}
+
+/* line 76, ../sass/landing-page.sass */
+.key-feature {
+  margin-bottom: 40px;
+}
+
+/* line 79, ../sass/landing-page.sass */
+.key-feature__icon {
+  color: #3aa6e7;
+  font-size: 60px;
+  margin-left: -15px;
+  display: block;
+}
+
+/* line 85, ../sass/landing-page.sass */
+.key-feature__headline {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #3aa6e7;
 }
 
 /* line 18, ../sass/screen.sass */
