@@ -1,6 +1,14 @@
 .btn
   border-radius: 0
+  border: none
+  text-shadow: none
+  -webkit-box-shadow: none
+  box-shadow: none
 
 .btn-important
   background-color: $color-important
+  color: #fff
+
+.btn-important:active, .btn-important:focus, .btn-important:hover
+  background-color: darken($color-important, 10)
   color: #fff

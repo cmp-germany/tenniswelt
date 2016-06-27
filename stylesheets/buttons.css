@@ -1,16 +1,21 @@
 /*
 Error: Undefined variable: "$color-important".
-        on line 5 of /Users/administrator/Sites/starters.koeln/sass/buttons.sass
+        on line 9 of /Users/administrator/Sites/starters.koeln/sass/buttons.sass
 
-1: .btn
-2:   border-radius: 0
-3: 
-4: .btn-important
-5:   background-color: $color-important
-6:   color: #fff
+4:   text-shadow: none
+5:   -webkit-box-shadow: none
+6:   box-shadow: none
+7: 
+8: .btn-important
+9:   background-color: $color-important
+10:   color: #fff
+11: 
+12: .btn-important:active, .btn-important:focus, .btn-important:hover
+13:   background-color: darken($color-important, 10)
+14:   color: #fff
 
 Backtrace:
-/Users/administrator/Sites/starters.koeln/sass/buttons.sass:5
+/Users/administrator/Sites/starters.koeln/sass/buttons.sass:9
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -62,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-important\".\A         on line 5 of /Users/administrator/Sites/starters.koeln/sass/buttons.sass\A \A 1: .btn\A 2:   border-radius: 0\A 3: \A 4: .btn-important\A 5:   background-color: $color-important\A 6:   color: #fff"; }
+  content: "Error: Undefined variable: \"$color-important\".\A         on line 9 of /Users/administrator/Sites/starters.koeln/sass/buttons.sass\A \A 4:   text-shadow: none\A 5:   -webkit-box-shadow: none\A 6:   box-shadow: none\A 7: \A 8: .btn-important\A 9:   background-color: $color-important\A 10:   color: #fff\A 11: \A 12: .btn-important:active, .btn-important:focus, .btn-important:hover\A 13:   background-color: darken($color-important, 10)\A 14:   color: #fff"; }
