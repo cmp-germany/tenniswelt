@@ -14,7 +14,6 @@ h1 {
 body {
   font-family: "Open Sans", sans-serif;
   border-top: solid 50px #000;
-  height: 2000px;
 }
 
 /* line 1, ../sass/navbar.sass */
@@ -150,23 +149,23 @@ body {
   padding: 40px;
 }
 
-/* line 64, ../sass/landing-page.sass */
+/* line 65, ../sass/landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 68, ../sass/landing-page.sass */
+/* line 69, ../sass/landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
 }
 
-/* line 76, ../sass/landing-page.sass */
+/* line 77, ../sass/landing-page.sass */
 .key-feature {
   margin-bottom: 40px;
 }
 
-/* line 79, ../sass/landing-page.sass */
+/* line 80, ../sass/landing-page.sass */
 .key-feature__icon {
   color: #3aa6e7;
   font-size: 60px;
@@ -174,21 +173,21 @@ body {
   display: block;
 }
 
-/* line 85, ../sass/landing-page.sass */
+/* line 86, ../sass/landing-page.sass */
 .key-feature__headline {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 91, ../sass/landing-page.sass */
+/* line 92, ../sass/landing-page.sass */
 .profile-card, .register-card {
   max-width: 390px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 96, ../sass/landing-page.sass */
+/* line 97, ../sass/landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
   border-top: 1px solid #3aa6e7;
@@ -196,36 +195,31 @@ body {
   margin-bottom: 30px;
 }
 
-/* line 102, ../sass/landing-page.sass */
+/* line 103, ../sass/landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 106, ../sass/landing-page.sass */
+/* line 107, ../sass/landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 110, ../sass/landing-page.sass */
+/* line 111, ../sass/landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 114, ../sass/landing-page.sass */
+/* line 115, ../sass/landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
 }
 
-/* line 118, ../sass/landing-page.sass */
+/* line 119, ../sass/landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
   font-weight: lighter;
-}
-
-/* line 18, ../sass/screen.sass */
-.test {
-  color: #fff;
 }

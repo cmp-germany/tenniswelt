@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-primary".
-        on line 80 of /Users/administrator/Sites/starters.koeln/sass/landing-page.sass
+        on line 81 of /Users/administrator/Sites/starters.koeln/sass/landing-page.sass
 
-75: 
-76: .key-feature
-77:   margin-bottom: 40px
-78: 
-79: .key-feature__icon
-80:   color: $color-primary
-81:   font-size: 60px
-82:   margin-left: -15px
-83:   display: block
-84: 
-85: .key-feature__headline
+76: 
+77: .key-feature
+78:   margin-bottom: 40px
+79: 
+80: .key-feature__icon
+81:   color: $color-primary
+82:   font-size: 60px
+83:   margin-left: -15px
+84:   display: block
+85: 
+86: .key-feature__headline
 
 Backtrace:
-/Users/administrator/Sites/starters.koeln/sass/landing-page.sass:80
+/Users/administrator/Sites/starters.koeln/sass/landing-page.sass:81
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-primary\".\A         on line 80 of /Users/administrator/Sites/starters.koeln/sass/landing-page.sass\A \A 75: \A 76: .key-feature\A 77:   margin-bottom: 40px\A 78: \A 79: .key-feature__icon\A 80:   color: $color-primary\A 81:   font-size: 60px\A 82:   margin-left: -15px\A 83:   display: block\A 84: \A 85: .key-feature__headline"; }
+  content: "Error: Undefined variable: \"$color-primary\".\A         on line 81 of /Users/administrator/Sites/starters.koeln/sass/landing-page.sass\A \A 76: \A 77: .key-feature\A 78:   margin-bottom: 40px\A 79: \A 80: .key-feature__icon\A 81:   color: $color-primary\A 82:   font-size: 60px\A 83:   margin-left: -15px\A 84:   display: block\A 85: \A 86: .key-feature__headline"; }

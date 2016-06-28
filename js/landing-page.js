@@ -15,7 +15,7 @@ $(document).ready(function (){
 
 
   // Background: resize the innerDivElement to fit be as big as the container
-  $('.slide--with-background__inner-div').height(function (index, oldHeight) {
-    return $(this).parent().height();
+  $('.slide--with-background__inner-div').css('min-height', function () {
+    return $(this).parent().css('height');
   });
 });
