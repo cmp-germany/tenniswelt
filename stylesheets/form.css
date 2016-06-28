@@ -1,25 +1,57 @@
-/* line 1, ../sass/form.sass */
+/* line 4, ../sass/form.sass */
 .form-control {
   background-color: transparent;
   border: solid 1px #fff;
   border-radius: 0;
-  color: #6a6a6a;
+  color: #000;
   box-shadow: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
 }
 
-/* line 13, ../sass/form.sass */
+/* line 16, ../sass/form.sass */
 .form-control--login-navbar {
-  border: solid 1px rgba(255, 255, 255, 0.2);
+  border: solid 1px #414141;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 20, ../sass/form.sass */
-.form-control::-webkit-input-placeholder,
-.form-control:-moz-placeholder,
-.form-control::-moz-placeholder,
+/* line 21, ../sass/form.sass */
+.form-control::-webkit-input-placeholder {
+  color: #6a6a6a;
+}
+
+/* line 24, ../sass/form.sass */
+.form-control:-moz-placeholder {
+  color: #6a6a6a;
+}
+
+/* line 27, ../sass/form.sass */
+.form-control::-moz-placeholder {
+  color: #6a6a6a;
+}
+
+/* line 30, ../sass/form.sass */
 .form-control:-ms-input-placeholder {
   color: #6a6a6a;
+}
+
+/* line 34, ../sass/form.sass */
+.form-control--login-navbar::-webkit-input-placeholder {
+  color: #9a9a9a;
+}
+
+/* line 37, ../sass/form.sass */
+.form-control--login-navbar:-moz-placeholder {
+  color: #9a9a9a;
+}
+
+/* line 40, ../sass/form.sass */
+.form-control--login-navbar::-moz-placeholder {
+  color: #9a9a9a;
+}
+
+/* line 43, ../sass/form.sass */
+.form-control--login-navbar:-ms-input-placeholder {
+  color: #9a9a9a;
 }
