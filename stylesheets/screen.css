@@ -181,7 +181,14 @@ body {
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 93, ../sass/landing-page.sass */
+/* line 91, ../sass/landing-page.sass */
+.profile-card, .register-card {
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 96, ../sass/landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
   border-top: 1px solid #3aa6e7;
@@ -189,29 +196,29 @@ body {
   margin-bottom: 30px;
 }
 
-/* line 99, ../sass/landing-page.sass */
+/* line 102, ../sass/landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 103, ../sass/landing-page.sass */
+/* line 106, ../sass/landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 107, ../sass/landing-page.sass */
+/* line 110, ../sass/landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 111, ../sass/landing-page.sass */
+/* line 114, ../sass/landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
 }
 
-/* line 115, ../sass/landing-page.sass */
+/* line 118, ../sass/landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
