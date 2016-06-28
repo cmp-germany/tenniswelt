@@ -1,4 +1,4 @@
-var innerDivElements = {
+var innerDivElementsToBeCreated = {
   "slide--with-background": "slide--with-background__inner-div",
   "profile-card": "profile-card__innerDiv clearfix",
   "register-card": "register-card__innerDiv clearfix"
@@ -7,9 +7,9 @@ var innerDivElements = {
 
 $(document).ready(function (){
 
-  for (var key in innerDivElements) {
-    if (innerDivElements.hasOwnProperty(key)) {
-      $('.' + key).wrapInner( '<div class="' + innerDivElements[key] + '"></div>' );
+  for (var key in innerDivElementsToBeCreated) {
+    if (innerDivElementsToBeCreated.hasOwnProperty(key)) {
+      $('.' + key).wrapInner( '<div class="' + innerDivElementsToBeCreated[key] + '"></div>' );
     }
   }
 
