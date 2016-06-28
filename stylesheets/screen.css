@@ -154,50 +154,63 @@ body {
 }
 
 /* line 37, ../sass/landing-page.sass */
+.slide--title {
+  background-image: url("../gfx/starters-plane.jpg");
+  background-attachment: scroll;
+  background-position: 30% 50%;
+}
+
+@media(max-width: 768px) {
+  /* line 43, ../sass/landing-page.sass */
+  .slide--title {
+    background-position: 80% 50%;
+  }
+}
+/* line 46, ../sass/landing-page.sass */
 .slide--statement {
   height: 900px;
 }
 
-/* line 40, ../sass/landing-page.sass */
+/* line 49, ../sass/landing-page.sass */
 .slide__statement {
   margin-top: 80px;
 }
 
-/* line 48, ../sass/landing-page.sass */
+/* line 57, ../sass/landing-page.sass */
 .slide__white-negative-text {
   background-color: #fff;
   line-height: 55px;
   padding-right: 10px;
 }
 
-/* line 53, ../sass/landing-page.sass */
+/* line 62, ../sass/landing-page.sass */
 .slide__title-introduction {
   margin-bottom: 40px;
 }
 
-/* line 59, ../sass/landing-page.sass */
+/* line 68, ../sass/landing-page.sass */
 .register-form {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 40px;
 }
 
-/* line 65, ../sass/landing-page.sass */
+/* line 74, ../sass/landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 69, ../sass/landing-page.sass */
+/* line 78, ../sass/landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
 }
 
-/* line 77, ../sass/landing-page.sass */
+/* line 86, ../sass/landing-page.sass */
 .key-feature {
   margin-bottom: 40px;
 }
 
-/* line 80, ../sass/landing-page.sass */
+/* line 89, ../sass/landing-page.sass */
 .key-feature__icon {
   color: #3aa6e7;
   font-size: 60px;
@@ -205,21 +218,21 @@ body {
   display: block;
 }
 
-/* line 86, ../sass/landing-page.sass */
+/* line 95, ../sass/landing-page.sass */
 .key-feature__headline {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 92, ../sass/landing-page.sass */
+/* line 101, ../sass/landing-page.sass */
 .profile-card, .register-card {
   max-width: 390px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 97, ../sass/landing-page.sass */
+/* line 106, ../sass/landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
   border-top: 1px solid #3aa6e7;
@@ -227,29 +240,29 @@ body {
   margin-bottom: 30px;
 }
 
-/* line 103, ../sass/landing-page.sass */
+/* line 112, ../sass/landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 107, ../sass/landing-page.sass */
+/* line 116, ../sass/landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 111, ../sass/landing-page.sass */
+/* line 120, ../sass/landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 115, ../sass/landing-page.sass */
+/* line 124, ../sass/landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
 }
 
-/* line 119, ../sass/landing-page.sass */
+/* line 128, ../sass/landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
