@@ -223,3 +223,56 @@ body {
   font-size: 17px;
   font-weight: lighter;
 }
+
+/* line 1, ../sass/wall.sass */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 6, ../sass/wall.sass */
+.wall-widget {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f9f9f9;
+}
+/* line 11, ../sass/wall.sass */
+.wall-widget header h3 {
+  font-size: 20px;
+}
+/* line 14, ../sass/wall.sass */
+.wall-widget a {
+  color: #777;
+}
+/* line 17, ../sass/wall.sass */
+.wall-widget a.is-selected {
+  color: #333;
+  border-bottom: solid 1px #E9002F;
+}
+/* line 22, ../sass/wall.sass */
+.wall-widget.wall-widget--matching header {
+  border-bottom: solid 1px #3aa6e7;
+}
+/* line 24, ../sass/wall.sass */
+.wall-widget.wall-widget--matching header h3 {
+  padding-top: 15px;
+  margin-left: 20px;
+}
+/* line 28, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters {
+  font-size: 14px;
+}
+/* line 30, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul {
+  margin-top: 10px;
+}
+/* line 32, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+/* line 36, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul li:last-child {
+  margin: 0;
+}
