@@ -69,19 +69,35 @@
             <h3>Matching</h3>
           </header>
           <div class="wall-widget--filters">
-            <ul class="wall-matching-filter">
-              <li><a href="#">Privat</a></li>
-              <li><a class="is-selcted" href="#">Unternehmen</a></li>
-            </ul>
-            <ul class="wall-widget-filter">
-              <li><a href="#">Regional</a></li>
-              <li><a href="#" class="is-selected">Weltweit</a></li>
-            </ul>
-            <ul class="wall-widget-filter">
-              <li><a href="#">Neu</a></li>
-              <li><a href="#">Aktiv</a></li>
-              <li><a href="#">Beliebt</a></li>
-            </ul>
+            <div class="wall-widget--filter-switch row">
+              <div class="wall-widget--filter-element col-xs-5">
+                Privat
+              </div>
+              <div class="wall-widget--filter-element col-xs-2">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </div>
+              <div class="wall-widget--filter-element col-xs-5">
+                Unternehmen
+              </div>
+            </div>
+            <div class="wall-widget--filter-switch row">
+              <div class="wall-widget--filter-element col-xs-5">
+                Lokal
+              </div>
+              <div class="wall-widget--filter-element col-xs-2">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </div>
+              <div class="wall-widget--filter-element col-xs-5">
+                Weltweit
+              </div>
+            </div>
+            <div class="wall-widget--filter-select">
+              Sortieren: <input type="select" name="name" value="">
+            </div>
           </div>
 
 
@@ -281,46 +297,47 @@
             <h3>Mitteilungen</h3>
           </header>
 
-          <div class="wall-widget--asidePost">
-            <img src="" alt="" />
-            <aside class="info">
-              <p><i class="info-name">Maxi Musterfrau</i> hat dir eine Nachricht hinterlassen.</p>
-              <p>SYM Vor 2 Stunden.</p>
-            </aside>
-          </div>
+          <div class="wall-widget--content">
+            <div class="wall-widget--asidePost">
+              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <span class="info">
+                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info">SYM Vor 2 Stunden</p>
+              </span>
+            </div>
 
-          <div class="wall-widget--asidePost">
-            <img src="" alt="" />
-            <aside class="info">
-              <p><i class="info-name">Maxi Musterfrau</i> hat dir eine Nachricht hinterlassen.</p>
-              <p>SYM Vor 4 Stunden.</p>
-            </aside>
-          </div>
+            <div class="wall-widget--asidePost">
+              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <span class="info">
+                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info">SYM Vor 4 Stunden.</p>
+              </span>
+            </div>
 
-          <div class="wall-widget--asidePost">
-            <img src="" alt="" />
-            <aside class="info">
-              <p><i class="info-name">Maxi Musterfrau</i> hat dir eine Nachricht hinterlassen.</p>
-              <p>SYM Vor 8 Stunden.</p>
-            </aside>
-          </div>
+            <div class="wall-widget--asidePost">
+              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <span class="info">
+                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info">SYM Vor 8 Stunden.</p>
+              </span>
+            </div>
 
-          <div class="wall-widget--asidePost">
-            <img src="" alt="" />
-            <aside class="info">
-              <p><i class="info-name">Jesus Christus</i> hat dir eine Nachricht hinterlassen.</p>
-              <p>SYM Vor 2000 Jahren.</p>
-            </aside>
+            <div class="wall-widget--asidePost">
+              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <span class="info">
+                <p><a href="" class="info-name">Jesus Christus</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info">SYM Vor 2000 Jahren.</p>
+              </span>
+            </div>
+            <button class="wall-widget--button" type="button" name="button">...</button>
           </div>
-
-          <button type="button" name="button">...</button>
         </aside>
 
         <aside class="wall-widget wall-widget--partners">
           <header>
             <h3>Preferred Partners</h3>
           </header>
-          <img class="banner" src="" alt="banner"/>
+          <img class="banner" src="gfx/banner.jpg" alt="banner"/>
         </aside>
 
     </div>
