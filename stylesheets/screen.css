@@ -422,11 +422,9 @@ ul {
   padding-bottom: 15px;
   margin: 0;
   margin-top: 20px;
-  border: solid 1px #eee;
-  background-color: #f9f9f9;
 }
 
-/* line 118, ../sass/wall.sass */
+/* line 116, ../sass/wall.sass */
 .wall-widget--actions__left {
   margin-left: 20px;
   /* ie 7 */
@@ -435,7 +433,7 @@ ul {
   *text-align: left;
 }
 
-/* line 125, ../sass/wall.sass */
+/* line 123, ../sass/wall.sass */
 .wall-widget--actions__right {
   margin-right: 10px;
   /* ie 7 */
@@ -444,7 +442,7 @@ ul {
   *text-align: right;
 }
 
-/* line 133, ../sass/wall.sass */
+/* line 131, ../sass/wall.sass */
 .wall-widget--button {
   border: solid 1px #eee;
   background-color: #e2e2e2;
@@ -454,7 +452,7 @@ ul {
   width: 70px;
 }
 
-/* line 141, ../sass/wall.sass */
+/* line 139, ../sass/wall.sass */
 .wall-widget--button__blue {
   border: solid 1px #eee;
   background-color: #3aa6e7;
@@ -463,12 +461,12 @@ ul {
   width: 100px;
 }
 
-/* line 148, ../sass/wall.sass */
+/* line 146, ../sass/wall.sass */
 .wall-widget--info {
   color: #777;
 }
 
-/* line 151, ../sass/wall.sass */
+/* line 149, ../sass/wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -476,19 +474,16 @@ ul {
   background-color: #fff;
 }
 
-/* line 157, ../sass/wall.sass */
+/* line 155, ../sass/wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
-  border-top: none;
-  border-right: none;
+  border-top-color: #eee;
+  border-right-color: #eee;
   margin-bottom: 30px;
   padding: 15px 22px;
-  -webkit-box-shadow: 1px 0px 9px 0px rgba(145, 145, 145, 0.6);
-  -moz-box-shadow: 1px 0px 9px 0px rgba(145, 145, 145, 0.6);
-  box-shadow: 1px 0px 9px 0px rgba(145, 145, 145, 0.6);
 }
-/* line 169, ../sass/wall.sass */
+/* line 167, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -496,7 +491,7 @@ ul {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 176, ../sass/wall.sass */
+/* line 174, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -505,7 +500,7 @@ ul {
   font-size: 0;
   line-height: 0;
 }
-/* line 185, ../sass/wall.sass */
+/* line 183, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -513,7 +508,7 @@ ul {
   *zoom: 1;
   *text-align: left;
 }
-/* line 192, ../sass/wall.sass */
+/* line 190, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--header__right {
   display: inline-block;
   /* ie 7 */
@@ -521,29 +516,29 @@ ul {
   *zoom: 1;
   *text-align: right;
 }
-/* line 199, ../sass/wall.sass */
+/* line 197, ../sass/wall.sass */
 .wall-widget--activity-post .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
-/* line 204, ../sass/wall.sass */
+/* line 202, ../sass/wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
-/* line 209, ../sass/wall.sass */
+/* line 207, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--content {
   margin: 10px 0;
   text-align: center;
 }
-/* line 213, ../sass/wall.sass */
+/* line 211, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
-/* line 217, ../sass/wall.sass */
+/* line 215, ../sass/wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-text {
   padding-left: 20px;
   text-align: left;
