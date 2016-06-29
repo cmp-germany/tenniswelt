@@ -34,33 +34,51 @@
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
-          </a>
-        </div>
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">
+           <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
+         </a>
+       </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-          <form class="navbar-form navbar-right" action="wall.html" method="get">
-            <div class="form-group">
-              <input type="text" class="form-control form-control--login-navbar" name="email" placeholder="E-Mail">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
-            </div>
-            <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
-          </form>
-        </div><!-- /.navbar-collapse -->
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse" id="navbar-collapse-1">
+         <form class="navbar-form navbar-right" action="wall.html" method="get">
+           <div class="form-group">
+             <input type="text" class="form-control form-control--login-navbar" name="email" placeholder="E-Mail">
+           </div>
+           <div class="form-group">
+             <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
+           </div>
+           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+         </form>
+       </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <header>
+      <div class="header-content">
+
+      </div>
+      <nav class="navbar grand-navbar">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="nav">Stichwortsuche</a></li>
+            <li><a href="#" class="nav">Startup-Leitfaden</a></li>
+            <li><a href="#" class="nav">Gruppen</a></li>
+            <li><a href="#" class="nav">Eventkalender</a></li>
+            <li><a href="#" class="nav">Suche / Biete</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
 
     <div class="container">
       <div class="section-left col-md-3">
@@ -69,34 +87,39 @@
             <h3>Matching</h3>
           </header>
           <div class="wall-widget--filters">
-            <div class="wall-widget--filter-switch row">
+            <div class="wall-widget--filter-switch row is-selected-right">
               <div class="wall-widget--filter-element col-xs-5">
-                Privat
+                <a class="element-left" href="#">Privat</a>
               </div>
               <div class="wall-widget--filter-element col-xs-2">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
                   <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
                 </svg>
               </div>
               <div class="wall-widget--filter-element col-xs-5">
-                Unternehmen
+                <a class="element-right" href="#">Unternehmen</a>
               </div>
             </div>
-            <div class="wall-widget--filter-switch row">
+            <div class="wall-widget--filter-switch row is-selected-left">
               <div class="wall-widget--filter-element col-xs-5">
-                Lokal
+                <a class="element-left" href="#">Lokal</a>
               </div>
               <div class="wall-widget--filter-element col-xs-2">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
                   <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
                 </svg>
               </div>
               <div class="wall-widget--filter-element col-xs-5">
-                Weltweit
+                <a class="element-right" href="#">Weltweit</a>
               </div>
             </div>
             <div class="wall-widget--filter-select">
-              Sortieren: <input type="select" name="name" value="">
+              <label for="filter-sortieren">Sortieren: </label>
+              <select class="wall-widget--filter-select-list" name="filter-sortieren">
+                <option value="neu">Neu</option>
+                <option value="aktiv">Aktiv</option>
+                <option value="beliebt">Beliebt</option>
+              </select>
             </div>
           </div>
 
@@ -155,19 +178,40 @@
             <h3>Gruppen-Matching</h3>
           </header>
           <div class="wall-widget--filters">
-            <ul class="wall-matching-filter">
-              <li><a href="#">Privat</a></li>
-              <li><a class="is-selcted" href="#">Unternehmen</a></li>
-            </ul>
-            <ul class="wall-widget-filter">
-              <li><a href="#">Regional</a></li>
-              <li><a href="#" class="is-selected">Weltweit</a></li>
-            </ul>
-            <ul class="wall-widget-filter">
-              <li><a href="#">Neu</a></li>
-              <li><a href="#">Aktiv</a></li>
-              <li><a href="#">Beliebt</a></li>
-            </ul>
+            <div class="wall-widget--filter-switch row is-selected-right">
+              <div class="wall-widget--filter-element col-xs-5">
+                <a class="element-left" href="">Privat</a>
+              </div>
+              <div class="wall-widget--filter-element col-xs-2">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </div>
+              <div class="wall-widget--filter-element col-xs-5">
+                <a class="element-right" href="">Unternehmen</a>
+              </div>
+            </div>
+            <div class="wall-widget--filter-switch row is-selected-left">
+              <div class="wall-widget--filter-element col-xs-5">
+                <a class="element-left" href="">Lokal</a>
+              </div>
+              <div class="wall-widget--filter-element col-xs-2">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </div>
+              <div class="wall-widget--filter-element col-xs-5">
+                <a class="element-right" href="">Weltweit</a>
+              </div>
+            </div>
+            <div class="wall-widget--filter-select">
+              <label for="filter-sortieren">Sortieren: </label>
+              <select class="wall-widget--filter-select-list" name="filter-sortieren">
+                <option value="neu">Neu</option>
+                <option value="aktiv">Aktiv</option>
+                <option value="beliebt">Beliebt</option>
+              </select>
+            </div>
           </div>
 
 
@@ -244,7 +288,7 @@
             <header class="wall-widget--header">
               <div class="wall-widget--header__left">
                 <img class="account-avatar" src="gfx/profilbild.png" alt="Profilbild" />
-                <h4>Max Mustermann</h4>
+                <h4><a href="#">Max Mustermann</a></h4>
               </div>
               <div class="wall-widget--header__right">
                 <span class="wall-widget--info" >SYM Vor 2 Stunden</span>
@@ -266,7 +310,7 @@
             <header class="wall-widget--header">
               <div class="wall-widget--header__left">
                 <img class="account-avatar" src="gfx/profilbild.png" alt="Profilbild" />
-                <h4>Max Mustermann</h4>
+                <h4><a href="#">Max Mustermann</a></h4>
               </div>
               <div class="wall-widget--header__right">
                 <span class="wall-widget--info" >SYM Vor 2 Stunden</span>
@@ -288,8 +332,6 @@
 
         </div>
       </div>
-
-
       <div class="section-right col-md-3">
 
         <aside class="wall-widget wall-widget--news">
@@ -341,6 +383,5 @@
         </aside>
 
     </div>
-
   </body>
 </html>

@@ -3,6 +3,13 @@ ul
   padding: 0
   margin: 0
 
+body
+  background-color: rgba(19, 35, 51, 0.05)
+  a
+    color: $color-important
+    &:hover
+      color: $color-primary
+
 .wall-widget
   border: solid 1px #eee
   padding: 20px
@@ -12,13 +19,6 @@ ul
   header
     h3
       font-size: 20px
-
-  a
-    color: #777
-
-    &.is-selected
-      color: $font-color
-      border-bottom: solid 1px $color-important
 
   &.wall-widget--matching
     header
@@ -34,6 +34,45 @@ ul
         margin: 0
         margin-top: 10px
 
+        .select-toggle:hover
+          cursor: pointer
+
+        a
+          color: #777
+          &:hover, &:active, &:focus, &:visited
+            text-decoration: none
+
+          &:hover
+            color: $color-important
+
+        &.is-selected-right
+          a.element-right
+            color: $font-color
+            border-bottom: solid 1px $color-important
+
+          .select-toggle
+            -moz-transform: rotate(0deg)
+            -ms-transform: rotate(0deg)
+            -o-transform: rotate(0deg)
+            -webkit-transform: rotate(0deg)
+            transform: rotate(0deg)
+
+        &.is-selected-left
+          a.element-left
+            color: $font-color
+            border-bottom: solid 1px $color-important
+
+          .select-toggle
+            -moz-transform: rotate(180deg)
+            -ms-transform: rotate(180deg)
+            -o-transform: rotate(180deg)
+            -webkit-transform: rotate(180deg)
+            transform: rotate(180deg)
+
+
+
+
+
       .wall-widget--filter-element
         padding: 0
         text-align: center
@@ -45,6 +84,16 @@ ul
         &:last-child
           text-align: left
           padding-left: 5px
+
+
+
+      .wall-widget--filter-select
+        text-align: center
+        .wall-widget--filter-select-list
+          background-color: #fff
+          width: 80px
+          margin-left: 5px
+          margin-top: 10px
 
     .wall-widget--content
       margin-top: 25px
@@ -93,6 +142,10 @@ ul
     line-height: 0
 
   textarea
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    outline: none
     border: none
     width: 100%
     padding: 30px
@@ -147,6 +200,10 @@ ul
   line-height: 35px
   width: 70px
 
+  &:hover
+    color: #e2e2e2
+    background-color: $color-important
+
 .wall-widget--button__blue
   border: solid 1px #eee
   background-color: $color-primary
@@ -161,7 +218,7 @@ ul
   margin-top: 0
   padding: 0
   border: none
-  background-color: #fff
+  background-color: transparent
 
 .wall-widget--activity-post
   background-color: #fff
