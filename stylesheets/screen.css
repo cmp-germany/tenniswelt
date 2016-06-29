@@ -271,3 +271,278 @@ body {
   font-size: 17px;
   font-weight: lighter;
 }
+
+/* line 1, ../sass/wall.sass */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 6, ../sass/wall.sass */
+.wall-widget {
+  border: solid 1px #eee;
+  padding: 20px;
+  margin: 20px 0;
+  padding-top: 0;
+  background-color: #f9f9f9;
+}
+/* line 13, ../sass/wall.sass */
+.wall-widget header h3 {
+  font-size: 20px;
+}
+/* line 16, ../sass/wall.sass */
+.wall-widget a {
+  color: #777;
+}
+/* line 19, ../sass/wall.sass */
+.wall-widget a.is-selected {
+  color: #333;
+  border-bottom: solid 1px #E9002F;
+}
+/* line 24, ../sass/wall.sass */
+.wall-widget.wall-widget--matching header {
+  border-bottom: solid 1px #3aa6e7;
+}
+/* line 26, ../sass/wall.sass */
+.wall-widget.wall-widget--matching header h3 {
+  padding-top: 15px;
+  margin-left: 10px;
+}
+/* line 30, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters {
+  font-size: 14px;
+}
+/* line 32, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul {
+  margin-top: 10px;
+}
+/* line 34, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+/* line 38, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--filters ul li:last-child {
+  margin: 0;
+}
+/* line 41, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content {
+  margin-top: 25px;
+  text-align: center;
+}
+/* line 44, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+/* line 50, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account * {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 54, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .avatar {
+  width: 50px;
+  height: 50px;
+}
+/* line 58, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account {
+  padding-left: 5px;
+}
+/* line 60, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account > * {
+  display: block;
+}
+/* line 62, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account h4 {
+  margin: 0;
+}
+/* line 64, ../sass/wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul {
+  margin-top: 5px;
+}
+
+/* line 67, ../sass/wall.sass */
+.wall-widget--newPost {
+  padding: 0;
+  text-align: justify;
+  /* ie 7 */
+  *width: 100%;
+  *-ms-text-justify: distribute-all-lines;
+  *text-justify: distribute-all-lines;
+}
+/* line 76, ../sass/wall.sass */
+.wall-widget--newPost::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+/* line 84, ../sass/wall.sass */
+.wall-widget--newPost textarea {
+  border: none;
+  width: 100%;
+  padding: 30px;
+  height: 130px;
+  border-bottom: solid 1px #3aa6e7;
+}
+
+/* line 91, ../sass/wall.sass */
+.wall-widget--actions {
+  margin-top: 5px;
+  display: inline-block;
+}
+/* line 95, ../sass/wall.sass */
+.wall-widget--actions ul li {
+  display: inline-block;
+}
+
+/* line 98, ../sass/wall.sass */
+.wall-widget--actions__social {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+/* line 102, ../sass/wall.sass */
+.wall-widget--actions__social li {
+  margin-right: 10px;
+}
+/* line 104, ../sass/wall.sass */
+.wall-widget--actions__social li:last-child {
+  margin: 0;
+}
+
+/* line 108, ../sass/wall.sass */
+.wall-widget--header h3 {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+/* line 116, ../sass/wall.sass */
+.wall-widget--actions__left {
+  margin-left: 20px;
+  /* ie 7 */
+  *display: inline;
+  *zoom: 1;
+  *text-align: left;
+}
+
+/* line 123, ../sass/wall.sass */
+.wall-widget--actions__right {
+  margin-right: 10px;
+  /* ie 7 */
+  *display: inline;
+  *zoom: 1;
+  *text-align: right;
+}
+
+/* line 131, ../sass/wall.sass */
+.wall-widget--button {
+  border: solid 1px #eee;
+  background-color: #e2e2e2;
+  color: #E9002F;
+  font-size: 30px;
+  line-height: 35px;
+  width: 70px;
+}
+
+/* line 139, ../sass/wall.sass */
+.wall-widget--button__blue {
+  border: solid 1px #eee;
+  background-color: #3aa6e7;
+  color: #fff;
+  font-size: 16px;
+  width: 100px;
+}
+
+/* line 146, ../sass/wall.sass */
+.wall-widget--info {
+  color: #777;
+}
+
+/* line 149, ../sass/wall.sass */
+.wall-widget--activities {
+  margin-top: 0;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+}
+
+/* line 155, ../sass/wall.sass */
+.wall-widget--activity-post {
+  background-color: #fff;
+  border: solid 1px #3aa6e7;
+  border-top-color: #eee;
+  border-right-color: #eee;
+  margin-bottom: 30px;
+  padding: 15px 22px;
+}
+/* line 167, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--header {
+  text-align: justify;
+  /* ie 7 */
+  *width: 100%;
+  *-ms-text-justify: distribute-all-lines;
+  *text-justify: distribute-all-lines;
+}
+/* line 174, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--header::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+/* line 183, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--header__left {
+  display: inline-block;
+  /* ie 7 */
+  *display: inline;
+  *zoom: 1;
+  *text-align: left;
+}
+/* line 190, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--header__right {
+  display: inline-block;
+  /* ie 7 */
+  *display: inline;
+  *zoom: 1;
+  *text-align: right;
+}
+/* line 197, ../sass/wall.sass */
+.wall-widget--activity-post .account-avatar {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+/* line 202, ../sass/wall.sass */
+.wall-widget--activity-post h4 {
+  padding-left: 5px;
+  font-size: 16px;
+  display: inline-block;
+}
+/* line 207, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--content {
+  margin: 10px 0;
+  text-align: center;
+}
+/* line 211, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--activity-post-image {
+  max-width: 100%;
+  height: auto;
+}
+/* line 215, ../sass/wall.sass */
+.wall-widget--activity-post .wall-widget--activity-post-text {
+  padding-left: 20px;
+  text-align: left;
+}

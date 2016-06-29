@@ -1,0 +1,219 @@
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+.wall-widget
+  border: solid 1px #eee
+  padding: 20px
+  margin: 20px 0
+  padding-top: 0
+  background-color: #f9f9f9
+  header
+    h3
+      font-size: 20px
+
+  a
+    color: #777
+
+    &.is-selected
+      color: $font-color
+      border-bottom: solid 1px $color-important
+
+  &.wall-widget--matching
+    header
+      border-bottom: solid 1px $color-primary
+      h3
+        padding-top: 15px
+        margin-left: 10px
+
+    .wall-widget--filters
+      font-size: 14px
+      ul
+        margin-top: 10px
+        li
+          display: inline-block
+          margin-right: 40px
+
+          &:last-child
+            margin: 0
+
+    .wall-widget--content
+      margin-top: 25px
+      text-align: center
+      .wall-widget--account
+        text-align: left
+        width: 100%
+        margin-bottom: 15px
+        padding-bottom: 5px
+        border-bottom: 1px solid #ddd
+        *
+          display: inline-block
+          vertical-align: top
+
+        .avatar
+          width: 50px
+          height: 50px
+
+        .account
+          padding-left: 5px
+          > *
+            display: block
+          h4
+            margin: 0
+          ul
+            margin-top: 5px
+
+.wall-widget--newPost
+  padding: 0
+  text-align: justify
+
+  /* ie 7*/
+  *width: 100%
+  *-ms-text-justify: distribute-all-lines
+  *text-justify: distribute-all-lines
+
+  &::after
+    content: ''
+    display: inline-block
+    width: 100%
+    height: 0
+    font-size: 0
+    line-height: 0
+
+  textarea
+    border: none
+    width: 100%
+    padding: 30px
+    height: 130px
+    border-bottom: solid 1px $color-primary
+
+.wall-widget--actions
+  margin-top: 5px
+  display: inline-block
+  ul
+    li
+      display: inline-block
+
+.wall-widget--actions__social
+  margin-top: 10px
+  width: 100%
+  text-align: center
+  li
+    margin-right: 10px
+    &:last-child
+      margin: 0
+
+.wall-widget--header
+  h3
+    padding-top: 10px
+    padding-left: 20px
+    padding-bottom: 15px
+    margin: 0
+    margin-top: 20px
+
+
+.wall-widget--actions__left
+  margin-left: 20px
+  /* ie 7*/
+  *display: inline
+  *zoom: 1
+  *text-align: left
+
+.wall-widget--actions__right
+  margin-right: 10px
+
+  /* ie 7*/
+  *display: inline
+  *zoom: 1
+  *text-align: right
+
+.wall-widget--button
+  border: solid 1px #eee
+  background-color: #e2e2e2
+  color: $color-important
+  font-size: 30px
+  line-height: 35px
+  width: 70px
+
+.wall-widget--button__blue
+  border: solid 1px #eee
+  background-color: $color-primary
+  color: #fff
+  font-size: 16px
+  width: 100px
+
+  
+
+.wall-widget--info
+  color: #777
+
+.wall-widget--activities
+  margin-top: 0
+  padding: 0
+  border: none
+  background-color: #fff
+
+.wall-widget--activity-post
+  background-color: #fff
+  border: solid 1px $color-primary
+  border-top-color: #eee
+  border-right-color: #eee
+  margin-bottom: 30px
+  padding: 15px 22px
+  //-webkit-box-shadow: 1px 0px 9px 0px rgba(145,145,145,0.6)
+  //-moz-box-shadow: 1px 0px 9px 0px rgba(145,145,145,0.6)
+  //box-shadow: 1px 0px 9px 0px rgba(145,145,145,0.6)
+
+
+  .wall-widget--header
+    text-align: justify
+    /* ie 7*/
+    *width: 100%
+    *-ms-text-justify: distribute-all-lines
+    *text-justify: distribute-all-lines
+
+    &::after
+      content: ''
+      display: inline-block
+      width: 100%
+      height: 0
+      font-size: 0
+      line-height: 0
+
+
+  .wall-widget--header__left
+    display: inline-block
+    /* ie 7*/
+    *display: inline
+    *zoom: 1
+    *text-align: left
+
+  .wall-widget--header__right
+    display: inline-block
+    /* ie 7*/
+    *display: inline
+    *zoom: 1
+    *text-align: right
+
+  .account-avatar
+    display: inline-block
+    width: 60px
+    height: 60px
+
+  h4
+    padding-left: 5px
+    font-size: 16px
+    display: inline-block
+
+  .wall-widget--content
+    margin: 10px 0
+    text-align: center
+
+  .wall-widget--activity-post-image
+    max-width: 100%
+    height: auto
+
+  .wall-widget--activity-post-text
+    padding-left: 20px
+    text-align: left
