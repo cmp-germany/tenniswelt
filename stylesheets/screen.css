@@ -1057,41 +1057,45 @@ body a:hover {
 
 /* line 6, ../sass/_search.sass */
 .search__siteheader {
-  padding-left: 35px;
   margin-bottom: 20px;
 }
-
-/* line 10, ../sass/_search.sass */
-.search__page-navigation {
-  margin: 0 40px;
+/* line 8, ../sass/_search.sass */
+.search__siteheader h3 {
+  margin-top: 0;
 }
 
-/* line 13, ../sass/_search.sass */
+/* line 11, ../sass/_search.sass */
+.search__page-navigation {
+  margin: 20px 0px;
+}
+
+/* line 14, ../sass/_search.sass */
 .search__results {
-  margin: 0 40px 30px 40px;
+  margin-bottom: 30px;
   background-color: #f9f9f9;
   border: solid 1px #eee;
   padding: 10px;
   padding-bottom: 20px;
+  width: 100%;
 }
 
-/* line 20, ../sass/_search.sass */
+/* line 22, ../sass/_search.sass */
 .search-filter-form {
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 23, ../sass/_search.sass */
+/* line 25, ../sass/_search.sass */
 .search-filter-nav--form-group {
   display: inline-block;
 }
 
-/* line 26, ../sass/_search.sass */
+/* line 28, ../sass/_search.sass */
 .search-result-list {
   width: 100%;
   margin-top: 20px;
 }
 
-/* line 30, ../sass/_search.sass */
+/* line 32, ../sass/_search.sass */
 .result-card {
   border: solid 1px #eee;
   padding: 0;
@@ -1101,66 +1105,80 @@ body a:hover {
   background-color: #eee;
 }
 
-/* line 38, ../sass/_search.sass */
+/* line 40, ../sass/_search.sass */
 .result-card__image {
   float: left;
   width: 100px;
   height: 100px;
   padding-right: 5px;
 }
-/* line 43, ../sass/_search.sass */
+/* line 45, ../sass/_search.sass */
 .result-card__image img {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
 
-/* line 48, ../sass/_search.sass */
+/* line 50, ../sass/_search.sass */
 .result-card__content {
   float: right;
   vertical-align: top;
   padding: 5px 0px;
 }
 
-/* line 53, ../sass/_search.sass */
+/* line 55, ../sass/_search.sass */
 .result-card__name {
   vertical-align: top;
   margin-right: 10px;
 }
-/* line 56, ../sass/_search.sass */
+/* line 58, ../sass/_search.sass */
 .result-card__name a {
   font-size: 15px;
 }
 
-/* line 59, ../sass/_search.sass */
+/* line 61, ../sass/_search.sass */
 .result-card__actions {
   position: absolute;
   bottom: 0;
   right: 20px;
 }
-/* line 63, ../sass/_search.sass */
+/* line 65, ../sass/_search.sass */
 .result-card__actions ul {
   list-style: none;
 }
-/* line 65, ../sass/_search.sass */
+/* line 67, ../sass/_search.sass */
 .result-card__actions ul li {
   display: inline-block;
 }
-/* line 67, ../sass/_search.sass */
+/* line 69, ../sass/_search.sass */
 .result-card__actions .material-icons {
   font-size: 18px;
   margin-right: 5px;
 }
-/* line 71, ../sass/_search.sass */
+/* line 73, ../sass/_search.sass */
 .result-card__actions .online-status {
   color: #777;
 }
-/* line 74, ../sass/_search.sass */
+/* line 76, ../sass/_search.sass */
 .result-card__actions .online-status--online {
   color: #4D9635;
 }
 
-/* line 77, ../sass/_search.sass */
+/* line 79, ../sass/_search.sass */
+.search-btn-locations {
+  background-color: #3aa6e7;
+}
+/* line 81, ../sass/_search.sass */
+.search-btn-locations .material-icons {
+  vertical-align: middle;
+  margin-right: 3px;
+}
+/* line 85, ../sass/_search.sass */
+.search-btn-locations:active, .search-btn-locations:hover, .search-btn-locations:focus {
+  background-color: #22638A;
+}
+
+/* line 88, ../sass/_search.sass */
 .search__map {
-  height: 300px;
+  width: 100%;
 }
