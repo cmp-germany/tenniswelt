@@ -636,8 +636,21 @@ body a:hover {
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul {
   margin-top: 5px;
 }
-
 /* line 127, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .material-icons {
+  vertical-align: text-bottom;
+  font-size: 16px;
+}
+/* line 131, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .online-status {
+  color: #777;
+}
+/* line 134, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .online-status--online {
+  color: #4D9635;
+}
+
+/* line 138, ../sass/_wall.sass */
 .wall-widget--newPost {
   padding: 0;
   text-align: justify;
@@ -646,7 +659,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 136, ../sass/_wall.sass */
+/* line 147, ../sass/_wall.sass */
 .wall-widget--newPost::after {
   content: "";
   display: inline-block;
@@ -655,7 +668,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 144, ../sass/_wall.sass */
+/* line 155, ../sass/_wall.sass */
 .wall-widget--newPost textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -668,32 +681,38 @@ body a:hover {
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 155, ../sass/_wall.sass */
+/* line 166, ../sass/_wall.sass */
 .wall-widget--actions {
   margin-top: 5px;
   display: inline-block;
 }
-/* line 159, ../sass/_wall.sass */
+/* line 170, ../sass/_wall.sass */
 .wall-widget--actions ul li {
   display: inline-block;
 }
 
-/* line 162, ../sass/_wall.sass */
+/* line 173, ../sass/_wall.sass */
 .wall-widget--actions__social {
   margin-top: 10px;
   width: 100%;
   text-align: center;
 }
-/* line 166, ../sass/_wall.sass */
+/* line 177, ../sass/_wall.sass */
 .wall-widget--actions__social li {
-  margin-right: 10px;
+  margin-right: 15px;
 }
-/* line 168, ../sass/_wall.sass */
+/* line 179, ../sass/_wall.sass */
 .wall-widget--actions__social li:last-child {
   margin: 0;
 }
+/* line 182, ../sass/_wall.sass */
+.wall-widget--actions__social li .material-icons {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
 
-/* line 172, ../sass/_wall.sass */
+/* line 188, ../sass/_wall.sass */
 .wall-widget--header h3 {
   padding-top: 10px;
   padding-left: 20px;
@@ -702,7 +721,7 @@ body a:hover {
   margin-top: 20px;
 }
 
-/* line 180, ../sass/_wall.sass */
+/* line 196, ../sass/_wall.sass */
 .wall-widget--actions__left {
   margin-left: 20px;
   /* ie 7 */
@@ -711,7 +730,7 @@ body a:hover {
   *text-align: left;
 }
 
-/* line 187, ../sass/_wall.sass */
+/* line 203, ../sass/_wall.sass */
 .wall-widget--actions__right {
   margin-right: 10px;
   /* ie 7 */
@@ -720,7 +739,7 @@ body a:hover {
   *text-align: right;
 }
 
-/* line 195, ../sass/_wall.sass */
+/* line 211, ../sass/_wall.sass */
 .wall-widget--button {
   border: solid 1px #eee;
   background-color: #e2e2e2;
@@ -729,13 +748,13 @@ body a:hover {
   line-height: 35px;
   width: 70px;
 }
-/* line 203, ../sass/_wall.sass */
+/* line 219, ../sass/_wall.sass */
 .wall-widget--button:hover {
   color: #e2e2e2;
   background-color: #E9002F;
 }
 
-/* line 207, ../sass/_wall.sass */
+/* line 223, ../sass/_wall.sass */
 .wall-widget--button__blue {
   border: solid 1px #eee;
   background-color: #3aa6e7;
@@ -744,12 +763,17 @@ body a:hover {
   width: 100px;
 }
 
-/* line 216, ../sass/_wall.sass */
+/* line 232, ../sass/_wall.sass */
 .wall-widget--info {
   color: #777;
 }
+/* line 234, ../sass/_wall.sass */
+.wall-widget--info .material-icons {
+  font-size: 14px;
+  vertical-align: middle;
+}
 
-/* line 219, ../sass/_wall.sass */
+/* line 238, ../sass/_wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -757,7 +781,7 @@ body a:hover {
   background-color: transparent;
 }
 
-/* line 225, ../sass/_wall.sass */
+/* line 244, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -766,7 +790,7 @@ body a:hover {
   margin-bottom: 30px;
   padding: 15px 22px;
 }
-/* line 237, ../sass/_wall.sass */
+/* line 256, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -774,7 +798,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 244, ../sass/_wall.sass */
+/* line 263, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -783,7 +807,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 253, ../sass/_wall.sass */
+/* line 272, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -791,7 +815,7 @@ body a:hover {
   *zoom: 1;
   *text-align: left;
 }
-/* line 260, ../sass/_wall.sass */
+/* line 279, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__right {
   display: inline-block;
   /* ie 7 */
@@ -799,56 +823,56 @@ body a:hover {
   *zoom: 1;
   *text-align: right;
 }
-/* line 267, ../sass/_wall.sass */
+/* line 286, ../sass/_wall.sass */
 .wall-widget--activity-post .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
-/* line 272, ../sass/_wall.sass */
+/* line 291, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
-/* line 277, ../sass/_wall.sass */
+/* line 296, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--content {
   margin: 10px 0;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
-/* line 283, ../sass/_wall.sass */
+/* line 302, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
-/* line 287, ../sass/_wall.sass */
+/* line 306, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-text {
   padding-left: 20px;
   text-align: left;
 }
 
-/* line 292, ../sass/_wall.sass */
+/* line 311, ../sass/_wall.sass */
 .wall-widget--news {
   padding: 0 10px;
   padding-bottom: 15px;
 }
-/* line 295, ../sass/_wall.sass */
+/* line 314, ../sass/_wall.sass */
 .wall-widget--news h3 {
   margin-left: 8px;
 }
-/* line 298, ../sass/_wall.sass */
+/* line 317, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 302, ../sass/_wall.sass */
+/* line 321, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 305, ../sass/_wall.sass */
+/* line 324, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -856,22 +880,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 312, ../sass/_wall.sass */
+/* line 331, ../sass/_wall.sass */
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 315, ../sass/_wall.sass */
+/* line 334, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
-/* line 318, ../sass/_wall.sass */
+/* line 337, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
+/* line 340, ../sass/_wall.sass */
+.wall-widget--asidePost .info .wall-widget--info .material-icons {
+  vertical-align: text-bottom;
+  font-size: 14px;
+}
 
-/* line 324, ../sass/_wall.sass */
+/* line 346, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -879,22 +908,22 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 330, ../sass/_wall.sass */
+/* line 352, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 334, ../sass/_wall.sass */
+/* line 356, ../sass/_wall.sass */
 .wall-widget--partners h3 {
   margin-left: 20px;
 }
-/* line 337, ../sass/_wall.sass */
+/* line 359, ../sass/_wall.sass */
 .wall-widget--partners .banner {
   width: 100%;
   height: auto;
 }
 
-/* line 341, ../sass/_wall.sass */
+/* line 363, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
