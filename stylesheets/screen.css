@@ -836,3 +836,45 @@ body a:hover {
 .profile-infos__map {
   padding-bottom: 20px;
 }
+
+/* line 1, ../sass/_settings.sass */
+.matching-options {
+  margin: 20px 0;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 8, ../sass/_settings.sass */
+.matching-options__matching-section {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* line 12, ../sass/_settings.sass */
+.matching-templates {
+  margin: 20px 0;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 19, ../sass/_settings.sass */
+.matching-templates__template {
+  margin-top: 20px;
+}
+
+/* line 22, ../sass/_settings.sass */
+.matching-templates__name {
+  margin-top: 5px;
+}
+
+/* line 25, ../sass/_settings.sass */
+.matching-templates__button--icon {
+  font-size: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 10px;
+}
