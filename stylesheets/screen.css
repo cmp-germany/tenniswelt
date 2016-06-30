@@ -1047,3 +1047,120 @@ body a:hover {
 .profile-infos__map {
   padding-bottom: 20px;
 }
+
+/* line 1, ../sass/_search.sass */
+.search {
+  border: solid 1px #eee;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+/* line 6, ../sass/_search.sass */
+.search__siteheader {
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+/* line 10, ../sass/_search.sass */
+.search__page-navigation {
+  margin: 0 40px;
+}
+
+/* line 13, ../sass/_search.sass */
+.search__results {
+  margin: 0 40px 30px 40px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+/* line 20, ../sass/_search.sass */
+.search-filter-form {
+  border-bottom: solid 1px #3aa6e7;
+}
+
+/* line 23, ../sass/_search.sass */
+.search-filter-nav--form-group {
+  display: inline-block;
+}
+
+/* line 26, ../sass/_search.sass */
+.search-result-list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* line 30, ../sass/_search.sass */
+.result-card {
+  border: solid 1px #eee;
+  padding: 0;
+  height: 98px;
+  margin-top: 10px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+/* line 38, ../sass/_search.sass */
+.result-card__image {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding-right: 5px;
+}
+/* line 43, ../sass/_search.sass */
+.result-card__image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* line 48, ../sass/_search.sass */
+.result-card__content {
+  float: right;
+  vertical-align: top;
+  padding: 5px 0px;
+}
+
+/* line 53, ../sass/_search.sass */
+.result-card__name {
+  vertical-align: top;
+  margin-right: 10px;
+}
+/* line 56, ../sass/_search.sass */
+.result-card__name a {
+  font-size: 15px;
+}
+
+/* line 59, ../sass/_search.sass */
+.result-card__actions {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+/* line 63, ../sass/_search.sass */
+.result-card__actions ul {
+  list-style: none;
+}
+/* line 65, ../sass/_search.sass */
+.result-card__actions ul li {
+  display: inline-block;
+}
+/* line 67, ../sass/_search.sass */
+.result-card__actions .material-icons {
+  font-size: 18px;
+  margin-right: 5px;
+}
+/* line 71, ../sass/_search.sass */
+.result-card__actions .online-status {
+  color: #777;
+}
+/* line 74, ../sass/_search.sass */
+.result-card__actions .online-status--online {
+  color: #4D9635;
+}
+
+/* line 77, ../sass/_search.sass */
+.search__map {
+  height: 300px;
+}
