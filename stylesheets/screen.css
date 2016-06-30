@@ -780,5 +780,52 @@ body a:hover {
 
 /* line 52, ../sass/_profile-about.sass */
 .profile-tabs {
-  margin-left: 10px;
+  padding-left: 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 57, ../sass/_profile-about.sass */
+.profile-tabs__tab {
+  display: inline-block;
+  font-size: 18px;
+  color: #777;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 67, ../sass/_profile-about.sass */
+.profile-tabs__tab a {
+  color: inherit;
+}
+
+/* line 70, ../sass/_profile-about.sass */
+.profile-tabs__tab--active {
+  color: #333;
+}
+
+/* line 74, ../sass/_profile-about.sass */
+.profile-infos {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 82, ../sass/_profile-about.sass */
+.profile-infos__form--read .profile-infos__input {
+  display: none;
+}
+
+/* line 86, ../sass/_profile-about.sass */
+.profile-infos__form--write .profile-infos__read {
+  display: none;
+}
+
+/* line 89, ../sass/_profile-about.sass */
+.profile-infos__read {
+  margin-top: 7px;
 }

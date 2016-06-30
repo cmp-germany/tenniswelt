@@ -14,7 +14,6 @@
 
     <!-- Own SASS Stuff -->
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
     <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -285,11 +284,144 @@
           </div>
         </header>
         <ul class="profile-tabs">
-          <li class="profile-tabs__tab">Über</li>
-          <li class="profile-tabs__tab">Wall</li>
-          <li class="profile-tabs__tab">Kontakte</li>
-          <li class="profile-tabs__tab">Fotos</li>
+          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#">Über</a></li>
+          <li class="profile-tabs__tab"><a href="#">Wall</a></li>
+          <li class="profile-tabs__tab"><a href="#">Kontakte</a></li>
+          <li class="profile-tabs__tab"><a href="#">Fotos</a></li>
         </ul>
+
+        <div class="profile-infos">
+          <h3 class="profile-infos__title">Unternehmensinfos</h3>
+          <form class="form-horizontal profile-infos__form--read">
+
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-4">
+                  <p class="profile-infos__read profile-infos__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <input type="text" class="form-control profile-infos__input" id="company-name" placeholder="offering eprocurement for goverment and industrial partners">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-name" class="col-sm-4 control-label profile-infos__label">Name des Unternehmens</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Gesellschaft für kommunalen Einkauf mbH</p>
+                <input type="text" class="form-control profile-infos__input" id="company-name" placeholder="Gesellschaft für kommunalen Einkauf mbH">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-branche" class="col-sm-4 control-label profile-infos__label">Unternehmen</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">eprocurement</p>
+                <input type="text" class="form-control profile-infos__input" id="company-branche" placeholder="eprocurement">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-main-location" class="col-sm-4 control-label profile-infos__label">Hauptsitz</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Pulheim</p>
+                <input type="text" class="form-control profile-infos__input" id="company-main-location" placeholder="Pulheim">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-country" class="col-sm-4 control-label profile-infos__label">Land</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Deutschland</p>
+                <input type="text" class="form-control profile-infos__input" id="company-country" placeholder="Deutschland">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-email" class="col-sm-4 control-label profile-infos__label">E-Mail</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">w.adams@gfke-eu</p>
+                <input type="text" class="form-control profile-infos__input" id="company-email" placeholder="w.adams@gfke-eu">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-tel" class="col-sm-4 control-label profile-infos__label">Telefon</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">02238958590-37</p>
+                <input type="text" class="form-control profile-infos__input" id="company-tel" placeholder="02238958590-37">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-category" class="col-sm-4 control-label profile-infos__label">Kategorie</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Startup</p>
+                <input type="text" class="form-control profile-infos__input" id="company-category" placeholder="Startup">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="profile-infos">
+          <h3 class="profile-infos__title">Über uns</h3>
+          <form class="form-horizontal profile-infos__form--read">
+
+            <div class="form-group">
+              <label for="adress" class="col-sm-4 control-label profile-infos__label">Adresse</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">August-Euler-Str. 3</p>
+                <input type="text" class="form-control profile-infos__input" id="adress" placeholder="August-Euler-Str. 3">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-branche" class="col-sm-4 control-label profile-infos__label">Unternehmen</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">eprocurement</p>
+                <input type="text" class="form-control profile-infos__input" id="company-branche" placeholder="eprocurement">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-main-location" class="col-sm-4 control-label profile-infos__label">Hauptsitz</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Pulheim</p>
+                <input type="text" class="form-control profile-infos__input" id="company-main-location" placeholder="Pulheim">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-country" class="col-sm-4 control-label profile-infos__label">Land</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Deutschland</p>
+                <input type="text" class="form-control profile-infos__input" id="company-country" placeholder="Deutschland">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-email" class="col-sm-4 control-label profile-infos__label">E-Mail</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">w.adams@gfke-eu</p>
+                <input type="text" class="form-control profile-infos__input" id="company-email" placeholder="w.adams@gfke-eu">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-tel" class="col-sm-4 control-label profile-infos__label">Telefon</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">02238958590-37</p>
+                <input type="text" class="form-control profile-infos__input" id="company-tel" placeholder="02238958590-37">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company-category" class="col-sm-4 control-label profile-infos__label">Kategorie</label>
+              <div class="col-sm-8">
+                <p class="profile-infos__read">Startup</p>
+                <input type="text" class="form-control profile-infos__input" id="company-category" placeholder="Startup">
+              </div>
+            </div>
+
+          </form>
+        </div>
 
 
         <div class="wall-widget wall-widget--newPost">
