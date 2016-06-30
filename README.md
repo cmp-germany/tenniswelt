@@ -10,7 +10,7 @@ Frontend for Code for the platform starters.koeln.
 
 ### Wall
 
-[![](http://download.united-studios.com/wall.png)](https://cmp-germany.github.io/starters.koeln)
+[![](http://download.united-studios.com/wall.png)](https://cmp-germany.github.io/starters.koeln/wall.html)
 
 ### Profil - Über Uns
 
