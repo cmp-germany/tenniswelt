@@ -83,7 +83,7 @@ body {
 }
 
 /* line 60, ../sass/_navbar.sass */
-.form-group {
+.form-group--nav {
   width: 200px;
   margin-left: 10px;
 }
