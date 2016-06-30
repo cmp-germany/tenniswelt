@@ -47,26 +47,41 @@
        </div>
 
        <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse" id="navbar-collapse-1">
-         <form class="navbar-form navbar-right" action="wall.html" method="get">
+       <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-2">
+         <form class="navbar-form " action="wall.html" method="get">
            <div class="form-group">
-             <input type="text" class="form-control form-control--login-navbar" name="email" placeholder="E-Mail">
+             <input type="text" class="form-control form-control--options-navbar" name="suche" placeholder="Suchen">
            </div>
            <div class="form-group">
-             <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
+             <input type="text" class="form-control form-control--options-navbar" name="region" placeholder="Region">
            </div>
-           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+           <div class="form-group form-group--small">
+             <input id="form-control-range" class="form-control form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+             <label class="form-control-label" for="form-control-range">150</label>
+           </div>
+           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Finden</button>
          </form>
        </div><!-- /.navbar-collapse -->
+
+       <div class="navbar-right" >
+         <ul class="nav navbar-nav">
+           <li><img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" /></li>
+        </ul>
+      </div>
       </div><!-- /.container-fluid -->
     </nav>
+
+
 
     <header>
       <div class="header-content">
 
       </div>
-      <nav class="navbar grand-navbar">
-        <div class="container">
+    </header>
+
+    <nav class="navbar grand-navbar" id="navbar-starters">
+      <div class="container">
+        <div class="starters-navigation collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" class="nav">Stichwortsuche</a></li>
             <li><a href="#" class="nav">Startup-Leitfaden</a></li>
@@ -75,9 +90,8 @@
             <li><a href="#" class="nav">Suche / Biete</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
-
+      </div>
+    </nav>
 
     <div class="container">
       <div class="section-left col-md-3">
@@ -125,45 +139,45 @@
 
           <div class="wall-widget--content">
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
               <div class="account">
                 <h4>Volker Miller</h4>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                  <li><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
               <div class="account">
                 <h4>Kai Gärtner</h4>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
+                  <li><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" />
               <div class="account">
                 <h4>Wolfgang Winter</h4>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
+                  <li><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" />
               <div class="account">
                 <h4>Maria Kristhoff</h4>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
+                  <li><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -269,8 +283,8 @@
           <textarea name="name" rows="8" placeholder="Was machen Sie gerade?"></textarea>
           <div class="wall-widget--actions wall-widget--actions__left">
             <ul>
-              <li>img</li>
-              <li>loc</li>
+              <li><i class="material-icons">&#xE412;</i></li>
+              <li><i class="material-icons">&#xE55F;</i></li>
             </ul>
           </div>
           <div class="wall-widget--actions wall-widget--actions__right">
@@ -286,21 +300,21 @@
           <article class="wall-widget--activity-post">
             <header class="wall-widget--header">
               <div class="wall-widget--header__left">
-                <img class="account-avatar" src="gfx/profilbild.png" alt="Profilbild" />
+                <img class="account-avatar" src="gfx/profilbilder/p8.jpg" alt="Profilbild" />
                 <h4><a href="#">Max Mustermann</a></h4>
               </div>
               <div class="wall-widget--header__right">
-                <span class="wall-widget--info" >SYM Vor 2 Stunden</span>
+                <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
               </div>
             </header>
             <div class="wall-widget--content">
-              <img class="wall-widget--activity-post-image" src="gfx/profilbild.png" alt="imgage" />
+              <img class="wall-widget--activity-post-image" src="gfx/beispiel.jpg" alt="imgage" />
             </div>
             <div class="wall-widget--actions wall-widget--actions__social">
               <ul>
-                <li>GM Gefällt mir</li>
-                <li>KM Kommentieren</li>
-                <li>T Teilen</li>
+                <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
               </ul>
             </div>
           </article>
@@ -308,11 +322,11 @@
           <article class="wall-widget--activity-post">
             <header class="wall-widget--header">
               <div class="wall-widget--header__left">
-                <img class="account-avatar" src="gfx/profilbild.png" alt="Profilbild" />
-                <h4><a href="#">Max Mustermann</a></h4>
+                <img class="account-avatar" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                <h4><a href="#">Maxi Mustermann</a></h4>
               </div>
               <div class="wall-widget--header__right">
-                <span class="wall-widget--info" >SYM Vor 2 Stunden</span>
+                <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
               </div>
             </header>
             <div class="wall-widget--content">
@@ -322,9 +336,9 @@
             </div>
             <div class="wall-widget--actions wall-widget--actions__social">
               <ul>
-                <li>GM Gefällt mir</li>
-                <li>KM Kommentieren</li>
-                <li>T Teilen</li>
+                <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
               </ul>
             </div>
           </article>
@@ -340,34 +354,34 @@
 
           <div class="wall-widget--content">
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
               <span class="info">
                 <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 2 Stunden</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
               <span class="info">
                 <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 4 Stunden.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden.</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
               <span class="info">
                 <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 8 Stunden.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden.</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbild.png" alt="Profilbild" />
               <span class="info">
                 <p><a href="" class="info-name">Jesus Christus</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 2000 Jahren.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2000 Jahren.</p>
               </span>
             </div>
             <button class="wall-widget--button" type="button" name="button">...</button>
@@ -380,7 +394,34 @@
           </header>
           <img class="banner" src="gfx/banner.jpg" alt="banner"/>
         </aside>
-
     </div>
+    <script type="text/javascript">
+    $( document ).ready(function(){
+      var docked = false;
+      var menu = $('#navbar-starters');
+      var init = menu.offset().top;
+
+      $(window).scroll(function()
+        {
+          if (!docked && (menu.offset().top - $("body").scrollTop() < 50))
+          {
+              menu.css({
+                  position : "fixed",
+                  top: 50,
+              });
+              docked = true;
+          }
+          else if(docked && ($("body").scrollTop()+50) <= init)
+          {
+              menu.css({
+                  position : "absolute",
+                  top: init + 'px',
+              });
+
+              docked = false;
+            }
+        });
+    });
+    </script>
   </body>
 </html>
