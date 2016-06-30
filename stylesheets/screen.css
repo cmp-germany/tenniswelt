@@ -932,3 +932,118 @@ body a:hover {
   border: none;
   padding: 2px 10px;
 }
+
+/* line 4, ../sass/_profile-about.sass */
+.profile-header {
+  margin-top: 20px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 11, ../sass/_profile-about.sass */
+.profile-header__wallpaper {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
+
+/* line 17, ../sass/_profile-about.sass */
+.profile-header__desc-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 26, ../sass/_profile-about.sass */
+.profile-header__profile-picture-container {
+  position: relative;
+  height: 100px;
+}
+
+/* line 31, ../sass/_profile-about.sass */
+.profile-header__profile-picture {
+  position: absolute;
+  bottom: 10px;
+  border: 5px solid #fff;
+}
+
+/* line 37, ../sass/_profile-about.sass */
+.profile-header__name {
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* line 42, ../sass/_profile-about.sass */
+.profile-header__action-buttons {
+  margin-top: 40px;
+}
+
+/* line 46, ../sass/_profile-about.sass */
+.profile-header__action-button {
+  display: inline-block;
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* line 52, ../sass/_profile-about.sass */
+.profile-tabs {
+  padding-left: 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 57, ../sass/_profile-about.sass */
+.profile-tabs__tab {
+  display: inline-block;
+  font-size: 18px;
+  color: #777;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 67, ../sass/_profile-about.sass */
+.profile-tabs__tab a {
+  color: inherit;
+}
+
+/* line 70, ../sass/_profile-about.sass */
+.profile-tabs__tab--active {
+  color: #333;
+}
+
+/* line 74, ../sass/_profile-about.sass */
+.profile-infos {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  border: solid 1px #eee;
+}
+
+/* line 84, ../sass/_profile-about.sass */
+.profile-infos__form--read .profile-infos__input {
+  display: none;
+}
+
+/* line 88, ../sass/_profile-about.sass */
+.profile-infos__form--write .profile-infos__read {
+  display: none;
+}
+
+/* line 91, ../sass/_profile-about.sass */
+.profile-infos__read {
+  margin-top: 7px;
+}
+
+/* line 96, ../sass/_profile-about.sass */
+.profile-infos__map {
+  padding-bottom: 20px;
+}
