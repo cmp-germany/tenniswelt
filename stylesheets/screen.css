@@ -810,22 +810,29 @@ body a:hover {
 .profile-infos {
   position: relative;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0 20px;
+  padding-bottom: 20px;
   background-color: #f9f9f9;
   border: solid 1px #eee;
 }
 
-/* line 82, ../sass/_profile-about.sass */
+/* line 84, ../sass/_profile-about.sass */
 .profile-infos__form--read .profile-infos__input {
   display: none;
 }
 
-/* line 86, ../sass/_profile-about.sass */
+/* line 88, ../sass/_profile-about.sass */
 .profile-infos__form--write .profile-infos__read {
   display: none;
 }
 
-/* line 89, ../sass/_profile-about.sass */
+/* line 91, ../sass/_profile-about.sass */
 .profile-infos__read {
   margin-top: 7px;
+}
+
+/* line 96, ../sass/_profile-about.sass */
+.profile-infos__map {
+  padding-bottom: 20px;
 }
