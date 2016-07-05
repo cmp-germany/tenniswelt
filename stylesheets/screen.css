@@ -380,10 +380,15 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 
 /* line 53, ../sass/_landing-page.sass */
 .slide__statement {
-  margin-top: 80px;
+  margin-top: 400px;
 }
 
-/* line 59, ../sass/_landing-page.sass */
+/* line 56, ../sass/_landing-page.sass */
+.slide--people {
+  background-color: rgba(19, 35, 51, 0.05);
+}
+
+/* line 62, ../sass/_landing-page.sass */
 .slide__white-negative-text {
   background-color: #fff;
   line-height: 55px;
@@ -399,12 +404,12 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
 }
 
-/* line 73, ../sass/_landing-page.sass */
+/* line 76, ../sass/_landing-page.sass */
 .slide__title-introduction {
   margin-bottom: 40px;
 }
 
-/* line 79, ../sass/_landing-page.sass */
+/* line 82, ../sass/_landing-page.sass */
 .register-form {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 40px;
@@ -413,23 +418,23 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-right: auto;
 }
 
-/* line 87, ../sass/_landing-page.sass */
+/* line 90, ../sass/_landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 91, ../sass/_landing-page.sass */
+/* line 94, ../sass/_landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
 }
 
-/* line 99, ../sass/_landing-page.sass */
+/* line 102, ../sass/_landing-page.sass */
 .key-feature {
   margin-bottom: 40px;
 }
 
-/* line 102, ../sass/_landing-page.sass */
+/* line 105, ../sass/_landing-page.sass */
 .key-feature__icon {
   color: #3aa6e7;
   font-size: 60px;
@@ -437,51 +442,54 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   display: block;
 }
 
-/* line 108, ../sass/_landing-page.sass */
+/* line 111, ../sass/_landing-page.sass */
 .key-feature__headline {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 114, ../sass/_landing-page.sass */
+/* line 117, ../sass/_landing-page.sass */
 .profile-card, .register-card {
   max-width: 390px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 119, ../sass/_landing-page.sass */
+/* line 122, ../sass/_landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
+  margin-bottom: 30px;
   border-top: 1px solid #3aa6e7;
   border-left: 1px solid #3aa6e7;
-  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  background-color: #fff;
 }
 
-/* line 125, ../sass/_landing-page.sass */
+/* line 131, ../sass/_landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 129, ../sass/_landing-page.sass */
+/* line 135, ../sass/_landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 133, ../sass/_landing-page.sass */
+/* line 139, ../sass/_landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 137, ../sass/_landing-page.sass */
+/* line 143, ../sass/_landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
 }
 
-/* line 141, ../sass/_landing-page.sass */
+/* line 147, ../sass/_landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
