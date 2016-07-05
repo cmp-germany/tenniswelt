@@ -6,7 +6,7 @@ Frontend for Code for the platform starters.koeln.
 
 ### Landing Page
 
-[![](http://download.united-studios.com/landing-page.png)](https://cmp-germany.github.io/starters.koeln)
+[![](http://download.united-studios.com/Bildschirmfoto%202016-07-05%20um%2016.53.01.png)](https://cmp-germany.github.io/starters.koeln)
 
 ### Wall
 
