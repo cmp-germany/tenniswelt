@@ -383,11 +383,6 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-top: 400px;
 }
 
-/* line 56, ../sass/_landing-page.sass */
-.slide--people {
-  background-color: rgba(19, 35, 51, 0.05);
-}
-
 /* line 62, ../sass/_landing-page.sass */
 .slide__white-negative-text {
   background-color: #fff;
