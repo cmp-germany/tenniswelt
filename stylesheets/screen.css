@@ -460,31 +460,32 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
   background-color: #fff;
+  height: 130px;
 }
 
-/* line 131, ../sass/_landing-page.sass */
+/* line 132, ../sass/_landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 135, ../sass/_landing-page.sass */
+/* line 136, ../sass/_landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 139, ../sass/_landing-page.sass */
+/* line 140, ../sass/_landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 143, ../sass/_landing-page.sass */
+/* line 144, ../sass/_landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
 }
 
-/* line 147, ../sass/_landing-page.sass */
+/* line 148, ../sass/_landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
