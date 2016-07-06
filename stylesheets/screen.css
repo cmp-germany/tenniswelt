@@ -991,13 +991,12 @@ body a:hover {
 
 /* line 52, ../sass/_profile-about.sass */
 .profile-tabs {
-  margin-top: 20px;
   padding-left: 20px;
   background-color: #f9f9f9;
   border: solid 1px #eee;
 }
 
-/* line 58, ../sass/_profile-about.sass */
+/* line 57, ../sass/_profile-about.sass */
 .profile-tabs__tab {
   display: inline-block;
   font-size: 18px;
@@ -1008,17 +1007,17 @@ body a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 68, ../sass/_profile-about.sass */
+/* line 67, ../sass/_profile-about.sass */
 .profile-tabs__tab a {
   color: inherit;
 }
 
-/* line 71, ../sass/_profile-about.sass */
+/* line 70, ../sass/_profile-about.sass */
 .profile-tabs__tab--active {
   color: #333;
 }
 
-/* line 75, ../sass/_profile-about.sass */
+/* line 74, ../sass/_profile-about.sass */
 .profile-infos {
   position: relative;
   margin-top: 20px;
@@ -1029,61 +1028,24 @@ body a:hover {
   border: solid 1px #eee;
 }
 
-/* line 85, ../sass/_profile-about.sass */
+/* line 84, ../sass/_profile-about.sass */
 .profile-infos__form--read .profile-infos__input {
   display: none;
 }
 
-/* line 89, ../sass/_profile-about.sass */
+/* line 88, ../sass/_profile-about.sass */
 .profile-infos__form--write .profile-infos__read {
   display: none;
 }
 
-/* line 92, ../sass/_profile-about.sass */
+/* line 91, ../sass/_profile-about.sass */
 .profile-infos__read {
   margin-top: 7px;
 }
 
-/* line 1, ../sass/_settings.sass */
-.matching-options {
-  margin: 20px 0;
-  padding: 0 20px;
+/* line 96, ../sass/_profile-about.sass */
+.profile-infos__map {
   padding-bottom: 20px;
-  background-color: #f9f9f9;
-  border: solid 1px #eee;
-}
-
-/* line 8, ../sass/_settings.sass */
-.matching-options__matching-section {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-/* line 12, ../sass/_settings.sass */
-.matching-templates {
-  margin: 20px 0;
-  padding: 0 20px;
-  padding-bottom: 20px;
-  background-color: #f9f9f9;
-  border: solid 1px #eee;
-}
-
-/* line 19, ../sass/_settings.sass */
-.matching-templates__template {
-  margin-top: 20px;
-}
-
-/* line 22, ../sass/_settings.sass */
-.matching-templates__name {
-  margin-top: 5px;
-}
-
-/* line 25, ../sass/_settings.sass */
-.matching-templates__button--icon {
-  font-size: 20px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  line-height: 10px;
 }
 
 /* line 1, ../sass/_search.sass */
