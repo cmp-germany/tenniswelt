@@ -234,11 +234,38 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-left: 10px;
 }
 
-/* line 178, ../sass/_navbar.sass */
+/* line 179, ../sass/_navbar.sass */
+.btn-navbar {
+  color: #aaa;
+  background: none;
+  outline: none;
+}
+/* line 184, ../sass/_navbar.sass */
+.btn-navbar:hover {
+  color: #fff;
+  outline: none;
+}
+/* line 187, ../sass/_navbar.sass */
+.btn-navbar:focus {
+  color: #fff;
+  outline: none;
+}
+/* line 190, ../sass/_navbar.sass */
+.btn-navbar:active {
+  outline: none;
+  color: #fff;
+}
+
+/* line 194, ../sass/_navbar.sass */
 .nav-avatar {
   margin-top: 2px;
-  width: 45px;
-  height: auto;
+  width: auto;
+  height: 35px;
+}
+
+/* line 200, ../sass/_navbar.sass */
+.navbar .dropdown-menu {
+  border-radius: 0;
 }
 
 /* line 1, ../sass/_buttons.sass */
