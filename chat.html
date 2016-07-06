@@ -243,6 +243,7 @@
     <div class="chat">
       <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
         <div class="chat-tabs">
+          <!--
           <div class="chat__tab">
             <header class="chat__header">
               <button data-toggle="collapse" data-target="#chat-1" class="chat__title-button">CHAT: Maxi Mustermann</button>
@@ -257,9 +258,11 @@
               </div>
             </div>
           </div>
+        -->
           <div class="chat__tab">
-            <header class="chat__header">
-              <button data-toggle="collapse" data-target="#chat-2" class="chat__title-button">CHAT: Max Mustermann</button>
+            <header class="chat__header online-status--chat online-status--chat-header online-status--online">
+              <button data-toggle="collapse" data-target="#chat-2" class="chat__title-button">CHAT: Max Mustermann <i class="material-icons">&#xE1E2;</i></button>
+              <button class="button--close-chat" type="button" name="chat-2-close"><i class="material-icons mdl-icon-close-color">&#xE5CD;</i></button>
             </header>
             <div id="chat-2" class="collapse chat__content">
               <ul class="chat__dialogue">
@@ -329,6 +332,10 @@
             <div class="chat__actions">
               <input class="form-chat"type="text" name="chat-search" placeholder="Suche...">
               <button class="btn btn-important button--chat" type="button" name="chat-search-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+            </div>
+            <div class="chat__filter">
+              <button class="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
+              <button class="btn btn-important button--filter-switch" type="button" name="button-online">Online (2)</button>
             </div>
           </div>
         </div>

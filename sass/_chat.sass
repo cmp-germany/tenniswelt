@@ -72,13 +72,14 @@
   text-align: center
 
 .chat__title-button
+  display: inline-block
   color: #fff
   font-weight: bold
   text-align: center
   margin: 0
   background-color: transparent
   border: none
-  width: 100%
+  width: 90%
   outline: none
   &:focus, &:active
     outline: none
@@ -99,7 +100,7 @@
   ul
     padding: 0
     list-style: none
-
+  //height: 100%
 
 .chat__list
   max-height: 250px
@@ -142,6 +143,29 @@
   margin-left: 5px
   margin-right: 4px
 
+.button--close-chat
+  display: inline-block
+  width: auto
+  padding: 0
+  background-color: transparent
+  border: none
+  vertical-align: text-bottom
+  &:focus, &:active
+    outline: none
+
+.button--filter-switch
+  padding: 0
+  margin: 0
+  background-color: transparent
+  border: none
+  width: 49%
+  color: #777
+
+.button--filter-switch--active
+  color: #333
+
+
+
 
 .online-status--chat
   .material-icons
@@ -151,6 +175,13 @@
     margin-right: 6px
     font-size: 16px
 
+.online-status--chat-header
+  .material-icons
+    color: inherit
+
 .online-status--online
   .material-icons
     color: #4D9635
+
+  .material-icons.mdl-icon-close-color
+    color: #fff
