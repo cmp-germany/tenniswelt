@@ -286,13 +286,26 @@
 
       <div class="section-center col-md-6">
         <div id="profile-about"></div>
+        <script type="text/javascript" src="data/users.js" charset="utf-8"></script>
         <script type="text/javascript">
-          var profileData = {
-            id: "company-of-imagination",
-            name: "Company of Imagination Ltd.",
-            wallpaper: "gfx/wallpaper_company.jpg",
-            profileImage: "gfx/profile_company.jpg"
+          function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
           }
+
+          var userId = getParameterByName('userId');
+          var profileData = {};
+          if (userId) {
+            profileData = users[userId];
+          } else {
+            profileData = users["company-of-imagination"];
+          }
+
         </script>
         <script type="text/babel" src="react/profile-about.js" charset="utf-8"></script>
       </div>
