@@ -1,0 +1,198 @@
+.nopadding
+  padding: 0
+
+.chat
+  position: fixed
+  bottom: 0
+  width: 100%
+
+.chat-tabs
+  position: fixed
+  bottom: 0px
+  right: 300px
+
+
+.chat__tab
+  -webkit-box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  width: 300px
+  display: inline-block
+  margin-left: 30px
+  background-color: #eee
+
+  //kann man evtl uaskommentierten
+  //max-height: 384px
+
+.chat__dialogue
+  overflow-y: scroll
+  overflow-x: hidden
+  margin-top: 6px
+  height: 300px
+  border-bottom: solid 1px #aaa
+
+.chat__message
+  width: 100%
+  float: left
+  font-size: 12px
+  margin-bottom: 10px
+  //font-weight: bold
+  *
+    float: right
+    text-align: right
+
+.chat__message--bot
+  margin-left: 10px
+
+.chat__message--partner
+  background-color: lighten( $color-primary, 31% )
+  *
+    float: left
+    text-align: left
+
+.chat__text
+  display: inline-block
+  max-width: 210px
+  width: auto
+  vertical-align: top
+  padding: 3px 6px
+
+
+.chat-window
+  width: 100%
+  min-width: 180px
+  max-width: 230px
+  overflow-x: hidden
+  background-color: #eee
+
+  -webkit-box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+
+.chat__header
+  background-color: $color-important
+  text-align: center
+
+.chat__title-button
+  padding: 5px 0
+  display: inline-block
+  color: #fff
+  font-weight: bold
+  text-align: center
+  margin: 0
+  background-color: transparent
+  border: none
+  width: 90%
+  outline: none
+  &:focus, &:active
+    outline: none
+
+.chat__image
+  width: 30px
+  height: auto
+  margin: 0 4px
+  margin-left: 14px
+
+.chat__name
+  font-size: 12px
+  width: 115px
+  overflow-x: hidden
+  white-space: nowrap
+  margin-left: 5px
+
+.chat__content
+  //Normalisieren der Liste
+  ul
+    padding: 0
+    list-style: none
+  //height: 100%
+
+.chat__list
+  max-height: 250px
+  overflow-y: scroll
+
+.chat__list-item
+  padding: 7px 0
+  margin: 7px 0
+
+  &:hover
+    background-color: #fff
+
+  &:last-child
+    margin-bottom: 20px
+
+.chat__actions
+  width: 100%
+  text-align: center
+
+.form-chat
+  display: inline-block
+  border: solid 1px #777
+  background-color: #fefefe
+  width: 120px
+  padding: 1px 10px
+  margin-bottom: 10px
+
+.form-chat--messagebox
+  width: 240px
+  height: 25px
+  margin-bottom: 10px
+
+.button--chat
+  vertical-align: top
+  border: none
+  padding: 2px 6px
+  border: none
+  color: #fefefe
+  height: 23px
+  margin-left: 5px
+  margin-right: 4px
+
+.button--close-chat
+  display: inline-block
+  width: auto
+  padding: 0
+  background-color: transparent
+  border: none
+  vertical-align: text-bottom
+  &:focus, &:active
+    outline: none
+
+.button--filter-switch
+  padding: 0
+  margin: 0
+  background-color: transparent
+  border: none
+  width: 49%
+  color: #777
+
+.button--filter-switch--active
+  color: #333
+
+.button--filter-switch--deactive
+  border-top: solid 1px #999
+  border-left: solid 1px #999
+
+
+
+
+.online-status--chat
+  .material-icons
+    color: #777
+    float: right
+    margin-top: 3px
+    margin-right: 6px
+    font-size: 16px
+
+.online-status--chat-header
+  .material-icons
+    color: inherit
+  .material-icons.mdl-icon-close-color
+    color: #fff
+
+.online-status--online
+  .material-icons
+    color: #4D9635
+
+  .material-icons.mdl-icon-close-color
+    color: #fff

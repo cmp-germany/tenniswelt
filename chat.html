@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">
+           <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
+         </a>
+       </div>
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-2">
+         <form class="navbar-form " action="wall.html" method="get">
+           <div class="form-group">
+             <input type="text" class="form-control form-group--nav form-control--options-navbar" name="suche" placeholder="Suchen">
+           </div>
+           <div class="form-group">
+             <input type="text" class="form-control form-group--nav form-control--options-navbar" name="region" placeholder="Region">
+           </div>
+           <div class="form-group form-group--nav form-group--small">
+             <input id="form-control-range" class="form-control form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+             <label class="form-control-label" for="form-control-range">150</label>
+           </div>
+           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Finden</button>
+         </form>
+       </div><!-- /.navbar-collapse -->
+
+       <div class="navbar-right" >
+         <ul class="nav navbar-nav">
+           <li><img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" /></li>
+        </ul>
+      </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <header>
+      <div class="header-content">
+
+      </div>
+    </header>
+
+    <nav class="navbar grand-navbar" id="navbar-starters">
+      <div class="container">
+        <div class="starters-navigation collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="nav">Stichwortsuche</a></li>
+            <li><a href="#" class="nav">Startup-Leitfaden</a></li>
+            <li><a href="#" class="nav">Gruppen</a></li>
+            <li><a href="#" class="nav">Eventkalender</a></li>
+            <li><a href="#" class="nav">Suche / Biete</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="search__page-navigation">
+        <ul class="profile-tabs">
+          <li class="profile-tabs__tab"><a href="#">Personen (0)</a></li>
+          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#">Unternehmen (6)</a></li>
+          <li class="profile-tabs__tab"><a href="#">Gruppen (0)</a></li>
+        </ul>
+      </section>
+      <section class="search__results">
+        <header class="search-filter-form">
+          <div class="form-group form-group--nav search-filter-nav--form-group">
+            <input type="text" class="form-control form-control--options-navbar" name="branche" placeholder="Branche">
+          </div>
+          <div class="form-group form-group--nav search-filter-nav--form-group">
+             <input type="text" class="form-control form-control--options-navbar" name="region" placeholder="Region">
+          </div>
+          <div class="form-group form-group--nav search-filter-nav--form-group">
+            <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Filtern</button>
+          </div>
+
+          <div class="pull-right">
+            <button type="submit" data-toggle="collapse" data-target="#map" class="btn btn-important search-btn-locations"><i class="material-icons">&#xE55F;</i>Auf Karte anzeigen</button>
+          </div>
+        </header>
+
+        <div id="map" class="collapse search__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.601647372274!2d6.824141315273979!3d50.98655335647221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf3098c3c70c7b%3A0x4b8b986d52855bf5!2sAugust-Euler-Stra%C3%9Fe+3%2C+50259+Pulheim%2C+Deutschland!5e0!3m2!1sde!2sus!4v1467286780051" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="search-result-list container">
+          <header class="search__siteheader">
+            <h3>Unternehmenssuche: "Startup"</h3>
+          </header>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status online-status--online ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="result-card">
+              <div class="result-card__image">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </div>
+              <div class="result-card__content">
+                <div class="result-card__name">
+                  <a href="#">Viktor Müller</a>
+                </div>
+                <div class="result-card__actions">
+                  <ul>
+                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                    <li><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="chat">
+      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+        <div class="chat-tabs">
+
+          <div class="chat__tab">
+            <header class="chat__header online-status--chat online-status--chat-header">
+              <button data-toggle="collapse" data-target="#chat-1" class="chat__title-button">Maxi Mustermann <i class="material-icons">&#xE1E2;</i></button>
+              <button class="button--close-chat" type="button" name="chat-1-close"><i class="material-icons mdl-icon-close-color">&#xE5CD;</i></button>
+            </header>
+            <div id="chat-1" class="collapse chat__content">
+              <ul class="chat__dialogue">
+                <li class="chat__message chat__message--bot">Noch keine Konversation geführt.</li>
+              </ul>
+              <div class="chat__actions">
+                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
+                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="chat__tab">
+            <header class="chat__header online-status--chat online-status--chat-header online-status--online">
+              <button data-toggle="collapse" data-target="#chat-2" class="chat__title-button">Max Mustermann <i class="material-icons">&#xE1E2;</i></button>
+              <button class="button--close-chat" type="button" name="chat-2-close"><i class="material-icons mdl-icon-close-color">&#xE5CD;</i></button>
+            </header>
+            <div id="chat-2" class="collapse chat__content">
+              <ul class="chat__dialogue">
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hi
+                  </p>
+                </li>
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hey
+                  </p>
+                </li>
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Schön, dass Sie sich melden!
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hatte ich doch versprochen ;-)
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Ich bereite gerade die Dokumente vor ... einen Moment
+                  </p>
+                </li>
+              </ul>
+              <div class="chat__actions">
+                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
+                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
+        <div class="chat-window">
+          <header class="chat__header">
+            <button data-toggle="collapse" data-target="#chat-list" class="chat__title-button">CHAT (2)</button>
+          </header>
+          <div id="chat-list" class="collapse chat__content">
+            <ul class="chat__list">
+              <li class="chat__list-item online-status--chat online-status--online"><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Viktor Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
+              <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
+              <li class="chat__list-item online-status--chat online-status--online"><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
+              <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
+            </ul>
+            <div class="chat__actions">
+              <input class="form-chat"type="text" name="chat-search" placeholder="Suche...">
+              <button class="btn btn-important button--chat" type="button" name="chat-search-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+            </div>
+            <div class="chat__filter">
+              <button class="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
+              <button class="btn btn-important button--filter-switch button--filter-switch--deactive" type="button" name="button-online">Online (2)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="js/navigation.js" charset="utf-8"></script>
+</body>
+</html>
