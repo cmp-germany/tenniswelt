@@ -274,7 +274,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 }
 
 /* line 16, ../sass/_form.sass */
-.form-control--login-navbar, .form-control--options-navbar {
+.form-control--navbar, .form-control--options-navbar {
   border: solid 1px #747474;
   background-color: transparent;
   color: #fff;
@@ -301,22 +301,22 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 }
 
 /* line 34, ../sass/_form.sass */
-.form-control--login-navbar::-webkit-input-placeholder {
+.form-control--navbar::-webkit-input-placeholder {
   color: #cdcdcd;
 }
 
 /* line 37, ../sass/_form.sass */
-.form-control--login-navbar:-moz-placeholder {
+.form-control--navbar:-moz-placeholder {
   color: #cdcdcd;
 }
 
 /* line 40, ../sass/_form.sass */
-.form-control--login-navbar::-moz-placeholder {
+.form-control--navbar::-moz-placeholder {
   color: #cdcdcd;
 }
 
 /* line 43, ../sass/_form.sass */
-.form-control--login-navbar:-ms-input-placeholder {
+.form-control--navbar:-ms-input-placeholder {
   color: #cdcdcd;
 }
 
