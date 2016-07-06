@@ -1454,7 +1454,13 @@ body a:hover {
   color: #333;
 }
 
-/* line 171, ../sass/_chat.sass */
+/* line 167, ../sass/_chat.sass */
+.button--filter-switch--deactive {
+  border-top: solid 1px #999;
+  border-left: solid 1px #999;
+}
+
+/* line 175, ../sass/_chat.sass */
 .online-status--chat .material-icons {
   color: #777;
   float: right;
@@ -1463,16 +1469,16 @@ body a:hover {
   font-size: 16px;
 }
 
-/* line 179, ../sass/_chat.sass */
+/* line 183, ../sass/_chat.sass */
 .online-status--chat-header .material-icons {
   color: inherit;
 }
 
-/* line 183, ../sass/_chat.sass */
+/* line 187, ../sass/_chat.sass */
 .online-status--online .material-icons {
   color: #4D9635;
 }
-/* line 186, ../sass/_chat.sass */
+/* line 190, ../sass/_chat.sass */
 .online-status--online .material-icons.mdl-icon-close-color {
   color: #fff;
 }
