@@ -46,7 +46,7 @@
   a, a:active, a:focus, a:visited
     height: 30px
     color: #fff
-    background-color: rgba($color-important, 0.75)
+    background-color: rgba($color-important, 0.85)
     padding: 5px 20px
     margin-left: 7px
     font-weight: bold
@@ -54,7 +54,7 @@
     border-left: solid 5px #fff
 
   a:hover
-    background-color: rgba($color-primary, 0.75)
+    background-color: rgba($color-primary, 0.85)
 
 
 .form-group--nav
@@ -175,7 +175,27 @@ input[type=range].form-control--range-navbar
   .btn-important
     margin-left: 10px
 
+
+.btn-navbar
+  color: #aaa
+  background: none
+  outline: none
+
+  &:hover
+    color: #fff
+    outline: none
+  &:focus
+    color: #fff
+    outline: none
+  &:active
+    outline: none
+    color: #fff
+
 .nav-avatar
   margin-top: 2px
-  width: 45px
-  height: auto
+  width: auto
+  height: 35px
+
+.navbar
+  .dropdown-menu
+    border-radius: 0
