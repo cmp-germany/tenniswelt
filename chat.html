@@ -243,17 +243,83 @@
     <div class="chat">
       <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
         <div class="chat-tabs">
-          <div class="chat-tabs__tab">
-
+          <div class="chat__tab">
+            <header class="chat__header">
+              <button data-toggle="collapse" data-target="#chat-1" class="chat__title-button">CHAT: Maxi Mustermann</button>
+            </header>
+            <div id="chat-1" class="collapse chat__content">
+              <ul class="chat__dialogue">
+                <li class="chat__message chat__message--bot">Noch keine Konversation geführt.</li>
+              </ul>
+              <div class="chat__actions">
+                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
+                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="chat__tab">
+            <header class="chat__header">
+              <button data-toggle="collapse" data-target="#chat-2" class="chat__title-button">CHAT: Max Mustermann</button>
+            </header>
+            <div id="chat-2" class="collapse chat__content">
+              <ul class="chat__dialogue">
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hi
+                  </p>
+                </li>
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hey
+                  </p>
+                </li>
+                <li class="chat__message chat__message--partner">
+                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Schön, dass Sie sich melden!
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Hatte ich doch versprochen ;-)
+                  </p>
+                </li>
+                <li class="chat__message">
+                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
+                  <p class="chat__text">
+                    Ich bereite gerade die Dokumente vor ... einen Moment
+                  </p>
+                </li>
+              </ul>
+              <div class="chat__actions">
+                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
+                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
         <div class="chat-window">
           <header class="chat__header">
-            <p class="chat__title">CHAT</p>
+            <button data-toggle="collapse" data-target="#chat-list" class="chat__title-button">CHAT (2)</button>
           </header>
-          <div class="chat__content">
+          <div id="chat-list" class="collapse chat__content">
             <ul class="chat__list">
               <li class="chat__list-item online-status--chat online-status--online"><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Viktor Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
               <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
@@ -261,8 +327,8 @@
               <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
             </ul>
             <div class="chat__actions">
-              <input class="form-chat"type="text" name="chat-search" value="Suche...">
-              <button class="button--chat" type="button" name="chat-search-button">Suche</button>
+              <input class="form-chat"type="text" name="chat-search" placeholder="Suche...">
+              <button class="btn btn-important button--chat" type="button" name="chat-search-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
             </div>
           </div>
         </div>
