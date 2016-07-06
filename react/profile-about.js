@@ -1,5 +1,13 @@
 var ProfileHeader = React.createClass({
   render: function() {
+    var onlineIconClasses;
+    if (this.props.profileData.isOnline) {
+      onlineIconClasses = "profile-header__action-button profile-header__action-button--is-online";
+    } else {
+      onlineIconClasses = "profile-header__action-button";
+    }
+
+
     return (
       <header className="profile-header">
         <img className="profile-header__wallpaper" src={this.props.profileData.wallpaper} alt={"Wallpaper von " + this.props.profileData.name} />
@@ -12,7 +20,7 @@ var ProfileHeader = React.createClass({
           </div>
           <div className="col-xs-3">
             <ul className="profile-header__action-buttons text-right">
-              <li className="profile-header__action-button profile-header__action-button--online-status"><i className="material-icons"></i></li>
+              <li className={onlineIconClasses}><i className="material-icons"></i></li>
               <li className="profile-header__action-button"><i className="material-icons"></i></li>
             </ul>
           </div>
@@ -44,42 +52,42 @@ var ProfileCompanyInfo = React.createClass({
             <label htmlFor="company-branche" className="col-sm-3 control-label profile-infos__label">Unternehmen</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.branche}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-branche" placeholder="{this.props.companyInfo.branche}" />
+              <input type="text" className="form-control profile-infos__input" id="company-branche" placeholder={this.props.companyInfo.branche} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="company-main-location" className="col-sm-3 control-label profile-infos__label">Hauptsitz</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.mainLocation}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-main-location" placeholder="{this.props.companyInfo.mainLocation}" />
+              <input type="text" className="form-control profile-infos__input" id="company-main-location" placeholder={this.props.companyInfo.mainLocation} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="company-country" className="col-sm-3 control-label profile-infos__label">Land</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.country}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-country" placeholder="{this.props.companyInfo.country}" />
+              <input type="text" className="form-control profile-infos__input" id="company-country" placeholder={this.props.companyInfo.country} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="company-email" className="col-sm-3 control-label profile-infos__label">E-Mail</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.email}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-email" placeholder="{this.props.companyInfo.email}" />
+              <input type="text" className="form-control profile-infos__input" id="company-email" placeholder={this.props.companyInfo.email} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="company-tel" className="col-sm-3 control-label profile-infos__label">Telefon</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.tel}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-tel" placeholder="{this.props.companyInfo.tel}" />
+              <input type="text" className="form-control profile-infos__input" id="company-tel" placeholder={this.props.companyInfo.tel} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="company-category" className="col-sm-3 control-label profile-infos__label">Kategorie</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.companyInfo.category}</p>
-              <input type="text" className="form-control profile-infos__input" id="company-category" placeholder="{this.props.companyInfo.category}" />
+              <input type="text" className="form-control profile-infos__input" id="company-category" placeholder={this.props.companyInfo.category} />
             </div>
           </div>
         </form>
@@ -103,23 +111,47 @@ var ProfileMap = React.createClass({
 
 var ProfileInfo = React.createClass({
   render: function() {
+
     var keywords;
-    for (var i = 0; i < this.props.profileData.keywords.length; i++) {
-      if (i==0) {
-        keywords = this.props.profileData.keywords[i];
-      } else {
-        keywords += ", " + this.props.profileData.keywords[i];
+    if (this.props.profileData.keywords) {
+      for (var i = 0; i < this.props.profileData.keywords.length; i++) {
+        if (i==0) {
+          keywords = this.props.profileData.keywords[i];
+        } else {
+          keywords += ", " + this.props.profileData.keywords[i];
+        }
       }
     }
+
+    var keywordsDiv;
+    if (this.props.profileData.keywords) {
+      keywordsDiv = (
+        <div className="form-group">
+          <label htmlFor="about-us-keywords" className="col-sm-3 control-label profile-infos__label">Suchwörter</label>
+          <div className="col-sm-9">
+            <p className="profile-infos__read">{keywords}</p>
+            <input type="text" className="form-control profile-infos__input" id="about-us-keywords" placeholder={keywords} />
+          </div>
+        </div>
+      )
+    }
+
+    var title;
+    if (this.props.profileData.isCompanyProfile) {
+      title = "Über uns";
+    } else {
+      title = "Über mich";
+    }
+
     return (
       <div className="profile-infos">
-        <h3 className="profile-infos__title">Über uns</h3>
+        <h3 className="profile-infos__title">{title}</h3>
         <form className="form-horizontal profile-infos__form--read">
           <div className="form-group">
             <label htmlFor="about-us-adress" className="col-sm-3 control-label profile-infos__label">Adresse</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.profileData.street}</p>
-              <input type="text" className="form-control profile-infos__input" id="about-us-adress" placeholder="{this.props.profileData.street}" />
+              <input type="text" className="form-control profile-infos__input" id="about-us-adress" placeholder={this.props.profileData.street} />
             </div>
           </div>
           <div className="form-group">
@@ -133,30 +165,24 @@ var ProfileInfo = React.createClass({
             <label htmlFor="about-us-city" className="col-sm-3 control-label profile-infos__label">Stadt</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.profileData.city}</p>
-              <input type="text" className="form-control profile-infos__input" id="about-us-city" placeholder="{this.props.profileData.city}" />
+              <input type="text" className="form-control profile-infos__input" id="about-us-city" placeholder={this.props.profileData.city} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="about-us-website" className="col-sm-3 control-label profile-infos__label">Website</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.profileData.website}</p>
-              <input type="text" className="form-control profile-infos__input" id="about-us-website" placeholder="{this.props.profileData.website}" />
+              <input type="text" className="form-control profile-infos__input" id="about-us-website" placeholder={this.props.profileData.website} />
             </div>
           </div>
           <div className="form-group">
             <label htmlFor="about-us-timezone" className="col-sm-3 control-label profile-infos__label">Zeitzone</label>
             <div className="col-sm-9">
               <p className="profile-infos__read">{this.props.profileData.timezone}</p>
-              <input type="text" className="form-control profile-infos__input" id="about-us-timezone" placeholder="{this.props.profileData.timezone}" />
+              <input type="text" className="form-control profile-infos__input" id="about-us-timezone" placeholder={this.props.profileData.timezone} />
             </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="about-us-keywords" className="col-sm-3 control-label profile-infos__label">Suchwörter</label>
-            <div className="col-sm-9">
-              <p className="profile-infos__read">{keywords}</p>
-              <input type="text" className="form-control profile-infos__input" id="about-us-keywords" placeholder="{keywords}" />
-            </div>
-          </div>
+          {keywordsDiv}
         </form>
       </div>
     );
@@ -165,17 +191,29 @@ var ProfileInfo = React.createClass({
 
 var ProfileAbout = React.createClass({
   render: function() {
+
+    var profileCompanyInfo;
+    if (this.props.profileData.isCompanyProfile) {
+      profileCompanyInfo = <ProfileCompanyInfo companyInfo={this.props.profileData.companyInfo} />
+    };
+
+    var profileMap;
+    if (this.props.profileData.mapData) {
+      profileMap = <ProfileMap mapData={this.props.profileData.mapData} />
+    }
+
+
     return (
       <div>
         <ProfileHeader profileData={this.props.profileData} />
         <ul className="profile-tabs">
-          <li className="profile-tabs__tab profile-tabs__tab--active"><a href="#">Über</a></li>
-          <li className="profile-tabs__tab"><a href="#">Wall</a></li>
-          <li className="profile-tabs__tab"><a href="#">Kontakte</a></li>
-          <li className="profile-tabs__tab"><a href="#">Fotos</a></li>
+          <li className="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Über</a></li>
+          <li className="profile-tabs__tab"><a href="#1">Wall</a></li>
+          <li className="profile-tabs__tab"><a href="#1">Kontakte</a></li>
+          <li className="profile-tabs__tab"><a href="#1">Fotos</a></li>
         </ul>
-        <ProfileCompanyInfo companyInfo={this.props.profileData.companyInfo} />
-        <ProfileMap mapData={this.props.profileData.mapData} />
+        {profileCompanyInfo}
+        {profileMap}
         <ProfileInfo profileData={this.props.profileData} />
       </div>
     );
