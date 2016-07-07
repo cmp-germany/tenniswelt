@@ -1515,7 +1515,7 @@ body a:hover {
 .form-chat {
   display: inline-block;
   border: none;
-  width: 200px;
+  width: 80%;
   padding: 3px 10px;
   margin-bottom: 10px;
   outline: none;
@@ -1618,4 +1618,67 @@ body a:hover {
 /* line 256, ../sass/_chat.sass */
 .online-status--online .material-icons.mdl-icon-close-color {
   color: #fff;
+}
+
+@media(max-width:767px) {
+  /* line 2, ../sass/_wall-mediascreens.sass */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 6, ../sass/_wall-mediascreens.sass */
+  .section-center {
+    padding: 0;
+  }
+  /* line 8, ../sass/_wall-mediascreens.sass */
+  .section-center textarea {
+    padding: 14px 20px;
+    height: 100px;
+  }
+
+  /* line 12, ../sass/_wall-mediascreens.sass */
+  .wall-widget--activity-post {
+    padding: 10px 5px;
+  }
+  /* line 15, ../sass/_wall-mediascreens.sass */
+  .wall-widget--activity-post .account-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  /* line 19, ../sass/_wall-mediascreens.sass */
+  .wall-widget--activity-post h4 {
+    font-size: 14px;
+  }
+
+  /* line 22, ../sass/_wall-mediascreens.sass */
+  .wall-widget--info {
+    font-size: 12px;
+  }
+
+  /* line 25, ../sass/_wall-mediascreens.sass */
+  .wall-widget--actions__social {
+    font-size: 12px;
+  }
+  /* line 27, ../sass/_wall-mediascreens.sass */
+  .wall-widget--actions__social li {
+    margin-right: 7px;
+  }
+
+  /* line 30, ../sass/_wall-mediascreens.sass */
+  .wall-widget--activity-post-text {
+    font-size: 13px;
+  }
+}
+@media(max-width:767px) {
+  /* line 2, ../sass/_navbar-mediascreens.sass */
+  .header-content {
+    height: 180px;
+  }
+
+  /* line 5, ../sass/_navbar-mediascreens.sass */
+  .navbar.grand-navbar {
+    top: 48px;
+    position: fixed;
+  }
 }
