@@ -1224,84 +1224,89 @@ body a:hover {
   padding: 0;
   height: 98px;
   margin-top: 10px;
+  margin-left: 7px;
+  margin-right: 7px;
   overflow: hidden;
   background-color: #eee;
 }
 
-/* line 40, ../sass/_search.sass */
+/* line 42, ../sass/_search.sass */
 .result-card__image {
   float: left;
   width: 100px;
   height: 100px;
   padding-right: 5px;
 }
-/* line 45, ../sass/_search.sass */
+/* line 47, ../sass/_search.sass */
 .result-card__image img {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
 
-/* line 50, ../sass/_search.sass */
+/* line 52, ../sass/_search.sass */
 .result-card__content {
   float: right;
   vertical-align: top;
   padding: 5px 0px;
 }
 
-/* line 55, ../sass/_search.sass */
+/* line 57, ../sass/_search.sass */
 .result-card__name {
-  vertical-align: top;
-  margin-right: 10px;
+  position: absolute;
+  right: 7px;
+  max-width: 260px;
+  text-align: right;
+  margin-right: 7px;
 }
-/* line 58, ../sass/_search.sass */
+/* line 63, ../sass/_search.sass */
 .result-card__name a {
   font-size: 15px;
 }
 
-/* line 61, ../sass/_search.sass */
+/* line 66, ../sass/_search.sass */
 .result-card__actions {
   position: absolute;
   bottom: 0;
   right: 20px;
 }
-/* line 65, ../sass/_search.sass */
+/* line 70, ../sass/_search.sass */
 .result-card__actions ul {
   list-style: none;
 }
-/* line 67, ../sass/_search.sass */
+/* line 72, ../sass/_search.sass */
 .result-card__actions ul li {
   display: inline-block;
 }
-/* line 69, ../sass/_search.sass */
+/* line 74, ../sass/_search.sass */
 .result-card__actions .material-icons {
   font-size: 18px;
   margin-right: 5px;
 }
-/* line 73, ../sass/_search.sass */
+/* line 78, ../sass/_search.sass */
 .result-card__actions .online-status {
   color: #777;
 }
-/* line 76, ../sass/_search.sass */
+/* line 81, ../sass/_search.sass */
 .result-card__actions .online-status--online {
   color: #4D9635;
 }
 
-/* line 79, ../sass/_search.sass */
+/* line 84, ../sass/_search.sass */
 .search-btn-locations {
   background-color: #3aa6e7;
 }
-/* line 81, ../sass/_search.sass */
+/* line 86, ../sass/_search.sass */
 .search-btn-locations .material-icons {
   vertical-align: middle;
   margin-right: 3px;
 }
-/* line 85, ../sass/_search.sass */
+/* line 90, ../sass/_search.sass */
 .search-btn-locations:active, .search-btn-locations:hover, .search-btn-locations:focus {
   background-color: #22638A;
 }
 
-/* line 88, ../sass/_search.sass */
+/* line 93, ../sass/_search.sass */
 .search__map {
   width: 100%;
 }

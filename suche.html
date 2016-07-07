@@ -89,20 +89,20 @@
                 Stichwortsuche <span class="caret"></span>
               </button>
               <ul class="dropdown-menu dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
-                <li><a href="suche.html?suche=startup" class="dropdown-button--starters">Startups</a></li>
-                <li><a href="suche.html?suche=private-investoren" class="dropdown-button--starters">Private Investoren</a></li>
-                <li><a href="suche.html?suche=institutionelle-investoren" class="dropdown-button--starters">Institutionelle Investoren</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=startup" class="dropdown-button--starters">Startups</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=privateInvestoren" class="dropdown-button--starters">Private Investoren</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=institutionelleInvestoren" class="dropdown-button--starters">Institutionelle Investoren</a></li>
                 <li role="separator" class="divider"></li>
                 <!--Förderung-->
-                <li><a href="suche.html?suche=institutionelle-foederungen" class="dropdown-button--starters">Institutionelle Förderung</a></li>
-                <li><a href="suche.html?suche=privatwirtschaftliche-foerderung" class="dropdown-button--starters">Privatwirtschaftliche Förderung</a></li>
-                <li><a href="suche.html?suche=staatliche-foederungen" class="dropdown-button--starters">Staatliche Förderung</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=institutionelleFoerderungen" class="dropdown-button--starters">Institutionelle Förderung</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung" class="dropdown-button--starters">Privatwirtschaftliche Förderung</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=staatlicheFoederungen" class="dropdown-button--starters">Staatliche Förderung</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="suche.html?suche=gruenderzentrum" class="dropdown-button--starters">Gründerzentrum</a></li>
-                <li><a href="suche.html?suche=business-angels" class="dropdown-button--starters">Business Angels</a></li>
-                <li><a href="suche.html?suche=dienstleister" class="dropdown-button--starters">Dienstleister</a></li>
-                <li><a href="suche.html?suche=einkaeufer" class="dropdown-button--starters">Einkäufer</a></li>
-                <li><a href="suche.html?suche=co-working-spaces" class="dropdown-button--starters">Co-Working Spaces</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=gruenderzentrum" class="dropdown-button--starters">Gründerzentrum</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=businessAngels" class="dropdown-button--starters">Business Angels</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=dienstleister" class="dropdown-button--starters">Dienstleister</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=einkaeufer" class="dropdown-button--starters">Einkäufer</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=co_workingSpaces" class="dropdown-button--starters">Co-Working Spaces</a></li>
               </ul>
             </li>
             <li><a href="#" class="nav-button">Startup-Leitfaden</a></li>
@@ -117,9 +117,9 @@
     <div class="container">
       <section class="search__page-navigation">
         <ul class="profile-tabs">
-          <li class="profile-tabs__tab"><a href="#">Personen (0)</a></li>
-          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#">Unternehmen (6)</a></li>
-          <li class="profile-tabs__tab"><a href="#">Gruppen (0)</a></li>
+          <li id="page-navigation__personen" class="profile-tabs__tab"></li>
+          <li id="page-navigation__unternehmen" class="profile-tabs__tab profile-tabs__tab--active" ></li>
+          <li id="page-navigation__gruppen" class="profile-tabs__tab"></li>
         </ul>
       </section>
       <section class="search__results">
@@ -145,9 +145,13 @@
 
         <div class="search-result-list container">
           <header class="search__siteheader">
-            <h3>Unternehmenssuche: "Startup"</h3>
+            <h3 id="search-result__search-title"></h3>
           </header>
-          <div class="col-md-3">
+
+          <div id="resultContainer">
+
+          </div>
+          <!--<div class="col-md-3">
             <div class="result-card">
               <div class="result-card__image">
                 <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
@@ -164,97 +168,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="result-card">
-              <div class="result-card__image">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </div>
-              <div class="result-card__content">
-                <div class="result-card__name">
-                  <a href="#">Viktor Müller</a>
-                </div>
-                <div class="result-card__actions">
-                  <ul>
-                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                    <li><i class="material-icons">&#xE0C9;</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="result-card">
-              <div class="result-card__image">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </div>
-              <div class="result-card__content">
-                <div class="result-card__name">
-                  <a href="#">Viktor Müller</a>
-                </div>
-                <div class="result-card__actions">
-                  <ul>
-                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                    <li><i class="material-icons">&#xE0C9;</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="result-card">
-              <div class="result-card__image">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </div>
-              <div class="result-card__content">
-                <div class="result-card__name">
-                  <a href="#">Viktor Müller</a>
-                </div>
-                <div class="result-card__actions">
-                  <ul>
-                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                    <li><i class="material-icons">&#xE0C9;</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="result-card">
-              <div class="result-card__image">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </div>
-              <div class="result-card__content">
-                <div class="result-card__name">
-                  <a href="#">Viktor Müller</a>
-                </div>
-                <div class="result-card__actions">
-                  <ul>
-                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                    <li><i class="material-icons">&#xE0C9;</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="result-card">
-              <div class="result-card__image">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </div>
-              <div class="result-card__content">
-                <div class="result-card__name">
-                  <a href="#">Viktor Müller</a>
-                </div>
-                <div class="result-card__actions">
-                  <ul>
-                    <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                    <li><i class="material-icons">&#xE0C9;</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div>-->
+
+
         </div>
 
       </section>
@@ -354,5 +270,6 @@
     </div>
 
 <script src="js/navigation.js" charset="utf-8"></script>
+<script src="js/search.js" charset="utf-8"></script>
 </body>
 </html>
