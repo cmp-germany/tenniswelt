@@ -126,7 +126,7 @@ var users = {
     "city": "Pulheim",
     "website": "http://www.gfke.eu/",
     "timezone": "MESZ",
-    "isOnline": true
+    "isOnline": false
   },
 
 

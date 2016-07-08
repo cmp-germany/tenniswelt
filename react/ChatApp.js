@@ -20,8 +20,7 @@ var conversations = {
       user: "me",
       message: "Ich bereite gerade die Dokumente vor ... einen Moment"
     }
-  ],
-  "kai-gaertner": []
+  ]
 }
 
 var ChatTab = React.createClass({
@@ -32,7 +31,12 @@ var ChatTab = React.createClass({
   },
 
   getConversation: function() {
-    return conversations[this.props.partnerId];
+    var conversation = conversations[this.props.partnerId];
+    if (conversation) {
+      return conversation;
+    } else {
+      return [];
+    }
   },
 
   getChatName: function() {
@@ -72,23 +76,30 @@ var ChatTab = React.createClass({
 
   render: function() {
 
-    var chatMessages = this.state.conversation.map(function (message, index) {
-      var chatClasses;
-      if (message.user == "me") {
-        chatClasses = "chat__message chat__message--user";
-      } else {
-        chatClasses = "chat__message chat__message--partner";
-      }
+    var chatMessages;
 
-      return (
-        <li className={chatClasses} key={index}>
-          <img src={this.users[message.user].profileImage} className="chat__image" alt="chat-image" />
-          <p className="chat__text">
-            {message.message}
-          </p>
-        </li>
-      );
-    }, {users: users});
+
+    if (this.state.conversation.length > 0) {
+      chatMessages = this.state.conversation.map(function (message, index) {
+        var chatClasses;
+        if (message.user == "me") {
+          chatClasses = "chat__message chat__message--user";
+        } else {
+          chatClasses = "chat__message chat__message--partner";
+        }
+
+        return (
+          <li className={chatClasses} key={index}>
+            <img src={this.users[message.user].profileImage} className="chat__image" alt="chat-image" />
+            <p className="chat__text">
+              {message.message}
+            </p>
+          </li>
+        );
+      }, {users: users});
+    } else {
+      chatMessages = <li className="chat__message chat__message--bot">Noch keine Konversation geführt.</li>;
+    }
 
     var headerClasses = "chat__header online-status--chat online-status--chat-header";
     var user = users[this.props.partnerId];
@@ -98,14 +109,15 @@ var ChatTab = React.createClass({
       }
     }
 
+    var chatId = "chat-" + this.props.partnerId;
 
     return (
       <div className="chat__tab">
         <header className={headerClasses}>
-          <button data-toggle="collapse" data-target="#chat-2" className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
-          <button className="button--close-chat" type="button" name="chat-2-close"><i className="material-icons mdl-icon-close-color"></i></button>
+          <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
+          <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
         </header>
-        <div id="chat-2" className="collapse chat__content">
+        <div id={chatId} className="collapse chat__content">
           <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
             {chatMessages}
           </ul>
@@ -137,17 +149,18 @@ var ChatTabContacts = React.createClass({
       return (
         <li
           className={classNames} key={index}
+          onClick={function(){
+            this.props.addChat(user.id);
+          }.bind(this)}
         >
-          <a href="#">
-            <img className="chat__image" src={user.profileImage}
-              alt="profilbild"
-            />
-            <label className="chat__name">{user.name}</label>
-          </a>
+          <img className="chat__image" src={user.profileImage}
+            alt="profilbild"
+          />
+          <label className="chat__name">{user.name}</label>
           <i className="material-icons"></i>
         </li>
       )
-    });
+    }.bind(this));
 
     return (
       <div className="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
@@ -175,30 +188,45 @@ var ChatTabContacts = React.createClass({
 });
 
 var ChatApp = React.createClass({
+  getInitialState: function() {
+    return {
+      openChatTabs: [
+        "volker-miller",
+        "kai-gaertner"
+      ]
+    }
+  },
+
+  addChat: function(partnerId) {
+    var tempOpenChatTabs = this.state.openChatTabs;
+    tempOpenChatTabs.push(partnerId);
+    this.setState({openChatTabs: tempOpenChatTabs});
+  },
+
+  removeChat: function(partnerId) {
+    var tempOpenChatTabs = this.state.openChatTabs;
+    var index = $.inArray(partnerId, tempOpenChatTabs);
+    if (index > -1) {
+      tempOpenChatTabs.splice(index, 1);
+    }
+    this.setState({openChatTabs: tempOpenChatTabs});
+  },
+
   render: function() {
+    var chatTabs = this.state.openChatTabs.map(function (partnerId){
+      return (
+        <ChatTab partnerId={partnerId} key={partnerId} removeChat={this.removeChat} />
+      );
+    }.bind(this));
+
     return (
       <div>
         <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
           <div className="chat-tabs">
-            <div className="chat__tab">
-              <header className="chat__header online-status--chat online-status--chat-header">
-                <button data-toggle="collapse" data-target="#chat-1" className="chat__title-button">Maxi Mustermann <i className="material-icons"></i></button>
-                <button className="button--close-chat" type="button" name="chat-1-close"><i className="material-icons mdl-icon-close-color"></i></button>
-              </header>
-              <div id="chat-1" className="collapse chat__content">
-                <ul className="chat__dialogue">
-                  <li className="chat__message chat__message--bot">Noch keine Konversation geführt.</li>
-                </ul>
-                <div className="chat__actions">
-                  <textarea placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} />
-                  <button className="btn btn-important button--chat" type="button" name="chat-send-button"><span className="glyphicon glyphicon-menu-right" aria-hidden="true" /></button>
-                </div>
-              </div>
-            </div>
-            <ChatTab partnerId="volker-miller" />
+            {chatTabs}
           </div>
         </div>
-        <ChatTabContacts />
+        <ChatTabContacts addChat={this.addChat} />
       </div>
     );
   }
