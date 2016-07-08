@@ -1,39 +1,73 @@
+var conversations = {
+  "volker-miller": [
+    {
+      user: "me",
+      message: "Hi"
+    },
+    {
+      user: "volker-miller",
+      message: "Hey"
+    },
+    {
+      user: "volker-miller",
+      message: "Schön, dass Sie sich melden!"
+    },
+    {
+      user: "me",
+      message: "Hatte ich doch versprochen ;-)"
+    },
+    {
+      user: "me",
+      message: "Ich bereite gerade die Dokumente vor ... einen Moment"
+    }
+  ],
+  "kai-gaertner": []
+}
+
 var ChatTab = React.createClass({
   getInitialState: function () {
     return {
-      conversation: [
-        {
-          user: "me",
-          message: "Hi"
-        },
-        {
-          user: "volker-miller",
-          message: "Hey"
-        },
-        {
-          user: "volker-miller",
-          message: "Schön, dass Sie sich melden!"
-        },
-        {
-          user: "me",
-          message: "Hatte ich doch versprochen ;-)"
-        },
-        {
-          user: "me",
-          message: "Ich bereite gerade die Dokumente vor ... einen Moment"
-        }
-      ]
+      conversation: this.getConversation()
     };
+  },
+
+  getConversation: function() {
+    return conversations[this.props.partnerId];
+  },
+
+  getChatName: function() {
+    return users[this.props.partnerId].name;
   },
 
   addMessage: function (message) {
     var tempConversation = this.state.conversation;
     tempConversation.push(message);
     this.setState({conversation: tempConversation});
+    this.scrollDown();
+  },
+
+  scrollDown: function() {
+    $(this.chatDialogue).scrollTop(function() { return this.scrollHeight; });
   },
 
   sendMessage: function (messageString) {
-    addMessage({user: "me", message: messageString});
+    this.addMessage({user: "me", message: messageString});
+  },
+
+  componentDidMount: function() {
+
+    $(this.sendButton).click(function(event){
+      console.log(this);
+      var message = $(this.textarea).val();
+      this.sendMessage(message);
+      $(this.textarea).val("");
+    }.bind(this));
+
+    $(this.textarea).keyup(function(event){
+      if(event.keyCode == 13){
+        $(this.sendButton).click();
+      }
+    }.bind(this));
   },
 
   render: function() {
@@ -56,20 +90,83 @@ var ChatTab = React.createClass({
       );
     }, {users: users});
 
+    var headerClasses = "chat__header online-status--chat online-status--chat-header";
+    var user = users[this.props.partnerId];
+    if (user) {
+      if (user.isOnline) {
+        headerClasses += " online-status--online";
+      }
+    }
+
 
     return (
       <div className="chat__tab">
-        <header className="chat__header online-status--chat online-status--chat-header online-status--online">
-          <button data-toggle="collapse" data-target="#chat-2" className="chat__title-button">Max Mustermann <i className="material-icons"></i></button>
+        <header className={headerClasses}>
+          <button data-toggle="collapse" data-target="#chat-2" className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
           <button className="button--close-chat" type="button" name="chat-2-close"><i className="material-icons mdl-icon-close-color"></i></button>
         </header>
         <div id="chat-2" className="collapse chat__content">
-          <ul className="chat__dialogue">
+          <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
             {chatMessages}
           </ul>
           <div className="chat__actions">
-            <textarea placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} />
-            <button className="btn btn-important button--chat" type="button" name="chat-send-button"><span className="glyphicon glyphicon-menu-right" aria-hidden="true" /></button>
+            <input type="text" placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} ref={function(textarea){this.textarea=textarea;}.bind(this)} />
+            <button className="btn btn-important button--chat" type="button" name="chat-send-button"
+              ref={function(sendButton){
+                this.sendButton=sendButton;
+              }.bind(this)}
+            >
+              <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var ChatTabContacts = React.createClass({
+  render: function () {
+
+    var contacts = usersArray.map(function(user, index) {
+      var classNames = "chat__list-item online-status--chat";
+      if (user.isOnline) {
+        classNames += " online-status--online";
+      }
+
+      return (
+        <li
+          className={classNames} key={index}
+        >
+          <a href="#">
+            <img className="chat__image" src={user.profileImage}
+              alt="profilbild"
+            />
+            <label className="chat__name">{user.name}</label>
+          </a>
+          <i className="material-icons"></i>
+        </li>
+      )
+    });
+
+    return (
+      <div className="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
+        <div className="chat-window">
+          <header className="chat__header">
+            <button data-toggle="collapse" data-target="#chat-list" className="chat__title-button">CHAT (2)</button>
+          </header>
+          <div id="chat-list" className="collapse chat__content">
+            <div className="chat__actions alignment--center">
+              <input className="form-chat" type="text" name="chat-search" placeholder="Suche..." />
+              <button className="btn btn-important button--chat button--chat-search" type="button" name="chat-search-button"><span className="glyphicon glyphicon-menu-right" aria-hidden="true" /></button>
+            </div>
+            <ul className="chat__list">
+              {contacts}
+            </ul>
+            <div className="chat__filter">
+              <button className="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
+              <button className="btn btn-important button--filter-switch button--filter-switch--deactive" type="button" name="button-online">Online (2)</button>
+            </div>
           </div>
         </div>
       </div>
@@ -98,32 +195,10 @@ var ChatApp = React.createClass({
                 </div>
               </div>
             </div>
-            <ChatTab />
+            <ChatTab partnerId="volker-miller" />
           </div>
         </div>
-        <div className="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
-          <div className="chat-window">
-            <header className="chat__header">
-              <button data-toggle="collapse" data-target="#chat-list" className="chat__title-button">CHAT (2)</button>
-            </header>
-            <div id="chat-list" className="collapse chat__content">
-              <div className="chat__actions alignment--center">
-                <input className="form-chat" type="text" name="chat-search" placeholder="Suche..." />
-                <button className="btn btn-important button--chat button--chat-search" type="button" name="chat-search-button"><span className="glyphicon glyphicon-menu-right" aria-hidden="true" /></button>
-              </div>
-              <ul className="chat__list">
-                <li className="chat__list-item online-status--chat online-status--online"><a href="#"><img className="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label className="chat__name">Viktor Mustermann</label></a><i className="material-icons"></i></li>
-                <li className="chat__list-item online-status--chat "><a href="#"><img className="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label className="chat__name">Max Mustermann</label></a><i className="material-icons"></i></li>
-                <li className="chat__list-item online-status--chat online-status--online"><a href="#"><img className="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label className="chat__name">Max Mustermann</label></a><i className="material-icons"></i></li>
-                <li className="chat__list-item online-status--chat "><a href="#"><img className="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label className="chat__name">Max Mustermann</label></a><i className="material-icons"></i></li>
-              </ul>
-              <div className="chat__filter">
-                <button className="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
-                <button className="btn btn-important button--filter-switch button--filter-switch--deactive" type="button" name="button-online">Online (2)</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ChatTabContacts />
       </div>
     );
   }

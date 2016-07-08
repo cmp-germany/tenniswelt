@@ -1,6 +1,5 @@
 var users = {
 
-
   "company-of-imagination": {
     "id": "company-of-imagination",
     "name": "Company of Imagination Ltd.",
@@ -112,7 +111,7 @@ var users = {
     "city": "Pulheim",
     "website": "http://www.gfke.eu/",
     "timezone": "MESZ",
-    "isOnline": false
+    "isOnline": true
   },
 
 
@@ -175,3 +174,5 @@ var users = {
     "isOnline": true
   }
 }
+
+var usersArray = Object.keys(users).map(function (key) {return users[key]});
