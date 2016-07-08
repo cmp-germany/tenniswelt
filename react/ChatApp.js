@@ -232,7 +232,7 @@ var ChatApp = React.createClass({
   }
 });
 
-ReactDOM.render(
+reactChatApp = ReactDOM.render(
   <ChatApp />,
   document.getElementById('chat-app')
 );
