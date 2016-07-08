@@ -2,10 +2,6 @@
   .header-content
     height: 140px
 
-  .navbar.grand-navbar
-    top: 48px
-    position: fixed
-
   .navbar
     .navbar-brand
       display: none
@@ -33,7 +29,7 @@
     background-color: rgba(#132333, 0.9)
     overflow-y: scroll
 
-  .navbar__section, .starters-navigation
+  .navbar__section, .navbar.grand-navbar
     &.collapsing
       -webkit-transition: none
       transition: none
@@ -64,3 +60,29 @@
   .container>.navbar-collapse
     margin-left: -10px
     margin-right: -10px
+
+  .starters-navigation
+    height: calc(100vh - 55px)
+    li
+      width: 100%
+      background-color: none
+
+  .navbar.grand-navbar
+    background-color: #e8eaeb
+    height: calc(100vh - 48px)
+    top: 48px
+    position: fixed
+    border: none
+    overflow-y: auto
+
+    .nav-button, .nav-button:active, .nav-button:focus, .nav-button:visited
+      width: 100%
+      text-align: left
+      border: none
+      margin: 0
+      background-color: transparent
+      color: lighten( $color-important, 17%)
+
+  .dropdown-menu--starters .dropdown-button--starters
+    color: lighten($color-important, 25%)
+    margin-left: 25px

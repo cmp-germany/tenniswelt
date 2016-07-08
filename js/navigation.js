@@ -5,7 +5,7 @@ $( document ).ready(function(){
   });
   $('.navbar__tab').click(function(){
     $(".navbar__section").collapse('hide');
-    $(".starters-navigation").collapse('hide');
+    $(".navbar.grand-navbar").collapse('hide');
 
   });
 });
