@@ -1,6 +1,5 @@
 var users = {
 
-
   "company-of-imagination": {
     "id": "company-of-imagination",
     "name": "Company of Imagination Ltd.",
@@ -112,7 +111,7 @@ var users = {
     "city": "Pulheim",
     "website": "http://www.gfke.eu/",
     "timezone": "MESZ",
-    "isOnline": false
+    "isOnline": true
   },
 
 
@@ -127,7 +126,7 @@ var users = {
     "city": "Pulheim",
     "website": "http://www.gfke.eu/",
     "timezone": "MESZ",
-    "isOnline": true
+    "isOnline": false
   },
 
 
@@ -158,5 +157,22 @@ var users = {
     "website": "http://www.gfke.eu/",
     "timezone": "MESZ",
     "isOnline": false
+  },
+
+  "me": {
+    "id": "me",
+    "name": "Alex Untereich",
+    "wallpaper": "",
+    "profileImage": "gfx/profilbilder/p4.jpg",
+    "isCompanyProfile": false,
+    "isCompanyProfile": false,
+    "street": "August-Euler-Str. 3",
+    "zip": "50259",
+    "city": "Pulheim",
+    "website": "http://www.gfke.eu/",
+    "timezone": "MESZ",
+    "isOnline": true
   }
 }
+
+var usersArray = Object.keys(users).map(function (key) {return users[key]});
