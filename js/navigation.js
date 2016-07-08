@@ -13,7 +13,7 @@ $( document ).ready(function(){
 function navbar() {
   if( $(window).width() > 767 ) {
     var docked = false;
-    var menu = $('#navbar-starters');
+    var menu = $('#navbar-collapse-1');
     var init = menu.offset().top;
 
     $(window).scroll(function()
