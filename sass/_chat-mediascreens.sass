@@ -1,0 +1,29 @@
+@media(max-width:767px)
+  .chat
+    position: relative
+
+  .chat-tabs
+    //position: fixed
+    //bottom: 0px
+    position: relative
+    width: 100%
+
+  .chat__tab
+    display: none
+    margin: 0
+    width: 100%
+    &:last-child
+      display: block
+
+  .chat-window
+    position: fixed
+    max-width: none
+
+  .chat__list
+    height: calc(100vh - 173px)
+
+  .chat__dialogue
+    height: calc(100vh - 193px)
+
+  .form-chat--messagebox
+    width: calc(100vw - 50px)

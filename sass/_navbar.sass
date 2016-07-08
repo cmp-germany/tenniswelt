@@ -27,13 +27,14 @@
   height: 330px
 
 .navbar-header
-  width: 100%
+  //width: 100%
+  float: none
 
 .navbar.grand-navbar
   transform: translateZ(0)
   -webkit-transform: translateZ(0)
   -webkit-backface-visibility: hidden
-  z-index: 2000
+  z-index: 1
   position: absolute
   min-height: 0
   width: 100%
@@ -67,7 +68,7 @@
   position: absolute
   color: #ccc
   //font-weight: normal
-  top: 8px
+  top: 2px
   margin-left: 40px
   font-size: 10px
   &::after
@@ -75,7 +76,7 @@
     //color: $color-important
 
 .form-group--small
-  width: 110px
+  position: relative
 
 .form-control--options-navbar
   -webkit-appearance: none
@@ -99,9 +100,10 @@
     color: transparent
 
 input[type=range].form-control--range-navbar
+  display: inline
   -webkit-appearance: none
-  width: 100%
-  margin: 0 0
+  width: 110px
+  margin: 0
   &:focus
     outline: none
   &::-webkit-slider-runnable-track
@@ -213,3 +215,40 @@ input[type=range].form-control--range-navbar
     font-weight: bold
     &:hover
       background-color: rgba($color-primary, 0.85)
+
+.navbar__tab
+  background-color: transparent
+  color: $color-primary
+  border: none
+  outline: none
+  display: none
+  height: 40px
+  vertical-align: top
+  padding: 0
+  margin: 0 8px
+  margin-top: 5px
+  min-width: 30px
+  .material-icons
+    font-size: 30px
+    vertical-align: bottom
+
+.navbar__tab--always
+  display: inline
+
+.navbar__tab--profile
+  color: #fff
+  float: right
+
+.navbar__tab--search
+  float: right
+  vertical-align: top
+  font-family: 'Pacifico', cursive
+  color: $color-primary
+  font-size: 30px
+
+.button--nav-search
+  float: right
+  height: 34px
+
+.navbar__section__title
+  display: none

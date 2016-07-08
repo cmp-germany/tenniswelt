@@ -7,7 +7,60 @@
     position: fixed
 
   .navbar
-    .navbar-brand__title
-      font-size: 20px
-    .navbar-brand__subtitle
-      font-size: 14px
+    .navbar-brand
+      display: none
+
+  .nav-avatar
+    width: 34px
+    height: 34px
+
+  .navbar__tab
+    display: inline
+
+  .navbar__tab--profile
+    .caret
+      display: none
+
+  .navbar__section
+    z-index: 2
+    position: fixed
+    top: 50px
+    width: 100%
+    &.navbar-collapse
+      max-height: calc(100vh - 50px)
+      overflow-x: auto
+
+    background-color: rgba(#132333, 0.9)
+    overflow-y: scroll
+
+  .navbar__section, .starters-navigation
+    &.collapsing
+      -webkit-transition: none
+      transition: none
+
+  .navbar__section__content
+    height: calc(100vh - 50px)
+
+  .form-group--small
+    display: inline
+    vertical-align: top
+
+  .button--nav-search
+    margin-right: 10px
+    margin-top: 5px
+
+  .navbar__section__title
+    display: block
+    width: 100%
+    color: #fff
+    text-align: center
+    font-family: 'Pacifico', cursive
+    margin-top: 0px
+    padding-top: 18px
+
+  .navbar-form--mobile
+    margin-bottom: 20px
+
+  .container>.navbar-collapse
+    margin-left: -10px
+    margin-right: -10px

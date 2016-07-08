@@ -3,7 +3,11 @@ $( document ).ready(function(){
   $( window ).resize(function() {
     navbar();
   });
+  $('.navbar__tab').click(function(){
+    $(".navbar__section").collapse('hide');
+    $(".starters-navigation").collapse('hide');
 
+  });
 });
 
 function navbar() {
