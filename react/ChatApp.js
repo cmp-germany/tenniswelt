@@ -55,6 +55,9 @@ var ChatTab = React.createClass({
   },
 
   sendMessage: function (messageString) {
+    if (messageString == "") {
+      return;
+    }
     this.addMessage({user: "me", message: messageString});
   },
 
