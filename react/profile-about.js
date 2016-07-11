@@ -21,7 +21,16 @@ var ProfileHeader = React.createClass({
           <div className="col-xs-3">
             <ul className="profile-header__action-buttons text-right">
               <li className={onlineIconClasses}><i className="material-icons"></i></li>
-              <li className="profile-header__action-button"><i className="material-icons"></i></li>
+              <li className="profile-header__action-button">
+                <a
+                  href={"javascript:reactChatApp.addChat('" + this.props.profileData.id + "');"}
+                  style={{
+                    color: "inherit"
+                  }}
+                >
+                  <i className="material-icons"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
