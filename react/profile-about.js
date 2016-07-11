@@ -171,7 +171,7 @@ var ProfileInfo = React.createClass({
           <div className="form-group">
             <label htmlFor="about-us-website" className="col-sm-3 control-label profile-infos__label">Website</label>
             <div className="col-sm-9">
-              <p className="profile-infos__read">{this.props.profileData.website}</p>
+              <p className="profile-infos__read"><a href={this.props.profileData.website}>{this.props.profileData.website}</a></p>
               <input type="text" className="form-control profile-infos__input" id="about-us-website" placeholder={this.props.profileData.website} />
             </div>
           </div>
