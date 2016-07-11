@@ -26,6 +26,11 @@
     <!-- Bootstrap -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
 
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
     <script src="js/navigation.js" charset="utf-8"></script>
@@ -299,5 +304,13 @@
         </aside>
       </div>
     </div>
+
+    <div class="chat" id="chat-app">
+    </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+
   </body>
 </html>
