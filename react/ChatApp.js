@@ -61,7 +61,6 @@ var ChatTab = React.createClass({
   componentDidMount: function() {
 
     $(this.sendButton).click(function(event){
-      console.log(this);
       var message = $(this.textarea).val();
       this.sendMessage(message);
       $(this.textarea).val("");
@@ -117,7 +116,7 @@ var ChatTab = React.createClass({
           <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
           <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
         </header>
-        <div id={chatId} className="collapse chat__content">
+        <div id={chatId} className="collapse chat__content" ref={function(c){this.chatContent = c;}.bind(this)}>
           <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
             {chatMessages}
           </ul>
@@ -199,9 +198,30 @@ var ChatApp = React.createClass({
 
   addChat: function(partnerId) {
     var tempOpenChatTabs = this.state.openChatTabs;
+
+    var index = tempOpenChatTabs.indexOf(partnerId);
+
+    // If Chat is already there, remove the old one first
+    if (index > -1) {
+      tempOpenChatTabs.splice(index, 1);
+    }
+
+    // Add Chat
     tempOpenChatTabs.push(partnerId);
+
+    // PopUp ChatTab
+    this.popUpChatTab(partnerId);
+
+    // Save the State
     this.setState({openChatTabs: tempOpenChatTabs});
+
   },
+
+  popUpChatTab: function(partnerId) {
+    this.toPopUp.push(partnerId);
+    //$('#chat-' + partnerId).collapse("show");
+  },
+
 
   removeChat: function(partnerId) {
     var tempOpenChatTabs = this.state.openChatTabs;
@@ -212,10 +232,29 @@ var ChatApp = React.createClass({
     this.setState({openChatTabs: tempOpenChatTabs});
   },
 
+  chatTabs: {},
+  toPopUp: [],
+
+  componentDidUpdate: function() {
+    this.toPopUp.forEach(function(value, index, array){
+      if (this.chatTabs[value]) {
+        $(this.chatTabs[value].chatContent).collapse("show");
+        array.splice(index, 1);
+      }
+    }, this);
+  },
+
   render: function() {
     var chatTabs = this.state.openChatTabs.map(function (partnerId){
       return (
-        <ChatTab partnerId={partnerId} key={partnerId} removeChat={this.removeChat} />
+        <ChatTab
+          partnerId={partnerId}
+          key={partnerId}
+          removeChat={this.removeChat}
+          ref={function(c){
+            this.component.chatTabs[this.partnerId] = c;
+          }.bind({component: this, partnerId: partnerId})}
+        />
       );
     }.bind(this));
 
