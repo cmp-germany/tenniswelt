@@ -26,6 +26,11 @@
     <!-- Bootstrap -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
 
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
 
@@ -178,12 +183,10 @@
                 <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
               </a>
               <div class="account">
-                <a href="profile-about.html?userId=volker-miller">
-                  <h4>Volker Miller</h4>
-                </a>
+                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
                 <ul class="wall-widget--actions">
                   <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                  <li><i class="material-icons">&#xE0C9;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -194,7 +197,7 @@
                 <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
                 <ul class="wall-widget--actions">
                   <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
-                  <li><i class="material-icons">&#xE0C9;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -205,7 +208,7 @@
                 <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
                 <ul class="wall-widget--actions">
                   <li><i class="material-icons online-status">&#xE1E2;</i></li>
-                  <li><i class="material-icons">&#xE0C9;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -216,7 +219,7 @@
                 <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
                 <ul class="wall-widget--actions">
                   <li><i class="material-icons online-status">&#xE1E2;</i></li>
-                  <li><i class="material-icons">&#xE0C9;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -439,98 +442,12 @@
       </div>
     </div>
 
-    <div class="chat hidden-sm hidden-xs">
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
-        <div class="chat-tabs">
-
-          <div class="chat__tab">
-            <header class="chat__header online-status--chat online-status--chat-header">
-              <button data-toggle="collapse" data-target="#chat-1" class="chat__title-button">Maxi Mustermann <i class="material-icons">&#xE1E2;</i></button>
-              <button class="button--close-chat" type="button" name="chat-1-close"><i class="material-icons mdl-icon-close-color">&#xE5CD;</i></button>
-            </header>
-            <div id="chat-1" class="collapse chat__content">
-              <ul class="chat__dialogue">
-                <li class="chat__message chat__message--bot">Noch keine Konversation geführt.</li>
-              </ul>
-              <div class="chat__actions">
-                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
-                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="chat__tab">
-            <header class="chat__header online-status--chat online-status--chat-header online-status--online">
-              <button data-toggle="collapse" data-target="#chat-2" class="chat__title-button">Max Mustermann <i class="material-icons">&#xE1E2;</i></button>
-              <button class="button--close-chat" type="button" name="chat-2-close"><i class="material-icons mdl-icon-close-color">&#xE5CD;</i></button>
-            </header>
-            <div id="chat-2" class="collapse chat__content">
-              <ul class="chat__dialogue">
-                <li class="chat__message chat__message--user">
-                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
-                  <p class="chat__text">
-                    Hi
-                  </p>
-                </li>
-                <li class="chat__message chat__message--partner">
-                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
-                  <p class="chat__text">
-                    Hey
-                  </p>
-                </li>
-                <li class="chat__message chat__message--partner">
-                  <img src="gfx/profilbilder/p1.jpg" class="chat__image" alt="chat-image" />
-                  <p class="chat__text">
-                    Schön, dass Sie sich melden!
-                  </p>
-                </li>
-                <li class="chat__message chat__message--user">
-                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
-                  <p class="chat__text">
-                    Hatte ich doch versprochen ;-)
-                  </p>
-                </li>
-                <li class="chat__message chat__message--user">
-                  <img src="gfx/profilbilder/p4.jpg" class="chat__image" alt="chat-image" />
-                  <p class="chat__text">
-                    Ich bereite gerade die Dokumente vor ... einen Moment
-                  </p>
-                </li>
-              </ul>
-              <div class="chat__actions">
-                <textarea placeholder="Nachricht" class="form-chat form-chat--messagebox" name="chat-message"></textarea>
-                <button class="btn btn-important button--chat" type="button" name="chat-send-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
-        <div class="chat-window">
-          <header class="chat__header">
-            <button data-toggle="collapse" data-target="#chat-list" class="chat__title-button">CHAT (2)</button>
-          </header>
-          <div id="chat-list" class="collapse chat__content">
-            <div class="chat__actions alignment--center">
-              <input class="form-chat"type="text" name="chat-search" placeholder="Suche...">
-              <button class="btn btn-important button--chat button--chat-search" type="button" name="chat-search-button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
-            </div>
-            <ul class="chat__list">
-              <li class="chat__list-item online-status--chat online-status--online"><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Viktor Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
-              <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
-              <li class="chat__list-item online-status--chat online-status--online"><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
-              <li class="chat__list-item online-status--chat "><a href="#"><img class="chat__image" src="gfx/profilbilder/p1.jpg" alt="profilbild" /><label class="chat__name">Max Mustermann</label></a><i class="material-icons">&#xE1E2;</i></li>
-            </ul>
-            <div class="chat__filter">
-              <button class="btn btn-important button--filter-switch button--filter-switch--active" type="button" name="button-all">Alle (4)</button>
-              <button class="btn btn-important button--filter-switch button--filter-switch--deactive" type="button" name="button-online">Online (2)</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="chat" id="chat-app">
     </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
 
     <script src="js/navigation.js" charset="utf-8"></script>
   </body>
