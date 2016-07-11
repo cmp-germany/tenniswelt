@@ -42,6 +42,8 @@
     overflow-y: scroll
 
   .navbar__section, .navbar.grand-navbar
+    width: 100vw
+    overflow-x: hidden
     &.collapsing
       -webkit-transition: none
       transition: none
@@ -77,6 +79,21 @@
     .form-control
       border-color: #bbb
       color: #555
+      margin-bottom: 15px
+      &::-webkit-input-placeholder
+        color: #999
+
+      ::-moz-placeholder
+        color: #999
+
+      :-ms-input-placeholder
+        color: #999
+
+      :-moz-placeholder
+        color: #999
+
+    .form-control-label
+      color: #999
 
   .container>.navbar-collapse
     margin-left: -10px

@@ -30,7 +30,6 @@ $( document ).ready(function(){
     $('#navbar-filter--matching').css( "display", "none" );
     $('#navbar-resultate--gruppen-matching').css( "display", "block" );
     $('#navbar-resultate--matching').css( "display", "none" );
-
   });
 });
 
