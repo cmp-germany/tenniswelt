@@ -1326,9 +1326,10 @@ body a:hover {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 2010;
 }
 
-/* line 11, ../sass/_chat.sass */
+/* line 12, ../sass/_chat.sass */
 .chat-tabs {
   position: absolute;
   bottom: 0;
@@ -1336,7 +1337,7 @@ body a:hover {
   right: 0px;
 }
 
-/* line 19, ../sass/_chat.sass */
+/* line 20, ../sass/_chat.sass */
 .chat__tab {
   display: inline-block;
   vertical-align: bottom;
@@ -1348,7 +1349,7 @@ body a:hover {
   background-color: #eee;
 }
 
-/* line 36, ../sass/_chat.sass */
+/* line 37, ../sass/_chat.sass */
 .chat__dialogue {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -1371,7 +1372,7 @@ body a:hover {
   /* ie6-9 */
 }
 
-/* line 57, ../sass/_chat.sass */
+/* line 58, ../sass/_chat.sass */
 .chat__message {
   width: 100%;
   float: left;
@@ -1379,27 +1380,27 @@ body a:hover {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* line 64, ../sass/_chat.sass */
+/* line 65, ../sass/_chat.sass */
 .chat__message:first-child {
   margin-top: 20px;
 }
 
-/* line 67, ../sass/_chat.sass */
+/* line 68, ../sass/_chat.sass */
 .chat__message--bot {
   margin-left: 10px;
   font-style: italic;
 }
 
-/* line 71, ../sass/_chat.sass */
+/* line 72, ../sass/_chat.sass */
 .chat__message--user {
   padding-right: 4px;
 }
-/* line 73, ../sass/_chat.sass */
+/* line 74, ../sass/_chat.sass */
 .chat__message--user * {
   float: right;
   text-align: right;
 }
-/* line 76, ../sass/_chat.sass */
+/* line 77, ../sass/_chat.sass */
 .chat__message--user p {
   background-color: #ff5073;
   color: #fff;
@@ -1408,12 +1409,12 @@ body a:hover {
   margin-right: -9px;
 }
 
-/* line 84, ../sass/_chat.sass */
+/* line 85, ../sass/_chat.sass */
 .chat__message--partner * {
   float: left;
   text-align: left;
 }
-/* line 87, ../sass/_chat.sass */
+/* line 88, ../sass/_chat.sass */
 .chat__message--partner p {
   background-color: #67bbed;
   color: #fff;
@@ -1421,7 +1422,7 @@ body a:hover {
   padding: 3px 10px;
 }
 
-/* line 93, ../sass/_chat.sass */
+/* line 94, ../sass/_chat.sass */
 .chat__text {
   display: inline-block;
   max-width: 210px;
@@ -1430,7 +1431,7 @@ body a:hover {
   padding: 3px 6px;
 }
 
-/* line 101, ../sass/_chat.sass */
+/* line 102, ../sass/_chat.sass */
 .chat-window {
   position: absolute;
   bottom: 0;
@@ -1443,14 +1444,14 @@ body a:hover {
   max-width: 290px;
 }
 
-/* line 114, ../sass/_chat.sass */
+/* line 115, ../sass/_chat.sass */
 .chat__header {
   background-color: #E9002F;
   text-align: center;
   bottom: 0;
 }
 
-/* line 120, ../sass/_chat.sass */
+/* line 121, ../sass/_chat.sass */
 .chat__title-button {
   padding: 5px 0;
   display: inline-block;
@@ -1463,12 +1464,12 @@ body a:hover {
   width: 90%;
   outline: none;
 }
-/* line 131, ../sass/_chat.sass */
+/* line 132, ../sass/_chat.sass */
 .chat__title-button:focus, .chat__title-button:active {
   outline: none;
 }
 
-/* line 134, ../sass/_chat.sass */
+/* line 135, ../sass/_chat.sass */
 .chat__image {
   width: 30px;
   height: auto;
@@ -1476,7 +1477,7 @@ body a:hover {
   margin-left: 14px;
 }
 
-/* line 140, ../sass/_chat.sass */
+/* line 141, ../sass/_chat.sass */
 .chat__name {
   font-size: 12px;
   width: 115px;
@@ -1485,38 +1486,38 @@ body a:hover {
   margin-left: 5px;
 }
 
-/* line 149, ../sass/_chat.sass */
+/* line 150, ../sass/_chat.sass */
 .chat__content ul {
   padding: 0;
   list-style: none;
 }
 
-/* line 154, ../sass/_chat.sass */
+/* line 155, ../sass/_chat.sass */
 .chat__list {
   height: 380px;
   overflow-y: scroll;
 }
 
-/* line 159, ../sass/_chat.sass */
+/* line 160, ../sass/_chat.sass */
 .chat__list-item {
   padding: 7px 0;
   margin: 7px 0;
 }
-/* line 163, ../sass/_chat.sass */
+/* line 164, ../sass/_chat.sass */
 .chat__list-item:hover {
   background-color: #fff;
 }
-/* line 166, ../sass/_chat.sass */
+/* line 167, ../sass/_chat.sass */
 .chat__list-item:last-child {
   margin-bottom: 20px;
 }
 
-/* line 169, ../sass/_chat.sass */
+/* line 170, ../sass/_chat.sass */
 .chat__actions {
   width: 100%;
 }
 
-/* line 172, ../sass/_chat.sass */
+/* line 173, ../sass/_chat.sass */
 .form-chat {
   display: inline-block;
   border: none;
@@ -1528,7 +1529,7 @@ body a:hover {
   color: #444;
 }
 
-/* line 182, ../sass/_chat.sass */
+/* line 183, ../sass/_chat.sass */
 .form-chat--messagebox {
   width: 270px;
   min-height: 40px;
@@ -1537,7 +1538,7 @@ body a:hover {
   margin: 0;
 }
 
-/* line 189, ../sass/_chat.sass */
+/* line 190, ../sass/_chat.sass */
 .button--chat {
   vertical-align: top;
   border: none;
@@ -1549,13 +1550,13 @@ body a:hover {
   padding: 5px 7px;
 }
 
-/* line 199, ../sass/_chat.sass */
+/* line 200, ../sass/_chat.sass */
 .button--chat-search {
   margin: 0;
   padding: 4px 8px;
 }
 
-/* line 203, ../sass/_chat.sass */
+/* line 204, ../sass/_chat.sass */
 .button--close-chat {
   display: inline-block;
   width: auto;
@@ -1564,12 +1565,12 @@ body a:hover {
   border: none;
   vertical-align: text-bottom;
 }
-/* line 210, ../sass/_chat.sass */
+/* line 211, ../sass/_chat.sass */
 .button--close-chat:focus, .button--close-chat:active {
   outline: none;
 }
 
-/* line 213, ../sass/_chat.sass */
+/* line 214, ../sass/_chat.sass */
 .button--filter-switch {
   padding: 0;
   margin: 0;
@@ -1582,23 +1583,23 @@ body a:hover {
   color: #eee;
 }
 
-/* line 224, ../sass/_chat.sass */
+/* line 225, ../sass/_chat.sass */
 .button--filter-switch--active {
   background-color: #ff1d4b;
 }
 
-/* line 228, ../sass/_chat.sass */
+/* line 229, ../sass/_chat.sass */
 .button--filter-switch--deactive {
   background-color: #ffb6c5;
 }
 
-/* line 233, ../sass/_chat.sass */
+/* line 234, ../sass/_chat.sass */
 .alignment--center {
   text-align: center;
   margin-top: 15px;
 }
 
-/* line 239, ../sass/_chat.sass */
+/* line 240, ../sass/_chat.sass */
 .online-status--chat .material-icons {
   color: #777;
   float: right;
@@ -1607,20 +1608,20 @@ body a:hover {
   font-size: 16px;
 }
 
-/* line 247, ../sass/_chat.sass */
+/* line 248, ../sass/_chat.sass */
 .online-status--chat-header .material-icons {
   color: inherit;
 }
-/* line 249, ../sass/_chat.sass */
+/* line 250, ../sass/_chat.sass */
 .online-status--chat-header .material-icons.mdl-icon-close-color {
   color: #fff;
 }
 
-/* line 253, ../sass/_chat.sass */
+/* line 254, ../sass/_chat.sass */
 .online-status--online .material-icons {
   color: #4D9635;
 }
-/* line 256, ../sass/_chat.sass */
+/* line 257, ../sass/_chat.sass */
 .online-status--online .material-icons.mdl-icon-close-color {
   color: #fff;
 }
