@@ -14,7 +14,6 @@
 
     <!-- Own SASS Stuff -->
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
     <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -51,10 +50,10 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <form class="navbar-form navbar-right" action="wall.html" method="get">
             <div class="form-group">
-              <input type="text" class="form-control form-control--login-navbar" name="email" placeholder="E-Mail">
+              <input type="text" class="form-control form-control--navbar" name="email" placeholder="E-Mail">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
+              <input type="password" class="form-control form-control--navbar" name="password" placeholder="Passwort">
             </div>
             <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
           </form>
@@ -69,18 +68,17 @@
 
 
           <div class="col-sm-5 slide__title-introduction">
-            <h1><span class="slide__white-negative-text">Trete jetzt mit der Kölner Gründerszene in Kontakt!</span></h1>
+            <h1><span class="slide__white-negative-text">Treten Sie jetzt mit der Kölner Gründerszene in Kontakt!</span></h1>
             <div class="slide--with-background__text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Werden Sie Teil der Startup Szene und treten Sie einem internationalem Portal bei. Hier finden Sie alle Möglichkeiten, die Sie für Ihr aufstrebendes Unternehmen brauchen: Kommunizieren Sie mit Gleichgesinnten, tauschen Sie Ihr Wissen aus, finden Sie Ihre Kunden und entdecken Sie die Finanzierungsmöglichkeiten, die Ihrer Geschäftsidee den nötigen Boost verleihen.</p>
             </div>
-            <button type="button" name="button" class="btn btn-important"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> CallToAction</button>
-            <button type="button" name="button" class="btn btn-important"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> CallToAction</button>
-            <img src="gfx/plane.png" alt="Plane" class="visible-xs-block img-responsive" style="max-width: 250px; margin-right: auto; margin-left: auto;">
+            <img src="gfx/flieger-junge.png" alt="Plane" class="visible-lg-block visible-md-block visible-sm-block img-responsive" style="margin-bottom: -90px;">
+            <img src="gfx/flieger-junge.png" alt="Plane" class="visible-xs-block img-responsive" style="max-width: 250px; margin-left: auto; margin-right: auto; margin-bottom: -40px;">
           </div>
 
 
           <div class="col-sm-6 col-sm-offset-1">
-            <form class="register-form register-form--slide">
+            <form id="register-form" class="register-form register-form--slide">
 
               <p class="register-form__intro-text text-center">Kostenlos registrieren und ein Jahr unverbindlich testen.</p>
 
@@ -149,7 +147,7 @@
               <p class="key-feature__description">
                 Zeigen Sie, was Sie unverwechselbar macht. Legen Sie ein Firmenprofil an, das Ihre Angebote und Leistungen beschreibt und stellen Sie sich und Ihre Mitarbeiter den anderen Plattformmitgliedern vor.
               </p>
-              <button type="button" name="button" class="btn btn-important"> CallToAction</button>
+              <a href="#register-form" class="btn btn-important">Jetzt registrieren</a>
             </div>
           </div>
 
@@ -164,7 +162,7 @@
               <p class="key-feature__description">
                 Schlagwortsuche, Active Matching und Gruppen der Plattform helfen Ihnen, zu Ihren konkreten Anliegen die richtigen Ansprechpartner auf der Plattform zu finden.
               </p>
-              <button type="button" name="button" class="btn btn-important"> CallToAction</button>
+              <a href="#register-form" class="btn btn-important">Jetzt registrieren</a>
             </div>
           </div>
 
@@ -174,12 +172,12 @@
 
 
 
-    <section class="slide slide--with-background slide--statement" style="background-image: url('gfx/stock-photo-21271005-business-people-.jpg');">
+    <section class="slide slide--with-background slide--statement" style="background-image: url('gfx/fotolia_110376588.jpg'); background-position: 90% 10%;">
       <div class="container">
         <div class="row">
 
           <div class="col-sm-8 slide__statement">
-            <h1><span class="slide__white-negative-text">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor</span></h1>
+            <h1><span class="slide__white-negative-text">Wir vernetzen Know-how.<br>Schnell, sicher, erfolgreich.</span></h1>
           </div>
 
         </div>
@@ -192,25 +190,53 @@
 
           <div class="col-md-4 col-sm-6 profile-card clearfix">
             <div class="col-xs-4 profile-card__image">
-              <img src="http://placehold.it/80" alt="">
+              <img src="gfx/profilbilder/stadt-koeln-startcenter.jpg" class="img-responsive">
             </div>
             <div class="col-xs-8 profile-card__text">
               <p class="profile-card__name">
-                Max Mustermann
+                Stadt Köln Startercenter
               </p>
               <p class="profile-card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Wir haben es uns zur Aufgabe gemacht, Gründerinnen und Gründer auf ihrem Weg in die Selbstständigkeit in Köln wirksam zu unterstützen.
               </p>
             </div>
           </div>
 
           <div class="col-md-4 col-sm-6 profile-card clearfix">
             <div class="col-xs-4 profile-card__image">
-              <img src="http://placehold.it/80" alt="">
+              <img src="gfx/profilbilder/cologne-invest.jpg" alt="" class="img-responsive">
             </div>
             <div class="col-xs-8 profile-card__text profile-card__name-container">
               <p class="profile-card__name">
-                Max Mustermann
+                CologneInvest GmbH
+              </p>
+              <p class="profile-card__description">
+                Wir wollen nicht nur finanziell am Erfolg eines Unternehmens beteiligt sein sondern möchten unternehmerische Kompetenz weitergeben.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 profile-card clearfix">
+            <div class="col-xs-4 profile-card__image">
+              <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-xs-8 profile-card__text">
+              <p class="profile-card__name">
+                Mike Schnoor
+              </p>
+              <p class="profile-card__description">
+                Als Berater sorge ich dafür, dass Unternehmen sich im digitalen Wettbewerb richtig positionieren können.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 profile-card clearfix">
+            <div class="col-xs-4 profile-card__image">
+              <img src="gfx/profilbilder/p6.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-xs-8 profile-card__text">
+              <p class="profile-card__name">
+                Wolfgang Winter
               </p>
               <p class="profile-card__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -220,39 +246,11 @@
 
           <div class="col-md-4 col-sm-6 profile-card clearfix">
             <div class="col-xs-4 profile-card__image">
-              <img src="http://placehold.it/80" alt="">
+              <img src="gfx/profilbilder/p5.jpg" alt="" class="img-responsive">
             </div>
             <div class="col-xs-8 profile-card__text">
               <p class="profile-card__name">
-                Max Mustermann
-              </p>
-              <p class="profile-card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 profile-card clearfix">
-            <div class="col-xs-4 profile-card__image">
-              <img src="http://placehold.it/80" alt="">
-            </div>
-            <div class="col-xs-8 profile-card__text">
-              <p class="profile-card__name">
-                Max Mustermann
-              </p>
-              <p class="profile-card__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6 profile-card clearfix">
-            <div class="col-xs-4 profile-card__image">
-              <img src="http://placehold.it/80" alt="">
-            </div>
-            <div class="col-xs-8 profile-card__text">
-              <p class="profile-card__name">
-                Max Mustermann
+                Maria Kristhoff
               </p>
               <p class="profile-card__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -263,9 +261,9 @@
           <div class="col-md-4 col-sm-6 register-card clearfix">
             <div style="text-align:center;">
               <p class="register-card__text">Kostenlos registrieren und ein Jahr unverbindlich testen.</p>
-              <button type="button" class="btn btn-primary">
-                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Calltoaction
-              </button>
+              <a href="#register-form" class="btn btn-primary">
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Jetzt registrieren
+              </a>
             </div>
           </div>
 
@@ -276,16 +274,12 @@
 
 
 
-    <section class="slide slide--with-background slide--statement" style="background-image: url('gfx/device-mockup-21091-Kopie.jpg');">
+    <section class="slide slide--with-background slide--statement" style="background-image: url('gfx/fotolia_103179963.jpg'); background-position: 63% 10%">
       <div class="container">
         <div class="row">
 
-          <div class="col-sm-6 col-sm-offset-6 slide__statement">
-            <h1><span class="slide__white-negative-text">Lorem ipsum dolor sit amet consectetuer adipiscing elit. </span></h1>
-            <div class="slide--with-background__text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <button type="button" name="button" class="btn btn-important">CallToAction</button>
+          <div class="col-sm-9 slide__statement">
+            <h1><span class="slide__white-negative-text">Vernetzen Sie sich mit dem Erfolg.</span></h1>
           </div>
 
 

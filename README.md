@@ -4,6 +4,22 @@ Frontend for Code for the platform starters.koeln.
 
 ## Preview
 
-[![](http://download.united-studios.com/Bildschirmfoto%202016-06-28%20um%2012.10.34.png)](https://cmp-germany.github.io/starters.koeln)
+### Landing Page
 
-You can find a Live Version at [https://cmp-germany.github.io/starters.koeln](https://cmp-germany.github.io/starters.koeln)
+[![](http://download.united-studios.com/Bildschirmfoto%202016-07-05%20um%2016.53.01.png)](https://cmp-germany.github.io/starters.koeln)
+
+### Wall
+
+[![](http://download.united-studios.com/wall.png)](https://cmp-germany.github.io/starters.koeln/wall.html)
+
+### Profil - Über Uns
+
+[![](http://download.united-studios.com/profile-about.png)](https://cmp-germany.github.io/starters.koeln/profile-about.html)
+
+### Einstellungen
+
+[![](http://download.united-studios.com/settings.png)](https://cmp-germany.github.io/starters.koeln/settings.html)
+
+### Suche
+
+[![](http://download.united-studios.com/suche.png)](https://cmp-germany.github.io/starters.koeln/suche.html)

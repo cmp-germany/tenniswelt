@@ -3,7 +3,7 @@ $slide-padding: 50px
 $slide--padding-top: $slide-padding
 $slide--padding-bottom: $slide-padding
 
-$slide--statement-height: 900px
+$slide--statement-height: 700px
 
 .slide
   padding-top: $slide--padding-top
@@ -19,10 +19,10 @@ $slide--statement-height: 900px
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
-  background-attachment: fixed
+  // background-attachment: fixed
 
 .slide--with-background__inner-div
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, 0.1)
   margin-top: -$slide--padding-top
   padding-top: $slide--padding-top
   margin-bottom: -$slide--padding-bottom
@@ -35,9 +35,13 @@ $slide--statement-height: 900px
   font-weight: lighter
 
 .slide--title
-  background-image: url('../gfx/starters-plane.jpg')
+  background-image: url('../gfx/landing-hintergrund.jpg')
   background-attachment: scroll
-  background-position: 30% 50%
+  background-position: 100% 50%
+
+  .slide--with-background__inner-div
+    background-color: rgba(0, 0, 0, 0.0)
+
 
 @media(max-width: 768px)
   .slide--title
@@ -47,17 +51,27 @@ $slide--statement-height: 900px
   height: $slide--statement-height
 
 .slide__statement
-  margin-top: 80px
+  margin-top: 400px
+
+.slide--people
+  //background-color: rgba(19, 35, 51, 0.05)
 
 
-
-
-
+$padding-negative-text: 3px
 
 .slide__white-negative-text
   background-color: #fff
   line-height: 55px
-  padding-right: 10px
+  display: inline
+  padding-left: 0
+  padding-right: 0
+  margin-left: $padding-negative-text
+  margin-right: $padding-negative-text
+  -webkit-box-decoration-break: clone
+  -ms-box-decoration-break: clone
+  -o-box-decoration-break: clone
+  box-decoration-break: clone
+  box-shadow: $padding-negative-text 0 0 #fff, -$padding-negative-text 0 0 #fff
 
 .slide__title-introduction
   margin-bottom: 40px
@@ -107,9 +121,13 @@ $slide--statement-height: 900px
 
 .profile-card__innerDiv
   padding: 10px
+  margin-bottom: 30px
   border-top: 1px solid $color-primary
   border-left: 1px solid $color-primary
-  margin-bottom: 30px
+  border-bottom: 1px solid #eee
+  border-right: 1px solid #eee
+  background-color: #fff
+  height: 130px
 
 .profile-card__image
   padding-left: 0

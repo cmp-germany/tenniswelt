@@ -26,8 +26,14 @@
     <!-- Bootstrap -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
 
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/navigation.js" charset="utf-8"></script>
 
   </head>
   <body>
@@ -47,26 +53,41 @@
        </div>
 
        <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse" id="navbar-collapse-1">
-         <form class="navbar-form navbar-right" action="wall.html" method="get">
+       <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-2">
+         <form class="navbar-form">
            <div class="form-group">
-             <input type="text" class="form-control form-control--login-navbar" name="email" placeholder="E-Mail">
+             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
            </div>
            <div class="form-group">
-             <input type="password" class="form-control form-control--login-navbar" name="password" placeholder="Passwort">
+             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
            </div>
-           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+           <div class="form-group form-group--small">
+             <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+             <label class="form-control-label" for="form-control-range">150</label>
+           </div>
+           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Finden</button>
          </form>
        </div><!-- /.navbar-collapse -->
+
+       <div class="navbar-right" >
+         <ul class="nav navbar-nav">
+           <li><img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" /></li>
+        </ul>
+      </div>
       </div><!-- /.container-fluid -->
     </nav>
+
+
 
     <header>
       <div class="header-content">
 
       </div>
-      <nav class="navbar grand-navbar">
-        <div class="container">
+    </header>
+
+    <nav class="navbar grand-navbar" id="navbar-starters">
+      <div class="container">
+        <div class="starters-navigation collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" class="nav">Stichwortsuche</a></li>
             <li><a href="#" class="nav">Startup-Leitfaden</a></li>
@@ -75,12 +96,11 @@
             <li><a href="#" class="nav">Suche / Biete</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
-
+      </div>
+    </nav>
 
     <div class="container">
-      <div class="section-left col-md-3 hidden-xs hidden-sm">
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
         <aside class="wall-widget wall-widget--matching">
           <header>
             <h3>Matching</h3>
@@ -88,28 +108,32 @@
           <div class="wall-widget--filters">
             <div class="wall-widget--filter-switch row is-selected-right">
               <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="#">Privat</a>
+                <a class="element-left" href="#1">Privat</a>
               </div>
               <div class="wall-widget--filter-element col-xs-2">
-                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                </svg>
+                <button class="select-toggle-button">
+                  <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                  </svg>
+                </button>
               </div>
               <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="#">Unternehmen</a>
+                <a class="element-right" href="#1">Unternehmen</a>
               </div>
             </div>
             <div class="wall-widget--filter-switch row is-selected-left">
               <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="#">Lokal</a>
+                <a class="element-left" href="#1">Lokal</a>
               </div>
               <div class="wall-widget--filter-element col-xs-2">
-                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                </svg>
+                <button class="select-toggle-button">
+                  <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                  </svg>
+                </button>
               </div>
               <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="#">Weltweit</a>
+                <a class="element-right" href="#1">Weltweit</a>
               </div>
             </div>
             <div class="wall-widget--filter-select">
@@ -125,45 +149,47 @@
 
           <div class="wall-widget--content">
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <a href="profile-about.html?userId=volker-miller">
+                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+              </a>
               <div class="account">
-                <h4>Volker Miller</h4>
+                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
               <div class="account">
-                <h4>Kai Gärtner</h4>
+                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
               <div class="account">
-                <h4>Wolfgang Winter</h4>
+                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
 
             <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
               <div class="account">
-                <h4>Maria Kristhoff</h4>
+                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
                 <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
+                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
+                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
@@ -265,165 +291,29 @@
       </div>
 
       <div class="section-center col-md-6">
+        <div id="profile-about"></div>
+        <script type="text/javascript" src="data/users.js" charset="utf-8"></script>
+        <script type="text/javascript">
+          function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+          }
 
-        <header class="profile-header">
-          <img class="profile-header__wallpaper" src="gfx/wallpaper_company.jpg" alt="Wallpaper Company">
-          <div class="profile-header__desc-bar">
-            <div class="col-xs-2 profile-header__profile-picture-container">
-              <img src="gfx/profile_company.jpg" alt="" class="profile-header__profile-picture img-responsive">
-            </div>
-            <div class="col-xs-7">
-              <h3 class="profile-header__name">Company of Imagination Ltd.</h3>
-            </div>
-            <div class="col-xs-3">
-              <ul class="profile-header__action-buttons text-right">
-                <li class="profile-header__action-button profile-header__action-button--online-status"><i class="material-icons">&#xE1E2;</i></li>
-                <li class="profile-header__action-button"><i class="material-icons">&#xE0B7;</i></li>
-              </ul>
-            </div>
-          </div>
-        </header>
-        <ul class="profile-tabs">
-          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#">Über</a></li>
-          <li class="profile-tabs__tab"><a href="#">Wall</a></li>
-          <li class="profile-tabs__tab"><a href="#">Kontakte</a></li>
-          <li class="profile-tabs__tab"><a href="#">Fotos</a></li>
-        </ul>
+          var userId = getParameterByName('userId');
+          var profileData = {};
+          if (userId) {
+            profileData = users[userId];
+          } else {
+            profileData = users["company-of-imagination"];
+          }
 
-        <div class="profile-infos">
-          <h3 class="profile-infos__title">Unternehmensinfos</h3>
-          <form class="form-horizontal profile-infos__form--read">
-
-            <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-                  <p class="profile-infos__read profile-infos__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <input type="text" class="form-control profile-infos__input" id="company-name" placeholder="offering eprocurement for goverment and industrial partners">
-                </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-name" class="col-sm-3 control-label profile-infos__label">Name des Unternehmens</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Gesellschaft für kommunalen Einkauf mbH</p>
-                <input type="text" class="form-control profile-infos__input" id="company-name" placeholder="Gesellschaft für kommunalen Einkauf mbH">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-branche" class="col-sm-3 control-label profile-infos__label">Unternehmen</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">eprocurement</p>
-                <input type="text" class="form-control profile-infos__input" id="company-branche" placeholder="eprocurement">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-main-location" class="col-sm-3 control-label profile-infos__label">Hauptsitz</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Pulheim</p>
-                <input type="text" class="form-control profile-infos__input" id="company-main-location" placeholder="Pulheim">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-country" class="col-sm-3 control-label profile-infos__label">Land</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Deutschland</p>
-                <input type="text" class="form-control profile-infos__input" id="company-country" placeholder="Deutschland">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-email" class="col-sm-3 control-label profile-infos__label">E-Mail</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">w.adams@gfke-eu</p>
-                <input type="text" class="form-control profile-infos__input" id="company-email" placeholder="w.adams@gfke-eu">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-tel" class="col-sm-3 control-label profile-infos__label">Telefon</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">02238958590-37</p>
-                <input type="text" class="form-control profile-infos__input" id="company-tel" placeholder="02238958590-37">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="company-category" class="col-sm-3 control-label profile-infos__label">Kategorie</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Startup</p>
-                <input type="text" class="form-control profile-infos__input" id="company-category" placeholder="Startup">
-              </div>
-            </div>
-
-          </form>
-        </div>
-
-        <div class="profile-infos">
-          <h3 class="profile-infos__title">Karte</h3>
-          <div class="profile-infos__map embed-responsive embed-responsive-4by3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.601647372274!2d6.824141315273979!3d50.98655335647221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf3098c3c70c7b%3A0x4b8b986d52855bf5!2sAugust-Euler-Stra%C3%9Fe+3%2C+50259+Pulheim%2C+Deutschland!5e0!3m2!1sde!2sus!4v1467286780051" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-
-
-        <div class="profile-infos">
-          <h3 class="profile-infos__title">Über uns</h3>
-          <form class="form-horizontal profile-infos__form--read">
-
-            <div class="form-group">
-              <label for="about-us-adress" class="col-sm-3 control-label profile-infos__label">Adresse</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">August-Euler-Str. 3</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-adress" placeholder="August-Euler-Str. 3">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="about-us-zip" class="col-sm-3 control-label profile-infos__label">Postleitzahl</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">50259</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-zip" placeholder="50259">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="about-us-city" class="col-sm-3 control-label profile-infos__label">Stadt</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Pulheim</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-city" placeholder="Pulheim">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="about-us-website" class="col-sm-3 control-label profile-infos__label">Website</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">http://www.gfke.eu/</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-website" placeholder="http://www.gfke.eu/">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="about-us-timezone" class="col-sm-3 control-label profile-infos__label">Zeitzone</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">UTC</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-timezone" placeholder="UTC">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="about-us-keywords" class="col-sm-3 control-label profile-infos__label">Suchwörter</label>
-              <div class="col-sm-9">
-                <p class="profile-infos__read">Information Technology, Information Technology - Supplies</p>
-                <input type="text" class="form-control profile-infos__input" id="about-us-keywords" placeholder="Information Technology, Information Technology - Supplies">
-              </div>
-            </div>
-
-          </form>
-        </div>
-
+        </script>
+        <script type="text/babel" src="react/profile-about.js" charset="utf-8"></script>
       </div>
       <div class="section-right col-md-3 hidden-xs hidden-sm">
 
@@ -434,34 +324,34 @@
 
           <div class="wall-widget--content">
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
               <span class="info">
-                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 2 Stunden</p>
+                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
               <span class="info">
-                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 4 Stunden.</p>
+                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
               <span class="info">
-                <p><a href="" class="info-name">Maxi Musterfrau</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 8 Stunden.</p>
+                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden</p>
               </span>
             </div>
 
             <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-3" src="gfx/profilbild.png" alt="Profilbild" />
+              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
               <span class="info">
-                <p><a href="" class="info-name">Jesus Christus</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info">SYM Vor 2000 Jahren.</p>
+                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
+                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 16 Stunden</p>
               </span>
             </div>
             <button class="wall-widget--button" type="button" name="button">...</button>

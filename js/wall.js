@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $('.element-right').click(function() {
     //var parent = $(this).parents("wall-widget--filter-switch");
-    console.log(parent);
     $(this).parent().parent().removeClass('is-selected-left');
     $(this).parent().parent().addClass('is-selected-right');
   });
@@ -11,7 +10,7 @@ $(document).ready(function() {
     $(this).parent().parent().removeClass('is-selected-right');
   });
 
-  $('.select-toggle').click(function() {
+  $('.select-toggle-button').click(function() {
     $(this).parent().parent().toggleClass('is-selected-left is-selected-right');
   });
 });
