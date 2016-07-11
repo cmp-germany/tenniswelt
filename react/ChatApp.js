@@ -215,6 +215,11 @@ var ChatApp = React.createClass({
     // PopUp ChatTab
     this.popUpChatTab(partnerId);
 
+    // Limit to 3 ChatTabs
+    if (tempOpenChatTabs.length > 3) {
+      tempOpenChatTabs.splice(0, 1);
+    }
+
     // Save the State
     this.setState({openChatTabs: tempOpenChatTabs});
 
