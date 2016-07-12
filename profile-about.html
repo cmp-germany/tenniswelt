@@ -40,6 +40,8 @@
     <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
 
     <div class="container">
+
+      <!-- Left Sidebar -->
       <div class="section-left col-md-3 hidden-sm hidden-xs">
 
         <div data-module="matching.html"></div>
@@ -48,6 +50,7 @@
 
       </div>
 
+      <!-- Main Collumn -->
       <div class="section-center col-md-6">
         <div id="profile-about"></div>
         <script type="text/javascript" src="data/users.js" charset="utf-8"></script>
@@ -73,55 +76,13 @@
         </script>
         <script type="text/babel" src="react/profile-about.js" charset="utf-8"></script>
       </div>
+
+      <!-- Right Sidebar -->
       <div class="section-right col-md-3 hidden-xs hidden-sm">
 
-        <aside class="wall-widget wall-widget--news">
-          <header>
-            <h3>Mitteilungen</h3>
-          </header>
+        <div data-module="messages.html"></div>
 
-          <div class="wall-widget--content">
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 16 Stunden</p>
-              </span>
-            </div>
-            <button class="wall-widget--button" type="button" name="button">...</button>
-          </div>
-        </aside>
-
-        <aside class="wall-widget wall-widget--partners">
-          <header>
-            <h3>Preferred Partners</h3>
-          </header>
-          <img class="banner" src="gfx/banner.jpg" alt="banner"/>
-        </aside>
+        <div data-module="preferred-partners.html"></div>
 
       </div>
 
