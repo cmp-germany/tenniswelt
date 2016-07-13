@@ -1630,7 +1630,7 @@ body a:hover {
 
 /* line 206, ../sass/_chat.sass */
 .form-chat--messagebox {
-  width: 270px;
+  width: calc(100% - 50px);
   min-height: 40px;
   font-size: 16px;
   padding-top: 5px;
