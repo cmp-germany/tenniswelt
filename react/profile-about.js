@@ -10,7 +10,7 @@ var ProfileHeader = React.createClass({
 
     return (
       <header className="profile-header">
-        <img className="profile-header__wallpaper" src={this.props.profileData.wallpaper} alt={"Wallpaper von " + this.props.profileData.name} />
+        <div className="profile-header__wallpaper" style={{backgroundImage: "url(" + this.props.profileData.wallpaper  + ")"}} alt={"Wallpaper von " + this.props.profileData.name} />
         <div className="profile-header__desc-bar">
           <div className="col-xs-2 profile-header__profile-picture-container">
             <img src={this.props.profileData.profileImage} alt={"Profilbild von " + this.props.profileData.name} className="profile-header__profile-picture img-responsive" />
