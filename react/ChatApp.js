@@ -267,13 +267,17 @@ var ChatApp = React.createClass({
     }.bind(this));
 
     return (
-      <div>
-        <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
-          <div className="chat-tabs">
-            {chatTabs}
+      <div className="navbar__section navbar__section--displayed collapse" id="tab__chat">
+        <div className="navbar__section__content">
+          <div className="chat">
+            <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+              <div className="chat-tabs">
+                {chatTabs}
+              </div>
+            </div>
+            <ChatTabContacts addChat={this.addChat} />
           </div>
         </div>
-        <ChatTabContacts addChat={this.addChat} />
       </div>
     );
   }
