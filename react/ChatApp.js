@@ -121,22 +121,56 @@ var ChatTab = React.createClass({
     return (
       <div className={chatTabColClass}>
         <div className="chat__tab">
-          <header className={headerClasses}>
-            <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
-            <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
+          <header
+            className={headerClasses}
+            data-toggle="collapse"
+            data-target={"#" + chatId}>
+            <p className="chat__header-name">
+              {this.getChatName()}
+            </p>
+            <div className="chat__header-buttons">
+              <button
+                className="button--isOnline"
+                data-toggle="collapse"
+                data-target={"#" + chatId}>
+                <i className="material-icons"></i>
+              </button>
+              <button
+                className="button--close-chat"
+                type="button"
+                onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}>
+                <i className="material-icons mdl-icon-close-color"></i>
+              </button>
+            </div>
           </header>
-          <div id={chatId} className="collapse chat__content" ref={function(c){this.chatContent = c;}.bind(this)}>
-            <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
+          <div
+            id={chatId}
+            className="collapse chat__content"
+            ref={function(c){this.chatContent = c;}.bind(this)}>
+            <ul
+              className="chat__dialogue"
+              ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
               {chatMessages}
             </ul>
             <div className="chat__actions">
-              <input type="text" placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} ref={function(textarea){this.textarea=textarea;}.bind(this)} />
-              <button className="btn btn-important button--chat" type="button" name="chat-send-button"
+              <input
+                type="text"
+                placeholder="Nachricht"
+                className="form-chat form-chat--messagebox"
+                name="chat-message"
+                defaultValue={""}
+                ref={function(textarea){this.textarea=textarea;}.bind(this)} />
+              <button
+                className="btn btn-important button--chat"
+                type="button"
+                name="chat-send-button"
                 ref={function(sendButton){
                   this.sendButton=sendButton;
                 }.bind(this)}
-              >
-                <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />
+                >
+                <span
+                  className="glyphicon glyphicon-menu-right"
+                  aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -174,8 +208,11 @@ var ChatTabContacts = React.createClass({
     return (
       <div className="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
         <div className="chat-window">
-          <header className="chat__header">
-            <button data-toggle="collapse" data-target="#chat-list" className="chat__title-button">CHAT (2)</button>
+          <header className="chat__header" data-toggle="collapse" data-target="#chat-list">
+            <p className="chat__header-name text-center">
+              CHAT (2)
+            </p>
+            <button className="chat__title-button"></button>
           </header>
           <div id="chat-list" className="collapse chat__content">
             <div className="chat__actions alignment--center">
