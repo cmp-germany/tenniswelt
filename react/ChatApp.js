@@ -113,8 +113,13 @@ var ChatTab = React.createClass({
 
     var chatId = "chat-" + this.props.partnerId;
 
+    var chatTabColClass = "col-sm-4";
+    if (this.props.openChatTabs.length < 3) {
+      chatTabColClass = "col-sm-6 col-md-4"
+    }
+
     return (
-      <div className="col-sm-4">
+      <div className={chatTabColClass}>
         <div className="chat__tab">
           <header className={headerClasses}>
             <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
@@ -255,13 +260,28 @@ var ChatApp = React.createClass({
   },
 
   render: function() {
-    var spacingColumns = (3 - this.state.openChatTabs.length) * 4;
-    var spacing = <div className={"col-sm-" + spacingColumns + " chat-tabs-spacing"} style={{visible: false}}></div>;
+
+    var spacingColumnsMd = (3 - this.state.openChatTabs.length) * 4;
+    var spacingColumnsSm = spacingColumnsMd;
+    if (this.state.openChatTabs.length < 3) {
+      spacingColumnsSm = (2 - this.state.openChatTabs.length) * 6;
+    }
+    var colMd = " col-md-" + spacingColumnsMd;
+    var colSm = " col-sm-" + spacingColumnsSm;
+    if (spacingColumnsSm == 0) {
+      colSm = " hidden-sm";
+    }
+    var spacing =
+      <div
+        className={colMd + colSm + " chat-tabs-spacing"}>
+      </div>
+    ;
 
     var chatTabs = this.state.openChatTabs.map(function (partnerId){
       return (
         <ChatTab
           partnerId={partnerId}
+          openChatTabs={this.state.openChatTabs}
           key={partnerId}
           removeChat={this.removeChat}
           ref={function(c){
