@@ -33,7 +33,7 @@ var users = {
 
   "stadt-koeln-startercenter": {
     "id": "stadt-koeln-startercenter",
-    "name": "Stadt Köln Stertercenter",
+    "name": "Stadt Köln Startercenter",
     "wallpaper": "gfx/wallpaper/wallpaper-11.jpeg",
     "profileImage": "gfx/profilbilder/stadt-koeln-startcenter.jpg",
     "isCompanyProfile": true,

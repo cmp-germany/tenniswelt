@@ -93,9 +93,11 @@ var ChatTab = React.createClass({
         return (
           <li className={chatClasses} key={index}>
             <img src={this.users[message.user].profileImage} className="chat__image" alt="chat-image" />
-            <p className="chat__text">
-              {message.message}
-            </p>
+            <div className="chat__text-container">
+              <p className="chat__text">
+                {message.message}
+              </p>
+            </div>
           </li>
         );
       }, {users: users});
@@ -113,25 +115,66 @@ var ChatTab = React.createClass({
 
     var chatId = "chat-" + this.props.partnerId;
 
+    var chatTabColClass = "col-sm-4";
+    if (this.props.openChatTabs.length < 3) {
+      chatTabColClass = "col-sm-6 col-md-4"
+    }
+
     return (
-      <div className="chat__tab">
-        <header className={headerClasses}>
-          <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
-          <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
-        </header>
-        <div id={chatId} className="collapse chat__content" ref={function(c){this.chatContent = c;}.bind(this)}>
-          <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
-            {chatMessages}
-          </ul>
-          <div className="chat__actions">
-            <input type="text" placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} ref={function(textarea){this.textarea=textarea;}.bind(this)} />
-            <button className="btn btn-important button--chat" type="button" name="chat-send-button"
-              ref={function(sendButton){
-                this.sendButton=sendButton;
-              }.bind(this)}
-            >
-              <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />
-            </button>
+      <div className={chatTabColClass}>
+        <div className="chat__tab">
+          <header
+            className={headerClasses}
+            data-toggle="collapse"
+            data-target={"#" + chatId}>
+            <p className="chat__header-name">
+              {this.getChatName()}
+            </p>
+            <div className="chat__header-buttons">
+              <button
+                className="button--isOnline"
+                data-toggle="collapse"
+                data-target={"#" + chatId}>
+                <i className="material-icons"></i>
+              </button>
+              <button
+                className="button--close-chat"
+                type="button"
+                onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}>
+                <i className="material-icons mdl-icon-close-color"></i>
+              </button>
+            </div>
+          </header>
+          <div
+            id={chatId}
+            className="collapse chat__content"
+            ref={function(c){this.chatContent = c;}.bind(this)}>
+            <ul
+              className="chat__dialogue"
+              ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
+              {chatMessages}
+            </ul>
+            <div className="chat__actions">
+              <input
+                type="text"
+                placeholder="Nachricht"
+                className="form-chat form-chat--messagebox"
+                name="chat-message"
+                defaultValue={""}
+                ref={function(textarea){this.textarea=textarea;}.bind(this)} />
+              <button
+                className="btn btn-important button--chat"
+                type="button"
+                name="chat-send-button"
+                ref={function(sendButton){
+                  this.sendButton=sendButton;
+                }.bind(this)}
+                >
+                <span
+                  className="glyphicon glyphicon-menu-right"
+                  aria-hidden="true" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -167,8 +210,11 @@ var ChatTabContacts = React.createClass({
     return (
       <div className="col-xs-12 col-sm-3 col-md-3 col-lg-2 nopadding">
         <div className="chat-window">
-          <header className="chat__header">
-            <button data-toggle="collapse" data-target="#chat-list" className="chat__title-button">CHAT (2)</button>
+          <header className="chat__header" data-toggle="collapse" data-target="#chat-list">
+            <p className="chat__header-name text-center">
+              CHAT (2)
+            </p>
+            <button className="chat__title-button"></button>
           </header>
           <div id="chat-list" className="collapse chat__content">
             <div className="chat__actions alignment--center">
@@ -253,10 +299,28 @@ var ChatApp = React.createClass({
   },
 
   render: function() {
+
+    var spacingColumnsMd = (3 - this.state.openChatTabs.length) * 4;
+    var spacingColumnsSm = spacingColumnsMd;
+    if (this.state.openChatTabs.length < 3) {
+      spacingColumnsSm = (2 - this.state.openChatTabs.length) * 6;
+    }
+    var colMd = " col-md-" + spacingColumnsMd;
+    var colSm = " col-sm-" + spacingColumnsSm;
+    if (spacingColumnsSm == 0) {
+      colSm = " hidden-sm";
+    }
+    var spacing =
+      <div
+        className={colMd + colSm + " chat-tabs-spacing"}>
+      </div>
+    ;
+
     var chatTabs = this.state.openChatTabs.map(function (partnerId){
       return (
         <ChatTab
           partnerId={partnerId}
+          openChatTabs={this.state.openChatTabs}
           key={partnerId}
           removeChat={this.removeChat}
           ref={function(c){
@@ -267,15 +331,22 @@ var ChatApp = React.createClass({
     }.bind(this));
 
     return (
-      <div className="navbar__section navbar__section--displayed collapse" id="tab__chat">
+      <div
+        className="navbar__section navbar__section--displayed collapse"
+        id="tab__chat">
         <div className="navbar__section__content">
           <div className="chat">
-            <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
-              <div className="chat-tabs">
-                {chatTabs}
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+                  <div className="chat-tabs">
+                    {spacing}
+                    {chatTabs}
+                  </div>
+                </div>
+                <ChatTabContacts addChat={this.addChat} />
               </div>
             </div>
-            <ChatTabContacts addChat={this.addChat} />
           </div>
         </div>
       </div>
