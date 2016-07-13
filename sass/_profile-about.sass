@@ -11,61 +11,61 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
   position: relative
 
 
-.profile-header__wallpaper
-  width: 100%
-  min-height: $profile-header-height
-  background-size: cover
+  &__wallpaper
+    width: 100%
+    min-height: $profile-header-height
+    background-size: cover
 
 
-.profile-header__desc-bar
-  position: absolute
-  bottom: 0
-  left: 0
-  height: 100px
-  width: 100%
-  background-color: rgba(0, 0, 0, 0.5)
+  &__desc-bar
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 100px
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.5)
 
 
-.profile-header__profile-picture-container
-  position: relative
-  width: $profile-picture-size
-  height: $profile-picture-size
-  float: left
+  &__profile-picture-container
+    position: relative
+    width: $profile-picture-size
+    height: $profile-picture-size
+    float: left
 
 
-.profile-header__profile-picture
-  position: absolute
-  bottom: 30px
-  left: 10px
-  border: 5px solid #fff
+  &__profile-picture
+    position: absolute
+    bottom: 30px
+    left: 10px
+    border: 5px solid #fff
 
-.profile-header__profile-name-container
-  float: left
-  width: calc(100% - #{$profile-fix-size})
-
-
-.profile-header__name
-  color: #fff
-  margin-left: 15px
-  margin-top: 0
-  margin-bottom: 0
+  &__profile-name-container
+    float: left
+    width: calc(100% - #{$profile-fix-size})
 
 
-.profile-header__profile-buttons-container
-  float: left
-  width: $profile-buttons-size
+  &__name
+    color: #fff
+    margin-left: 15px
+    margin-top: 0
+    margin-bottom: 0
 
-.profile-header__action-buttons
-  padding: 0
-  margin: 0
 
-.profile-header__action-button
-  display: inline-block
-  color: #fff
-  margin: 0 5px
+  &__profile-buttons-container
+    float: left
+    width: $profile-buttons-size
 
-.profile-header__action-button--is-online
-  color: #4DDD35
+  &__action-buttons
+    padding: 0
+    margin: 0
+
+  &__action-button
+    display: inline-block
+    color: #fff
+    margin: 0 5px
+
+  &__action-button--is-online
+    color: #4DDD35
 
 
 .profile-tabs

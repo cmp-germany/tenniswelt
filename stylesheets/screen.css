@@ -1084,14 +1084,12 @@ body a:hover {
   overflow: hidden;
   position: relative;
 }
-
 /* line 14, ../sass/_profile-about.sass */
 .profile-header__wallpaper {
   width: 100%;
   min-height: 300px;
   background-size: cover;
 }
-
 /* line 20, ../sass/_profile-about.sass */
 .profile-header__desc-bar {
   position: absolute;
@@ -1101,7 +1099,6 @@ body a:hover {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 /* line 29, ../sass/_profile-about.sass */
 .profile-header__profile-picture-container {
   position: relative;
@@ -1109,7 +1106,6 @@ body a:hover {
   height: 120px;
   float: left;
 }
-
 /* line 36, ../sass/_profile-about.sass */
 .profile-header__profile-picture {
   position: absolute;
@@ -1117,13 +1113,11 @@ body a:hover {
   left: 10px;
   border: 5px solid #fff;
 }
-
 /* line 42, ../sass/_profile-about.sass */
 .profile-header__profile-name-container {
   float: left;
   width: calc(100% - 190px);
 }
-
 /* line 47, ../sass/_profile-about.sass */
 .profile-header__name {
   color: #fff;
@@ -1131,26 +1125,22 @@ body a:hover {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 /* line 54, ../sass/_profile-about.sass */
 .profile-header__profile-buttons-container {
   float: left;
   width: 70px;
 }
-
 /* line 58, ../sass/_profile-about.sass */
 .profile-header__action-buttons {
   padding: 0;
   margin: 0;
 }
-
 /* line 62, ../sass/_profile-about.sass */
 .profile-header__action-button {
   display: inline-block;
   color: #fff;
   margin: 0 5px;
 }
-
 /* line 67, ../sass/_profile-about.sass */
 .profile-header__action-button--is-online {
   color: #4DDD35;
