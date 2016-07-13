@@ -93,9 +93,11 @@ var ChatTab = React.createClass({
         return (
           <li className={chatClasses} key={index}>
             <img src={this.users[message.user].profileImage} className="chat__image" alt="chat-image" />
-            <p className="chat__text">
-              {message.message}
-            </p>
+            <div className="chat__text-container">
+              <p className="chat__text">
+                {message.message}
+              </p>
+            </div>
           </li>
         );
       }, {users: users});
