@@ -114,24 +114,26 @@ var ChatTab = React.createClass({
     var chatId = "chat-" + this.props.partnerId;
 
     return (
-      <div className="chat__tab">
-        <header className={headerClasses}>
-          <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
-          <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
-        </header>
-        <div id={chatId} className="collapse chat__content" ref={function(c){this.chatContent = c;}.bind(this)}>
-          <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
-            {chatMessages}
-          </ul>
-          <div className="chat__actions">
-            <input type="text" placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} ref={function(textarea){this.textarea=textarea;}.bind(this)} />
-            <button className="btn btn-important button--chat" type="button" name="chat-send-button"
-              ref={function(sendButton){
-                this.sendButton=sendButton;
-              }.bind(this)}
-            >
-              <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />
-            </button>
+      <div className="col-sm-4">
+        <div className="chat__tab">
+          <header className={headerClasses}>
+            <button data-toggle="collapse" data-target={"#" + chatId} className="chat__title-button">{this.getChatName()}<i className="material-icons"></i></button>
+            <button className="button--close-chat" type="button" onClick={function(){this.props.removeChat(this.props.partnerId)}.bind(this)}><i className="material-icons mdl-icon-close-color"></i></button>
+          </header>
+          <div id={chatId} className="collapse chat__content" ref={function(c){this.chatContent = c;}.bind(this)}>
+            <ul className="chat__dialogue" ref={function(chatDialogue){this.chatDialogue=chatDialogue}.bind(this)}>
+              {chatMessages}
+            </ul>
+            <div className="chat__actions">
+              <input type="text" placeholder="Nachricht" className="form-chat form-chat--messagebox" name="chat-message" defaultValue={""} ref={function(textarea){this.textarea=textarea;}.bind(this)} />
+              <button className="btn btn-important button--chat" type="button" name="chat-send-button"
+                ref={function(sendButton){
+                  this.sendButton=sendButton;
+                }.bind(this)}
+              >
+                <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -253,6 +255,9 @@ var ChatApp = React.createClass({
   },
 
   render: function() {
+    var spacingColumns = (3 - this.state.openChatTabs.length) * 4;
+    var spacing = <div className={"col-sm-" + spacingColumns + " chat-tabs-spacing"} style={{visible: false}}></div>;
+
     var chatTabs = this.state.openChatTabs.map(function (partnerId){
       return (
         <ChatTab
@@ -267,15 +272,22 @@ var ChatApp = React.createClass({
     }.bind(this));
 
     return (
-      <div className="navbar__section navbar__section--displayed collapse" id="tab__chat">
+      <div
+        className="navbar__section navbar__section--displayed collapse"
+        id="tab__chat">
         <div className="navbar__section__content">
           <div className="chat">
-            <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
-              <div className="chat-tabs">
-                {chatTabs}
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-xs-12 col-sm-9 col-md-9 col-lg-10 nopadding">
+                  <div className="chat-tabs">
+                    {spacing}
+                    {chatTabs}
+                  </div>
+                </div>
+                <ChatTabContacts addChat={this.addChat} />
               </div>
             </div>
-            <ChatTabContacts addChat={this.addChat} />
           </div>
         </div>
       </div>
