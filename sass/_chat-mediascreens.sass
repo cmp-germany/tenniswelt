@@ -2,6 +2,14 @@
   .chat
     position: relative
 
+  .col-chat
+    height: calc(100vh - 80px)
+    display: none
+    padding: 0
+    margin-top: -1px
+    &:last-child
+      display: block
+
   .chat-tabs
     //position: fixed
     //bottom: 0px
@@ -23,7 +31,7 @@
     height: calc(100vh - 173px)
 
   .chat__dialogue
-    height: calc(100vh - 193px)
+    height: calc(100vh - 150px)
 
   .form-chat--messagebox
     width: calc(100vw - 50px)

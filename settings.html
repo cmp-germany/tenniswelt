@@ -33,76 +33,16 @@
 
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
-    <script src="js/navigation.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
 
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-       <!-- Brand and toggle get grouped for better mobile display -->
-       <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-           <span class="sr-only">Toggle navigation</span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-         <a class="navbar-brand" href="#">
-           <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
-         </a>
-       </div>
 
-       <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-2">
-         <form class="navbar-form">
-           <div class="form-group">
-             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
-           </div>
-           <div class="form-group">
-             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
-           </div>
-           <div class="form-group form-group--small">
-             <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
-             <label class="form-control-label" for="form-control-range">150</label>
-           </div>
-           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Finden</button>
-         </form>
-       </div><!-- /.navbar-collapse -->
-
-       <div class="navbar-right" >
-         <ul class="nav navbar-nav">
-           <li><img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" /></li>
-        </ul>
-      </div>
-      </div><!-- /.container-fluid -->
-    </nav>
-
-
-
-    <header>
-      <div class="header-content">
-
-      </div>
-    </header>
-
-    <nav class="navbar grand-navbar" id="navbar-starters">
-      <div class="container">
-        <div class="starters-navigation collapse navbar-collapse" id="navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="nav">Stichwortsuche</a></li>
-            <li><a href="#" class="nav">Startup-Leitfaden</a></li>
-            <li><a href="#" class="nav">Gruppen</a></li>
-            <li><a href="#" class="nav">Eventkalender</a></li>
-            <li><a href="#" class="nav">Suche / Biete</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
 
     <div class="container">
 
+      <!-- Main Column -->
       <div class="section-center col-md-9">
 
         <ul class="profile-tabs">
@@ -253,60 +193,17 @@
 
       </div>
 
+      <!-- Right Sidebar -->
       <div class="section-right col-md-3 hidden-sm hidden-xs">
 
-        <aside class="wall-widget wall-widget--news">
-          <header>
-            <h3>Mitteilungen</h3>
-          </header>
+        <div data-module="messages.html"></div>
 
-          <div class="wall-widget--content">
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
-              </span>
-            </div>
+        <div data-module="preferred-partners.html"></div>
 
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 16 Stunden</p>
-              </span>
-            </div>
-            <button class="wall-widget--button" type="button" name="button">...</button>
-          </div>
-        </aside>
-
-        <aside class="wall-widget wall-widget--partners">
-          <header>
-            <h3>Preferred Partners</h3>
-          </header>
-          <img class="banner" src="gfx/banner.jpg" alt="banner"/>
-        </aside>
       </div>
     </div>
 
-    <div class="chat" id="chat-app">
-    </div>
+    <div id="chat-app"></div>
 
     <script type="text/javascript">var reactChatApp;</script>
     <script src="data/users.js" charset="utf-8"></script>

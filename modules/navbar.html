@@ -1,0 +1,327 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <!--<div class="container">-->
+   <!-- Brand and toggle get grouped for better mobile display -->
+   <div class="navbar-header container">
+
+     <a class="navbar-brand" href="#1">
+       <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
+     </a>
+
+     <button class="navbar__tab navbar__tab--active" data-toggle="collapse" data-target="#tab__wall" aria-expanded="false">
+      <i class="material-icons">&#xE871;</i>
+     </button>
+
+     <button class="navbar__tab " data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
+      <i class="material-icons">&#xE915;</i>
+     </button>
+
+     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__chat" aria-expanded="false">
+      <i class="material-icons">&#xE0CB;</i>
+     </button>
+
+     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__search" aria-expanded="false">
+       <i class="material-icons">&#xE8B6;</i>
+     </button>
+
+     <div class="navbar__section collapse navbar-collapse navbar-left" id="tab__search">
+       <div class="navbar__section__content">
+
+       <h4 class="navbar__section__title">Suche</h4>
+       <form class="navbar-form navbar-form--mobile">
+         <div class="form-group">
+           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
+         </div>
+         <div class="form-group">
+           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
+         </div>
+         <div class="form-group form-group--small">
+           <label class="form-control-label" for="form-control-range">150</label>
+           <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+           <button type="submit" class="button--nav-search btn btn-important">
+             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+             Finden
+           </button>
+         </div>
+       </form>
+        </div>
+     </div><!-- /.navbar-collapse -->
+
+     <button class="navbar__tab navbar__tab--always navbar__tab--profile" data-toggle="collapse" data-target="#tab__profile-options" aria-expanded="false">
+       <img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+       <span class="caret"></span>
+     </button>
+
+     <button class="navbar__tab navbar__tab--search" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+       s
+     </button>
+
+
+
+
+     <!--<div style="float: right" class="dropdown">
+       <button class="btn btn-navbar dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+       </button>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+         <li><a href="#1">Nachrichten</a></li>
+         <li><a href="#1">Kontakt einladen</a></li>
+         <li><a href="#1">Einstellungen</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a href=".">Logout</a></li>
+       </ul>
+     </div>-->
+   </div>
+
+   <!-- Collect the nav links, forms, and other content for toggling -->
+
+  <!--</div><!-- /.container-fluid -->
+</nav>
+
+<div class="navbar__section collapse" style="" id="tab__matching">
+  <div class="navbar__section__content">
+    <div class="navbar__section__actions">
+      <button id="navbar__matching-button--matching" class="navbar__matching-button navbar__matching-button--left navbar__matching-button--active">Matching</button>
+      <button id="navbar__matching-button--gruppenmatching" class="navbar__matching-button navbar__matching-button--right">Gruppen-Matching</button>
+    </div>
+
+    <div class="navbar-matching">
+      <div class="navbar-matching__filters" id="navbar-filter--matching">
+        <div class="navbar-matching__filter-switch row is-selected-right">
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-left" href="#1">Privat</a>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-2">
+            <button class="select-toggle-button">
+              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-right" href="#1">Unternehmen</a>
+          </div>
+        </div>
+        <div class="navbar-matching__filter-switch row is-selected-left">
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-left" href="#1">Lokal</a>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-2">
+            <button class="select-toggle-button">
+              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-right" href="#1">Weltweit</a>
+          </div>
+        </div>
+        <div class="navbar-matching__filter-select">
+          <label for="filter-sortieren">Sortieren: </label>
+          <select class="wall-widget--filter-select-list" name="filter-sortieren">
+            <option value="neu">Neu</option>
+            <option value="aktiv">Aktiv</option>
+            <option value="beliebt">Beliebt</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="navbar-matching__filters" id="navbar-filter--gruppen-matching" style="display: none">
+        <div class="navbar-matching__filter-switch row is-selected-right">
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-left" href="#1">Privat</a>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-2">
+            <button class="select-toggle-button">
+              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-right" href="#1">Unternehmen</a>
+          </div>
+        </div>
+        <div class="navbar-matching__filter-switch row is-selected-left">
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-left" href="#1">Lokal</a>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-2">
+            <button class="select-toggle-button">
+              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="navbar-matching__filter-element col-xs-5">
+            <a class="element-right" href="#1">Weltweit</a>
+          </div>
+        </div>
+        <div class="navbar-matching__filter-select">
+          <label for="filter-sortieren">Sortieren: </label>
+          <select class="wall-widget--filter-select-list" name="filter-sortieren">
+            <option value="neu">Neu</option>
+            <option value="aktiv">Aktiv</option>
+            <option value="beliebt">Beliebt</option>
+          </select>
+        </div>
+      </div>
+
+      <h4 class="navbar__section__title navbar__section__title--matches">Matches</h4>
+
+      <div class="navbar-matching__content" id="navbar-resultate--matching">
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
+          <div class="account">
+            <h4>Volker Miller</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
+          <div class="account">
+            <h4>Kai Gärtner</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" />
+          <div class="account">
+            <h4>Wolfgang Winter</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" />
+          <div class="account">
+            <h4>Maria Kristhoff</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="navbar-matching__button" type="button" name="button">mehr</button>
+      </div>
+
+      <div class="navbar-matching__content" id="navbar-resultate--gruppen-matching" style="display: none">
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+          <div class="account">
+            <h4>Volker Miller</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status ">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+          <div class="account">
+            <h4>Kai Gärtner</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+          <div class="account">
+            <h4>Wolfgang Winter</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-matching__account">
+          <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
+          <div class="account">
+            <h4>Maria Kristhoff</h4>
+            <ul class="navbar-matching__actions">
+              <li><i class="material-icons online-status">&#xE1E2;</i></li>
+              <li><i class="material-icons">&#xE0C9;</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="navbar-matching__button" type="button" name="button">mehr</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<header>
+  <div class="header-content">
+
+  </div>
+</header>
+
+<nav class="navbar grand-navbar navbar-options collapse" id="tab__profile-options">
+   <div class="container">
+    <div class="starters-navigation">
+     <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
+     <ul class="nav navbar-nav navbar-right">
+       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE0BE;</i> Nachrichten</a></li>
+       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE80D;</i> Kontakt einladen</a></li>
+       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE8B8;</i> Einstellungen</a></li>
+       <li role="separator" class="divider"></li>
+       <li class="starters-navigation__list-item"><a class="nav-button" href="."><i class="material-icons">&#xE5C9;</i> Logout</a></li>
+     </ul>
+    </div>
+   </div>
+ </nav>
+
+<nav class="navbar grand-navbar collapse navbar-collapse" id="navbar-collapse-1">
+  <div class="container">
+    <div class="starters-navigation" id="navbar-starters">
+      <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="starters-navigation__list-item dropdown">
+          <button class="nav-button btn btn-default dropdown-toggle" type="button" id="dropdown-stichwortsuche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Stichwortsuche <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
+            <li><a href="suche.html?index=unternehmen&suche=startup" class="dropdown-button--starters">Startups</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=privateInvestoren" class="dropdown-button--starters">Private Investoren</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=institutionelleInvestoren" class="dropdown-button--starters">Institutionelle Investoren</a></li>
+            <li role="separator" class="divider"></li>
+            <!--Förderung-->
+            <li><a href="suche.html?index=unternehmen&suche=institutionelleFoerderungen" class="dropdown-button--starters">Institutionelle Förderung</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung" class="dropdown-button--starters">Privatwirtschaftliche Förderung</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=staatlicheFoederungen" class="dropdown-button--starters">Staatliche Förderung</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="suche.html?index=unternehmen&suche=gruenderzentrum" class="dropdown-button--starters">Gründerzentrum</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=businessAngels" class="dropdown-button--starters">Business Angels</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=dienstleister" class="dropdown-button--starters">Dienstleister</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=einkaeufer" class="dropdown-button--starters">Einkäufer</a></li>
+            <li><a href="suche.html?index=unternehmen&suche=co_workingSpaces" class="dropdown-button--starters">Co-Working Spaces</a></li>
+          </ul>
+        </li>
+        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Startup-Leitfaden</a></li>
+        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Gruppen</a></li>
+        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Eventkalender</a></li>
+        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Suche / Biete</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

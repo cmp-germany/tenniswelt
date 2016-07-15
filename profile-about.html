@@ -33,263 +33,24 @@
 
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
-    <script src="js/navigation.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
 
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-       <!-- Brand and toggle get grouped for better mobile display -->
-       <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-           <span class="sr-only">Toggle navigation</span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-         <a class="navbar-brand" href="#">
-           <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
-         </a>
-       </div>
-
-       <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-2">
-         <form class="navbar-form">
-           <div class="form-group">
-             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
-           </div>
-           <div class="form-group">
-             <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
-           </div>
-           <div class="form-group form-group--small">
-             <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
-             <label class="form-control-label" for="form-control-range">150</label>
-           </div>
-           <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Finden</button>
-         </form>
-       </div><!-- /.navbar-collapse -->
-
-       <div class="navbar-right" >
-         <ul class="nav navbar-nav">
-           <li><img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" /></li>
-        </ul>
-      </div>
-      </div><!-- /.container-fluid -->
-    </nav>
-
-
-
-    <header>
-      <div class="header-content">
-
-      </div>
-    </header>
-
-    <nav class="navbar grand-navbar" id="navbar-starters">
-      <div class="container">
-        <div class="starters-navigation collapse navbar-collapse" id="navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="nav">Stichwortsuche</a></li>
-            <li><a href="#" class="nav">Startup-Leitfaden</a></li>
-            <li><a href="#" class="nav">Gruppen</a></li>
-            <li><a href="#" class="nav">Eventkalender</a></li>
-            <li><a href="#" class="nav">Suche / Biete</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
 
     <div class="container">
+
+      <!-- Left Sidebar -->
       <div class="section-left col-md-3 hidden-sm hidden-xs">
-        <aside class="wall-widget wall-widget--matching">
-          <header>
-            <h3>Matching</h3>
-          </header>
-          <div class="wall-widget--filters">
-            <div class="wall-widget--filter-switch row is-selected-right">
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="#1">Privat</a>
-              </div>
-              <div class="wall-widget--filter-element col-xs-2">
-                <button class="select-toggle-button">
-                  <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                  </svg>
-                </button>
-              </div>
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="#1">Unternehmen</a>
-              </div>
-            </div>
-            <div class="wall-widget--filter-switch row is-selected-left">
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="#1">Lokal</a>
-              </div>
-              <div class="wall-widget--filter-element col-xs-2">
-                <button class="select-toggle-button">
-                  <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                    <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                  </svg>
-                </button>
-              </div>
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="#1">Weltweit</a>
-              </div>
-            </div>
-            <div class="wall-widget--filter-select">
-              <label for="filter-sortieren">Sortieren: </label>
-              <select class="wall-widget--filter-select-list" name="filter-sortieren">
-                <option value="neu">Neu</option>
-                <option value="aktiv">Aktiv</option>
-                <option value="beliebt">Beliebt</option>
-              </select>
-            </div>
-          </div>
 
+        <div data-module="matching.html"></div>
 
-          <div class="wall-widget--content">
-            <div class="wall-widget--account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE1E2;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
+        <div data-module="group-matching.html"></div>
 
-            <div class="wall-widget--account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE1E2;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="wall-widget--account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="wall-widget--account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE1E2;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-
-            <button class="wall-widget--button" type="button" name="button">...</button>
-          </div>
-        </aside>
-
-        <aside class="wall-widget wall-widget--matching">
-          <header>
-            <h3>Gruppen-Matching</h3>
-          </header>
-          <div class="wall-widget--filters">
-            <div class="wall-widget--filter-switch row is-selected-right">
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="">Privat</a>
-              </div>
-              <div class="wall-widget--filter-element col-xs-2">
-                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                </svg>
-              </div>
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="">Unternehmen</a>
-              </div>
-            </div>
-            <div class="wall-widget--filter-switch row is-selected-left">
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-left" href="">Lokal</a>
-              </div>
-              <div class="wall-widget--filter-element col-xs-2">
-                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-                </svg>
-              </div>
-              <div class="wall-widget--filter-element col-xs-5">
-                <a class="element-right" href="">Weltweit</a>
-              </div>
-            </div>
-            <div class="wall-widget--filter-select">
-              <label for="filter-sortieren">Sortieren: </label>
-              <select class="wall-widget--filter-select-list" name="filter-sortieren">
-                <option value="neu">Neu</option>
-                <option value="aktiv">Aktiv</option>
-                <option value="beliebt">Beliebt</option>
-              </select>
-            </div>
-          </div>
-
-
-          <div class="wall-widget--content">
-            <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
-              <div class="account">
-                <h4>Volker Miller</h4>
-                <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
-              <div class="account">
-                <h4>Kai Gärtner</h4>
-                <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
-              <div class="account">
-                <h4>Wolfgang Winter</h4>
-                <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="wall-widget--account">
-              <img class="avatar" src="gfx/profilbild.png" alt="Profilbild" />
-              <div class="account">
-                <h4>Maria Kristhoff</h4>
-                <ul class="wall-widget--actions">
-                  <li>com</li>
-                  <li>txt</li>
-                </ul>
-              </div>
-            </div>
-
-            <button class="wall-widget--button" type="button" name="button">...</button>
-          </div>
-        </aside>
       </div>
 
+      <!-- Main Collumn -->
       <div class="section-center col-md-6">
         <div id="profile-about"></div>
         <script type="text/javascript" src="data/users.js" charset="utf-8"></script>
@@ -315,61 +76,19 @@
         </script>
         <script type="text/babel" src="react/profile-about.js" charset="utf-8"></script>
       </div>
+
+      <!-- Right Sidebar -->
       <div class="section-right col-md-3 hidden-xs hidden-sm">
 
-        <aside class="wall-widget wall-widget--news">
-          <header>
-            <h3>Mitteilungen</h3>
-          </header>
+        <div data-module="messages.html"></div>
 
-          <div class="wall-widget--content">
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 16 Stunden</p>
-              </span>
-            </div>
-            <button class="wall-widget--button" type="button" name="button">...</button>
-          </div>
-        </aside>
-
-        <aside class="wall-widget wall-widget--partners">
-          <header>
-            <h3>Preferred Partners</h3>
-          </header>
-          <img class="banner" src="gfx/banner.jpg" alt="banner"/>
-        </aside>
+        <div data-module="preferred-partners.html"></div>
 
       </div>
 
     </div>
 
-    <div class="chat" id="chat-app">
+    <div id="chat-app">
     </div>
 
     <script type="text/javascript">var reactChatApp;</script>

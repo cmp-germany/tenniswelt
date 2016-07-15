@@ -10,28 +10,46 @@ var ProfileHeader = React.createClass({
 
     return (
       <header className="profile-header">
-        <img className="profile-header__wallpaper" src={this.props.profileData.wallpaper} alt={"Wallpaper von " + this.props.profileData.name} />
+        <div
+          className="profile-header__wallpaper"
+          style={{backgroundImage: "url(" + this.props.profileData.wallpaper  + ")"}}
+          alt={"Wallpaper von " + this.props.profileData.name} />
         <div className="profile-header__desc-bar">
-          <div className="col-xs-2 profile-header__profile-picture-container">
-            <img src={this.props.profileData.profileImage} alt={"Profilbild von " + this.props.profileData.name} className="profile-header__profile-picture img-responsive" />
+          <div className="profile-header__profile-picture-container">
+            <img
+              src={this.props.profileData.profileImage}
+              alt={"Profilbild von " + this.props.profileData.name}
+              className="profile-header__profile-picture img-responsive" />
           </div>
-          <div className="col-xs-7">
-            <h3 className="profile-header__name">{this.props.profileData.name}</h3>
+          <div className="profile-header__profile-name-container">
+            <div style={{display: 'table', height: 100}}>
+              <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
+                <h3 className="profile-header__name">
+                  {this.props.profileData.name}
+                </h3>
+              </div>
+            </div>
           </div>
-          <div className="col-xs-3">
-            <ul className="profile-header__action-buttons text-right">
-              <li className={onlineIconClasses}><i className="material-icons"></i></li>
-              <li className="profile-header__action-button">
-                <a
-                  href={"javascript:reactChatApp.addChat('" + this.props.profileData.id + "');"}
-                  style={{
-                    color: "inherit"
-                  }}
-                >
-                  <i className="material-icons"></i>
-                </a>
-              </li>
-            </ul>
+          <div className="profile-header__profile-buttons-container">
+            <div style={{display: 'table', height: 100}}>
+              <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
+                <ul className="profile-header__action-buttons text-right">
+                  <li className={onlineIconClasses}>
+                    <i className="material-icons"></i>
+                  </li>
+                  <li className="profile-header__action-button">
+                    <a
+                      href={"javascript:reactChatApp.addChat('" + this.props.profileData.id + "');"}
+                      style={{
+                        color: "inherit"
+                      }}
+                      >
+                      <i className="material-icons"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </header>
