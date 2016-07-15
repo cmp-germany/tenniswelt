@@ -630,20 +630,20 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   font-weight: lighter;
 }
 
-/* line 1, ../sass/_wall.sass */
+/* line 3, ../sass/_wall.sass */
 body {
   background-color: rgba(19, 35, 51, 0.05);
 }
-/* line 3, ../sass/_wall.sass */
+/* line 5, ../sass/_wall.sass */
 body a {
   color: #E9002F;
 }
-/* line 5, ../sass/_wall.sass */
+/* line 7, ../sass/_wall.sass */
 body a:hover {
   color: #3aa6e7;
 }
 
-/* line 8, ../sass/_wall.sass */
+/* line 10, ../sass/_wall.sass */
 .wall-widget {
   border: solid 1px #eee;
   padding: 20px;
@@ -651,17 +651,17 @@ body a:hover {
   padding-top: 0;
   background-color: #f9f9f9;
 }
-/* line 9, ../sass/_wall.sass */
+/* line 11, ../sass/_wall.sass */
 .wall-widget ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 20, ../sass/_wall.sass */
+/* line 22, ../sass/_wall.sass */
 .wall-widget header h3 {
   font-size: 20px;
 }
-/* line 24, ../sass/_wall.sass */
+/* line 26, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching header {
   border-bottom: solid 1px #3aa6e7;
   margin-right: -20px;
@@ -672,7 +672,7 @@ body a:hover {
   padding-bottom: 15px;
   margin-bottom: 25px;
 }
-/* line 33, ../sass/_wall.sass */
+/* line 35, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching header i {
   display: table-cell;
   vertical-align: middle;
@@ -680,43 +680,43 @@ body a:hover {
   font-size: 30px;
   color: #1470a7;
 }
-/* line 39, ../sass/_wall.sass */
+/* line 41, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching header h3 {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 43, ../sass/_wall.sass */
+/* line 45, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters {
   font-size: 14px;
 }
-/* line 45, ../sass/_wall.sass */
+/* line 47, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch {
   width: 100%;
   margin: 0;
   margin-top: 10px;
 }
-/* line 50, ../sass/_wall.sass */
+/* line 52, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch .select-toggle:hover {
   cursor: pointer;
 }
-/* line 53, ../sass/_wall.sass */
+/* line 55, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a {
   color: #777;
 }
-/* line 55, ../sass/_wall.sass */
+/* line 57, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a:hover, .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a:active, .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a:focus, .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a:visited {
   text-decoration: none;
 }
-/* line 58, ../sass/_wall.sass */
+/* line 60, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch a:hover {
   color: #E9002F;
 }
-/* line 62, ../sass/_wall.sass */
+/* line 64, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch.is-selected-right a.element-right {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
-/* line 66, ../sass/_wall.sass */
+/* line 68, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch.is-selected-right .select-toggle {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -724,12 +724,12 @@ body a:hover {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 74, ../sass/_wall.sass */
+/* line 76, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch.is-selected-left a.element-left {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
-/* line 78, ../sass/_wall.sass */
+/* line 80, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-switch.is-selected-left .select-toggle {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -737,22 +737,22 @@ body a:hover {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 89, ../sass/_wall.sass */
+/* line 91, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element {
   padding: 0;
   text-align: center;
 }
-/* line 93, ../sass/_wall.sass */
+/* line 95, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element:first-child {
   text-align: right;
   padding-right: 5px;
 }
-/* line 97, ../sass/_wall.sass */
+/* line 99, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element:last-child {
   text-align: left;
   padding-left: 5px;
 }
-/* line 101, ../sass/_wall.sass */
+/* line 103, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element button {
   background: none;
   border: none;
@@ -765,32 +765,32 @@ body a:hover {
   -moz-user-select: none;
   -ms-user-select: none;
 }
-/* line 113, ../sass/_wall.sass */
+/* line 115, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 117, ../sass/_wall.sass */
+/* line 119, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-element button:focus {
   outline: none;
 }
-/* line 122, ../sass/_wall.sass */
+/* line 124, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-select {
   text-align: center;
 }
-/* line 124, ../sass/_wall.sass */
+/* line 126, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--filters .wall-widget--filter-select .wall-widget--filter-select-list {
   background-color: #fff;
   width: 80px;
   margin-left: 5px;
   margin-top: 10px;
 }
-/* line 130, ../sass/_wall.sass */
+/* line 132, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content {
   margin-top: 25px;
   text-align: center;
 }
-/* line 133, ../sass/_wall.sass */
+/* line 135, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account {
   text-align: left;
   width: 100%;
@@ -798,50 +798,72 @@ body a:hover {
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
 }
-/* line 139, ../sass/_wall.sass */
+/* line 141, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account * {
   display: inline-block;
   vertical-align: top;
 }
-/* line 143, ../sass/_wall.sass */
+/* line 145, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .avatar {
   width: 50px;
   height: 50px;
 }
-/* line 147, ../sass/_wall.sass */
-.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account {
-  padding-left: 5px;
-}
 /* line 149, ../sass/_wall.sass */
-.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account > * {
-  display: block;
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account {
+  width: calc(100% - 55px);
+  height: 50px;
+  display: table;
+  position: relative;
+  float: right;
+  overflow: hidden;
 }
-/* line 151, ../sass/_wall.sass */
+/* line 156, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 159, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account a:hover {
+  z-index: 100;
+}
+/* line 162, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account h4 {
   font-size: 13px;
   font-weight: bold;
-  margin: 0;
-  padding-top: 3px;
+  width: calc(100% - 20px);
 }
-/* line 156, ../sass/_wall.sass */
+/* line 168, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul {
-  margin-top: 5px;
+  display: table;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  right: 0;
+  height: 100%;
+  background-color: #f9f9f9;
+  box-shadow: -10px 0 20px #f9f9f9;
 }
-/* line 159, ../sass/_wall.sass */
+/* line 178, ../sass/_wall.sass */
+.wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul li {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 184, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .material-icons {
   vertical-align: text-bottom;
   font-size: 16px;
+  margin-left: 2px;
 }
-/* line 163, ../sass/_wall.sass */
+/* line 189, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .online-status {
   color: #777;
 }
-/* line 166, ../sass/_wall.sass */
+/* line 192, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .online-status--online {
   color: #4D9635;
 }
 
-/* line 170, ../sass/_wall.sass */
+/* line 196, ../sass/_wall.sass */
 .wall-widget--newPost {
   padding: 0;
   text-align: justify;
@@ -850,7 +872,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 179, ../sass/_wall.sass */
+/* line 205, ../sass/_wall.sass */
 .wall-widget--newPost::after {
   content: "";
   display: inline-block;
@@ -859,7 +881,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 187, ../sass/_wall.sass */
+/* line 213, ../sass/_wall.sass */
 .wall-widget--newPost textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -873,38 +895,38 @@ body a:hover {
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 199, ../sass/_wall.sass */
+/* line 225, ../sass/_wall.sass */
 .wall-widget--actions {
   margin-top: 5px;
   display: inline-block;
 }
-/* line 203, ../sass/_wall.sass */
+/* line 229, ../sass/_wall.sass */
 .wall-widget--actions ul li {
   display: inline-block;
 }
 
-/* line 206, ../sass/_wall.sass */
+/* line 232, ../sass/_wall.sass */
 .wall-widget--actions__social {
   margin-top: 10px;
   width: 100%;
   text-align: center;
 }
-/* line 210, ../sass/_wall.sass */
+/* line 236, ../sass/_wall.sass */
 .wall-widget--actions__social li {
   margin-right: 15px;
 }
-/* line 212, ../sass/_wall.sass */
+/* line 238, ../sass/_wall.sass */
 .wall-widget--actions__social li:last-child {
   margin: 0;
 }
-/* line 215, ../sass/_wall.sass */
+/* line 241, ../sass/_wall.sass */
 .wall-widget--actions__social li .material-icons {
   font-size: 18px;
   vertical-align: middle;
   margin-right: 5px;
 }
 
-/* line 221, ../sass/_wall.sass */
+/* line 247, ../sass/_wall.sass */
 .wall-widget--header h3 {
   padding-top: 10px;
   padding-left: 20px;
@@ -913,7 +935,7 @@ body a:hover {
   margin-top: 20px;
 }
 
-/* line 229, ../sass/_wall.sass */
+/* line 255, ../sass/_wall.sass */
 .wall-widget--actions__left {
   margin-left: 20px;
   /* ie 7 */
@@ -922,7 +944,7 @@ body a:hover {
   *text-align: left;
 }
 
-/* line 236, ../sass/_wall.sass */
+/* line 262, ../sass/_wall.sass */
 .wall-widget--actions__right {
   margin-right: 10px;
   /* ie 7 */
@@ -931,7 +953,7 @@ body a:hover {
   *text-align: right;
 }
 
-/* line 244, ../sass/_wall.sass */
+/* line 270, ../sass/_wall.sass */
 .wall-widget--button {
   background-color: #67bbed;
   outline: none;
@@ -941,11 +963,11 @@ body a:hover {
   font-weight: lighter;
   padding: 5px 10px;
 }
-/* line 253, ../sass/_wall.sass */
+/* line 279, ../sass/_wall.sass */
 .wall-widget--button:hover {
   background-color: #1470a7;
 }
-/* line 256, ../sass/_wall.sass */
+/* line 282, ../sass/_wall.sass */
 .wall-widget--button i {
   float: right;
   margin-top: 0px;
@@ -953,7 +975,7 @@ body a:hover {
   font-size: 15px;
 }
 
-/* line 262, ../sass/_wall.sass */
+/* line 288, ../sass/_wall.sass */
 .wall-widget--button__blue {
   border: solid 1px #eee;
   background-color: #3aa6e7;
@@ -962,17 +984,17 @@ body a:hover {
   width: 100px;
 }
 
-/* line 271, ../sass/_wall.sass */
+/* line 297, ../sass/_wall.sass */
 .wall-widget--info {
   color: #777;
 }
-/* line 273, ../sass/_wall.sass */
+/* line 299, ../sass/_wall.sass */
 .wall-widget--info .material-icons {
   font-size: 14px;
   vertical-align: middle;
 }
 
-/* line 277, ../sass/_wall.sass */
+/* line 303, ../sass/_wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -980,7 +1002,7 @@ body a:hover {
   background-color: transparent;
 }
 
-/* line 283, ../sass/_wall.sass */
+/* line 309, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -989,7 +1011,7 @@ body a:hover {
   margin-bottom: 30px;
   padding: 15px 22px;
 }
-/* line 295, ../sass/_wall.sass */
+/* line 321, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -997,7 +1019,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 302, ../sass/_wall.sass */
+/* line 328, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -1006,7 +1028,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 311, ../sass/_wall.sass */
+/* line 337, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -1014,7 +1036,7 @@ body a:hover {
   *zoom: 1;
   *text-align: left;
 }
-/* line 318, ../sass/_wall.sass */
+/* line 344, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__right {
   display: inline-block;
   /* ie 7 */
@@ -1022,56 +1044,56 @@ body a:hover {
   *zoom: 1;
   *text-align: right;
 }
-/* line 325, ../sass/_wall.sass */
+/* line 351, ../sass/_wall.sass */
 .wall-widget--activity-post .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
-/* line 330, ../sass/_wall.sass */
+/* line 356, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
-/* line 335, ../sass/_wall.sass */
+/* line 361, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--content {
   margin: 10px 0;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
-/* line 341, ../sass/_wall.sass */
+/* line 367, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
-/* line 345, ../sass/_wall.sass */
+/* line 371, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-text {
   padding-left: 20px;
   text-align: left;
 }
 
-/* line 350, ../sass/_wall.sass */
+/* line 376, ../sass/_wall.sass */
 .wall-widget--news {
   padding: 0 10px;
   padding-bottom: 15px;
 }
-/* line 353, ../sass/_wall.sass */
+/* line 379, ../sass/_wall.sass */
 .wall-widget--news h3 {
   margin-left: 8px;
 }
-/* line 356, ../sass/_wall.sass */
+/* line 382, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 360, ../sass/_wall.sass */
+/* line 386, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 363, ../sass/_wall.sass */
+/* line 389, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1079,27 +1101,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 370, ../sass/_wall.sass */
+/* line 396, ../sass/_wall.sass */
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 373, ../sass/_wall.sass */
+/* line 399, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
-/* line 376, ../sass/_wall.sass */
+/* line 402, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 379, ../sass/_wall.sass */
+/* line 405, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 385, ../sass/_wall.sass */
+/* line 411, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1107,22 +1129,22 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 391, ../sass/_wall.sass */
+/* line 417, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 395, ../sass/_wall.sass */
+/* line 421, ../sass/_wall.sass */
 .wall-widget--partners h3 {
   margin-left: 20px;
 }
-/* line 398, ../sass/_wall.sass */
+/* line 424, ../sass/_wall.sass */
 .wall-widget--partners .banner {
   width: 100%;
   height: auto;
 }
 
-/* line 402, ../sass/_wall.sass */
+/* line 428, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
