@@ -310,6 +310,8 @@
     outline: none
 
 @media (min-width: 768px) and (max-width: 991px)
+  .navbar__section__actions
+    width: 50%
   .navbar__tab--matching
     display: inline
 
@@ -337,3 +339,186 @@
     .form-control
       width: 140px
       padding: 4px 8px
+
+  .navbar__section--matching
+    position: absolute
+    z-index: 1
+    width: 100%
+    background-color: #fff
+
+  .navbar__matching-button
+    margin: 0
+    background-color: lighten($color-important, 15%)
+    color: #eee
+    float: none
+    font-weight: bold
+    border: none
+    font-size: 14px
+    padding: 5px 0
+    outline: none
+
+  .navbar__matching-button--right
+    float: right
+    width: 50%
+
+  .navbar__matching-button--left
+    width: 50%
+
+  .navbar__matching-button--active
+    color: #fff
+    background-color: $color-important
+
+  .navbar-matching
+    height: 300px
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+    .navbar-matching__filters
+      float: left
+      width: 50%
+      display: block
+      font-size: 14px
+      padding-top: 15px
+      padding-bottom: 20px
+      background-color: #efefef
+      height: 100%
+      .navbar-matching__filter-switch
+        width: 100%
+        margin: 0
+        margin-top: 10px
+
+        .select-toggle:hover
+          cursor: pointer
+
+        a
+          color: #777
+          &:hover, &:active, &:focus, &:visited
+            text-decoration: none
+
+          &:hover
+            color: $color-important
+
+        &.is-selected-right
+          a.element-right
+            color: $font-color
+            border-bottom: solid 1px $color-important
+
+          .select-toggle
+            -moz-transform: rotate(0deg)
+            -ms-transform: rotate(0deg)
+            -o-transform: rotate(0deg)
+            -webkit-transform: rotate(0deg)
+            transform: rotate(0deg)
+
+        &.is-selected-left
+          a.element-left
+            color: $font-color
+            border-bottom: solid 1px $color-important
+
+          .select-toggle
+            -moz-transform: rotate(180deg)
+            -ms-transform: rotate(180deg)
+            -o-transform: rotate(180deg)
+            -webkit-transform: rotate(180deg)
+            transform: rotate(180deg)
+
+
+
+
+
+      .navbar-matching__filter-element
+        padding: 0
+        text-align: center
+
+        &:first-child
+          text-align: right
+          padding-right: 5px
+
+        &:last-child
+          text-align: left
+          padding-left: 5px
+
+        button
+          background: none
+          border: none
+          color: inherit
+          font: inherit
+          line-height: normal
+          overflow: visible
+          padding: 0
+          -webkit-user-select: none
+          -moz-user-select: none
+          -ms-user-select: none
+
+          &::-moz-focus-inner
+            border: 0
+            padding: 0
+
+          &:focus
+            outline: none
+
+
+
+      .navbar-matching__filter-select
+        text-align: center
+        margin-top: 15px
+        .navbar-matching__filter-select-list
+          background-color: #fff
+          width: 80px
+          margin-left: 5px
+          margin-top: 10px
+
+  .navbar-matching__content
+    text-align: center
+    display: block
+    width: 50%
+    float: right
+    top: 50px
+    //position: absolute
+    overflow-y: scroll
+    height: 295px
+    .navbar-matching__account
+      padding-left: 30px
+      text-align: left
+      width: 100%
+      margin-bottom: 23px
+      padding-bottom: 8px
+      border-bottom: 1px solid #ddd
+      *
+        display: inline-block
+        vertical-align: top
+
+      .avatar
+        width: 50px
+        height: 50px
+
+      .account
+        padding-left: 5px
+        > *
+          display: block
+        h4
+          font-size: 13px
+          font-weight: bold
+          margin: 0
+          padding-top: 3px
+        ul
+          margin-top: 5px
+
+          .material-icons
+            vertical-align: text-bottom
+            font-size: 16px
+
+          .online-status
+            color: #777
+
+          .online-status--online
+            color: #4D9635
+
+  .navbar-matching__button
+    background-color: transparent
+    border: none
+    margin-bottom: 20px
+    color: $color-important
+    outline: none
