@@ -61,6 +61,25 @@
   .nav-button:hover
     background-color: rgba($color-primary, 0.85)
 
+.navbar.navbar-options
+  position: fixed
+  top: 50px
+  z-index: 3
+  width: 100%
+
+  .starters-navigation__list-item
+    float: none
+    background-color: rgba(19, 35, 51, 0.9)
+    padding: 0
+    padding-bottom: 4px
+    .nav-button
+      margin: 0
+      background-color: transparent
+      padding-bottom: 5px
+    .material-icons
+      vertical-align: bottom
+    &:hover
+      background-color: $color-primary
 
 .form-group--nav
   width: 200px
@@ -229,8 +248,9 @@ input[type=range].form-control--range-navbar
   padding: 0
   margin: 0 3px
   padding: 0 5px
-  margin-top: 5px
+  margin-top: 7px
   min-width: 30px
+  height: 34px
   .material-icons
     font-size: 30px
     vertical-align: bottom
@@ -248,6 +268,8 @@ input[type=range].form-control--range-navbar
   font-family: 'Pacifico', cursive
   color: $color-primary
   font-size: 30px
+  padding-bottom: 8px
+  line-height: 10px
 
 .button--nav-search
   float: right

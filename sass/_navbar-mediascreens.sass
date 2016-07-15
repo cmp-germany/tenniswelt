@@ -33,7 +33,7 @@
     position: fixed
     top: 50px
     width: 100%
-    border-top: solid 1px rgba(19, 35, 51, 0.9)s
+    border-top: solid 1px rgba(19, 35, 51, 0.9)
     &.navbar-collapse
       max-height: calc(100vh - 50px)
       overflow-x: auto
@@ -42,6 +42,8 @@
     overflow-y: scroll
 
   .navbar__section, .navbar.grand-navbar
+    width: 100vw
+    overflow-x: hidden
     &.collapsing
       -webkit-transition: none
       transition: none
@@ -77,23 +79,41 @@
     .form-control
       border-color: #bbb
       color: #555
+      margin-bottom: 15px
+      &::-webkit-input-placeholder
+        color: #999
+
+      ::-moz-placeholder
+        color: #999
+
+      :-ms-input-placeholder
+        color: #999
+
+      :-moz-placeholder
+        color: #999
+
+    .form-control-label
+      color: #999
 
   .container>.navbar-collapse
     margin-left: -10px
     margin-right: -10px
 
-  .starters-navigation
-    height: calc(100vh - 48px)
-    .starters-navigation__list-item
-      width: 100%
-      background-color: none
-      border-bottom: solid 1px #ccc
-      margin-bottom: 15px
-      padding-bottom: 3px
-      &:first-child
-        margin-top: 15px
-      &:last-child
+  .navbar.navbar-options, *
+    .starters-navigation
+      height: calc(100vh - 48px)
+      .starters-navigation__list-item
+        width: 100%
+        background-color: transparent
+        border-bottom: solid 1px #ccc
+        margin-bottom: 15px
+        padding-bottom: 3px
         margin: 0
+
+        &:first-child
+          margin-top: 15px
+        &:last-child
+          margin: 0
 
   .navbar.grand-navbar
     background-color: #e8eaeb

@@ -21,7 +21,7 @@ var conversations = {
       message: "Ich bereite gerade die Dokumente vor ... einen Moment"
     }
   ]
-}
+};
 
 var ChatTab = React.createClass({
   getInitialState: function () {
@@ -117,7 +117,7 @@ var ChatTab = React.createClass({
 
     var chatTabColClass = "col-sm-4";
     if (this.props.openChatTabs.length < 3) {
-      chatTabColClass = "col-sm-6 col-md-4"
+      chatTabColClass = "col-sm-6 col-md-4 col-chat"
     }
 
     return (
