@@ -29,6 +29,7 @@ body
       padding-right: 20px
       padding-top: 20px
       padding-bottom: 15px
+      margin-bottom: 25px
       i
         display: table-cell
         vertical-align: middle
@@ -240,16 +241,22 @@ body
   *text-align: right
 
 .wall-widget--button
-  border: solid 1px #eee
-  background-color: #e2e2e2
-  color: $color-important
-  font-size: 30px
-  line-height: 35px
-  width: 70px
+  background-color: lighten($color-primary, 10)
+  outline: none
+  border: none
+  color: #fff
+  font-size: 12px
+  font-weight: lighter
+  padding: 5px 10px
 
   &:hover
-    color: #e2e2e2
-    background-color: $color-important
+    background-color: darken($color-primary, 20)
+
+  i
+    float: right
+    margin-top: 0px
+    margin-left: 2px
+    font-size: 15px
 
 .wall-widget--button__blue
   border: solid 1px #eee
