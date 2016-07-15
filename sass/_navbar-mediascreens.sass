@@ -16,6 +16,7 @@
     display: inline
 
 
+
   .navbar__tab--profile
     .caret
       display: none
@@ -307,3 +308,32 @@
     margin-bottom: 20px
     color: $color-important
     outline: none
+
+@media (min-width: 768px) and (max-width: 991px)
+  .navbar__tab--matching
+    display: inline
+
+  .navbar__tab--profile
+    .caret
+      display: none
+
+  .navbar.grand-navbar
+    padding: 0
+    > .container
+      padding: 0
+      margin: 0
+  .navbar-header
+    padding: 0
+
+  .navbar
+    .navbar-brand
+      .navbar-brand__title
+        font-size: 24px
+      .navbar-brand__subtitle
+        font-size: 16px
+
+  .navbar-form--mobile
+    padding: 0
+    .form-control
+      width: 140px
+      padding: 4px 8px
