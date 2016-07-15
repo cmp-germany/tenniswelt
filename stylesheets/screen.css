@@ -864,6 +864,7 @@ body a:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  resize: vertical;
   outline: none;
   border: none;
   width: 100%;
@@ -872,38 +873,38 @@ body a:hover {
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 198, ../sass/_wall.sass */
+/* line 199, ../sass/_wall.sass */
 .wall-widget--actions {
   margin-top: 5px;
   display: inline-block;
 }
-/* line 202, ../sass/_wall.sass */
+/* line 203, ../sass/_wall.sass */
 .wall-widget--actions ul li {
   display: inline-block;
 }
 
-/* line 205, ../sass/_wall.sass */
+/* line 206, ../sass/_wall.sass */
 .wall-widget--actions__social {
   margin-top: 10px;
   width: 100%;
   text-align: center;
 }
-/* line 209, ../sass/_wall.sass */
+/* line 210, ../sass/_wall.sass */
 .wall-widget--actions__social li {
   margin-right: 15px;
 }
-/* line 211, ../sass/_wall.sass */
+/* line 212, ../sass/_wall.sass */
 .wall-widget--actions__social li:last-child {
   margin: 0;
 }
-/* line 214, ../sass/_wall.sass */
+/* line 215, ../sass/_wall.sass */
 .wall-widget--actions__social li .material-icons {
   font-size: 18px;
   vertical-align: middle;
   margin-right: 5px;
 }
 
-/* line 220, ../sass/_wall.sass */
+/* line 221, ../sass/_wall.sass */
 .wall-widget--header h3 {
   padding-top: 10px;
   padding-left: 20px;
@@ -912,7 +913,7 @@ body a:hover {
   margin-top: 20px;
 }
 
-/* line 228, ../sass/_wall.sass */
+/* line 229, ../sass/_wall.sass */
 .wall-widget--actions__left {
   margin-left: 20px;
   /* ie 7 */
@@ -921,7 +922,7 @@ body a:hover {
   *text-align: left;
 }
 
-/* line 235, ../sass/_wall.sass */
+/* line 236, ../sass/_wall.sass */
 .wall-widget--actions__right {
   margin-right: 10px;
   /* ie 7 */
@@ -930,7 +931,7 @@ body a:hover {
   *text-align: right;
 }
 
-/* line 243, ../sass/_wall.sass */
+/* line 244, ../sass/_wall.sass */
 .wall-widget--button {
   background-color: #67bbed;
   outline: none;
@@ -940,11 +941,11 @@ body a:hover {
   font-weight: lighter;
   padding: 5px 10px;
 }
-/* line 252, ../sass/_wall.sass */
+/* line 253, ../sass/_wall.sass */
 .wall-widget--button:hover {
   background-color: #1470a7;
 }
-/* line 255, ../sass/_wall.sass */
+/* line 256, ../sass/_wall.sass */
 .wall-widget--button i {
   float: right;
   margin-top: 0px;
@@ -952,7 +953,7 @@ body a:hover {
   font-size: 15px;
 }
 
-/* line 261, ../sass/_wall.sass */
+/* line 262, ../sass/_wall.sass */
 .wall-widget--button__blue {
   border: solid 1px #eee;
   background-color: #3aa6e7;
@@ -961,17 +962,17 @@ body a:hover {
   width: 100px;
 }
 
-/* line 270, ../sass/_wall.sass */
+/* line 271, ../sass/_wall.sass */
 .wall-widget--info {
   color: #777;
 }
-/* line 272, ../sass/_wall.sass */
+/* line 273, ../sass/_wall.sass */
 .wall-widget--info .material-icons {
   font-size: 14px;
   vertical-align: middle;
 }
 
-/* line 276, ../sass/_wall.sass */
+/* line 277, ../sass/_wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -979,7 +980,7 @@ body a:hover {
   background-color: transparent;
 }
 
-/* line 282, ../sass/_wall.sass */
+/* line 283, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -988,7 +989,7 @@ body a:hover {
   margin-bottom: 30px;
   padding: 15px 22px;
 }
-/* line 294, ../sass/_wall.sass */
+/* line 295, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -996,7 +997,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 301, ../sass/_wall.sass */
+/* line 302, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -1005,7 +1006,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 310, ../sass/_wall.sass */
+/* line 311, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -1013,7 +1014,7 @@ body a:hover {
   *zoom: 1;
   *text-align: left;
 }
-/* line 317, ../sass/_wall.sass */
+/* line 318, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__right {
   display: inline-block;
   /* ie 7 */
@@ -1021,56 +1022,56 @@ body a:hover {
   *zoom: 1;
   *text-align: right;
 }
-/* line 324, ../sass/_wall.sass */
+/* line 325, ../sass/_wall.sass */
 .wall-widget--activity-post .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
-/* line 329, ../sass/_wall.sass */
+/* line 330, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
-/* line 334, ../sass/_wall.sass */
+/* line 335, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--content {
   margin: 10px 0;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
-/* line 340, ../sass/_wall.sass */
+/* line 341, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
-/* line 344, ../sass/_wall.sass */
+/* line 345, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-text {
   padding-left: 20px;
   text-align: left;
 }
 
-/* line 349, ../sass/_wall.sass */
+/* line 350, ../sass/_wall.sass */
 .wall-widget--news {
   padding: 0 10px;
   padding-bottom: 15px;
 }
-/* line 352, ../sass/_wall.sass */
+/* line 353, ../sass/_wall.sass */
 .wall-widget--news h3 {
   margin-left: 8px;
 }
-/* line 355, ../sass/_wall.sass */
+/* line 356, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 359, ../sass/_wall.sass */
+/* line 360, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 362, ../sass/_wall.sass */
+/* line 363, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1078,27 +1079,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 369, ../sass/_wall.sass */
+/* line 370, ../sass/_wall.sass */
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 372, ../sass/_wall.sass */
+/* line 373, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
-/* line 375, ../sass/_wall.sass */
+/* line 376, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 378, ../sass/_wall.sass */
+/* line 379, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 384, ../sass/_wall.sass */
+/* line 385, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1106,22 +1107,22 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 390, ../sass/_wall.sass */
+/* line 391, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 394, ../sass/_wall.sass */
+/* line 395, ../sass/_wall.sass */
 .wall-widget--partners h3 {
   margin-left: 20px;
 }
-/* line 397, ../sass/_wall.sass */
+/* line 398, ../sass/_wall.sass */
 .wall-widget--partners .banner {
   width: 100%;
   height: auto;
 }
 
-/* line 401, ../sass/_wall.sass */
+/* line 402, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
