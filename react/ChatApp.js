@@ -115,7 +115,7 @@ var ChatTab = React.createClass({
 
     var chatId = "chat-" + this.props.partnerId;
 
-    var chatTabColClass = "col-sm-4";
+    var chatTabColClass = "col-sm-4 col-chat";
     if (this.props.openChatTabs.length < 3) {
       chatTabColClass = "col-sm-6 col-md-4 col-chat"
     }
