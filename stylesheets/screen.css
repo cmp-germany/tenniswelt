@@ -1075,29 +1075,17 @@ body a:hover {
   text-align: left;
 }
 
-/* line 375, ../sass/_wall.sass */
-.wall-widget--news {
-  padding: 0 10px;
-  padding-bottom: 15px;
-}
-/* line 378, ../sass/_wall.sass */
-.wall-widget--news header {
-  margin-left: -10px;
-  margin-right: -10px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 384, ../sass/_wall.sass */
+/* line 376, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 388, ../sass/_wall.sass */
+/* line 380, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 391, ../sass/_wall.sass */
+/* line 383, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1105,27 +1093,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 398, ../sass/_wall.sass */
+/* line 390, ../sass/_wall.sass */
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 401, ../sass/_wall.sass */
+/* line 393, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
-/* line 404, ../sass/_wall.sass */
+/* line 396, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 407, ../sass/_wall.sass */
+/* line 399, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 413, ../sass/_wall.sass */
+/* line 405, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1133,28 +1121,24 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 419, ../sass/_wall.sass */
+/* line 411, ../sass/_wall.sass */
 .wall-widget--partners {
-  padding-left: 0;
-  padding-right: 0;
   padding-bottom: 0;
 }
-/* line 424, ../sass/_wall.sass */
+/* line 414, ../sass/_wall.sass */
 .wall-widget--partners header {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 0;
   border-bottom: 0;
 }
-/* line 432, ../sass/_wall.sass */
+/* line 418, ../sass/_wall.sass */
 .wall-widget--partners .banner {
-  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
   height: auto;
 }
 
-/* line 436, ../sass/_wall.sass */
+/* line 424, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
