@@ -956,13 +956,14 @@ body a:hover {
 /* line 267, ../sass/_wall.sass */
 .wall-widget--actions__right {
   margin-right: 10px;
+  float: right;
   /* ie 7 */
   *display: inline;
   *zoom: 1;
   *text-align: right;
 }
 
-/* line 275, ../sass/_wall.sass */
+/* line 276, ../sass/_wall.sass */
 .wall-widget--button {
   background-color: #67bbed;
   outline: none;
@@ -972,11 +973,11 @@ body a:hover {
   font-weight: lighter;
   padding: 5px 10px;
 }
-/* line 284, ../sass/_wall.sass */
+/* line 285, ../sass/_wall.sass */
 .wall-widget--button:hover {
   background-color: #1470a7;
 }
-/* line 287, ../sass/_wall.sass */
+/* line 288, ../sass/_wall.sass */
 .wall-widget--button i {
   float: right;
   margin-top: 0px;
@@ -984,7 +985,7 @@ body a:hover {
   font-size: 15px;
 }
 
-/* line 293, ../sass/_wall.sass */
+/* line 294, ../sass/_wall.sass */
 .wall-widget--button__blue {
   border: solid 1px #eee;
   background-color: #3aa6e7;
@@ -993,17 +994,17 @@ body a:hover {
   width: 100px;
 }
 
-/* line 302, ../sass/_wall.sass */
+/* line 303, ../sass/_wall.sass */
 .wall-widget--info {
   color: #777;
 }
-/* line 304, ../sass/_wall.sass */
+/* line 305, ../sass/_wall.sass */
 .wall-widget--info .material-icons {
   font-size: 14px;
   vertical-align: middle;
 }
 
-/* line 308, ../sass/_wall.sass */
+/* line 309, ../sass/_wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -1011,7 +1012,7 @@ body a:hover {
   background-color: transparent;
 }
 
-/* line 314, ../sass/_wall.sass */
+/* line 315, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -1020,7 +1021,7 @@ body a:hover {
   margin-bottom: 30px;
   padding: 15px 22px;
 }
-/* line 326, ../sass/_wall.sass */
+/* line 327, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -1028,7 +1029,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 333, ../sass/_wall.sass */
+/* line 334, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -1037,7 +1038,7 @@ body a:hover {
   font-size: 0;
   line-height: 0;
 }
-/* line 342, ../sass/_wall.sass */
+/* line 343, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -1045,59 +1046,60 @@ body a:hover {
   *zoom: 1;
   *text-align: left;
 }
-/* line 349, ../sass/_wall.sass */
+/* line 350, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--header__right {
   display: inline-block;
+  float: right;
   /* ie 7 */
   *display: inline;
   *zoom: 1;
   *text-align: right;
 }
-/* line 356, ../sass/_wall.sass */
+/* line 358, ../sass/_wall.sass */
 .wall-widget--activity-post .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
-/* line 361, ../sass/_wall.sass */
+/* line 363, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
-/* line 367, ../sass/_wall.sass */
+/* line 369, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
-/* line 371, ../sass/_wall.sass */
+/* line 373, ../sass/_wall.sass */
 .wall-widget--activity-post .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 375, ../sass/_wall.sass */
+/* line 377, ../sass/_wall.sass */
 .wall-widget--news {
   padding: 0 10px;
   padding-bottom: 15px;
 }
-/* line 378, ../sass/_wall.sass */
+/* line 380, ../sass/_wall.sass */
 .wall-widget--news header {
   margin-left: -10px;
   margin-right: -10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 384, ../sass/_wall.sass */
+/* line 386, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 388, ../sass/_wall.sass */
+/* line 390, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 391, ../sass/_wall.sass */
+/* line 393, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1105,27 +1107,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 398, ../sass/_wall.sass */
+/* line 400, ../sass/_wall.sass */
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 401, ../sass/_wall.sass */
+/* line 403, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
-/* line 404, ../sass/_wall.sass */
+/* line 406, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 407, ../sass/_wall.sass */
+/* line 409, ../sass/_wall.sass */
 .wall-widget--asidePost .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 413, ../sass/_wall.sass */
+/* line 415, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1133,13 +1135,13 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 419, ../sass/_wall.sass */
+/* line 421, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
 }
-/* line 424, ../sass/_wall.sass */
+/* line 426, ../sass/_wall.sass */
 .wall-widget--partners header {
   padding-left: 10px;
   padding-right: 10px;
@@ -1148,13 +1150,13 @@ body a:hover {
   margin-bottom: 0;
   border-bottom: 0;
 }
-/* line 432, ../sass/_wall.sass */
+/* line 434, ../sass/_wall.sass */
 .wall-widget--partners .banner {
   width: 100%;
   height: auto;
 }
 
-/* line 436, ../sass/_wall.sass */
+/* line 438, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
