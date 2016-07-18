@@ -11,7 +11,7 @@
       <i class="material-icons">&#xE871;</i>
      </button>
 
-     <button class="navbar__tab " data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
+     <button class="navbar__tab navbar__tab--matching" data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
       <i class="material-icons">&#xE915;</i>
      </button>
 
@@ -77,8 +77,8 @@
   <!--</div><!-- /.container-fluid -->
 </nav>
 
-<div class="navbar__section collapse" style="" id="tab__matching">
-  <div class="navbar__section__content">
+<div class="navbar__section navbar__section--matching collapse" style="" id="tab__matching">
+  <div class="navbar__section__content navbar__section__content--matching">
     <div class="navbar__section__actions">
       <button id="navbar__matching-button--matching" class="navbar__matching-button navbar__matching-button--left navbar__matching-button--active">Matching</button>
       <button id="navbar__matching-button--gruppenmatching" class="navbar__matching-button navbar__matching-button--right">Gruppen-Matching</button>
@@ -295,12 +295,12 @@
   <div class="container">
     <div class="starters-navigation" id="navbar-starters">
       <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right ">
         <li class="starters-navigation__list-item dropdown">
           <button class="nav-button btn btn-default dropdown-toggle" type="button" id="dropdown-stichwortsuche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Stichwortsuche <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
+          <ul class="dropdown-menu dropdown-menu-left dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
             <li><a href="suche.html?index=unternehmen&suche=startup" class="dropdown-button--starters">Startups</a></li>
             <li><a href="suche.html?index=unternehmen&suche=privateInvestoren" class="dropdown-button--starters">Private Investoren</a></li>
             <li><a href="suche.html?index=unternehmen&suche=institutionelleInvestoren" class="dropdown-button--starters">Institutionelle Investoren</a></li>
