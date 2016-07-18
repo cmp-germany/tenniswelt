@@ -1077,41 +1077,17 @@ body a:hover {
   text-align: left;
 }
 
-<<<<<<< Updated upstream
-/* line 377, ../sass/_wall.sass */
-.wall-widget--news {
-  padding: 0 10px;
-  padding-bottom: 15px;
-}
-/* line 380, ../sass/_wall.sass */
-.wall-widget--news header {
-  margin-left: -10px;
-  margin-right: -10px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 386, ../sass/_wall.sass */
-=======
 /* line 378, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-<<<<<<< Updated upstream
-/* line 390, ../sass/_wall.sass */
-=======
 /* line 382, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--news .wall-widget--content .wall-widget--button {
   margin-top: 10px;
 }
 
-<<<<<<< Updated upstream
-/* line 393, ../sass/_wall.sass */
-=======
 /* line 385, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1119,47 +1095,27 @@ body a:hover {
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
 }
-<<<<<<< Updated upstream
-/* line 400, ../sass/_wall.sass */
-=======
 /* line 392, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--asidePost .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-<<<<<<< Updated upstream
-/* line 403, ../sass/_wall.sass */
-.wall-widget--asidePost .info p {
-  margin-bottom: 3px;
-}
-/* line 406, ../sass/_wall.sass */
-=======
 /* line 395, ../sass/_wall.sass */
 .wall-widget--asidePost .info p {
   margin-bottom: 3px;
 }
 /* line 398, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--asidePost .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-<<<<<<< Updated upstream
-/* line 409, ../sass/_wall.sass */
-=======
 /* line 401, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--asidePost .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-<<<<<<< Updated upstream
-/* line 415, ../sass/_wall.sass */
-=======
 /* line 407, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1167,30 +1123,6 @@ body a:hover {
   margin-right: 6px;
 }
 
-<<<<<<< Updated upstream
-/* line 421, ../sass/_wall.sass */
-.wall-widget--partners {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-}
-/* line 426, ../sass/_wall.sass */
-.wall-widget--partners header {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-/* line 434, ../sass/_wall.sass */
-.wall-widget--partners .banner {
-  width: 100%;
-  height: auto;
-}
-
-/* line 438, ../sass/_wall.sass */
-=======
 /* line 413, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
@@ -1209,7 +1141,6 @@ body a:hover {
 }
 
 /* line 426, ../sass/_wall.sass */
->>>>>>> Stashed changes
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
