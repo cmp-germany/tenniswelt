@@ -1290,6 +1290,23 @@ body a:hover {
   margin-top: 7px;
 }
 
+/* line 1, ../sass/_profile-wall.sass */
+.wall-widget--side__actions {
+  padding: 10px 20px;
+}
+
+/* line 4, ../sass/_profile-wall.sass */
+.wall-widget--button-add {
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+/* line 8, ../sass/_profile-wall.sass */
+.wall-widget--button-add i {
+  font-size: inherit;
+  margin-top: 3px;
+}
+
 /* line 1, ../sass/_settings.sass */
 .matching-options {
   margin: 20px 0;

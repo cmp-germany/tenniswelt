@@ -6,7 +6,6 @@ $( document ).ready(function(){
 
   $('.navbar__tab').click(function(){
     var ariaExpanded = $(this).attr('aria-expanded');
-    console.log(ariaExpanded);
     $(".navbar__section").collapse('hide');
     $(".navbar.grand-navbar").collapse('hide');
     $('.navbar__tab').removeClass('navbar__tab--active');
