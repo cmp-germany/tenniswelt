@@ -5,11 +5,18 @@ $( document ).ready(function(){
   });
 
   $('.navbar__tab').click(function(){
+    var ariaExpanded = $(this).attr('aria-expanded');
+    console.log(ariaExpanded);
     $(".navbar__section").collapse('hide');
     $(".navbar.grand-navbar").collapse('hide');
     $('.navbar__tab').removeClass('navbar__tab--active');
 
     $(this).addClass('navbar__tab--active');
+
+    if(ariaExpanded === 'true') {
+      $('.navbar__tab').removeClass('navbar__tab--active');
+      $('.navbar__tab--wall').addClass('navbar__tab--active');
+    }
   });
 
 
