@@ -93,7 +93,7 @@
             </li>
           </ul>
 
-          <div class="matching__filters">
+          <div class="matching__filters matching__filters--kontakte">
             <div class="matching__filter-switch is-selected-right">
               <a class="matching__element--left" href="#">Privat</a>
               <button class="select-toggle-button--matching">
@@ -123,7 +123,7 @@
           </div>
 
           <div class="matching">
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
               <div class="matching__account">
                 <a href="profile-about.html?userId=volker-miller">
                   <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
@@ -137,10 +137,91 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+              <div class="matching__account">
+                <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
+                <div class="account">
+                  <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
+                  <ul class="wall-widget--actions">
+                    <li><i class="material-icons online-status">&#xE837;</i></li>
+                    <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <button class="wall-widget--button matching--button" type="button" name="button"><i class="material-icons">&#xE5CF;</i>Mehr</button>
+            </div>
           </div>
-
-          <button class="wall-widget--button matching--button" type="button" name="button"><i class="material-icons">&#xE5CF;</i>Mehr</button>
-
 
         </div>
       </div>
@@ -148,54 +229,9 @@
       <!-- Right Sidebar -->
       <div class="section-right col-md-3 hidden-xs hidden-sm">
 
-        <aside class="wall-widget wall-widget--side wall-widget--news">
-          <header>
-            <i class="material-icons">&#xE031;</i><h3>Mitteilungen</h3>
-          </header>
+        <div data-module="messages.html"></div>
 
-          <div class="wall-widget--content">
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 2 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 4 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 8 Stunden</p>
-              </span>
-            </div>
-
-            <div class="wall-widget--asidePost">
-              <img class="wall-widget--asidePost-Image col-xs-2" src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" />
-              <span class="info">
-                <p><a href="profile-about.html?userId=mike-schnoor" class="info-name">Mike Schnoor</a> hat dir eine Nachricht hinterlassen.</p>
-                <p class="wall-widget--info"><i class="material-icons">&#xE192;</i> Vor 16 Stunden</p>
-              </span>
-            </div>
-            <button class="wall-widget--button" type="button" name="button"><i class="material-icons">&#xE5CF;</i>Mehr</button>
-          </div>
-        </aside>
-
-
-        <aside class="wall-widget wall-widget--side wall-widget--partners">
-          <header>
-            <i class="material-icons">&#xE8F7;</i><h3>Preferred Partners</h3>
-          </header>
-          <img class="banner" src="gfx/banner.jpg" alt="banner"/>
-        </aside>
+        <div data-module="preferred-partners.html"></div>
 
       </div>
 

@@ -1931,7 +1931,7 @@ body a:hover {
 }
 /* line 99, ../sass/_matching.sass */
 .matching__account .account ul .online-status--online {
-  color: #4D9635;
+  color: #4DDD35;
 }
 
 /* line 102, ../sass/_matching.sass */
@@ -1947,7 +1947,7 @@ body a:hover {
   display: inline-block;
   margin-right: 3%;
   margin-top: 7px;
-  margin-left: 7px;
+  margin-left: 8px;
 }
 /* line 114, ../sass/_matching.sass */
 .matching__filter-switch a {
@@ -2020,6 +2020,11 @@ body a:hover {
   vertical-align: top;
   margin-top: 5px;
   margin-left: 7px;
+}
+
+/* line 1, ../sass/_profile-kontakte.sass */
+.matching__filters--kontakte {
+  font-size: 14px;
 }
 
 @media(max-width:767px) {
