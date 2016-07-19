@@ -1,0 +1,82 @@
+.area-fotos
+  margin: 0 -10px
+  margin-top: 20px
+
+
+
+.widget-album
+  border: solid 1px #eeeeee
+  border-top-color: $color-primary
+  border-left-color: $color-primary
+  background-color: #ffffff
+  display: block
+  color: inherit
+  margin-bottom: 25px
+  position: relative
+
+  &:hover, &:active, &:visited, &:focus
+    color: inherit
+    text-decoration: inherit
+
+  &:hover
+    background-color: $color-primary
+    color: #fff
+    transition: background-color 0.5s ease
+    .widget-album__title-glyphicon
+      display: inline
+    .widget-album__description
+      color: #eee
+    .widget-album__thumbnail
+      &:first-child
+        visibility: visible
+      &:nth-child(2)
+        opacity: 0
+        transition: opacity 1s ease
+
+.widget-album--add
+  background-color: $color-primary
+  color: #fff
+  .widget-album__description
+    color: #eee
+
+
+.widget-album__title-glyphicon
+  display: none
+  float: right
+
+.widget-album__thumbnail
+  width: 100%
+  height: auto
+  display: none
+  &:first-child
+    display: block
+    visibility: hidden
+  &:nth-child(2)
+    display: block
+    position: absolute
+    top: 0
+
+.widget-album__infos
+  position: relative
+  padding: 10px 12px
+
+.widget-album__title
+  margin: 0
+  font-size: 16px
+  font-weight: bold
+
+.widget-album__description
+  margin: 0
+  margin-top: 6px
+  font-size: 12px
+  color: #777
+  height: 34px
+  overflow: hidden
+
+.widget-album__label
+  position: absolute
+  top: 0
+  background-color: $color-primary
+  background-color: rgba($color-primary, 0.85)
+  color: #fff
+  padding: 3px 6px

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <!--<div data-module="kontakte.html"></div>-->
+
+        <div data-module="matching.html" data-additional-js="js/wall.js"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Collumn -->
+      <div class="section-center col-md-6">
+        <div id="profile-about">
+          <header class="profile-header">
+            <div class="profile-header__wallpaper" alt="Wallpaper von Company of Imagination Ltd." style="background-image: url('gfx/wallpaper_company.jpg');"></div>
+            <div class="profile-header__desc-bar">
+              <div class="profile-header__profile-picture-container"><img src="gfx/profile_company.jpg" alt="Profilbild von Company of Imagination Ltd." class="profile-header__profile-picture img-responsive">
+              </div>
+              <div class="profile-header__profile-name-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <h3 class="profile-header__name">Company of Imagination Ltd.</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-header__profile-buttons-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <ul class="profile-header__action-buttons text-right">
+                      <li class="profile-header__action-button"><i class="material-icons"></i>
+                      </li>
+                      <li class="profile-header__action-button"><a href="javascript:reactChatApp.addChat('company-of-imagination');" style="color: inherit;"><i class="material-icons"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <button class="wall-widget--button wall-widget--button-add hidden-md hidden-lg" type="button" name="button"><i class="material-icons">&#xE145;</i>Hinzufügen</button>
+          <ul class="profile-tabs">
+            <li class="profile-tabs__tab"><a href="#1">Über</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Wall</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Kontakte</a>
+            </li>
+            <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Fotos</a>
+            </li>
+          </ul>
+
+
+          <h3 class="content-headline">Alben von Company of Imagination Ltd.</h3>
+
+          <div class="area-fotos row">
+
+            <div class="col-xs-6 col-sm-4">
+              <a href="#" class="widget-album widget-album--add">
+                <svg fill="#ffffff" class="widget-album__thumbnail" alt="placeholder" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                </svg>
+
+                <svg fill="#ffffff" class="widget-album__thumbnail" alt="placeholder" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+
+                <figcaption class="widget-album__infos">
+                  <h4 class="widget-album__title">Neues Album<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
+                  <p class="widget-album__description">
+                    Zeigen Sie neue Bilder!
+                  </p>
+                </figcaption>
+
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-4">
+              <a href="#" class="widget-album">
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p1.jpg" alt="alle_fotos_thumnail-1" />
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p2.jpg" alt="alle_fotos_thumnail-2" />
+                <figcaption class="widget-album__infos">
+                  <h4 class="widget-album__title">Alle Fotos<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
+                  <p class="widget-album__description">
+                    Alles zusammen
+                    
+                  </p>
+                </figcaption>
+                <label class="widget-album__label">42 Fotos</label>
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-4">
+              <a href="#" class="widget-album">
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p3.jpg" alt="thumnail-1" />
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p4.jpg" alt="thumnail-2" />
+                <figcaption class="widget-album__infos">
+                  <h4 class="widget-album__title">Album 1<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
+                  <p class="widget-album__description">
+                    Mein erstes Album. :)
+                  </p>
+                </figcaption>
+                <label class="widget-album__label">8 Fotos</label>
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-4">
+              <a href="#" class="widget-album">
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p5.jpg" alt="thumnail-1" />
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p6.jpg" alt="thumnail-2" />
+                <figcaption class="widget-album__infos">
+                  <h4 class="widget-album__title">Album 2<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
+                  <p class="widget-album__description">
+                    Mein Zweites...
+                  </p>
+                </figcaption>
+                <label class="widget-album__label">32 Fotos</label>
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-4">
+              <a href="#" class="widget-album">
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p7.jpg" alt="thumnail-1" />
+                <img class="widget-album__thumbnail" src="gfx/profilbilder/p8.jpg" alt="thumnail-2" />
+                <figcaption class="widget-album__infos">
+                  <h4 class="widget-album__title">Album 3<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
+                  <p class="widget-album__description">
+                    Coffee
+                  </p>
+                </figcaption>
+                <label class="widget-album__label">2 Fotos</label>
+              </a>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
+
+        <div data-module="messages.html"></div>
+
+        <div data-module="preferred-partners.html"></div>
+
+      </div>
+
+    </div>
+
+    <div id="chat-app">
+    </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+  </body>
+</html>
