@@ -1,0 +1,168 @@
+.site__header
+  border-bottom: solid 1px $color-primary
+  padding-left: 10px
+  padding-right: 10px
+  padding-top: 20px
+  padding-bottom: 15px
+  margin-bottom: 25px
+  i
+    display: table-cell
+    vertical-align: middle
+    width: 35px
+    font-size: 30px
+    color: darken($color-primary, 20)
+  h3
+    display: table-cell
+    vertical-align: middle
+
+.site__content
+  margin-bottom: 20px
+
+.matching
+  margin-top: 20px
+  text-align: center
+  padding-top: 20px
+  padding-bottom: 20px
+  background-color: rgb(249, 249, 249)
+  border: solid 1px rgb(238, 238, 238)
+
+.matching--button
+  font-size: 18px
+  margin-top: 10px
+  .material-icons
+    font-size: inherit
+    margin-top: 4px
+
+
+.matching__account
+  text-align: left
+  padding: 10px
+  margin-bottom: 10px
+  border: 1px solid #ddd
+  padding-top: 10px
+  *
+    display: inline-block
+    vertical-align: top
+
+  .avatar
+    width: 50px
+    height: 50px
+
+  .account
+    width: calc(100% - 55px)
+    height: 50px
+    display: table
+    position: relative
+    float: right
+    overflow: hidden
+    > *
+      display: table-cell
+      vertical-align: middle
+    a:hover
+      z-index: 100
+
+    h4
+      font-size: 13px
+      font-weight: bold
+      width: calc(100% - 20px)
+
+
+    ul
+      display: table
+      position: absolute
+      top: 0
+      white-space: nowrap
+      right: 0
+      height: 100%
+      background-color: $color-background-widget
+      box-shadow: -10px 0 20px $color-background-widget
+
+      li
+        display: table-cell
+        vertical-align: middle
+
+
+
+      .material-icons
+        vertical-align: text-bottom
+        font-size: 16px
+        margin-left: 2px
+
+      .online-status
+        color: #777
+
+      .online-status--online
+        color: #4D9635
+
+.matching__filters
+  padding: 10px
+  background-color: rgb(249, 249, 249)
+  border: solid 1px rgb(238, 238, 238)
+  font-size: 16px
+
+.matching__filter-switch
+  display: inline-block
+  margin-right: 3%
+  margin-top: 7px
+  margin-left: 7px
+
+  a
+    color: #777
+    vertical-align: top
+    padding-top: 10px
+    &:hover, &:active, &:focus, &:visited
+      text-decoration: none
+
+    &:hover
+      color: $color-important
+
+  &.is-selected-right
+    .matching__element--right
+      color: $font-color
+      border-bottom: solid 1px $color-important
+
+    .select-toggle
+      -moz-transform: rotate(0deg)
+      -ms-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      -webkit-transform: rotate(0deg)
+      transform: rotate(0deg)
+
+  &.is-selected-left
+    .matching__element--left
+      color: $font-color
+      border-bottom: solid 1px $color-important
+
+    .select-toggle
+      -moz-transform: rotate(180deg)
+      -ms-transform: rotate(180deg)
+      -o-transform: rotate(180deg)
+      -webkit-transform: rotate(180deg)
+      transform: rotate(180deg)
+
+.select-toggle-button--matching
+  background: none
+  border: none
+  color: inherit
+  font: inherit
+  line-height: normal
+  overflow: visible
+  padding: 0
+  margin: 0 5px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+  &:focus
+    outline: none
+
+
+.matching__filter-select
+  display: inline-block
+  vertical-align: top
+  margin-top: 5px
+  margin-left: 7px
