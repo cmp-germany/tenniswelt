@@ -1275,15 +1275,22 @@ body a:hover {
 }
 
 /* line 1, ../sass/_profile-wall.sass */
-.wall-widget__button-block {
+.button-block {
   font-size: 16px;
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
-/* line 5, ../sass/_profile-wall.sass */
-.wall-widget__button-block i {
-  font-size: inherit;
-  margin-top: 3px;
+
+/* line 8, ../sass/_profile-wall.sass */
+.button-block__text {
+  width: calc(100% - 21px);
+}
+
+/* line 11, ../sass/_profile-wall.sass */
+.button-block__icons {
+  width: 20px;
 }
 
 /* line 1, ../sass/_settings.sass */
