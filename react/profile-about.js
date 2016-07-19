@@ -216,6 +216,31 @@ var ProfileInfo = React.createClass({
   }
 })
 
+var Module = React.createClass({
+
+  componentDidMount: function() {
+    $.get({
+      url: './modules/' + this.props.file,
+      success: function(data) {
+        $(this.divContainer).append(data);
+      }.bind(this)
+    });
+  },
+
+  render: function() {
+    return (
+      <div
+        className="hidden-md hidden-lg"
+        ref={
+          function (divContainer){
+            this.divContainer = divContainer;
+          }.bind(this)
+        }
+      />
+    )
+  }
+});
+
 var ProfileAbout = React.createClass({
   render: function() {
 
@@ -233,6 +258,7 @@ var ProfileAbout = React.createClass({
     return (
       <div>
         <ProfileHeader profileData={this.props.profileData} />
+        <Module file="kontakt-hinzufuegen.html" />
         <ul className="profile-tabs">
           <li className="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Über</a></li>
           <li className="profile-tabs__tab"><a href="#1">Wall</a></li>
