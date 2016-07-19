@@ -869,7 +869,7 @@ body a:hover {
 }
 /* line 198, ../sass/_wall.sass */
 .wall-widget.wall-widget--matching .wall-widget--content .wall-widget--account .account ul .online-status--online {
-  color: #4D9635;
+  color: #4DDD35;
 }
 
 /* line 202, ../sass/_wall.sass */
@@ -1800,7 +1800,7 @@ body a:hover {
 
 /* line 265, ../sass/_chat.sass */
 .online-status--online .material-icons {
-  color: #4D9635;
+  color: #4DDD35;
 }
 /* line 268, ../sass/_chat.sass */
 .online-status--online .material-icons.mdl-icon-close-color {
