@@ -135,7 +135,7 @@ var ChatTab = React.createClass({
                 className="button--isOnline"
                 data-toggle="collapse"
                 data-target={"#" + chatId}>
-                <i className="material-icons"></i>
+                <i className="material-icons"></i>
               </button>
               <button
                 className="button--close-chat"
@@ -202,7 +202,7 @@ var ChatTabContacts = React.createClass({
             alt="profilbild"
           />
           <label className="chat__name">{user.name}</label>
-          <i className="material-icons"></i>
+          <i className="material-icons"></i>
         </li>
       )
     }.bind(this));

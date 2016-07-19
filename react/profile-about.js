@@ -35,7 +35,7 @@ var ProfileHeader = React.createClass({
               <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
                 <ul className="profile-header__action-buttons text-right">
                   <li className={onlineIconClasses}>
-                    <i className="material-icons"></i>
+                    <i className="material-icons"></i>
                   </li>
                   <li className="profile-header__action-button">
                     <a
