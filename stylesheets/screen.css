@@ -1298,6 +1298,8 @@ body a:hover {
 /* line 11, ../sass/_profile-wall.sass */
 .button-block__icons {
   width: 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* line 1, ../sass/_settings.sass */
