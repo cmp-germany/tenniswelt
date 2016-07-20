@@ -298,6 +298,11 @@ var ChatApp = React.createClass({
     }, this);
   },
 
+  componentDidMount: function() {
+    this.signalR = {};
+    this.signalR.chat = $.connection.chat;
+  },
+
   render: function() {
 
     var spacingColumnsMd = (3 - this.state.openChatTabs.length) * 4;
