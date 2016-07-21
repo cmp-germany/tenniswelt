@@ -39,377 +39,294 @@
   <body>
     <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
     <div class="container">
-      <header class="site__header">
-        <div style="display:table;">
-          <i class="material-icons">&#xE915;</i><h3>Matching</h3>
-        </div>
-      </header>
-      <section class="site__content">
-        <div class="matching__filters">
-          <div class="matching__filter-switch is-selected-right">
-            <a class="matching__element--left" href="#">Privat</a>
-            <button class="select-toggle-button--matching">
-              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-              </svg>
-            </button>
-            <a class="matching__element--right" href="#">Unternehmen</a>
+      <div class="col-xs-12 col-md-9">
+        <header class="site__header">
+          <div style="display:table;">
+            <h3>Matching</h3>
           </div>
-          <div class="matching__filter-switch is-selected-left">
-            <a class="matching__element--left" href="#">Lokal</a>
-            <button class="select-toggle-button--matching">
-              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-              </svg>
-            </button>
-            <a class="matching__element--right" href="#">Weltweit</a>
+        </header>
+        <section class="site__content">
+          <div class="matching__filters">
+            <div class="matching__filter-switch is-selected-right">
+              <a class="matching__element--left" href="#">Privat</a>
+              <button class="select-toggle-button--matching">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </button>
+              <a class="matching__element--right" href="#">Unternehmen</a>
+            </div>
+            <div class="matching__filter-switch is-selected-left">
+              <a class="matching__element--left" href="#">Lokal</a>
+              <button class="select-toggle-button--matching">
+                <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
+                </svg>
+              </button>
+              <a class="matching__element--right" href="#">Weltweit</a>
+            </div>
+            <div class="matching__filter-select">
+              <label for="filter-sortieren">Sortieren: </label>
+              <select class="wall-widget--filter-select-list" name="filter-sortieren">
+                <option value="neu">Neu</option>
+                <option value="aktiv">Aktiv</option>
+                <option value="beliebt">Beliebt</option>
+              </select>
+            </div>
           </div>
-          <div class="matching__filter-select">
-            <label for="filter-sortieren">Sortieren: </label>
-            <select class="wall-widget--filter-select-list" name="filter-sortieren">
-              <option value="neu">Neu</option>
-              <option value="aktiv">Aktiv</option>
-              <option value="beliebt">Beliebt</option>
-            </select>
-          </div>
-        </div>
 
-        <div class="matching">
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
+          <div class="matching matching--matching">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=volker-miller">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p1.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=volker-miller">Volker Miller</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=kai-gaertner">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=kai-gaertner">Kai Gärtner</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=wolfgang-winter">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p6.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=wolfgang-winter">Wolfgang Winter</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons online-status--online ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=maria-kristhoff">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p5.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=maria-kristhoff">Maria Kristhoff</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=volker-miller">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p1.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=volker-miller">Volker Miller</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=kai-gaertner">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=kai-gaertner">Kai Gärtner</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=wolfgang-winter">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p6.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=wolfgang-winter">Wolfgang Winter</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons online-status--online ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=maria-kristhoff">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p5.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=maria-kristhoff">Maria Kristhoff</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=volker-miller">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p1.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=volker-miller">Volker Miller</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=kai-gaertner">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=kai-gaertner">Kai Gärtner</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=wolfgang-winter">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p6.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=wolfgang-winter">Wolfgang Winter</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons online-status--online ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=maria-kristhoff">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p5.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=maria-kristhoff">Maria Kristhoff</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=volker-miller">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p1.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=volker-miller">Volker Miller</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=kai-gaertner">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p7.jpg" alt="Profilbild" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=kai-gaertner">Kai Gärtner</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=wolfgang-winter">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p6.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=wolfgang-winter">Wolfgang Winter</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons online-status--online ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="kontakt-card">
+                <a href="profile-about.html?userId=maria-kristhoff">
+                  <img class="kontakt-card__thumbnail" src="gfx/profilbilder/p5.jpg" alt="Thumbnail" />
+                </a>
+                <div class="kontakt-card__name">
+                  <a href="profile-about.html?userId=maria-kristhoff">Maria Kristhoff</a>
+                </div>
+                <ul class="kontakt-card__actions">
+                  <li><i class="material-icons ">&#xE837;</i></li>
                   <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
+            <div class="col-xs-12">
+              <button class="wall-widget--button matching--button" type="button" name="button"><i class="material-icons">&#xE5CF;</i>Mehr</button>
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        </section>
+      </div>
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
 
+        <div data-module="messages.html"></div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div data-module="preferred-partners.html"></div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=volker-miller">
-                <img class="avatar" src="gfx/profilbilder/p1.jpg" alt="Profilbild" />
-              </a>
-              <div class="account">
-                <a href="profile-about.html?userId=volker-miller"><h4>Volker Miller</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status ">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('volker-miller');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=kai-gaertner"><img class="avatar" src="gfx/profilbilder/p7.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=kai-gaertner"><h4>Kai Gärtner</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status online-status--online">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('kai-gaertner');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=wolfgang-winter"><img class="avatar" src="gfx/profilbilder/p6.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=wolfgang-winter"><h4>Wolfgang Winter</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('wolfgang-winter');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="matching__account">
-              <a href="profile-about.html?userId=maria-kristhoff"><img class="avatar" src="gfx/profilbilder/p5.jpg" alt="Profilbild" /></a>
-              <div class="account">
-                <a href="profile-about.html?userId=maria-kristhoff"><h4>Maria Kristhoff</h4></a>
-                <ul class="wall-widget--actions">
-                  <li><i class="material-icons online-status">&#xE837;</i></li>
-                  <li style="cursor: pointer;" onClick="reactChatApp.addChat('maria-kristhoff');"><i class="material-icons">&#xE0C9;</i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12">
-            <button class="wall-widget--button matching--button" type="button" name="button"><i class="material-icons">&#xE5CF;</i>Mehr</button>
-          </div>
-        </div>
-
-      </section>
+      </div>
     </div>
 
     <div id="chat-app">
