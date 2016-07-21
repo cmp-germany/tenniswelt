@@ -2271,6 +2271,79 @@ body a:hover {
   padding: 3px 6px;
 }
 
+/* line 1, ../sass/_loading-bar.sass */
+.loading-bar {
+  display: none;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+}
+
+/* line 7, ../sass/_loading-bar.sass */
+.loading {
+  position: relative;
+}
+/* line 9, ../sass/_loading-bar.sass */
+.loading .loading-bar {
+  display: block;
+  visibility: visible;
+}
+/* line 12, ../sass/_loading-bar.sass */
+.loading > * {
+  visibility: hidden;
+}
+
+/* line 16, ../sass/_loading-bar.sass */
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+/* line 27, ../sass/_loading-bar.sass */
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #3aa6e7;
+  }
+  25% {
+    stroke: #3aa6e7;
+  }
+  50% {
+    stroke: #E9002F;
+  }
+  75% {
+    stroke: #E9002F;
+  }
+  100% {
+    stroke: #E9002F;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container {
