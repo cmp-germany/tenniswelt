@@ -297,7 +297,7 @@
       <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
       <ul class="nav navbar-nav navbar-right ">
         <li class="starters-navigation__list-item dropdown">
-          <button class="nav-button btn btn-default dropdown-toggle" type="button" id="dropdown-stichwortsuche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <button class="nav-button dropdown-toggle" type="button" id="dropdown-stichwortsuche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Stichwortsuche <span class="caret"></span>
           </button>
           <ul class="dropdown-menu dropdown-menu-left dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
@@ -306,9 +306,13 @@
             <li><a href="suche.html?index=unternehmen&suche=institutionelleInvestoren" class="dropdown-button--starters">Institutionelle Investoren</a></li>
             <li role="separator" class="divider"></li>
             <!--Förderung-->
-            <li><a href="suche.html?index=unternehmen&suche=institutionelleFoerderungen" class="dropdown-button--starters">Institutionelle Förderung</a></li>
-            <li><a href="suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung" class="dropdown-button--starters">Privatwirtschaftliche Förderung</a></li>
-            <li><a href="suche.html?index=unternehmen&suche=staatlicheFoederungen" class="dropdown-button--starters">Staatliche Förderung</a></li>
+            <li><button class="dropdown-button--starters dropdown-button--noeffect" type="button">Förderung</button>
+              <ul class="multilevel-menu">
+                <li><a href="suche.html?index=unternehmen&suche=institutionelleFoerderungen" class="dropdown-button--starters">Institutionelle Förderung</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung" class="dropdown-button--starters">Privatwirtschaftliche Förderung</a></li>
+                <li><a href="suche.html?index=unternehmen&suche=staatlicheFoederungen" class="dropdown-button--starters">Staatliche Förderung</a></li>
+              </ul>
+            </li>
             <li role="separator" class="divider"></li>
             <li><a href="suche.html?index=unternehmen&suche=gruenderzentrum" class="dropdown-button--starters">Gründerzentrum</a></li>
             <li><a href="suche.html?index=unternehmen&suche=businessAngels" class="dropdown-button--starters">Business Angels</a></li>
