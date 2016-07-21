@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!--Photoswipe Framework-->
+    <link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css">
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!--Photoswipe-->
+    <script src="bower_components/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <!--<div data-module="kontakte.html"></div>-->
+
+        <div data-module="matching.html" data-additional-js="js/wall.js"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Collumn -->
+      <div class="section-center col-md-6">
+        <div id="profile-about">
+          <header class="profile-header">
+            <div class="profile-header__wallpaper" alt="Wallpaper von Company of Imagination Ltd." style="background-image: url('gfx/wallpaper_company.jpg');"></div>
+            <div class="profile-header__desc-bar">
+              <div class="profile-header__profile-picture-container"><img src="gfx/profile_company.jpg" alt="Profilbild von Company of Imagination Ltd." class="profile-header__profile-picture img-responsive">
+              </div>
+              <div class="profile-header__profile-name-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <h3 class="profile-header__name">Company of Imagination Ltd.</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-header__profile-buttons-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <ul class="profile-header__action-buttons text-right">
+                      <li class="profile-header__action-button"><i class="material-icons"></i>
+                      </li>
+                      <li class="profile-header__action-button"><a href="javascript:reactChatApp.addChat('company-of-imagination');" style="color: inherit;"><i class="material-icons"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <button class="wall-widget--button wall-widget--button-add hidden-md hidden-lg" type="button" name="button"><i class="material-icons">&#xE145;</i>Hinzufügen</button>
+          <ul class="profile-tabs">
+            <li class="profile-tabs__tab"><a href="#1">Über</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Wall</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Kontakte</a>
+            </li>
+            <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Fotos</a>
+            </li>
+          </ul>
+
+
+          <h3 class="content-headline">Alben von Company of Imagination Ltd.</h3>
+
+          <div class="area-fotos row">
+
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="large-image.jpg" itemprop="contentUrl" data-size="600x400">
+            <img src="small-image.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image caption</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="large-image.jpg" itemprop="contentUrl" data-size="600x400">
+            <img src="small-image.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image caption</figcaption>
+    </figure>
+  </div>
+
+  <!-- Background of PhotoSwipe.
+       It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+
+    <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+    </div>
+
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+
+        <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
+
+        <div data-module="messages.html"></div>
+
+        <div data-module="preferred-partners.html"></div>
+
+      </div>
+
+    </div>
+
+    <div id="chat-app">
+    </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+
+
+  </body>
+</html>
