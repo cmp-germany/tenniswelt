@@ -301,6 +301,8 @@ var ChatApp = React.createClass({
   componentDidMount: function() {
     this.signalR = {};
     this.signalR.chat = $.connection.chat;
+    this.signalR.chat.connection.start({ transport: 'longPolling' });
+    //console.log("This is a test.");
   },
 
   render: function() {
