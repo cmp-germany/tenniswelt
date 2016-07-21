@@ -202,22 +202,18 @@ function postResults(type) {
     else onlineClass = "";
 
     var innerHTML =
-    '<div class="col-lg-4 nopadding">'+
-      '<div class="result-card">'+
-        '<div class="result-card__image">'+
-          '<img class="avatar" src="'+result[i].bild+'" alt="Profilbild" />'+
-        '</div>'+
-        '<div class="result-card__content">'+
-          '<div class="result-card__name">'+
-            '<a href="'+result[i].profil+'">'+result[i].name+'</a>'+
-          '</div>'+
-          '<div class="result-card__actions">'+
-            '<ul>'+
-              '<li><i class="material-icons online-status '+onlineClass+' ">&#xE1E2;</i></li>'+
-              '<li><i class="material-icons">&#xE0C9;</i></li>'+
-            '</ul>'+
-          '</div>'+
-        '</div>'+
+    '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">'+
+      '<div class="kontakt-card">'+
+        '<a href="profile-about.html?userId=volker-miller">'+
+          '<img class="kontakt-card__thumbnail" src="'+result[i].bild+'" alt="Thumbnail" />'+
+        '</a>'+
+        '<div class="kontakt-card__name">'+
+          '<a href="'+result[i].profil+'">'+result[i].name+'</a>'+
+        '</div>' +
+        '<ul class="kontakt-card__actions">'+
+          '<li><i class="material-icons '+onlineClass+' ">&#xE837;</i></li>'+
+          '<li><i style="cursor: pointer;" onClick="reactChatApp.addChat("volker-miller");" class="material-icons">&#xE0C9;</i></li>'+
+        '</ul>'+
       '</div>'+
     '</div>';
     $( "#resultContainer" ).append( innerHTML );
