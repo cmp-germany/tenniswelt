@@ -114,7 +114,7 @@
         return proxies;
     };
 
-    signalR.hub = $.hubConnection("http://test_koelndemo.cmpg.eu/signalr", { useDefaultPath: false });
+    signalR.hub = $.hubConnection("//test_koelndemo.cmpg.eu/signalr", { useDefaultPath: false });
     $.extend(signalR, signalR.hub.createHubProxies());
 
 }(window.jQuery, window));
