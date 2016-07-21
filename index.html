@@ -41,23 +41,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand display" href="#">
             <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
           </a>
+
+          <div class="navbar-landing-page collapse navbar-collapse" id="navbar-collapse-1">
+            <form class="navbar-form navbar-right" action="wall.html" method="get">
+              <div class="form-group">
+                <input type="text" class="form-control form-control--navbar" name="email" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control form-control--navbar" name="password" placeholder="Passwort">
+              </div>
+              <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+            </form>
+          </div><!-- /.navbar-collapse -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-          <form class="navbar-form navbar-right" action="wall.html" method="get">
-            <div class="form-group">
-              <input type="text" class="form-control form-control--navbar" name="email" placeholder="E-Mail">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control form-control--navbar" name="password" placeholder="Passwort">
-            </div>
-            <button type="submit" class="btn btn-important"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
-          </form>
-        </div><!-- /.navbar-collapse -->
+
       </div><!-- /.container-fluid -->
     </nav>
 
