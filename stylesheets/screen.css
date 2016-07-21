@@ -2088,9 +2088,70 @@ body a:hover {
   margin-left: 7px;
 }
 
-/* line 1, ../sass/_profile-kontakte.sass */
+/* line 3, ../sass/_profile-kontakte.sass */
 .matching__filters--kontakte {
   font-size: 14px;
+}
+
+/* line 6, ../sass/_profile-kontakte.sass */
+.matching--kontakte {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/* line 11, ../sass/_profile-kontakte.sass */
+.kontakt-card {
+  position: relative;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  padding: 6px;
+  border: solid 1px #dddddd;
+  border-top-color: #3aa6e7;
+  border-left-color: #3aa6e7;
+  margin-bottom: 12px;
+}
+
+/* line 21, ../sass/_profile-kontakte.sass */
+.kontakt-card__thumbnail {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+/* line 26, ../sass/_profile-kontakte.sass */
+.kontakt-card__name {
+  float: left;
+  height: 100%;
+  width: calc(100% - $thumbnail-size);
+  text-align: left;
+  padding: 4px;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 36, ../sass/_profile-kontakte.sass */
+.kontakt-card__actions {
+  position: absolute;
+  bottom: 3px;
+  color: #777;
+  right: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 44, ../sass/_profile-kontakte.sass */
+.kontakt-card__actions li {
+  display: inline-block;
+}
+/* line 46, ../sass/_profile-kontakte.sass */
+.kontakt-card__actions .material-icons {
+  font-size: 16px;
+}
+/* line 48, ../sass/_profile-kontakte.sass */
+.kontakt-card__actions .online-status--online {
+  color: #4DDD35;
 }
 
 /* line 1, ../sass/_fotos.sass */
