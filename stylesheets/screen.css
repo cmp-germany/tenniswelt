@@ -2272,13 +2272,40 @@ body a:hover {
   padding: 3px 6px;
 }
 
-/* line 3, ../sass/_album-galary.sass */
+/* line 1, ../sass/_album-galary.sass */
+.area-fotos--album {
+  margin: 0;
+  border: solid 1px #eeeeee;
+  border-top-color: #3aa6e7;
+  border-left-color: #3aa6e7;
+  background-color: #fefefe;
+}
+
+/* line 8, ../sass/_album-galary.sass */
+.col-foto {
+  padding: 5px;
+}
+
+/* line 12, ../sass/_album-galary.sass */
+.galary-foto {
+  position: relative;
+}
+
+/* line 15, ../sass/_album-galary.sass */
 .galary-foto__thumbnail {
   width: 100%;
   height: auto;
   border: solid 1px #eeeeee;
-  border-top-color: #3aa6e7;
-  border-left-color: #3aa6e7;
+}
+
+/* line 20, ../sass/_album-galary.sass */
+.galary-foto__description--title {
+  position: absolute;
+  top: 0;
+  border: solid 1px transparent;
+  padding: 4px 8px;
+  color: #fff;
+  background-color: #3aa6e7;
 }
 
 /* line 1, ../sass/_loading-bar.sass */
