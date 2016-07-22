@@ -17,7 +17,10 @@ $( document ).ready(function(){
       $('.navbar__tab--wall').addClass('navbar__tab--active');
     }
 
-    $( "body > .container" ).css( "display", "none" );
+    if ($( window ).width() <= 767) {
+      $( "body > .container" ).css( "display", "none" );
+    }
+
     if ($( ".navbar__tab--wall" ).hasClass("navbar__tab--active")) {
       $( "body > .container" ).css( "display", "block" );
     }

@@ -22,118 +22,122 @@ body
     h3
       font-size: 20px
 
-  &--side
-    header
-      border-bottom: solid 1px $color-primary
-      margin-right: -20px
-      margin-left: -20px
-      padding-left: 20px
-      padding-right: 20px
-      padding-top: 20px
-      padding-bottom: 15px
-      margin-bottom: 25px
-      i
-        display: table-cell
-        vertical-align: middle
-        width: 35px
-        font-size: 30px
-        color: darken($color-primary, 20)
-      h3
-        display: table-cell
-        vertical-align: middle
+.wall-widget--side
+  header
+    border-bottom: solid 1px $color-primary
+    margin-right: -20px
+    margin-left: -20px
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 20px
+    padding-bottom: 15px
+    margin-bottom: 25px
+    i
+      display: table-cell
+      vertical-align: middle
+      width: 35px
+      font-size: 30px
+      color: darken($color-primary, 20)
+    h3
+      display: table-cell
+      vertical-align: middle
 
-  &.wall-widget--matching
+.wall-widget--matching
 
-    .wall-widget--filters
-      font-size: 14px
-      .wall-widget--filter-switch
-        width: 100%
-        margin: 0
-        margin-top: 10px
+  .wall-widget--content
+    margin-top: 25px
+    text-align: center
 
-        .select-toggle:hover
-          cursor: pointer
+.wall-widget--filters
+  font-size: 14px
 
-        a
-          color: #777
-          &:hover, &:active, &:focus, &:visited
-            text-decoration: none
+.wall-widget--filter-switch
+  width: 100%
+  margin: 0
+  margin-top: 10px
 
-          &:hover
-            color: $color-important
+  .select-toggle:hover
+    cursor: pointer
 
-        &.is-selected-right
-          a.element-right
-            color: $font-color
-            border-bottom: solid 1px $color-important
+  a
+    color: #777
+    &:hover, &:active, &:focus, &:visited
+      text-decoration: none
 
-          .select-toggle
-            -moz-transform: rotate(0deg)
-            -ms-transform: rotate(0deg)
-            -o-transform: rotate(0deg)
-            -webkit-transform: rotate(0deg)
-            transform: rotate(0deg)
+    &:hover
+      color: $color-important
 
-        &.is-selected-left
-          a.element-left
-            color: $font-color
-            border-bottom: solid 1px $color-important
+  &.is-selected-right
+    a.element-right
+      color: $font-color
+      border-bottom: solid 1px $color-important
 
-          .select-toggle
-            -moz-transform: rotate(180deg)
-            -ms-transform: rotate(180deg)
-            -o-transform: rotate(180deg)
-            -webkit-transform: rotate(180deg)
-            transform: rotate(180deg)
+    .select-toggle
+      -moz-transform: rotate(0deg)
+      -ms-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      -webkit-transform: rotate(0deg)
+      transform: rotate(0deg)
 
+  &.is-selected-left
+    a.element-left
+      color: $font-color
+      border-bottom: solid 1px $color-important
 
-
-
-
-      .wall-widget--filter-element
-        padding: 0
-        text-align: center
-
-        &:first-child
-          text-align: right
-          padding-right: 5px
-
-        &:last-child
-          text-align: left
-          padding-left: 5px
-
-        button
-          background: none
-          border: none
-          color: inherit
-          font: inherit
-          line-height: normal
-          overflow: visible
-          padding: 0
-          -webkit-user-select: none
-          -moz-user-select: none
-          -ms-user-select: none
-
-          &::-moz-focus-inner
-            border: 0
-            padding: 0
-
-          &:focus
-            outline: none
+    .select-toggle
+      -moz-transform: rotate(180deg)
+      -ms-transform: rotate(180deg)
+      -o-transform: rotate(180deg)
+      -webkit-transform: rotate(180deg)
+      transform: rotate(180deg)
 
 
 
-      .wall-widget--filter-select
-        text-align: center
-        .wall-widget--filter-select-list
-          background-color: #fff
-          width: 80px
-          margin-left: 5px
-          margin-top: 10px
 
-    .wall-widget--content
-      margin-top: 25px
-      text-align: center
+
+.wall-widget--filter-element
+  padding: 0
+  text-align: center
+
+  &:first-child
+    text-align: right
+    padding-right: 5px
+
+  &:last-child
+    text-align: left
+    padding-left: 5px
+
+  button
+    background: none
+    border: none
+    color: inherit
+    font: inherit
+    line-height: normal
+    overflow: visible
+    padding: 0
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+    &::-moz-focus-inner
+      border: 0
+      padding: 0
+
+    &:focus
+      outline: none
+
+
+
+.wall-widget--filter-select
+  text-align: center
+
+.wall-widget--filter-select-list
+  background-color: #fff
+  width: 80px
+  margin-left: 5px
+  margin-top: 10px
+
+
 
 .wall-widget--account
   text-align: left
@@ -148,55 +152,53 @@ body
     display: inline-block
     vertical-align: top
 
-  .avatar
-    width: 50px
-    height: 50px
+.avatar
+  width: 50px
+  height: 50px
 
-  .account
-    width: calc(100% - 55px)
-    height: 50px
+.account
+  width: calc(100% - 55px)
+  height: 50px
+  display: table
+  position: relative
+  float: right
+  overflow: hidden
+  > *
+    display: table-cell
+    vertical-align: middle
+  a:hover
+    z-index: 100
+
+  h4
+    font-size: 13px
+    font-weight: bold
+    width: calc(100% - 20px)
+
+
+  ul
     display: table
-    position: relative
-    float: right
-    overflow: hidden
-    > *
+    position: absolute
+    top: 0
+    white-space: nowrap
+    right: 0
+    height: 100%
+    background-color: $color-background-widget
+    box-shadow: -10px 0 20px $color-background-widget
+
+    li
       display: table-cell
       vertical-align: middle
-    a:hover
-      z-index: 100
 
-    h4
-      font-size: 13px
-      font-weight: bold
-      width: calc(100% - 20px)
+    .material-icons
+      vertical-align: text-bottom
+      font-size: 16px
+      margin-left: 2px
 
+.online-status
+  color: #777
 
-    ul
-      display: table
-      position: absolute
-      top: 0
-      white-space: nowrap
-      right: 0
-      height: 100%
-      background-color: $color-background-widget
-      box-shadow: -10px 0 20px $color-background-widget
-
-      li
-        display: table-cell
-        vertical-align: middle
-
-
-
-      .material-icons
-        vertical-align: text-bottom
-        font-size: 16px
-        margin-left: 2px
-
-      .online-status
-        color: #777
-
-      .online-status--online
-        color: $color-chat-online
+.online-status--online
+  color: $color-chat-online
 
 
 .wall-widget--newPost
@@ -362,6 +364,39 @@ body
   font-size: 12px
 
 
+
+.wall-widget--header
+  text-align: justify
+  /* ie 7*/
+  *width: 100%
+  *-ms-text-justify: distribute-all-lines
+  *text-justify: distribute-all-lines
+
+  &::after
+    content: ''
+    display: inline-block
+    width: 100%
+    height: 0
+    font-size: 0
+    line-height: 0
+
+
+.wall-widget--header__left
+  display: inline-block
+  /* ie 7*/
+  *display: inline
+  *zoom: 1
+  *text-align: left
+
+.wall-widget--header__right
+  display: inline-block
+  float: right
+  /* ie 7*/
+  *display: inline
+  *zoom: 1
+  *text-align: right
+
+
 .wall-widget--activity-post
   background-color: #fff
   border: solid 1px $color-primary
@@ -372,55 +407,23 @@ body
   //-moz-box-shadow: 1px 0px 9px 0px rgba(145,145,145,0.6)
   //box-shadow: 1px 0px 9px 0px rgba(145,145,145,0.6)
 
-
-  .wall-widget--header
-    text-align: justify
-    /* ie 7*/
-    *width: 100%
-    *-ms-text-justify: distribute-all-lines
-    *text-justify: distribute-all-lines
-
-    &::after
-      content: ''
-      display: inline-block
-      width: 100%
-      height: 0
-      font-size: 0
-      line-height: 0
-
-
-  .wall-widget--header__left
-    display: inline-block
-    /* ie 7*/
-    *display: inline
-    *zoom: 1
-    *text-align: left
-
-  .wall-widget--header__right
-    display: inline-block
-    float: right
-    /* ie 7*/
-    *display: inline
-    *zoom: 1
-    *text-align: right
-
-  .account-avatar
-    display: inline-block
-    width: 60px
-    height: 60px
-
   h4
     padding-left: 5px
     font-size: 16px
     display: inline-block
 
+.account-avatar
+  display: inline-block
+  width: 60px
+  height: 60px
 
-  .wall-widget--activity-post-image
-    max-width: 100%
-    height: auto
 
-  .wall-widget--activity-post-text
-    text-align: left
+.wall-widget--activity-post-image
+  max-width: 100%
+  height: auto
+
+.wall-widget--activity-post-text
+  text-align: left
 
 
 .wall-widget--news
@@ -428,8 +431,8 @@ body
     margin-top: 15px
     text-align: center
 
-    .wall-widget--button
-      margin-top: 10px
+  .wall-widget--button
+    margin-top: 10px
 
 .wall-widget--asidePost
   text-align: left
@@ -438,18 +441,18 @@ body
   padding-bottom: 8px
   border-bottom: 1px solid #ddd
 
-  .info
-    font-size: 12px
-    vertical-align: baseline
-    p
-      margin-bottom: 3px
+.info
+  font-size: 12px
+  vertical-align: baseline
+  p
+    margin-bottom: 3px
 
-    .wall-widget--info
-      font-size: 11px
-      text-align: right
-      .material-icons
-        vertical-align: text-bottom
-        font-size: 14px
+  .wall-widget--info
+    font-size: 11px
+    text-align: right
+    .material-icons
+      vertical-align: text-bottom
+      font-size: 14px
 
 
 
@@ -466,11 +469,11 @@ body
     margin-bottom: 0
     border-bottom: 0
 
-  .banner
-    margin-left: -20px
-    margin-right: -20px
-    width: calc(100% + 40px)
-    height: auto
+.banner
+  margin-left: -20px
+  margin-right: -20px
+  width: calc(100% + 40px)
+  height: auto
 
 .wall-widget--filter-select-list
   -webkit-appearance: none
