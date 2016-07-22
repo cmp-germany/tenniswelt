@@ -301,7 +301,10 @@ var ChatApp = React.createClass({
   componentDidMount: function() {
     this.signalR = {};
     this.signalR.chat = $.connection.chat;
-    this.signalR.chat.connection.start({ transport: 'longPolling' });
+    this.signalR.chat.connection.start({ transport: 'longPolling' }).always(function(e){
+      console.log('isCrossDomain: ' + this.signalR.chat.connection.isCrossDomain());
+      console.log(e);
+    }.bind(this));
     //console.log("This is a test.");
   },
 

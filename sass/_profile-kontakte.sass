@@ -1,2 +1,49 @@
+$thumbnail-size: 70px
+
 .matching__filters--kontakte
   font-size: 14px
+
+.matching--kontakte
+  padding: 0
+  background-color: transparent
+  border: none
+
+.kontakt-card
+  position: relative
+  background-color: #f9f9f9
+  overflow: hidden
+  padding: 6px
+  border: solid 1px rgb(221, 221, 221)
+  border-top-color: $color-primary
+  border-left-color: $color-primary
+  margin-bottom: 12px
+
+.kontakt-card__thumbnail
+  float: left
+  width: $thumbnail-size
+  height: $thumbnail-size
+
+.kontakt-card__name
+  float: left
+  height: $thumbnail-size
+  width: calc(100% - 70px)
+  text-align: left
+  padding: 4px
+  padding-left: 14px
+  font-size: 14px
+  font-weight: bold
+
+.kontakt-card__actions
+  position: absolute
+  bottom: 3px
+  color: #777
+  right: 10px
+  list-style-type: none
+  padding: 0
+  margin: 0
+  li
+    display: inline-block
+  .material-icons
+    font-size: 16px
+  .online-status--online
+    color: $color-chat-online
