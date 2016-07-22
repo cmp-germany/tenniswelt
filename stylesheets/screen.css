@@ -1470,6 +1470,19 @@ body a:hover {
   line-height: 10px;
 }
 
+/* line 31, ../sass/_settings.sass */
+.control-label--variante {
+  margin-right: 15px;
+  display: inline;
+  vertical-align: top;
+  padding-left: 3px;
+}
+
+/* line 37, ../sass/_settings.sass */
+.display-option {
+  display: none;
+}
+
 /* line 1, ../sass/_search.sass */
 .search {
   border: solid 1px #eee;
