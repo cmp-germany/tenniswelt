@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -2373,6 +2374,34 @@ body a:hover {
     transform: rotate(450deg);
   }
 }
+/* line 2, ../sass/_invitation-module.sass */
+.wall-widget__action-li .iconTrash {
+  margin-top: -3px;
+}
+/* line 5, ../sass/_invitation-module.sass */
+.wall-widget__action-li .iconTrash:after {
+  content: "";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container {
