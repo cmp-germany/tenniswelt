@@ -442,6 +442,11 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   color: inherit;
 }
 
+/* line 331, ../sass/_navbar.sass */
+.hide-bg {
+  display: none;
+}
+
 /* line 1, ../sass/_buttons.sass */
 .btn {
   border-radius: 0;
