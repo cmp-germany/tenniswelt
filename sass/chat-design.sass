@@ -195,3 +195,31 @@ $color-chat-tabs: $color-important
           &:hover
             background-color: $color-important
             color: #ffffff
+
+@media(max-width:767px)
+  body
+    .chat-users
+      width: 100%
+      box-shadow: none
+      z-index: 7002
+
+      .user-list
+        height: 320px
+        height: calc(100vh - 135px )
+
+    .chat-sessions
+      bottom: 30px
+      right: 0
+      width: 100%
+      padding: 0
+      border-radius: 0
+
+      .chat-session
+        display: none
+        width: 100%
+        .chat-message-holder
+          height: 290px
+          height: calc(100vh - 157px)
+
+        //&:last-child
+          display: block
