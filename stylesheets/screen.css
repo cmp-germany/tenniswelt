@@ -2334,6 +2334,8 @@ body a:hover {
   top: 0;
   border: solid 1px transparent;
   padding: 4px 8px;
+  margin-top: 1px;
+  margin-left: 1px;
   color: #fff;
   background-color: #3aa6e7;
 }
