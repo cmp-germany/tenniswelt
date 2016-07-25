@@ -2121,19 +2121,19 @@ body a:hover {
   margin-left: 7px;
 }
 
-/* line 3, ../sass/_profile-kontakte.sass */
+/* line 23, ../sass/_profile-kontakte.sass */
 .matching__filters--kontakte {
   font-size: 14px;
 }
 
-/* line 6, ../sass/_profile-kontakte.sass */
+/* line 26, ../sass/_profile-kontakte.sass */
 .matching--kontakte {
   padding: 0;
   background-color: transparent;
   border: none;
 }
 
-/* line 11, ../sass/_profile-kontakte.sass */
+/* line 31, ../sass/_profile-kontakte.sass */
 .kontakt-card {
   position: relative;
   background-color: #f9f9f9;
@@ -2145,14 +2145,14 @@ body a:hover {
   margin-bottom: 12px;
 }
 
-/* line 21, ../sass/_profile-kontakte.sass */
+/* line 41, ../sass/_profile-kontakte.sass */
 .kontakt-card__thumbnail {
   float: left;
   width: 70px;
   height: 70px;
 }
 
-/* line 26, ../sass/_profile-kontakte.sass */
+/* line 46, ../sass/_profile-kontakte.sass */
 .kontakt-card__name {
   float: left;
   height: 70px;
@@ -2164,7 +2164,7 @@ body a:hover {
   font-weight: bold;
 }
 
-/* line 36, ../sass/_profile-kontakte.sass */
+/* line 56, ../sass/_profile-kontakte.sass */
 .kontakt-card__actions {
   position: absolute;
   bottom: 3px;
@@ -2174,39 +2174,203 @@ body a:hover {
   padding: 0;
   margin: 0;
 }
-/* line 44, ../sass/_profile-kontakte.sass */
+/* line 64, ../sass/_profile-kontakte.sass */
 .kontakt-card__actions li {
   display: inline-block;
 }
-/* line 46, ../sass/_profile-kontakte.sass */
+/* line 66, ../sass/_profile-kontakte.sass */
 .kontakt-card__actions .material-icons {
   font-size: 16px;
 }
-/* line 48, ../sass/_profile-kontakte.sass */
+/* line 68, ../sass/_profile-kontakte.sass */
 .kontakt-card__actions .online-status--online {
   color: #4DDD35;
 }
 
 /* Anpassungen für die Plattform */
-/* line 55, ../sass/_profile-kontakte.sass */
+/* line 75, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
   padding: 0;
   background: none;
 }
-/* line 60, ../sass/_profile-kontakte.sass */
+/* line 80, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--filters {
   background-color: #f9f9f9;
   border: solid 1px #eeeeee;
 }
-/* line 64, ../sass/_profile-kontakte.sass */
+/* line 84, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--filters:first-child {
   border-bottom: none;
 }
-/* line 67, ../sass/_profile-kontakte.sass */
+/* line 87, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--filters:nth-child(2) {
   border-top: none;
   padding-bottom: 10px;
+}
+/* line 91, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account {
+  position: relative;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  padding: 6px;
+  border: solid 1px #dddddd;
+  border-top-color: #3aa6e7;
+  border-left-color: #3aa6e7;
+  margin-bottom: 12px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+  float: left;
+  width: 83.33333%;
+  min-height: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 8.33333%;
+  font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 1200px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    float: left;
+    width: 43.75%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    float: left;
+    width: 83.33333%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    float: left;
+    width: 43.75%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    margin-left: 4.16667%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    margin-left: 8.33333%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 91, ../sass/_profile-kontakte.sass */
+  #MyWallMid .wall-widget--account {
+    margin-left: 4.16667%;
+  }
+}
+/* line 111, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_FriendsAvatar {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+/* line 116, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_FriendsAvatar img {
+  margin-top: 0;
+  width: 70px;
+  height: 70px;
+}
+/* line 121, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_FriendsName {
+  float: left;
+  height: 70px;
+  width: calc(100% - 70px);
+  text-align: left;
+  padding: 4px;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 131, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact {
+  position: absolute;
+  bottom: 3px;
+  color: #777;
+  right: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 140, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact .ChatStatusIcon {
+  background: none;
+}
+/* line 143, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact .ChatStatusIcon::after {
+  content: "";
+  box-sizing: border-box;
+  color: #777777;
+  direction: ltr;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: 16px;
+  letter-spacing: normal;
+  line-height: 16px;
+  list-style-type: none;
+  text-align: center;
+  text-transform: none;
+  white-space: nowrap;
+  width: 16px;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 148, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact .ChatStatusIcon.UserMediaOnlineIcon::after {
+  color: #4DDD35;
+}
+/* line 151, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact .ChatIcon {
+  background: none;
+}
+/* line 153, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--account .Wall_Friends_Contact .ChatIcon::after {
+  content: "";
+  box-sizing: border-box;
+  color: #777777;
+  direction: ltr;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  height: 16px;
+  letter-spacing: normal;
+  line-height: 16px;
+  list-style-type: none;
+  text-align: center;
+  text-transform: none;
+  white-space: nowrap;
+  width: 16px;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 194, ../sass/_profile-kontakte.sass */
+#DivLoading_FriendList {
+  display: initial;
 }
 
 /* line 1, ../sass/_fotos.sass */

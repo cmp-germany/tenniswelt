@@ -1,5 +1,25 @@
 $thumbnail-size: 70px
 
+=material-icon()
+  box-sizing: border-box
+  color: rgb(119, 119, 119)
+  direction: ltr
+  display: inline-block
+  font-family: "Material Icons"
+  font-size: 16px
+  font-style: normal
+  font-weight: normal
+  height: 16px
+  letter-spacing: normal
+  line-height: 16px
+  list-style-type: none
+  text-align: center
+  text-transform: none
+  white-space: nowrap
+  width: 16px
+  word-wrap: normal
+  -webkit-font-smoothing: antialiased
+
 .matching__filters--kontakte
   font-size: 14px
 
@@ -67,3 +87,109 @@ $thumbnail-size: 70px
     &:nth-child(2)
       border-top: none
       padding-bottom: 10px
+
+  .wall-widget--account
+    position: relative
+    background-color: #f9f9f9
+    overflow: hidden
+    padding: 6px
+    border: solid 1px rgb(221, 221, 221)
+    border-top-color: $color-primary
+    border-left-color: $color-primary
+    margin-bottom: 12px
+    +make-lg-column(5.25, 12px)
+    +make-md-column(10, 12px)
+    +make-sm-column(5.25, 12px)
+    +make-xs-column(10, 12px)
+    +make-lg-column-offset(0.5)
+    +make-md-column-offset(1)
+    +make-sm-column-offset(0.5)
+    +make-xs-column-offset(1)
+    font-family: "Open Sans", sans-serif
+
+
+    .Wall_FriendsAvatar
+      float: left
+      width: $thumbnail-size
+      height: $thumbnail-size
+
+      img
+        margin-top: 0
+        width: $thumbnail-size
+        height: $thumbnail-size
+
+    .Wall_FriendsName
+      float: left
+      height: $thumbnail-size
+      width: calc(100% - 70px)
+      text-align: left
+      padding: 4px
+      padding-left: 14px
+      font-size: 14px
+      font-weight: bold
+
+    .Wall_Friends_Contact
+      position: absolute
+      bottom: 3px
+      color: #777
+      right: 10px
+      list-style-type: none
+      padding: 0
+      margin: 0
+
+      .ChatStatusIcon
+        background: none
+
+        &::after
+          content: ""
+          +material-icon()
+
+        &.UserMediaOnlineIcon
+          &::after
+            color: $color-chat-online
+
+      .ChatIcon
+        background: none
+        &::after
+          content: ""
+          +material-icon()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spacing
+
+#DivLoading_FriendList
+  display: initial
