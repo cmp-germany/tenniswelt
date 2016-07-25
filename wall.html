@@ -71,51 +71,84 @@
             <h3>Neuste Aktivitäten</h3>
           </header>
 
-          <article class="wall-widget--activity-post">
-            <header class="wall-widget--header">
-              <div class="wall-widget--header__left">
-                <img class="account-avatar" src="gfx/profilbilder/p8.jpg" alt="Profilbild" />
-                <h4><a href="#1">Max Mustermann</a></h4>
+          <div class="wall-post">
+            <article class="wall-widget--activity-post">
+              <header class="wall-widget--header">
+                <div class="wall-widget--header__left">
+                  <img class="account-avatar" src="gfx/profilbilder/p8.jpg" alt="Profilbild" />
+                  <h4><a href="#1">Max Mustermann</a></h4>
+                </div>
+                <div class="wall-widget--header__right">
+                  <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+                </div>
+              </header>
+              <div class="wall-widget--content">
+                <img class="wall-widget--activity-post-image" src="gfx/beispiel.jpg" alt="imgage" />
               </div>
-              <div class="wall-widget--header__right">
-                <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+              <div class="wall-widget--actions wall-widget--actions__social">
+                <ul>
+                  <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                  <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                  <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
+                </ul>
               </div>
-            </header>
-            <div class="wall-widget--content">
-              <img class="wall-widget--activity-post-image" src="gfx/beispiel.jpg" alt="imgage" />
+            </article>
+            <div class="wall-widget--comment-section">
+              <button class="wall-widget--button comment-button--loadmore" type="button" name="button"><i class="material-icons">&#xE316;</i>Mehr</button>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Maxi Mustermann</a>
+                  Lorem Ipsum! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Maxi Mustermann</a>
+                  Cool!
+                </p>
+              </div>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Maxi Mustermann</a>
+                  JA
+                </p>
+              </div>
+              <div class="wall-widget--comment wall-widget--comment__input">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+                <input type="text" class="comment__input" placeholder="Kommentieren..."/>
+              </div>
             </div>
-            <div class="wall-widget--actions wall-widget--actions__social">
-              <ul>
-                <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
-                <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
-                <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
-              </ul>
-            </div>
-          </article>
+          </div>
 
-          <article class="wall-widget--activity-post">
-            <header class="wall-widget--header">
-              <div class="wall-widget--header__left">
-                <img class="account-avatar" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
-                <h4><a href="#1">Maxi Mustermann</a></h4>
+
+          <div class="wall-post">
+            <article class="wall-widget--activity-post">
+              <header class="wall-widget--header">
+                <div class="wall-widget--header__left">
+                  <img class="account-avatar" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                  <h4><a href="#1">Maxi Mustermann</a></h4>
+                </div>
+                <div class="wall-widget--header__right">
+                  <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+                </div>
+              </header>
+              <div class="wall-widget--content">
+                <p class="wall-widget--activity-post-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
               </div>
-              <div class="wall-widget--header__right">
-                <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+              <div class="wall-widget--actions wall-widget--actions__social">
+                <ul>
+                  <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                  <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                  <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
+                </ul>
               </div>
-            </header>
-            <div class="wall-widget--content">
-              <p class="wall-widget--activity-post-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="wall-widget--actions wall-widget--actions__social">
-              <ul>
-                <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
-                <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
-                <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
-              </ul>
-            </div>
-          </article>
+            </article>
+          </div>
 
         </div>
       </div>
