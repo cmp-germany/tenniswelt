@@ -80,7 +80,7 @@ $thumbnail-size: 70px
     border-left-color: $color-primary
     margin-bottom: 12px
     +make-lg-column(5.25, 12px)
-    +make-md-column(10, 12px)
+    +make-md-column(11, 12px)
     +make-sm-column(5.25, 12px)
     +make-xs-column(10, 12px)
     +make-lg-column-offset(0.5)
@@ -124,13 +124,14 @@ $thumbnail-size: 70px
     .wall-widget--content
       @extend .text-center
     .wall-widget--button
-      @extend .text-center
-      margin-top: 20px
-      margin-left: auto
-      margin-right: auto
-      &:hover
-        text-decoration: none
-        color: #fff
+      display: none
+      // @extend .text-center
+      // margin-top: 20px
+      // margin-left: auto
+      // margin-right: auto
+      // &:hover
+      //   text-decoration: none
+      //   color: #fff
 
 
 

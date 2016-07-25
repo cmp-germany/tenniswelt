@@ -1573,7 +1573,7 @@ mark,
 }
 
 /* line 92, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
-.text-center, #MyWallMid #Wall_FriendsList .wall-widget--content, #MyWallMid #Wall_FriendsList .wall-widget--button {
+.text-center, #MyWallMid #Wall_FriendsList .wall-widget--content {
   text-align: center;
 }
 
@@ -4220,7 +4220,7 @@ body a:hover {
   /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     float: left;
-    width: 83.33333%;
+    width: 91.66667%;
   }
 }
 @media (min-width: 768px) {
@@ -4283,14 +4283,7 @@ body a:hover {
 }
 /* line 126, ../sass/_profile-kontakte.sass */
 #MyWallMid #Wall_FriendsList .wall-widget--button {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 131, ../sass/_profile-kontakte.sass */
-#MyWallMid #Wall_FriendsList .wall-widget--button:hover {
-  text-decoration: none;
-  color: #fff;
+  display: none;
 }
 
 /* line 1, ../sass/_fotos.sass */
