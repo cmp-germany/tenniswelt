@@ -1432,6 +1432,460 @@ h1 {
     margin-left: 100%;
   }
 }
+/* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+/* line 16, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h1 small,
+h1 .small, h2 small,
+h2 .small, h3 small,
+h3 .small, h4 small,
+h4 .small, h5 small,
+h5 .small, h6 small,
+h6 .small,
+.h1 small,
+.h1 .small, .h2 small,
+.h2 .small, .h3 small,
+.h3 .small, .h4 small,
+.h4 .small, .h5 small,
+.h5 .small, .h6 small,
+.h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777777;
+}
+
+/* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* line 30, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h1 small,
+h1 .small, .h1 small,
+.h1 .small,
+h2 small,
+h2 .small, .h2 small,
+.h2 .small,
+h3 small,
+h3 .small, .h3 small,
+.h3 .small {
+  font-size: 65%;
+}
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 41, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h4 small,
+h4 .small, .h4 small,
+.h4 .small,
+h5 small,
+h5 .small, .h5 small,
+.h5 .small,
+h6 small,
+h6 .small, .h6 small,
+.h6 .small {
+  font-size: 75%;
+}
+
+/* line 47, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h1, .h1 {
+  font-size: 36px;
+}
+
+/* line 48, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h2, .h2 {
+  font-size: 30px;
+}
+
+/* line 49, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h3, .h3 {
+  font-size: 24px;
+}
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h4, .h4 {
+  font-size: 18px;
+}
+
+/* line 51, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h5, .h5 {
+  font-size: 14px;
+}
+
+/* line 52, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+h6, .h6 {
+  font-size: 12px;
+}
+
+/* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+p {
+  margin: 0 0 10px;
+}
+
+/* line 62, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  /* line 62, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+  .lead {
+    font-size: 21px;
+  }
+}
+
+/* line 78, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+small,
+.small {
+  font-size: 85%;
+}
+
+/* line 83, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+mark,
+.mark {
+  background-color: #fcf8e3;
+  padding: .2em;
+}
+
+/* line 90, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 91, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 92, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-center, #MyWallMid #Wall_FriendsList .wall-widget--content, #MyWallMid #Wall_FriendsList .wall-widget--button {
+  text-align: center;
+}
+
+/* line 93, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 94, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* line 97, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 98, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-uppercase, .initialism {
+  text-transform: uppercase;
+}
+
+/* line 99, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* line 102, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.text-muted {
+  color: #777777;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+.text-primary {
+  color: #337ab7;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #286090;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+.text-success {
+  color: #3c763d;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+a.text-success:hover,
+a.text-success:focus {
+  color: #2b542c;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+.text-info {
+  color: #31708f;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+a.text-info:hover,
+a.text-info:focus {
+  color: #245269;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+.text-warning {
+  color: #8a6d3b;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #66512c;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+.text-danger {
+  color: #a94442;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
+a.text-danger:hover,
+a.text-danger:focus {
+  color: #843534;
+}
+
+/* line 119, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.bg-primary {
+  color: #fff;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+.bg-primary {
+  background-color: #337ab7;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+a.bg-primary:hover,
+a.bg-primary:focus {
+  background-color: #286090;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+.bg-success {
+  background-color: #dff0d8;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+a.bg-success:hover,
+a.bg-success:focus {
+  background-color: #c1e2b3;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+.bg-info {
+  background-color: #d9edf7;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+a.bg-info:hover,
+a.bg-info:focus {
+  background-color: #afd9ee;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+.bg-warning {
+  background-color: #fcf8e3;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+a.bg-warning:hover,
+a.bg-warning:focus {
+  background-color: #f7ecb5;
+}
+
+/* line 5, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+.bg-danger {
+  background-color: #f2dede;
+}
+
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
+a.bg-danger:hover,
+a.bg-danger:focus {
+  background-color: #e4b9b9;
+}
+
+/* line 138, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* line 149, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/* line 153, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+/* line 167, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 173, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+/* line 177, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 185, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* line 189, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+dt,
+dd {
+  line-height: 1.42857;
+}
+
+/* line 193, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 196, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+dd {
+  margin-left: 0;
+}
+
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.dl-horizontal dd:before, .dl-horizontal dd:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.dl-horizontal dd:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 211, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* line 218, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
+}
+
+/* line 229, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #777777;
+}
+
+/* line 235, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.initialism {
+  font-size: 90%;
+}
+
+/* line 241, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eeeeee;
+}
+/* line 250, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+/* line 257, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857;
+  color: #777777;
+}
+/* line 265, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+/* line 274, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+  text-align: right;
+}
+/* line 286, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.blockquote-reverse footer:before,
+.blockquote-reverse small:before,
+.blockquote-reverse .small:before,
+blockquote.pull-right footer:before,
+blockquote.pull-right small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+/* line 287, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+.blockquote-reverse footer:after,
+.blockquote-reverse small:after,
+.blockquote-reverse .small:after,
+blockquote.pull-right footer:after,
+blockquote.pull-right small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+
+/* line 294, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.42857;
+}
+
 /* line 1, ../sass/_general.sass */
 body {
   font-family: "Open Sans", sans-serif;
@@ -3709,8 +4163,9 @@ body a:hover {
 #MyWallMid .wall-widget--filters:nth-child(2) {
   border-top: none;
   padding-bottom: 10px;
+  margin-bottom: 20px;
 }
-/* line 72, ../sass/_profile-kontakte.sass */
+/* line 73, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--account {
   position: relative;
   background-color: #f9f9f9;
@@ -3742,57 +4197,57 @@ body a:hover {
   font-family: "Open Sans", sans-serif;
 }
 @media (min-width: 1200px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     float: left;
     width: 43.75%;
   }
 }
 @media (min-width: 992px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     float: left;
     width: 83.33333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     float: left;
     width: 43.75%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     margin-left: 4.16667%;
   }
 }
 @media (min-width: 992px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     margin-left: 8.33333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 72, ../sass/_profile-kontakte.sass */
+  /* line 73, ../sass/_profile-kontakte.sass */
   #MyWallMid .wall-widget--account {
     margin-left: 4.16667%;
   }
 }
-/* line 92, ../sass/_profile-kontakte.sass */
+/* line 93, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--account .Wall_FriendsAvatar {
   float: left;
   width: 70px;
   height: 70px;
 }
-/* line 97, ../sass/_profile-kontakte.sass */
+/* line 98, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--account .Wall_FriendsAvatar img {
   margin-top: 0;
   width: 70px;
   height: 70px;
 }
-/* line 102, ../sass/_profile-kontakte.sass */
+/* line 103, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--account .Wall_FriendsName {
   float: left;
   height: 70px;
@@ -3803,7 +4258,7 @@ body a:hover {
   font-size: 14px;
   font-weight: bold;
 }
-/* line 112, ../sass/_profile-kontakte.sass */
+/* line 113, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--account .Wall_Friends_Contact {
   position: absolute;
   bottom: 3px;
@@ -3813,10 +4268,21 @@ body a:hover {
   padding: 0;
   margin: 0;
 }
-
-/* line 158, ../sass/_profile-kontakte.sass */
-#DivLoading_FriendList {
-  display: initial;
+/* line 126, ../sass/_profile-kontakte.sass */
+#MyWallMid #Wall_FriendsList .wall-widget--button {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 131, ../sass/_profile-kontakte.sass */
+#MyWallMid #Wall_FriendsList .wall-widget--button:hover {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 135, ../sass/_profile-kontakte.sass */
+#MyWallMid #Wall_FriendsList .dropdown-menu {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* line 1, ../sass/_fotos.sass */

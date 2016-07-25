@@ -68,6 +68,7 @@ $thumbnail-size: 70px
     &:nth-child(2)
       border-top: none
       padding-bottom: 10px
+      margin-bottom: 20px
 
   .wall-widget--account
     position: relative
@@ -118,6 +119,23 @@ $thumbnail-size: 70px
       padding: 0
       margin: 0
 
+  #Wall_FriendsList
+
+    .wall-widget--content
+      @extend .text-center
+    .wall-widget--button
+      @extend .text-center
+      margin-top: 20px
+      margin-left: auto
+      margin-right: auto
+      &:hover
+        text-decoration: none
+        color: #fff
+
+    .dropdown-menu
+      margin-left: auto
+      margin-right: auto
+
 
 
 
@@ -154,6 +172,3 @@ $thumbnail-size: 70px
 
 
 .spacing
-
-#DivLoading_FriendList
-  display: initial
