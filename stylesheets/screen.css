@@ -89,7 +89,6 @@ body {
   color: #fff;
   background-color: rgba(233, 0, 47, 0.85);
   padding: 5px 20px;
-  margin-left: 7px;
   font-weight: bold;
   outline: none;
 }
@@ -2186,6 +2185,28 @@ body a:hover {
 /* line 48, ../sass/_profile-kontakte.sass */
 .kontakt-card__actions .online-status--online {
   color: #4DDD35;
+}
+
+/* Anpassungen für die Plattform */
+/* line 55, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--matching {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+/* line 60, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--filters {
+  background-color: #f9f9f9;
+  border: solid 1px #eeeeee;
+}
+/* line 64, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--filters:first-child {
+  border-bottom: none;
+}
+/* line 67, ../sass/_profile-kontakte.sass */
+#MyWallMid .wall-widget--filters:nth-child(2) {
+  border-top: none;
+  padding-bottom: 10px;
 }
 
 /* line 1, ../sass/_fotos.sass */
