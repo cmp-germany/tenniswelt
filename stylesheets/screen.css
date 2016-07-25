@@ -4076,6 +4076,19 @@ body a:hover {
   margin-left: 7px;
 }
 
+/* line 121, ../sass/_matching.sass */
+.wall-widget--filter-select .dropdown-menu {
+  left: calc(50% - 46px);
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+/* line 127, ../sass/_matching.sass */
+.wall-widget--filter-select .dropdown-menu a {
+  height: 30px;
+  margin-right: 0;
+}
+
 /* line 3, ../sass/_profile-kontakte.sass */
 .matching__filters--kontakte {
   font-size: 14px;
@@ -4278,11 +4291,6 @@ body a:hover {
 #MyWallMid #Wall_FriendsList .wall-widget--button:hover {
   text-decoration: none;
   color: #fff;
-}
-/* line 135, ../sass/_profile-kontakte.sass */
-#MyWallMid #Wall_FriendsList .dropdown-menu {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* line 1, ../sass/_fotos.sass */
