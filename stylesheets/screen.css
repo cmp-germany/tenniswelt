@@ -4082,11 +4082,20 @@ body a:hover {
   border-radius: 0;
   border: none;
   outline: none;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-/* line 127, ../sass/_matching.sass */
+/* line 130, ../sass/_matching.sass */
+.wall-widget--filter-select .dropdown-menu .Wall_FriendsFilter {
+  font-size: inherit;
+}
+/* line 133, ../sass/_matching.sass */
 .wall-widget--filter-select .dropdown-menu a {
-  height: 30px;
+  height: 35px;
   margin-right: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 /* line 3, ../sass/_profile-kontakte.sass */
