@@ -1,0 +1,43 @@
+﻿.SearchResultsList{display:block;width:1160px;margin-bottom:10px;}
+.SearchResultsPageTitle{margin:0 0 0 20px;}
+.SearchResultsTitle{display:block;width:1150px;margin:0 0 0 20px;float:left;font-size:24px;}
+.SearchResultsItem{display:inline-block;width:371px;margin:10px 0 0 10px;border:solid 1px #eeeeee;padding:10px;background-color:#ffffff;position:relative;}
+.SearchResultsAvatar{display:inline-block;}
+.SearchResultsName{/*line-height:40px;*/padding-left:10px;color:#606060;font-family:RobotoCondensed-Bold;width:230px;/*display:inline-block;*/}
+.SearchResultsMSG{display:block;margin:20px;}
+.pager{min-width:500px;text-align:left;height:20px;margin:10px;display:inline-block;}
+.CompaniesScroll{width:430px;min-height:444px;overflow-y:overlay;float:left;margin-top:10px;}
+.CompaniesMap{display:block;width:auto;height:448px;float:left;overflow:hidden;}
+.CompaniesMapTitle{display:block;margin:10px 0 0 20px;font-size:16px;}
+.CompaniesMapInner{display:block;margin:15px 20px 0px 20px;width:675px;height:540px;}
+.CompaniesScroll .SearchResultsItem{margin:5px 0 5px 10px!important;}
+/*.CompaniesScroll .SearchResultsName{line-height:inherit;line-height:40px!important;}*/
+
+/* ----- Google maps tags in Companies search ----- */
+.GP_1{display:inline-block;width:300px;height:110px;margin-top:5px;}
+.GP_2{display:inline-block;float:left;width:100px;height:100px;}
+.GP_3{display:inline-block;float:left;width:190px;height:auto;margin-left:10px;}
+.GP_31{font-weight:bold;}
+.GP_32{}
+.GP_33{}
+.GP_34{}
+.GP_3 div{display:block;line-height:16px;font-size:12px;}
+.GP_2 a{display:block;}
+.GP_2 img{display:block;width:100px;height:100px;}
+.SearchResultsMarker{position:absolute;top:17px;right:-25px;}
+/* ----- Google maps tags in Companies search END ----- */
+
+ /* ----- seting for Messages and Chat Icons in the 'SearchResults' page ----- */
+.ChatIcon,.VideoChatIcon{top:35px!important;}
+.ChatIcon{right:10px!important;}
+.VideoChatIcon{right:10px!important;}
+.ChatStatusIcon{top:32px!important;right:35px!important;}
+/*.SearchResultsMessagesIcon{display:inline-block;width:20px;height:20px;color:#000000;margin-top:5px;position:absolute;top:15px;right:10px;}
+.SearchResultsMessagesIcon:after{font-size:20px;}
+
+.SearchResultsChatStatusIcon{display:inline-block;width:20px;height:20px;color:#000000;margin-top:5px;position:absolute;  top:18px;right:62px;background-size:15px 15px;}
+.SearchResultsChatStatusIcon:after{font-size:20px}*/
+
+.SearchBTN{display:inline-block;font-size:12px;height:20px;line-height:20px;padding:0 8px;margin-right:5px;color:#ffffff;font-family:RobotoCondensed-Bold;background-color:#ed1c24;}
+.SearchBox{padding:0 3px!important;margin:0!important;height:20px;line-height:20px;width:200px!important;}
+.SearchAbout{padding-top:10px;height:38px;overflow:hidden;}
