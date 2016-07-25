@@ -1,0 +1,49 @@
+﻿.TabsMain{
+background-color:transparent !important;padding:10px;z-index:100;margin-top:30px;position:relative}
+/*.TabsMenu,.TabsItem{display:inline-block;float:left;}
+.TabsMenu{position:relative;z-index:200;  width:360px;display:none;}*/
+.TabsItem{padding:5px 10px;font-family:RobotoCondensed-Bold;background-color:#f8f8f8;border-top-left-radius:5px;border-top-right-radius:5px;
+border-top:solid 1px #dddddd;border-right:solid 1px #dddddd;border-left:solid 1px #dddddd;border-bottom:solid 1px #dddddd;margin-right:3px;}
+
+.TabsContent{min-width:300px;margin:0px;display:inline-block;float:left;font-size:12px;background-color:#f7f7f7;}
+
+@media screen and (min-width : 1200px) 
+ {
+    #Webcontent1{
+    
+    }
+}
+@media screen and (min-width : 992px) 
+and (max-width : 1199px)  {
+
+}
+@media screen and (min-width : 768px) 
+and (max-width : 991px)  {
+    .TabsMenu,.TabsItem {
+   
+    }
+}
+@media screen and (min-width : 601px) 
+and (max-width : 767px)  {
+    .TabsMenu, .TabsItem {
+   
+       top:94px;
+       left:23px;
+    }
+    .TabsMain{
+        width:360px;
+    }
+}
+
+@media screen and (min-width : 440px) 
+and (max-width : 600px)  {
+  .TabsItem { top:94px;  }
+    .TabsMenu{top:128px;  }
+}
+@media screen and (max-width : 439px) 
+and (min-width : 300px)  {
+  .TabsItem { top:156px; width:100px; }
+    .TabsMenu{top:156px;  }
+}
+
+
