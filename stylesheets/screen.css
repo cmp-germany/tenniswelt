@@ -7,9 +7,6 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
-@import 'https://fonts.googleapis.com/css?family=Pacifico';
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
 /* line 5, ../sass/_fonts.sass */
 h1 {
@@ -93,6 +90,7 @@ body {
   color: #fff;
   background-color: rgba(233, 0, 47, 0.85);
   padding: 5px 20px;
+  margin-left: 7px;
   font-weight: bold;
   outline: none;
 }
@@ -3408,11 +3406,6 @@ body a:hover {
     width: calc(100vw - 50px);
   }
 }
-/* line 5, ../sass/_fonts.sass */
-h1 {
-  font-weight: lighter;
-}
-
 /* line 8, ../sass/chat-design.sass */
 .chat-users {
   background-color: #eee;
