@@ -1216,21 +1216,21 @@ body a:hover {
   font-weight: normal;
   color: #777;
   margin-top: 3px;
-  visibility: hidden;
+  visibility: visible;
 }
-/* line 364, ../sass/_wall.sass */
+/* line 365, ../sass/_wall.sass */
 .comment-date .material-icons {
   font-size: 12px;
   vertical-align: middle;
   margin-top: -2px;
 }
 
-/* line 370, ../sass/_wall.sass */
+/* line 371, ../sass/_wall.sass */
 .wall-widget--comment:hover .comment-date {
   visibility: visible;
 }
 
-/* line 373, ../sass/_wall.sass */
+/* line 374, ../sass/_wall.sass */
 .wall-widget--comment__comment {
   padding-left: 5px;
   display: inline-block;
@@ -1240,7 +1240,7 @@ body a:hover {
   font-size: 12px;
 }
 
-/* line 383, ../sass/_wall.sass */
+/* line 384, ../sass/_wall.sass */
 .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -1248,7 +1248,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 390, ../sass/_wall.sass */
+/* line 391, ../sass/_wall.sass */
 .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -1258,7 +1258,7 @@ body a:hover {
   line-height: 0;
 }
 
-/* line 399, ../sass/_wall.sass */
+/* line 400, ../sass/_wall.sass */
 .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -1267,7 +1267,7 @@ body a:hover {
   *text-align: left;
 }
 
-/* line 406, ../sass/_wall.sass */
+/* line 407, ../sass/_wall.sass */
 .wall-widget--header__right {
   display: inline-block;
   float: right;
@@ -1277,7 +1277,7 @@ body a:hover {
   *text-align: right;
 }
 
-/* line 415, ../sass/_wall.sass */
+/* line 416, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -1285,42 +1285,42 @@ body a:hover {
   border-right-color: #eee;
   padding: 15px 22px;
 }
-/* line 425, ../sass/_wall.sass */
+/* line 426, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
 
-/* line 430, ../sass/_wall.sass */
+/* line 431, ../sass/_wall.sass */
 .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 
-/* line 436, ../sass/_wall.sass */
+/* line 437, ../sass/_wall.sass */
 .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 440, ../sass/_wall.sass */
+/* line 441, ../sass/_wall.sass */
 .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 445, ../sass/_wall.sass */
+/* line 446, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 449, ../sass/_wall.sass */
+/* line 450, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 452, ../sass/_wall.sass */
+/* line 453, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -1329,27 +1329,27 @@ body a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 459, ../sass/_wall.sass */
+/* line 460, ../sass/_wall.sass */
 .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 462, ../sass/_wall.sass */
+/* line 463, ../sass/_wall.sass */
 .info p {
   margin-bottom: 3px;
 }
-/* line 465, ../sass/_wall.sass */
+/* line 466, ../sass/_wall.sass */
 .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 468, ../sass/_wall.sass */
+/* line 469, ../sass/_wall.sass */
 .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 474, ../sass/_wall.sass */
+/* line 475, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -1357,17 +1357,17 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 480, ../sass/_wall.sass */
+/* line 481, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
 }
-/* line 483, ../sass/_wall.sass */
+/* line 484, ../sass/_wall.sass */
 .wall-widget--partners header {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 487, ../sass/_wall.sass */
+/* line 488, ../sass/_wall.sass */
 .banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -1375,7 +1375,7 @@ body a:hover {
   height: auto;
 }
 
-/* line 493, ../sass/_wall.sass */
+/* line 494, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
