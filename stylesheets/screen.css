@@ -11341,6 +11341,96 @@ body a:hover {
     max-width: 1170px;
   }
 }
+/* line 2, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder {
+  padding: 0;
+  margin-bottom: 0;
+}
+/* line 6, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder .title {
+  margin-bottom: 0;
+}
+/* line 9, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder h2 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+/* line 12, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder span {
+  font-size: 16px;
+}
+
+/* line 16, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list {
+  border: none;
+  background: transparent;
+}
+/* line 19, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list .album-list {
+  background-color: #fff;
+  border: solid 1px #3aa6e7;
+  border-bottom-color: #eee;
+  border-right-color: #eee;
+  margin-top: 0;
+}
+/* line 25, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list .album-list #album-list {
+  height: auto !important;
+}
+
+/* line 30, ../sass/_profile-fotos--css-galary.sass */
+.album-list .album-list {
+  border: none;
+}
+/* line 34, ../sass/_profile-fotos--css-galary.sass */
+.album-list .main-options .button-wrapper {
+  float: right;
+}
+/* line 36, ../sass/_profile-fotos--css-galary.sass */
+.album-list .main-options .button-wrapper .photo-button {
+  line-height: 20px;
+  margin: 0;
+  font-weight: normal;
+  margin-right: 10px;
+}
+/* line 42, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item {
+  position: static !important;
+}
+/* line 45, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper strong {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  background-color: #3aa6e7;
+  background-color: rgba(58, 166, 231, 0.85);
+}
+/* line 51, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper strong a {
+  color: #ffffff;
+  line-height: 20px;
+  padding: 0 4px;
+  text-decoration: none;
+}
+/* line 57, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper p {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
+  padding: 0px 6px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: #3aa6e7;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 );
+}
+
 /* The following things are used only to improve the
  * appearance of the live Page. */
 /* line 1, ../sass/_live-page-structure.sass */
