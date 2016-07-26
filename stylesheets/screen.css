@@ -654,7 +654,7 @@ mark,
 }
 
 /* line 92, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
-.text-center, #MyWallMid #Wall_FriendsList .wall-widget--content {
+.text-center, .empty-list, #MyWallMid #Wall_FriendsList .wall-widget--content {
   text-align: center;
 }
 
@@ -9702,6 +9702,15 @@ body a:hover {
   margin-right: 0;
   padding-top: 7px;
   padding-bottom: 7px;
+}
+
+/* line 139, ../sass/_matching.sass */
+.empty-list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: #777777;
 }
 
 /* line 3, ../sass/_profile-kontakte.sass */
