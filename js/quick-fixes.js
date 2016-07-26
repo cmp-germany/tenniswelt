@@ -1,3 +1,5 @@
+$console.log('Dies ist ein Test');
+
 // This waits for jQuery to be loaded
 (function() {
   var checkReady = function(callback) {
