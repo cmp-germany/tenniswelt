@@ -5580,7 +5580,7 @@ body a:hover {
     display: block;
   }
 
-  /* line 216, ../sass/chat-design.sass */
+  /* line 217, ../sass/chat-design.sass */
   .chat-users {
     position: fixed;
     float: left;
@@ -5588,13 +5588,14 @@ body a:hover {
     box-shadow: none;
     z-index: 7002;
   }
-  /* line 223, ../sass/chat-design.sass */
-  .chat-users .user-list {
+  /* line 225, ../sass/chat-design.sass */
+  .chat-users .chat-users-body .user-list {
     height: 320px;
-    height: calc(100vh - 135px );
+    height: calc(100vh - 137px);
+    max-height: none;
   }
 
-  /* line 227, ../sass/chat-design.sass */
+  /* line 230, ../sass/chat-design.sass */
   .chat-sessions {
     position: static;
     margin-bottom: 30px;
@@ -5605,22 +5606,22 @@ body a:hover {
     padding: 0;
     border-radius: 0;
   }
-  /* line 237, ../sass/chat-design.sass */
+  /* line 240, ../sass/chat-design.sass */
   .chat-sessions .chat-session {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 30px;
   }
-  /* line 242, ../sass/chat-design.sass */
+  /* line 245, ../sass/chat-design.sass */
   .chat-sessions .chat-session .chat-session-header {
     display: none;
   }
-  /* line 244, ../sass/chat-design.sass */
+  /* line 247, ../sass/chat-design.sass */
   .chat-sessions .chat-session .chat-session-header.chat-active {
     display: block;
   }
-  /* line 246, ../sass/chat-design.sass */
+  /* line 249, ../sass/chat-design.sass */
   .chat-sessions .chat-session .chat-message-holder {
     height: 290px;
     height: calc(100vh - 157px);
