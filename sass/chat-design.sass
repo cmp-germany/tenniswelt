@@ -213,6 +213,7 @@ $color-chat-tabs: $color-important
     &.in
       display: block
 
+
   .chat-users
     position: fixed
     float: left
@@ -220,9 +221,11 @@ $color-chat-tabs: $color-important
     box-shadow: none
     z-index: 7002
 
-    .user-list
-      height: 320px
-      height: calc(100vh - 135px )
+    .chat-users-body
+      .user-list
+        height: 320px
+        height: calc(100vh - 137px)
+        max-height: none
 
   .chat-sessions
     position: static
