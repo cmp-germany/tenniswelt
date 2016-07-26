@@ -3,23 +3,97 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700)
 
 $color-chat-tabs: $color-important
-body
-  .main-chat-container
-    position: fixed
-    bottom: 0
+.main-chat-container
+  position: fixed
+  bottom: 0
+  width: 100%
+  &.collapse
+    display: block
+
+.chat-users
+  position: static
+  float: right
+  background-color: #eee
+  width: 250px
+  box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+
+
+  .chat-users-header
+    background-color: $color-chat-tabs
+    cursor: pointer
+    position: relative
+    height: 30px
+    overflow: hidden
+    font-family: 'Open Sans', sans-serif
+    font-size: 14px
+    color: #fff
+    font-weight: bold
+    white-space: nowrap
+    border-radius: 0px
+
+  .user-list
+    height: 380px
+    //max-height: 250px
+    overflow-y: scroll
+
+  .chat-user-holder
+    background-color: inherit
+    padding: 7px 0
+    margin: 7px 0
+    height: auto
+    &:hover
+      background-color: #ffffff
+
+  .nav-avatar
+    margin: 0
+    border-radius: 0
+    width: 30px
+    height: auto
+    margin: 0 4px
+    margin-left: 14px
+
+  .user-name
+    line-height: normal
+    font-size: 12px
+    overflow-x: hidden
+    white-space: nowrap
+    padding-left: 5px
+    font-weight: 700
+
+  .chat-search
     width: 100%
-    &.collapse
-      display: block
+    background-color: inherit
 
-  .chat-users
-    position: static
-    float: right
-    background-color: #eee
-    width: 250px
-    box-shadow: 0px 3px 34px -2px rgba(0,0,0,0.75)
+  INPUT[type="text"]
+    display: inline-block
+    border: none
+    width: 80%
+    padding: 3px 10px
+    padding-left: 23px
+    margin: 0
+    outline: none
+    font-size: 14px
+    color: #444
+    border-radius: 0
 
+.chat-sessions
+  position: absolute
+  float: right
+  z-index: 7001
+  right: 250px
+  width: 100%
+  text-align: right
+  padding-left: 0
 
-    .chat-users-header
+  .chat-session
+    text-align: left
+    display: inline-block
+    vertical-align: bottom
+    margin-right: 15px
+    //float: right
+    box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+
+    .chat-session-header
       background-color: $color-chat-tabs
       cursor: pointer
       position: relative
@@ -30,221 +104,145 @@ body
       color: #fff
       font-weight: bold
       white-space: nowrap
-      border-radius: 0px
-
-    .user-list
-      height: 380px
-      //max-height: 250px
-      overflow-y: scroll
-
-    .chat-user-holder
-      background-color: inherit
-      padding: 7px 0
-      margin: 7px 0
-      height: auto
-      &:hover
-        background-color: #ffffff
-
-    .nav-avatar
-      margin: 0
-      border-radius: 0
-      width: 30px
-      height: auto
-      margin: 0 4px
-      margin-left: 14px
-
-    .user-name
-      line-height: normal
-      font-size: 12px
-      overflow-x: hidden
-      white-space: nowrap
-      padding-left: 5px
-      font-weight: 700
-
-    .chat-search
-      width: 100%
-      background-color: inherit
-
-    INPUT[type="text"]
-      display: inline-block
       border: none
-      width: 80%
-      padding: 3px 10px
-      padding-left: 23px
-      margin: 0
-      outline: none
-      font-size: 14px
-      color: #444
-      border-radius: 0
 
-  .chat-sessions
-    position: absolute
-    float: right
-    z-index: 7001
-    right: 250px
-    width: 100%
-    text-align: right
-    padding-left: 0
+    .chat-title
+      padding-left: 3px
 
-    .chat-session
-      text-align: left
-      display: inline-block
-      vertical-align: bottom
-      margin-right: 15px
-      //float: right
-      box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+    .chat-message-holder
+      border: none
+      height: 300px
+      background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
+      /* ff3.6+
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(221, 221, 221, 1)))
+      /* safari4+,chrome
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
+      /* safari5.1+,chrome10+
+      background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
+      /* opera 11.10+
+      background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
+      /* ie10+
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
+      /* w3c
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 )
+      /* ie6-9
 
-      .chat-session-header
-        background-color: $color-chat-tabs
-        cursor: pointer
-        position: relative
-        height: 30px
-        overflow: hidden
-        font-family: 'Open Sans', sans-serif
-        font-size: 14px
-        color: #fff
-        font-weight: bold
-        white-space: nowrap
-        border: none
-
-      .chat-title
-        padding-left: 3px
-
+    .chat-session-body
       .chat-message-holder
+        padding: 0
+
+      .chat-message
         border: none
-        height: 300px
-        background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
-        /* ff3.6+
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(221, 221, 221, 1)))
-        /* safari4+,chrome
-        background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
-        /* safari5.1+,chrome10+
-        background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
-        /* opera 11.10+
-        background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
-        /* ie10+
-        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%)
-        /* w3c
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 )
-        /* ie6-9
+        padding: 0
+        margin: 5px 0
+        .nav-avatar
+          margin-top: 15px
+          margin-left: 14px
+          margin-right: 4px
+          width: 30px !important
+          height: 30px !important
+          border-radius: 0
 
-      .chat-session-body
-        .chat-message-holder
-          padding: 0
+        .message-content
+          max-width: 80%
+          strong
+            font-size: 0px
+            margin: 0
+            line-height: normal
+            visibility: hidden
+          div
+            display: inline-block
+            font-family: 'PT Sans Narrow', sans-serif
+            font-size: 16px
+            background-color: lighten( $color-important, 20%)
+            color: #fff
+            min-height: 30px
+            padding: 3px 10px
+            padding-top: 5px
+            padding-left: 7px
+          &:hover
+            strong
+              visibility: visible
 
-        .chat-message
+      .chat-message--partner
+        .nav-avatar
+          float: right
+          margin-right: 14px
+          margin-left: 4px
+
+        .message-content
+          float: right
+          strong
+            width: 100%
+            text-align: right
+          div
+            background-color: lighten( $color-primary, 10%)
+            padding-left: 10px
+            padding-right: 7px
+            float: right
+
+
+      .type-message
+        height: 50px
+        .chat-new-message
+          margin: 0
           border: none
-          padding: 0
-          margin: 5px 0
-          .nav-avatar
-            margin-top: 15px
-            margin-left: 14px
-            margin-right: 4px
-            width: 30px !important
-            height: 30px !important
-            border-radius: 0
+          border-radius: none
+          height: 100%
+          padding: 8px
+          font-size: 14px
+          width: 80%
 
-          .message-content
-            max-width: 80%
-            strong
-              font-size: 0px
-              margin: 0
-              line-height: normal
-              visibility: hidden
-            div
-              display: inline-block
-              font-family: 'PT Sans Narrow', sans-serif
-              font-size: 16px
-              background-color: lighten( $color-important, 20%)
-              color: #fff
-              min-height: 30px
-              padding: 3px 10px
-              padding-top: 5px
-              padding-left: 7px
-            &:hover
-              strong
-                visibility: visible
-
-        .chat-message--partner
-          .nav-avatar
-            float: right
-            margin-right: 14px
-            margin-left: 4px
-
-          .message-content
-            float: right
-            strong
-              width: 100%
-              text-align: right
-            div
-              background-color: lighten( $color-primary, 10%)
-              padding-left: 10px
-              padding-right: 7px
-              float: right
-
-
-        .type-message
-          height: 50px
-          .chat-new-message
-            margin: 0
-            border: none
-            border-radius: none
-            height: 100%
-            padding: 8px
-            font-size: 14px
-            width: 80%
-
-          .chat-send
-            width: 20%
-            margin: 0
-            color: $color-important
-            font-weight: bold
-            text-align: center
-            font-family: 'Open Sans', sans-serif
-            height: 100%
-            &:hover
-              background-color: $color-important
-              color: #ffffff
+        .chat-send
+          width: 20%
+          margin: 0
+          color: $color-important
+          font-weight: bold
+          text-align: center
+          font-family: 'Open Sans', sans-serif
+          height: 100%
+          &:hover
+            background-color: $color-important
+            color: #ffffff
 
 
 
 @media(max-width:767px)
-  body
-    .main-chat-container.collapse
-      display: none
-      &.in
-        display: block
+  .main-chat-container.collapse
+    display: none
+    &.in
+      display: block
 
-    .chat-users
-      position: fixed
-      float: left
+  .chat-users
+    position: fixed
+    float: left
+    width: 100%
+    box-shadow: none
+    z-index: 7002
+
+    .user-list
+      height: 320px
+      height: calc(100vh - 135px )
+
+  .chat-sessions
+    position: static
+    margin-bottom: 30px
+    float: left
+    bottom: 30px
+    right: 0
+    width: 100%
+    padding: 0
+    border-radius: 0
+
+    .chat-session
       width: 100%
-      box-shadow: none
-      z-index: 7002
-
-      .user-list
-        height: 320px
-        height: calc(100vh - 135px )
-
-    .chat-sessions
-      position: static
-      margin-bottom: 30px
-      float: left
+      position: absolute
+      left: 0
       bottom: 30px
-      right: 0
-      width: 100%
-      padding: 0
-      border-radius: 0
-
-      .chat-session
-        width: 100%
-        position: absolute
-        left: 0
-        bottom: 30px
-        .chat-session-header
-          display: none
-          &.chat-active
-            display: block
-        .chat-message-holder
-          height: 290px
-          height: calc(100vh - 157px)
+      .chat-session-header
+        display: none
+        &.chat-active
+          display: block
+      .chat-message-holder
+        height: 290px
+        height: calc(100vh - 157px)
