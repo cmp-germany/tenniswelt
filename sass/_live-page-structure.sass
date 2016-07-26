@@ -1,0 +1,18 @@
+#MyWallLeft
+  +make-md-column(3)
+  @extend .hidden-sm
+  @extend .hidden-xs
+
+#MyWallRight
+  +make-md-column(3)
+  @extend .hidden-sm
+  @extend .hidden-xs
+
+#MyWallMid
+  +make-md-column(6)
+
+  &.MyWallMid--9
+    +make-md-column(9)
+
+.content-wrapper
+  @extend .container

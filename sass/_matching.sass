@@ -43,65 +43,6 @@
     margin-top: 4px
 
 
-.matching__account
-  text-align: left
-  padding: 10px
-  margin-bottom: 10px
-  border: 1px solid #ddd
-  padding-top: 10px
-  *
-    display: inline-block
-    vertical-align: top
-
-  .avatar
-    width: 50px
-    height: 50px
-
-  .account
-    width: calc(100% - 55px)
-    height: 50px
-    display: table
-    position: relative
-    float: right
-    overflow: hidden
-    > *
-      display: table-cell
-      vertical-align: middle
-    a:hover
-      z-index: 100
-
-    h4
-      font-size: 13px
-      font-weight: bold
-      width: calc(100% - 20px)
-
-
-    ul
-      display: table
-      position: absolute
-      top: 0
-      white-space: nowrap
-      right: 0
-      height: 100%
-      background-color: $color-background-widget
-      box-shadow: -10px 0 20px $color-background-widget
-
-      li
-        display: table-cell
-        vertical-align: middle
-
-
-
-      .material-icons
-        vertical-align: text-bottom
-        font-size: 16px
-        margin-left: 2px
-
-      .online-status
-        color: #777
-
-      .online-status--online
-        color: $color-chat-online
 
 .matching__filters
   padding: 10px
@@ -173,5 +114,24 @@
 .matching__filter-select
   display: inline-block
   vertical-align: top
-  margin-top: 5px
+  margin-top: -5px
   margin-left: 7px
+
+.wall-widget--filter-select
+  .dropdown-menu
+    left: calc(50% - 46px)
+    border-radius: 0
+    border: none
+    outline: none
+    margin-top: 0
+    padding-top: 0
+    padding-bottom: 0
+
+    .Wall_FriendsFilter
+      font-size: inherit
+
+    a
+      height: 35px
+      margin-right: 0
+      padding-top: 7px
+      padding-bottom: 7px

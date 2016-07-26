@@ -33,6 +33,7 @@
 
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/matching-setting.js" charset="utf-8"></script>
     <script src="js/modules.js" charset="utf-8"></script>
 
   </head>
@@ -45,16 +46,39 @@
       <!-- Main Column -->
       <div class="section-center col-md-9">
 
-        <ul class="profile-tabs">
-          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#">Cooll Match</a></li>
-          <li class="profile-tabs__tab"><a href="#">Most Common Friends</a></li>
-        </ul>
-
         <div class="matching-options clearfix">
           <h3 class="matching-options__headline">Matching Einstellungen</h3>
           <form class="form-horizontal">
 
             <div class="row matching-options__matching-section">
+
+              <div class="col-sm-2">
+                <h4>Variante</h4>
+              </div>
+
+              <div class="col-sm-10">
+
+                <div class="form-group">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-8">
+                    <fieldset>
+                      <input type="radio" id="mcff" class="radio-event" name="variante" value="most-common-friends" checked>
+                      <label for="mcf" class="control-label control-label--variante">Most Common Friends</label>
+
+                      <input type="radio" id="cm" class="radio-event" name="variante" value="cooll-match">
+                      <label for="cm" class="control-label control-label--variante">Cooll Match</label>
+                    </fieldset>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+            <div class="row matching-options__matching-section radio-hide-away">
 
               <div class="col-sm-2">
                 <h4>Privat</h4>
@@ -80,7 +104,7 @@
 
             </div>
 
-            <div class="row matching-options__matching-section">
+            <div class="row matching-options__matching-section radio-hide-away">
 
               <div class="col-sm-2">
                 <h4 class="">Geschäftlich</h4>
@@ -113,7 +137,7 @@
 
             </div>
 
-            <div class="row matching-options__matching-section">
+            <div class="row matching-options__matching-section radio-hide-away">
               <div class="col-sm-10 col-sm-offset-2">
 
                 <div class="form-group matching-options__template-checkbox">
