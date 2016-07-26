@@ -1,6 +1,5 @@
 /*Chat im Responsive*/
 var chatQuickFixes = function () {
-  console.log("chatQuickFixes is called!");
   $('.chat-sessions').on("click", ".chat-session-header", function(){
     $('.chat-users-body').css('display', 'block');
   });
