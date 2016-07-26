@@ -8,6 +8,8 @@ body
     position: fixed
     bottom: 0
     width: 100%
+    &.collapse
+      display: block
 
   .chat-users
     position: static
@@ -204,8 +206,14 @@ body
               background-color: $color-important
               color: #ffffff
 
+
+
 @media(max-width:767px)
   body
+    .main-chat-container.collapse
+      display: none
+      &.in
+        display: block
 
     .chat-users
       position: fixed
