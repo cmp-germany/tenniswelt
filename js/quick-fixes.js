@@ -27,7 +27,6 @@ var replaceElements = function() {
 /*Chat im Responsive*/
 function chat() {
   $('.chat-sessions').on("click", ".chat-session-header", function(){
-    console.log("he");
     $('.chat-users-body').css('display', 'block');
   });
 
