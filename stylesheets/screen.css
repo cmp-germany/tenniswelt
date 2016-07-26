@@ -4410,41 +4410,97 @@ body a:hover {
 }
 
 /* line 1, ../sass/_album-galary.sass */
+.area-description {
+  font-size: 12px;
+  padding: 0px 3px;
+  margin-bottom: 25px;
+}
+
+/* line 6, ../sass/_album-galary.sass */
 .area-fotos--album {
   margin: 0;
+  padding: 5px;
   border: solid 1px #eeeeee;
   border-top-color: #3aa6e7;
   border-left-color: #3aa6e7;
   background-color: #fefefe;
 }
 
-/* line 8, ../sass/_album-galary.sass */
-.col-foto {
-  padding: 5px;
-}
-
-/* line 12, ../sass/_album-galary.sass */
+/* line 15, ../sass/_album-galary.sass */
 .galary-foto {
   position: relative;
+  padding: 3px;
 }
 
-/* line 15, ../sass/_album-galary.sass */
-.galary-foto__thumbnail {
-  width: 100%;
-  height: auto;
-  border: solid 1px #eeeeee;
+/* line 19, ../sass/_album-galary.sass */
+.galary-foto:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
-/* line 20, ../sass/_album-galary.sass */
-.galary-foto__description--title {
+/* line 24, ../sass/_album-galary.sass */
+.galary-foto a {
   position: absolute;
   top: 0;
-  border: solid 1px transparent;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 3px;
+  overflow: hidden;
+}
+
+/* line 33, ../sass/_album-galary.sass */
+.galary-foto__thumbnail {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* line 44, ../sass/_album-galary.sass */
+.galary-foto--clearfix {
+  position: relative;
+  width: 100%;
+}
+
+/* line 48, ../sass/_album-galary.sass */
+.galary-foto__description {
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
   padding: 4px 8px;
-  margin-top: 1px;
-  margin-left: 1px;
-  color: #fff;
-  background-color: #3aa6e7;
+  padding-top: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0px 1px #333333;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100,3aa6e7+100&0+0,0.65+100 */
+  background: -moz-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 );
+}
+
+/* line 64, ../sass/_album-galary.sass */
+.foto-title {
+  margin-bottom: 0px;
+}
+
+/* line 67, ../sass/_album-galary.sass */
+.foto-likes {
+  margin-bottom: 0px;
+  float: right;
+}
+/* line 70, ../sass/_album-galary.sass */
+.foto-likes .material-icons {
+  vertical-align: middle;
+  margin-top: -4px;
+  font-size: 16px;
+  margin-right: 4px;
 }
 
 /* line 1, ../sass/_loading-bar.sass */
