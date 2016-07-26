@@ -12,7 +12,7 @@ var chatQuickFixes = function () {
   // so, better, proper use of on():
   // http://stackoverflow.com/questions/8021436/turning-live-into-on-in-jquery
 
-  $('.chat-sessions').on("click", ".chat-user-holder", function(){
+  $('.main-chat-container').on("click", ".chat-user-holder", function(){
     $('.chat-users-body').css('display', 'none');
   });
 }
