@@ -4488,14 +4488,19 @@ body a:hover {
 /* line 64, ../sass/_album-galary.sass */
 .foto-title {
   margin-bottom: 0px;
+  width: 100%;
+  padding-right: 50px;
+  display: inline-block;
+  overflow: hidden;
 }
 
-/* line 67, ../sass/_album-galary.sass */
+/* line 71, ../sass/_album-galary.sass */
 .foto-likes {
+  width: 40%;
   margin-bottom: 0px;
   float: right;
 }
-/* line 70, ../sass/_album-galary.sass */
+/* line 75, ../sass/_album-galary.sass */
 .foto-likes .material-icons {
   vertical-align: middle;
   margin-top: -4px;
