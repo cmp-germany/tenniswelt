@@ -230,6 +230,13 @@ body
 
       .chat-session
         width: 100%
+        position: absolute
+        left: 0
+        bottom: 30px
+        .chat-session-header
+          display: none
+          &.chat-active
+            display: block
         .chat-message-holder
           height: 290px
           height: calc(100vh - 157px)

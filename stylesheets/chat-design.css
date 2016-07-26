@@ -268,8 +268,19 @@ body .chat-sessions .chat-session .chat-session-body .type-message .chat-send:ho
   /* line 231, ../sass/chat-design.sass */
   body .chat-sessions .chat-session {
     width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
   }
-  /* line 233, ../sass/chat-design.sass */
+  /* line 236, ../sass/chat-design.sass */
+  body .chat-sessions .chat-session .chat-session-header {
+    display: none;
+  }
+  /* line 238, ../sass/chat-design.sass */
+  body .chat-sessions .chat-session .chat-session-header.chat-active {
+    display: block;
+  }
+  /* line 240, ../sass/chat-design.sass */
   body .chat-sessions .chat-session .chat-message-holder {
     height: 290px;
     height: calc(100vh - 157px);
