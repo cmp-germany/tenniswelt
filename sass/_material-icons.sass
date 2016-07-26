@@ -1,0 +1,36 @@
+=material-icon()
+  box-sizing: border-box
+  color: rgb(119, 119, 119)
+  direction: ltr
+  display: inline-block
+  font-family: "Material Icons"
+  font-size: 16px
+  font-style: normal
+  font-weight: normal
+  height: 16px
+  letter-spacing: normal
+  line-height: 16px
+  list-style-type: none
+  text-align: center
+  text-transform: none
+  white-space: nowrap
+  width: 16px
+  word-wrap: normal
+  -webkit-font-smoothing: antialiased
+
+.ChatStatusIcon
+  background: none
+
+  &::after
+    content: ""
+    +material-icon()
+
+  &.UserMediaOnlineIcon
+    &::after
+      color: $color-chat-online
+
+.ChatIcon
+  background: none
+  &::after
+    content: ""
+    +material-icon()
