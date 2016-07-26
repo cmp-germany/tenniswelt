@@ -56,6 +56,13 @@ body
   margin: 0
   margin-top: 10px
 
+  &:nth-child(2)
+    .wall-widget--filter-element:first-child .element-left
+      &::after
+        content: "Lokal"
+      span
+        display: none
+
   .select-toggle:hover
     cursor: pointer
 
@@ -100,10 +107,14 @@ body
   text-align: center
 
   &:first-child
+    @extend .col-sm-3
+    padding: 0
     text-align: right
     padding-right: 5px
 
   &:last-child
+    @extend .col-sm-7
+    padding: 0
     text-align: left
     padding-left: 5px
 
@@ -155,10 +166,13 @@ body
 .avatar
   width: 50px
   height: 50px
+  margin: 0
 
 .account
   width: calc(100% - 55px)
+  max-width: calc(100% - 55px)
   height: 50px
+  max-height: 50px
   display: table
   position: relative
   float: right
@@ -172,7 +186,16 @@ body
   h4
     font-size: 13px
     font-weight: bold
-    width: calc(100% - 20px)
+    width: calc(100% - 25px)
+    margin-left: 5px
+    margin-top: 0
+    margin-bottom: 0
+    max-height: 50px
+    max-width: 165px
+    @media (max-width: $screen-md-max)
+      max-width: 100px
+
+
 
 
   ul
