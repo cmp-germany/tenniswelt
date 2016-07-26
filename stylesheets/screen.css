@@ -11193,3 +11193,17 @@ body a:hover {
     width: 50%;
   }
 }
+/* line 14, ../sass/_live-page-structure.sass */
+#MyWallMid.MyWallMid--9 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  /* line 14, ../sass/_live-page-structure.sass */
+  #MyWallMid.MyWallMid--9 {
+    float: left;
+    width: 75%;
+  }
+}
