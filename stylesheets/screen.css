@@ -11374,6 +11374,227 @@ body a:hover {
     max-width: 1170px;
   }
 }
+/* line 2, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder {
+  padding: 0;
+  margin-bottom: 0;
+}
+/* line 6, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder .title {
+  margin-bottom: 0;
+}
+/* line 9, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder h2 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+/* line 12, ../sass/_profile-fotos--css-galary.sass */
+.album-fotos .title-holder span {
+  font-size: 16px;
+}
+
+/* line 16, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list {
+  border: none;
+  background: transparent;
+}
+/* line 19, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list .album-list {
+  background-color: #fff;
+  border: solid 1px #3aa6e7;
+  border-bottom-color: #eee;
+  border-right-color: #eee;
+  margin-top: 0;
+  min-height: 50px;
+}
+/* line 26, ../sass/_profile-fotos--css-galary.sass */
+.album-galary .album-list .album-list #album-list {
+  height: auto !important;
+}
+
+/* line 31, ../sass/_profile-fotos--css-galary.sass */
+.album-list .album-list {
+  border: none;
+}
+/* line 35, ../sass/_profile-fotos--css-galary.sass */
+.album-list .main-options .button-wrapper {
+  float: right;
+}
+/* line 37, ../sass/_profile-fotos--css-galary.sass */
+.album-list .main-options .button-wrapper .photo-button {
+  line-height: 20px;
+  margin: 0;
+  font-weight: normal;
+  margin-right: 10px;
+}
+/* line 43, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item {
+  position: static !important;
+}
+/* line 46, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper strong {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  background-color: #3aa6e7;
+  background-color: rgba(58, 166, 231, 0.85);
+}
+/* line 52, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper strong a {
+  color: #ffffff;
+  line-height: 20px;
+  padding: 0 4px;
+  text-decoration: none;
+}
+/* line 58, ../sass/_profile-fotos--css-galary.sass */
+.album-list .item .item-holder .album-wrapper p {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
+  padding: 0px 6px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: #3aa6e7;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(58, 166, 231, 0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 );
+}
+
+/* line 77, ../sass/_profile-fotos--css-galary.sass */
+.photos .empty-message.DivBlock {
+  width: auto;
+  top: 115px;
+  border: none;
+  background-color: transparent;
+  margin-top: 0;
+  position: absolute;
+  display: block;
+}
+/* line 87, ../sass/_profile-fotos--css-galary.sass */
+.photos .upload-holder {
+  margin: 0;
+}
+/* line 90, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments {
+  margin-right: 1px;
+}
+/* line 92, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments h3 {
+  margin-top: 35px;
+  font-size: 18px;
+}
+/* line 96, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments .wall-widget--comment {
+  padding: 0;
+}
+/* line 99, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments .comment-composer {
+  border: none;
+}
+/* line 101, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments .comment-composer .styled-button-blue {
+  margin-top: 7px;
+  padding: 2px 10px;
+  background-color: #3aa6e7;
+  height: auto;
+  width: 100%;
+  margin-bottom: 50px;
+}
+/* line 110, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments .comment-textarea-holder textarea {
+  border: solid 1px #eee;
+  height: 30px !important;
+  padding: 7px 10px;
+}
+/* line 115, ../sass/_profile-fotos--css-galary.sass */
+.photos .photo-comments .required-field textarea {
+  border-left: solid 1px #eee !important;
+}
+
+@media(min-width:992px) {
+  /* line 121, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list {
+    width: 62.5%;
+    float: left;
+    padding-right: 10px;
+  }
+  /* line 127, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .main-options .button-wrapper .photo-button {
+    margin-right: 0;
+  }
+  /* line 129, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list {
+    width: 100%;
+  }
+  /* line 131, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item {
+    width: 33.33333%;
+  }
+  /* line 134, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item .item-holder .album-wrapper strong {
+    display: none;
+  }
+  /* line 136, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item .item-holder .album-wrapper p {
+    display: none;
+  }
+  /* line 139, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item .item-holder:hover .album-wrapper strong {
+    display: block;
+  }
+  /* line 141, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item .item-holder:hover .album-wrapper p {
+    display: block;
+  }
+
+  /* line 146, ../sass/_profile-fotos--css-galary.sass */
+  .photos .photo-comments {
+    background-color: #f9f9f9;
+    border: solid 1px #eee;
+    position: absolute;
+    top: 20px;
+    width: 35%;
+    right: 0;
+    padding: 20px;
+  }
+  /* line 154, ../sass/_profile-fotos--css-galary.sass */
+  .photos .photo-comments h3 {
+    padding: 0 20px;
+    padding-bottom: 20px;
+    margin: 0 -20px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #3aa6e7;
+  }
+  /* line 161, ../sass/_profile-fotos--css-galary.sass */
+  .photos .photo-comments .comment-composer .styled-button-blue {
+    width: 150px;
+    margin-bottom: 0;
+  }
+}
+@media(min-width:1200px) {
+  /* line 167, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list {
+    width: 71%;
+  }
+  /* line 169, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list {
+    width: 100%;
+  }
+  /* line 171, ../sass/_profile-fotos--css-galary.sass */
+  .album-galary .album-list .album-list .item {
+    width: 25%;
+  }
+
+  /* line 175, ../sass/_profile-fotos--css-galary.sass */
+  .photos .photo-comments {
+    width: 28%;
+  }
+}
 /* The following things are used only to improve the
  * appearance of the live Page. */
 /* line 1, ../sass/_live-page-structure.sass */
