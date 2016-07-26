@@ -27,10 +27,10 @@ var replaceElements = function() {
 /*Chat im Responsive*/
 function chat() {
   $('.chat-sessions').on("click", ".chat-session-header", function(){
-    $('.chat-users-body').css('display', 'block');
+    if($( window ).width() < 767) $('.chat-users-body').css('display', 'block');
   });
 
   $('.chat-user-holder').click(function(){
-    $('.chat-users-body').css('display', 'none');
+    if($( window ).width() < 767) $('.chat-users-body').css('display', 'none');
   });
 }
