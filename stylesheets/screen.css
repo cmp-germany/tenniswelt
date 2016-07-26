@@ -11225,7 +11225,7 @@ body a:hover {
 /* line 1, ../sass/_profile-fotos--css-alben.sass */
 .profile-tabs {
   width: 100%;
-  max-width: 915px;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11245,7 +11245,7 @@ body a:hover {
   cursor: default;
 }
 
-/* line 21, ../sass/_profile-fotos--css-alben.sass */
+/* line 22, ../sass/_profile-fotos--css-alben.sass */
 .album-list {
   width: 100%;
   overflow: auto;
@@ -11255,37 +11255,45 @@ body a:hover {
   border-bottom-color: #eee;
   border-right-color: #eee;
 }
-/* line 29, ../sass/_profile-fotos--css-alben.sass */
+/* line 30, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item {
   width: 50%;
 }
-/* line 32, ../sass/_profile-fotos--css-alben.sass */
+/* line 33, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder {
   width: 100%;
   padding-top: 100%;
   height: 0;
   overflow: hidden;
 }
-/* line 38, ../sass/_profile-fotos--css-alben.sass */
+/* line 39, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder h3 {
   position: absolute;
   bottom: 0;
   margin: 0;
   font-size: 18px;
+  font-weight: bold;
   width: 100%;
-  padding: 3px 6px;
+  padding: 4px 6px;
+  text-align: right;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(58, 166, 231, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 );
+  background-color: #3aa6e7;
+  background-color: rgba(58, 166, 231, 0.8);
 }
-/* line 45, ../sass/_profile-fotos--css-alben.sass */
+/* line 57, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder h3 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 48, ../sass/_profile-fotos--css-alben.sass */
+/* line 60, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder p {
   display: none;
   bottom: 0;
 }
-/* line 52, ../sass/_profile-fotos--css-alben.sass */
+/* line 64, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder .photo-count {
   top: 0;
   left: 0;
@@ -11294,7 +11302,7 @@ body a:hover {
   background-color: #3aa6e7;
   background-color: rgba(58, 166, 231, 0.8);
 }
-/* line 61, ../sass/_profile-fotos--css-alben.sass */
+/* line 73, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder .photo-wrapper {
   position: absolute;
   top: 0;
@@ -11305,6 +11313,34 @@ body a:hover {
   height: 100%;
 }
 
+@media(min-width:768px) {
+  /* line 85, ../sass/_profile-fotos--css-alben.sass */
+  .album-list .item {
+    width: 25%;
+  }
+
+  /* line 89, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .profile-tabs {
+    max-width: 700px;
+  }
+}
+@media(min-width:992px) {
+  /* line 94, ../sass/_profile-fotos--css-alben.sass */
+  .album-list .item {
+    width: 20%;
+  }
+
+  /* line 98, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .profile-tabs {
+    max-width: 915px;
+  }
+}
+@media(min-width:1200px) {
+  /* line 103, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .profile-tabs {
+    max-width: 1170px;
+  }
+}
 /* The following things are used only to improve the
  * appearance of the live Page. */
 /* line 1, ../sass/_live-page-structure.sass */
