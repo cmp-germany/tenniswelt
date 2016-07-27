@@ -14,6 +14,31 @@ var chatQuickFixes = function () {
   $('.main-chat-container').on("click", ".chat-user-holder", function(){
     if($( window ).width() < 767) $('.chat-users-body').css('display', 'none');
   });
+
+
+  //Chat collapse when any tab is clickes
+  $('.navbar-fixed-top').on("click", ".navbar__tab",function(){
+    var ariaExpanded = $(this).attr('aria-expanded');
+    $(".navbar__section").collapse('hide');
+    $(".navbar.grand-navbar").collapse('hide');
+    $(".main-chat-container").collapse('hide'); //<-- THIS
+    $('.navbar__tab').removeClass('navbar__tab--active');
+
+    $(this).addClass('navbar__tab--active');
+
+    if(ariaExpanded === 'true') {
+      $('.navbar__tab').removeClass('navbar__tab--active');
+      $('.navbar__tab--wall').addClass('navbar__tab--active');
+    }
+
+    if ($( window ).width() <= 767) {
+      $( "body > .container" ).css( "display", "none" );
+    }
+
+    if ($( ".navbar__tab--wall" ).hasClass("navbar__tab--active")) {
+      $( "body > .container" ).css( "display", "block" );
+    }
+  });
 };
 
 
