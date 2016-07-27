@@ -11187,6 +11187,11 @@ body a:hover {
   font-feature-settings: "liga";
 }
 
+/* line 10, ../sass/_wall-widget--account.sass */
+#aspnetForm .wall-widget--account .ChatStatusIcon {
+  height: initial;
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container, .content-wrapper {
