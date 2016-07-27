@@ -11804,6 +11804,104 @@ body a:hover {
     width: 28%;
   }
 }
+/* line 2, ../sass/_pp-pic-holder.sass */
+.pp_pic_holder.pp_default .pp_top, .pp_pic_holder.pp_default .pp_bottom {
+  display: none;
+}
+/* line 6, ../sass/_pp-pic-holder.sass */
+.pp_pic_holder.pp_default .pp_content_container .pp_left, .pp_pic_holder.pp_default .pp_content_container .pp_right {
+  background: none;
+}
+/* line 9, ../sass/_pp-pic-holder.sass */
+.pp_pic_holder.pp_default .pp_content_container .pp_content {
+  background-color: transparent;
+}
+
+@media(max-width:767px) {
+  /* line 14, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default {
+    position: fixed;
+    width: 100% !important;
+    height: 100%;
+    top: 0px !important;
+    left: 0px !important;
+  }
+  /* line 21, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_top, .pp_pic_holder.pp_default .pp_bottom {
+    display: none;
+  }
+  /* line 24, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container {
+    height: 100%;
+    width: 100%;
+  }
+  /* line 27, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_left, .pp_pic_holder.pp_default .pp_content_container .pp_right {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+
+  /* line 36, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content {
+    margin: 0 5%;
+    width: 90% !important;
+    height: 100% !important;
+    background-color: transparent;
+  }
+  /* line 42, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade {
+    height: 100%;
+  }
+  /* line 44, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_expand {
+    display: none !important;
+  }
+  /* line 46, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_hoverContainer {
+    display: none !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  /* line 51, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_gallery {
+    display: none !important;
+  }
+  /* line 54, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade #pp_full_res {
+    height: auto;
+    height: 80%;
+    overflow: hidden;
+  }
+  /* line 59, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade #pp_full_res img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* line 63, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details {
+    width: 100% !important;
+  }
+  /* line 65, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_nav {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 68, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_nav .pp_play {
+    display: none;
+  }
+  /* line 70, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_nav .currentTextHolder {
+    display: none;
+  }
+  /* line 75, ../sass/_pp-pic-holder.sass */
+  .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_close {
+    position: absolute;
+    right: 0;
+  }
+}
 /* The following things are used only to improve the
  * appearance of the live Page. */
 /* line 1, ../sass/_live-page-structure.sass */
