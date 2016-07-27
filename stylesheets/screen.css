@@ -427,7 +427,7 @@ a {
 /* line 52, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
   color: #1877a2;
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:focus {
@@ -3442,7 +3442,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 115, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
   color: #1877a2;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 /* line 123, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
