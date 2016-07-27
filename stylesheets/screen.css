@@ -9267,6 +9267,50 @@ body a:hover {
   width: 100%;
 }
 
+/* line 101, ../sass/_search.sass */
+.search__results .search-filter-nav--form-group {
+  height: 38.5px;
+}
+/* line 104, ../sass/_search.sass */
+.search__results .search-filter-nav--form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%;
+  border: 1px solid #747474;
+  padding: 0.75em 1em 0.5em 1em;
+  background-color: #fff;
+  background-image: url(../gfx/ic_keyboard_arrow_down_black_24dp_1x.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+/* line 120, ../sass/_search.sass */
+.search__results .search-filter-nav--form-group input {
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%;
+  height: 38.5px;
+  border: 1px solid #747474;
+  padding: 0.75em 1em 0.5em 1em;
+  color: #000;
+  background-color: #fff;
+}
+/* line 133, ../sass/_search.sass */
+.search__results .search-filter-nav--form-group .btn {
+  padding: 0.75em 1em 0.5em 1em;
+  display: inline-block;
+  height: 38.5px;
+  vertical-align: baseline;
+}
+/* line 139, ../sass/_search.sass */
+.search__results .kontakt-card {
+  background-color: #fff;
+}
+
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;
