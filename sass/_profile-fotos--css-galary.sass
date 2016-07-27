@@ -1,0 +1,176 @@
+.album-fotos
+  .title-holder
+    padding: 0
+    margin-bottom: 0
+
+    .title
+      margin-bottom: 0
+
+    h2
+      font-size: 30px
+      margin-bottom: 7px
+    span
+      font-size: 16px
+
+.album-galary
+  .album-list
+    border: none
+    background: transparent
+    .album-list
+      margin-top: 10px !important
+      background-color: #fff
+      border: solid 1px $color-primary
+      border-bottom-color: #eee
+      border-right-color: #eee
+      min-height: 50px
+      #album-list
+        height: auto !important
+
+
+.album-list
+  .album-list
+    border: none
+
+  .main-options
+    .button-wrapper
+      float: right
+      .photo-button
+        line-height: 20px
+        margin: 0
+        font-weight: normal
+        margin-right: 10px
+
+  .item
+    position: static !important
+    .item-holder
+      .album-wrapper strong
+        position: absolute
+        top: 0
+        margin: 0
+        background-color: $color-primary
+        background-color: rgba($color-primary, 0.85)
+        a
+          color: #ffffff
+          line-height: 20px
+          padding: 0 4px
+          text-decoration: none
+
+      .album-wrapper p
+        display: block
+        position: absolute
+        bottom: 0
+        margin: 0
+        width: 100%
+        color: #fff
+        font-size: 12px
+        padding: 0px 6px
+        line-height: 16px
+        font-weight: bold
+        background-color: $color-primary
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(58,166,231,0.85) 100%)
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(58,166,231,0.85) 100%)
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(58,166,231,0.85) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 )
+
+.photos
+  // main-album-empty-message DivBlock
+  .empty-message.DivBlock
+    width: auto
+    top: 115px
+    border: none
+    background-color: transparent
+    margin-top: 0
+    position: absolute
+    display: block
+
+
+  .upload-holder
+    margin: 0
+
+  .photo-comments
+    margin-right: 1px
+    h3
+      margin-top: 35px
+      font-size: 18px
+
+    .wall-widget--comment
+      padding: 0
+
+    .comment-composer
+      border: none
+      .styled-button-blue
+        margin-top: 7px
+        padding: 2px 10px
+        background-color: $color-primary
+        height: auto
+        width: 100%
+        margin-bottom: 50px
+
+    .comment-textarea-holder
+      textarea
+        border: solid 1px #eee
+        height: 30px !important
+        padding: 7px 10px
+    .required-field
+      textarea
+        border-left: solid 1px #eee !important
+
+
+@media(min-width:992px)
+  .album-galary
+    .album-list
+      width: 62.5%
+      float: left
+      padding-right: 10px
+      .main-options
+        .button-wrapper
+          .photo-button
+            margin-right: 0
+      .album-list
+        width: 100%
+        .item
+          width: 33.33333%
+          .item-holder
+            .album-wrapper strong
+              display: none
+            .album-wrapper p
+              display: none
+            &:hover
+              .album-wrapper strong
+                display: block
+              .album-wrapper p
+                display: block
+
+
+  .photos
+    .photo-comments
+      background-color: #f9f9f9
+      border: solid 1px #eee
+      position: absolute
+      top: 20px
+      width: 35%
+      right: 0
+      padding: 20px
+      h3
+        padding: 0 20px
+        padding-bottom: 20px
+        margin: 0 -20px
+        margin-bottom: 15px
+        border-bottom: solid 1px $color-primary
+      .comment-composer
+        .styled-button-blue
+          width: 150px
+          margin-bottom: 0
+
+@media(min-width:1200px)
+  .album-galary
+    .album-list
+      width: 71%
+      .album-list
+        width: 100%
+        .item
+          width: 25%
+
+  .photos
+    .photo-comments
+      width: 28%
