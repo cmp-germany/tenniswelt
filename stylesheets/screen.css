@@ -10241,6 +10241,16 @@ body a:hover {
   .comment-date {
     visibility: visible;
   }
+
+  /* line 37, ../sass/_wall-mediascreens.sass */
+  #DivPostB textarea {
+    padding: 15px;
+  }
+
+  /* line 40, ../sass/_wall-mediascreens.sass */
+  .uploadphoto:before {
+    margin-left: 10px;
+  }
 }
 @media(max-width:767px) {
   /* line 2, ../sass/_navbar-mediascreens.sass */
