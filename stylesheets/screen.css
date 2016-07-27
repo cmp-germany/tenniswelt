@@ -11354,7 +11354,14 @@ body a:hover {
     width: 50%;
   }
 }
-/* line 14, ../sass/_live-page-structure.sass */
+@media (max-width: 991px) {
+  /* line 11, ../sass/_live-page-structure.sass */
+  #MyWallMid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 17, ../sass/_live-page-structure.sass */
 #MyWallMid.MyWallMid--9 {
   position: relative;
   min-height: 1px;
@@ -11362,7 +11369,7 @@ body a:hover {
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  /* line 14, ../sass/_live-page-structure.sass */
+  /* line 17, ../sass/_live-page-structure.sass */
   #MyWallMid.MyWallMid--9 {
     float: left;
     width: 75%;
