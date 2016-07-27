@@ -11267,7 +11267,43 @@ body a:hover {
 .album-fotos #MyWallMid {
   width: 100%;
 }
-/* line 12, ../sass/_profile-fotos--css-alben.sass */
+/* line 11, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto {
+  width: 100%;
+}
+/* line 14, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto tr td {
+  width: 25% !important;
+  padding-left: 0;
+}
+/* line 17, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto tr td:nth-child(2) {
+  width: 75% !important;
+  padding-right: 0;
+}
+/* line 20, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto tr td:nth-child(2) .TextBox {
+  width: 100%;
+}
+/* line 23, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto textarea {
+  padding: 7px;
+}
+/* line 26, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto .regular-button {
+  padding: 5px 10px;
+  background-color: #3aa6e7;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 0;
+  text-decoration: none;
+}
+/* line 33, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos #TblEditPhoto .regular-button:hover {
+  background-color: #1a8ed4;
+  cursor: auto;
+}
+/* line 38, ../sass/_profile-fotos--css-alben.sass */
 .album-fotos .MainMenu a {
   font-size: 20px;
   font-weight: normal;
@@ -11277,8 +11313,29 @@ body a:hover {
   margin-top: 15px;
   cursor: default;
 }
+/* line 46, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos .MainMenu a.add-new-album {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  padding: 2px 10px;
+  background-color: #3aa6e7;
+  color: #fff;
+  margin-right: 0;
+}
+/* line 54, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos .MainMenu a.add-new-album:hover {
+  background-color: #1a8ed4;
+  cursor: auto;
+}
+/* line 58, ../sass/_profile-fotos--css-alben.sass */
+.album-fotos .MainMenu a.photo-button {
+  width: 100%;
+  padding-right: 160px;
+  line-height: 22px !important;
+}
 
-/* line 22, ../sass/_profile-fotos--css-alben.sass */
+/* line 64, ../sass/_profile-fotos--css-alben.sass */
 .album-list {
   width: 100%;
   overflow: auto;
@@ -11287,19 +11344,21 @@ body a:hover {
   border: solid 1px #3aa6e7;
   border-bottom-color: #eee;
   border-right-color: #eee;
+  margin-bottom: 60px;
+  min-height: 50px;
 }
-/* line 30, ../sass/_profile-fotos--css-alben.sass */
+/* line 74, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item {
   width: 50%;
 }
-/* line 33, ../sass/_profile-fotos--css-alben.sass */
+/* line 77, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder {
   width: 100%;
   padding-top: 100%;
   height: 0;
   overflow: hidden;
 }
-/* line 39, ../sass/_profile-fotos--css-alben.sass */
+/* line 83, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder h3 {
   position: absolute;
   bottom: 0;
@@ -11316,17 +11375,17 @@ body a:hover {
   background-color: #3aa6e7;
   background-color: rgba(58, 166, 231, 0.8);
 }
-/* line 57, ../sass/_profile-fotos--css-alben.sass */
+/* line 101, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder h3 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 60, ../sass/_profile-fotos--css-alben.sass */
+/* line 104, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder p {
   display: none;
   bottom: 0;
 }
-/* line 64, ../sass/_profile-fotos--css-alben.sass */
+/* line 108, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder .photo-count {
   top: 0;
   left: 0;
@@ -11335,7 +11394,7 @@ body a:hover {
   background-color: #3aa6e7;
   background-color: rgba(58, 166, 231, 0.8);
 }
-/* line 73, ../sass/_profile-fotos--css-alben.sass */
+/* line 117, ../sass/_profile-fotos--css-alben.sass */
 .album-list .item .item-holder .photo-wrapper {
   position: absolute;
   top: 0;
@@ -11345,31 +11404,181 @@ body a:hover {
   width: 100%;
   height: 100%;
 }
+/* line 127, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .album-wrapper p {
+  height: 25px;
+  background-color: #3aa6e7 !important;
+}
+/* line 131, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options {
+  overflow: hidden;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* line 136, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options .options-holder {
+  background-color: #3aa6e7;
+  background-color: rgba(58, 166, 231, 0.8);
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+/* line 142, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options .display-options-holder .edit, .album-list .item .item-holder .options .display-options-holder .delete {
+  display: block !important;
+}
+/* line 145, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options.display-options-holder {
+  position: absolute;
+  bottom: 25px;
+  background-color: #3aa6e7;
+  background-color: rgba(58, 166, 231, 0.8);
+}
+/* line 150, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options.display-options-holder .edit, .album-list .item .item-holder .options.display-options-holder .delete {
+  display: block !important;
+}
+/* line 153, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options .edit, .album-list .item .item-holder .options .delete {
+  padding: 0px 6px;
+}
+/* line 156, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder .options .edit a, .album-list .item .item-holder .options .delete a {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 0px;
+}
+/* line 164, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder:after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin-left: 4px;
+  margin-bottom: 3px;
+  background: url(../gfx/settings.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+/* line 175, ../sass/_profile-fotos--css-alben.sass */
+.album-list .item .item-holder:hover:after {
+  cursor: pointer;
+}
+
+/* line 179, ../sass/_profile-fotos--css-alben.sass */
+.photos .DivBlock {
+  position: absolute;
+  top: 0;
+}
+/* line 182, ../sass/_profile-fotos--css-alben.sass */
+.photos .DivBlock .empty-message.DivBlock {
+  top: 70px;
+}
+/* line 187, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .main-options .button-wrapper {
+  float: right;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+/* line 191, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 195, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery h3 {
+  width: 100%;
+  padding-right: 110px;
+}
+/* line 199, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery .fileupload-ui-widget {
+  margin-top: 25px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 60px;
+  border: solid 1px #eee;
+  background-color: #3aa6e7;
+}
+/* line 206, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery .fileupload-ui-widget .fileupload-buttonbar {
+  height: 100%;
+}
+/* line 208, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery .fileupload-ui-widget .fileupload-buttonbar .fileinput-button {
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* line 213, ../sass/_profile-fotos--css-alben.sass */
+.photos .upload-holder .photo-gallery .fileupload-ui-widget .fileupload-buttonbar .ui-button-text .uploadphoto {
+  color: #fff;
+  font-size: 16px;
+}
+/* line 217, ../sass/_profile-fotos--css-alben.sass */
+.photos .album-list {
+  margin-top: 30px;
+}
+/* line 221, ../sass/_profile-fotos--css-alben.sass */
+.photos .album-list .main-options .button-wrapper a {
+  line-height: 35px;
+  padding: 0 8px;
+  background-color: #3aa6e7;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 227, ../sass/_profile-fotos--css-alben.sass */
+.photos .album-list .main-options .button-wrapper .add-new-album, .photos .album-list .main-options .button-wrapper .photo-button {
+  margin: 0 3px;
+  font-weight: normal;
+  font-size: 12px;
+}
 
 @media(min-width:768px) {
-  /* line 85, ../sass/_profile-fotos--css-alben.sass */
+  /* line 240, ../sass/_profile-fotos--css-alben.sass */
   .album-list .item {
     width: 25%;
   }
 
-  /* line 89, ../sass/_profile-fotos--css-alben.sass */
+  /* line 244, ../sass/_profile-fotos--css-alben.sass */
   .album-fotos .profile-tabs {
     max-width: 700px;
   }
 }
 @media(min-width:992px) {
-  /* line 94, ../sass/_profile-fotos--css-alben.sass */
+  /* line 249, ../sass/_profile-fotos--css-alben.sass */
   .album-list .item {
     width: 20%;
   }
 
-  /* line 98, ../sass/_profile-fotos--css-alben.sass */
+  /* line 254, ../sass/_profile-fotos--css-alben.sass */
   .album-fotos .profile-tabs {
     max-width: 915px;
   }
+  /* line 257, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .album-list.photo-list {
+    background-color: transparent;
+    border: none;
+    width: 62.5%;
+    margin-left: 0;
+  }
+  /* line 262, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .album-list.photo-list .album-list {
+    background-color: #fff;
+    border: solid 1px #3aa6e7;
+    border-bottom-color: #eee;
+    border-right-color: #eee;
+    width: 100%;
+  }
+  /* line 268, ../sass/_profile-fotos--css-alben.sass */
+  .album-fotos .album-list.photo-list .album-list .item {
+    width: 33.33333%;
+  }
 }
 @media(min-width:1200px) {
-  /* line 103, ../sass/_profile-fotos--css-alben.sass */
+  /* line 273, ../sass/_profile-fotos--css-alben.sass */
   .album-fotos .profile-tabs {
     max-width: 1170px;
   }
@@ -11400,11 +11609,11 @@ body a:hover {
 }
 /* line 19, ../sass/_profile-fotos--css-galary.sass */
 .album-galary .album-list .album-list {
+  margin-top: 10px !important;
   background-color: #fff;
   border: solid 1px #3aa6e7;
   border-bottom-color: #eee;
   border-right-color: #eee;
-  margin-top: 0;
   min-height: 50px;
 }
 /* line 26, ../sass/_profile-fotos--css-galary.sass */
