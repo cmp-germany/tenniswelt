@@ -9307,7 +9307,7 @@ body a:hover {
   vertical-align: baseline;
 }
 /* line 139, ../sass/_search.sass */
-.search__results .kontakt-card {
+.search__results .kontakt-card, .search__results #aspnetForm .matching-site .wall-widget--account > div, #aspnetForm .matching-site .search__results .wall-widget--account > div {
   background-color: #fff;
 }
 
@@ -9338,7 +9338,7 @@ body a:hover {
 }
 
 /* line 21, ../sass/_matching.sass */
-.matching {
+.matching, #aspnetForm .matching-site .wall-widget--content {
   margin-top: 20px;
   text-align: center;
   padding-top: 20px;
@@ -9347,7 +9347,7 @@ body a:hover {
 }
 
 /* line 30, ../sass/_matching.sass */
-.matching--matching {
+.matching--matching, #aspnetForm .matching-site .wall-widget--content {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -9368,7 +9368,7 @@ body a:hover {
 }
 
 /* line 47, ../sass/_matching.sass */
-.matching__filters {
+.matching__filters, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters {
   padding: 10px;
   background-color: #f9f9f9;
   border: solid 1px #eeeeee;
@@ -9376,33 +9376,33 @@ body a:hover {
 }
 
 /* line 53, ../sass/_matching.sass */
-.matching__filter-switch {
+.matching__filter-switch, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch {
   display: inline-block;
   margin-right: 3%;
   margin-top: 7px;
   margin-left: 8px;
 }
 /* line 59, ../sass/_matching.sass */
-.matching__filter-switch a {
+.matching__filter-switch a, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a {
   color: #777;
   vertical-align: top;
   padding-top: 10px;
 }
 /* line 63, ../sass/_matching.sass */
-.matching__filter-switch a:hover, .matching__filter-switch a:active, .matching__filter-switch a:focus, .matching__filter-switch a:visited {
+.matching__filter-switch a:hover, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:hover, .matching__filter-switch a:active, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:active, .matching__filter-switch a:focus, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:focus, .matching__filter-switch a:visited, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:visited {
   text-decoration: none;
 }
 /* line 66, ../sass/_matching.sass */
-.matching__filter-switch a:hover {
+.matching__filter-switch a:hover, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:hover {
   color: #E9002F;
 }
 /* line 70, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-right .matching__element--right {
+.matching__filter-switch.is-selected-right .matching__element--right, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-right.wall-widget--filter-switch .matching__element--right {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
 /* line 74, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-right .select-toggle {
+.matching__filter-switch.is-selected-right .select-toggle, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-right.wall-widget--filter-switch .select-toggle {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -9410,12 +9410,12 @@ body a:hover {
   transform: rotate(0deg);
 }
 /* line 82, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-left .matching__element--left {
+.matching__filter-switch.is-selected-left .matching__element--left, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-left.wall-widget--filter-switch .matching__element--left {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
 /* line 86, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-left .select-toggle {
+.matching__filter-switch.is-selected-left .select-toggle, #aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-left.wall-widget--filter-switch .select-toggle {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -9487,7 +9487,7 @@ body a:hover {
 }
 
 /* line 151, ../sass/_matching.sass */
-#aspnetForm .TabsMain {
+#aspnetForm .matching-site .TabsMain {
   position: relative;
   float: left;
   width: 100%;
@@ -9498,16 +9498,21 @@ body a:hover {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: 0;
 }
 @media (min-width: 992px) {
   /* line 151, ../sass/_matching.sass */
-  #aspnetForm .TabsMain {
+  #aspnetForm .matching-site .TabsMain {
     float: left;
     width: 75%;
   }
 }
-/* line 155, ../sass/_matching.sass */
-#aspnetForm .TabsContent {
+/* line 156, ../sass/_matching.sass */
+#aspnetForm .matching-site .Wall_FriendsSep {
+  height: initial;
+}
+/* line 160, ../sass/_matching.sass */
+#aspnetForm .matching-site .TabsContent {
   min-width: initial;
   margin: initial;
   display: initial;
@@ -9516,8 +9521,8 @@ body a:hover {
   background-color: initial;
   margin-bottom: initial;
 }
-/* line 164, ../sass/_matching.sass */
-#aspnetForm .SearchResultsPageTitle {
+/* line 169, ../sass/_matching.sass */
+#aspnetForm .matching-site .SearchResultsPageTitle {
   box-sizing: border-box;
   color: #333333;
   font-size: 24px;
@@ -9526,6 +9531,207 @@ body a:hover {
   margin-bottom: 10px;
   margin-left: 15px;
   margin-top: 20px;
+}
+/* line 184, ../sass/_matching.sass */
+#aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch:before {
+  content: initial;
+  display: initial;
+}
+/* line 188, ../sass/_matching.sass */
+#aspnetForm .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch:after {
+  content: initial;
+  display: initial;
+  clear: initial;
+}
+/* line 198, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filter-element {
+  padding: 0;
+  text-align: center;
+}
+/* line 202, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filter-element:first-child {
+  position: relative;
+  float: left;
+  width: 41.66667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+  text-align: right;
+  padding-right: 5px;
+}
+@media (min-width: 992px) {
+  /* line 202, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:first-child {
+    float: left;
+    width: 41.66667%;
+  }
+}
+@media (min-width: 1230px) {
+  /* line 202, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:first-child {
+    float: left;
+    width: 41.66667%;
+  }
+}
+/* line 210, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filter-element:nth-child(2) {
+  position: relative;
+  float: left;
+  width: 16.66667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  /* line 210, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:nth-child(2) {
+    float: left;
+    width: 16.66667%;
+  }
+}
+@media (min-width: 1230px) {
+  /* line 210, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:nth-child(2) {
+    float: left;
+    width: 16.66667%;
+  }
+}
+/* line 215, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filter-element:last-child {
+  position: relative;
+  float: left;
+  width: 41.66667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+  text-align: left;
+  padding-left: 5px;
+}
+@media (min-width: 992px) {
+  /* line 215, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:last-child {
+    float: left;
+    width: 41.66667%;
+  }
+}
+@media (min-width: 1230px) {
+  /* line 215, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--filter-element:last-child {
+    float: left;
+    width: 41.66667%;
+  }
+}
+/* line 224, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filters:nth-child(1) {
+  border-bottom-width: 0;
+  padding-bottom: 0;
+}
+/* line 228, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--filters:nth-child(2) {
+  border-top-width: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+/* line 237, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--account {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: initial;
+  padding-bottom: initial;
+  border-bottom: initial;
+}
+@media (min-width: 768px) {
+  /* line 237, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--account {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 237, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--account {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1230px) {
+  /* line 237, ../sass/_matching.sass */
+  #aspnetForm .matching-site .wall-widget--account {
+    float: left;
+    width: 33.33333%;
+  }
+}
+/* line 246, ../sass/_matching.sass */
+#aspnetForm .matching-site .wall-widget--account > div {
+  display: block;
+}
+/* line 250, ../sass/_matching.sass */
+#aspnetForm .matching-site .account {
+  width: calc(100% - 75px);
+  max-width: initial;
+  height: initial;
+  max-height: initial;
+  display: initial;
+  position: initial;
+  float: initial;
+  overflow: initial;
+}
+/* line 260, ../sass/_matching.sass */
+#aspnetForm .matching-site .account > * {
+  display: initial;
+  vertical-align: initial;
+}
+/* line 264, ../sass/_matching.sass */
+#aspnetForm .matching-site h4 {
+  max-width: initial;
+}
+/* line 268, ../sass/_matching.sass */
+#aspnetForm .matching-site .avatar {
+  width: initial;
+  height: initial;
+  margin: initial;
 }
 
 /* line 3, ../sass/_profile-kontakte.sass */
@@ -9541,7 +9747,7 @@ body a:hover {
 }
 
 /* line 11, ../sass/_profile-kontakte.sass */
-.kontakt-card {
+.kontakt-card, #aspnetForm .matching-site .wall-widget--account > div {
   position: relative;
   background-color: #f9f9f9;
   overflow: hidden;
@@ -9553,7 +9759,7 @@ body a:hover {
 }
 
 /* line 21, ../sass/_profile-kontakte.sass */
-.kontakt-card__thumbnail {
+.kontakt-card__thumbnail, #aspnetForm .matching-site .avatar {
   float: left;
   width: 70px;
   height: 70px;
