@@ -4,43 +4,51 @@
   Import this file using the following HTML or equivalent:
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
+
+// global variables
 @import variables
 @import fonts
 
+// bootstrap Framework
 @import bootstrap-compass
 @import bootstrap
 
+// general things - used in almost every site
 @import general
-
 @import navbar
 @import buttons
 @import form
 @import material-icons
 
+// sites - design for a certain site
 @import landing-page
 @import wall
 @import profile-about
 @import profile-wall
 @import settings
 @import search
-@import chat
 @import matching
 @import profile-kontakte
 @import fotos
-@import loading-bar
-
-@import invitation-module
-
-@import wall-mediascreens
-@import navbar-mediascreens
-@import chat-mediascreens
-
-@import chat-design
-
 @import profile-fotos--css-alben
 @import profile-fotos--css-galary
 @import pp-pic-holder
 
+
+// modules - reuseable modules. Used across all sites
+@import chat
+@import chat-design
+@import loading-bar
+@import invitation-module
+@import kontakte-modul
+
+
+// mediascreens - special handling of some responsive issues
+@import wall-mediascreens
+@import navbar-mediascreens
+@import chat-mediascreens
+
+// Improvements for the Live Page
 /* The following things are used only to improve the
   appearance of the live Page.
 
