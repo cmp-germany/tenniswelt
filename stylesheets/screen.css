@@ -9306,6 +9306,10 @@ body a:hover {
   height: 38.5px;
   vertical-align: baseline;
 }
+/* line 139, ../sass/_search.sass */
+.search__results .kontakt-card {
+  background-color: #fff;
+}
 
 /* line 5, ../sass/_chat.sass */
 .nopadding {
