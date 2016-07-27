@@ -10255,7 +10255,7 @@ body a:hover {
 @media(max-width:767px) {
   /*Responsive Anpassungen (Bugfixes) */
   /* line 3, ../sass/_navbar-mediascreens.sass */
-  .navbar.grand-navbar.navbar-collapse.collapse.in {
+  #navbar-collapse-1 {
     position: fixed !important;
     top: 50px !important;
   }
