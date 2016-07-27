@@ -219,6 +219,14 @@ $color-chat-tabs: $color-important
     display: none
     &.in
       display: block
+      height: 100%
+      background-color: #f9f9f9
+      &::after
+        content: "Kein Chat aktiv."
+        display: block
+        position: absolute
+        top: 65px
+        left: 10px
 
 
   .chat-users
@@ -255,4 +263,4 @@ $color-chat-tabs: $color-important
           display: block
       .chat-message-holder
         height: 290px
-        height: calc(100vh - 157px)
+        height: calc(100vh - 160px)
