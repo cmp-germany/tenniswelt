@@ -9516,6 +9516,17 @@ body a:hover {
   background-color: initial;
   margin-bottom: initial;
 }
+/* line 164, ../sass/_matching.sass */
+#aspnetForm .SearchResultsPageTitle {
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26.4px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
 
 /* line 3, ../sass/_profile-kontakte.sass */
 .matching__filters--kontakte {
