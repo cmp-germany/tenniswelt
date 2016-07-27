@@ -9486,6 +9486,37 @@ body a:hover {
   color: #777777;
 }
 
+/* line 151, ../sass/_matching.sass */
+#aspnetForm .TabsMain {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  /* line 151, ../sass/_matching.sass */
+  #aspnetForm .TabsMain {
+    float: left;
+    width: 75%;
+  }
+}
+/* line 155, ../sass/_matching.sass */
+#aspnetForm .TabsContent {
+  min-width: initial;
+  margin: initial;
+  display: initial;
+  float: initial;
+  font-size: initial;
+  background-color: initial;
+  margin-bottom: initial;
+}
+
 /* line 3, ../sass/_profile-kontakte.sass */
 .matching__filters--kontakte {
   font-size: 14px;
