@@ -8229,6 +8229,27 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   display: block;
 }
 
+@media(max-width:767px) {
+  /* line 158, ../sass/_landing-page.sass */
+  .navbar-landing-page {
+    background-color: rgba(19, 35, 51, 0.9);
+  }
+
+  /* line 161, ../sass/_landing-page.sass */
+  .navbar .btn-important {
+    margin-left: 0;
+  }
+
+  /* line 164, ../sass/_landing-page.sass */
+  .btn-password {
+    float: right;
+  }
+
+  /* line 167, ../sass/_landing-page.sass */
+  .btn-password::before {
+    content: "Passwort vergessen ";
+  }
+}
 /* line 3, ../sass/_wall.sass */
 body {
   background-color: rgba(19, 35, 51, 0.05);
