@@ -10735,6 +10735,97 @@ body a:hover {
     right: 0;
   }
 }
+/* line 3, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain {
+  width: 100%;
+}
+/* line 5, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsMenu {
+  overflow: auto;
+  display: flex;
+}
+/* line 8, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsMenu .TabsItem {
+  width: auto;
+  border: none;
+  float: right;
+  color: transparent;
+}
+/* line 13, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsMenu .TabsItem a {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  background-color: #67bbed;
+  color: #fff;
+  font-size: 14px;
+  height: 100%;
+  margin-right: 0;
+  text-decoration: none;
+}
+/* line 24, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsMenu .TabsItem a:hover {
+  background-color: #1a8ed4;
+  cursor: auto;
+}
+/* line 29, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsMenu .TabsItem.TabsItemSelected a {
+  background-color: #3aa6e7;
+}
+/* line 34, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsContent {
+  background-color: transparent;
+}
+/* line 37, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem {
+  display: flex;
+  border: solid 1px #eee;
+  border-top-color: #3aa6e7;
+  border-left-color: #3aa6e7;
+  position: relative;
+}
+/* line 43, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem .MyCompaniesName {
+  width: 100%;
+  display: inline-block;
+  line-height: normal;
+  padding-right: 30px;
+}
+/* line 48, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem .MyCompaniesName span {
+  width: auto;
+  padding: 10px 5px;
+  color: #3aa6e7;
+  font-weight: bold;
+}
+/* line 55, ../sass/_unternehmen.sass */
+#MyWallMid #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem .MembersListRemove.DeleteItem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 10px;
+}
+
+@media(min-width:992px) {
+  /* line 66, ../sass/_unternehmen.sass */
+  .noasides #MyWallMid #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem {
+    width: calc(33.33% - 20px);
+    float: left;
+  }
+
+  /* line 71, ../sass/_unternehmen.sass */
+  .noasides#MyWallMid, .noasides #MyWallMid {
+    width: 100% !important;
+    max-width: 915px;
+  }
+}
+@media(min-width:1200px) {
+  /* line 77, ../sass/_unternehmen.sass */
+  .noasides#MyWallMid, .noasides #MyWallMid {
+    max-width: 1170px;
+  }
+}
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;

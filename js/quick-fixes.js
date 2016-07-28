@@ -15,6 +15,11 @@ var chatQuickFixes = function () {
     if($( window ).width() < 767) $('.chat-users-body').css('display', 'none');
   });
 
+  //Check if we are on /companies
+  if(window.location.href.indexOf("Companies") > -1) {
+    $("body").addClass("noasides")
+  }
+
 
   //Chat collapse when any tab is clickes
   $('.navbar-fixed-top').on("click", ".navbar__tab",function(){

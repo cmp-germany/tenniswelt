@@ -1,0 +1,78 @@
+#MyWallMid
+  #PageContent
+    .TabsMain
+      width: 100%
+      .TabsMenu
+        overflow: auto
+        display: flex
+        .TabsItem
+          width: auto
+          border: none
+          float: right
+          color: transparent
+          a
+            width: auto
+            display: inline-block
+            vertical-align: middle
+            padding: 5px 10px
+            background-color: lighten($color-primary, 10%)
+            color: #fff
+            font-size: 14px
+            height: 100%
+            margin-right: 0
+            text-decoration: none
+            &:hover
+              background-color: darken($color-primary, 10%)
+              cursor: auto
+
+          &.TabsItemSelected
+            a
+              background-color: $color-primary
+
+
+
+      .TabsContent
+        background-color: transparent
+        .MyCompaniesList
+          .MyCompaniesItem
+            display: flex
+            border: solid 1px #eee
+            border-top-color: $color-primary
+            border-left-color: $color-primary
+            position: relative
+            .MyCompaniesName
+              width: 100%
+              display: inline-block
+              line-height: normal
+              padding-right: 30px
+              span
+                width: auto
+                padding: 10px 5px
+                color: $color-primary
+                font-weight: bold
+
+
+            .MembersListRemove.DeleteItem
+              position: absolute
+              top: 0
+              right: 0
+              margin: 0 10px
+
+
+
+@media(min-width:992px)
+  .noasides
+    #MyWallMid
+      #PageContent .TabsMain .TabsContent .MyCompaniesList .MyCompaniesItem
+        width: calc(33.33% - 20px)
+        float: left
+
+  .noasides
+    &#MyWallMid, #MyWallMid
+      width: 100% !important
+      max-width: 915px
+
+@media(min-width:1200px)
+  .noasides
+    &#MyWallMid, #MyWallMid
+      max-width: 1170px
