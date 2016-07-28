@@ -154,7 +154,18 @@ $padding-negative-text: 3px
 .navbar-brand.display
   display: block
 
+@media(max-width:767px)
+  .navbar-landing-page
+    background-color: rgba(19, 35, 51, 0.9)
 
+  .navbar .btn-important
+    margin-left: 0
+
+  .btn-password
+    float: right
+
+  .btn-password::before
+    content: "Passwort vergessen "
 
 
 
