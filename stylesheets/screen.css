@@ -9017,7 +9017,7 @@ body a:hover {
   color: #4DDD35;
 }
 
-/* line 71, ../sass/_profile-about.sass */
+/* line 72, ../sass/_profile-about.sass */
 .profile-tabs {
   margin-top: 20px;
   padding-left: 20px;
@@ -9025,7 +9025,7 @@ body a:hover {
   border: solid 1px #eee;
 }
 
-/* line 77, ../sass/_profile-about.sass */
+/* line 78, ../sass/_profile-about.sass */
 .profile-tabs__tab {
   display: inline-block;
   font-size: 18px;
@@ -9036,17 +9036,17 @@ body a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 87, ../sass/_profile-about.sass */
+/* line 88, ../sass/_profile-about.sass */
 .profile-tabs__tab a {
   color: inherit;
 }
 
-/* line 90, ../sass/_profile-about.sass */
+/* line 91, ../sass/_profile-about.sass */
 .profile-tabs__tab--active {
   color: #333;
 }
 
-/* line 94, ../sass/_profile-about.sass */
+/* line 95, ../sass/_profile-about.sass */
 .profile-infos {
   position: relative;
   margin-top: 20px;
@@ -9057,17 +9057,17 @@ body a:hover {
   border: solid 1px #eee;
 }
 
-/* line 104, ../sass/_profile-about.sass */
+/* line 105, ../sass/_profile-about.sass */
 .profile-infos__form--read .profile-infos__input {
   display: none;
 }
 
-/* line 108, ../sass/_profile-about.sass */
+/* line 109, ../sass/_profile-about.sass */
 .profile-infos__form--write .profile-infos__read {
   display: none;
 }
 
-/* line 111, ../sass/_profile-about.sass */
+/* line 112, ../sass/_profile-about.sass */
 .profile-infos__read {
   margin-top: 7px;
 }
