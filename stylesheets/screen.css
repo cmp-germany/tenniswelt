@@ -8051,6 +8051,130 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Special Conf */
+/* line 5, ../sass/_material-inputs.sass */
+.register-form .form-group {
+  width: 100%;
+}
+
+/* Standard Conf */
+/* line 10, ../sass/_material-inputs.sass */
+.form-group {
+  position: relative;
+  margin-bottom: 45px;
+  width: 300px;
+}
+
+/* line 15, ../sass/_material-inputs.sass */
+.form-control {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  vertical-align: top;
+}
+/* line 23, ../sass/_material-inputs.sass */
+.form-control:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* line 29, ../sass/_material-inputs.sass */
+.form-control--select {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: visible;
+}
+
+/* LABEL ======================================= */
+/* line 38, ../sass/_material-inputs.sass */
+.form-label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 3px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+/* line 53, ../sass/_material-inputs.sass */
+.form-control:focus ~ .form-label, .is-dirty ~ .form-label, .form-control--select ~ .form-label {
+  top: -16px;
+  left: 0;
+  font-size: 14px;
+  color: #3aa6e7;
+}
+
+/* BOTTOM BARS ================================= */
+/* line 62, ../sass/_material-inputs.sass */
+.form-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+/* line 66, ../sass/_material-inputs.sass */
+.form-bar:before, .form-bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #3aa6e7;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+/* line 76, ../sass/_material-inputs.sass */
+.form-bar:before {
+  left: 50%;
+}
+/* line 78, ../sass/_material-inputs.sass */
+.form-bar:after {
+  right: 50%;
+}
+
+/* active state */
+/* line 84, ../sass/_material-inputs.sass */
+.form-control:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after {
+  width: 50%;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #3aa6e7;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #3aa6e7;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #3aa6e7;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
 /* line 8, ../sass/_landing-page.sass */
 .slide {
   padding-top: 50px;
