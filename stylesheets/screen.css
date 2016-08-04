@@ -11803,6 +11803,44 @@ body a:hover {
   margin-top: 10px;
 }
 
+/* line 2, ../sass/_group-information.sass */
+.wall-widget--group-information header {
+  margin-bottom: 0;
+}
+
+/* line 5, ../sass/_group-information.sass */
+.wall-widget__image {
+  margin: 0 -20px;
+  max-height: 120px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+/* line 10, ../sass/_group-information.sass */
+.wall-widget__image img {
+  width: 100%;
+}
+
+/* line 13, ../sass/_group-information.sass */
+.wall-widget__information-row {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  margin: 7px 0;
+}
+
+/* line 19, ../sass/_group-information.sass */
+.wall-widget__info-label {
+  width: 45%;
+  float: left;
+  font-weight: bold;
+}
+
+/* line 24, ../sass/_group-information.sass */
+.wall-widget__info-content {
+  width: 55%;
+  float: left;
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container, .content-wrapper {
