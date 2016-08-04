@@ -11620,6 +11620,11 @@ body a:hover {
   height: initial;
 }
 
+/* line 2, ../sass/_group-search.sass */
+.wall-widget--group-search .wall-widget--content {
+  text-align: center;
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container, .content-wrapper {
