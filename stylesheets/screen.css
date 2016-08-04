@@ -11013,6 +11013,35 @@ body a:hover {
     max-width: 1170px;
   }
 }
+/* line 1, ../sass/_profile-groups.sass */
+.group-card__description {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  min-height: 17px;
+}
+/* line 7, ../sass/_profile-groups.sass */
+.group-card__description .material-icons {
+  vertical-align: middle;
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+
+/* line 12, ../sass/_profile-groups.sass */
+.group-card__actions {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+/* line 15, ../sass/_profile-groups.sass */
+.group-card__actions li {
+  margin-right: 3px;
+}
+/* line 17, ../sass/_profile-groups.sass */
+.group-card__actions li:last-child {
+  margin-right: 0;
+}
+
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;
