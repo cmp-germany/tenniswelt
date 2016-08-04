@@ -11042,6 +11042,26 @@ body a:hover {
   margin-right: 0;
 }
 
+/* line 20, ../sass/_profile-groups.sass */
+.button--new-group {
+  vertical-align: top;
+  margin-top: 2px;
+  display: inline-block;
+  font-size: 16px;
+  float: right;
+  margin-right: 2px;
+}
+/* line 27, ../sass/_profile-groups.sass */
+.button--new-group .material-icons {
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+/* line 31, ../sass/_profile-groups.sass */
+.matching__filters.matching__filters--kontakte, .matching-site .Wall_MatchingsList .matching__filters--kontakte.wall-widget--filters {
+  overflow: auto;
+}
+
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;
