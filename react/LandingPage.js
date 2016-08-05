@@ -237,19 +237,37 @@ var KeyFeatureModule = React.createClass({
 var PeopleCardModule = React.createClass({
   render: function() {
     var data = this.props.data;
-    console.log(data);
     return (
       <div className="col-lg-4 col-md-6 col-sm-6 profile-card clearfix"><div className="profile-card__innerDiv clearfix">
           <div className="col-xs-4 profile-card__image">
-            <img src="gfx/landing-page/fotolia_71453007.jpg" alt className="img-responsive" />
+            <img src={data.picture} alt className="img-responsive" />
           </div>
           <div className="col-xs-8 profile-card__text profile-card__name-container">
             <p className="profile-card__name">
-              <a target="_blank" href="http://startupregion.koeln/industry.html">Köln und Industrie</a>
+              <a target="_blank" href={data.url}>{data.title}</a>
             </p>
             <p className="profile-card__description">
-              Die produktive Mischung aus großen, mittleren und kleinen heimischen und ausländischen Unterneh­men zeigt das große Potential der Wirtschaftsregion Köln.
+              {data.text}
             </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var RegisterCardModule = React.createClass({
+  render: function() {
+    var data = this.props.data;
+    console.log(data);
+
+    return (
+      <div className="col-lg-4 col-md-6 col-sm-6 register-card clearfix"><div className="register-card__innerDiv clearfix">
+          <div style={{textAlign: 'center'}}>
+            <p className="register-card__text">{data.text}</p>
+            <a href={data.url} className="btn btn-primary">
+              <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />{data.buttonText}
+            </a>
           </div>
         </div>
       </div>
@@ -369,63 +387,29 @@ var SlideStatement = React.createClass({
 
 var People = React.createClass({
   render: function() {
-    console.log(this.props.data);
-    var peopleCards = null;
+
+    var data = this.props.data;
+
+    var peopleCards = data.cards.map(function(card, index) {
+      switch (card.type) {
+
+        case "people":
+          return <PeopleCardModule data={card} key={index} />;
+
+        case "register":
+          return <RegisterCardModule data={card} key={index} />;
+
+        default:
+          console.error('Unknown People Card Type: \''+card.type+'\'. Card Data:');
+          console.error(card);
+
+      }
+    });
     return (
       <section className="slide slide--people">
         <div className="container">
           <div className="row">
             {peopleCards}
-
-            <div className="col-lg-4 col-md-6 col-sm-6 profile-card clearfix"><div className="profile-card__innerDiv clearfix">
-                <div className="col-xs-4 profile-card__image">
-                  <img src="gfx/landing-page/fotolia_93025626.jpg" alt className="img-responsive" />
-                </div>
-                <div className="col-xs-8 profile-card__text">
-                  <p className="profile-card__name">
-                    <a target="_blank" href="http://www.stadt.koeln">Stadt Köln</a>
-                  </p>
-                  <p className="profile-card__description">
-                    Für den Erfolg sind nicht nur wirtschaftliche Faktoren wichtig: das ganze Umfeld muss passen. Wie in Köln, der Weltstadt mit Tempo und Herz.
-                  </p>
-                </div>
-              </div></div>
-            <div className="col-lg-4 col-md-6 col-sm-6 profile-card clearfix"><div className="profile-card__innerDiv clearfix">
-                <div className="col-xs-4 profile-card__image">
-                  <img src="gfx/landing-page/logo-netcologne.png" alt className="img-responsive" />
-                </div>
-                <div className="col-xs-8 profile-card__text">
-                  <p className="profile-card__name">
-                    <a target="_blank" href="https://www.netcologne.de/geschaeftskunden">NetCologne - Digitales Köln</a>
-                  </p>
-                  <p className="profile-card__description">
-                    Nicht nur die Versorgung mit schnellem Internet im Büro, sondern auch die Möglichkeit mobil sein Business optimal zu führen sind essentiell. Kölns TK-Anbieter NetCologne bietet beides.
-                  </p>
-                </div>
-              </div></div>
-            <div className="col-lg-4 col-md-6 col-sm-6 profile-card clearfix"><div className="profile-card__innerDiv clearfix">
-                <div className="col-xs-4 profile-card__image">
-                  <img src="gfx/landing-page/ihk-k.png" alt className="img-responsive" />
-                </div>
-                <div className="col-xs-8 profile-card__text">
-                  <p className="profile-card__name">
-                    <a target="_blank" href="https://www.ihk-koeln.de/Existenzgruendung.AxCMS?ActiveID=1671">IHK Köln - Starker Partner für Startups</a>
-                  </p>
-                  <p className="profile-card__description">
-                    Ob Existenzgründung, Unternehmenswachstum oder Unternehmensnachfolger: Die IHK Köln berät, hilft und informiert.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 register-card clearfix"><div className="register-card__innerDiv clearfix">
-                <div style={{textAlign: 'center'}}>
-                  <p className="register-card__text">Kostenlos registrieren und ein Jahr unverbindlich testen.</p>
-                  <a href="#register-form" className="btn btn-primary">
-                    <span className="glyphicon glyphicon-menu-right" aria-hidden="true" />Jetzt registrieren
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
