@@ -8180,12 +8180,12 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
-/* line 122, ../sass/_landing-page.sass */
+/* line 123, ../sass/_landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
-  margin-bottom: 30px;
   border-top: 1px solid #3aa6e7;
   border-left: 1px solid #3aa6e7;
   border-bottom: 1px solid #eee;
