@@ -59,10 +59,22 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
     padding: 0
     margin: 0
 
+    .ChatStatusIcon::after
+      font-size: 24px
+      color: #fff
+
+    .ChatStatusIcon.UserMediaOnlineIcon::after
+      color: $color-chat-online
+
+
   &__action-button
     display: inline-block
     color: #fff
     margin: 0 5px
+
+    .ChatIcon::after
+      font-size: 24px
+      color: #fff
 
   &__action-button--is-online
     color: $color-chat-online
@@ -115,18 +127,3 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
 .profile-infos__desc
 
 .profile-infos__map
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.spacing
