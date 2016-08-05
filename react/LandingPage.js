@@ -229,7 +229,8 @@ var KeyFeatureModule = React.createClass({
 
 var PeopleCardModule = React.createClass({
   render: function() {
-    log
+    var data = this.props.data;
+    console.log(data);
     return (
       <div className="col-lg-4 col-md-6 col-sm-6 profile-card clearfix"><div className="profile-card__innerDiv clearfix">
           <div className="col-xs-4 profile-card__image">
@@ -361,7 +362,7 @@ var SlideStatement = React.createClass({
 
 var People = React.createClass({
   render: function() {
-    console.log(this.data);
+    console.log(this.props.data);
     var peopleCards = null;
     return (
       <section className="slide slide--people">
