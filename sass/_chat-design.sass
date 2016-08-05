@@ -13,6 +13,28 @@ $color-chat-tabs: $color-important
   &.collapse
     display: block
 
+  .chat-user-holder
+    .offline
+      background: none
+      &::after
+        +material-icon()
+        content: 'radio_button_checked'
+        font-size: 16px
+        color: #aaa
+        position: absolute
+        top: 0
+
+    .online
+      background: none
+      &::after
+        +material-icon()
+        content: 'radio_button_checked'
+        font-size: 16px
+        color: $color-chat-online
+        position: absolute
+        top: 0
+
+
 .chat-users
   position: fixed
   float: right
@@ -212,7 +234,6 @@ $color-chat-tabs: $color-important
           &:hover
             background-color: $color-important
             color: #ffffff
-
 
 
 @media(max-width:767px)
