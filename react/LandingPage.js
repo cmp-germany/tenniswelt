@@ -100,6 +100,13 @@ var contentLandingPage = [
       },
       {
         type: "people",
+        title: "Stadt Köln",
+        text: "Für den Erfolg sind nicht nur wirtschaftliche Faktoren wichtig: das ganze Umfeld muss passen. Wie in Köln, der Weltstadt mit Tempo und Herz.",
+        url: "http://www.stadt.koeln/",
+        picture: "gfx/landing-page/fotolia_93025626.jpg"
+      },
+      {
+        type: "people",
         title: "Köln und Industrie",
         text: "Die produktive Mischung aus großen, mittleren und kleinen heimischen und ausländischen Unterneh­men zeigt das große Potential der Wirtschaftsregion Köln.",
         url: "http://startupregion.koeln/industry.html",
