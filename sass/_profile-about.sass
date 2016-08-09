@@ -79,7 +79,15 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
   &__action-button--is-online
     color: $color-chat-online
 
-
+.profile-tabs--profile-navigation
+  padding: 5px 0px !important
+  text-align: center
+  display: flex
+  .material-icons
+    display: none
+  .profile-tabs__tab
+    font-size: 16px
+    padding: 10px 5px
 
 .profile-tabs
   margin-top: 20px
@@ -89,7 +97,10 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
 
 .profile-tabs__tab
   display: inline-block
+  vertical-align: middle
   font-size: 18px
+  //max-width: 120px
+  overflow: hidden
   color: #777
   padding-right: 20px
   padding-top: 10px
@@ -127,3 +138,10 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
 .profile-infos__desc
 
 .profile-infos__map
+
+@media(max-width:767px)
+  .profile-tabs--profile-navigation
+    .profile-tabs__label
+      display: none
+    .material-icons
+      display: block
