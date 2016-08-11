@@ -11283,7 +11283,7 @@ body a:hover {
 
 /* line 74, ../sass/_profile-groups.sass */
 .form-options {
-  margin-top: 10px;
+  margin-top: 60px;
   overflow: auto;
 }
 /* line 77, ../sass/_profile-groups.sass */
@@ -11302,12 +11302,12 @@ body a:hover {
 }
 
 /* line 86, ../sass/_profile-groups.sass */
-.text-center, .empty-list, #MyWallMid #Wall_FriendsList .wall-widget--content {
-  text-align: center;
+.text-right {
+  text-align: right;
 }
 
 /* line 89, ../sass/_profile-groups.sass */
-.form-group--material.text-center, .form-group--material.empty-list, #MyWallMid #Wall_FriendsList .form-group--material.wall-widget--content {
+.form-group--material.text-right {
   margin-top: 20px;
 }
 
