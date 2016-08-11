@@ -11311,6 +11311,29 @@ body a:hover {
   margin-top: 20px;
 }
 
+/* line 1, ../sass/_group-wall.sass */
+.group-header {
+  margin-top: 12px;
+}
+/* line 3, ../sass/_group-wall.sass */
+.group-header h3 {
+  padding-left: 0;
+  padding-bottom: 5px;
+}
+/* line 6, ../sass/_group-wall.sass */
+.group-header p {
+  margin-top: 3px;
+}
+/* line 8, ../sass/_group-wall.sass */
+.group-header .profile-tabs__tab {
+  padding: 3px;
+  font-size: 14px;
+}
+/* line 11, ../sass/_group-wall.sass */
+.group-header .profile-tabs {
+  margin-bottom: 0;
+}
+
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;
@@ -12211,16 +12234,15 @@ body a:hover {
 /* line 5, ../sass/_group-information.sass */
 .wall-widget__image {
   margin: 0 -20px;
-  max-height: 120px;
   overflow: hidden;
   margin-bottom: 18px;
 }
-/* line 10, ../sass/_group-information.sass */
+/* line 9, ../sass/_group-information.sass */
 .wall-widget__image img {
   width: 100%;
 }
 
-/* line 13, ../sass/_group-information.sass */
+/* line 12, ../sass/_group-information.sass */
 .wall-widget__information-row {
   width: 100%;
   display: block;
@@ -12228,17 +12250,15 @@ body a:hover {
   margin: 7px 0;
 }
 
-/* line 19, ../sass/_group-information.sass */
+/* line 18, ../sass/_group-information.sass */
 .wall-widget__info-label {
-  width: 45%;
-  float: left;
   font-weight: bold;
 }
 
-/* line 24, ../sass/_group-information.sass */
+/* line 21, ../sass/_group-information.sass */
 .wall-widget__info-content {
-  width: 55%;
-  float: left;
+  margin-top: 1px;
+  margin-bottom: 8px;
 }
 
 @media(max-width:767px) {

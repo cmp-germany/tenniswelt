@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/modules.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <div data-module="mitglieder.html"></div>
+
+      </div>
+
+      <!-- Main Collumn -->
+      <div class="section-center col-md-6">
+
+        <div class="wall">
+          <header class="wall-widget--header group-header">
+            <h3>My biggest friends</h3>
+            <p>
+              These are real cool guys
+            </p>
+            <ul class="profile-tabs profile-tabs--profile-navigation">
+              <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#1"><i class="material-icons">&#xE8AF;</i><span class="profile-tabs__label">Wall</span></a>
+              </li>
+              <li class="profile-tabs__tab"><a href="#1"><i class="material-icons">&#xE413;</i><span class="profile-tabs__label">Fotos</span></a>
+              </li>
+              <li class="profile-tabs__tab"><a href="#1"><i class="material-icons">&#xE0B7;</i><span class="profile-tabs__label">Diskussions Forum</span></a>
+              </li>
+              <li class="profile-tabs__tab"><a href="#1"><i class="material-icons">&#xE8D3;</i><span class="profile-tabs__label">Mitglieder</span></a>
+              </li>
+            </ul>
+          </header>
+          <div class="wall-widget wall-widget--newPost">
+            <textarea name="name" rows="8" placeholder="Was machen Sie gerade?"></textarea>
+            <div class="wall-widget--actions wall-widget--actions__left">
+              <ul>
+                <li><i class="material-icons"></i>
+                </li>
+                <li><i class="material-icons"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="wall-widget--actions wall-widget--actions__right">
+              <button class="wall-widget--button wall-widget--button__blue" type="button" name="button">Posten</button>
+            </div>
+          </div>
+          <div class="wall-widget wall-widget--activities">
+            <header class="wall-widget--header">
+              <h3>Neuste Aktivitäten</h3>
+            </header>
+            <article class="wall-widget--activity-post">
+              <header class="wall-widget--header">
+                <div class="wall-widget--header__left"><img class="account-avatar" src="gfx/profilbilder/p3.jpg" alt="Profilbild">
+                  <h4><a href="#1">Maxi Mustermann</a></h4>
+                </div>
+                <div class="wall-widget--header__right"><span class="wall-widget--info"><i class="material-icons"></i><!-- react-text: 78 --> Vor 2 Stunden<!-- /react-text --></span>
+                </div>
+              </header>
+              <div class="wall-widget--content">
+                <p class="wall-widget--activity-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="wall-widget--actions wall-widget--actions__social">
+                <ul>
+                  <li><a href=""><i class="material-icons"></i><!-- react-text: 86 -->Gefällt mir<!-- /react-text --></a>
+                  </li>
+                  <li><a href=""><i class="material-icons"></i><!-- react-text: 90 -->Kommentieren<!-- /react-text --></a>
+                  </li>
+                  <li><a href=""><i class="material-icons"></i><!-- react-text: 94 -->Teilen<!-- /react-text --></a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
+
+        <div data-module="group-information.html"></div>
+
+        <div data-module="groups-search.html"></div>
+
+      </div>
+
+    </div>
+
+    <div id="chat-app">
+    </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+  </body>
+</html>
