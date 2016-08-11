@@ -11079,8 +11079,10 @@ body a:hover {
   /* line 70, ../sass/_pp-pic-holder.sass */
   .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_nav .currentTextHolder {
     display: none;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  /* line 75, ../sass/_pp-pic-holder.sass */
+  /* line 77, ../sass/_pp-pic-holder.sass */
   .pp_pic_holder.pp_default .pp_content_container .pp_content .pp_fade .pp_details .pp_close {
     position: absolute;
     right: 0;
