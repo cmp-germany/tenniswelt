@@ -1,0 +1,151 @@
+/* fallback
+@font-face
+  font-family: 'Material Icons'
+  font-style: normal
+  font-weight: 400
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format("woff2")
+
+/* Special Conf
+.register-form
+  .form-group--material
+    width: 100%
+  &:first-child
+    margin-top: 25px
+
+$color-input-primary: $color-primary
+$font-size-input: 16px
+$font-size-label: 12px
+
+
+/* Standard Conf
+.form-group--material
+  position: relative
+  width: 300px
+  margin-bottom: 25px
+
+.form-control--material
+  font-size: $font-size-input
+  padding: 10px 10px 10px 5px
+  display: block
+  width: 100%
+  border: none
+  border-bottom: 1px solid #757575
+  vertical-align: top
+  color: #333333
+  &:focus
+    outline: none
+    border: none
+    box-shadow: none
+  .option
+
+.form-control--select-material
+  padding-top: 5px
+  padding-bottom: 5px
+  overflow: visible
+  &:hover
+    cursor: pointer
+
+.form-control--select-material ~ .form-label--material::after
+  display: block
+  content: "arrow_drop_down"
+  position: absolute
+  right: 0
+  margin-right: 3px
+  margin-top: 14px
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 32px
+  line-height: 1
+  letter-spacing: normal
+  text-transform: none
+  display: inline-block
+  white-space: nowrap
+  word-wrap: normal
+  direction: ltr
+  -webkit-font-feature-settings: 'liga'
+  -webkit-font-smoothing: antialiased
+
+
+
+
+
+/* LABEL =======================================
+
+.form-label--material
+  width: 100%
+  color: #999
+  font-size: $font-size-input
+  font-weight: normal
+  position: absolute
+  pointer-events: none
+  left: 3px
+  top: 5px
+  transition: 0.2s ease all
+  -moz-transition: 0.2s ease all
+  -webkit-transition: 0.2s ease all
+
+/* active state
+
+
+.form-control--material:focus ~ .form-label--material, .is-dirty ~ .form-label--material, .form-control--select-material ~ .form-label--material
+  top: -10px
+  left: 0
+  font-size: $font-size-label
+  color: $color-input-primary
+
+
+/* BOTTOM BARS =================================
+
+.form-bar--material
+  position: relative
+  display: block
+  width: 100%
+  &:before, &:after
+    content: ''
+    height: 2px
+    width: 0
+    bottom: 1px
+    position: absolute
+    background: $color-input-primary
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+  &:before
+    left: 50%
+  &:after
+    right: 50%
+
+/* active state
+
+.form-control--material:focus ~ .form-bar
+  &:before, &:after
+    width: 50%
+
+
+/* ANIMATIONS ================
+@-webkit-keyframes inputHighlighter
+  from
+    background: $color-input-primary
+
+  to
+    width: 0
+    background: transparent
+
+
+@-moz-keyframes inputHighlighter
+  from
+    background: $color-input-primary
+
+  to
+    width: 0
+    background: transparent
+
+
+@keyframes inputHighlighter
+  from
+    background: $color-input-primary
+
+  to
+    width: 0
+    background: transparent

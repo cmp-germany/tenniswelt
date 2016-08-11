@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
+    <script src="js/material-inputs.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <div data-module="kontakt-hinzufuegen.html"></div>
+
+        <div data-module="matching.html" data-additional-js="js/wall.js"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Collumn -->
+      <div class="section-center col-md-6">
+        <header class="profile-header">
+          <div class="profile-header__wallpaper" alt="Wallpaper von Company of Imagination Ltd." style="background-image: url('gfx/wallpaper_company.jpg');"></div>
+          <div class="profile-header__desc-bar">
+            <div class="profile-header__profile-picture-container"><img src="gfx/profile_company.jpg" alt="Profilbild von Company of Imagination Ltd." class="profile-header__profile-picture img-responsive">
+            </div>
+            <div class="profile-header__profile-name-container">
+              <div style="display: table; height: 100px;">
+                <div style="display: table-cell; vertical-align: middle;">
+                  <h3 class="profile-header__name">Company of Imagination Ltd.</h3>
+                </div>
+              </div>
+            </div>
+            <div class="profile-header__profile-buttons-container">
+              <div style="display: table; height: 100px;">
+                <div style="display: table-cell; vertical-align: middle;">
+                  <ul class="profile-header__action-buttons text-right">
+                    <li class="profile-header__action-button"><i class="material-icons"></i>
+                    </li>
+                    <li class="profile-header__action-button"><a href="javascript:reactChatApp.addChat('company-of-imagination');" style="color: inherit;"><i class="material-icons"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="hidden-md hidden-lg" data-module="kontakt-hinzufuegen.html"></div>
+
+        <div class="" data-module="profile-tabs.html"></div>
+
+        <h3 class="page-headline">Neue Gruppe</h3>
+
+        <div class="addgroup-form">
+          <form>
+            <div class="form-group form-group--material">
+              <input type="text" class="form-control form-control--material">
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Gruppenname</label>
+            </div>
+            <div class="form-group form-group--material">
+              <textarea class="form-control form-control--material"></textarea>
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Gruppenbeschreibung</label>
+            </div>
+            <div class="form-group form-group--material">
+              <select class="form-control  form-control--material form-control--select-material">
+                <option value="Kategorie1">General (en-US)</option>
+              </select>
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Kategorien</label>
+              <p class="wall-widget__tipp">Wenn Sie eine sprachspezifische Kategorie wählen, wird die Gruppe nur für diese Sprache sichtbar sein.</p>
+            </div>
+            <div class="form-group form-group--material">
+              <input type="file" name="file" id="file" class="inputfile" />
+              <label class="file-button-label" for="file"><span>Gruppenbild hochladen</span></label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
+
+        <div data-module="groups-search.html"></div>
+
+        <div data-module="messages.html"></div>
+
+        <div data-module="preferred-partners.html"></div>
+
+      </div>
+
+    </div>
+
+    <div id="chat-app">
+    </div>
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+  </body>
+</html>
