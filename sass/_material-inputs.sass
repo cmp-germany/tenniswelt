@@ -7,7 +7,7 @@
 
 /* Special Conf
 .register-form
-  .form-group
+  .form-group--material
     width: 100%
   &:first-child
     margin-top: 25px
@@ -18,12 +18,12 @@ $font-size-label: 12px
 
 
 /* Standard Conf
-.form-group
+.form-group--material
   position: relative
   width: 300px
   margin-bottom: 25px
 
-.form-control
+.form-control--material
   font-size: $font-size-input
   padding: 10px 10px 10px 5px
   display: block
@@ -38,14 +38,14 @@ $font-size-label: 12px
     box-shadow: none
   .option
 
-.form-control--select
+.form-control--select-material
   padding-top: 5px
   padding-bottom: 5px
   overflow: visible
   &:hover
     cursor: pointer
 
-.form-control--select ~ .form-label::after
+.form-control--select-material ~ .form-label--material::after
   display: block
   content: "arrow_drop_down"
   position: absolute
@@ -72,7 +72,7 @@ $font-size-label: 12px
 
 /* LABEL =======================================
 
-.form-label
+.form-label--material
   width: 100%
   color: #999
   font-size: $font-size-input
@@ -88,7 +88,7 @@ $font-size-label: 12px
 /* active state
 
 
-.form-control:focus ~ .form-label, .is-dirty ~ .form-label, .form-control--select ~ .form-label
+.form-control--material:focus ~ .form-label--material, .is-dirty ~ .form-label--material, .form-control--select-material ~ .form-label--material
   top: -10px
   left: 0
   font-size: $font-size-label
@@ -97,7 +97,7 @@ $font-size-label: 12px
 
 /* BOTTOM BARS =================================
 
-.form-bar
+.form-bar--material
   position: relative
   display: block
   width: 100%
@@ -118,7 +118,7 @@ $font-size-label: 12px
 
 /* active state
 
-.form-control:focus ~ .form-bar
+.form-control--material:focus ~ .form-bar
   &:before, &:after
     width: 50%
 
