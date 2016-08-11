@@ -30,3 +30,39 @@
 
 .matching__filters.matching__filters--kontakte
   overflow: auto
+
+.page-headline
+  margin-top: 30px
+  margin-left: 5px
+  font-size: 20px
+
+.addgroup-form
+  background-color: #f9f9f9
+  border: solid 1px #eeeeee
+  padding: 10px 20px
+  padding-top: 25px
+  .form-group--material
+    width: 100%
+
+.form-tipp
+  font-style: italic
+  margin: 5px
+  font-size: 12px
+
+.inputfile
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+  + label
+    font-size: 1.25em
+    font-weight: 700
+    color: white
+    background-color: black
+    display: inline-block
+  &:focus + label, + label:hover
+    background-color: red
+    cursor: pointer

@@ -34,6 +34,7 @@
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
     <script src="js/modules.js" charset="utf-8"></script>
+    <script src="js/material-inputs.js" charset="utf-8"></script>
 
   </head>
   <body>
@@ -82,35 +83,36 @@
         </header>
         <div class="hidden-md hidden-lg" data-module="kontakt-hinzufuegen.html"></div>
 
-        <ul class="profile-tabs">
-          <li class="profile-tabs__tab"><a href="#1">Über</a>
-          </li>
-          <li class="profile-tabs__tab"><a href="#1">Wall</a>
-          </li>
-          <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Kontakte</a>
-          </li>
-          <li class="profile-tabs__tab"><a href="#1">Fotos</a>
-          </li>
-        </ul>
+        <div class="" data-module="profile-tabs.html"></div>
 
-        <h3>Neue Gruppe</h3>
+        <h3 class="page-headline">Neue Gruppe</h3>
 
-        <div class="matching__filters matching__filters--kontakte">
-          <div class="matching__filter-switch is-selected-left">
-            <a class="matching__element--left" href="#1">Meine Gruppen</a>
-            <button class="select-toggle-button--matching">
-              <svg class="select-toggle" style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="#E9002F" d="M17,7A5,5 0 0,1 22,12A5,5 0 0,1 17,17A5,5 0 0,1 12,12A5,5 0 0,1 17,7M4,14A2,2 0 0,1 2,12A2,2 0 0,1 4,10H10V14H4Z" />
-              </svg>
-            </button>
-            <a class="matching__element--right" href="#1">Alle Gruppen</a>
+        <div class="addgroup-form">
+          <form>
+            <div class="form-group form-group--material">
+              <input type="text" class="form-control form-control--material">
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Gruppenname</label>
+            </div>
+            <div class="form-group form-group--material">
+              <textarea class="form-control form-control--material"></textarea>
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Gruppenbeschreibung</label>
+            </div>
+            <div class="form-group form-group--material">
+              <select class="form-control  form-control--material form-control--select-material">
+                <option value="Kategorie1">General (en-US)</option>
+              </select>
+              <span class="form-bar form-bar--material"></span>
+              <label class="form-label form-label--material">Kategorien</label>
+              <p class="wall-widget__tipp">Wenn Sie eine sprachspezifische Kategorie wählen, wird die Gruppe nur für diese Sprache sichtbar sein.</p>
+            </div>
+            <div class="form-group form-group--material">
+              <input type="file" name="file" id="file" class="inputfile" />
+              <label class="file-button-label" for="file"><span>Gruppenbild hochladen</span></label>
+            </div>
           </div>
-          <button class="wall-widget--button button--new-group">Neue Gruppe <i class="material-icons">&#xE145;</i></button>
-        </div>
-
-        <div class="matching matching--kontakte">
-
-        </div>
+        </form>
       </div>
 
       <!-- Right Sidebar -->

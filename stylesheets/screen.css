@@ -11104,6 +11104,55 @@ body a:hover {
   overflow: auto;
 }
 
+/* line 34, ../sass/_profile-groups.sass */
+.page-headline {
+  margin-top: 30px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+/* line 39, ../sass/_profile-groups.sass */
+.addgroup-form {
+  background-color: #f9f9f9;
+  border: solid 1px #eeeeee;
+  padding: 10px 20px;
+  padding-top: 25px;
+}
+/* line 44, ../sass/_profile-groups.sass */
+.addgroup-form .form-group--material {
+  width: 100%;
+}
+
+/* line 47, ../sass/_profile-groups.sass */
+.form-tipp {
+  font-style: italic;
+  margin: 5px;
+  font-size: 12px;
+}
+
+/* line 52, ../sass/_profile-groups.sass */
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+/* line 60, ../sass/_profile-groups.sass */
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+/* line 66, ../sass/_profile-groups.sass */
+.inputfile:focus + label, .inputfile + label:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
 /* line 5, ../sass/_chat.sass */
 .nopadding {
   padding: 0;
