@@ -7993,7 +7993,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   color: #cdcdcd;
 }
 
-/* line 16, ../sass/_material-icons.sass */
+/* line 28, ../sass/_material-icons.sass */
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
@@ -8009,12 +8009,25 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
+/* line 16, ../sass/_material-icons.sass */
+.material-icons--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
 
-/* line 19, ../sass/_material-icons.sass */
+/* line 31, ../sass/_material-icons.sass */
 .ChatStatusIcon {
   background: none;
 }
-/* line 22, ../sass/_material-icons.sass */
+/* line 34, ../sass/_material-icons.sass */
 .ChatStatusIcon::after {
   content: "radio_button_checked";
   font-family: "Material Icons";
@@ -8039,16 +8052,29 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   text-align: center;
   width: 16px;
 }
-/* line 35, ../sass/_material-icons.sass */
+/* line 16, ../sass/_material-icons.sass */
+.ChatStatusIcon::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
+/* line 47, ../sass/_material-icons.sass */
 .ChatStatusIcon.UserMediaOnlineIcon::after {
   color: #4DDD35;
 }
 
-/* line 38, ../sass/_material-icons.sass */
+/* line 50, ../sass/_material-icons.sass */
 .ChatIcon {
   background: none;
 }
-/* line 40, ../sass/_material-icons.sass */
+/* line 52, ../sass/_material-icons.sass */
 .ChatIcon::after {
   content: "chat";
   font-family: "Material Icons";
@@ -8072,6 +8098,19 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   text-align: center;
   width: 16px;
   line-height: 16px;
+}
+/* line 16, ../sass/_material-icons.sass */
+.ChatIcon::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
 }
 
 /* line 8, ../sass/_landing-page.sass */
@@ -8650,9 +8689,34 @@ body a:hover {
 }
 /* line 277, ../sass/_wall.sass */
 .wall-widget--actions__social li .material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
   font-size: 18px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
   vertical-align: middle;
   margin-right: 5px;
+}
+/* line 16, ../sass/_material-icons.sass */
+.wall-widget--actions__social li .material-icons--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 15.3px;
+  height: 18px;
+  padding-top: 1.62px;
+  width: 18px;
+  vertical-align: middle;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
 }
 
 /* line 283, ../sass/_wall.sass */
@@ -11263,6 +11327,19 @@ body a:hover {
   position: absolute;
   top: 0;
 }
+/* line 16, ../sass/_material-icons.sass */
+.main-chat-container .chat-user-holder .offline::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
 /* line 27, ../sass/_chat-design.sass */
 .main-chat-container .chat-user-holder .online {
   background: none;
@@ -11287,6 +11364,19 @@ body a:hover {
   color: #4DDD35;
   position: absolute;
   top: 0;
+}
+/* line 16, ../sass/_material-icons.sass */
+.main-chat-container .chat-user-holder .online::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
 }
 
 /* line 38, ../sass/_chat-design.sass */
@@ -11682,6 +11772,19 @@ body a:hover {
   font-size: 16px;
   display: inline-block;
 }
+/* line 16, ../sass/_material-icons.sass */
+.wall-widget__action-li .iconTrash::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
 /* line 12, ../sass/_invitation-module.sass */
 .wall-widget__action-li .iconApprove {
   margin-top: -3px;
@@ -11705,6 +11808,19 @@ body a:hover {
   content: "person_add";
   font-size: 16px;
   display: inline-block;
+}
+/* line 16, ../sass/_material-icons.sass */
+.wall-widget__action-li .iconApprove::after--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 20.4px;
+  height: 24px;
+  padding-top: 2.16px;
+  width: 24px;
+  vertical-align: middle;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
 }
 
 /* line 10, ../sass/_wall-widget--account.sass */

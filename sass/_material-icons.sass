@@ -1,8 +1,8 @@
-=material-icon()
+=material-icon($font-size: 24px)
   font-family: 'Material Icons'
   font-weight: normal
   font-style: normal
-  font-size: 24px
+  font-size: $font-size
   line-height: 1
   letter-spacing: normal
   text-transform: none
@@ -12,6 +12,18 @@
   direction: ltr
   -webkit-font-feature-settings: 'liga'
   -webkit-font-smoothing: antialiased
+
+  &--circle
+    background-color: $color-important
+    color: #fff
+    font-size: ($font-size - ($font-size / 100 * 15))
+    height: $font-size
+    padding-top: $font-size / 100 * 9
+    width: $font-size
+    vertical-align: middle
+    +border-radius($font-size / 2)
+
+
 
 .material-icons
   +material-icon()
