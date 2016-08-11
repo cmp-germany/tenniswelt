@@ -100,16 +100,31 @@
               <label class="form-label form-label--material">Gruppenbeschreibung</label>
             </div>
             <div class="form-group form-group--material">
-              <select class="form-control  form-control--material form-control--select-material">
-                <option value="Kategorie1">General (en-US)</option>
-              </select>
-              <span class="form-bar form-bar--material"></span>
-              <label class="form-label form-label--material">Kategorien</label>
-              <p class="wall-widget__tipp">Wenn Sie eine sprachspezifische Kategorie wählen, wird die Gruppe nur für diese Sprache sichtbar sein.</p>
-            </div>
-            <div class="form-group form-group--material">
               <input type="file" name="file" id="file" class="inputfile" />
-              <label class="file-button-label" for="file"><span>Gruppenbild hochladen</span></label>
+              <label for="file"><i class="material-icons">&#xE39D;</i><span>Gruppenbild hochladen</span></label>
+            </div>
+            <div class="form-options row">
+              <div class="col-md-3 headline-options"><h4 class="">Optionen</h4></div>
+              <div class="col-md-9">
+                <div class="form-group form-group--material">
+                  <select class="form-control  form-control--material form-control--select-material">
+                    <option value="Kategorie1">General (en-US)</option>
+                  </select>
+                  <span class="form-bar form-bar--material"></span>
+                  <label class="form-label form-label--material">Kategorien</label>
+                  <p class="wall-widget__tipp">Wenn Sie eine sprachspezifische Kategorie wählen, wird die Gruppe nur für diese Sprache sichtbar sein.</p>
+                </div>
+                <div class="form-group form-group--material">
+                  <label class="label--checkbox">
+                    <input type="checkbox" class="checkbox">
+                    <span>Offene Gruppe</span>
+                    <p class="wall-widget__tipp">Alle Benutzer können offenen Gruppen beitreten und andere einladen beizutreten. Jeder kann die Gruppeninformationen und den Inhalt sehen. Administratoren von geschlossenen Gruppen müssen Anfragen von neuen Mitgliedern bestätigen. Alle Benutzer können die Gruppenbeschreibung sehen, aber nur Mitglieder sehen den Gruppeninhalt (wall posts, hochgeladene Dateien, usw.).</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group--material text-center">
+              <button class="btn btn-primary" type="button" name="button">Gruppe gründen</button>
             </div>
           </div>
         </form>

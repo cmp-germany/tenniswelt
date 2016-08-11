@@ -44,10 +44,9 @@
   .form-group--material
     width: 100%
 
-.form-tipp
+.wall-widget__tipp
   font-style: italic
-  margin: 5px
-  font-size: 12px
+  font-weight: normal
 
 .inputfile
   width: 0.1px
@@ -58,11 +57,34 @@
   z-index: -1
 
   + label
-    font-size: 1.25em
-    font-weight: 700
+    .material-icons
+      vertical-align: middle
+      margin-right: 5px
+      font-size: 1.5em
+    padding: 5px 10px
+    font-size: 1em
+    font-weight: normal
     color: white
-    background-color: black
+    background-color: $color-primary
     display: inline-block
   &:focus + label, + label:hover
-    background-color: red
+    background-color: darken($color-primary, 10%)
     cursor: pointer
+
+.form-options
+  margin-top: 10px
+  overflow: auto
+  .form-group
+    margin-top: 10px
+
+.headline-options
+  padding-bottom: 5px
+  h4
+    margin-top: 0
+    font-weight: bold
+
+.text-center
+  text-align: center
+
+.form-group--material.text-center
+  margin-top: 20px
