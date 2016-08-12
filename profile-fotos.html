@@ -122,13 +122,13 @@
 
             <div class="col-xs-6 col-sm-4">
               <a href="#" class="widget-album">
+                <!--Thumbnails should be quadratic -->
                 <img class="widget-album__thumbnail" src="gfx/profilbilder/p1.jpg" alt="alle_fotos_thumnail-1" />
                 <img class="widget-album__thumbnail" src="gfx/profilbilder/p2.jpg" alt="alle_fotos_thumnail-2" />
                 <figcaption class="widget-album__infos">
                   <h4 class="widget-album__title">Alle Fotos<span class="glyphicon glyphicon-menu-right widget-album__title-glyphicon" aria-hidden="true"></span></h4>
                   <p class="widget-album__description">
                     Alles zusammen
-                    
                   </p>
                 </figcaption>
                 <label class="widget-album__label">42 Fotos</label>
@@ -144,6 +144,10 @@
                   <p class="widget-album__description">
                     Mein erstes Album. :)
                   </p>
+                  <!--This button is only visible for the owner of a Album (to edit it). In my opition we should remove the "delete function" from this location. It is better to have that function in the Edit Area-->
+                  <button class="widget-album__edit">
+                    <i class="material-icons">&#xE254;</i>
+                  </button>
                 </figcaption>
                 <label class="widget-album__label">8 Fotos</label>
               </a>
@@ -181,6 +185,7 @@
 
 
           </div>
+          
 
         </div>
       </div>

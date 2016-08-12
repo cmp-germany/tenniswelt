@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!--Photoswipe Framework-->
+    <link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css">
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!--Photoswipe-->
+    <script src="bower_components/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <!--<div data-module="kontakte.html"></div>-->
+
+        <div data-module="matching.html" data-additional-js="js/wall.js"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Collumn -->
+      <div class="section-center col-md-6">
+        <div id="profile-album">
+          <header class="profile-header">
+            <div class="profile-header__wallpaper" alt="Wallpaper von Company of Imagination Ltd." style="background-image: url('gfx/wallpaper_company.jpg');"></div>
+            <div class="profile-header__desc-bar">
+              <div class="profile-header__profile-picture-container"><img src="gfx/profile_company.jpg" alt="Profilbild von Company of Imagination Ltd." class="profile-header__profile-picture img-responsive">
+              </div>
+              <div class="profile-header__profile-name-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <h3 class="profile-header__name">Company of Imagination Ltd.</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-header__profile-buttons-container">
+                <div style="display: table; height: 100px;">
+                  <div style="display: table-cell; vertical-align: middle;">
+                    <ul class="profile-header__action-buttons text-right">
+                      <li class="profile-header__action-button"><i class="material-icons"></i>
+                      </li>
+                      <li class="profile-header__action-button"><a href="javascript:reactChatApp.addChat('company-of-imagination');" style="color: inherit;"><i class="material-icons"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <button class="wall-widget--button wall-widget--button-add hidden-md hidden-lg" type="button" name="button"><i class="material-icons">&#xE145;</i>Hinzufügen</button>
+          <ul class="profile-tabs">
+            <li class="profile-tabs__tab"><a href="#1">Über</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Wall</a>
+            </li>
+            <li class="profile-tabs__tab"><a href="#1">Kontakte</a>
+            </li>
+            <li class="profile-tabs__tab profile-tabs__tab--active"><a href="#1">Fotos</a>
+            </li>
+          </ul>
+
+
+          <h3 class="content-headline">Album 1 von Company of Imagination</h3>
+          <p class="area-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <button class="wall-widget--button button--new-pic">Bilder hinzufügen <i class="material-icons">&#xE145;</i></button>
+          </p>
+          <div class="area-fotos area-fotos--album row my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img class="galary-foto__thumbnail" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title">Schmetterling</label>
+                  <label class="foto-likes">
+                    <i class="material-icons">&#xE8DC;</i>
+                    7
+                  </label>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://c2.staticflickr.com/4/3841/14472459712_e67d07b8b1_b.jpg" itemprop="contentUrl" data-size="500x749">
+                <img class="galary-foto__thumbnail" src="https://c2.staticflickr.com/4/3841/14472459712_e67d07b8b1_b.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title">Nightdrive</label><label class="foto-likes"><i class="material-icons">&#xE8DC;</i>7</label>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://c1.staticflickr.com/9/8786/28448989811_12012952e5_k.jpg" itemprop="contentUrl" data-size="2048x1286">
+                <img class="galary-foto__thumbnail" src="https://c1.staticflickr.com/9/8786/28448989811_12012952e5_k.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title">Urlaub 1</label><label class="foto-likes"><i class="material-icons">&#xE8DC;</i>7</label>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://c1.staticflickr.com/9/8786/28448989811_12012952e5_k.jpg" itemprop="contentUrl" data-size="2048x1286">
+                <img class="galary-foto__thumbnail" src="https://c1.staticflickr.com/9/8786/28448989811_806ce31f36_q.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title">Urlaub 2</label><label class="foto-likes"><i class="material-icons">&#xE8DC;</i>7</label>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://c2.staticflickr.com/6/5058/5404076515_8f8e9dd447_b.jpg" itemprop="contentUrl" data-size="1024x768">
+                <img class="galary-foto__thumbnail" src="https://c2.staticflickr.com/6/5058/5404076515_8f8e9dd447_b.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title"></label><label class="foto-likes"><i class="material-icons">&#xE8DC;</i>7</label>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="galary-foto col-xs-6 col-sm-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="https://c2.staticflickr.com/4/3086/3089317911_89c179eec8_b.jpg" itemprop="contentUrl" data-size="1024x197">
+                <img class="galary-foto__thumbnail" src="https://c2.staticflickr.com/4/3086/3089317911_89c179eec8_b.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption class="galary-foto--clearfix" itemprop="caption description">
+                <div class="galary-foto__description">
+                  <label class="foto-title">Urlaub an der Küste 2016</label><label class="foto-likes"><i class="material-icons">&#xE8DC;</i>103</label>
+                </div>
+              </figcaption>
+            </figure>
+
+
+          </div>
+
+        </div>
+
+        <div class="wall-widget--comment-section album__comment">
+          <button class="wall-widget--button comment-button--loadmore" type="button" name="button"><i class="material-icons">&#xE316;</i>Mehr</button>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              Lorem Ipsum! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 20 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              Cool!
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 10 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              JA
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 3 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment wall-widget--comment__input">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+            <input type="text" class="comment__input" placeholder="Kommentieren..."/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-xs hidden-sm">
+
+        <div data-module="messages.html"></div>
+
+        <div data-module="preferred-partners.html"></div>
+
+      </div>
+
+    </div>
+
+    <div id="chat-app">
+    </div>
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+             It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js" charset="utf-8"></script>
+    <script src="react/ChatApp.js" type="text/babel" charset="utf-8"></script>
+
+
+    <script src="js/album-galary.js" charset="utf-8"></script>
+
+  </body>
+</html>

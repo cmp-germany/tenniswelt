@@ -1,0 +1,112 @@
+.area-description
+  font-size: 12px
+  padding: 0px 3px
+  margin-bottom: 25px
+  overflow: auto
+
+.area-fotos--album
+  margin: 0
+  padding: 5px
+  border: solid 1px #eeeeee
+  border-top-color: $color-primary
+  border-left-color: $color-primary
+  background-color: #fefefe
+
+
+.galary-foto
+  position: relative
+  padding: 3px
+
+.galary-foto:before
+  content: ""
+  display: block
+  padding-top: 100%
+
+.galary-foto a
+  position:  absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  margin: 3px
+  overflow: hidden
+
+.galary-foto__thumbnail
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  max-width: 300px
+  max-height: 300px
+  object-fit: cover
+
+
+
+.galary-foto--clearfix
+  position: relative
+  width: 100%
+
+.galary-foto__description
+  position: absolute
+  bottom: 0
+  background-color: transparent
+  padding: 4px 8px
+  padding-top: 10px
+  color: #ffffff
+  font-weight: bold
+  text-shadow: 0px 1px #333333
+  width: 100%
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100,3aa6e7+100&0+0,0.65+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(58,166,231,0.65) 100%)
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(58,166,231,0.65) 100%)
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(58,166,231,0.65) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 )
+
+.foto-title
+  margin-bottom: 0px
+  width: 100%
+  padding-right: 60px
+  display: inline-block
+  overflow: hidden
+
+.foto-likes
+  width: 60px
+  margin-bottom: 0px
+  position: absolute
+  right: 0
+  bottom: 10px
+  text-align: right
+  padding-right: 10px
+  .material-icons
+    vertical-align: middle
+    margin-top: -4px
+    font-size: 16px
+    margin-right: 4px
+
+//Style of Slider
+.pswp__caption
+  .galary-foto__description
+    background: none
+    padding: 0
+    position: static
+  .foto-title
+    width: auto
+    padding: 0
+  .foto-likes
+    position: static
+    float: right
+
+.pswp__button--fs, .pswp__button--share
+  display: none !important
+
+.album__comment
+  margin-bottom: 80px
+  padding-top: 15px
+
+.button--new-pic
+  display: block
+  margin-top: 20px
+  float: right
+  font-size: 14px
+  .material-icons
+    font-size: 18px
