@@ -7496,69 +7496,63 @@ button.close {
 }
 
 /* line 3, ../sass/_old-theme-koeln.scss */
-.required-field input, .required-field textarea {
-  border-left: 0.3125em solid #ed1c24 !important;
-  width: 100%;
-}
-
-/* line 4, ../sass/_old-theme-koeln.scss */
 .message-center .required-field input, .message-center .required-field textarea,
 .message-center .required-field .reContentArea, .message-center .required-field .riTextBox, .message-center .required-field .rcbInput {
   border-left: 0.3125em solid #ed1c24 !important;
 }
 
-/* line 7, ../sass/_old-theme-koeln.scss */
+/* line 6, ../sass/_old-theme-koeln.scss */
 #DivFootL .DivFootS:after, #DivFootM .DivFootS:after, #DivFootR .DivFootS:after {
   color: #A8161B !important;
 }
 
-/* line 8, ../sass/_old-theme-koeln.scss */
+/* line 7, ../sass/_old-theme-koeln.scss */
 .business-on {
   background: url(/Upload/kolnUserType_Business.png) no-repeat;
 }
 
-/* line 9, ../sass/_old-theme-koeln.scss */
+/* line 8, ../sass/_old-theme-koeln.scss */
 .private-on {
   background: url(/Upload/kolnUserType_Private.png) no-repeat;
 }
 
-/* line 10, ../sass/_old-theme-koeln.scss */
+/* line 9, ../sass/_old-theme-koeln.scss */
 .regional-on {
   background: url(/Upload/kolnRegion_Regional.png) no-repeat;
 }
 
-/* line 11, ../sass/_old-theme-koeln.scss */
+/* line 10, ../sass/_old-theme-koeln.scss */
 .worldwide-on {
   background: url(/Upload/KolnRegion_Worlwide.png) no-repeat;
 }
 
-/* line 12, ../sass/_old-theme-koeln.scss */
+/* line 11, ../sass/_old-theme-koeln.scss */
 .lnkCancelProfile {
   color: #fff !important;
 }
 
-/* line 13, ../sass/_old-theme-koeln.scss */
+/* line 12, ../sass/_old-theme-koeln.scss */
 .user-profile-tabs li.selected a {
   color: #161616;
 }
 
-/* line 14, ../sass/_old-theme-koeln.scss */
+/* line 13, ../sass/_old-theme-koeln.scss */
 .navigation-holder {
   top: 120px;
 }
 
 /*header{padding-bottom:195px;}*/
-/* line 16, ../sass/_old-theme-koeln.scss */
+/* line 15, ../sass/_old-theme-koeln.scss */
 nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, footer .footer-holder ul li a:hover {
   color: #EABCBE;
 }
 
-/* line 17, ../sass/_old-theme-koeln.scss */
+/* line 16, ../sass/_old-theme-koeln.scss */
 .RadMenu .rmLink:hover {
   background-color: #EABCBE !important;
 }
 
-/* line 18, ../sass/_old-theme-koeln.scss */
+/* line 17, ../sass/_old-theme-koeln.scss */
 .discussion .title-wrapper, .discussion-message-title-wrapper {
   background-image: -ms-linear-gradient(left bottom, #075278, #ed1c24);
   background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #075278), color-stop(100%, #ed1c24));
@@ -7569,27 +7563,27 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ed1c24',endColorstr = '#075278');
 }
 
-/* line 27, ../sass/_old-theme-koeln.scss */
+/* line 26, ../sass/_old-theme-koeln.scss */
 .sort-filter .filtering .filtering-holder .search {
   border: #ed1c24;
 }
 
-/* line 28, ../sass/_old-theme-koeln.scss */
+/* line 27, ../sass/_old-theme-koeln.scss */
 .admin-bar-holder a:hover, .tasksLayout a:hover, .topPanel a:hover, .ui-state-default a:hover, .ui-state-active a:hover {
   color: #74ccf7;
 }
 
-/* line 29, ../sass/_old-theme-koeln.scss */
+/* line 28, ../sass/_old-theme-koeln.scss */
 .ui-state-active a, .admin-bar-holder a, .tasksLayout a, .topPanel a {
   color: #14a9f1;
 }
 
-/* line 30, ../sass/_old-theme-koeln.scss */
+/* line 29, ../sass/_old-theme-koeln.scss */
 #H1Empty {
   color: #fff;
 }
 
-/* line 31, ../sass/_old-theme-koeln.scss */
+/* line 30, ../sass/_old-theme-koeln.scss */
 #DivImpresum {
   display: block;
   margin: 5px auto;
@@ -7597,33 +7591,33 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   font-size: 12px;
 }
 
-/* line 33, ../sass/_old-theme-koeln.scss */
+/* line 32, ../sass/_old-theme-koeln.scss */
 .DivFootSep {
   width: 95px !important;
 }
 
-/* line 34, ../sass/_old-theme-koeln.scss */
+/* line 33, ../sass/_old-theme-koeln.scss */
 .DivFootItem {
   width: 319px !important;
 }
 
-/* line 35, ../sass/_old-theme-koeln.scss */
+/* line 34, ../sass/_old-theme-koeln.scss */
 .DivFootT, .DivFootC {
   width: 265px !important;
 }
 
-/* line 36, ../sass/_old-theme-koeln.scss */
+/* line 35, ../sass/_old-theme-koeln.scss */
 .DivFootS {
   float: left !important;
   margin-right: 10px;
 }
 
-/* line 37, ../sass/_old-theme-koeln.scss */
+/* line 36, ../sass/_old-theme-koeln.scss */
 #DivFootL .DivFootS:after {
   float: right;
 }
 
-/* line 38, ../sass/_old-theme-koeln.scss */
+/* line 37, ../sass/_old-theme-koeln.scss */
 .MenuItemSelected {
   background-color: lightgrey;
 }
@@ -7664,22 +7658,22 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #kolnHeadServices .MenuLavel_1:hover{background-color:rgb(58, 166, 231)!important;}
 #kolnHeadServices .MenuLavel_2[href]:hover{color:#262626!important;background-color:#f5f5f5!important;}
 #kolnHeadServices .MenuLavel_3:hover{text-decoration:underline;}*/
-/* line 77, ../sass/_old-theme-koeln.scss */
+/* line 76, ../sass/_old-theme-koeln.scss */
 img[id^="imgLike_"] {
   background-color: #e9002f !important;
 }
 
-/* line 78, ../sass/_old-theme-koeln.scss */
+/* line 77, ../sass/_old-theme-koeln.scss */
 .info-name a {
   color: #333;
 }
 
-/* line 79, ../sass/_old-theme-koeln.scss */
+/* line 78, ../sass/_old-theme-koeln.scss */
 .info-name a b {
   color: #E9002F;
 }
 
-/* line 81, ../sass/_old-theme-koeln.scss */
+/* line 80, ../sass/_old-theme-koeln.scss */
 #WelcomeErrorWrapper {
   background: #E9002F;
   color: #fff;
@@ -10831,6 +10825,12 @@ body a:hover {
   margin-top: 20px;
 }
 
+/* line 92, ../sass/_profile-groups.sass */
+.card-no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* line 1, ../sass/_group-wall.sass */
 .group-header {
   margin-top: 12px;
@@ -10992,9 +10992,10 @@ body a:hover {
   font-size: 12px;
   padding: 0px 3px;
   margin-bottom: 25px;
+  overflow: auto;
 }
 
-/* line 6, ../sass/_album-galary.sass */
+/* line 7, ../sass/_album-galary.sass */
 .area-fotos--album {
   margin: 0;
   padding: 5px;
@@ -11004,20 +11005,20 @@ body a:hover {
   background-color: #fefefe;
 }
 
-/* line 15, ../sass/_album-galary.sass */
+/* line 16, ../sass/_album-galary.sass */
 .galary-foto {
   position: relative;
   padding: 3px;
 }
 
-/* line 19, ../sass/_album-galary.sass */
+/* line 20, ../sass/_album-galary.sass */
 .galary-foto:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
 
-/* line 24, ../sass/_album-galary.sass */
+/* line 25, ../sass/_album-galary.sass */
 .galary-foto a {
   position: absolute;
   top: 0;
@@ -11028,7 +11029,7 @@ body a:hover {
   overflow: hidden;
 }
 
-/* line 33, ../sass/_album-galary.sass */
+/* line 34, ../sass/_album-galary.sass */
 .galary-foto__thumbnail {
   min-width: 100%;
   min-height: 100%;
@@ -11039,13 +11040,13 @@ body a:hover {
   object-fit: cover;
 }
 
-/* line 44, ../sass/_album-galary.sass */
+/* line 45, ../sass/_album-galary.sass */
 .galary-foto--clearfix {
   position: relative;
   width: 100%;
 }
 
-/* line 48, ../sass/_album-galary.sass */
+/* line 49, ../sass/_album-galary.sass */
 .galary-foto__description {
   position: absolute;
   bottom: 0;
@@ -11063,29 +11064,71 @@ body a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a63aa6e7',GradientType=0 );
 }
 
-/* line 64, ../sass/_album-galary.sass */
+/* line 65, ../sass/_album-galary.sass */
 .foto-title {
   margin-bottom: 0px;
   width: 100%;
-  padding-right: 50px;
+  padding-right: 60px;
   display: inline-block;
   overflow: hidden;
 }
 
-/* line 71, ../sass/_album-galary.sass */
+/* line 72, ../sass/_album-galary.sass */
 .foto-likes {
-  width: 50px;
+  width: 60px;
   margin-bottom: 0px;
   position: absolute;
   right: 0;
-  top: 10px;
+  bottom: 10px;
+  text-align: right;
+  padding-right: 10px;
 }
-/* line 77, ../sass/_album-galary.sass */
+/* line 80, ../sass/_album-galary.sass */
 .foto-likes .material-icons {
   vertical-align: middle;
   margin-top: -4px;
   font-size: 16px;
   margin-right: 4px;
+}
+
+/* line 88, ../sass/_album-galary.sass */
+.pswp__caption .galary-foto__description {
+  background: none;
+  padding: 0;
+  position: static;
+}
+/* line 92, ../sass/_album-galary.sass */
+.pswp__caption .foto-title {
+  width: auto;
+  padding: 0;
+}
+/* line 95, ../sass/_album-galary.sass */
+.pswp__caption .foto-likes {
+  position: static;
+  float: right;
+}
+
+/* line 99, ../sass/_album-galary.sass */
+.pswp__button--fs, .pswp__button--share {
+  display: none !important;
+}
+
+/* line 102, ../sass/_album-galary.sass */
+.album__comment {
+  margin-bottom: 80px;
+  padding-top: 15px;
+}
+
+/* line 106, ../sass/_album-galary.sass */
+.button--new-pic {
+  display: block;
+  margin-top: 20px;
+  float: right;
+  font-size: 14px;
+}
+/* line 111, ../sass/_album-galary.sass */
+.button--new-pic .material-icons {
+  font-size: 18px;
 }
 
 /* line 5, ../sass/_chat.sass */

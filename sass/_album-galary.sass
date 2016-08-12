@@ -2,6 +2,7 @@
   font-size: 12px
   padding: 0px 3px
   margin-bottom: 25px
+  overflow: auto
 
 .area-fotos--album
   margin: 0
@@ -64,18 +65,48 @@
 .foto-title
   margin-bottom: 0px
   width: 100%
-  padding-right: 50px
+  padding-right: 60px
   display: inline-block
   overflow: hidden
 
 .foto-likes
-  width: 50px
+  width: 60px
   margin-bottom: 0px
   position: absolute
   right: 0
-  top: 10px
+  bottom: 10px
+  text-align: right
+  padding-right: 10px
   .material-icons
     vertical-align: middle
     margin-top: -4px
     font-size: 16px
     margin-right: 4px
+
+//Style of Slider
+.pswp__caption
+  .galary-foto__description
+    background: none
+    padding: 0
+    position: static
+  .foto-title
+    width: auto
+    padding: 0
+  .foto-likes
+    position: static
+    float: right
+
+.pswp__button--fs, .pswp__button--share
+  display: none !important
+
+.album__comment
+  margin-bottom: 80px
+  padding-top: 15px
+
+.button--new-pic
+  display: block
+  margin-top: 20px
+  float: right
+  font-size: 14px
+  .material-icons
+    font-size: 18px

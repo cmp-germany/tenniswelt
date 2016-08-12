@@ -62,7 +62,7 @@
 
       <!-- Main Collumn -->
       <div class="section-center col-md-6">
-        <div id="profile-about">
+        <div id="profile-album">
           <header class="profile-header">
             <div class="profile-header__wallpaper" alt="Wallpaper von Company of Imagination Ltd." style="background-image: url('gfx/wallpaper_company.jpg');"></div>
             <div class="profile-header__desc-bar">
@@ -105,6 +105,7 @@
           <h3 class="content-headline">Album 1 von Company of Imagination</h3>
           <p class="area-description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <button class="wall-widget--button button--new-pic">Bilder hinzufügen <i class="material-icons">&#xE145;</i></button>
           </p>
           <div class="area-fotos area-fotos--album row my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
@@ -181,6 +182,38 @@
 
           </div>
 
+        </div>
+
+        <div class="wall-widget--comment-section album__comment">
+          <button class="wall-widget--button comment-button--loadmore" type="button" name="button"><i class="material-icons">&#xE316;</i>Mehr</button>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              Lorem Ipsum! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 20 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              Cool!
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 10 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+            <p class="wall-widget--comment__comment">
+              <a class="comment-account-link" href="#">Maxi Mustermann</a>
+              JA
+              <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 3 Minuten</label>
+            </p>
+          </div>
+          <div class="wall-widget--comment wall-widget--comment__input">
+            <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+            <input type="text" class="comment__input" placeholder="Kommentieren..."/>
+          </div>
         </div>
       </div>
 
