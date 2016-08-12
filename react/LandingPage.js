@@ -1,149 +1,3 @@
-var contentLandingPage = [
-  { module: "TitleWithRegisterForm",
-    contents: {
-      title: "Treten Sie jetzt mit der Kölner Gründerszene in Kontakt!",
-      text:
-        "Werden Sie Teil der Startup Szene und treten Sie einem internationalem Portal bei. Hier finden Sie alle Möglichkeiten, die Sie für Ihr aufstrebendes Unternehmen brauchen: Kommunizieren Sie mit Gleichgesinnten, tauschen Sie Ihr Wissen aus, finden Sie Ihre Kunden und entdecken Sie die Finanzierungsmöglichkeiten, die Ihrer Geschäftsidee den nötigen Boost verleihen.",
-      formTitle: "Kostenlos registrieren und ein Jahr unverbindlich testen.",
-      buttonAdditionalText: 'Per Klick auf "Jetzt Mitglied werden" stimmen Sie unseren AGB und Datenschutzrichtlinien zu.',
-      buttonText: "Jetzt Mitglied werden"
-    },
-    pictures: {
-      background: {
-        src: "gfx/landing-hintergrund.jpg",
-        positionX: "100%",
-        positionY: "50%"
-      },
-      motiv: {
-        src: "gfx/flieger-junge.png"
-      }
-    },
-    inputFields: [
-      {
-        inputType: "text",
-        label: "Name des Unternehmens"
-      },
-      {
-        inputType: "select",
-        options: [
-          "Kategorie 1",
-          "Kategorie 2",
-          "Kategorie 3",
-          "Kategorie 4"
-        ]
-      },
-      {
-        inputType: "select",
-        options: [
-          "Branche 1",
-          "Branche 2",
-          "Branche 3",
-          "Branche 4"
-        ]
-      },
-      {
-        inputType: "text",
-        label: "Benutzername"
-      },
-      {
-        inputType: "email",
-        label: "E-Mail Adresse"
-      },
-      {
-        inputType: "password",
-        label: "Passwort vergeben"
-      },
-      {
-        inputType: "password",
-        label: "Passwort wiederholen"
-      }
-    ]
-  },
-  { module: "KeyFeatures",
-    features: [
-      {
-        title: "Firmenprofil anlegen",
-        text: "Zeigen Sie, was Sie unverwechselbar macht. Legen Sie ein Firmenprofil an, das Ihre Angebote und Leistungen beschreibt und stellen Sie sich und Ihre Mitarbeiter den anderen Plattformmitgliedern vor.",
-        icon: "business",
-        button: {
-          text: "Jetzt registrieren",
-          url: "#register-form"
-        }
-      },
-      {
-        title: "Zielgruppe finden",
-        text: "Schlagwortsuche, Active Matching und Gruppen der Plattform helfen Ihnen, zu Ihren konkreten Anliegen die richtigen Ansprechpartner auf der Plattform zu finden.",
-        icon: "group",
-        button: {
-          text: "Jetzt registrieren",
-          url: "#register-form"
-        }
-      }
-    ]
-  },
-  { module: "SlideStatement",
-    title: "Wir vernetzen Know-how. Schnell, sicher, erfolgreich.",
-    background: {
-      src: "gfx/fotolia_110376588.jpg",
-      positionX: "90%",
-      positionY: "50%"
-    }
-  },
-  { module: "People",
-    cards: [
-      {
-        type: "people",
-        title: "Köln: Top Lage, perfekte Logistik",
-        text: "Köln liegt als viertgrößte Stadt Deutschlands optimal erreichbar im Zentrum eines enormen Absatzmarktes: In einem Radius von nur 100km leben rund 17 Millionen Menschen.",
-        url: "http://startupregion.koeln/infrastructure.html",
-        picture: "gfx/landing-page/fotolia_82266608.jpg"
-      },
-      {
-        type: "people",
-        title: "Stadt Köln",
-        text: "Für den Erfolg sind nicht nur wirtschaftliche Faktoren wichtig: das ganze Umfeld muss passen. Wie in Köln, der Weltstadt mit Tempo und Herz.",
-        url: "http://www.stadt.koeln/",
-        picture: "gfx/landing-page/fotolia_93025626.jpg"
-      },
-      {
-        type: "people",
-        title: "Köln und Industrie",
-        text: "Die produktive Mischung aus großen, mittleren und kleinen heimischen und ausländischen Unterneh­men zeigt das große Potential der Wirtschaftsregion Köln.",
-        url: "http://startupregion.koeln/industry.html",
-        picture: "gfx/landing-page/fotolia_71453007.jpg"
-      },
-      {
-        type: "people",
-        title: "NetCologne - Digitales Köln",
-        text: "Nicht nur die Versorgung mit schnellem Internet im Büro, sondern auch die Möglichkeit mobil sein Business optimal zu führen sind essentiell. Kölns TK-Anbieter NetCologne bietet beides.",
-        url: "https://www.netcologne.de/geschaeftskunden",
-        picture: "gfx/landing-page/logo-netcologne.png"
-      },
-      {
-        type: "people",
-        title: "IHK Köln - Starker Partner für Startups",
-        text: "Ob Existenzgründung, Unternehmenswachstum oder Unternehmensnachfolger: Die IHK Köln berät, hilft und informiert.",
-        url: "https://www.ihk-koeln.de/Existenzgruendung.AxCMS?ActiveID=1671",
-        picture: "gfx/landing-page/ihk-k.png"
-      },
-      {
-        type: "register",
-        text: "Kostenlos registrieren und ein Jahr unverbindlich testen.",
-        buttonText: "Jetzt registrieren",
-        url: "#register-form"
-      }
-    ]
-  },
-  { module: "SlideStatement",
-    title: "Vernetzen Sie sich mit dem Erfolg.",
-    background: {
-      src: "gfx/Fotolia_101170696_L-1920.jpg",
-      positionX: "55%",
-      positionY: "50%"
-    }
-  }
-];
-
 var IfNotNullModule = React.createClass({
   render: function () {
 
@@ -227,7 +81,7 @@ var KeyFeatureModule = React.createClass({
           <p className="key-feature__description">
             {data.text}
           </p>
-          <a href={data.button.url} className="btn btn-important">{data.button.text}</a>
+          <a href={data.button.url} className="btn btn-primary">{data.button.text}</a>
         </div>
       </div>
     );
@@ -300,28 +154,34 @@ var TitleWithRegisterForm = React.createClass({
 
 
     return (
-      <section className="slide slide--with-background slide--title">
+      <section
+        className="slide slide--with-background slide--title"
+        style={{
+          backgroundImage: 'url('+data.pictures.background.src+')',
+          backgroundAttachment: 'scroll',
+          backgroundPosition: '100% 50%',
+
+        }}>
         <div className="slide--with-background__inner-div">
           <div className="container">
             <div className="row">
-              <div className="col-sm-5 slide__title-introduction">
+              <div className="col-md-5 slide__title-introduction">
                 <h1><span className="slide__white-negative-text">{data.contents.title}</span></h1>
                 <div className="slide--with-background__text">
                   <p>{data.contents.text}</p>
                 </div>
                 <IfNotNullModule check={[data.pictures.motiv.src] }>
-                  <img src={data.pictures.motiv.src} alt="motiv" className="visible-lg-block visible-md-block visible-sm-block img-responsive" style={{marginBottom: '-90px'}} />
-                  <img src={data.pictures.motiv.src} alt="motiv" className="visible-xs-block img-responsive" style={{ maxWidth: 250, marginLeft: 'auto', marginRight: 'auto', marginBottom: '-40px' }} />
+                  <img src={data.pictures.motiv.src} alt="motiv" className="slide__motiv-picture" />
                 </IfNotNullModule>
               </div>
-              <div className="col-sm-6 col-sm-offset-1">
+              <div className="col-md-5 col-md-offset-2">
                 <form id="register-form" className="register-form register-form--slide">
                   <p className="register-form__intro-text text-center">{data.contents.formTitle}</p>
 
                   <InputFieldsList fields={data.inputFields} />
 
                   <p className="register-form__info-text">{data.contents.buttonAdditionalText}</p>
-                  <button type="submit" className="btn btn-important btn-block">{data.contents.buttonText}</button>
+                  <button type="submit" className="btn btn-primary btn-block">{data.contents.buttonText}</button>
                 </form>
               </div>
             </div>

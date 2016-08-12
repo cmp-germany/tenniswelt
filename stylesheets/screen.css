@@ -447,7 +447,7 @@ img {
 }
 
 /* line 81, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
-.img-responsive {
+.img-responsive, .slide__motiv-picture {
   display: block;
   max-width: 100%;
   height: auto;
@@ -8626,7 +8626,30 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-bottom: 40px;
 }
 
-/* line 82, ../sass/_landing-page.sass */
+/* line 80, ../sass/_landing-page.sass */
+.slide__motiv-picture {
+  margin-bottom: -90px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 80, ../sass/_landing-page.sass */
+  .slide__motiv-picture {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -40px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 80, ../sass/_landing-page.sass */
+  .slide__motiv-picture {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -40px;
+  }
+}
+
+/* line 96, ../sass/_landing-page.sass */
 .register-form {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 40px;
@@ -8635,23 +8658,23 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-right: auto;
 }
 
-/* line 90, ../sass/_landing-page.sass */
+/* line 104, ../sass/_landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 94, ../sass/_landing-page.sass */
+/* line 108, ../sass/_landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
 }
 
-/* line 102, ../sass/_landing-page.sass */
+/* line 116, ../sass/_landing-page.sass */
 .key-feature {
   margin-bottom: 40px;
 }
 
-/* line 105, ../sass/_landing-page.sass */
+/* line 119, ../sass/_landing-page.sass */
 .key-feature__icon {
   color: #3aa6e7;
   font-size: 60px;
@@ -8659,14 +8682,14 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   display: block;
 }
 
-/* line 111, ../sass/_landing-page.sass */
+/* line 125, ../sass/_landing-page.sass */
 .key-feature__headline {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px #3aa6e7;
 }
 
-/* line 117, ../sass/_landing-page.sass */
+/* line 131, ../sass/_landing-page.sass */
 .profile-card, .register-card {
   max-width: 100%;
   margin-left: auto;
@@ -8674,7 +8697,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-bottom: 30px;
 }
 
-/* line 123, ../sass/_landing-page.sass */
+/* line 137, ../sass/_landing-page.sass */
 .profile-card__innerDiv {
   padding: 10px;
   border-top: 1px solid #3aa6e7;
@@ -8685,58 +8708,58 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   height: 145px;
 }
 
-/* line 132, ../sass/_landing-page.sass */
+/* line 146, ../sass/_landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 136, ../sass/_landing-page.sass */
+/* line 150, ../sass/_landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 140, ../sass/_landing-page.sass */
+/* line 154, ../sass/_landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 144, ../sass/_landing-page.sass */
+/* line 158, ../sass/_landing-page.sass */
 .register-card__innerDiv {
   background-color: #3aa6e7;
   padding: 20px;
   height: 145px;
 }
 
-/* line 149, ../sass/_landing-page.sass */
+/* line 163, ../sass/_landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
   font-weight: lighter;
 }
 
-/* line 154, ../sass/_landing-page.sass */
+/* line 168, ../sass/_landing-page.sass */
 .navbar-brand.display {
   display: block;
 }
 
 @media(max-width:767px) {
-  /* line 158, ../sass/_landing-page.sass */
+  /* line 172, ../sass/_landing-page.sass */
   .navbar-landing-page {
     background-color: rgba(19, 35, 51, 0.9);
   }
 
-  /* line 161, ../sass/_landing-page.sass */
+  /* line 175, ../sass/_landing-page.sass */
   .navbar .btn-important {
     margin-left: 0;
   }
 
-  /* line 164, ../sass/_landing-page.sass */
+  /* line 178, ../sass/_landing-page.sass */
   .btn-password {
     float: right;
   }
 
-  /* line 167, ../sass/_landing-page.sass */
+  /* line 181, ../sass/_landing-page.sass */
   .btn-password::before {
     content: "Passwort vergessen ";
   }
