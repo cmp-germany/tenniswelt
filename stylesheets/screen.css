@@ -10970,6 +10970,20 @@ body a:hover {
   padding: 3px 6px;
 }
 
+/* line 86, ../sass/_fotos.sass */
+.widget-album__edit {
+  position: absolute;
+  right: 15px;
+  top: -18px;
+  color: #ffffff;
+  background-color: #3aa6e7;
+  padding: 4px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 /* line 1, ../sass/_album-galary.sass */
 .area-description {
   font-size: 12px;
