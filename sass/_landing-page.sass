@@ -118,10 +118,10 @@ $padding-negative-text: 3px
   max-width: 100%
   margin-left: auto
   margin-right: auto
+  margin-bottom: 30px
 
 .profile-card__innerDiv
   padding: 10px
-  margin-bottom: 30px
   border-top: 1px solid $color-primary
   border-left: 1px solid $color-primary
   border-bottom: 1px solid #eee
@@ -154,7 +154,18 @@ $padding-negative-text: 3px
 .navbar-brand.display
   display: block
 
+@media(max-width:767px)
+  .navbar-landing-page
+    background-color: rgba(19, 35, 51, 0.9)
 
+  .navbar .btn-important
+    margin-left: 0
+
+  .btn-password
+    float: right
+
+  .btn-password::before
+    content: "Passwort vergessen "
 
 
 

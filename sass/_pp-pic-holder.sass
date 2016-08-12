@@ -1,0 +1,79 @@
+.pp_pic_holder.pp_default
+  .pp_top, .pp_bottom
+    display: none
+
+  .pp_content_container
+    .pp_left, .pp_right
+      background: none
+
+    .pp_content
+      background-color: transparent
+
+
+@media(max-width:767px)
+  .pp_pic_holder.pp_default
+    position: fixed
+    width: 100% !important
+    height: 100%
+    top: 0px !important
+    left: 0px !important
+
+    .pp_top, .pp_bottom
+      display: none
+
+    .pp_content_container
+      height: 100%
+      width: 100%
+      .pp_left, .pp_right
+        height: 100%
+        width: 100%
+        padding: 0
+        background: none
+
+
+  .pp_pic_holder.pp_default
+    .pp_content_container
+      .pp_content
+        margin: 0 5%
+        width: 90% !important
+        height: 100% !important
+        background-color: transparent
+
+        .pp_fade
+          height: 100%
+          .pp_expand
+            display: none !important
+          .pp_hoverContainer
+            display: none !important
+            width: 100% !important
+            height: 100% !important
+
+          .pp_gallery
+            display: none !important
+
+          #pp_full_res
+            height: auto
+            height: 80%
+            overflow: hidden
+
+            img
+              width: 100% !important
+              height: auto !important
+
+          .pp_details
+            width: 100% !important
+            .pp_nav
+              width: 100%
+              margin: 0
+              .pp_play
+                display: none
+              .currentTextHolder
+                display: none
+                white-space: nowrap
+                overflow: hidden
+              .pp_arrow_previous, .pp_arrow_next
+
+
+            .pp_close
+              position: absolute
+              right: 0
