@@ -113,7 +113,6 @@ var PeopleCardModule = React.createClass({
 var RegisterCardModule = React.createClass({
   render: function() {
     var data = this.props.data;
-    console.log(data);
 
     return (
       <div className="col-lg-4 col-md-6 col-sm-6 register-card clearfix"><div className="register-card__innerDiv clearfix">
