@@ -159,7 +159,8 @@ var TitleWithRegisterForm = React.createClass({
         style={{
           backgroundImage: 'url('+data.pictures.background.src+')',
           backgroundAttachment: 'scroll',
-          backgroundPosition: '100% 50%',
+          backgroundPositionX: data.pictures.background.positionX,
+          backgroundPositionY: data.pictures.background.positionY,
 
         }}>
         <div className="slide--with-background__inner-div">
