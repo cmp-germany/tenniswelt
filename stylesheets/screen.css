@@ -8136,7 +8136,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   color: #fff;
 }
 
-/* line 4, ../sass/_form.sass */
+/* line 3, ../sass/_form.sass */
 .form-control {
   background-color: transparent;
   border: solid 1px #fff;
@@ -8147,49 +8147,49 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-border-radius: 0px;
 }
 
-/* line 16, ../sass/_form.sass */
+/* line 15, ../sass/_form.sass */
 .form-control--navbar, .form-control--options-navbar {
   border: solid 1px #747474;
   background-color: transparent;
   color: #fff;
 }
 
-/* line 21, ../sass/_form.sass */
+/* line 20, ../sass/_form.sass */
 .form-control::-webkit-input-placeholder {
   color: #6a6a6a;
 }
 
-/* line 24, ../sass/_form.sass */
+/* line 23, ../sass/_form.sass */
 .form-control:-moz-placeholder {
   color: #6a6a6a;
 }
 
-/* line 27, ../sass/_form.sass */
+/* line 26, ../sass/_form.sass */
 .form-control::-moz-placeholder {
   color: #6a6a6a;
 }
 
-/* line 30, ../sass/_form.sass */
+/* line 29, ../sass/_form.sass */
 .form-control:-ms-input-placeholder {
   color: #6a6a6a;
 }
 
-/* line 34, ../sass/_form.sass */
+/* line 33, ../sass/_form.sass */
 .form-control--navbar::-webkit-input-placeholder {
   color: #cdcdcd;
 }
 
-/* line 37, ../sass/_form.sass */
+/* line 36, ../sass/_form.sass */
 .form-control--navbar:-moz-placeholder {
   color: #cdcdcd;
 }
 
-/* line 40, ../sass/_form.sass */
+/* line 39, ../sass/_form.sass */
 .form-control--navbar::-moz-placeholder {
   color: #cdcdcd;
 }
 
-/* line 43, ../sass/_form.sass */
+/* line 42, ../sass/_form.sass */
 .form-control--navbar:-ms-input-placeholder {
   color: #cdcdcd;
 }
