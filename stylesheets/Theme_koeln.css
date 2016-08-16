@@ -12657,6 +12657,11 @@ body a:hover {
   margin-bottom: 8px;
 }
 
+/* line 1, ../sass/_image-preview.sass */
+.DivWallPreviewPhoto {
+  padding: 2px 10px;
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container, .content-wrapper {
