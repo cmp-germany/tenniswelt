@@ -9982,40 +9982,45 @@ body a:hover {
   margin-top: 7px;
   margin-left: 8px;
 }
+
 /* line 59, ../sass/_matching.sass */
-.matching__filter-switch a, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a {
+.select-toggle {
+  fill: #E9002F;
+}
+/* line 62, ../sass/_matching.sass */
+.select-toggle a {
   color: #777;
   vertical-align: top;
   padding-top: 10px;
 }
-/* line 63, ../sass/_matching.sass */
-.matching__filter-switch a:hover, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:hover, .matching__filter-switch a:active, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:active, .matching__filter-switch a:focus, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:focus, .matching__filter-switch a:visited, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:visited {
+/* line 66, ../sass/_matching.sass */
+.select-toggle a:hover, .select-toggle a:active, .select-toggle a:focus, .select-toggle a:visited {
   text-decoration: none;
 }
-/* line 66, ../sass/_matching.sass */
-.matching__filter-switch a:hover, .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch a:hover {
+/* line 69, ../sass/_matching.sass */
+.select-toggle a:hover {
   color: #E9002F;
 }
-/* line 70, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-right .matching__element--right, .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-right.wall-widget--filter-switch .matching__element--right {
+/* line 73, ../sass/_matching.sass */
+.select-toggle.is-selected-right .matching__element--right {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
-/* line 74, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-right .select-toggle, .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-right.wall-widget--filter-switch .select-toggle {
+/* line 77, ../sass/_matching.sass */
+.select-toggle.is-selected-right .select-toggle {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 82, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-left .matching__element--left, .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-left.wall-widget--filter-switch .matching__element--left {
+/* line 85, ../sass/_matching.sass */
+.select-toggle.is-selected-left .matching__element--left {
   color: #333;
   border-bottom: solid 1px #E9002F;
 }
-/* line 86, ../sass/_matching.sass */
-.matching__filter-switch.is-selected-left .select-toggle, .matching-site .Wall_MatchingsList .wall-widget--filters .is-selected-left.wall-widget--filter-switch .select-toggle {
+/* line 89, ../sass/_matching.sass */
+.select-toggle.is-selected-left .select-toggle {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -10023,7 +10028,7 @@ body a:hover {
   transform: rotate(180deg);
 }
 
-/* line 93, ../sass/_matching.sass */
+/* line 96, ../sass/_matching.sass */
 .select-toggle-button--matching {
   background: none;
   border: none;
@@ -10037,17 +10042,17 @@ body a:hover {
   -moz-user-select: none;
   -ms-user-select: none;
 }
-/* line 106, ../sass/_matching.sass */
+/* line 109, ../sass/_matching.sass */
 .select-toggle-button--matching::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 110, ../sass/_matching.sass */
+/* line 113, ../sass/_matching.sass */
 .select-toggle-button--matching:focus {
   outline: none;
 }
 
-/* line 114, ../sass/_matching.sass */
+/* line 117, ../sass/_matching.sass */
 .matching__filter-select {
   display: inline-block;
   vertical-align: top;
@@ -10055,7 +10060,7 @@ body a:hover {
   margin-left: 7px;
 }
 
-/* line 121, ../sass/_matching.sass */
+/* line 124, ../sass/_matching.sass */
 .wall-widget--filter-select .dropdown-menu {
   left: calc(50% - 46px);
   border-radius: 0;
@@ -10065,11 +10070,11 @@ body a:hover {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 130, ../sass/_matching.sass */
+/* line 133, ../sass/_matching.sass */
 .wall-widget--filter-select .dropdown-menu .Wall_FriendsFilter {
   font-size: inherit;
 }
-/* line 133, ../sass/_matching.sass */
+/* line 136, ../sass/_matching.sass */
 .wall-widget--filter-select .dropdown-menu a {
   height: 35px;
   margin-right: 0;
@@ -10077,7 +10082,7 @@ body a:hover {
   padding-bottom: 7px;
 }
 
-/* line 139, ../sass/_matching.sass */
+/* line 142, ../sass/_matching.sass */
 .empty-list {
   display: block;
   margin-left: auto;
@@ -10086,7 +10091,7 @@ body a:hover {
   color: #777777;
 }
 
-/* line 151, ../sass/_matching.sass */
+/* line 154, ../sass/_matching.sass */
 .matching-site .TabsMain {
   position: relative;
   float: left;
@@ -10101,17 +10106,17 @@ body a:hover {
   margin-top: 0;
 }
 @media (min-width: 992px) {
-  /* line 151, ../sass/_matching.sass */
+  /* line 154, ../sass/_matching.sass */
   .matching-site .TabsMain {
     float: left;
     width: 75%;
   }
 }
-/* line 156, ../sass/_matching.sass */
+/* line 159, ../sass/_matching.sass */
 .matching-site .Wall_FriendsSep {
   height: initial;
 }
-/* line 160, ../sass/_matching.sass */
+/* line 163, ../sass/_matching.sass */
 .matching-site .TabsContent {
   min-width: initial;
   margin: initial;
@@ -10121,7 +10126,7 @@ body a:hover {
   background-color: initial;
   margin-bottom: initial;
 }
-/* line 169, ../sass/_matching.sass */
+/* line 172, ../sass/_matching.sass */
 .matching-site .SearchResultsPageTitle {
   box-sizing: border-box;
   color: #333333;
@@ -10132,23 +10137,23 @@ body a:hover {
   margin-left: 15px;
   margin-top: 20px;
 }
-/* line 184, ../sass/_matching.sass */
+/* line 187, ../sass/_matching.sass */
 .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch:before {
   content: initial;
   display: initial;
 }
-/* line 188, ../sass/_matching.sass */
+/* line 191, ../sass/_matching.sass */
 .matching-site .Wall_MatchingsList .wall-widget--filters .wall-widget--filter-switch:after {
   content: initial;
   display: initial;
   clear: initial;
 }
-/* line 198, ../sass/_matching.sass */
+/* line 201, ../sass/_matching.sass */
 .matching-site .wall-widget--filter-element {
   padding: 0;
   text-align: center;
 }
-/* line 202, ../sass/_matching.sass */
+/* line 205, ../sass/_matching.sass */
 .matching-site .wall-widget--filter-element:first-child {
   position: relative;
   float: left;
@@ -10169,20 +10174,20 @@ body a:hover {
   padding-right: 5px;
 }
 @media (min-width: 992px) {
-  /* line 202, ../sass/_matching.sass */
+  /* line 205, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:first-child {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 1230px) {
-  /* line 202, ../sass/_matching.sass */
+  /* line 205, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:first-child {
     float: left;
     width: 41.66667%;
   }
 }
-/* line 210, ../sass/_matching.sass */
+/* line 213, ../sass/_matching.sass */
 .matching-site .wall-widget--filter-element:nth-child(2) {
   position: relative;
   float: left;
@@ -10200,20 +10205,20 @@ body a:hover {
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  /* line 210, ../sass/_matching.sass */
+  /* line 213, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:nth-child(2) {
     float: left;
     width: 16.66667%;
   }
 }
 @media (min-width: 1230px) {
-  /* line 210, ../sass/_matching.sass */
+  /* line 213, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:nth-child(2) {
     float: left;
     width: 16.66667%;
   }
 }
-/* line 215, ../sass/_matching.sass */
+/* line 218, ../sass/_matching.sass */
 .matching-site .wall-widget--filter-element:last-child {
   position: relative;
   float: left;
@@ -10234,31 +10239,31 @@ body a:hover {
   padding-left: 5px;
 }
 @media (min-width: 992px) {
-  /* line 215, ../sass/_matching.sass */
+  /* line 218, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:last-child {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 1230px) {
-  /* line 215, ../sass/_matching.sass */
+  /* line 218, ../sass/_matching.sass */
   .matching-site .wall-widget--filter-element:last-child {
     float: left;
     width: 41.66667%;
   }
 }
-/* line 224, ../sass/_matching.sass */
+/* line 227, ../sass/_matching.sass */
 .matching-site .wall-widget--filters:nth-child(1) {
   border-bottom-width: 0;
   padding-bottom: 0;
 }
-/* line 228, ../sass/_matching.sass */
+/* line 231, ../sass/_matching.sass */
 .matching-site .wall-widget--filters:nth-child(2) {
   border-top-width: 0;
   padding-top: 10px;
   padding-bottom: 20px;
 }
-/* line 237, ../sass/_matching.sass */
+/* line 240, ../sass/_matching.sass */
 .matching-site .wall-widget--account {
   position: relative;
   float: left;
@@ -10283,33 +10288,33 @@ body a:hover {
   border-bottom: initial;
 }
 @media (min-width: 768px) {
-  /* line 237, ../sass/_matching.sass */
+  /* line 240, ../sass/_matching.sass */
   .matching-site .wall-widget--account {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 237, ../sass/_matching.sass */
+  /* line 240, ../sass/_matching.sass */
   .matching-site .wall-widget--account {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 1230px) {
-  /* line 237, ../sass/_matching.sass */
+  /* line 240, ../sass/_matching.sass */
   .matching-site .wall-widget--account {
     float: left;
     width: 33.33333%;
   }
 }
-/* line 246, ../sass/_matching.sass */
+/* line 249, ../sass/_matching.sass */
 .matching-site .wall-widget--account > div {
   display: block;
   position: relative;
   height: 84px;
 }
-/* line 252, ../sass/_matching.sass */
+/* line 255, ../sass/_matching.sass */
 .matching-site .account {
   width: calc(100% - 75px);
   max-width: initial;
@@ -10325,18 +10330,18 @@ body a:hover {
   margin-top: 2px;
   padding-right: 20px;
 }
-/* line 268, ../sass/_matching.sass */
+/* line 271, ../sass/_matching.sass */
 .matching-site .account > * {
   display: initial;
   vertical-align: initial;
 }
-/* line 272, ../sass/_matching.sass */
+/* line 275, ../sass/_matching.sass */
 .matching-site .avatar {
   width: initial;
   height: initial;
   margin: initial;
 }
-/* line 278, ../sass/_matching.sass */
+/* line 281, ../sass/_matching.sass */
 .matching-site h4 {
   max-width: initial;
   background-color: transparent;
@@ -10350,7 +10355,7 @@ body a:hover {
   width: auto;
   margin-left: 0;
 }
-/* line 291, ../sass/_matching.sass */
+/* line 294, ../sass/_matching.sass */
 .matching-site .wall-widget--actions {
   display: block;
   height: 20px;
