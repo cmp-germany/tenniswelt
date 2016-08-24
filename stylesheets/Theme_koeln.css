@@ -7680,7 +7680,7 @@ img[id^="imgLike_"] {
 }
 
 /* line 1, ../sass/_general.sass */
-html {
+html, table, tr, td {
   background-color: transparent !important;
 }
 
