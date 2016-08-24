@@ -7684,8 +7684,12 @@ body {
   font-family: "Open Sans", sans-serif;
   border-top: solid 50px #132333;
 }
+/* line 4, ../sass/_general.sass */
+body form {
+  background-color: transparent;
+}
 
-/* line 6, ../sass/_general.sass */
+/* line 8, ../sass/_general.sass */
 .content-headline {
   padding-left: 5px;
   margin-top: 30px;
