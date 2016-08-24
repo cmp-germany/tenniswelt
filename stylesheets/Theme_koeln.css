@@ -7680,16 +7680,21 @@ img[id^="imgLike_"] {
 }
 
 /* line 1, ../sass/_general.sass */
+html {
+  background-color: transparent !important;
+}
+
+/* line 4, ../sass/_general.sass */
 body {
   font-family: "Open Sans", sans-serif;
   border-top: solid 50px #132333;
 }
-/* line 4, ../sass/_general.sass */
+/* line 7, ../sass/_general.sass */
 body form {
   background-color: transparent;
 }
 
-/* line 7, ../sass/_general.sass */
+/* line 10, ../sass/_general.sass */
 .content-headline {
   padding-left: 5px;
   margin-top: 30px;
