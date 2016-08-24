@@ -8571,7 +8571,6 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-bottom: -50px;
   padding-bottom: 50px;
   width: 100%;
-  height: 100%;
 }
 
 /* line 33, ../sass/_landing-page.sass */
