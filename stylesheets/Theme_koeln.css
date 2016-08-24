@@ -7689,7 +7689,7 @@ body form {
   background-color: transparent;
 }
 
-/* line 8, ../sass/_general.sass */
+/* line 7, ../sass/_general.sass */
 .content-headline {
   padding-left: 5px;
   margin-top: 30px;
@@ -9497,6 +9497,24 @@ body a:hover {
 /* line 543, ../sass/_wall.sass */
 #MyWallMid .wall {
   max-width: none;
+}
+
+/* line 548, ../sass/_wall.sass */
+#aspnetForm .wall-widget--filters .wall-widget--filter-select {
+  margin-top: 15px;
+}
+/* line 551, ../sass/_wall.sass */
+#aspnetForm .wall-widget--activity-post {
+  font-size: 14px;
+}
+/* line 552, ../sass/_wall.sass */
+#aspnetForm .wall-widget--activity-post .wall-widget--info {
+  font-size: 14px;
+}
+/* line 554, ../sass/_wall.sass */
+#aspnetForm .wall-widget--activity-post .wall-widget--activity-post-text {
+  font-size: 14px;
+  margin-top: 20px;
 }
 
 /* line 7, ../sass/_profile-about.sass */
