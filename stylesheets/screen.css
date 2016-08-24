@@ -12723,6 +12723,38 @@ body a:hover {
   margin: 0 4px;
 }
 
+/* line 2, ../sass/_change-profileimage.sass */
+#profileModal .PopUp_header {
+  background-color: #3aa6e7;
+  height: auto;
+  overflow-x: auto;
+}
+/* line 6, ../sass/_change-profileimage.sass */
+#profileModal .PopUp_header .btnClosePopup {
+  background-color: transparent;
+}
+/* line 9, ../sass/_change-profileimage.sass */
+#profileModal .PopUp_header .lblHeader {
+  font-size: 16px;
+  margin: 5px 0;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+/* line 15, ../sass/_change-profileimage.sass */
+#profileModal #profilePhotoIframe {
+  border: none;
+}
+
+/* line 19, ../sass/_change-profileimage.sass */
+#cropId .btn.btn-default.btn-file, #cropId .btn.btn-save.ng-binding {
+  background-color: #3aa6e7 !important;
+  color: #ffffff;
+}
+/* line 22, ../sass/_change-profileimage.sass */
+#cropId .btn.btn-default.btn-file:hover, #cropId .btn.btn-save.ng-binding:hover {
+  background-color: #1a8ed4 !important;
+}
+
 @media(max-width:767px) {
   /* line 2, ../sass/_wall-mediascreens.sass */
   .container, .content-wrapper {
