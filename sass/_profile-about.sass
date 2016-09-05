@@ -145,3 +145,81 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
       display: none
     .material-icons
       display: block
+
+
+// For the Live Page: Company members
+
+.MembersMain
+  @extend .profile-infos
+  +clearfix
+
+.MembersTitle
+  display: block
+  @extend h3
+  @extend .profile-infos__title !optional
+  padding-top: 0
+
+
+$avatar-size: 80px
+$avatar-margin: 10px
+$avatar-sum: $avatar-size + $avatar-margin
+
+.MembersItem
+  +make-xs-column(12)
+
+  +clearfix
+  @extend .profile-card__innerDiv
+  height: auto
+  position: relative
+  margin-bottom: 12px
+
+
+
+.MembersAvatar, .MembersName, .MembersPosition, .MembersEmail, .MembersPhone
+  // display: inline-block
+  float: left
+
+.MembersAvatar
+  margin-right: $avatar-margin
+
+
+  .nav-avatar
+    width: $avatar-size
+    height: $avatar-size
+
+.MembersName
+  width: calc(70% - #{$avatar-sum})
+
+.MembersPosition
+  width: calc(30% - #{$avatar-sum})
+
+.MembersEmail
+  width: calc(100% - #{$avatar-sum})
+
+.MembersPhone
+  width: calc(100% - #{$avatar-sum})
+
+.MembersContact
+  position: absolute
+  right: 5px
+  bottom: 0
+
+  *
+    float: left
+
+  ul
+    margin-bottom: 0
+    padding-left: 0
+  li
+    list-style: none
+
+  .CompanyMembersChatIcon
+    margin-left: 5px
+
+  .profile-header__action-button .ChatIcon
+    color: #777
+    font-size: 16px
+
+    &::after
+      color: #777
+      font-size: 16px

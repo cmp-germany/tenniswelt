@@ -336,14 +336,16 @@ th {
   /* line 57, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
   p,
   h2,
-  h3 {
+  h3,
+  .MembersTitle {
     orphans: 3;
     widows: 3;
   }
 
   /* line 64, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
   h2,
-  h3 {
+  h3,
+  .MembersTitle {
     page-break-after: avoid;
   }
 
@@ -514,7 +516,7 @@ hr {
 }
 
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, .MembersTitle, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -524,8 +526,9 @@ h1, h2, h3, h4, h5, h6,
 /* line 16, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
 h1 .small, h2 small,
-h2 .small, h3 small,
-h3 .small, h4 small,
+h2 .small, h3 small, .MembersTitle small,
+h3 .small,
+.MembersTitle .small, h4 small,
 h4 .small, h5 small,
 h5 .small, h6 small,
 h6 .small,
@@ -544,7 +547,8 @@ h6 .small,
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3,
+.MembersTitle, .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -556,7 +560,9 @@ h2 small,
 h2 .small, .h2 small,
 .h2 .small,
 h3 small,
-h3 .small, .h3 small,
+.MembersTitle small,
+h3 .small,
+.MembersTitle .small, .h3 small,
 .h3 .small {
   font-size: 65%;
 }
@@ -592,7 +598,7 @@ h2, .h2 {
 }
 
 /* line 49, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
-h3, .h3 {
+h3, .MembersTitle, .h3 {
   font-size: 24px;
 }
 
@@ -8704,7 +8710,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 }
 
 /* line 137, ../sass/_landing-page.sass */
-.profile-card__innerDiv {
+.profile-card__innerDiv, .MembersItem {
   padding: 10px;
   border-top: 1px solid #3aa6e7;
   border-left: 1px solid #3aa6e7;
@@ -8798,7 +8804,7 @@ body a:hover {
   margin: 0;
 }
 /* line 22, ../sass/_wall.sass */
-.wall-widget header h3 {
+.wall-widget header h3, .wall-widget header .MembersTitle {
   font-size: 20px;
 }
 
@@ -8822,7 +8828,7 @@ body a:hover {
   color: #1470a7;
 }
 /* line 41, ../sass/_wall.sass */
-.wall-widget--side header h3 {
+.wall-widget--side header h3, .wall-widget--side header .MembersTitle {
   display: table-cell;
   vertical-align: middle;
 }
@@ -9188,7 +9194,7 @@ body a:hover {
 }
 
 /* line 290, ../sass/_wall.sass */
-.wall-widget--header h3 {
+.wall-widget--header h3, .wall-widget--header .MembersTitle {
   padding-top: 10px;
   padding-left: 20px;
   padding-bottom: 15px;
@@ -9652,7 +9658,7 @@ body a:hover {
 }
 
 /* line 118, ../sass/_profile-about.sass */
-.profile-infos {
+.profile-infos, .MembersMain {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -9687,6 +9693,113 @@ body a:hover {
     display: block;
   }
 }
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.MembersMain:before, .MembersMain:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.MembersMain:after {
+  clear: both;
+}
+
+/* line 156, ../sass/_profile-about.sass */
+.MembersTitle {
+  display: block;
+  padding-top: 0;
+}
+
+/* line 167, ../sass/_profile-about.sass */
+.MembersItem {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: auto;
+  position: relative;
+  margin-bottom: 12px;
+}
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.MembersItem:before, .MembersItem:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.MembersItem:after {
+  clear: both;
+}
+
+/* line 178, ../sass/_profile-about.sass */
+.MembersAvatar, .MembersName, .MembersPosition, .MembersEmail, .MembersPhone {
+  float: left;
+}
+
+/* line 182, ../sass/_profile-about.sass */
+.MembersAvatar {
+  margin-right: 10px;
+}
+/* line 186, ../sass/_profile-about.sass */
+.MembersAvatar .nav-avatar {
+  width: 80px;
+  height: 80px;
+}
+
+/* line 190, ../sass/_profile-about.sass */
+.MembersName {
+  width: calc(70% - 90px);
+}
+
+/* line 193, ../sass/_profile-about.sass */
+.MembersPosition {
+  width: calc(30% - 90px);
+}
+
+/* line 196, ../sass/_profile-about.sass */
+.MembersEmail {
+  width: calc(100% - 90px);
+}
+
+/* line 199, ../sass/_profile-about.sass */
+.MembersPhone {
+  width: calc(100% - 90px);
+}
+
+/* line 202, ../sass/_profile-about.sass */
+.MembersContact {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+}
+/* line 207, ../sass/_profile-about.sass */
+.MembersContact * {
+  float: left;
+}
+/* line 210, ../sass/_profile-about.sass */
+.MembersContact ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/* line 213, ../sass/_profile-about.sass */
+.MembersContact li {
+  list-style: none;
+}
+/* line 216, ../sass/_profile-about.sass */
+.MembersContact .CompanyMembersChatIcon {
+  margin-left: 5px;
+}
+/* line 219, ../sass/_profile-about.sass */
+.MembersContact .profile-header__action-button .ChatIcon {
+  color: #777;
+  font-size: 16px;
+}
+/* line 223, ../sass/_profile-about.sass */
+.MembersContact .profile-header__action-button .ChatIcon::after {
+  color: #777;
+  font-size: 16px;
+}
+
 /* line 1, ../sass/_profile-wall.sass */
 .button-block {
   font-size: 16px;
@@ -9775,7 +9888,7 @@ body a:hover {
   margin-bottom: 20px;
 }
 /* line 8, ../sass/_search.sass */
-.search__siteheader h3 {
+.search__siteheader h3, .search__siteheader .MembersTitle {
   margin-top: 0;
 }
 
@@ -9946,6 +10059,16 @@ body a:hover {
 .search__results .kontakt-card, .search__results .matching-site .wall-widget--account > div, .matching-site .search__results .wall-widget--account > div {
   background-color: #fff;
 }
+/* line 142, ../sass/_search.sass */
+.search__results .kontakt-card .profile-header__action-button .ChatIcon, .search__results .matching-site .wall-widget--account > div .profile-header__action-button .ChatIcon, .matching-site .search__results .wall-widget--account > div .profile-header__action-button .ChatIcon {
+  color: #777;
+  font-size: 16px;
+}
+/* line 146, ../sass/_search.sass */
+.search__results .kontakt-card .profile-header__action-button .ChatIcon::after, .search__results .matching-site .wall-widget--account > div .profile-header__action-button .ChatIcon::after, .matching-site .search__results .wall-widget--account > div .profile-header__action-button .ChatIcon::after {
+  color: #777;
+  font-size: 16px;
+}
 
 /* line 1, ../sass/_matching.sass */
 .site__header {
@@ -9963,7 +10086,7 @@ body a:hover {
   color: #1470a7;
 }
 /* line 14, ../sass/_matching.sass */
-.site__header h3 {
+.site__header h3, .site__header .MembersTitle {
   display: table-cell;
   vertical-align: middle;
 }
@@ -10772,7 +10895,7 @@ body a:hover {
   overflow: hidden;
 }
 /* line 83, ../sass/_profile-fotos--css-alben.sass */
-.album-list .item .item-holder h3 {
+.album-list .item .item-holder h3, .album-list .item .item-holder .MembersTitle {
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -10789,7 +10912,7 @@ body a:hover {
   background-color: rgba(58, 166, 231, 0.8);
 }
 /* line 101, ../sass/_profile-fotos--css-alben.sass */
-.album-list .item .item-holder h3 a {
+.album-list .item .item-holder h3 a, .album-list .item .item-holder .MembersTitle a {
   color: #fff;
   text-decoration: none;
 }
@@ -10902,7 +11025,7 @@ body a:hover {
   width: 100%;
 }
 /* line 195, ../sass/_profile-fotos--css-alben.sass */
-.photos .upload-holder .photo-gallery h3 {
+.photos .upload-holder .photo-gallery h3, .photos .upload-holder .photo-gallery .MembersTitle {
   width: 100%;
   padding-right: 110px;
 }
@@ -11106,7 +11229,7 @@ body a:hover {
   margin-right: 1px;
 }
 /* line 92, ../sass/_profile-fotos--css-galary.sass */
-.photos .photo-comments h3 {
+.photos .photo-comments h3, .photos .photo-comments .MembersTitle {
   margin-top: 35px;
   font-size: 18px;
 }
@@ -11185,7 +11308,7 @@ body a:hover {
     padding: 20px;
   }
   /* line 154, ../sass/_profile-fotos--css-galary.sass */
-  .photos .photo-comments h3 {
+  .photos .photo-comments h3, .photos .photo-comments .MembersTitle {
     padding: 0 20px;
     padding-bottom: 20px;
     margin: 0 -20px;
@@ -11553,7 +11676,7 @@ body a:hover {
   margin-top: 12px;
 }
 /* line 3, ../sass/_group-wall.sass */
-.group-header h3 {
+.group-header h3, .group-header .MembersTitle {
   padding-left: 0;
   padding-bottom: 5px;
 }
