@@ -8155,6 +8155,26 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   color: #fff;
 }
 
+/* line 16, ../sass/_buttons.sass */
+.button--small {
+  background-color: #67bbed;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 5px 10px;
+}
+/* line 10, ../sass/mixins/_buttons.sass */
+.button--small:hover {
+  background-color: #1470a7;
+}
+
+/* line 19, ../sass/_buttons.sass */
+.button--right {
+  float: right;
+}
+
 /* line 3, ../sass/_form.sass */
 .form-control {
   background-color: transparent;
