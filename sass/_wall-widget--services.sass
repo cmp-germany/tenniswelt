@@ -1,0 +1,18 @@
+
+#Wall_Services
+  @extend .wall-widget
+
+#Wall_ServicesHead
+  +wall-widget__header
+
+  .BoldTitle
+    +wall-widget__header-text
+
+    &::before
+      +make-material-icon('account_balance', 30px)
+      vertical-align: -7px
+      width: 35px
+      color: darken($color-primary, 20)
+
+#Wall_ServicesSep
+  display: none

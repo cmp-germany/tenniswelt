@@ -7,6 +7,23 @@ body
     &:hover
       color: $color-primary
 
+
+=wall-widget__header
+  border-bottom: solid 1px $color-primary
+  margin-right: -20px
+  margin-left: -20px
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: 20px
+  padding-bottom: 15px
+  margin-bottom: 25px
+
+=wall-widget__header-text
+  display: table-cell
+  vertical-align: middle
+  font-size: 20px
+
+
 .wall-widget
   ul
     list-style: none
@@ -20,18 +37,12 @@ body
   background-color: $color-background-widget
   header
     h3
-      font-size: 20px
+      +wall-widget__header-text
 
 .wall-widget--side
   header
-    border-bottom: solid 1px $color-primary
-    margin-right: -20px
-    margin-left: -20px
-    padding-left: 20px
-    padding-right: 20px
-    padding-top: 20px
-    padding-bottom: 15px
-    margin-bottom: 25px
+    +wall-widget__header
+
     i
       display: table-cell
       vertical-align: middle
@@ -39,8 +50,7 @@ body
       font-size: 30px
       color: darken($color-primary, 20)
     h3
-      display: table-cell
-      vertical-align: middle
+      +wall-widget__header-text
 
 .wall-widget--matching
 
