@@ -322,16 +322,8 @@ body
   *text-align: right
 
 .wall-widget--button
-  background-color: lighten($color-primary, 10)
-  outline: none
-  border: none
-  color: #fff
-  font-size: 12px
-  font-weight: lighter
-  padding: 5px 10px
-
-  &:hover
-    background-color: darken($color-primary, 20)
+  +make-button-small
+  +make-button-light
 
   i
     float: right
