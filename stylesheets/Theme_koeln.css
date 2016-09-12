@@ -11239,6 +11239,12 @@ body a:hover {
   padding-bottom: 10px;
 }
 /* line 108, ../sass/_services.sass */
+#TblPageEdit .TblPageEdit__editor-td {
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 113, ../sass/_services.sass */
 #TblPageEdit .btnSaveProfile {
   height: auto;
 }
