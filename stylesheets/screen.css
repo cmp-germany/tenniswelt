@@ -9647,42 +9647,42 @@ body a:hover {
   border-right-color: #eee;
   padding: 15px 22px;
 }
-/* line 462, ../sass/_wall.sass */
+/* line 459, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
 
-/* line 467, ../sass/_wall.sass */
+/* line 464, ../sass/_wall.sass */
 .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 
-/* line 473, ../sass/_wall.sass */
+/* line 470, ../sass/_wall.sass */
 .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 477, ../sass/_wall.sass */
+/* line 474, ../sass/_wall.sass */
 .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 482, ../sass/_wall.sass */
+/* line 479, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 486, ../sass/_wall.sass */
+/* line 483, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 489, ../sass/_wall.sass */
+/* line 486, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -9691,27 +9691,27 @@ body a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 496, ../sass/_wall.sass */
+/* line 493, ../sass/_wall.sass */
 .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 499, ../sass/_wall.sass */
+/* line 496, ../sass/_wall.sass */
 .info p {
   margin-bottom: 3px;
 }
-/* line 502, ../sass/_wall.sass */
+/* line 499, ../sass/_wall.sass */
 .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 505, ../sass/_wall.sass */
+/* line 502, ../sass/_wall.sass */
 .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 511, ../sass/_wall.sass */
+/* line 508, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -9719,17 +9719,17 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 517, ../sass/_wall.sass */
+/* line 514, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
 }
-/* line 520, ../sass/_wall.sass */
+/* line 517, ../sass/_wall.sass */
 .wall-widget--partners header {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 524, ../sass/_wall.sass */
+/* line 521, ../sass/_wall.sass */
 .banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -9737,7 +9737,7 @@ body a:hover {
   height: auto;
 }
 
-/* line 530, ../sass/_wall.sass */
+/* line 527, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9747,28 +9747,28 @@ body a:hover {
   padding: 2px 10px;
 }
 
-/* line 542, ../sass/_wall.sass */
+/* line 539, ../sass/_wall.sass */
 #MyWallMid .MiddleBlock {
   max-width: none;
 }
-/* line 545, ../sass/_wall.sass */
+/* line 542, ../sass/_wall.sass */
 #MyWallMid .wall {
   max-width: none;
 }
 
-/* line 550, ../sass/_wall.sass */
+/* line 547, ../sass/_wall.sass */
 #aspnetForm .wall-widget--filters .wall-widget--filter-select {
   margin-top: 15px;
 }
-/* line 553, ../sass/_wall.sass */
+/* line 550, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post {
   font-size: 14px;
 }
-/* line 554, ../sass/_wall.sass */
+/* line 551, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--info {
   font-size: 14px;
 }
-/* line 556, ../sass/_wall.sass */
+/* line 553, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--activity-post-text {
   font-size: 14px;
   margin-top: 20px;
@@ -11247,6 +11247,145 @@ body a:hover {
 /* line 113, ../sass/_services.sass */
 #TblPageEdit .btnSaveProfile {
   height: auto;
+}
+
+/* line 6, ../sass/_messages.sass */
+.msg-message {
+  background-color: #fff;
+  border: solid 1px #3aa6e7;
+  border-bottom-color: #eee;
+  border-right-color: #eee;
+  margin-top: 20px;
+  padding: 20px;
+  width: 80%;
+  min-width: 300px;
+}
+/* line 15, ../sass/_messages.sass */
+.msg-message__avatar {
+  width: 50px;
+  margin-right: 10px;
+  float: left;
+}
+/* line 24, ../sass/_messages.sass */
+.msg-message__time {
+  float: right;
+  color: #777;
+}
+/* line 27, ../sass/_messages.sass */
+.msg-message__time:before {
+  content: "access_time";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  vertical-align: -1px;
+  margin-right: 2px;
+}
+/* line 16, ../sass/_material-icons.sass */
+.msg-message__time::before--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 11.9px;
+  height: 14px;
+  padding-top: 1.26px;
+  width: 14px;
+  vertical-align: middle;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 32, ../sass/_messages.sass */
+.msg-message__content {
+  margin-top: 5px;
+}
+/* line 38, ../sass/_messages.sass */
+.msg-message--other {
+  float: left;
+}
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--other:before, .msg-message--other:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--other:after {
+  clear: both;
+}
+/* line 42, ../sass/_messages.sass */
+.msg-message--self {
+  float: right;
+}
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--self:before, .msg-message--self:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--self:after {
+  clear: both;
+}
+/* line 47, ../sass/_messages.sass */
+.msg-message--self .msg-message__avatar {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+/* line 52, ../sass/_messages.sass */
+.msg-message--self .msg-message__meta {
+  width: calc(100% - 60px);
+  float: right;
+}
+/* line 56, ../sass/_messages.sass */
+.msg-message--self .msg-message__name {
+  float: right;
+}
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--self .msg-message__name:before, .msg-message--self .msg-message__name:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.msg-message--self .msg-message__name:after {
+  clear: both;
+}
+/* line 60, ../sass/_messages.sass */
+.msg-message--self .msg-message__time {
+  float: left;
+}
+/* line 63, ../sass/_messages.sass */
+.msg-message--self .msg-message__content {
+  text-align: right;
+  padding-top: 18px;
+}
+
+/* line 69, ../sass/_messages.sass */
+.msg-contact-detail {
+  margin-top: 17px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #ddd;
+}
+/* line 74, ../sass/_messages.sass */
+.msg-contact-detail:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+/* line 79, ../sass/_messages.sass */
+.msg-contact-detail__title {
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 83, ../sass/_messages.sass */
+.msg-contact-detail__text {
+  margin-top: 3px;
 }
 
 /* line 1, ../sass/_profile-fotos--css-alben.sass */

@@ -1,0 +1,84 @@
+
+
+
+
+
+.msg-message
+  +card-style($color-primary)
+  margin-top: 20px
+  padding: 20px
+  width: 80%
+  min-width: 300px
+
+
+
+  &__avatar
+    width: 50px
+    margin-right: 10px
+    float: left
+
+  &__meta
+
+  &__name
+
+  &__time
+    float: right
+    color: #777
+    &:before
+      +make-material-icon('access_time', 14px)
+      vertical-align: -1px
+      margin-right: 2px
+
+  &__content
+    margin-top: 5px
+
+
+
+
+  &--other
+    float: left
+    +clearfix
+
+  &--self
+    float: right
+    +clearfix
+
+    .msg-message
+      &__avatar
+        float: right
+        margin-right: 0
+        margin-left: 10px
+
+      &__meta
+        width: calc(100% - 60px)
+        float: right
+
+      &__name
+        float: right
+        +clearfix
+
+      &__time
+        float: left
+
+      &__content
+        text-align: right
+        padding-top: 18px
+
+
+
+.msg-contact-detail
+  margin-top: 17px
+  padding-bottom: 13px
+  border-bottom: 1px solid #ddd
+
+  &:last-child
+    padding-bottom: 0
+    border-bottom: none
+
+
+  &__title
+    font-weight: bold
+    font-size: 12px
+
+  &__text
+    margin-top: 3px

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>starters.koeln</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/modules.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <div data-module="matching.html" data-additional-js="js/wall.js"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Column -->
+      <div class="section-center col-md-6">
+
+        <div class="msg-message msg-message--other">
+          <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="msg-message__avatar">
+          <header class="msg-message__meta">
+            <a href="profile-about.html" class="msg-message__name">Mike Schnorr</a>
+            <div class="msg-message__time">Vor 2 Stunden</div>
+          </header>
+          <div class="msg-message__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+
+        <div class="msg-message msg-message--self">
+          <img src="gfx/profilbilder/p4.jpg" class="msg-message__avatar">
+          <header class="msg-message__meta">
+            <a href="profile-about.html" class="msg-message__name">Maxi Mustermann</a>
+            <div class="msg-message__time">Vor 2 Stunden</div>
+          </header>
+          <div class="msg-message__content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-sm hidden-xs">
+
+        <aside class="wall-widget wall-widget--side">
+          <header>
+            <i class="material-icons">info_outline</i><h3>Kontaktinfo</h3>
+          </header>
+          <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="img-responsive">
+          <div class="msg-contact-detail">
+            <div class="msg-contact-detail__title">Name</div>
+            <div class="msg-contact-detail__text">Mike Schnorr</div>
+          </div>
+          <div class="msg-contact-detail">
+            <div class="msg-contact-detail__title">Status</div>
+            <div class="msg-contact-detail__text">Auf der Arbeit...</div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </body>
+</html>
