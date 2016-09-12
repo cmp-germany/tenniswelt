@@ -1,6 +1,6 @@
-//Service Page
+// mixins
 
-#TblPageShow
+=table-to-wall-content()
   margin: 0
   margin-top: 20px
 
@@ -11,6 +11,13 @@
   td
     padding-left: 20px
     padding-right: 20px
+
+
+//Service Page
+
+
+#TblPageShow
+  +table-to-wall-content()
 
   .BoldTitle
     height: 30px
@@ -80,6 +87,23 @@
       padding-right: 10px !important
       +sm
         padding-right: 30px !important
+
+  .btnSaveProfile
+    @extend .btn
+    @extend .button--small
+    @extend .button--light
+    height: auto
+
+// Edit Service Page
+
+#TblPageEdit
+  +table-to-wall-content()
+
+  tr:first-child td
+    padding-top: 20px
+
+  tr:last-child td
+    padding-bottom: 10px
 
   .btnSaveProfile
     @extend .btn
