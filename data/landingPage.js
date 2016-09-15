@@ -15,7 +15,7 @@ window.contentLandingPage = [
         positionY: "60%"
       },
       motiv: {
-        //src: "gfx/flieger-junge.png"
+        src: "gfx/landing-page/powered-by-mkg.png"
       }
     },
     inputFields: [

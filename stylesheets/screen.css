@@ -8894,27 +8894,25 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 /* line 82, ../sass/_landing-page.sass */
 .slide__motiv-picture {
   margin-bottom: -90px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 82, ../sass/_landing-page.sass */
   .slide__motiv-picture {
     max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -40px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {
   /* line 82, ../sass/_landing-page.sass */
   .slide__motiv-picture {
     max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -40px;
+    margin-bottom: 0;
   }
 }
 
-/* line 98, ../sass/_landing-page.sass */
+/* line 96, ../sass/_landing-page.sass */
 .register-form {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 40px;
@@ -8923,23 +8921,23 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-right: auto;
 }
 
-/* line 106, ../sass/_landing-page.sass */
+/* line 104, ../sass/_landing-page.sass */
 .register-form__intro-text {
   color: #000;
   font-size: 20px;
 }
 
-/* line 110, ../sass/_landing-page.sass */
+/* line 108, ../sass/_landing-page.sass */
 .register-form__info-text {
   font-size: 12px;
 }
 
-/* line 118, ../sass/_landing-page.sass */
+/* line 116, ../sass/_landing-page.sass */
 .key-feature {
   margin-bottom: 40px;
 }
 
-/* line 121, ../sass/_landing-page.sass */
+/* line 119, ../sass/_landing-page.sass */
 .key-feature__icon {
   color: #373C53;
   font-size: 60px;
@@ -8947,14 +8945,14 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   display: block;
 }
 
-/* line 127, ../sass/_landing-page.sass */
+/* line 125, ../sass/_landing-page.sass */
 .key-feature__headline {
   margin-top: 0;
   padding-bottom: 10px;
   border-bottom: solid 1px #373C53;
 }
 
-/* line 133, ../sass/_landing-page.sass */
+/* line 131, ../sass/_landing-page.sass */
 .profile-card, .register-card {
   max-width: 100%;
   margin-left: auto;
@@ -8962,7 +8960,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   margin-bottom: 30px;
 }
 
-/* line 139, ../sass/_landing-page.sass */
+/* line 137, ../sass/_landing-page.sass */
 .profile-card__innerDiv, .MembersItem {
   padding: 10px;
   border-top: 1px solid #373C53;
@@ -8973,58 +8971,58 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   height: 145px;
 }
 
-/* line 148, ../sass/_landing-page.sass */
+/* line 146, ../sass/_landing-page.sass */
 .profile-card__image {
   padding-left: 0;
 }
 
-/* line 152, ../sass/_landing-page.sass */
+/* line 150, ../sass/_landing-page.sass */
 .profile-card__text {
   font-size: 12px;
   padding: 0;
 }
 
-/* line 156, ../sass/_landing-page.sass */
+/* line 154, ../sass/_landing-page.sass */
 .profile-card__name {
   font-weight: bold;
 }
 
-/* line 160, ../sass/_landing-page.sass */
+/* line 158, ../sass/_landing-page.sass */
 .register-card__innerDiv {
   background-color: #373C53;
   padding: 20px;
   height: 145px;
 }
 
-/* line 165, ../sass/_landing-page.sass */
+/* line 163, ../sass/_landing-page.sass */
 .register-card__text {
   color: #fff;
   font-size: 17px;
   font-weight: lighter;
 }
 
-/* line 170, ../sass/_landing-page.sass */
+/* line 168, ../sass/_landing-page.sass */
 .navbar-brand.display {
   display: block;
 }
 
 @media(max-width:767px) {
-  /* line 174, ../sass/_landing-page.sass */
+  /* line 172, ../sass/_landing-page.sass */
   .navbar-landing-page {
     background-color: rgba(19, 35, 51, 0.9);
   }
 
-  /* line 177, ../sass/_landing-page.sass */
+  /* line 175, ../sass/_landing-page.sass */
   .navbar .btn-important {
     margin-left: 0;
   }
 
-  /* line 180, ../sass/_landing-page.sass */
+  /* line 178, ../sass/_landing-page.sass */
   .btn-password {
     float: right;
   }
 
-  /* line 183, ../sass/_landing-page.sass */
+  /* line 181, ../sass/_landing-page.sass */
   .btn-password::before {
     content: "Passwort vergessen ";
   }
