@@ -113,7 +113,7 @@ window.contentLandingPage = [
     ]
   },
   { module: "SlideStatement",
-    title: "Vernetzen Sie sich mit ihrer persönlichen Tenniswelt.",
+    title: "Vernetzen Sie sich mit Ihrer persönlichen Tenniswelt.",
     background: {
       src: "gfx/landing-page/fotolia_119739557.jpg",
       positionX: "55%",
