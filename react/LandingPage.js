@@ -268,6 +268,13 @@ var People = React.createClass({
     return (
       <section className="slide slide--people">
         <div className="container">
+          <IfNotNullModule check={data.heading}>
+            <div className="row">
+              <div className="col-sm-12">
+                <h3 className="slide__heading">{data.heading}</h3>
+              </div>
+            </div>
+          </IfNotNullModule>
           <div className="row">
             {peopleCards}
           </div>

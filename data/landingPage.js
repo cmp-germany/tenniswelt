@@ -68,6 +68,7 @@ window.contentLandingPage = [
     }
   },
   { module: "People",
+    heading: "Finden Sie Ihren persönlichen Tennistrainer",
     cards: [
       {
         type: "people",
