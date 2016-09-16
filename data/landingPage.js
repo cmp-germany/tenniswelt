@@ -1,10 +1,10 @@
 window.contentLandingPage = [
   { module: "TitleWithRegisterForm",
     contents: {
-      title: "Treten Sie jetzt der neuen Tenniswelt Community bei!",
+      title: "Treten Sie jetzt der neuen Tennis Community bei!",
       text:
-        "Das neue Tenniswelt Portal (Powered by Marc Kevin Göllner) bietet Ihnen ein soziales Netzwerk für Ihre persönliche Tenniswelt. Egal, ob Sie auf der Suche nach Talenten oder nach Sponsoren sind, Sie die aktuellsten Ergebnisse der letzten Meisterschaft sehen möchten oder einfach nur mit Ihren Sportkollegen in Verbindung bleiben wollen: Hier sind Sie richtig.",
-      formTitle: "Kostenlos registrieren und ein Jahr unverbindlich testen.",
+        "Die neue Tennis Community (Powered by Marc-Kevin Goellner) bietet Ihnen ein soziales Netzwerk für Ihre persönliche Tenniswelt. Egal, ob Sie auf der Suche nach Talenten oder nach Sponsoren sind, Sie die aktuellsten Ergebnisse der letzten Meisterschaft sehen möchten oder einfach nur mit Ihren Sportkollegen in Verbindung bleiben wollen: Hier sind Sie richtig.",
+      formTitle: "Kostenlose Registrierung für private Nutzer.",
       buttonAdditionalText: 'Per Klick auf "Jetzt Mitglied werden" stimmen Sie unseren AGB und Datenschutzrichtlinien zu.',
       buttonText: "Jetzt Mitglied werden"
     },
@@ -106,7 +106,7 @@ window.contentLandingPage = [
       },
       {
         type: "register",
-        text: "Kostenlos registrieren und ein Jahr unverbindlich testen.",
+        text: "Kostenlose Registrierung für private Nutzer.",
         buttonText: "Jetzt registrieren",
         url: "#register-form"
       }
