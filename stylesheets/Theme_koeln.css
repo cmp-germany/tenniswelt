@@ -7942,7 +7942,7 @@ body form {
 /* line 11, ../sass/_navbar.sass */
 .navbar-brand__subtitle {
   font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: #000;
 }
 /* line 15, ../sass/_navbar.sass */
 .navbar-brand__logo {
