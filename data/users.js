@@ -74,8 +74,8 @@ var users = {
   "marc-kevin-goellner-tennis-akademie": {
     "id": "marc-kevin-goellner-tennis-akademie",
     "name": "Marc-Kevin Goellner Tennis-Akademie",
-    "wallpaper": "gfx/wallpaper/wallpaper-green-gate.jpg",//!!
-    "profileImage": "gfx/profilbilder/green-gate-logo.jpg",//!!
+    "wallpaper": "gfx/wallpaper/wallpaper-mkg-tennis-akademie.jpg",
+    "profileImage": "gfx/profilbilder/mkg-logo-2.jpg",
     "isCompanyProfile": true,
     "companyInfo": {
       "desc": "'BE PROFESSIONAL!' lautet das Motto der Marc-Kevin Goellner Tennis-Akademie und Marc-Kevin Goellner erklärt das so: \"Ein 'bisschen Profi' geht nicht, du musst das Projekt Tennisprofi schon hoch professionell anpacken!\", so der ehemalige Weltklassespieler. Dazu gehören neben einer professionellen Einstellung von Trainern und Spielern jede Menge hochkarätige Partner, die den Jungprofi auf dem Weg nach oben unterstützen und begleiten.",
@@ -229,7 +229,7 @@ var users = {
   "marc-kevin-goellner": {
     "id": "marc-kevin-goellner",
     "name": "Marc-Kevin Goellner",
-    "wallpaper": "gfx/wallpaper/wallpaper-wolfgang-adams.jpg",
+    "wallpaper": "gfx/wallpaper/wallpaper-marc-kevin-goellner.jpg",
     "profileImage": "gfx/profilbilder/marc-kevin-goellner.jpg",
     "isCompanyProfile": false,
     "street": "",
