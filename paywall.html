@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tennis Community</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/landing-page.js" charset="utf-8"></script>
+    <script src="js/material-inputs.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand display" href="#">
+            <span class="navbar-brand__title">Tennis</span> <span class="navbar-brand__subtitle">Community</span>
+          </a>
+
+          <div class="navbar-landing-page collapse navbar-collapse" id="navbar-collapse-1">
+            <form class="navbar-form navbar-right" action="wall.html" method="get">
+              <div class="form-group">
+                <input type="text" class="form-control form-control--navbar" name="email" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control form-control--navbar" name="password" placeholder="Passwort">
+              </div>
+              <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Einloggen</button>
+              <button type="button" class="btn btn-primary btn-password" title="Passwort vergessen">?</button>
+            </form>
+          </div><!-- /.navbar-collapse -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+
+    <div id="react-app-landing-page"></div>
+    <script src="data/landingPage-paywall.js" charset="utf-8"></script>
+    <script type="text/babel" src="react/LandingPage.js" charset="utf-8"></script>
+
+
+  </body>
+</html>
