@@ -9911,17 +9911,17 @@ body a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 111, ../sass/_profile-about.sass */
+/* line 110, ../sass/_profile-about.sass */
 .profile-tabs__tab a {
   color: inherit;
 }
 
-/* line 114, ../sass/_profile-about.sass */
+/* line 113, ../sass/_profile-about.sass */
 .profile-tabs__tab--active {
   color: #333;
 }
 
-/* line 118, ../sass/_profile-about.sass */
+/* line 117, ../sass/_profile-about.sass */
 .profile-infos, .MembersMain {
   position: relative;
   margin-top: 20px;
@@ -9932,27 +9932,37 @@ body a:hover {
   border: solid 1px #eee;
 }
 
-/* line 128, ../sass/_profile-about.sass */
+/* line 127, ../sass/_profile-about.sass */
 .profile-infos__form--read .profile-infos__input {
   display: none;
 }
 
-/* line 132, ../sass/_profile-about.sass */
+/* line 131, ../sass/_profile-about.sass */
 .profile-infos__form--write .profile-infos__read {
   display: none;
 }
 
-/* line 135, ../sass/_profile-about.sass */
+/* line 134, ../sass/_profile-about.sass */
 .profile-infos__read {
   margin-top: 7px;
 }
 
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.profile-infos__members:before, .profile-infos__members:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.profile-infos__members:after {
+  clear: both;
+}
+
 @media(max-width:767px) {
-  /* line 144, ../sass/_profile-about.sass */
+  /* line 146, ../sass/_profile-about.sass */
   .profile-tabs--profile-navigation .profile-tabs__label {
     display: none;
   }
-  /* line 146, ../sass/_profile-about.sass */
+  /* line 148, ../sass/_profile-about.sass */
   .profile-tabs--profile-navigation .material-icons {
     display: block;
   }
@@ -9967,13 +9977,13 @@ body a:hover {
   clear: both;
 }
 
-/* line 156, ../sass/_profile-about.sass */
+/* line 158, ../sass/_profile-about.sass */
 .MembersTitle {
   display: block;
   padding-top: 0;
 }
 
-/* line 167, ../sass/_profile-about.sass */
+/* line 169, ../sass/_profile-about.sass */
 .MembersItem {
   position: relative;
   float: left;
@@ -9995,70 +10005,75 @@ body a:hover {
   clear: both;
 }
 
-/* line 178, ../sass/_profile-about.sass */
+/* line 180, ../sass/_profile-about.sass */
 .MembersAvatar, .MembersName, .MembersPosition, .MembersEmail, .MembersPhone {
   float: left;
 }
 
-/* line 182, ../sass/_profile-about.sass */
+/* line 184, ../sass/_profile-about.sass */
 .MembersAvatar {
   margin-right: 10px;
 }
-/* line 186, ../sass/_profile-about.sass */
+/* line 187, ../sass/_profile-about.sass */
+.MembersAvatar .avatar {
+  width: 80px;
+  height: 80px;
+}
+/* line 191, ../sass/_profile-about.sass */
 .MembersAvatar .nav-avatar {
   width: 80px;
   height: 80px;
 }
 
-/* line 190, ../sass/_profile-about.sass */
+/* line 195, ../sass/_profile-about.sass */
 .MembersName {
   width: calc(70% - 90px);
 }
 
-/* line 193, ../sass/_profile-about.sass */
+/* line 198, ../sass/_profile-about.sass */
 .MembersPosition {
   width: calc(30% - 90px);
 }
 
-/* line 196, ../sass/_profile-about.sass */
+/* line 201, ../sass/_profile-about.sass */
 .MembersEmail {
   width: calc(100% - 90px);
 }
 
-/* line 199, ../sass/_profile-about.sass */
+/* line 204, ../sass/_profile-about.sass */
 .MembersPhone {
   width: calc(100% - 90px);
 }
 
-/* line 202, ../sass/_profile-about.sass */
+/* line 207, ../sass/_profile-about.sass */
 .MembersContact {
   position: absolute;
   right: 5px;
   bottom: 0;
 }
-/* line 207, ../sass/_profile-about.sass */
+/* line 212, ../sass/_profile-about.sass */
 .MembersContact * {
   float: left;
 }
-/* line 210, ../sass/_profile-about.sass */
+/* line 215, ../sass/_profile-about.sass */
 .MembersContact ul {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 213, ../sass/_profile-about.sass */
+/* line 218, ../sass/_profile-about.sass */
 .MembersContact li {
   list-style: none;
 }
-/* line 216, ../sass/_profile-about.sass */
+/* line 221, ../sass/_profile-about.sass */
 .MembersContact .CompanyMembersChatIcon {
   margin-left: 5px;
 }
-/* line 219, ../sass/_profile-about.sass */
+/* line 224, ../sass/_profile-about.sass */
 .MembersContact .profile-header__action-button .ChatIcon {
   color: #777;
   font-size: 16px;
 }
-/* line 223, ../sass/_profile-about.sass */
+/* line 228, ../sass/_profile-about.sass */
 .MembersContact .profile-header__action-button .ChatIcon::after {
   color: #777;
   font-size: 16px;

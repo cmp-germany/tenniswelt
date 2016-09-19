@@ -241,6 +241,75 @@ var Module = React.createClass({
   }
 });
 
+var Member = React.createClass({
+  render: function() {
+    var data = this.props.data;
+    return (
+      <div className="MembersItem">
+        <div className="MembersAvatar">
+          <a href={'profile-about.html?userId='+data.id}>
+            <img
+              className="avatar"
+              src={data.picture}
+              title={data.name}
+              alt={data.name}
+            />
+          </a>
+        </div>
+        <div className="MembersName">
+          <a href={'profile-about.html?userId='+data.id}>
+            {data.name}
+          </a>
+        </div>
+        <div className="MembersPosition">
+          <span>
+            {data.position}
+          </span>
+        </div>
+        <div className="MembersEmail">
+          <a href={"mailto:"+data.email}>{data.email}</a>
+        </div>
+        <div className="MembersPhone">
+          <span>{data.tel}</span>
+        </div>
+        <div className="MembersContact">
+          <span title="Euroglas Verpackungs GmbH ist offline" className="ChatStatusIcon CompanyMembersChatStatusIcon UserMediaOfflineIcon"></span>
+          <ul>
+            <li>
+              <a
+                href={'javascript:reactChatApp.addChat("'+data.id+'");'}
+                title={"Mit "+data.name+" chatten"}
+                className="ChatIcon CompanyMembersChatIcon"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+});
+
+var CompanyMembers = React.createClass({
+
+  render: function() {
+
+    var members = this.props.members.map(function(member, index){
+      return (
+        <Member data={member} key={index} />
+      )
+    });
+
+    return (
+      <div className="profile-infos">
+        <h3 className="profile-infos__title">Firmenmitarbeiter</h3>
+        <div className="profile-infos__members">
+          {members}
+        </div>
+      </div>
+    );
+  }
+})
+
 var ProfileAbout = React.createClass({
   render: function() {
 
@@ -252,6 +321,11 @@ var ProfileAbout = React.createClass({
     var profileMap;
     if (this.props.profileData.mapData) {
       profileMap = <ProfileMap mapData={this.props.profileData.mapData} />
+    }
+
+    var companyMembers;
+    if (this.props.profileData.members) {
+      companyMembers = <CompanyMembers members={this.props.profileData.members} />
     }
 
 
@@ -268,6 +342,7 @@ var ProfileAbout = React.createClass({
         {profileCompanyInfo}
         {profileMap}
         <ProfileInfo profileData={this.props.profileData} />
+        {companyMembers}
       </div>
     );
   }
