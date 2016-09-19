@@ -96,15 +96,14 @@ var users = {
     "website": "http://www.mkgoellner.de",
     "timezone": "MESZ",
     "keywords": [
-      "Coaches",
-      "Akademie"
+      "Tennis", "Tennis-Akademie", "Tennis Training", "Tennis Camp", "Marc's Tennis Tracker"
     ],
     "members": [
       {
         "id": "marc-kevin-goellner",
         "name": "Marc-Kevin Goellner",
         "email": "info@mkgoellner.de",
-        "position": "",
+        "position": "Leiter Tennis-Akademie",
         "picture": "gfx/profilbilder/marc-kevin-goellner.jpg",
         "online": false
       }
