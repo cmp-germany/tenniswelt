@@ -71,6 +71,46 @@ var users = {
     ]
   },
 
+  "marc-kevin-goellner-tennis-akademie": {
+    "id": "marc-kevin-goellner-tennis-akademie",
+    "name": "Marc-Kevin Goellner Tennis-Akademie",
+    "wallpaper": "gfx/wallpaper/wallpaper-green-gate.jpg",//!!
+    "profileImage": "gfx/profilbilder/green-gate-logo.jpg",//!!
+    "isCompanyProfile": true,
+    "companyInfo": {
+      "desc": "'BE PROFESSIONAL!' lautet das Motto der Marc-Kevin Goellner Tennis-Akademie und Marc-Kevin Goellner erklärt das so: \"Ein 'bisschen Profi' geht nicht, du musst das Projekt Tennisprofi schon hoch professionell anpacken!\", so der ehemalige Weltklassespieler. Dazu gehören neben einer professionellen Einstellung von Trainern und Spielern jede Menge hochkarätige Partner, die den Jungprofi auf dem Weg nach oben unterstützen und begleiten.",
+      "name": "Marc-Kevin Goellner Tennis-Akademie",
+      "branche": "Tennis Akademie",
+      "mainLocation": "Köln",
+      "country": "Deutschland",
+      "email": "info@mkgoellner.de",
+      "tel": "+49 162 1024444",
+      "category": "Ausbildung"
+    },
+    "mapData": {
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.1798987699694!2d6.961635015747119!3d50.88338067953753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf23f1102ee465%3A0xee5259dbddff079d!2sGro%C3%9Frotter+Weg+1%2C+50997+K%C3%B6ln!5e0!3m2!1sde!2sde!4v1474274164940"
+    },
+    "street": "Großrotter Weg 1",
+    "zip": "50997",
+    "city": "Köln",
+    "website": "http://www.mkgoellner.de",
+    "timezone": "MESZ",
+    "keywords": [
+      "Coaches",
+      "Akademie"
+    ],
+    "members": [
+      {
+        "id": "marc-kevin-goellner",
+        "name": "Marc-Kevin Goellner",
+        "email": "info@mkgoellner.de",
+        "position": "",
+        "picture": "gfx/profilbilder/marc-kevin-goellner.jpg",
+        "online": false
+      }
+    ]
+  },
+
 
   "stadt-koeln-startercenter": {
     "id": "stadt-koeln-startercenter",
@@ -180,6 +220,21 @@ var users = {
     "street": "Alte Brücke 6",
     "zip": "51570",
     "city": "Windeck",
+    "website": "",
+    "timezone": "MESZ",
+    "isOnline": false
+  },
+
+
+  "marc-kevin-goellner": {
+    "id": "marc-kevin-goellner",
+    "name": "Marc-Kevin Goellner",
+    "wallpaper": "gfx/wallpaper/wallpaper-wolfgang-adams.jpg",
+    "profileImage": "gfx/profilbilder/marc-kevin-goellner.jpg",
+    "isCompanyProfile": false,
+    "street": "",
+    "zip": "",
+    "city": "",
     "website": "",
     "timezone": "MESZ",
     "isOnline": false
