@@ -45,6 +45,20 @@ var content = {
     resultGruppen : []
   },
 
+  trainingsangebote : {
+    searchTitle : "Trainingsangebote",
+    resultPersonen : [],
+    resultUnternehmen : [
+      {
+        name : 'Marc-Kevin Goellner Tennis-Akademie',
+        bild : 'gfx/profilbilder/mkg-logo-2.jpg',
+        onlineStatus : false,
+        profil : 'profile-about.html?userId=marc-kevin-goellner-tennis-akademie'
+      }
+    ],
+    resultGruppen : []
+  },
+
   institutionelleInvestoren : {
     searchTitle : "Institutionelle Investoren",
     resultPersonen : [],
