@@ -45,8 +45,8 @@ var content = {
     resultGruppen : []
   },
 
-  trainingsangebote : {
-    searchTitle : "Trainingsangebote",
+  tennisanlagen : {
+    searchTitle : "Tennisanlagen",
     resultPersonen : [],
     resultUnternehmen : [
       {
@@ -218,7 +218,7 @@ function postResults(type) {
     var innerHTML =
     '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">'+
       '<div class="kontakt-card">'+
-        '<a href="profile-about.html?userId=volker-miller">'+
+        '<a href="'+result[i].profil+'">'+
           '<img class="kontakt-card__thumbnail" src="'+result[i].bild+'" alt="Thumbnail" />'+
         '</a>'+
         '<div class="kontakt-card__name">'+

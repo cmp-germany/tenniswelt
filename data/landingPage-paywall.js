@@ -3,7 +3,7 @@ window.contentLandingPage = [
     contents: {
       title: "Marcs Tennis Tracker",
       text:
-        "Zugriff auf Ihre persönlichen Spielstatistiken.",
+        "Teilen Sie Ihre persönlichen Spielstatistiken aus Marcs Tennis Tracker App mit der Community und vergleichen Sie sich mit anderen Spielern aus der Region oder in ganz Deutschland.",
       formTitle: "Kostenpflichtige Registrierung.",
       buttonAdditionalText: 'Per Klick auf "Jetzt Mitglied werden" stimmen Sie unseren AGB und Datenschutzrichtlinien zu.',
       buttonText: "Jetzt Mitglied werden"
