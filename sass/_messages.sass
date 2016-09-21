@@ -1,5 +1,76 @@
+.msg-container
+  max-width: 1230px
+
+$color-msg-conversations-border: #ebebeb
 
 
+.wall-widget--msg-conversations
+
+
+.msg-conversations
+  margin-top: -20px
+  padding-top: 1px
+  margin-left: -20px
+  margin-right: -20px
+  overflow-y: scroll
+
+.msg-conversation
+  height: 60px
+  box-sizing: content-box
+  padding-top: 10px
+  cursor: pointer
+  padding-left: 20px
+  padding-right: 20px
+
+  &:hover
+    margin-top: -1px
+    padding-top: 11px
+    background-color: #f0f0f0
+
+  &--active
+    margin-top: -1px
+    padding-top: 11px
+    background-color: $color-msg-conversations-border
+
+
+
+
+  +display-flex(flex)
+  +flex-basis(auto)
+
+  &__center
+    min-width: 0
+    border-bottom: 1px solid $color-msg-conversations-border
+    +flex-grow(1)
+    +display-flex(flex)
+    +flex-direction(column)
+    +justify-content(flex-start)
+
+  &__right
+    border-bottom: 1px solid $color-msg-conversations-border
+
+  &__avatar
+    width: 50px
+    margin-right: 10px
+
+  &__name
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    padding-bottom: 3px
+    font-size: medium
+
+  &__preview
+    color: #777
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  &__time
+    color: #777
+    font-size: 12px
 
 
 
