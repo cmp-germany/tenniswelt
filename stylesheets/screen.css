@@ -11267,18 +11267,71 @@ body a:hover {
 /* line 1, ../sass/_messages.sass */
 .msg-container {
   max-width: 1230px;
+  padding-top: 20px;
+  display: -webkit-flex;
+  display: flex;
+  overflow-y: hidden;
+}
+@media (max-width: 767px) {
+  /* line 1, ../sass/_messages.sass */
+  .msg-container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
-/* line 10, ../sass/_messages.sass */
+/* line 13, ../sass/_messages.sass */
+.section-left--msg {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  min-width: 240px;
+  margin: 0 15px;
+}
+
+/* line 19, ../sass/_messages.sass */
+.section-center--msg {
+  -webkit-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  margin: 0 15px;
+}
+
+/* line 24, ../sass/_messages.sass */
+.section-right--msg {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  min-width: 240px;
+  margin: 0 15px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 24, ../sass/_messages.sass */
+  .section-right--msg {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  /* line 24, ../sass/_messages.sass */
+  .section-right--msg {
+    display: none;
+  }
+}
+
+/* line 36, ../sass/_messages.sass */
 .msg-conversations {
   margin-top: -20px;
   padding-top: 1px;
   margin-left: -20px;
   margin-right: -20px;
   overflow-y: scroll;
+  min-height: 0;
 }
 
-/* line 17, ../sass/_messages.sass */
+/* line 44, ../sass/_messages.sass */
 .msg-conversation {
   height: 60px;
   box-sizing: content-box;
@@ -11291,19 +11344,19 @@ body a:hover {
   -webkit-flex-basis: auto;
   flex-basis: auto;
 }
-/* line 25, ../sass/_messages.sass */
+/* line 54, ../sass/_messages.sass */
 .msg-conversation:hover {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #f0f0f0;
 }
-/* line 30, ../sass/_messages.sass */
+/* line 59, ../sass/_messages.sass */
 .msg-conversation--active {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #ebebeb;
 }
-/* line 41, ../sass/_messages.sass */
+/* line 64, ../sass/_messages.sass */
 .msg-conversation__center {
   min-width: 0;
   border-bottom: 1px solid #ebebeb;
@@ -11316,16 +11369,16 @@ body a:hover {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-/* line 49, ../sass/_messages.sass */
+/* line 72, ../sass/_messages.sass */
 .msg-conversation__right {
   border-bottom: 1px solid #ebebeb;
 }
-/* line 52, ../sass/_messages.sass */
+/* line 75, ../sass/_messages.sass */
 .msg-conversation__avatar {
   width: 50px;
   margin-right: 10px;
 }
-/* line 56, ../sass/_messages.sass */
+/* line 79, ../sass/_messages.sass */
 .msg-conversation__name {
   margin: 0;
   overflow: hidden;
@@ -11334,7 +11387,7 @@ body a:hover {
   padding-bottom: 3px;
   font-size: medium;
 }
-/* line 64, ../sass/_messages.sass */
+/* line 87, ../sass/_messages.sass */
 .msg-conversation__preview {
   color: #777;
   margin: 0;
@@ -11342,13 +11395,13 @@ body a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 71, ../sass/_messages.sass */
+/* line 94, ../sass/_messages.sass */
 .msg-conversation__time {
   color: #777;
   font-size: 12px;
 }
 
-/* line 77, ../sass/_messages.sass */
+/* line 100, ../sass/_messages.sass */
 .msg-message {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -11359,18 +11412,18 @@ body a:hover {
   width: 80%;
   min-width: 300px;
 }
-/* line 86, ../sass/_messages.sass */
+/* line 109, ../sass/_messages.sass */
 .msg-message__avatar {
   width: 50px;
   margin-right: 10px;
   float: left;
 }
-/* line 95, ../sass/_messages.sass */
+/* line 118, ../sass/_messages.sass */
 .msg-message__time {
   float: right;
   color: #777;
 }
-/* line 98, ../sass/_messages.sass */
+/* line 121, ../sass/_messages.sass */
 .msg-message__time:before {
   content: "access_time";
   font-family: "Material Icons";
@@ -11402,11 +11455,11 @@ body a:hover {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 103, ../sass/_messages.sass */
+/* line 126, ../sass/_messages.sass */
 .msg-message__content {
   margin-top: 5px;
 }
-/* line 109, ../sass/_messages.sass */
+/* line 132, ../sass/_messages.sass */
 .msg-message--other {
   float: left;
 }
@@ -11419,7 +11472,7 @@ body a:hover {
 .msg-message--other:after {
   clear: both;
 }
-/* line 113, ../sass/_messages.sass */
+/* line 136, ../sass/_messages.sass */
 .msg-message--self {
   float: right;
 }
@@ -11432,18 +11485,18 @@ body a:hover {
 .msg-message--self:after {
   clear: both;
 }
-/* line 118, ../sass/_messages.sass */
+/* line 141, ../sass/_messages.sass */
 .msg-message--self .msg-message__avatar {
   float: right;
   margin-right: 0;
   margin-left: 10px;
 }
-/* line 123, ../sass/_messages.sass */
+/* line 146, ../sass/_messages.sass */
 .msg-message--self .msg-message__meta {
   width: calc(100% - 60px);
   float: right;
 }
-/* line 127, ../sass/_messages.sass */
+/* line 150, ../sass/_messages.sass */
 .msg-message--self .msg-message__name {
   float: right;
 }
@@ -11456,33 +11509,33 @@ body a:hover {
 .msg-message--self .msg-message__name:after {
   clear: both;
 }
-/* line 131, ../sass/_messages.sass */
+/* line 154, ../sass/_messages.sass */
 .msg-message--self .msg-message__time {
   float: left;
 }
-/* line 134, ../sass/_messages.sass */
+/* line 157, ../sass/_messages.sass */
 .msg-message--self .msg-message__content {
   text-align: right;
   padding-top: 18px;
 }
 
-/* line 140, ../sass/_messages.sass */
+/* line 163, ../sass/_messages.sass */
 .msg-contact-detail {
   margin-top: 17px;
   padding-bottom: 13px;
   border-bottom: 1px solid #ddd;
 }
-/* line 145, ../sass/_messages.sass */
+/* line 168, ../sass/_messages.sass */
 .msg-contact-detail:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
-/* line 150, ../sass/_messages.sass */
+/* line 173, ../sass/_messages.sass */
 .msg-contact-detail__title {
   font-weight: bold;
   font-size: 12px;
 }
-/* line 154, ../sass/_messages.sass */
+/* line 177, ../sass/_messages.sass */
 .msg-contact-detail__text {
   margin-top: 3px;
 }

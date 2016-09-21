@@ -43,9 +43,10 @@
     <div class="container-fluid msg-container">
 
       <!-- Left Sidebar -->
-      <div class="section-left col-md-3 hidden-sm hidden-xs">
 
-        <aside class="wall-widget wall-widget--side">
+      <div class="section-left section-left--msg">
+
+        <aside class="wall-widget wall-widget--side wall-widget--msg-conversations">
           <header>
             <div style="display:table;">
               <i class="material-icons">mail_outline</i><h3>Nachrichten</h3>
@@ -149,7 +150,7 @@
       </div>
 
       <!-- Main Column -->
-      <div class="section-center col-md-6">
+      <div class="section-center section-center--msg">
 
         <div class="msg-message msg-message--other">
           <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="msg-message__avatar">
@@ -176,9 +177,10 @@
       </div>
 
       <!-- Right Sidebar -->
-      <div class="section-right col-md-3 hidden-sm hidden-xs">
 
-        <aside class="wall-widget wall-widget--side">
+      <div class="section-right--msg">
+
+        <aside class="wall-widget wall-widget--side wall-widget--msg-infos">
           <header>
             <i class="material-icons">info_outline</i><h3>Kontaktinfo</h3>
           </header>
@@ -194,7 +196,17 @@
         </aside>
 
       </div>
+
     </div>
+
+    <script type="text/javascript">
+      $(window).resize(function(){
+        var newHeight = $(window).height() - 70;
+        $(".msg-container").height(newHeight);
+
+      });
+      $(window).resize();
+    </script>
 
   </body>
 </html>

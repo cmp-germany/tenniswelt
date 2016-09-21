@@ -1,10 +1,36 @@
 .msg-container
   max-width: 1230px
+  padding-top: 20px
+  +display-flex(flex)
+  +xs
+    +flex-direction(column)
+
+  overflow-y: hidden
 
 $color-msg-conversations-border: #ebebeb
 
 
-.wall-widget--msg-conversations
+.section-left--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  min-width: 240px
+  margin: 0 15px
+
+.section-center--msg
+  +flex-grow(2)
+  +flex-basis(0)
+  margin: 0 15px
+
+.section-right--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  min-width: 240px
+  margin: 0 15px
+  +sm
+    display: none
+  +xs
+    display: none
+
 
 
 .msg-conversations
@@ -13,6 +39,7 @@ $color-msg-conversations-border: #ebebeb
   margin-left: -20px
   margin-right: -20px
   overflow-y: scroll
+  min-height: 0
 
 .msg-conversation
   height: 60px
@@ -21,6 +48,8 @@ $color-msg-conversations-border: #ebebeb
   cursor: pointer
   padding-left: 20px
   padding-right: 20px
+  +display-flex(flex)
+  +flex-basis(auto)
 
   &:hover
     margin-top: -1px
@@ -31,12 +60,6 @@ $color-msg-conversations-border: #ebebeb
     margin-top: -1px
     padding-top: 11px
     background-color: $color-msg-conversations-border
-
-
-
-
-  +display-flex(flex)
-  +flex-basis(auto)
 
   &__center
     min-width: 0
