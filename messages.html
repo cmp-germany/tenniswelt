@@ -31,6 +31,9 @@
     <script src="bower_components/react/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
+    <!-- Auto Size -->
+    <script src="bower_components/autosize/dist/autosize.min.js" charset="utf-8"></script>
+
     <!-- Custom JS -->
     <script src="js/wall.js" charset="utf-8"></script>
     <script src="js/modules.js" charset="utf-8"></script>
@@ -152,26 +155,38 @@
       <!-- Main Column -->
       <div class="section-center section-center--msg">
 
-        <div class="msg-message msg-message--other">
-          <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="msg-message__avatar">
-          <header class="msg-message__meta">
-            <a href="profile-about.html" class="msg-message__name">Mike Schnorr</a>
-            <div class="msg-message__time">Vor 2 Stunden</div>
-          </header>
-          <div class="msg-message__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <div class="msg-messages">
+
+          <div class="msg-message msg-message--other">
+            <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="msg-message__avatar">
+            <header class="msg-message__meta">
+              <a href="profile-about.html" class="msg-message__name">Mike Schnorr</a>
+              <div class="msg-message__time">Vor 2 Stunden</div>
+            </header>
+            <div class="msg-message__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </div>
+
+          <div class="msg-message msg-message--self">
+            <img src="gfx/profilbilder/p4.jpg" class="msg-message__avatar">
+            <header class="msg-message__meta">
+              <a href="profile-about.html" class="msg-message__name">Maxi Mustermann</a>
+              <div class="msg-message__time">Vor 2 Stunden</div>
+            </header>
+            <div class="msg-message__content">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+
         </div>
 
-        <div class="msg-message msg-message--self">
-          <img src="gfx/profilbilder/p4.jpg" class="msg-message__avatar">
-          <header class="msg-message__meta">
-            <a href="profile-about.html" class="msg-message__name">Maxi Mustermann</a>
-            <div class="msg-message__time">Vor 2 Stunden</div>
-          </header>
-          <div class="msg-message__content">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+        <div class="msg-input-area">
+          <textarea placeholder="Schreibe eine Nachricht" rows="1" name="msg-input-area__text" id="msg-input-area__text" class="msg-input-area__text"></textarea>
+          <script type="text/javascript">
+            autosize($('#msg-input-area__text'));
+          </script>
+          <a class="msg-input-area__send-a" href="#1"><i class="material-icons">send</i></a>
         </div>
 
       </div>

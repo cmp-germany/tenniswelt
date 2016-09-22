@@ -26,10 +26,7 @@ $color-msg-conversations-border: #ebebeb
   +flex-grow(2)
   +flex-basis(0)
   margin: 0 15px
-  margin-top: -20px
-  padding-top: 20px
   height: 100%
-  overflow-y: auto
 
 .section-right--msg
   +flex-grow(1)
@@ -121,6 +118,20 @@ $color-msg-conversations-border: #ebebeb
     color: #777
     font-size: 12px
 
+.section-center--msg
+  +display-flex(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(stretch)
+
+.msg-messages
+  +flex-grow(1)
+  +flex-shrink(1)
+
+  overflow-y: auto
+  margin-top: -20px
+  padding-top: 20px
+  padding-bottom: 20px
 
 
 .msg-message
@@ -183,6 +194,33 @@ $color-msg-conversations-border: #ebebeb
       &__content
         text-align: right
         padding-top: 18px
+
+.msg-input-area
+  @extend .wall-widget
+  margin-top: 0
+  padding: 10px
+  +display-flex(flex)
+
+  &__text
+    +flex-grow(1)
+    border: none
+    resize: none
+    padding: 8px
+
+    &:focus
+      outline: none
+
+  &__send-a
+    margin-left: 10px
+    margin-bottom: 2.5px
+    +align-self(flex-end)
+    color: #333
+
+    &:hover, &:focus, &:active, &:visited
+      color: #333
+
+
+
 
 .msg-contact-detail
   margin-top: 17px
