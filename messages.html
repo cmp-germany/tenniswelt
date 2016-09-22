@@ -46,14 +46,14 @@
 
       <div class="section-left section-left--msg">
 
-        <aside class="wall-widget wall-widget--side wall-widget--msg-conversations">
+        <aside class="wall-widget wall-widget--side wall-widget--msg">
           <header>
             <div style="display:table;">
               <i class="material-icons">mail_outline</i><h3>Nachrichten</h3>
             </div>
           </header>
 
-          <div class="msg-conversations">
+          <div class="wall-widget__content--scrollable wall-widget__content--full">
 
             <div class="msg-conversation">
               <div class="msg-conversation__left"><img src="gfx/profilbilder/p1.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
@@ -180,33 +180,26 @@
 
       <div class="section-right--msg">
 
-        <aside class="wall-widget wall-widget--side wall-widget--msg-infos">
+        <aside class="wall-widget wall-widget--side wall-widget--msg">
           <header>
             <i class="material-icons">info_outline</i><h3>Kontaktinfo</h3>
           </header>
-          <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="img-responsive">
-          <div class="msg-contact-detail">
-            <div class="msg-contact-detail__title">Name</div>
-            <div class="msg-contact-detail__text">Mike Schnorr</div>
-          </div>
-          <div class="msg-contact-detail">
-            <div class="msg-contact-detail__title">Status</div>
-            <div class="msg-contact-detail__text">Auf der Arbeit...</div>
+          <div class="wall-widget__content--scrollable">
+            <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="img-responsive">
+            <div class="msg-contact-detail">
+              <div class="msg-contact-detail__title">Name</div>
+              <div class="msg-contact-detail__text">Mike Schnorr</div>
+            </div>
+            <div class="msg-contact-detail">
+              <div class="msg-contact-detail__title">Status</div>
+              <div class="msg-contact-detail__text">Auf der Arbeit...</div>
+            </div>
           </div>
         </aside>
 
       </div>
 
     </div>
-
-    <script type="text/javascript">
-      $(window).resize(function(){
-        var newHeight = $(window).height() - 70;
-        $(".msg-container").height(newHeight);
-
-      });
-      $(window).resize();
-    </script>
 
   </body>
 </html>
