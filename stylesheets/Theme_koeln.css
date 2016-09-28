@@ -11342,21 +11342,19 @@ html, body {
   margin-left: -20px;
   margin-right: -20px;
   margin-top: -25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 25px;
+  padding: 25px 20px;
   overflow-y: auto;
   min-height: 0;
   height: auto;
   max-height: calc(100% - 46px);
 }
 
-/* line 58, ../sass/_messages.sass */
+/* line 56, ../sass/_messages.sass */
 .wall-widget__content--full {
   padding: 0 !important;
 }
 
-/* line 61, ../sass/_messages.sass */
+/* line 59, ../sass/_messages.sass */
 .msg-conversation {
   height: 60px;
   box-sizing: content-box;
@@ -11369,23 +11367,23 @@ html, body {
   -webkit-flex-basis: auto;
   flex-basis: auto;
 }
-/* line 73, ../sass/_messages.sass */
+/* line 71, ../sass/_messages.sass */
 .msg-conversation:last-child .msg-conversation__right, .msg-conversation:last-child .msg-conversation__center {
   border-bottom: none;
 }
-/* line 77, ../sass/_messages.sass */
+/* line 75, ../sass/_messages.sass */
 .msg-conversation:hover {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #f0f0f0;
 }
-/* line 82, ../sass/_messages.sass */
+/* line 80, ../sass/_messages.sass */
 .msg-conversation--active {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #ebebeb;
 }
-/* line 87, ../sass/_messages.sass */
+/* line 85, ../sass/_messages.sass */
 .msg-conversation__center {
   min-width: 0;
   border-bottom: 1px solid #ebebeb;
@@ -11398,16 +11396,27 @@ html, body {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-/* line 95, ../sass/_messages.sass */
+/* line 93, ../sass/_messages.sass */
+.msg-conversation__left {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* line 97, ../sass/_messages.sass */
 .msg-conversation__right {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
   border-bottom: 1px solid #ebebeb;
 }
-/* line 98, ../sass/_messages.sass */
+/* line 102, ../sass/_messages.sass */
 .msg-conversation__avatar {
   width: 50px;
   margin-right: 10px;
 }
-/* line 102, ../sass/_messages.sass */
+/* line 106, ../sass/_messages.sass */
 .msg-conversation__name {
   margin: 0;
   overflow: hidden;
@@ -11416,7 +11425,7 @@ html, body {
   padding-bottom: 3px;
   font-size: medium;
 }
-/* line 110, ../sass/_messages.sass */
+/* line 114, ../sass/_messages.sass */
 .msg-conversation__preview {
   color: #777;
   margin: 0;
@@ -11424,13 +11433,13 @@ html, body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 117, ../sass/_messages.sass */
+/* line 121, ../sass/_messages.sass */
 .msg-conversation__time {
   color: #777;
   font-size: 12px;
 }
 
-/* line 121, ../sass/_messages.sass */
+/* line 125, ../sass/_messages.sass */
 .section-center--msg {
   display: -webkit-flex;
   display: flex;
@@ -11442,7 +11451,7 @@ html, body {
   align-items: stretch;
 }
 
-/* line 127, ../sass/_messages.sass */
+/* line 131, ../sass/_messages.sass */
 .msg-messages {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -11454,7 +11463,7 @@ html, body {
   padding-bottom: 20px;
 }
 
-/* line 137, ../sass/_messages.sass */
+/* line 141, ../sass/_messages.sass */
 .msg-message {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -11465,18 +11474,18 @@ html, body {
   width: 80%;
   min-width: 300px;
 }
-/* line 146, ../sass/_messages.sass */
+/* line 150, ../sass/_messages.sass */
 .msg-message__avatar {
   width: 50px;
   margin-right: 10px;
   float: left;
 }
-/* line 155, ../sass/_messages.sass */
+/* line 159, ../sass/_messages.sass */
 .msg-message__time {
   float: right;
   color: #777;
 }
-/* line 158, ../sass/_messages.sass */
+/* line 162, ../sass/_messages.sass */
 .msg-message__time:before {
   content: "access_time";
   font-family: "Material Icons";
@@ -11508,11 +11517,11 @@ html, body {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 163, ../sass/_messages.sass */
+/* line 167, ../sass/_messages.sass */
 .msg-message__content {
   margin-top: 5px;
 }
-/* line 169, ../sass/_messages.sass */
+/* line 173, ../sass/_messages.sass */
 .msg-message--other {
   float: left;
 }
@@ -11525,7 +11534,7 @@ html, body {
 .msg-message--other:after {
   clear: both;
 }
-/* line 173, ../sass/_messages.sass */
+/* line 177, ../sass/_messages.sass */
 .msg-message--self {
   float: right;
 }
@@ -11538,18 +11547,18 @@ html, body {
 .msg-message--self:after {
   clear: both;
 }
-/* line 178, ../sass/_messages.sass */
+/* line 182, ../sass/_messages.sass */
 .msg-message--self .msg-message__avatar {
   float: right;
   margin-right: 0;
   margin-left: 10px;
 }
-/* line 183, ../sass/_messages.sass */
+/* line 187, ../sass/_messages.sass */
 .msg-message--self .msg-message__meta {
   width: calc(100% - 60px);
   float: right;
 }
-/* line 187, ../sass/_messages.sass */
+/* line 191, ../sass/_messages.sass */
 .msg-message--self .msg-message__name {
   float: right;
 }
@@ -11562,24 +11571,24 @@ html, body {
 .msg-message--self .msg-message__name:after {
   clear: both;
 }
-/* line 191, ../sass/_messages.sass */
+/* line 195, ../sass/_messages.sass */
 .msg-message--self .msg-message__time {
   float: left;
 }
-/* line 194, ../sass/_messages.sass */
+/* line 198, ../sass/_messages.sass */
 .msg-message--self .msg-message__content {
   text-align: right;
   padding-top: 18px;
 }
 
-/* line 198, ../sass/_messages.sass */
+/* line 202, ../sass/_messages.sass */
 .msg-input-area {
   margin-top: 0;
   padding: 10px;
   display: -webkit-flex;
   display: flex;
 }
-/* line 204, ../sass/_messages.sass */
+/* line 208, ../sass/_messages.sass */
 .msg-input-area__text {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -11587,11 +11596,11 @@ html, body {
   resize: none;
   padding: 8px;
 }
-/* line 210, ../sass/_messages.sass */
+/* line 214, ../sass/_messages.sass */
 .msg-input-area__text:focus {
   outline: none;
 }
-/* line 213, ../sass/_messages.sass */
+/* line 217, ../sass/_messages.sass */
 .msg-input-area__send-a {
   margin-left: 10px;
   margin-bottom: 2.5px;
@@ -11599,28 +11608,28 @@ html, body {
   align-self: flex-end;
   color: #333;
 }
-/* line 219, ../sass/_messages.sass */
+/* line 223, ../sass/_messages.sass */
 .msg-input-area__send-a:hover, .msg-input-area__send-a:focus, .msg-input-area__send-a:active, .msg-input-area__send-a:visited {
   color: #333;
 }
 
-/* line 225, ../sass/_messages.sass */
+/* line 229, ../sass/_messages.sass */
 .msg-contact-detail {
   margin-top: 17px;
   padding-bottom: 13px;
   border-bottom: 1px solid #ddd;
 }
-/* line 230, ../sass/_messages.sass */
+/* line 234, ../sass/_messages.sass */
 .msg-contact-detail:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
-/* line 235, ../sass/_messages.sass */
+/* line 239, ../sass/_messages.sass */
 .msg-contact-detail__title {
   font-weight: bold;
   font-size: 12px;
 }
-/* line 239, ../sass/_messages.sass */
+/* line 243, ../sass/_messages.sass */
 .msg-contact-detail__text {
   margin-top: 3px;
 }
