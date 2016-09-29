@@ -106,3 +106,27 @@
   &--is-loading
     .friend-request__bottom
       +justify-content(center)
+
+  &--with-message
+    .friend-request
+      &__bottom
+        +justify-content(center)
+
+  &__message
+    color: $color-navbar-font
+    opacity: 0.5
+    font-size: 14px
+    +ellipsis
+
+    &::before
+      vertical-align: middle
+      margin-right: 3px
+
+
+    &--success::before
+      +make-material-icon("check_circle", 14px)
+
+
+    &--error::before
+      +make-material-icon("error", 14px)
+      vertical-align: -2px
