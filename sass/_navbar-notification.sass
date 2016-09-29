@@ -1,0 +1,132 @@
+.navbar-notification
+  position: relative
+
+
+  &__toggle-button
+    @extend .navbar__tab
+    @extend .navbar__tab--notification
+
+.friend-requests
+  position: absolute
+  top: 51px
+  right: 50px
+  background-color: rgba($color-navbar, 0.9)
+  width: 25%
+  overflow-y: auto
+  max-height: 331px
+
+
+.friend-request
+  padding: 10px
+  width: 100%
+  height: 70px
+  +display-flex(flex)
+
+
+  &:first-child
+    margin-top: 0
+
+  &__left
+    width: 60px
+    +flex-grow(0)
+    +flex-shrink(0)
+
+  &__right
+    +flex-grow(1)
+    +flex-shrink(1)
+    +flex-basis(0)
+    width: calc(100% - 60px)
+    +display-flex(flex)
+    +flex-direction(column)
+    +justify-content(space-between)
+
+  &__top
+    +display-flex(flex)
+    +align-items(flex-end)
+    height: 20px
+    width: 100%
+
+  &__bottom
+    +display-flex(flex)
+    height: 20px
+    +justify-content(flex-end)
+    +align-items(flex-end)
+    border-bottom: rgba($color-navbar-font, 0.5) solid 1px
+    padding-bottom: 10px
+    margin-bottom: -11px
+
+  &:last-child
+    .friend-request__bottom
+      border-bottom: 0
+
+  &__avatar
+    width: 50px
+
+  &__name
+    color: $color-navbar-font
+    margin: 0
+    margin-top: 5px
+    +flex-grow(1)
+    +flex-shrink(1)
+    +flex-basis(0)
+    +ellipsis
+    width: 100%
+
+  &__time
+    color: $color-navbar-font
+    opacity: 0.5
+    +flex-grow(0)
+    +flex-shrink(0)
+
+  &__action
+    margin-left: 3px
+
+    &::after
+      content: "|"
+      margin-left: 3px
+      color: $color-important
+
+    &:last-child::after
+      content: none
+      margin-right: 0
+
+
+    &--accept::before
+      +make-material-icon("check", 14px)
+      vertical-align: middle
+
+    &--decline::before
+      +make-material-icon("close", 14px)
+      vertical-align: middle
+
+  &--load-more
+    +justify-content(center)
+    +align-items(center)
+
+  &--is-loading
+    .friend-request__bottom
+      +justify-content(center)
+
+  &--with-message
+    .friend-request
+      &__bottom
+        +justify-content(center)
+
+  &__message
+    color: $color-navbar-font
+    opacity: 0.5
+    font-size: 14px
+    +ellipsis
+
+    &::before
+      vertical-align: middle
+      margin-right: 3px
+
+
+    &--success::before
+      +make-material-icon("check_circle", 14px)
+
+
+    &--error::before
+      +make-material-icon("error", 14px)
+      vertical-align: -2px
