@@ -9520,6 +9520,23 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   text-overflow: ellipsis;
   -moz-binding: url('/stylesheets/xml/ellipsis.xml#ellipsis');
 }
+/* line 146, ../sass/_navbar-notification.sass */
+.notification--unread {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 150, ../sass/_navbar-notification.sass */
+.notification--unread .notification__message-preview {
+  font-weight: bold;
+  opacity: 0.7;
+}
+/* line 153, ../sass/_navbar-notification.sass */
+.notification--unread .notification__name {
+  font-weight: bold;
+}
+/* line 156, ../sass/_navbar-notification.sass */
+.notification:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
 /* line 1, ../sass/_buttons.sass */
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile {
