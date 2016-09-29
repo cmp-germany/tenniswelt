@@ -9226,7 +9226,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 }
 
 /* line 9, ../sass/_navbar-notification.sass */
-.friend-requests {
+.notification-container {
   position: absolute;
   top: 51px;
   right: 50px;
@@ -9234,30 +9234,31 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   width: 25%;
   overflow-y: auto;
   max-height: 331px;
+  min-width: 270px;
 }
 
-/* line 19, ../sass/_navbar-notification.sass */
-.friend-request {
+/* line 20, ../sass/_navbar-notification.sass */
+.notification {
   padding: 10px;
   width: 100%;
   height: 70px;
   display: -webkit-flex;
   display: flex;
 }
-/* line 26, ../sass/_navbar-notification.sass */
-.friend-request:first-child {
+/* line 27, ../sass/_navbar-notification.sass */
+.notification:first-child {
   margin-top: 0;
 }
-/* line 29, ../sass/_navbar-notification.sass */
-.friend-request__left {
+/* line 30, ../sass/_navbar-notification.sass */
+.notification__left {
   width: 60px;
   -webkit-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-/* line 34, ../sass/_navbar-notification.sass */
-.friend-request__right {
+/* line 35, ../sass/_navbar-notification.sass */
+.notification__right {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
@@ -9272,8 +9273,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 43, ../sass/_navbar-notification.sass */
-.friend-request__top {
+/* line 44, ../sass/_navbar-notification.sass */
+.notification__top {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-end;
@@ -9281,8 +9282,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   height: 20px;
   width: 100%;
 }
-/* line 49, ../sass/_navbar-notification.sass */
-.friend-request__bottom {
+/* line 50, ../sass/_navbar-notification.sass */
+.notification__bottom {
   display: -webkit-flex;
   display: flex;
   height: 20px;
@@ -9294,16 +9295,16 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   padding-bottom: 10px;
   margin-bottom: -11px;
 }
-/* line 59, ../sass/_navbar-notification.sass */
-.friend-request:last-child .friend-request__bottom {
+/* line 60, ../sass/_navbar-notification.sass */
+.notification:last-child .notification__bottom {
   border-bottom: 0;
 }
-/* line 62, ../sass/_navbar-notification.sass */
-.friend-request__avatar {
+/* line 63, ../sass/_navbar-notification.sass */
+.notification__avatar {
   width: 50px;
 }
-/* line 65, ../sass/_navbar-notification.sass */
-.friend-request__name {
+/* line 66, ../sass/_navbar-notification.sass */
+.notification__name {
   color: #fff;
   margin: 0;
   margin-top: 5px;
@@ -9321,8 +9322,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -moz-binding: url('/stylesheets/xml/ellipsis.xml#ellipsis');
   width: 100%;
 }
-/* line 75, ../sass/_navbar-notification.sass */
-.friend-request__time {
+/* line 76, ../sass/_navbar-notification.sass */
+.notification__time {
   color: #fff;
   opacity: 0.5;
   -webkit-flex-grow: 0;
@@ -9330,23 +9331,23 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-/* line 81, ../sass/_navbar-notification.sass */
-.friend-request__action {
+/* line 82, ../sass/_navbar-notification.sass */
+.notification__action {
   margin-left: 3px;
 }
-/* line 84, ../sass/_navbar-notification.sass */
-.friend-request__action::after {
+/* line 85, ../sass/_navbar-notification.sass */
+.notification__action::after {
   content: "|";
   margin-left: 3px;
   color: #E9002F;
 }
-/* line 89, ../sass/_navbar-notification.sass */
-.friend-request__action:last-child::after {
+/* line 90, ../sass/_navbar-notification.sass */
+.notification__action:last-child::after {
   content: none;
   margin-right: 0;
 }
-/* line 94, ../sass/_navbar-notification.sass */
-.friend-request__action--accept::before {
+/* line 95, ../sass/_navbar-notification.sass */
+.notification__action--accept::before {
   content: "check";
   font-family: "Material Icons";
   font-weight: normal;
@@ -9364,7 +9365,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   vertical-align: middle;
 }
 /* line 16, ../sass/_material-icons.sass */
-.friend-request__action--accept::before--circle {
+.notification__action--accept::before--circle {
   background-color: #E9002F;
   color: #fff;
   font-size: 11.9px;
@@ -9376,8 +9377,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 98, ../sass/_navbar-notification.sass */
-.friend-request__action--decline::before {
+/* line 99, ../sass/_navbar-notification.sass */
+.notification__action--decline::before {
   content: "close";
   font-family: "Material Icons";
   font-weight: normal;
@@ -9395,7 +9396,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   vertical-align: middle;
 }
 /* line 16, ../sass/_material-icons.sass */
-.friend-request__action--decline::before--circle {
+.notification__action--decline::before--circle {
   background-color: #E9002F;
   color: #fff;
   font-size: 11.9px;
@@ -9407,25 +9408,25 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 102, ../sass/_navbar-notification.sass */
-.friend-request--load-more {
+/* line 103, ../sass/_navbar-notification.sass */
+.notification--load-more {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 107, ../sass/_navbar-notification.sass */
-.friend-request--is-loading .friend-request__bottom {
+/* line 108, ../sass/_navbar-notification.sass */
+.notification--is-loading .notification__bottom {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 112, ../sass/_navbar-notification.sass */
-.friend-request--with-message .friend-request__bottom {
+/* line 113, ../sass/_navbar-notification.sass */
+.notification--with-message .notification__bottom {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 115, ../sass/_navbar-notification.sass */
-.friend-request__message {
+/* line 116, ../sass/_navbar-notification.sass */
+.notification__message {
   color: #fff;
   opacity: 0.5;
   font-size: 14px;
@@ -9436,13 +9437,13 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   text-overflow: ellipsis;
   -moz-binding: url('/stylesheets/xml/ellipsis.xml#ellipsis');
 }
-/* line 121, ../sass/_navbar-notification.sass */
-.friend-request__message::before {
+/* line 122, ../sass/_navbar-notification.sass */
+.notification__message::before {
   vertical-align: middle;
   margin-right: 3px;
 }
-/* line 126, ../sass/_navbar-notification.sass */
-.friend-request__message--success::before {
+/* line 127, ../sass/_navbar-notification.sass */
+.notification__message--success::before {
   content: "check_circle";
   font-family: "Material Icons";
   font-weight: normal;
@@ -9459,7 +9460,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-font-smoothing: antialiased;
 }
 /* line 16, ../sass/_material-icons.sass */
-.friend-request__message--success::before--circle {
+.notification__message--success::before--circle {
   background-color: #E9002F;
   color: #fff;
   font-size: 11.9px;
@@ -9471,8 +9472,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 130, ../sass/_navbar-notification.sass */
-.friend-request__message--error::before {
+/* line 131, ../sass/_navbar-notification.sass */
+.notification__message--error::before {
   content: "error";
   font-family: "Material Icons";
   font-weight: normal;
@@ -9490,7 +9491,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   vertical-align: -2px;
 }
 /* line 16, ../sass/_material-icons.sass */
-.friend-request__message--error::before--circle {
+.notification__message--error::before--circle {
   background-color: #E9002F;
   color: #fff;
   font-size: 11.9px;
