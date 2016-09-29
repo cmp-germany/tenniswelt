@@ -9414,6 +9414,11 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-align-items: center;
   align-items: center;
 }
+/* line 107, ../sass/_navbar-notification.sass */
+.friend-request--is-loading .friend-request__bottom {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 
 /* line 1, ../sass/_buttons.sass */
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile {
