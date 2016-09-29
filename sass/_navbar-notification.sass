@@ -12,6 +12,8 @@
   right: 50px
   background-color: rgba($color-navbar, 0.9)
   width: 25%
+  overflow-y: auto
+  max-height: 331px
 
 
 .friend-request
@@ -51,6 +53,11 @@
     border-bottom: rgba($color-navbar-font, 0.5) solid 1px
     padding-bottom: 10px
     margin-bottom: -11px
+
+  &:last-child
+    .friend-request__bottom
+      border-bottom: 0
+
 
 
   &__avatar

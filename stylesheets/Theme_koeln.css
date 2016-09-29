@@ -8933,20 +8933,22 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   right: 50px;
   background-color: rgba(19, 35, 51, 0.9);
   width: 25%;
+  overflow-y: auto;
+  max-height: 331px;
 }
 
-/* line 17, ../sass/_navbar-notification.sass */
+/* line 19, ../sass/_navbar-notification.sass */
 .friend-request {
   padding: 10px;
   width: 100%;
   display: -webkit-flex;
   display: flex;
 }
-/* line 23, ../sass/_navbar-notification.sass */
+/* line 25, ../sass/_navbar-notification.sass */
 .friend-request:first-child {
   margin-top: 0;
 }
-/* line 26, ../sass/_navbar-notification.sass */
+/* line 28, ../sass/_navbar-notification.sass */
 .friend-request__left {
   width: 60px;
   -webkit-flex-grow: 0;
@@ -8954,7 +8956,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-/* line 31, ../sass/_navbar-notification.sass */
+/* line 33, ../sass/_navbar-notification.sass */
 .friend-request__right {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -8970,7 +8972,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 40, ../sass/_navbar-notification.sass */
+/* line 42, ../sass/_navbar-notification.sass */
 .friend-request__top {
   display: -webkit-flex;
   display: flex;
@@ -8979,7 +8981,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   height: 20px;
   width: 100%;
 }
-/* line 46, ../sass/_navbar-notification.sass */
+/* line 48, ../sass/_navbar-notification.sass */
 .friend-request__bottom {
   display: -webkit-flex;
   display: flex;
@@ -8992,11 +8994,15 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   padding-bottom: 10px;
   margin-bottom: -11px;
 }
-/* line 56, ../sass/_navbar-notification.sass */
+/* line 58, ../sass/_navbar-notification.sass */
+.friend-request:last-child .friend-request__bottom {
+  border-bottom: 0;
+}
+/* line 63, ../sass/_navbar-notification.sass */
 .friend-request__avatar {
   width: 50px;
 }
-/* line 59, ../sass/_navbar-notification.sass */
+/* line 66, ../sass/_navbar-notification.sass */
 .friend-request__name {
   color: #fff;
   margin: 0;
@@ -9015,7 +9021,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -moz-binding: url('/stylesheets/xml/ellipsis.xml#ellipsis');
   width: 100%;
 }
-/* line 69, ../sass/_navbar-notification.sass */
+/* line 76, ../sass/_navbar-notification.sass */
 .friend-request__time {
   color: #fff;
   opacity: 0.5;
@@ -9024,22 +9030,22 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-/* line 75, ../sass/_navbar-notification.sass */
+/* line 82, ../sass/_navbar-notification.sass */
 .friend-request__action {
   margin-left: 3px;
 }
-/* line 78, ../sass/_navbar-notification.sass */
+/* line 85, ../sass/_navbar-notification.sass */
 .friend-request__action::after {
   content: "|";
   margin-left: 3px;
   color: #E9002F;
 }
-/* line 83, ../sass/_navbar-notification.sass */
+/* line 90, ../sass/_navbar-notification.sass */
 .friend-request__action:last-child::after {
   content: none;
   margin-right: 0;
 }
-/* line 88, ../sass/_navbar-notification.sass */
+/* line 95, ../sass/_navbar-notification.sass */
 .friend-request__action--accept::before {
   content: "check";
   font-family: "Material Icons";
@@ -9070,7 +9076,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 92, ../sass/_navbar-notification.sass */
+/* line 99, ../sass/_navbar-notification.sass */
 .friend-request__action--decline::before {
   content: "close";
   font-family: "Material Icons";
