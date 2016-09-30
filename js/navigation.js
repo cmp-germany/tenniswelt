@@ -1,5 +1,12 @@
+var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var $ = require('jquery');
+
+
 $( document ).ready(function(){
   navbar();
+  initReactComponents();
   $( window ).resize(function() {
     navbar();
   });
@@ -80,4 +87,11 @@ function navbar() {
 
 function tab() {
 
+}
+
+function initReactComponents() {
+  ReactDOM.render(
+    <FriendRequestsModule />,
+    document.getElementById('FriendRequestsModuleRoot')
+  );
 }
