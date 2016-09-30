@@ -9547,6 +9547,16 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
+/* line 166, ../sass/_navbar-notification.sass */
+.notification__unread-messages-number {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: lighter;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
 
 /* line 1, ../sass/_buttons.sass */
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile {
