@@ -1,58 +1,42 @@
 var React = require('react');
 var Notification = require('./components/Notification');
 
-var data = {
-   "success":true,
-   "data":[
-      {
-         "Id":"00000000-0000-0000-0000-000000000000",
-         "ShownName": "Uwe Müller",
-         "ProfilePicture": "gfx/profilbilder/p1.jpg",
-         "UserId":"1065b80c-06ff-46bb-af2c-809f5c885ac0",
-         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
-         "DateCreated":"2016-09-29T16:41:09.527",
-         "DateAccepted":null,
-         "IsSeen":false,
-         "IsAccepted":false
-      },
-      {
-         "Id":"3ceb27d0-e996-4131-997d-a673010587f9",
-         "ShownName": "Uwe Müller",
-         "ProfilePicture": "gfx/profilbilder/p1.jpg",
-         "UserId":"cc901955-2cf4-4f67-bd23-e46c85bbc986",
-         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
-         "DateCreated":"2016-08-31T14:16:59.12",
-         "DateAccepted":null,
-         "IsSeen":false,
-         "IsAccepted":false
-      },
-      {
-         "Id":"1ab24ddc-b1a5-4653-b325-a54500bcc15e",
-         "ShownName": "Uwe Müller",
-         "ProfilePicture": "gfx/profilbilder/p1.jpg",
-         "UserId":"ad505676-71b0-46d2-84ec-a464013c5344",
-         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
-         "DateCreated":"2015-11-03T10:18:30.817",
-         "DateAccepted":null,
-         "IsSeen":false,
-         "IsAccepted":false
-      }
-   ]
-};
 
 var FriendRequestsModule = React.createClass({
+  getInitialState: function(){
+    return {
+      data: this.props.data
+    }
+  },
+
   render: function(){
+    var data = this.state.data;
 
     var notifications = data.data.map(function(data){
+      if (data.DateAccepted) {
+        return;
+      }
       return (
         <Notification data={data} key={data.Id} />
       );
     });
 
+    var badgeNumber = 0;
+    data.data.forEach(function(item){
+      if (item.IsSeen) {
+        return;
+      }
+      badgeNumber++;
+    });
+
+    if (badgeNumber == 0) {
+      badgeNumber = null;
+    }
+
     return (
       <div className="navbar-notification">
         <button className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false">
-          <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={5}>people_outline</i>
+          <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badgeNumber}>people_outline</i>
         </button>
 
         <div className="notification-container collapse" id="friend-requests">

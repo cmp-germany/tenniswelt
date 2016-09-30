@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.16.0",
     "jquery": "^3.1.1",
     "react-dom": "^15.3.2",
+    "react-lite": "^0.15.21",
     "webpack": "^1.13.2"
   },
   "dependencies": {
