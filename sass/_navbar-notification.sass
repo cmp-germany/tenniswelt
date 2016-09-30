@@ -6,7 +6,7 @@
     @extend .navbar__tab
     @extend .navbar__tab--notification
 
-.friend-requests
+.notification-container
   position: absolute
   top: 51px
   right: 50px
@@ -14,12 +14,14 @@
   width: 25%
   overflow-y: auto
   max-height: 331px
+  min-width: 270px
 
 
-.friend-request
+.notification
   padding: 10px
   width: 100%
   height: 70px
+  cursor: pointer
   +display-flex(flex)
 
 
@@ -56,7 +58,7 @@
     margin-bottom: -11px
 
   &:last-child
-    .friend-request__bottom
+    .notification__bottom
       border-bottom: 0
 
   &__avatar
@@ -104,11 +106,11 @@
     +align-items(center)
 
   &--is-loading
-    .friend-request__bottom
+    .notification__bottom
       +justify-content(center)
 
   &--with-message
-    .friend-request
+    .notification
       &__bottom
         +justify-content(center)
 
@@ -130,3 +132,40 @@
     &--error::before
       +make-material-icon("error", 14px)
       vertical-align: -2px
+
+  &--chat
+    .notification
+      &__bottom
+        +justify-content(flex-start)
+
+  &__message-preview
+    color: $color-navbar-font
+    opacity: 0.5
+    font-size: 14px
+    +ellipsis
+
+  &--unread
+    background-color: rgba($color-navbar-font, 0.1)
+
+    .notification
+      &__message-preview
+        font-weight: bold
+        opacity: 0.7
+      &__name
+        font-weight: bold
+
+  &:hover
+    background-color: rgba($color-navbar-font, 0.2)
+
+  &__online-status
+    font-size: 16px
+    margin-right: 5px
+    +flex-grow(0)
+    +flex-shrink(0)
+
+  &__unread-messages-number
+    color: $color-navbar-font
+    opacity: 0.7
+    font-weight: lighter
+    +flex-grow(0)
+    +flex-shrink(0)
