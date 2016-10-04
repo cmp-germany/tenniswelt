@@ -169,3 +169,18 @@
     font-weight: lighter
     +flex-grow(0)
     +flex-shrink(0)
+
+  &--error
+    +justify-content(center)
+    +align-items(center)
+
+    .notification
+
+      &__error
+        color: $brand-warning
+
+        &::before
+          +make-material-icon("error", 36px)
+          margin-right: 5px
+          color: $brand-warning
+          vertical-align: middle
