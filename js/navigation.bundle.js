@@ -61,7 +61,7 @@
 	var $ = __webpack_require__(174);
 
 	var data = {
-	  "success": true,
+	  "success": false,
 	  "data": [{
 	    "Id": "00000000-0000-0000-0000-000000000000",
 	    "ShownName": "Uwe Müller",
@@ -184,6 +184,7 @@
 
 	var React = __webpack_require__(3);
 	var Notification = __webpack_require__(175);
+	var NotificationErrorMessage = __webpack_require__(177);
 
 	var FriendRequestsModule = React.createClass({
 	  displayName: 'FriendRequestsModule',
@@ -196,13 +197,19 @@
 
 	  render: function render() {
 	    var data = this.state.data;
+	    console.log(data);
 
-	    var notifications = data.data.map(function (data) {
-	      if (data.DateAccepted) {
-	        return;
-	      }
-	      return React.createElement(Notification, { data: data, key: data.Id });
-	    });
+	    var notifications;
+	    if (data.success) {
+	      notifications = data.data.map(function (data) {
+	        if (data.DateAccepted) {
+	          return;
+	        }
+	        return React.createElement(Notification, { data: data, key: data.Id });
+	      });
+	    } else {
+	      notifications = React.createElement(NotificationErrorMessage, { data: data.data });
+	    }
 
 	    var badgeNumber = 0;
 	    data.data.forEach(function (item) {
@@ -231,357 +238,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'notification-container collapse', id: 'friend-requests' },
-	        notifications,
-	        React.createElement(
-	          'div',
-	          { className: 'notification' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--accept' },
-	                'Annehmen'
-	              ),
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--decline' },
-	                'Ablehnen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--is-loading' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--with-message' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'div',
-	                { className: 'notification__message notification__message--success' },
-	                'Angenommen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--with-message' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'div',
-	                { className: 'notification__message notification__message--success' },
-	                'Abgelehnt'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--with-message' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'div',
-	                { className: 'notification__message notification__message--error' },
-	                'Fehler'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--accept' },
-	                'Annehmen'
-	              ),
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--decline' },
-	                'Ablehnen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--accept' },
-	                'Annehmen'
-	              ),
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--decline' },
-	                'Ablehnen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--accept' },
-	                'Annehmen'
-	              ),
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--decline' },
-	                'Ablehnen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification' },
-	          React.createElement(
-	            'div',
-	            { className: 'notification__left' },
-	            React.createElement('img', { src: 'gfx/profilbilder/p7.jpg', alt: 'Profilbild', className: 'notification__avatar' })
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'notification__right' },
-	            React.createElement(
-	              'div',
-	              { className: 'notification__top' },
-	              React.createElement(
-	                'h4',
-	                { className: 'notification__name' },
-	                'Kai G\xE4rtner'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'notification__time' },
-	                '14:59'
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'notification__bottom' },
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--accept' },
-	                'Annehmen'
-	              ),
-	              React.createElement(
-	                'a',
-	                { href: '#1', className: 'notification__action notification__action--decline' },
-	                'Ablehnen'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--load-more' },
-	          React.createElement('div', { className: 'notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
-	        )
+	        notifications
 	      )
 	    );
 	  }
@@ -15092,6 +14749,29 @@
 	});
 
 	module.exports = Notification;
+
+/***/ },
+
+/***/ 177:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(3);
+
+	var NotificationErrorMessage = React.createClass({
+	  displayName: 'NotificationErrorMessage',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      'Dies ist ein Test'
+	    );
+	  }
+	});
+
+	module.exports = NotificationErrorMessage;
 
 /***/ }
 
