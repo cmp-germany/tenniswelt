@@ -23,6 +23,11 @@ module.exports = {
           presets: ['react', 'es2015'],
           plugins: [],
         }
+      },
+      {
+        test: /\.json$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'json'
       }
     ]
   }
