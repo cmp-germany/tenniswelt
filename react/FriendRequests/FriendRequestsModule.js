@@ -1,10 +1,13 @@
-var React = require('react');
-var $ = require('jquery');
-var Notification = require('./components/Notification');
-var NotificationErrorMessage = require('./components/NotificationErrorMessage');
+const React = require('react');
+const $ = require('jquery');
+const Notification = require('./components/Notification');
+const NotificationErrorMessage = require('./components/NotificationErrorMessage');
+const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 
 
 var FriendRequestsModule = React.createClass({
+  mixins: [MaterialDesignMixin],
+
   getInitialState: function(){
     return {
       data: this.props.data
@@ -74,6 +77,9 @@ var FriendRequestsModule = React.createClass({
 
         <div className="notification-container collapse" id="friend-requests">
           {notifications}
+          <div className="notification notification--load-more">
+            <div className="notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
+          </div>
         </div>
       </div>
 

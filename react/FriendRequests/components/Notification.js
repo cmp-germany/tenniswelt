@@ -1,6 +1,7 @@
 var React = require('react');
 
 var Notification = React.createClass({
+
   render: function() {
     var data = this.props.data;
 

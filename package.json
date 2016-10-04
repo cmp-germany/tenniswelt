@@ -28,7 +28,9 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "exports-loader": "^0.6.3",
     "json-loader": "^0.5.4",
+    "material-design-lite": "^1.2.1",
     "react": "^15.3.2",
     "webpack-dev-server": "^1.16.1"
   }
