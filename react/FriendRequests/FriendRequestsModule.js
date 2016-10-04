@@ -1,4 +1,5 @@
 var React = require('react');
+var $ = require('jquery');
 var Notification = require('./components/Notification');
 var NotificationErrorMessage = require('./components/NotificationErrorMessage');
 
@@ -9,7 +10,38 @@ var FriendRequestsModule = React.createClass({
       data: this.props.data
     }
   },
+  getFriendRequestWithGuid:function(friendRequestId){
+    var allData = this.state.data;
+    var result = $.grep(myArray, function(e){ return e.id === friendRequestId; });
+    if (result.length == 0) {
+      return null;
+    } else if (result.length == 1) {
+      return result[0];
+    } else {
+      throws "Multiple friend requests witht the same guid";
+    }
+  },
+  acceptFriendRequest: function(friendRequestId){
+      var url = this.props.servicePath+'/AcceptFriendRequest/'+friendRequestId;
+      $.post(url, {friendRequestId: friendRequestId}, function(data){
+        if(data.success){
+          var allData = this.state.data;
+          var index = allData.findIndex(x => x.Id===friendRequestId); //getFriendRequestWithGuid(friendRequestId);
+          allData[index].isAccepted = true;
+          setState({allData});
+        }
+        else{
 
+        }
+      });
+
+      //while
+
+      //after
+  },
+  deleteFriendRequest: function(friendRequestId){
+    
+  }
   render: function(){
     var data = this.state.data;
     console.log(data);
@@ -27,7 +59,7 @@ var FriendRequestsModule = React.createClass({
     } else {
     notifications = <NotificationErrorMessage data={data.data} />;
     }
-
+-
 
     var badgeNumber = 0;
     data.data.forEach(function(item){

@@ -3,7 +3,7 @@ var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule
 //var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var data = require('../data/notifications.json');
-
+var webserviceBase = (require('../data/webserviceBase.json')).webserviceBase;
 
 $( document ).ready(function(){
   navbar();
@@ -92,7 +92,7 @@ function tab() {
 
 function initReactComponents() {
   ReactDOM.render(
-    <FriendRequestsModule data={data} />,
+    <FriendRequestsModule data={data} servicePath={webserviceBase+'/api/Friend'} />,
     document.getElementById('FriendRequestsModuleRoot')
   );
 }
