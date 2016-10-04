@@ -40,17 +40,15 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(1);
 
 
 /***/ },
-
-/***/ 1:
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58,42 +56,8 @@
 	var FriendRequestsModule = __webpack_require__(2);
 	//var React = require('react-lite');
 	//var ReactDOM = require('react-dom');
-	var $ = __webpack_require__(174);
-
-	var data = {
-	  "success": false,
-	  "data": [{
-	    "Id": "00000000-0000-0000-0000-000000000000",
-	    "ShownName": "Uwe Müller",
-	    "ProfilePicture": "gfx/profilbilder/p1.jpg",
-	    "UserId": "1065b80c-06ff-46bb-af2c-809f5c885ac0",
-	    "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
-	    "DateCreated": "12. Okt",
-	    "DateAccepted": "123",
-	    "IsSeen": true,
-	    "IsAccepted": false
-	  }, {
-	    "Id": "3ceb27d0-e996-4131-997d-a673010587f9",
-	    "ShownName": "Uwe Müller",
-	    "ProfilePicture": "gfx/profilbilder/p1.jpg",
-	    "UserId": "cc901955-2cf4-4f67-bd23-e46c85bbc986",
-	    "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
-	    "DateCreated": "1. Jan",
-	    "DateAccepted": null,
-	    "IsSeen": false,
-	    "IsAccepted": false
-	  }, {
-	    "Id": "1ab24ddc-b1a5-4653-b325-a54500bcc15e",
-	    "ShownName": "Uwe Müller",
-	    "ProfilePicture": "gfx/profilbilder/p1.jpg",
-	    "UserId": "ad505676-71b0-46d2-84ec-a464013c5344",
-	    "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
-	    "DateCreated": "gestern",
-	    "DateAccepted": null,
-	    "IsSeen": true,
-	    "IsAccepted": false
-	  }]
-	};
+	var $ = __webpack_require__(38);
+	var data = __webpack_require__(39);
 
 	$(document).ready(function () {
 	  navbar();
@@ -176,15 +140,14 @@
 	}
 
 /***/ },
-
-/***/ 2:
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(3);
-	var Notification = __webpack_require__(175);
-	var NotificationErrorMessage = __webpack_require__(177);
+	var Notification = __webpack_require__(36);
+	var NotificationErrorMessage = __webpack_require__(37);
 
 	var FriendRequestsModule = React.createClass({
 	  displayName: 'FriendRequestsModule',
@@ -247,8 +210,7 @@
 	module.exports = FriendRequestsModule;
 
 /***/ },
-
-/***/ 3:
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -257,8 +219,7 @@
 
 
 /***/ },
-
-/***/ 4:
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -353,8 +314,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 5:
+/* 5 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -540,8 +500,7 @@
 
 
 /***/ },
-
-/***/ 6:
+/* 6 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -630,8 +589,7 @@
 
 
 /***/ },
-
-/***/ 7:
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -827,8 +785,7 @@
 	module.exports = ReactChildren;
 
 /***/ },
-
-/***/ 8:
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -955,8 +912,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 9:
+/* 9 */
 /***/ function(module, exports) {
 
 	/**
@@ -1000,8 +956,7 @@
 	module.exports = reactProdInvariant;
 
 /***/ },
-
-/***/ 10:
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1056,8 +1011,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 11:
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1411,8 +1365,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 12:
+/* 12 */
 /***/ function(module, exports) {
 
 	/**
@@ -1448,8 +1401,7 @@
 	module.exports = ReactCurrentOwner;
 
 /***/ },
-
-/***/ 13:
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1521,8 +1473,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 14:
+/* 14 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1565,8 +1516,7 @@
 	module.exports = emptyFunction;
 
 /***/ },
-
-/***/ 15:
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1596,8 +1546,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 16:
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1770,8 +1719,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 17:
+/* 17 */
 /***/ function(module, exports) {
 
 	/**
@@ -1817,8 +1765,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-
-/***/ 18:
+/* 18 */
 /***/ function(module, exports) {
 
 	/**
@@ -1882,8 +1829,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-
-/***/ 19:
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2007,8 +1953,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 20:
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2110,8 +2055,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 21:
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2136,8 +2080,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 22:
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2184,8 +2127,7 @@
 	module.exports = ReactPureComponent;
 
 /***/ },
-
-/***/ 23:
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2923,8 +2865,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 24:
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2951,8 +2892,7 @@
 	module.exports = ReactPropTypeLocations;
 
 /***/ },
-
-/***/ 25:
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3005,8 +2945,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 26:
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3036,8 +2975,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 27:
+/* 27 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3076,8 +3014,7 @@
 	module.exports = keyOf;
 
 /***/ },
-
-/***/ 28:
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3253,8 +3190,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 29:
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3488,8 +3424,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 30:
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3837,8 +3772,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 31:
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3931,8 +3865,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 32:
+/* 32 */
 /***/ function(module, exports) {
 
 	/**
@@ -3953,8 +3886,7 @@
 	module.exports = ReactPropTypesSecret;
 
 /***/ },
-
-/***/ 33:
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4391,8 +4323,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-
-/***/ 34:
+/* 34 */
 /***/ function(module, exports) {
 
 	/**
@@ -4411,8 +4342,7 @@
 	module.exports = '15.3.2';
 
 /***/ },
-
-/***/ 35:
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4456,8 +4386,96 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 174:
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	var Notification = React.createClass({
+	  displayName: "Notification",
+
+	  render: function render() {
+	    var data = this.props.data;
+
+	    var containerClassName = "notification";
+
+	    //Highlight, if not seen
+	    if (!data.IsSeen) {
+	      containerClassName += " notification--unread";
+	    }
+
+	    return React.createElement(
+	      "div",
+	      { className: containerClassName },
+	      React.createElement(
+	        "div",
+	        { className: "notification__left" },
+	        React.createElement("img", { src: data.ProfilePicture, alt: "Profilbild", className: "notification__avatar" })
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "notification__right" },
+	        React.createElement(
+	          "div",
+	          { className: "notification__top" },
+	          React.createElement(
+	            "h4",
+	            { className: "notification__name" },
+	            data.ShownName
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "notification__time" },
+	            data.DateCreated
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "notification__bottom" },
+	          React.createElement(
+	            "a",
+	            { href: "#1", className: "notification__action notification__action--accept" },
+	            "Annehmen"
+	          ),
+	          React.createElement(
+	            "a",
+	            { href: "#1", className: "notification__action notification__action--decline" },
+	            "Ablehnen"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Notification;
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	var NotificationErrorMessage = React.createClass({
+	  displayName: "NotificationErrorMessage",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "notification notification--load-more" },
+	      React.createElement("div", { className: "notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" })
+	    );
+	  }
+	});
+
+	module.exports = NotificationErrorMessage;
+
+/***/ },
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14683,96 +14701,47 @@
 
 
 /***/ },
+/* 39 */
+/***/ function(module, exports) {
 
-/***/ 175:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	var Notification = React.createClass({
-	  displayName: "Notification",
-
-	  render: function render() {
-	    var data = this.props.data;
-
-	    var containerClassName = "notification";
-
-	    //Highlight, if not seen
-	    if (!data.IsSeen) {
-	      containerClassName += " notification--unread";
-	    }
-
-	    return React.createElement(
-	      "div",
-	      { className: containerClassName },
-	      React.createElement(
-	        "div",
-	        { className: "notification__left" },
-	        React.createElement("img", { src: data.ProfilePicture, alt: "Profilbild", className: "notification__avatar" })
-	      ),
-	      React.createElement(
-	        "div",
-	        { className: "notification__right" },
-	        React.createElement(
-	          "div",
-	          { className: "notification__top" },
-	          React.createElement(
-	            "h4",
-	            { className: "notification__name" },
-	            data.ShownName
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "notification__time" },
-	            data.DateCreated
-	          )
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "notification__bottom" },
-	          React.createElement(
-	            "a",
-	            { href: "#1", className: "notification__action notification__action--accept" },
-	            "Annehmen"
-	          ),
-	          React.createElement(
-	            "a",
-	            { href: "#1", className: "notification__action notification__action--decline" },
-	            "Ablehnen"
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-
-	module.exports = Notification;
-
-/***/ },
-
-/***/ 177:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(3);
-
-	var NotificationErrorMessage = React.createClass({
-	  displayName: 'NotificationErrorMessage',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      'Dies ist ein Test'
-	    );
-	  }
-	});
-
-	module.exports = NotificationErrorMessage;
+	module.exports = {
+		"success": false,
+		"data": [
+			{
+				"Id": "00000000-0000-0000-0000-000000000000",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "1065b80c-06ff-46bb-af2c-809f5c885ac0",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "12. Okt",
+				"DateAccepted": "123",
+				"IsSeen": true,
+				"IsAccepted": false
+			},
+			{
+				"Id": "3ceb27d0-e996-4131-997d-a673010587f9",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "cc901955-2cf4-4f67-bd23-e46c85bbc986",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "1. Jan",
+				"DateAccepted": null,
+				"IsSeen": false,
+				"IsAccepted": false
+			},
+			{
+				"Id": "1ab24ddc-b1a5-4653-b325-a54500bcc15e",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "ad505676-71b0-46d2-84ec-a464013c5344",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "gestern",
+				"DateAccepted": null,
+				"IsSeen": true,
+				"IsAccepted": false
+			}
+		]
+	};
 
 /***/ }
-
-/******/ });
+/******/ ]);
