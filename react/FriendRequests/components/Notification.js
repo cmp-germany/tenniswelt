@@ -7,10 +7,26 @@ var Notification = React.createClass({
     var data = this.props.data;
 
     var containerClassName = "notification";
+    var notificationBottom = (
+      <div className="notification__bottom">
+        <a href="#1" className="notification__action notification__action--accept">Annehmen</a>
+        <a href="#1" className="notification__action notification__action--decline">Ablehnen</a>
+      </div>
+    );
 
     //Highlight, if not seen
     if (!data.IsSeen) {
       containerClassName += " notification--unread";
+    }
+
+    //Show Loading Bar, if it is loading
+    if (data.isLoading) {
+      containerClassName += " notification--is-loading";
+      var notificationBottom = (
+        <div className="notification__bottom">
+          <div className="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
+        </div>
+      );
     }
 
     return (
@@ -23,10 +39,7 @@ var Notification = React.createClass({
             <h4 className="notification__name">{data.ShownName}</h4>
             <div className="notification__time">{data.DateCreated}</div>
           </div>
-          <div className="notification__bottom">
-            <a href="#1" className="notification__action notification__action--accept">Annehmen</a>
-            <a href="#1" className="notification__action notification__action--decline">Ablehnen</a>
-          </div>
+          {notificationBottom}
         </div>
       </div>
     )

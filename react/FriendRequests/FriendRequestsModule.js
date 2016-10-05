@@ -17,22 +17,31 @@ var FriendRequestsModule = React.createClass({
   },
 
   componentDidMount: function(){
-    var getAllFriendRequestsUrl = this.props.serviceBasePath + '/ActiveFriendRequests';
-    this.serverRequest = $.get(getAllFriendRequestsUrl, {userid: this.props.userId, pageNumber: "1", pageSize: this.props.pageSize }, function (result) {
-      if(result.success){
-        this.setState({
-          currentState: "loaded",
-          unseenRequestsCount: result.UnseenRequestsCount,
-          friendRequests: result.data
-        });
-      }
-      else{
-        var error = null;
-        if(result)
-          error = result.data;
-        this.setState({currentState: "error", errorMessage: error });
-      }
-    }.bind(this));
+    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+
+    this.serverRequest = $.get(
+      getAllFriendRequestsUrl,
+      {
+        userid: this.props.userId,
+        pageNumber: "1",
+        pageSize: this.props.pageSize
+      },
+      function (result) {
+        if(result.success){
+          this.setState({
+            currentState: "loaded",
+            unseenRequestsCount: result.UnseenRequestsCount,
+            friendRequests: result.data
+          });
+        }
+        else{
+          var error = null;
+          if(result)
+            error = result.data;
+          this.setState({currentState: "error", errorMessage: error });
+        }
+      }.bind(this)
+    );
   },
 
   componentWillUnmount: function() {
@@ -88,22 +97,13 @@ var FriendRequestsModule = React.createClass({
               <Notification data={data} key={data.Id} />
             );
           });
-          badge = 5000;
+          if (this.state.friendRequests.length == 0) {
+            notifications = <NotificationErrorMessage errorMessage="Keine Anfragen" />;
+          }
+          badge = this.state.unseenRequestsCount;
         }
     }
-    // else{
-    //   var data = this.state.data;
-    //   console.log(data);
 
-      
-        
-
-    //   badge = this.state.unseenRequestsCount;
-
-    //   if (!data.success) {
-    //     badge = "!";
-    //   }
-    // }
     return (
       <div className="navbar-notification">
         <button className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false">

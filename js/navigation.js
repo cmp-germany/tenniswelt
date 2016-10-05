@@ -3,7 +3,7 @@ var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule
 //var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var data = require('../data/notifications.json');
-var webserviceBase = (require('../data/webserviceBase.json')).webserviceBase;
+var webserviceBase = (require('../data/webserviceBase.json'));
 
 $( document ).ready(function(){
   navbar();
@@ -91,10 +91,15 @@ function tab() {
 }
 
 function initReactComponents() {
-  
+
   ReactDOM.render(
-    //496E3F91-EDDE-4929-8A83-A5B800CB9397
-    <FriendRequestsModule data={data} userId="496E3F91-EDDE-4929-8A83-A5B800CB9397" serviceBasePath={webserviceBase+'/api/Friend'} pageSize="5" />,
+    <FriendRequestsModule
+      data={data}
+      userId="496E3F91-EDDE-4929-8A83-A5B800CB9397"
+      webserviceBase={webserviceBase.webserviceBase}
+      servicePaths={webserviceBase.friendRequestsPaths}
+      pageSize="5"
+    />,
     document.getElementById('FriendRequestsModuleRoot')
   );
 }

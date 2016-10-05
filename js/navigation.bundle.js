@@ -58,7 +58,7 @@
 	//var ReactDOM = require('react-dom');
 	var $ = __webpack_require__(36);
 	var data = __webpack_require__(41);
-	var webserviceBase = __webpack_require__(42).webserviceBase;
+	var webserviceBase = __webpack_require__(42);
 
 	$(document).ready(function () {
 	  navbar();
@@ -138,9 +138,13 @@
 
 	function initReactComponents() {
 
-	  ReactDOM.render(
-	  //496E3F91-EDDE-4929-8A83-A5B800CB9397
-	  React.createElement(FriendRequestsModule, { data: data, userId: '496E3F91-EDDE-4929-8A83-A5B800CB9397', serviceBasePath: webserviceBase + '/api/Friend', pageSize: '5' }), document.getElementById('FriendRequestsModuleRoot'));
+	  ReactDOM.render(React.createElement(FriendRequestsModule, {
+	    data: data,
+	    userId: '496E3F91-EDDE-4929-8A83-A5B800CB9397',
+	    webserviceBase: webserviceBase.webserviceBase,
+	    servicePaths: webserviceBase.friendRequestsPaths,
+	    pageSize: '5'
+	  }), document.getElementById('FriendRequestsModuleRoot'));
 	}
 
 	/*** EXPORTS FROM exports-loader ***/
@@ -172,8 +176,13 @@
 	  },
 
 	  componentDidMount: function componentDidMount() {
-	    var getAllFriendRequestsUrl = this.props.serviceBasePath + '/ActiveFriendRequests';
-	    this.serverRequest = $.get(getAllFriendRequestsUrl, { userid: this.props.userId, pageNumber: "1", pageSize: this.props.pageSize }, function (result) {
+	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+
+	    this.serverRequest = $.get(getAllFriendRequestsUrl, {
+	      userid: this.props.userId,
+	      pageNumber: "1",
+	      pageSize: this.props.pageSize
+	    }, function (result) {
 	      if (result.success) {
 	        this.setState({
 	          currentState: "loaded",
@@ -235,20 +244,13 @@
 	            }
 	            return React.createElement(Notification, { data: data, key: data.Id });
 	          });
-	          badge = 5000;
+	          if (this.state.friendRequests.length == 0) {
+	            notifications = React.createElement(NotificationErrorMessage, { errorMessage: 'Keine Anfragen' });
+	          }
+	          badge = this.state.unseenRequestsCount;
 	        }
 	    }
-	    // else{
-	    //   var data = this.state.data;
-	    //   console.log(data);
 
-
-	    //   badge = this.state.unseenRequestsCount;
-
-	    //   if (!data.success) {
-	    //     badge = "!";
-	    //   }
-	    // }
 	    return React.createElement(
 	      'div',
 	      { className: 'navbar-notification' },
@@ -14795,10 +14797,34 @@
 	    var data = this.props.data;
 
 	    var containerClassName = "notification";
+	    var notificationBottom = React.createElement(
+	      'div',
+	      { className: 'notification__bottom' },
+	      React.createElement(
+	        'a',
+	        { href: '#1', className: 'notification__action notification__action--accept' },
+	        'Annehmen'
+	      ),
+	      React.createElement(
+	        'a',
+	        { href: '#1', className: 'notification__action notification__action--decline' },
+	        'Ablehnen'
+	      )
+	    );
 
 	    //Highlight, if not seen
 	    if (!data.IsSeen) {
 	      containerClassName += " notification--unread";
+	    }
+
+	    //Show Loading Bar, if it is loading
+	    if (data.isLoading) {
+	      containerClassName += " notification--is-loading";
+	      var notificationBottom = React.createElement(
+	        'div',
+	        { className: 'notification__bottom' },
+	        React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
+	      );
 	    }
 
 	    return React.createElement(
@@ -14826,20 +14852,7 @@
 	            data.DateCreated
 	          )
 	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'notification__bottom' },
-	          React.createElement(
-	            'a',
-	            { href: '#1', className: 'notification__action notification__action--accept' },
-	            'Annehmen'
-	          ),
-	          React.createElement(
-	            'a',
-	            { href: '#1', className: 'notification__action notification__action--decline' },
-	            'Ablehnen'
-	          )
-	        )
+	        notificationBottom
 	      )
 	    );
 	  }
@@ -18938,7 +18951,10 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"webserviceBase": "http://localhost:3000"
+		"webserviceBase": "http://test_koelndemo.cmpg.eu",
+		"friendRequestsPaths": {
+			"getActive": "/api/Friend/ActiveFriendRequests"
+		}
 	};
 
 /***/ },
