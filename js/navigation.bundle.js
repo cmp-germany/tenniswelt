@@ -137,7 +137,10 @@
 	function tab() {}
 
 	function initReactComponents() {
-	  ReactDOM.render(React.createElement(FriendRequestsModule, { data: data, servicePath: webserviceBase + '/api/Friend' }), document.getElementById('FriendRequestsModuleRoot'));
+
+	  ReactDOM.render(
+	  //496E3F91-EDDE-4929-8A83-A5B800CB9397
+	  React.createElement(FriendRequestsModule, { data: data, userId: '496E3F91-EDDE-4929-8A83-A5B800CB9397', serviceBasePath: webserviceBase + '/api/Friend', pageSize: '5' }), document.getElementById('FriendRequestsModuleRoot'));
 	}
 
 	/*** EXPORTS FROM exports-loader ***/
@@ -153,6 +156,7 @@
 	var Notification = __webpack_require__(37);
 	var NotificationErrorMessage = __webpack_require__(38);
 	var MaterialDesignMixin = __webpack_require__(39);
+	var NotificationLoadMore = __webpack_require__(43);
 
 	var FriendRequestsModule = React.createClass({
 	  displayName: 'FriendRequestsModule',
@@ -161,12 +165,35 @@
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      data: this.props.data
+	      unseenRequestsCount: null,
+	      friendRequests: [],
+	      currentState: "initLoading"
 	    };
 	  },
 
+	  componentDidMount: function componentDidMount() {
+	    var getAllFriendRequestsUrl = this.props.serviceBasePath + '/ActiveFriendRequests';
+	    this.serverRequest = $.get(getAllFriendRequestsUrl, { userid: this.props.userId, pageNumber: "1", pageSize: this.props.pageSize }, function (result) {
+	      if (result.success) {
+	        this.setState({
+	          currentState: "loaded",
+	          unseenRequestsCount: result.UnseenRequestsCount,
+	          friendRequests: result.data
+	        });
+	      } else {
+	        var error = null;
+	        if (result) error = result.data;
+	        this.setState({ currentState: "error", errorMessage: error });
+	      }
+	    }.bind(this));
+	  },
+
+	  componentWillUnmount: function componentWillUnmount() {
+	    this.serverRequest.abort();
+	  },
+
 	  acceptFriendRequest: function acceptFriendRequest(friendRequestId) {
-	    var url = this.props.servicePath + '/AcceptFriendRequest/' + friendRequestId;
+	    var url = this.props.servicePath + '/AcceptFriendRequest/';
 	    $.post(url, { friendRequestId: friendRequestId }, function (data) {
 	      if (data.success) {
 	        var allData = this.state.data;
@@ -182,39 +209,46 @@
 	  deleteFriendRequest: function deleteFriendRequest(friendRequestId) {},
 
 	  render: function render() {
-	    var data = this.state.data;
-	    console.log(data);
-
 	    var notifications;
-	    if (data.success) {
-	      notifications = data.data.map(function (data) {
-	        if (data.DateAccepted) {
-	          return;
+	    var badge;
+
+	    switch (this.state.currentState) {
+	      case "error":
+	        {
+	          var errorMessage = "error";
+	          if (this.state.errorMessage) errorMessage = this.state.errorMessage;
+	          notifications = React.createElement(NotificationErrorMessage, { errorMessage: errorMessage });
+	          badge = "!";
 	        }
-	        return React.createElement(Notification, { data: data, key: data.Id });
-	      });
-	    } else {
-	      notifications = React.createElement(NotificationErrorMessage, { data: data.data });
-	    }
-
-	    var badgeNumber = 0;
-	    if (Array.isArray(data.data)) {
-	      data.data.forEach(function (item) {
-	        if (item.IsSeen) {
-	          return;
+	        break;
+	      case "initLoading":
+	        {
+	          notifications = React.createElement(NotificationLoadMore, null);
+	          badge = null;
 	        }
-	        badgeNumber++;
-	      });
+	        break;
+	      case "loaded":
+	        {
+	          notifications = this.state.friendRequests.map(function (data) {
+	            if (data.DateAccepted) {
+	              return;
+	            }
+	            return React.createElement(Notification, { data: data, key: data.Id });
+	          });
+	          badge = 5000;
+	        }
 	    }
+	    // else{
+	    //   var data = this.state.data;
+	    //   console.log(data);
 
-	    if (badgeNumber == 0) {
-	      badgeNumber = null;
-	    }
 
-	    if (!data.success) {
-	      badgeNumber = "!";
-	    }
+	    //   badge = this.state.unseenRequestsCount;
 
+	    //   if (!data.success) {
+	    //     badge = "!";
+	    //   }
+	    // }
 	    return React.createElement(
 	      'div',
 	      { className: 'navbar-notification' },
@@ -223,19 +257,14 @@
 	        { className: 'navbar-notification__toggle-button', 'data-toggle': 'collapse', 'data-target': '#friend-requests', 'aria-expanded': 'false' },
 	        React.createElement(
 	          'i',
-	          { className: 'material-icons mdl-badge mdl-badge--overlap', 'data-badge': badgeNumber },
+	          { className: 'material-icons mdl-badge mdl-badge--overlap', 'data-badge': badge },
 	          'people_outline'
 	        )
 	      ),
 	      React.createElement(
 	        'div',
 	        { className: 'notification-container collapse', id: 'friend-requests' },
-	        notifications,
-	        React.createElement(
-	          'div',
-	          { className: 'notification notification--load-more' },
-	          React.createElement('div', { className: 'notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
-	        )
+	        notifications
 	      )
 	    );
 	  }
@@ -14753,12 +14782,13 @@
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(3);
+	var webserviceBase = __webpack_require__(42).webserviceBase;
 
 	var Notification = React.createClass({
-	  displayName: "Notification",
+	  displayName: 'Notification',
 
 
 	  render: function render() {
@@ -14772,42 +14802,42 @@
 	    }
 
 	    return React.createElement(
-	      "div",
+	      'div',
 	      { className: containerClassName },
 	      React.createElement(
-	        "div",
-	        { className: "notification__left" },
-	        React.createElement("img", { src: data.ProfilePicture, alt: "Profilbild", className: "notification__avatar" })
+	        'div',
+	        { className: 'notification__left' },
+	        React.createElement('img', { src: webserviceBase + data.ProfilePicture, alt: 'Profilbild', className: 'notification__avatar' })
 	      ),
 	      React.createElement(
-	        "div",
-	        { className: "notification__right" },
+	        'div',
+	        { className: 'notification__right' },
 	        React.createElement(
-	          "div",
-	          { className: "notification__top" },
+	          'div',
+	          { className: 'notification__top' },
 	          React.createElement(
-	            "h4",
-	            { className: "notification__name" },
+	            'h4',
+	            { className: 'notification__name' },
 	            data.ShownName
 	          ),
 	          React.createElement(
-	            "div",
-	            { className: "notification__time" },
+	            'div',
+	            { className: 'notification__time' },
 	            data.DateCreated
 	          )
 	        ),
 	        React.createElement(
-	          "div",
-	          { className: "notification__bottom" },
+	          'div',
+	          { className: 'notification__bottom' },
 	          React.createElement(
-	            "a",
-	            { href: "#1", className: "notification__action notification__action--accept" },
-	            "Annehmen"
+	            'a',
+	            { href: '#1', className: 'notification__action notification__action--accept' },
+	            'Annehmen'
 	          ),
 	          React.createElement(
-	            "a",
-	            { href: "#1", className: "notification__action notification__action--decline" },
-	            "Ablehnen"
+	            'a',
+	            { href: '#1', className: 'notification__action notification__action--decline' },
+	            'Ablehnen'
 	          )
 	        )
 	      )
@@ -14833,15 +14863,13 @@
 
 
 	  render: function render() {
-	    console.log(this.props.data);
-
 	    return React.createElement(
 	      'div',
 	      { className: 'notification notification--error' },
 	      React.createElement(
 	        'div',
 	        { className: 'notification__error' },
-	        this.props.data.message
+	        this.props.errorMessage
 	      )
 	    );
 	  }
@@ -18867,10 +18895,42 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"success": false,
-		"data": {
-			"message": "No Server Found"
-		}
+		"success": true,
+		"data": [
+			{
+				"Id": "00000000-0000-0000-0000-000000000000",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "1065b80c-06ff-46bb-af2c-809f5c885ac0",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "12. Okt",
+				"DateAccepted": "123",
+				"IsSeen": true,
+				"IsAccepted": false
+			},
+			{
+				"Id": "3ceb27d0-e996-4131-997d-a673010587f9",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "cc901955-2cf4-4f67-bd23-e46c85bbc986",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "1. Jan",
+				"DateAccepted": null,
+				"IsSeen": false,
+				"IsAccepted": false
+			},
+			{
+				"Id": "1ab24ddc-b1a5-4653-b325-a54500bcc15e",
+				"ShownName": "Uwe Müller",
+				"ProfilePicture": "gfx/profilbilder/p1.jpg",
+				"UserId": "ad505676-71b0-46d2-84ec-a464013c5344",
+				"FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+				"DateCreated": "gestern",
+				"DateAccepted": null,
+				"IsSeen": true,
+				"IsAccepted": false
+			}
+		]
 	};
 
 /***/ },
@@ -18878,8 +18938,33 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"webserviceBase": "localhost:3000"
+		"webserviceBase": "http://localhost:3000"
 	};
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(3);
+	var MaterialDesignMixin = __webpack_require__(39);
+
+	var NotificationLoadMore = React.createClass({
+		displayName: 'NotificationLoadMore',
+
+		mixins: [MaterialDesignMixin],
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'notification notification--load-more' },
+				React.createElement('div', { className: 'notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
+			);
+		}
+	});
+	module.exports = NotificationLoadMore;
+
+	/*** EXPORTS FROM exports-loader ***/
 
 /***/ }
 /******/ ]);

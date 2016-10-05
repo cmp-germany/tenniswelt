@@ -1,6 +1,38 @@
 {
-   "success": false,
-   "data": {
-     "message": "No Server Found"
-   }
+   "success": true,
+   "data":[
+      {
+         "Id":"00000000-0000-0000-0000-000000000000",
+         "ShownName": "Uwe Müller",
+         "ProfilePicture": "gfx/profilbilder/p1.jpg",
+         "UserId":"1065b80c-06ff-46bb-af2c-809f5c885ac0",
+         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
+         "DateCreated":"12. Okt",
+         "DateAccepted":"123",
+         "IsSeen":true,
+         "IsAccepted":false
+      },
+      {
+         "Id":"3ceb27d0-e996-4131-997d-a673010587f9",
+         "ShownName": "Uwe Müller",
+         "ProfilePicture": "gfx/profilbilder/p1.jpg",
+         "UserId":"cc901955-2cf4-4f67-bd23-e46c85bbc986",
+         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
+         "DateCreated":"1. Jan",
+         "DateAccepted":null,
+         "IsSeen":false,
+         "IsAccepted":false
+      },
+      {
+         "Id":"1ab24ddc-b1a5-4653-b325-a54500bcc15e",
+         "ShownName": "Uwe Müller",
+         "ProfilePicture": "gfx/profilbilder/p1.jpg",
+         "UserId":"ad505676-71b0-46d2-84ec-a464013c5344",
+         "FriendUserId":"496e3f91-edde-4929-8a83-a5b800cb9397",
+         "DateCreated":"gestern",
+         "DateAccepted":null,
+         "IsSeen":true,
+         "IsAccepted":false
+      }
+   ]
 }

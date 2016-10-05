@@ -1,4 +1,5 @@
 var React = require('react');
+var webserviceBase = (require('../../../data/webserviceBase.json')).webserviceBase;
 
 var Notification = React.createClass({
 
@@ -12,13 +13,10 @@ var Notification = React.createClass({
       containerClassName += " notification--unread";
     }
 
-
-
-
     return (
       <div className={containerClassName}>
         <div className="notification__left">
-          <img src={data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
+          <img src={webserviceBase + data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
         </div>
         <div className="notification__right">
           <div className="notification__top">

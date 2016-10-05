@@ -3,19 +3,44 @@ const $ = require('jquery');
 const Notification = require('./components/Notification');
 const NotificationErrorMessage = require('./components/NotificationErrorMessage');
 const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
-
+const NotificationLoadMore = require("./components/NotificationLoadMore");
 
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
   getInitialState: function(){
     return {
-      data: this.props.data
+      unseenRequestsCount : null,
+      friendRequests: [],
+      currentState: "initLoading"
     }
   },
 
+  componentDidMount: function(){
+    var getAllFriendRequestsUrl = this.props.serviceBasePath + '/ActiveFriendRequests';
+    this.serverRequest = $.get(getAllFriendRequestsUrl, {userid: this.props.userId, pageNumber: "1", pageSize: this.props.pageSize }, function (result) {
+      if(result.success){
+        this.setState({
+          currentState: "loaded",
+          unseenRequestsCount: result.UnseenRequestsCount,
+          friendRequests: result.data
+        });
+      }
+      else{
+        var error = null;
+        if(result)
+          error = result.data;
+        this.setState({currentState: "error", errorMessage: error });
+      }
+    }.bind(this));
+  },
+
+  componentWillUnmount: function() {
+    this.serverRequest.abort();
+  },
+
   acceptFriendRequest: function(friendRequestId){
-    var url = this.props.servicePath+'/AcceptFriendRequest/'+friendRequestId;
+    var url = this.props.servicePath+'/AcceptFriendRequest/';
     $.post(url, {friendRequestId}, function(data){
       if(data.success){
         var allData = this.state.data;
@@ -34,52 +59,59 @@ var FriendRequestsModule = React.createClass({
   },
 
   render: function(){
-    var data = this.state.data;
-    console.log(data);
-
     var notifications;
-    if (data.success) {
-      notifications = data.data.map(function(data){
-        if (data.DateAccepted) {
-          return;
+    var badge;
+
+    switch(this.state.currentState){
+      case "error":
+        {
+          var errorMessage = "error";
+          if(this.state.errorMessage)
+            errorMessage = this.state.errorMessage;
+          notifications = <NotificationErrorMessage errorMessage={errorMessage} />;
+          badge = "!";
         }
-        return (
-          <Notification data={data} key={data.Id} />
-        );
-      });
-    } else {
-      notifications = <NotificationErrorMessage data={data.data} />;
-    }
-
-    var badgeNumber = 0;
-    if (Array.isArray(data.data)) {
-      data.data.forEach(function(item){
-        if (item.IsSeen) {
-          return;
+        break;
+      case "initLoading":
+        {
+          notifications = <NotificationLoadMore/>;
+          badge = null;
         }
-        badgeNumber++;
-      });
+        break;
+      case "loaded":
+        {
+          notifications = this.state.friendRequests.map(function(data){
+            if (data.DateAccepted) {
+              return;
+            }
+            return (
+              <Notification data={data} key={data.Id} />
+            );
+          });
+          badge = 5000;
+        }
     }
+    // else{
+    //   var data = this.state.data;
+    //   console.log(data);
 
-    if (badgeNumber == 0) {
-      badgeNumber = null;
-    }
+      
+        
 
-    if (!data.success) {
-      badgeNumber = "!";
-    }
+    //   badge = this.state.unseenRequestsCount;
 
+    //   if (!data.success) {
+    //     badge = "!";
+    //   }
+    // }
     return (
       <div className="navbar-notification">
         <button className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false">
-          <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badgeNumber}>people_outline</i>
+          <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badge}>people_outline</i>
         </button>
 
         <div className="notification-container collapse" id="friend-requests">
           {notifications}
-          <div className="notification notification--load-more">
-            <div className="notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
-          </div>
         </div>
       </div>
 

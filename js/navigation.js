@@ -91,8 +91,10 @@ function tab() {
 }
 
 function initReactComponents() {
+  
   ReactDOM.render(
-    <FriendRequestsModule data={data} servicePath={webserviceBase+'/api/Friend'} />,
+    //496E3F91-EDDE-4929-8A83-A5B800CB9397
+    <FriendRequestsModule data={data} userId="496E3F91-EDDE-4929-8A83-A5B800CB9397" serviceBasePath={webserviceBase+'/api/Friend'} pageSize="5" />,
     document.getElementById('FriendRequestsModuleRoot')
   );
 }
