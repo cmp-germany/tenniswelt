@@ -174,8 +174,20 @@
 	  },
 
 	  componentDidMount: function componentDidMount() {
-	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+	    this.loadData();
+	  },
 
+	  onReload: function onReload() {
+	    this.setState({
+	      unseenRequestsCount: null,
+	      friendRequests: [],
+	      currentState: "initLoading"
+	    });
+	    this.loadData();
+	  },
+
+	  loadData: function loadData() {
+	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
 	    this.serverRequest = $.get(getAllFriendRequestsUrl, {
 	      userid: this.props.userId,
 	      pageNumber: "1",
@@ -194,6 +206,8 @@
 	        if (result) error = result.data;
 	        this.setState({ currentState: "error", errorMessage: error });
 	      }
+	    }.bind(this)).fail(function (jqXHR, textStatus, errorThrown) {
+	      this.setState({ currentState: "error", errorMessage: textStatus });
 	    }.bind(this));
 	  },
 
@@ -226,7 +240,7 @@
 	        {
 	          var errorMessage = "error";
 	          if (this.state.errorMessage) errorMessage = this.state.errorMessage;
-	          notifications = React.createElement(NotificationErrorMessage, { errorMessage: errorMessage });
+	          notifications = React.createElement(NotificationErrorMessage, { errorMessage: errorMessage, onReload: this.onReload });
 	          badge = "!";
 	        }
 	        break;
@@ -14934,13 +14948,22 @@
 
 
 	  render: function render() {
+	    var reloadLink = "";
+	    if (this.props.onReload) {
+	      reloadLink = React.createElement(
+	        'a',
+	        { className: 'notification__error-link', href: 'javascript:void(0)', onClick: this.props.onReload },
+	        'Erneut Laden'
+	      );
+	    }
 	    return React.createElement(
 	      'div',
 	      { className: 'notification notification--error' },
 	      React.createElement(
 	        'div',
 	        { className: 'notification__error' },
-	        this.props.errorMessage
+	        this.props.errorMessage,
+	        reloadLink
 	      )
 	    );
 	  }
@@ -18969,7 +18992,7 @@
 	module.exports = {
 		"webserviceBase": "http://test_koelndemo.cmpg.eu",
 		"friendRequestsPaths": {
-			"getActive": "/api/Friend/ActiveFriendRequests",
+			"getActive": "/api/Friend/ActiveFriendRequest",
 			"postIsSeen": "/api/Friend/SetSeenState"
 		}
 	};

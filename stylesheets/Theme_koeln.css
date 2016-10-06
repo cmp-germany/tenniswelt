@@ -9564,12 +9564,12 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 179, ../sass/_navbar-notification.sass */
-.notification--error .notification__error {
+/* line 177, ../sass/_navbar-notification.sass */
+.notification__error {
   color: #f0ad4e;
 }
-/* line 182, ../sass/_navbar-notification.sass */
-.notification--error .notification__error::before {
+/* line 180, ../sass/_navbar-notification.sass */
+.notification__error::before {
   content: "error";
   font-family: "Material Icons";
   font-weight: normal;
@@ -9589,7 +9589,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   vertical-align: middle;
 }
 /* line 16, ../sass/_material-icons.sass */
-.notification--error .notification__error::before--circle {
+.notification__error::before--circle {
   background-color: #E9002F;
   color: #fff;
   font-size: 30.6px;
@@ -9600,6 +9600,10 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -moz-border-radius: 18px;
   -webkit-border-radius: 18px;
   border-radius: 18px;
+}
+/* line 186, ../sass/_navbar-notification.sass */
+.notification__error-link {
+  margin-left: 5px;
 }
 
 /* line 1, ../sass/_buttons.sass */

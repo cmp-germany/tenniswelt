@@ -1,7 +1,7 @@
 {
   "webserviceBase": "http://test_koelndemo.cmpg.eu",
   "friendRequestsPaths": {
-    "getActive": "/api/Friend/ActiveFriendRequests",
+    "getActive": "/api/Friend/ActiveFriendRequest",
     "postIsSeen": "/api/Friend/SetSeenState"
   }
 }

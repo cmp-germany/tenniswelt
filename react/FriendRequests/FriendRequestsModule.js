@@ -17,8 +17,20 @@ var FriendRequestsModule = React.createClass({
   },
 
   componentDidMount: function(){
-    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+    this.loadData();
+  },
 
+  onReload: function() {
+    this.setState({
+      unseenRequestsCount: null,
+      friendRequests: [],
+      currentState: "initLoading"
+    });
+    this.loadData();
+  },
+
+  loadData: function() {
+    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
     this.serverRequest = $.get(
       getAllFriendRequestsUrl,
       {
@@ -43,7 +55,9 @@ var FriendRequestsModule = React.createClass({
           this.setState({currentState: "error", errorMessage: error });
         }
       }.bind(this)
-    );
+    ).fail(function(jqXHR, textStatus, errorThrown){
+      this.setState({currentState: "error", errorMessage: textStatus });
+    }.bind(this));
   },
 
   componentWillUnmount: function() {
@@ -79,7 +93,7 @@ var FriendRequestsModule = React.createClass({
           var errorMessage = "error";
           if(this.state.errorMessage)
             errorMessage = this.state.errorMessage;
-          notifications = <NotificationErrorMessage errorMessage={errorMessage} />;
+          notifications = <NotificationErrorMessage errorMessage={errorMessage} onReload={this.onReload} />;
           badge = "!";
         }
         break;
