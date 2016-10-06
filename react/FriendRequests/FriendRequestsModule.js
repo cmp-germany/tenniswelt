@@ -29,13 +29,13 @@ var FriendRequestsModule = React.createClass({
     this.loadData();
   },
 
-  loadData: function() {
+  loadData: function(pageNumber = 1) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
     this.serverRequest = $.get(
       getAllFriendRequestsUrl,
       {
         userid: this.props.userId,
-        pageNumber: "1",
+        pageNumber: pageNumber,
         pageSize: this.props.pageSize
       },
       function (result) {

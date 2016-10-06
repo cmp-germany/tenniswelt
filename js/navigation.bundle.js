@@ -187,10 +187,12 @@
 	  },
 
 	  loadData: function loadData() {
+	    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
 	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
 	    this.serverRequest = $.get(getAllFriendRequestsUrl, {
 	      userid: this.props.userId,
-	      pageNumber: "1",
+	      pageNumber: pageNumber,
 	      pageSize: this.props.pageSize
 	    }, function (result) {
 	      if (result.success) {
@@ -18992,7 +18994,7 @@
 	module.exports = {
 		"webserviceBase": "http://test_koelndemo.cmpg.eu",
 		"friendRequestsPaths": {
-			"getActive": "/api/Friend/ActiveFriendRequest",
+			"getActive": "/api/Friend/ActiveFriendRequests",
 			"postIsSeen": "/api/Friend/SetSeenState"
 		}
 	};
