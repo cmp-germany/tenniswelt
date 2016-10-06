@@ -33,14 +33,22 @@ var Notification = React.createClass({
     }
   },
 
+  accept: function(){
+    alert('accept!')
+  },
+  
+  decline: function(){
+    alert('decline!')
+  },
+
   render: function() {
     var data = this.props.data;
 
     var containerClassName = "notification";
     var notificationBottom = (
       <div className="notification__bottom">
-        <a href="#1" className="notification__action notification__action--accept">Annehmen</a>
-        <a href="#1" className="notification__action notification__action--decline">Ablehnen</a>
+        <a href="#1" className="notification__action notification__action--accept" onClick="{this.accept()}">Annehmen</a>
+        <a href="#1" className="notification__action notification__action--decline" onClick="{this.decline()">Ablehnen</a>
       </div>
     );
 
