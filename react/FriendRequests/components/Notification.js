@@ -1,7 +1,37 @@
 var React = require('react');
+var CVM = require("react-component-visibility");
 var webserviceBase = (require('../../../data/webserviceBase.json')).webserviceBase;
+var TimeAgo = require('react-timeago').default;
+import germanStrings from 'react-timeago/lib/language-strings/de';
+import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
+
+const formatter = buildFormatter(germanStrings);
 
 var Notification = React.createClass({
+  mixins: [ CVM ],
+
+  getInitialState: function() {
+    return {
+      IsSeen: this.props.data.IsSeen
+    }
+  },
+
+  componentVisibilityChanged: function() {
+    var visible = this.state.visible;
+    console.log(webserviceBase + this.props.servicePaths.postIsSeen);
+    if (visible && !this.props.data.isSeen) {
+      $.post(
+        webserviceBase + this.props.servicePaths.postIsSeen,
+        {
+          friendRequestId: this.props.data.Id,
+          seen: true
+        },
+        function(result) {
+          console.log(result);
+        }
+      );
+    }
+  },
 
   render: function() {
     var data = this.props.data;
@@ -15,7 +45,7 @@ var Notification = React.createClass({
     );
 
     //Highlight, if not seen
-    if (!data.IsSeen) {
+    if (!this.state.IsSeen) {
       containerClassName += " notification--unread";
     }
 
@@ -28,6 +58,7 @@ var Notification = React.createClass({
         </div>
       );
     }
+    console.log(data.TimeUtc);
 
     return (
       <div className={containerClassName}>
@@ -37,7 +68,7 @@ var Notification = React.createClass({
         <div className="notification__right">
           <div className="notification__top">
             <h4 className="notification__name">{data.ShownName}</h4>
-            <div className="notification__time">{data.DateCreated}</div>
+            <div className="notification__time"><TimeAgo date={data.TimeUtc} formatter={formatter} /></div>
           </div>
           {notificationBottom}
         </div>

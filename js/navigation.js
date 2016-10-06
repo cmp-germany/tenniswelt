@@ -2,7 +2,6 @@ var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule
 //var React = require('react-lite');
 //var ReactDOM = require('react-dom');
 var $ = require('jquery');
-var data = require('../data/notifications.json');
 var webserviceBase = (require('../data/webserviceBase.json'));
 
 $( document ).ready(function(){
@@ -94,7 +93,6 @@ function initReactComponents() {
 
   ReactDOM.render(
     <FriendRequestsModule
-      data={data}
       userId="496E3F91-EDDE-4929-8A83-A5B800CB9397"
       webserviceBase={webserviceBase.webserviceBase}
       servicePaths={webserviceBase.friendRequestsPaths}

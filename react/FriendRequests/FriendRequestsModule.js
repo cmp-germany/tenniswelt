@@ -28,10 +28,12 @@ var FriendRequestsModule = React.createClass({
       },
       function (result) {
         if(result.success){
+          console.log(result);
           this.setState({
             currentState: "loaded",
-            unseenRequestsCount: result.UnseenRequestsCount,
-            friendRequests: result.data
+            unseenRequestsCount: result.data.UnseenRequestsCount,
+            friendRequests: result.data.FriendRequests,
+            allCount: result.data.AllCount
           });
         }
         else{
@@ -83,7 +85,7 @@ var FriendRequestsModule = React.createClass({
         break;
       case "initLoading":
         {
-          notifications = <NotificationLoadMore/>;
+          notifications = <NotificationLoadMore />;
           badge = null;
         }
         break;
@@ -94,14 +96,40 @@ var FriendRequestsModule = React.createClass({
               return;
             }
             return (
-              <Notification data={data} key={data.Id} />
+              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} />
             );
-          });
+          }.bind(this));
           if (this.state.friendRequests.length == 0) {
             notifications = <NotificationErrorMessage errorMessage="Keine Anfragen" />;
           }
           badge = this.state.unseenRequestsCount;
         }
+        break;
+      case "load-more":
+        {
+          notifications = this.state.friendRequests.map(function(data){
+            if (data.DateAccepted) {
+              return;
+            }
+            return (
+              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} />
+            );
+          }.bind(this));
+          if (this.state.friendRequests.length == 0) {
+            notifications = <NotificationErrorMessage errorMessage="Keine Anfragen" />;
+          }
+          if (Array.isArray(notifications)) {
+            notifications.push(<NotificationLoadMore />);
+          } else {
+            notifications = (<NotificationLoadMore />);
+          }
+          badge = this.state.unseenRequestsCount;
+        }
+        break;
+    }
+
+    if (badge == 0) {
+      badge = null;
     }
 
     return (
