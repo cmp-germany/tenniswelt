@@ -31,12 +31,43 @@ var Notification = React.createClass({
     }
   },
 
-  accept: function(){
-    alert('accept!')
+  errorHandler: function(notificationId, errorMessage, functionName){
+      if(this.props.onError)
+        if(typeof this.props.onError == "function"){
+          if(notificationId === 0)
+            errorMessage += ", notificationId doesn\'t have an ID!";
+          if(functionName)
+            errorMessage = "in function: " + functionName + " " + errorMessage;
+          this.props.onError(this.props.data.Id, errorMessage);
+          return;
+        }
+      console.log('Can\'t send the error!')
+  },
+
+  acceptHandler: function(){
+    try{
+      this.props.onAccept(this.props.data.Id);
+    }
+    catch(err){
+      var id = 0;
+      if(this.props.data)
+        if(this.props.data.Id)
+          id = this.props.data.Id;
+      this.errorHandler(id, err, 'acceptHandler');
+    }
   },
   
-  decline: function(){
-    alert('decline!')
+  declineHandler: function(){
+    try{
+      this.props.onDecline(this.props.data.Id); 
+    }
+    catch(err){
+      var id = 0;
+      if(this.props.data)
+        if(this.props.data.Id)
+          id = this.props.data.Id;
+      this.errorHandler(id, err, 'declineHandler');
+    }
   },
 
   render: function() {
@@ -45,8 +76,8 @@ var Notification = React.createClass({
     var containerClassName = "notification";
     var notificationBottom = (
       <div className="notification__bottom">
-        <a href="#1" className="notification__action notification__action--accept" onClick="{this.accept()}">Annehmen</a>
-        <a href="#1" className="notification__action notification__action--decline" onClick="{this.decline()">Ablehnen</a>
+        <a href="#1" className="notification__action notification__action--accept" onClick={this.acceptHandler}>Annehmen</a>
+        <a href="#1" className="notification__action notification__action--decline" onClick={this.declineHandler}>Ablehnen</a>
       </div>
     );
 

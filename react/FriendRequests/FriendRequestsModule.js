@@ -28,7 +28,6 @@ var FriendRequestsModule = React.createClass({
       },
       function (result) {
         if(result.success){
-          console.log(result);
           this.setState({
             currentState: "loaded",
             unseenRequestsCount: result.data.UnseenRequestsCount,
@@ -51,22 +50,46 @@ var FriendRequestsModule = React.createClass({
   },
 
   acceptFriendRequest: function(friendRequestId){
-    var url = this.props.servicePath+'/AcceptFriendRequest/';
-    $.post(url, {friendRequestId}, function(data){
-      if(data.success){
-        var allData = this.state.data;
-        var index = allData.findIndex(x => x.Id===friendRequestId);
+    var allData = this.state.friendRequests;
+    var index = allData.findIndex(x => x.Id===friendRequestId);
+    allData[index].isLoading = true;
+    this.setState({allData});
+    var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.accept;
+    $.post(
+      acceptFriendRequestUrl,
+      {
+        friendRequestId: friendRequestId
+      },
+      function(result){
+        allData[index].isLoading = false;
         allData[index].isAccepted = true;
-        setState({allData});
-      }
-      else{
-
-      }
-    });
+        this.setState({allData});
+      }.bind(this)
+    );
   },
 
-  deleteFriendRequest: function(friendRequestId){
+  declineFriendRequest: function(friendRequestId){
+    var allData = this.state.friendRequests;
+    var index = allData.findIndex(x => x.Id===friendRequestId);
+    allData[index].isLoading = true;
+    this.setState({allData});
+    var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
+    $.post(
+      acceptFriendRequestUrl,
+      {
+        friendRequestId: friendRequestId
+      },
+      function(result){
+        allData[index].isLoading = false;
+        allData[index].isDeleted = true;
+        this.setState({allData});
+      }.bind(this)
+    );
+  },
 
+  handleError: function(friendRequestId, errorMessage){
+    console.log(friendRequestId + ' has error: ' + errorMessage);
+    //Todo: handle error in a better way please.
   },
 
   render: function(){
@@ -96,7 +119,7 @@ var FriendRequestsModule = React.createClass({
               return;
             }
             return (
-              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} />
+              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} />
             );
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
@@ -105,13 +128,14 @@ var FriendRequestsModule = React.createClass({
           badge = this.state.unseenRequestsCount;
         }
         break;
-      case "load-more":
+      case "loadMore":
         {
           notifications = this.state.friendRequests.map(function(data){
             if (data.DateAccepted) {
               return;
             }
             return (
+              //Add here onAccept and onDelete like in "loaded" event.
               <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} />
             );
           }.bind(this));
