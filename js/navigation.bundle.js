@@ -14810,9 +14810,9 @@
 
 	'use strict';
 
-	var _de = __webpack_require__(186);
+	var _deShort = __webpack_require__(184);
 
-	var _de2 = _interopRequireDefault(_de);
+	var _deShort2 = _interopRequireDefault(_deShort);
 
 	var _buildFormatter = __webpack_require__(185);
 
@@ -14826,7 +14826,7 @@
 	var TimeAgo = __webpack_require__(183).default;
 
 
-	var formatter = (0, _buildFormatter2.default)(_de2.default);
+	var formatter = (0, _buildFormatter2.default)(_deShort2.default);
 
 	var Notification = React.createClass({
 	  displayName: 'Notification',
@@ -14841,13 +14841,12 @@
 
 	  componentVisibilityChanged: function componentVisibilityChanged() {
 	    var visible = this.state.visible;
-	    console.log(webserviceBase + this.props.servicePaths.postIsSeen);
 	    if (visible && !this.props.data.isSeen) {
 	      $.post(webserviceBase + this.props.servicePaths.postIsSeen, {
 	        friendRequestId: this.props.data.Id,
 	        seen: true
-	      }, function (result) {
-	        console.log(result);
+	      }).fail(function (result) {
+	        console.error(result);
 	      });
 	    }
 	  },
@@ -14885,7 +14884,6 @@
 	        React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
 	      );
 	    }
-	    console.log(data.TimeUtc);
 
 	    return React.createElement(
 	      'div',
@@ -14909,7 +14907,7 @@
 	          React.createElement(
 	            'div',
 	            { className: 'notification__time' },
-	            React.createElement(TimeAgo, { date: data.TimeUtc, formatter: formatter })
+	            React.createElement(TimeAgo, { date: data.DateCreatedUtc, formatter: formatter })
 	          )
 	        ),
 	        notificationBottom
@@ -36943,7 +36941,42 @@
 
 
 /***/ },
-/* 184 */,
+/* 184 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+
+	// German shortened
+	var strings = {
+	  prefixAgo: null,
+	  prefixFromNow: null,
+	  suffixAgo: '',
+	  suffixFromNow: '',
+	  seconds: 's',
+	  minute: '1m',
+	  minutes: '%dm',
+	  hour: '1h',
+	  hours: '%dh',
+	  day: '1T.',
+	  days: '%dT.',
+	  month: '1Mt.',
+	  months: '%dMt.',
+	  year: '1J.',
+	  years: '%dJ.',
+	  wordSeparator: ' ',
+	  numbers: []
+	};
+	exports.default = strings;
+
+	/*** EXPORTS FROM exports-loader ***/
+
+
+/***/ },
 /* 185 */
 /***/ function(module, exports) {
 
@@ -37018,40 +37051,6 @@
 	    return dateString.join(wordSeparator);
 	  };
 	}
-
-	/*** EXPORTS FROM exports-loader ***/
-
-
-/***/ },
-/* 186 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-
-	// German
-	var strings = {
-	  prefixAgo: 'vor',
-	  prefixFromNow: 'in',
-	  suffixAgo: '',
-	  suffixFromNow: '',
-	  seconds: 'wenigen Sekunden',
-	  minute: 'etwa einer Minute',
-	  minutes: '%d Minuten',
-	  hour: 'etwa einer Stunde',
-	  hours: '%d Stunden',
-	  day: 'etwa einem Tag',
-	  days: '%d Tagen',
-	  month: 'etwa einem Monat',
-	  months: '%d Monaten',
-	  year: 'etwa einem Jahr',
-	  years: '%d Jahren'
-	};
-	exports.default = strings;
 
 	/*** EXPORTS FROM exports-loader ***/
 
