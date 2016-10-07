@@ -417,8 +417,8 @@
 	      'div',
 	      { className: 'navbar-notification' },
 	      React.createElement(
-	        'button',
-	        { className: 'navbar-notification__toggle-button', 'data-toggle': 'collapse', 'data-target': '#friend-requests', 'aria-expanded': 'false', onClick: this.mainIconClicked },
+	        'a',
+	        { href: 'javascript:void(0)', className: 'navbar-notification__toggle-button', 'data-toggle': 'collapse', 'data-target': '#friend-requests', 'aria-expanded': 'false', onClick: this.mainIconClicked },
 	        React.createElement(
 	          'i',
 	          { className: 'material-icons mdl-badge mdl-badge--overlap', 'data-badge': badge },
