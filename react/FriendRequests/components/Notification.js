@@ -89,10 +89,26 @@ var Notification = React.createClass({
     //Show Loading Bar, if it is loading
     if (data.isLoading) {
       containerClassName += " notification--is-loading";
-      var notificationBottom = (
+      notificationBottom = (
         <div className="notification__bottom">
           <div className="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
         </div>
+      );
+    }
+
+    if(data.isAccepted){
+      notificationBottom = (
+      <div className="notification__bottom">
+          <div className="notification__message notification__message--success">Angenommen</div>
+      </div>
+      );
+    }
+
+    if(data.isDeleted){
+      notificationBottom = (
+      <div className="notification__bottom">
+          <div className="notification__message notification__message--success">Abgelehnt</div>
+      </div>
       );
     }
 

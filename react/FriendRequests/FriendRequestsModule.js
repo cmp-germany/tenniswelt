@@ -4,7 +4,7 @@ const Notification = require('./components/Notification');
 const NotificationErrorMessage = require('./components/NotificationErrorMessage');
 const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
-
+const TimeOut = 1000; //milliseconds
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
@@ -49,11 +49,20 @@ var FriendRequestsModule = React.createClass({
     this.serverRequest.abort();
   },
 
+  removeWithTimeout: function(friendRequestId, timeOut){
+    setTimeout(function() {
+      var allData = this.state.friendRequests;
+      var index = allData.findIndex(x => x.Id===friendRequestId);
+      allData.splice(index, 1);
+      this.setState({allData});
+    }.bind(this), timeOut);
+  },
+
   acceptFriendRequest: function(friendRequestId){
     var allData = this.state.friendRequests;
     var index = allData.findIndex(x => x.Id===friendRequestId);
     allData[index].isLoading = true;
-    this.setState({allData});
+    this.setState({friendRequests:allData});
     var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.accept;
     $.post(
       acceptFriendRequestUrl,
@@ -61,9 +70,12 @@ var FriendRequestsModule = React.createClass({
         friendRequestId: friendRequestId
       },
       function(result){
-        allData[index].isLoading = false;
-        allData[index].isAccepted = true;
-        this.setState({allData});
+        if(result.success){
+          allData[index].isLoading = false;
+          allData[index].isAccepted = true;
+          this.setState({friendRequests:allData});
+          this.removeWithTimeout(friendRequestId, TimeOut);
+        }
       }.bind(this)
     );
   },
@@ -80,9 +92,12 @@ var FriendRequestsModule = React.createClass({
         friendRequestId: friendRequestId
       },
       function(result){
-        allData[index].isLoading = false;
-        allData[index].isDeleted = true;
-        this.setState({allData});
+        if(result.success){
+          allData[index].isLoading = false;
+          allData[index].isDeleted = true;
+          this.setState({allData});
+          this.removeWithTimeout(friendRequestId, TimeOut);
+        }
       }.bind(this)
     );
   },

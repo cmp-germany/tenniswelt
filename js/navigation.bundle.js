@@ -159,7 +159,7 @@
 	var NotificationErrorMessage = __webpack_require__(181);
 	var MaterialDesignMixin = __webpack_require__(182);
 	var NotificationLoadMore = __webpack_require__(184);
-
+	var TimeOut = 1000; //milliseconds
 	var FriendRequestsModule = React.createClass({
 	  displayName: 'FriendRequestsModule',
 
@@ -200,20 +200,34 @@
 	    this.serverRequest.abort();
 	  },
 
+	  removeWithTimeout: function removeWithTimeout(friendRequestId, timeOut) {
+	    setTimeout(function () {
+	      var allData = this.state.friendRequests;
+	      var index = allData.findIndex(function (x) {
+	        return x.Id === friendRequestId;
+	      });
+	      allData.splice(index, 1);
+	      this.setState({ allData: allData });
+	    }.bind(this), timeOut);
+	  },
+
 	  acceptFriendRequest: function acceptFriendRequest(friendRequestId) {
 	    var allData = this.state.friendRequests;
 	    var index = allData.findIndex(function (x) {
 	      return x.Id === friendRequestId;
 	    });
 	    allData[index].isLoading = true;
-	    this.setState({ allData: allData });
+	    this.setState({ friendRequests: allData });
 	    var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.accept;
 	    $.post(acceptFriendRequestUrl, {
 	      friendRequestId: friendRequestId
 	    }, function (result) {
-	      allData[index].isLoading = false;
-	      allData[index].isAccepted = true;
-	      this.setState({ allData: allData });
+	      if (result.success) {
+	        allData[index].isLoading = false;
+	        allData[index].isAccepted = true;
+	        this.setState({ friendRequests: allData });
+	        this.removeWithTimeout(friendRequestId, TimeOut);
+	      }
 	    }.bind(this));
 	  },
 
@@ -228,9 +242,12 @@
 	    $.post(acceptFriendRequestUrl, {
 	      friendRequestId: friendRequestId
 	    }, function (result) {
-	      allData[index].isLoading = false;
-	      allData[index].isDeleted = true;
-	      this.setState({ allData: allData });
+	      if (result.success) {
+	        allData[index].isLoading = false;
+	        allData[index].isDeleted = true;
+	        this.setState({ allData: allData });
+	        this.removeWithTimeout(friendRequestId, TimeOut);
+	      }
 	    }.bind(this));
 	  },
 
@@ -14933,10 +14950,34 @@
 	    //Show Loading Bar, if it is loading
 	    if (data.isLoading) {
 	      containerClassName += " notification--is-loading";
-	      var notificationBottom = React.createElement(
+	      notificationBottom = React.createElement(
 	        'div',
 	        { className: 'notification__bottom' },
 	        React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
+	      );
+	    }
+
+	    if (data.isAccepted) {
+	      notificationBottom = React.createElement(
+	        'div',
+	        { className: 'notification__bottom' },
+	        React.createElement(
+	          'div',
+	          { className: 'notification__message notification__message--success' },
+	          'Angenommen'
+	        )
+	      );
+	    }
+
+	    if (data.isDeleted) {
+	      notificationBottom = React.createElement(
+	        'div',
+	        { className: 'notification__bottom' },
+	        React.createElement(
+	          'div',
+	          { className: 'notification__message notification__message--success' },
+	          'Abgelehnt'
+	        )
 	      );
 	    }
 
