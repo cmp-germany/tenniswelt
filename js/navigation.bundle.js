@@ -55,7 +55,7 @@
 
 	var FriendRequestsModule = __webpack_require__(2);
 	//var React = require('react-lite');
-	//var ReactDOM = require('react-dom');
+	var ReactDOM = __webpack_require__(41);
 	var $ = __webpack_require__(36);
 	var webserviceBase = __webpack_require__(179);
 
@@ -15075,12 +15075,6 @@
 	        )
 	      );
 	      isRendered = true;
-	    }
-
-	    //when there is no time value, ignore it
-	    var timeAgo = "";
-	    if (data.DateCreatedUtc) {
-	      timeAgo = React.createElement(TimeAgo, { date: data.DateCreatedUtc, formatter: formatter });
 	    }
 
 	    //when there is no time value, ignore it
