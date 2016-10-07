@@ -168,7 +168,8 @@
 	    return {
 	      unseenRequestsCount: null,
 	      friendRequests: [],
-	      currentState: "initLoading"
+	      currentState: "initLoading",
+	      allCount: 0
 	    };
 	  },
 
@@ -187,6 +188,7 @@
 
 	  loadData: function loadData() {
 	    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+	    var onLoadingDone = arguments[1];
 
 	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
 	    this.serverRequest = $.get(getAllFriendRequestsUrl, {
@@ -195,12 +197,28 @@
 	      pageSize: this.props.pageSize
 	    }, function (result) {
 	      if (result.success) {
+
+	        var friendRequests;
+	        friendRequests = this.state.friendRequests;
+	        Array.prototype.push.apply(friendRequests, result.data.FriendRequests);
+
+	        var newState;
+	        if (friendRequests.length < result.data.AllCount) {
+	          newState = "loadMore";
+	        } else {
+	          newState = "loaded";
+	        }
+
 	        this.setState({
-	          currentState: "loaded",
+	          currentState: newState,
 	          unseenRequestsCount: result.data.UnseenRequestsCount,
-	          friendRequests: result.data.FriendRequests,
+	          friendRequests: friendRequests,
 	          allCount: result.data.AllCount
 	        });
+
+	        if (onLoadingDone) {
+	          onLoadingDone();
+	        }
 	      } else {
 	        var error = null;
 	        if (result) error = result.data;
@@ -209,6 +227,17 @@
 	    }.bind(this)).fail(function (jqXHR, textStatus, errorThrown) {
 	      this.setState({ currentState: "error", errorMessage: textStatus });
 	    }.bind(this));
+	  },
+
+	  onLoadMore: function onLoadMore(onLoadingDone) {
+	    // calculate the pageNumber, which needs to be loaded
+	    var currentCount = this.state.friendRequests.length;
+	    var pageSize = this.props.pageSize;
+	    var currentPageNumber = currentCount / pageSize;
+	    var loadPageNumber = currentPageNumber + 1;
+
+	    // loadData. Call the function onLoadingDone after Loading is done
+	    this.loadData(loadPageNumber, onLoadingDone);
 	  },
 
 	  componentWillUnmount: function componentWillUnmount() {
@@ -371,7 +400,7 @@
 	            notifications = React.createElement(NotificationErrorMessage, { errorMessage: 'Keine Anfragen' });
 	          }
 	          if (Array.isArray(notifications)) {
-	            notifications.push(React.createElement(NotificationLoadMore, null));
+	            notifications.push(React.createElement(NotificationLoadMore, { key: 'loadMore', onLoadMore: this.onLoadMore }));
 	          } else {
 	            notifications = React.createElement(NotificationLoadMore, null);
 	          }
@@ -15097,7 +15126,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'notification__left' },
-	        React.createElement('img', { src: this.props.webserviceBase + '/' + data.ProfilePicture, alt: 'Profilbild', className: 'notification__avatar' })
+	        React.createElement('img', { src: this.props.webserviceBase + data.ProfilePicture, alt: 'Profilbild', className: 'notification__avatar' })
 	      ),
 	      React.createElement(
 	        'div',
@@ -37241,11 +37270,30 @@
 
 	var React = __webpack_require__(3);
 	var MaterialDesignMixin = __webpack_require__(182);
+	var CVM = __webpack_require__(40);
 
 	var NotificationLoadMore = React.createClass({
 		displayName: 'NotificationLoadMore',
 
-		mixins: [MaterialDesignMixin],
+		mixins: [MaterialDesignMixin, CVM],
+
+		getInitialState: function getInitialState() {
+			return {
+				isLoading: false
+			};
+		},
+
+		onLoadingDone: function onLoadingDone() {
+			this.setState({ isLoading: false });
+		},
+
+		componentVisibilityChanged: function componentVisibilityChanged() {
+			var visible = this.state.visible;
+			if (visible && !this.state.isLoading && this.props.onLoadMore) {
+				this.props.onLoadMore(this.onLoadingDone);
+			}
+		},
+
 		render: function render() {
 			return React.createElement(
 				'div',

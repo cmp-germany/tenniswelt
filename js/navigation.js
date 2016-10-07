@@ -96,7 +96,7 @@ function initReactComponents() {
       webserviceBase={window.serverpaths.webserviceBase}
       servicePaths={window.serverpaths.friendRequestsPaths}
       pageSize="5"
-    />,
+    />, 
     document.getElementById('FriendRequestsModuleRoot')
   );
 }

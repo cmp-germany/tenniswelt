@@ -12,7 +12,8 @@ var FriendRequestsModule = React.createClass({
     return {
       unseenRequestsCount : null,
       friendRequests: [],
-      currentState: "initLoading"
+      currentState: "initLoading",
+      allCount: 0
     }
   },
 
@@ -29,7 +30,7 @@ var FriendRequestsModule = React.createClass({
     this.loadData();
   },
 
-  loadData: function(pageNumber = 1) {
+  loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
     this.serverRequest = $.get(
       getAllFriendRequestsUrl,
@@ -40,12 +41,29 @@ var FriendRequestsModule = React.createClass({
       },
       function (result) {
         if(result.success){
+
+          var friendRequests;
+          friendRequests = this.state.friendRequests;
+          Array.prototype.push.apply(friendRequests, result.data.FriendRequests);
+
+          var newState;
+          if (friendRequests.length < result.data.AllCount) {
+            newState = "loadMore";
+          } else {
+            newState = "loaded";
+          }
+
           this.setState({
-            currentState: "loaded",
+            currentState: newState,
             unseenRequestsCount: result.data.UnseenRequestsCount,
-            friendRequests: result.data.FriendRequests,
+            friendRequests: friendRequests,
             allCount: result.data.AllCount
           });
+
+          if (onLoadingDone) {
+            onLoadingDone();
+          }
+
         }
         else{
           var error = null;
@@ -57,6 +75,17 @@ var FriendRequestsModule = React.createClass({
     ).fail(function(jqXHR, textStatus, errorThrown){
       this.setState({currentState: "error", errorMessage: textStatus });
     }.bind(this));
+  },
+
+  onLoadMore: function(onLoadingDone) {
+    // calculate the pageNumber, which needs to be loaded
+    var currentCount = this.state.friendRequests.length;
+    var pageSize = this.props.pageSize;
+    var currentPageNumber = currentCount / pageSize;
+    var loadPageNumber = currentPageNumber + 1;
+
+    // loadData. Call the function onLoadingDone after Loading is done
+    this.loadData(loadPageNumber, onLoadingDone);
   },
 
   componentWillUnmount: function() {
@@ -225,7 +254,7 @@ var FriendRequestsModule = React.createClass({
             notifications = <NotificationErrorMessage errorMessage="Keine Anfragen" />;
           }
           if (Array.isArray(notifications)) {
-            notifications.push(<NotificationLoadMore />);
+            notifications.push(<NotificationLoadMore key="loadMore" onLoadMore={this.onLoadMore} />);
           } else {
             notifications = (<NotificationLoadMore />);
           }

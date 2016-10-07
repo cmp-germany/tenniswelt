@@ -97,6 +97,7 @@
 .form-control-label
   position: absolute
   color: #ccc
+  z-index: 1
   //font-weight: normal
   top: 2px
   margin-left: 40px
@@ -136,6 +137,8 @@ input[type=range].form-control--range-navbar
   -webkit-appearance: none
   width: 110px
   margin: 0
+  z-index: 2
+  position: relative
   &:focus
     outline: none
   &::-webkit-slider-runnable-track
