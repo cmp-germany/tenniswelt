@@ -1,5 +1,5 @@
 var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
-//var React = require('react-lite');
+var React = require('react-lite');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var webserviceBase = require('../data/webserviceBase.json');
