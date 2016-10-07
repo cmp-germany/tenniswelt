@@ -96,7 +96,7 @@ function initReactComponents() {
       userId="496E3F91-EDDE-4929-8A83-A5B800CB9397"
       webserviceBase={webserviceBase.webserviceBase}
       servicePaths={webserviceBase.friendRequestsPaths}
-      pageSize="5"
+      pageSize="2"
     />,
     document.getElementById('FriendRequestsModuleRoot')
   );
