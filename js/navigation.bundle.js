@@ -15015,17 +15015,24 @@
 	      containerClassName += " notification--unread";
 	    }
 
+	    var isRendered = false;
+
 	    //Show Loading Bar, if it is loading
-	    if (data.isLoading) {
+	    if (data.isLoading && !isRendered) {
 	      containerClassName += " notification--is-loading";
 	      notificationBottom = React.createElement(
 	        'div',
 	        { className: 'notification__bottom' },
-	        React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
+	        React.createElement(
+	          'div',
+	          null,
+	          React.createElement('div', { className: 'mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active' })
+	        )
 	      );
+	      isRendered = true;
 	    }
 
-	    if (data.isAccepted) {
+	    if (data.isAccepted && !isRendered) {
 	      notificationBottom = React.createElement(
 	        'div',
 	        { className: 'notification__bottom' },
@@ -15035,9 +15042,10 @@
 	          'Angenommen'
 	        )
 	      );
+	      isRendered = true;
 	    }
 
-	    if (data.isDeleted) {
+	    if (data.isDeleted && !isRendered) {
 	      notificationBottom = React.createElement(
 	        'div',
 	        { className: 'notification__bottom' },
@@ -15047,9 +15055,10 @@
 	          'Abgelehnt'
 	        )
 	      );
+	      isRendered = true;
 	    }
 
-	    if (data.isError) {
+	    if (data.isError && !isRendered) {
 	      notificationBottom = React.createElement(
 	        'div',
 	        { className: 'notification__bottom' },
@@ -15065,6 +15074,13 @@
 	          ' '
 	        )
 	      );
+	      isRendered = true;
+	    }
+
+	    //when there is no time value, ignore it
+	    var timeAgo = "";
+	    if (data.DateCreatedUtc) {
+	      timeAgo = React.createElement(TimeAgo, { date: data.DateCreatedUtc, formatter: formatter });
 	    }
 
 	    //when there is no time value, ignore it
