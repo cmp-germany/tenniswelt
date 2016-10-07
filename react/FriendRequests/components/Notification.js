@@ -1,6 +1,5 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
-var webserviceBase = (require('../../../data/webserviceBase.json')).webserviceBase;
 var TimeAgo = require('react-timeago').default;
 import germanStrings from 'react-timeago/lib/language-strings/de-short';
 import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
@@ -20,7 +19,7 @@ var Notification = React.createClass({
     var visible = this.state.visible;
     if (visible && !this.props.data.isSeen) {
       $.post(
-        webserviceBase + this.props.servicePaths.postIsSeen,
+        this.props.webserviceBase + this.props.servicePaths.postIsSeen,
         {
           friendRequestId: this.props.data.Id,
           seen: true
@@ -152,7 +151,7 @@ var Notification = React.createClass({
     return (
       <div className={containerClassName}>
         <div className="notification__left">
-          <img src={webserviceBase + data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
+          <img src={this.props.webserviceBase + data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
         </div>
         <div className="notification__right">
           <div className="notification__top">

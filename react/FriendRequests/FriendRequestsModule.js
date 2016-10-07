@@ -155,6 +155,10 @@ var FriendRequestsModule = React.createClass({
     this.setState({allData});
   },
 
+  mainIconClicked: function(){
+    return false;
+  },
+
   render: function(){
     var notifications;
     var badge;
@@ -183,13 +187,14 @@ var FriendRequestsModule = React.createClass({
             }
             return (
               <Notification
-              servicePaths={this.props.servicePaths}
-              data={data}
-              key={data.Id}
-              onAccept={this.acceptFriendRequest}
-              onDecline={this.declineFriendRequest}
-              onError={this.handleError}
-              onErrorRetry={this.errorRetry}/>
+                webserviceBase={this.props.webserviceBase}
+                servicePaths={this.props.servicePaths}
+                data={data}
+                key={data.Id}
+                onAccept={this.acceptFriendRequest}
+                onDecline={this.declineFriendRequest}
+                onError={this.handleError}
+                onErrorRetry={this.errorRetry}/>
             );
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
@@ -205,8 +210,15 @@ var FriendRequestsModule = React.createClass({
               return;
             }
             return (
-              //Add here onAccept and onDelete like in "loaded" event.
-              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} />
+              <Notification
+                webserviceBase={this.props.webserviceBase}
+                servicePaths={this.props.servicePaths}
+                data={data}
+                key={data.Id}
+                onAccept={this.acceptFriendRequest}
+                onDecline={this.declineFriendRequest}
+                onError={this.handleError}
+                onErrorRetry={this.errorRetry}/>
             );
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
@@ -228,7 +240,7 @@ var FriendRequestsModule = React.createClass({
 
     return (
       <div className="navbar-notification">
-        <button className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false">
+        <button className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false" onClick={this.mainIconClicked}>
           <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badge}>people_outline</i>
         </button>
 

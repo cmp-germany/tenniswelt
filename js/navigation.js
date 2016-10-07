@@ -2,7 +2,6 @@ var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
-var webserviceBase = require('../data/webserviceBase.json');
 
 $( document ).ready(function(){
   navbar();
@@ -94,8 +93,8 @@ function initReactComponents() {
   ReactDOM.render(
     <FriendRequestsModule
       userId="496E3F91-EDDE-4929-8A83-A5B800CB9397"
-      webserviceBase={webserviceBase.webserviceBase}
-      servicePaths={webserviceBase.friendRequestsPaths}
+      webserviceBase={window.serverpaths.webserviceBase}
+      servicePaths={window.serverpaths.friendRequestsPaths}
       pageSize="5"
     />,
     document.getElementById('FriendRequestsModuleRoot')

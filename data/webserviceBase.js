@@ -1,4 +1,4 @@
-{
+window.serverpaths = {
   "webserviceBase": "http://localhost:3000",
   "friendRequestsPaths": {
     "getActive": "/api/Friend/ActiveFriendRequests",

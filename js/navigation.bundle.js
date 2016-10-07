@@ -57,7 +57,6 @@
 	var React = __webpack_require__(3);
 	var ReactDOM = __webpack_require__(41);
 	var $ = __webpack_require__(36);
-	var webserviceBase = __webpack_require__(179);
 
 	$(document).ready(function () {
 	  navbar();
@@ -139,8 +138,8 @@
 
 	  ReactDOM.render(React.createElement(FriendRequestsModule, {
 	    userId: '496E3F91-EDDE-4929-8A83-A5B800CB9397',
-	    webserviceBase: webserviceBase.webserviceBase,
-	    servicePaths: webserviceBase.friendRequestsPaths,
+	    webserviceBase: window.serverpaths.webserviceBase,
+	    servicePaths: window.serverpaths.friendRequestsPaths,
 	    pageSize: '5'
 	  }), document.getElementById('FriendRequestsModuleRoot'));
 	}
@@ -307,6 +306,10 @@
 	    this.setState({ allData: allData });
 	  },
 
+	  mainIconClicked: function mainIconClicked() {
+	    return false;
+	  },
+
 	  render: function render() {
 	    var notifications;
 	    var badge;
@@ -333,6 +336,7 @@
 	              return;
 	            }
 	            return React.createElement(Notification, {
+	              webserviceBase: this.props.webserviceBase,
 	              servicePaths: this.props.servicePaths,
 	              data: data,
 	              key: data.Id,
@@ -353,10 +357,15 @@
 	            if (data.DateAccepted) {
 	              return;
 	            }
-	            return (
-	              //Add here onAccept and onDelete like in "loaded" event.
-	              React.createElement(Notification, { servicePaths: this.props.servicePaths, data: data, key: data.Id })
-	            );
+	            return React.createElement(Notification, {
+	              webserviceBase: this.props.webserviceBase,
+	              servicePaths: this.props.servicePaths,
+	              data: data,
+	              key: data.Id,
+	              onAccept: this.acceptFriendRequest,
+	              onDecline: this.declineFriendRequest,
+	              onError: this.handleError,
+	              onErrorRetry: this.errorRetry });
 	          }.bind(this));
 	          if (this.state.friendRequests.length == 0) {
 	            notifications = React.createElement(NotificationErrorMessage, { errorMessage: 'Keine Anfragen' });
@@ -380,7 +389,7 @@
 	      { className: 'navbar-notification' },
 	      React.createElement(
 	        'button',
-	        { className: 'navbar-notification__toggle-button', 'data-toggle': 'collapse', 'data-target': '#friend-requests', 'aria-expanded': 'false' },
+	        { className: 'navbar-notification__toggle-button', 'data-toggle': 'collapse', 'data-target': '#friend-requests', 'aria-expanded': 'false', onClick: this.mainIconClicked },
 	        React.createElement(
 	          'i',
 	          { className: 'material-icons mdl-badge mdl-badge--overlap', 'data-badge': badge },
@@ -14922,7 +14931,6 @@
 
 	var React = __webpack_require__(3);
 	var CVM = __webpack_require__(40);
-	var webserviceBase = __webpack_require__(179).webserviceBase;
 	var TimeAgo = __webpack_require__(180).default;
 
 
@@ -14942,7 +14950,7 @@
 	  componentVisibilityChanged: function componentVisibilityChanged() {
 	    var visible = this.state.visible;
 	    if (visible && !this.props.data.isSeen) {
-	      $.post(webserviceBase + this.props.servicePaths.postIsSeen, {
+	      $.post(this.props.webserviceBase + this.props.servicePaths.postIsSeen, {
 	        friendRequestId: this.props.data.Id,
 	        seen: true
 	      }).fail(function (result) {
@@ -15089,7 +15097,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'notification__left' },
-	        React.createElement('img', { src: webserviceBase + data.ProfilePicture, alt: 'Profilbild', className: 'notification__avatar' })
+	        React.createElement('img', { src: this.props.webserviceBase + '/' + data.ProfilePicture, alt: 'Profilbild', className: 'notification__avatar' })
 	      ),
 	      React.createElement(
 	        'div',
@@ -33009,20 +33017,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 179 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		"webserviceBase": "http://localhost:3000",
-		"friendRequestsPaths": {
-			"getActive": "/api/Friend/ActiveFriendRequests",
-			"postIsSeen": "/api/Friend/SetSeenState",
-			"accept": "/api/Friend/AcceptFriendRequest",
-			"decline": "/api/Friend/DeleteFriendRequest"
-		}
-	};
-
-/***/ },
+/* 179 */,
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
