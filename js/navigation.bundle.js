@@ -227,6 +227,10 @@
 	        allData[index].isAccepted = true;
 	        this.setState({ friendRequests: allData });
 	        this.removeWithTimeout(friendRequestId, TimeOut);
+	      } else {
+	        allData[index].isLoading = false;
+	        allData[index].isError = true;
+	        this.setState({ friendRequests: allData });
 	      }
 	    }.bind(this));
 	  },
@@ -238,22 +242,53 @@
 	    });
 	    allData[index].isLoading = true;
 	    this.setState({ allData: allData });
-	    var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
-	    $.post(acceptFriendRequestUrl, {
-	      friendRequestId: friendRequestId
-	    }, function (result) {
-	      if (result.success) {
-	        allData[index].isLoading = false;
-	        allData[index].isDeleted = true;
-	        this.setState({ allData: allData });
-	        this.removeWithTimeout(friendRequestId, TimeOut);
-	      }
-	    }.bind(this));
+	    var declineFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
+	    try {
+	      $.post(declineFriendRequestUrl, {
+	        friendRequestId: friendRequestId
+	      }, function (result) {
+	        if (result.success) {
+	          allData[index].isLoading = false;
+	          allData[index].isDeleted = true;
+	          this.setState({ allData: allData });
+	          this.removeWithTimeout(friendRequestId, TimeOut);
+	        } else {
+	          allData[index].isLoading = false;
+	          allData[index].isError = true;
+	          this.setState({ friendRequests: allData });
+	        }
+	      }.bind(this));
+	    } catch (e) {
+	      allData[index].isLoading = false;
+	      allData[index].isError = true;
+	      this.setState({ friendRequests: allData });
+	    }
 	  },
 
 	  handleError: function handleError(friendRequestId, errorMessage) {
-	    console.log(friendRequestId + ' has error: ' + errorMessage);
+	    var message = friendRequestId + ' has error: ' + errorMessage;
+	    console.log(message);
 	    //Todo: handle error in a better way please.
+	    if (this.state) {
+	      if (this.state.friendRequests) {
+	        var allData = this.state.friendRequests;
+	        var index = allData.findIndex(function (x) {
+	          return x.Id === friendRequestId;
+	        });
+	        allData[index].isError = true;
+	        allData[index].errorMessage = message;
+	        this.setState({ allData: allData });
+	      }
+	    }
+	  },
+
+	  errorRetry: function errorRetry(friendRequestId) {
+	    var allData = this.state.friendRequests;
+	    var index = allData.findIndex(function (x) {
+	      return x.Id === friendRequestId;
+	    });
+	    allData[index].isError = false;
+	    this.setState({ allData: allData });
 	  },
 
 	  render: function render() {
@@ -281,7 +316,14 @@
 	            if (data.DateAccepted) {
 	              return;
 	            }
-	            return React.createElement(Notification, { servicePaths: this.props.servicePaths, data: data, key: data.Id, onAccept: this.acceptFriendRequest, onDecline: this.declineFriendRequest, onError: this.handleError });
+	            return React.createElement(Notification, {
+	              servicePaths: this.props.servicePaths,
+	              data: data,
+	              key: data.Id,
+	              onAccept: this.acceptFriendRequest,
+	              onDecline: this.declineFriendRequest,
+	              onError: this.handleError,
+	              onErrorRetry: this.errorRetry });
 	          }.bind(this));
 	          if (this.state.friendRequests.length == 0) {
 	            notifications = React.createElement(NotificationErrorMessage, { errorMessage: 'Keine Anfragen' });
@@ -14923,6 +14965,16 @@
 	    }
 	  },
 
+	  errorRetryHandler: function errorRetryHandler() {
+	    try {
+	      this.props.onErrorRetry(this.props.data.Id);
+	    } catch (err) {
+	      var id = 0;
+	      if (this.props.data) if (this.props.data.Id) id = this.props.data.Id;
+	      this.errorHandler(id, err, 'errorRetryHandler');
+	    }
+	  },
+
 	  render: function render() {
 	    var data = this.props.data;
 
@@ -14977,6 +15029,24 @@
 	          'div',
 	          { className: 'notification__message notification__message--success' },
 	          'Abgelehnt'
+	        )
+	      );
+	    }
+
+	    if (data.isError) {
+	      notificationBottom = React.createElement(
+	        'div',
+	        { className: 'notification__bottom' },
+	        React.createElement(
+	          'div',
+	          { className: 'notification__message notification__message--error' },
+	          'Fehler | ',
+	          React.createElement(
+	            'a',
+	            { onClick: this.errorRetryHandler },
+	            'Erneut'
+	          ),
+	          ' '
 	        )
 	      );
 	    }

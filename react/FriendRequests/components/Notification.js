@@ -70,6 +70,19 @@ var Notification = React.createClass({
     }
   },
 
+  errorRetryHandler: function(){
+    try{
+      this.props.onErrorRetry(this.props.data.Id);
+    }
+    catch(err){
+      var id = 0;
+      if(this.props.data)
+        if(this.props.data.Id)
+          id = this.props.data.Id;
+      this.errorHandler(id, err, 'errorRetryHandler');
+    }
+  },
+
   render: function() {
     var data = this.props.data;
 
@@ -108,6 +121,15 @@ var Notification = React.createClass({
       notificationBottom = (
       <div className="notification__bottom">
           <div className="notification__message notification__message--success">Abgelehnt</div>
+      </div>
+      );
+    }
+
+    if(data.isError){
+      notificationBottom = (
+      <div className="notification__bottom">
+          <div className="notification__message notification__message--error">Fehler | <a onClick={this.errorRetryHandler}>Erneut</a> </div>
+          {/*<div className="notification__message notification__message--error">{data.errorMessage}</div>*/}
       </div>
       );
     }

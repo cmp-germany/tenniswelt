@@ -76,6 +76,11 @@ var FriendRequestsModule = React.createClass({
           this.setState({friendRequests:allData});
           this.removeWithTimeout(friendRequestId, TimeOut);
         }
+        else{
+          allData[index].isLoading = false;
+          allData[index].isError = true;
+          this.setState({friendRequests:allData});
+        }
       }.bind(this)
     );
   },
@@ -85,26 +90,55 @@ var FriendRequestsModule = React.createClass({
     var index = allData.findIndex(x => x.Id===friendRequestId);
     allData[index].isLoading = true;
     this.setState({allData});
-    var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
-    $.post(
-      acceptFriendRequestUrl,
-      {
-        friendRequestId: friendRequestId
-      },
-      function(result){
-        if(result.success){
-          allData[index].isLoading = false;
-          allData[index].isDeleted = true;
-          this.setState({allData});
-          this.removeWithTimeout(friendRequestId, TimeOut);
-        }
-      }.bind(this)
-    );
+    var declineFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
+    try{
+      $.post(
+        declineFriendRequestUrl,
+        {
+          friendRequestId: friendRequestId
+        },
+        function(result){
+          if(result.success){
+            allData[index].isLoading = false;
+            allData[index].isDeleted = true;
+            this.setState({allData});
+            this.removeWithTimeout(friendRequestId, TimeOut);
+          }
+          else{
+            allData[index].isLoading = false;
+            allData[index].isError = true;
+            this.setState({friendRequests:allData});
+          }
+        }.bind(this)
+      );
+    }
+    catch(e){
+      allData[index].isLoading = false;
+      allData[index].isError = true;
+      this.setState({friendRequests:allData});
+    }
   },
 
   handleError: function(friendRequestId, errorMessage){
-    console.log(friendRequestId + ' has error: ' + errorMessage);
+    var message = friendRequestId + ' has error: ' + errorMessage;
+    console.log(message);
     //Todo: handle error in a better way please.
+    if(this.state){
+      if(this.state.friendRequests){
+        var allData = this.state.friendRequests;
+        var index = allData.findIndex(x => x.Id===friendRequestId);
+        allData[index].isError = true;
+        allData[index].errorMessage = message;
+        this.setState({allData});
+      }
+    }
+  },
+
+  errorRetry: function(friendRequestId){
+    var allData = this.state.friendRequests;
+    var index = allData.findIndex(x => x.Id===friendRequestId);
+    allData[index].isError = false;
+    this.setState({allData});
   },
 
   render: function(){
@@ -134,7 +168,14 @@ var FriendRequestsModule = React.createClass({
               return;
             }
             return (
-              <Notification servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} />
+              <Notification
+              servicePaths={this.props.servicePaths}
+              data={data}
+              key={data.Id}
+              onAccept={this.acceptFriendRequest}
+              onDecline={this.declineFriendRequest}
+              onError={this.handleError}
+              onErrorRetry={this.errorRetry}/>
             );
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
