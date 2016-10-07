@@ -174,11 +174,25 @@
 	  },
 
 	  componentDidMount: function componentDidMount() {
-	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+	    this.loadData();
+	  },
 
+	  onReload: function onReload() {
+	    this.setState({
+	      unseenRequestsCount: null,
+	      friendRequests: [],
+	      currentState: "initLoading"
+	    });
+	    this.loadData();
+	  },
+
+	  loadData: function loadData() {
+	    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+	    var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
 	    this.serverRequest = $.get(getAllFriendRequestsUrl, {
 	      userid: this.props.userId,
-	      pageNumber: "1",
+	      pageNumber: pageNumber,
 	      pageSize: this.props.pageSize
 	    }, function (result) {
 	      if (result.success) {
@@ -193,6 +207,8 @@
 	        if (result) error = result.data;
 	        this.setState({ currentState: "error", errorMessage: error });
 	      }
+	    }.bind(this)).fail(function (jqXHR, textStatus, errorThrown) {
+	      this.setState({ currentState: "error", errorMessage: textStatus });
 	    }.bind(this));
 	  },
 
@@ -300,7 +316,7 @@
 	        {
 	          var errorMessage = "error";
 	          if (this.state.errorMessage) errorMessage = this.state.errorMessage;
-	          notifications = React.createElement(NotificationErrorMessage, { errorMessage: errorMessage });
+	          notifications = React.createElement(NotificationErrorMessage, { errorMessage: errorMessage, onReload: this.onReload });
 	          badge = "!";
 	        }
 	        break;
@@ -15092,8 +15108,38 @@
 
 	'use strict';
 
+<<<<<<< HEAD
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
+=======
+	var React = __webpack_require__(3);
+	var MaterialDesignMixin = __webpack_require__(39);
+
+	var NotificationErrorMessage = React.createClass({
+	  displayName: 'NotificationErrorMessage',
+
+
+	  render: function render() {
+	    var reloadLink = "";
+	    if (this.props.onReload) {
+	      reloadLink = React.createElement(
+	        'a',
+	        { className: 'notification__error-link', href: 'javascript:void(0)', onClick: this.props.onReload },
+	        'Erneut Laden'
+	      );
+	    }
+	    return React.createElement(
+	      'div',
+	      { className: 'notification notification--error' },
+	      React.createElement(
+	        'div',
+	        { className: 'notification__error' },
+	        this.props.errorMessage,
+	        reloadLink
+	      )
+	    );
+	  }
+>>>>>>> 99064d8f6ee9ed7fc7cdd9e76005c125d816b5c1
 	});
 
 

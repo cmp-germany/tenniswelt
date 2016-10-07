@@ -134,6 +134,12 @@ var Notification = React.createClass({
       );
     }
 
+    //when there is no time value, ignore it
+    var timeAgo = "";
+    if (data.DateCreatedUtc) {
+      timeAgo = (<TimeAgo date={data.DateCreatedUtc} formatter={formatter} />);
+    }
+
     return (
       <div className={containerClassName}>
         <div className="notification__left">
@@ -142,7 +148,7 @@ var Notification = React.createClass({
         <div className="notification__right">
           <div className="notification__top">
             <h4 className="notification__name">{data.ShownName}</h4>
-            <div className="notification__time"><TimeAgo date={data.DateCreatedUtc} formatter={formatter} /></div>
+            <div className="notification__time">{timeAgo}</div>
           </div>
           {notificationBottom}
         </div>
