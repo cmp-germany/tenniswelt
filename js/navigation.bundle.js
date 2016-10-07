@@ -15067,6 +15067,12 @@
 	      );
 	    }
 
+	    //when there is no time value, ignore it
+	    var timeAgo = "";
+	    if (data.DateCreatedUtc) {
+	      timeAgo = React.createElement(TimeAgo, { date: data.DateCreatedUtc, formatter: formatter });
+	    }
+
 	    return React.createElement(
 	      'div',
 	      { className: containerClassName },
@@ -15089,7 +15095,7 @@
 	          React.createElement(
 	            'div',
 	            { className: 'notification__time' },
-	            React.createElement(TimeAgo, { date: data.DateCreatedUtc, formatter: formatter })
+	            timeAgo
 	          )
 	        ),
 	        notificationBottom
@@ -15108,38 +15114,8 @@
 
 	'use strict';
 
-<<<<<<< HEAD
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
-=======
-	var React = __webpack_require__(3);
-	var MaterialDesignMixin = __webpack_require__(39);
-
-	var NotificationErrorMessage = React.createClass({
-	  displayName: 'NotificationErrorMessage',
-
-
-	  render: function render() {
-	    var reloadLink = "";
-	    if (this.props.onReload) {
-	      reloadLink = React.createElement(
-	        'a',
-	        { className: 'notification__error-link', href: 'javascript:void(0)', onClick: this.props.onReload },
-	        'Erneut Laden'
-	      );
-	    }
-	    return React.createElement(
-	      'div',
-	      { className: 'notification notification--error' },
-	      React.createElement(
-	        'div',
-	        { className: 'notification__error' },
-	        this.props.errorMessage,
-	        reloadLink
-	      )
-	    );
-	  }
->>>>>>> 99064d8f6ee9ed7fc7cdd9e76005c125d816b5c1
 	});
 
 
@@ -33216,13 +33192,22 @@
 
 
 	  render: function render() {
+	    var reloadLink = "";
+	    if (this.props.onReload) {
+	      reloadLink = React.createElement(
+	        'a',
+	        { className: 'notification__error-link', href: 'javascript:void(0)', onClick: this.props.onReload },
+	        'Erneut Laden'
+	      );
+	    }
 	    return React.createElement(
 	      'div',
 	      { className: 'notification notification--error' },
 	      React.createElement(
 	        'div',
 	        { className: 'notification__error' },
-	        this.props.errorMessage
+	        this.props.errorMessage,
+	        reloadLink
 	      )
 	    );
 	  }
