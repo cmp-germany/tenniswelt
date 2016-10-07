@@ -99,39 +99,48 @@ var Notification = React.createClass({
       containerClassName += " notification--unread";
     }
 
+    var isRendered = false;
+
     //Show Loading Bar, if it is loading
-    if (data.isLoading) {
+    if (data.isLoading && !isRendered) {
       containerClassName += " notification--is-loading";
       notificationBottom = (
+
         <div className="notification__bottom">
-          <div className="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
+          <div>
+            <div className="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active" />
+          </div>
         </div>
       );
+      isRendered = true;
     }
 
-    if(data.isAccepted){
+    if(data.isAccepted && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
           <div className="notification__message notification__message--success">Angenommen</div>
       </div>
       );
+      isRendered = true;
     }
 
-    if(data.isDeleted){
+    if(data.isDeleted && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
           <div className="notification__message notification__message--success">Abgelehnt</div>
       </div>
       );
+      isRendered = true;
     }
 
-    if(data.isError){
+    if(data.isError && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
           <div className="notification__message notification__message--error">Fehler | <a onClick={this.errorRetryHandler}>Erneut</a> </div>
           {/*<div className="notification__message notification__message--error">{data.errorMessage}</div>*/}
       </div>
       );
+      isRendered = true;
     }
 
     //when there is no time value, ignore it
