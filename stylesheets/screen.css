@@ -9560,6 +9560,54 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
+/* line 173, ../sass/_navbar-notification.sass */
+.notification--error {
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 177, ../sass/_navbar-notification.sass */
+.notification__error {
+  color: #f0ad4e;
+}
+/* line 180, ../sass/_navbar-notification.sass */
+.notification__error::before {
+  content: "error";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  margin-right: 5px;
+  color: #f0ad4e;
+  vertical-align: middle;
+}
+/* line 16, ../sass/_material-icons.sass */
+.notification__error::before--circle {
+  background-color: #E9002F;
+  color: #fff;
+  font-size: 30.6px;
+  height: 36px;
+  padding-top: 3.24px;
+  width: 36px;
+  vertical-align: middle;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+}
+/* line 186, ../sass/_navbar-notification.sass */
+.notification__error-link {
+  margin-left: 5px;
+}
 
 /* line 1, ../sass/_buttons.sass */
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile {
