@@ -31,5 +31,6 @@ module.exports = {
       },
       { test: /\.js$/, loader: 'exports-loader' }
     ]
-  }
+  },
+  devtool: 'eval-source-map'
 };
