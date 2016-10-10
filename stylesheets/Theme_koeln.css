@@ -14733,46 +14733,33 @@ html, body {
   background-color: #1a8ed4 !important;
 }
 
-/* line 1, ../sass/_invite-friends.sass */
-.popup-back {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 40000;
-  top: 0;
-  left: 0;
-  background-color: black;
-  layer-background-color: black;
-  filter: alpha(opacity=75);
-  opacity: 0.75;
+/* line 35, ../sass/_invite-friends.sass */
+.popup-invite {
+  border: none;
 }
-/* line 13, ../sass/_invite-friends.sass */
-.popup-back.active {
-  display: block;
-}
-
-/* line 16, ../sass/_invite-friends.sass */
-.popup {
-  margin-top: 128.5px;
-  display: block;
-  position: fixed;
-  z-index: 50000;
-  top: 0;
-  left: 0;
-  overflow: auto;
-}
-
-/* line 25, ../sass/_invite-friends.sass */
-.popup__header {
+/* line 38, ../sass/_invite-friends.sass */
+.popup-invite .BigTitle h2 {
   color: #ffffff;
-  background-color: #5b5e65;
+  text-transform: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
-
-/* line 29, ../sass/_invite-friends.sass */
-.popup__content {
-  height: 500px;
+/* line 44, ../sass/_invite-friends.sass */
+.popup-invite form {
   background-color: rgba(19, 35, 51, 0.9);
+  padding-bottom: 20px;
+}
+/* line 48, ../sass/_invite-friends.sass */
+.popup-invite .PopUp_header {
+  height: 30px;
+}
+/* line 51, ../sass/_invite-friends.sass */
+.popup-invite .Sendtofriend::before {
+  margin-top: 2px;
+}
+/* line 55, ../sass/_invite-friends.sass */
+.popup-invite .RegInput select, .popup-invite .RegInput input, .popup-invite .RegInput textarea {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 @media(max-width:767px) {
