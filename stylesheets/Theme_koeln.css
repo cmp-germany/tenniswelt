@@ -8364,7 +8364,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   background-color: lightgrey;
 }
 
-/* K├╢ln header */
+/* Köln header */
 /*.koln-header{display:inline-block;position:fixed;width:1200px;z-index:2000;float:left;height:120px;line-height:45px;background-image:url('/Upload/koeln-header_gray.jpg');}
 .koln-address{width:440px;margin-top:7px;float:right;line-height:20px;color:#fff;text-align:right;padding-right:15px;}
 .tsa-addressspan{display:inline-block;float:right;line-height:20px;color:#fff;margin-right:10px;padding:0;}
@@ -8383,7 +8383,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #KolnHeadTitle a{color:#fff;}
 .Deph3{border-top:none!important;padding-left:15px!important;line-height:15px!important;font-size:12px!important;padding-bottom:8px!important;}
 .Deph2{padding-left:10px!important;}*/
-/* K├╢ln header END */
+/* Köln header END */
 /* DefaultColor */
 /*.ItemSelected,.BgAlt,.comment-composer a.regular-button, .group-info  .styled-button, .addthis_button img, img[id^="imgLike_"], .tabs-wrapper .tabs li .selected,
 .PeopleSearch a, #user-profile-tabs, .tabs-wrapper .tabs li .selected, .logout_content, .people-search .options div.button-wrapper a, .chat-users .chat-users-header,
@@ -11763,7 +11763,7 @@ body a:hover {
   color: #4DDD35;
 }
 
-/* Anpassungen f├╝r die Plattform */
+/* Anpassungen für die Plattform */
 /* line 56, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
@@ -14731,6 +14731,48 @@ html, body {
 /* line 22, ../sass/_change-profileimage.sass */
 #cropId .btn.btn-default.btn-file:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .btn-default.btn-file.btnSaveProfile:hover, #TblPagesList #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId #TblPageEdit .btn-default.btn-file.btnSaveProfile:hover, #TblPageEdit #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId .btn.btn-save.ng-binding:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .btn-save.ng-binding.btnSaveProfile:hover, #TblPagesList #cropId .btn-save.ng-binding.btnSaveProfile:hover, #cropId #TblPageEdit .btn-save.ng-binding.btnSaveProfile:hover, #TblPageEdit #cropId .btn-save.ng-binding.btnSaveProfile:hover {
   background-color: #1a8ed4 !important;
+}
+
+/* line 1, ../sass/_invite-friends.sass */
+.popup-back {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 40000;
+  top: 0;
+  left: 0;
+  background-color: black;
+  layer-background-color: black;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+}
+/* line 13, ../sass/_invite-friends.sass */
+.popup-back.active {
+  display: block;
+}
+
+/* line 16, ../sass/_invite-friends.sass */
+.popup {
+  margin-top: 128.5px;
+  display: block;
+  position: fixed;
+  z-index: 50000;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+/* line 25, ../sass/_invite-friends.sass */
+.popup__header {
+  color: #ffffff;
+  background-color: #5b5e65;
+}
+
+/* line 29, ../sass/_invite-friends.sass */
+.popup__content {
+  height: 500px;
+  background-color: rgba(19, 35, 51, 0.9);
 }
 
 @media(max-width:767px) {
