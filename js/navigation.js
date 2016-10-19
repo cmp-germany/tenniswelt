@@ -92,7 +92,8 @@ function initReactComponents() {
 
   ReactDOM.render(
     <FriendRequestsModule
-      userId="496E3F91-EDDE-4929-8A83-A5B800CB9397"
+      userId={window.userId}
+      currentLanguage={window.currentLanguage}
       webserviceBase={window.serverpaths.webserviceBase}
       servicePaths={window.serverpaths.friendRequestsPaths}
       pageSize="5"

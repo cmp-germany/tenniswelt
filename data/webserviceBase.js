@@ -7,3 +7,5 @@ window.serverpaths = {
     "decline": "/api/Friend/DeleteFriendRequest"
   }
 }
+window.userId = "496E3F91-EDDE-4929-8A83-A5B800CB9397";
+window.currentLanguage = "en-US";

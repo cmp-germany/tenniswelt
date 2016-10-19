@@ -17,7 +17,7 @@ var Notification = React.createClass({
 
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
-    if (visible && !this.props.data.isSeen) {
+    if (visible && !this.props.data.IsSeen) {
       $.post(
         this.props.webserviceBase + this.props.servicePaths.postIsSeen,
         {
@@ -81,15 +81,28 @@ var Notification = React.createClass({
       this.errorHandler(id, err, 'errorRetryHandler');
     }
   },
+  
+  getTranslation: function(word){
+    if(!word)return "";
+    try{
+      return this.props.languageResource(word);
+    }
+    catch(err){
+      var id = 0;
+      if(this.props.data)
+        if(this.props.data.Id)
+          id = this.props.data.Id;
+      this.errorHandler(id, err, 'getTranslation');
+    }
+  },
 
   render: function() {
     var data = this.props.data;
-
     var containerClassName = "notification";
     var notificationBottom = (
       <div className="notification__bottom">
-        <a href="#1" className="notification__action notification__action--accept" onClick={this.acceptHandler}>Annehmen</a>
-        <a href="#1" className="notification__action notification__action--decline" onClick={this.declineHandler}>Ablehnen</a>
+        <a href="#1" className="notification__action notification__action--accept" onClick={this.acceptHandler}>{this.getTranslation("acceptFriend")}</a>
+        <a href="#1" className="notification__action notification__action--decline" onClick={this.declineHandler}>{this.getTranslation("declineFriend")}</a>
       </div>
     );
 
@@ -117,7 +130,7 @@ var Notification = React.createClass({
     if(data.isAccepted && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
-          <div className="notification__message notification__message--success">Angenommen</div>
+          <div className="notification__message notification__message--success">{this.getTranslation("friendRequestAccepted")}</div>
       </div>
       );
       isRendered = true;
@@ -126,7 +139,7 @@ var Notification = React.createClass({
     if(data.isDeleted && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
-          <div className="notification__message notification__message--success">Abgelehnt</div>
+          <div className="notification__message notification__message--success">{this.getTranslation("friendRequestDeclined")}</div>
       </div>
       );
       isRendered = true;
@@ -135,7 +148,7 @@ var Notification = React.createClass({
     if(data.isError && !isRendered){
       notificationBottom = (
       <div className="notification__bottom">
-          <div className="notification__message notification__message--error">Fehler | <a onClick={this.errorRetryHandler}>Erneut</a> </div>
+          <div className="notification__message notification__message--error">{this.getTranslation("friendRequestErrorHappened")} | <a onClick={this.errorRetryHandler}>{this.getTranslation("retry")}</a> </div>
           {/*<div className="notification__message notification__message--error">{data.errorMessage}</div>*/}
       </div>
       );
