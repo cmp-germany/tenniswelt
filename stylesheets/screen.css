@@ -8364,7 +8364,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   background-color: lightgrey;
 }
 
-/* Köln header */
+/* K├╢ln header */
 /*.koln-header{display:inline-block;position:fixed;width:1200px;z-index:2000;float:left;height:120px;line-height:45px;background-image:url('/Upload/koeln-header_gray.jpg');}
 .koln-address{width:440px;margin-top:7px;float:right;line-height:20px;color:#fff;text-align:right;padding-right:15px;}
 .tsa-addressspan{display:inline-block;float:right;line-height:20px;color:#fff;margin-right:10px;padding:0;}
@@ -8383,7 +8383,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #KolnHeadTitle a{color:#fff;}
 .Deph3{border-top:none!important;padding-left:15px!important;line-height:15px!important;font-size:12px!important;padding-bottom:8px!important;}
 .Deph2{padding-left:10px!important;}*/
-/* Köln header END */
+/* K├╢ln header END */
 /* DefaultColor */
 /*.ItemSelected,.BgAlt,.comment-composer a.regular-button, .group-info  .styled-button, .addthis_button img, img[id^="imgLike_"], .tabs-wrapper .tabs li .selected,
 .PeopleSearch a, #user-profile-tabs, .tabs-wrapper .tabs li .selected, .logout_content, .people-search .options div.button-wrapper a, .chat-users .chat-users-header,
@@ -10410,19 +10410,21 @@ body a:hover {
   color: #fff;
   font-size: 16px;
   width: 100px;
+  display: inline-block;
+  text-align: center;
 }
 
-/* line 343, ../sass/_wall.sass */
+/* line 344, ../sass/_wall.sass */
 .wall-widget--info {
   color: #777;
 }
-/* line 345, ../sass/_wall.sass */
+/* line 346, ../sass/_wall.sass */
 .wall-widget--info .material-icons {
   font-size: 14px;
   vertical-align: middle;
 }
 
-/* line 349, ../sass/_wall.sass */
+/* line 350, ../sass/_wall.sass */
 .wall-widget--activities {
   margin-top: 0;
   padding: 0;
@@ -10430,19 +10432,20 @@ body a:hover {
   background-color: transparent;
 }
 
-/* line 355, ../sass/_wall.sass */
+/* line 356, ../sass/_wall.sass */
 .wall-post {
   margin-bottom: 50px;
 }
 
-/* line 358, ../sass/_wall.sass */
+/* line 359, ../sass/_wall.sass */
 .wall-widget--comment__input {
   margin-top: 7px;
   padding-top: 8px;
   border-top: solid 1px #ddd;
+  overflow: hidden;
 }
 
-/* line 363, ../sass/_wall.sass */
+/* line 365, ../sass/_wall.sass */
 .comment__input {
   margin-left: 5px;
   padding: 3px 5px;
@@ -10452,7 +10455,7 @@ body a:hover {
   outline: none;
 }
 
-/* line 371, ../sass/_wall.sass */
+/* line 373, ../sass/_wall.sass */
 .comment-button--loadmore {
   margin-left: auto;
   margin-right: auto;
@@ -10461,30 +10464,30 @@ body a:hover {
   margin-bottom: 8px;
 }
 
-/* line 378, ../sass/_wall.sass */
+/* line 380, ../sass/_wall.sass */
 .wall-widget--comment-section {
   background-color: #f9f9f9;
   width: 100%;
 }
 
-/* line 382, ../sass/_wall.sass */
+/* line 384, ../sass/_wall.sass */
 .wall-widget--comment {
   padding: 15px 20px 2px 20px;
 }
 
-/* line 385, ../sass/_wall.sass */
+/* line 387, ../sass/_wall.sass */
 .account-avatar--comment {
   width: 40px;
   display: inline-block;
   margin-bottom: 6px;
 }
 
-/* line 390, ../sass/_wall.sass */
+/* line 392, ../sass/_wall.sass */
 .comment-account-link {
   padding-right: 6px;
 }
 
-/* line 393, ../sass/_wall.sass */
+/* line 395, ../sass/_wall.sass */
 .comment-date {
   width: 100%;
   font-size: 12px;
@@ -10493,19 +10496,19 @@ body a:hover {
   margin-top: 3px;
   visibility: visible;
 }
-/* line 401, ../sass/_wall.sass */
+/* line 403, ../sass/_wall.sass */
 .comment-date .material-icons {
   font-size: 12px;
   vertical-align: middle;
   margin-top: -2px;
 }
 
-/* line 407, ../sass/_wall.sass */
+/* line 409, ../sass/_wall.sass */
 .wall-widget--comment:hover .comment-date {
   visibility: visible;
 }
 
-/* line 410, ../sass/_wall.sass */
+/* line 412, ../sass/_wall.sass */
 .wall-widget--comment__comment {
   padding-left: 5px;
   display: inline-block;
@@ -10515,7 +10518,7 @@ body a:hover {
   font-size: 12px;
 }
 
-/* line 420, ../sass/_wall.sass */
+/* line 422, ../sass/_wall.sass */
 .wall-widget--header {
   text-align: justify;
   /* ie 7 */
@@ -10523,7 +10526,7 @@ body a:hover {
   *-ms-text-justify: distribute-all-lines;
   *text-justify: distribute-all-lines;
 }
-/* line 427, ../sass/_wall.sass */
+/* line 429, ../sass/_wall.sass */
 .wall-widget--header::after {
   content: "";
   display: inline-block;
@@ -10533,7 +10536,7 @@ body a:hover {
   line-height: 0;
 }
 
-/* line 436, ../sass/_wall.sass */
+/* line 438, ../sass/_wall.sass */
 .wall-widget--header__left {
   display: inline-block;
   /* ie 7 */
@@ -10542,7 +10545,7 @@ body a:hover {
   *text-align: left;
 }
 
-/* line 443, ../sass/_wall.sass */
+/* line 445, ../sass/_wall.sass */
 .wall-widget--header__right {
   display: inline-block;
   float: right;
@@ -10552,7 +10555,7 @@ body a:hover {
   *text-align: right;
 }
 
-/* line 452, ../sass/_wall.sass */
+/* line 454, ../sass/_wall.sass */
 .wall-widget--activity-post {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -10560,42 +10563,42 @@ body a:hover {
   border-right-color: #eee;
   padding: 15px 22px;
 }
-/* line 459, ../sass/_wall.sass */
+/* line 461, ../sass/_wall.sass */
 .wall-widget--activity-post h4 {
   padding-left: 5px;
   font-size: 16px;
   display: inline-block;
 }
 
-/* line 464, ../sass/_wall.sass */
+/* line 466, ../sass/_wall.sass */
 .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 
-/* line 470, ../sass/_wall.sass */
+/* line 472, ../sass/_wall.sass */
 .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 474, ../sass/_wall.sass */
+/* line 476, ../sass/_wall.sass */
 .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 479, ../sass/_wall.sass */
+/* line 481, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 483, ../sass/_wall.sass */
+/* line 485, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 486, ../sass/_wall.sass */
+/* line 488, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -10604,27 +10607,27 @@ body a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 493, ../sass/_wall.sass */
+/* line 495, ../sass/_wall.sass */
 .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 496, ../sass/_wall.sass */
+/* line 498, ../sass/_wall.sass */
 .info p {
   margin-bottom: 3px;
 }
-/* line 499, ../sass/_wall.sass */
+/* line 501, ../sass/_wall.sass */
 .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 502, ../sass/_wall.sass */
+/* line 504, ../sass/_wall.sass */
 .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 508, ../sass/_wall.sass */
+/* line 510, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -10632,17 +10635,17 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 514, ../sass/_wall.sass */
+/* line 516, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
 }
-/* line 517, ../sass/_wall.sass */
+/* line 519, ../sass/_wall.sass */
 .wall-widget--partners header {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 521, ../sass/_wall.sass */
+/* line 523, ../sass/_wall.sass */
 .banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -10650,7 +10653,7 @@ body a:hover {
   height: auto;
 }
 
-/* line 527, ../sass/_wall.sass */
+/* line 529, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -10660,28 +10663,28 @@ body a:hover {
   padding: 2px 10px;
 }
 
-/* line 539, ../sass/_wall.sass */
+/* line 541, ../sass/_wall.sass */
 #MyWallMid .MiddleBlock {
   max-width: none;
 }
-/* line 542, ../sass/_wall.sass */
+/* line 544, ../sass/_wall.sass */
 #MyWallMid .wall {
   max-width: none;
 }
 
-/* line 547, ../sass/_wall.sass */
+/* line 549, ../sass/_wall.sass */
 #aspnetForm .wall-widget--filters .wall-widget--filter-select {
   margin-top: 15px;
 }
-/* line 550, ../sass/_wall.sass */
+/* line 552, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post {
   font-size: 14px;
 }
-/* line 551, ../sass/_wall.sass */
+/* line 553, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--info {
   font-size: 14px;
 }
-/* line 553, ../sass/_wall.sass */
+/* line 555, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--activity-post-text {
   font-size: 14px;
   margin-top: 20px;
@@ -11763,7 +11766,7 @@ body a:hover {
   color: #4DDD35;
 }
 
-/* Anpassungen für die Plattform */
+/* Anpassungen f├╝r die Plattform */
 /* line 56, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
