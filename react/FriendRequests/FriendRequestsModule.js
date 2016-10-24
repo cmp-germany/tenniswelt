@@ -287,7 +287,7 @@ var FriendRequestsModule = React.createClass({
           <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badge}>people_outline</i>
         </a>
 
-        <div className="notification-container collapse" id="friend-requests">
+        <div className="notification-container scrollable-notifications collapse" id="friend-requests">
           {notifications}
         </div>
       </div>
