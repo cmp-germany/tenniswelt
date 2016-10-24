@@ -8364,7 +8364,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   background-color: lightgrey;
 }
 
-/* K├╢ln header */
+/* Köln header */
 /*.koln-header{display:inline-block;position:fixed;width:1200px;z-index:2000;float:left;height:120px;line-height:45px;background-image:url('/Upload/koeln-header_gray.jpg');}
 .koln-address{width:440px;margin-top:7px;float:right;line-height:20px;color:#fff;text-align:right;padding-right:15px;}
 .tsa-addressspan{display:inline-block;float:right;line-height:20px;color:#fff;margin-right:10px;padding:0;}
@@ -8383,7 +8383,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #KolnHeadTitle a{color:#fff;}
 .Deph3{border-top:none!important;padding-left:15px!important;line-height:15px!important;font-size:12px!important;padding-bottom:8px!important;}
 .Deph2{padding-left:10px!important;}*/
-/* K├╢ln header END */
+/* Köln header END */
 /* DefaultColor */
 /*.ItemSelected,.BgAlt,.comment-composer a.regular-button, .group-info  .styled-button, .addthis_button img, img[id^="imgLike_"], .tabs-wrapper .tabs li .selected,
 .PeopleSearch a, #user-profile-tabs, .tabs-wrapper .tabs li .selected, .logout_content, .people-search .options div.button-wrapper a, .chat-users .chat-users-header,
@@ -11766,7 +11766,7 @@ body a:hover {
   color: #4DDD35;
 }
 
-/* Anpassungen f├╝r die Plattform */
+/* Anpassungen für die Plattform */
 /* line 56, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
@@ -14751,16 +14751,18 @@ html, body {
 .popup-invite form {
   background-color: rgba(19, 35, 51, 0.9);
   padding-bottom: 20px;
+  border: 1px solid #fff;
+  border-left: none;
 }
-/* line 48, ../sass/_invite-friends.sass */
+/* line 50, ../sass/_invite-friends.sass */
 .popup-invite .PopUp_header {
   height: 30px;
 }
-/* line 51, ../sass/_invite-friends.sass */
+/* line 53, ../sass/_invite-friends.sass */
 .popup-invite .Sendtofriend::before {
   margin-top: 2px;
 }
-/* line 55, ../sass/_invite-friends.sass */
+/* line 57, ../sass/_invite-friends.sass */
 .popup-invite .RegInput select, .popup-invite .RegInput input, .popup-invite .RegInput textarea {
   background-color: rgba(255, 255, 255, 0.95);
 }
