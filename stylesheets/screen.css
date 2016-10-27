@@ -8835,7 +8835,7 @@ body form {
   position: absolute;
   min-height: 0;
   width: 100%;
-  height: 30px;
+  height: 0 !important;
   background-color: transparent;
   color: #fff;
   font-size: 14px;
