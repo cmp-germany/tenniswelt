@@ -130,6 +130,10 @@ var FriendRequestsModule = React.createClass({
                     allData[index].isAccepted = true;
                     this.setState({friendRequests:allData});
                     this.removeWithTimeout(friendRequestId, TimeOut);
+                    if(typeof refreshChatUserList === "function"){
+                      refreshChatUserList(allData[index].UserId);
+                      refreshChatUserList(allData[index].FriendUserId);
+                    }
                 }
                 else{
                     allData[index].isLoading = false;
