@@ -11039,6 +11039,21 @@ body a:hover {
   font-size: 16px;
 }
 
+/* line 232, ../sass/_profile-about.sass */
+i.online-user {
+  color: #4DDD35;
+}
+
+/* line 235, ../sass/_profile-about.sass */
+i.offline-user {
+  color: #aaa;
+}
+
+/* line 238, ../sass/_profile-about.sass */
+i.chat-icon {
+  color: #fff;
+}
+
 /* line 1, ../sass/_profile-wall.sass */
 .button-block {
   font-size: 16px;
