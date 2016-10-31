@@ -267,7 +267,8 @@ var FriendRequestsModule = React.createClass({
                 onDecline={this.declineFriendRequest}
                 onError={this.handleError}
                 onErrorRetry={this.errorRetry}
-                languageResource={this.getTranslation}/>
+                languageResource={this.getTranslation}
+              />
             );
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
