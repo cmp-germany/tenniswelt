@@ -99,7 +99,6 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
   display: inline-block
   vertical-align: middle
   font-size: 18px
-  //max-width: 120px
   overflow: hidden
   color: #777
   padding-right: 20px
@@ -139,6 +138,9 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
 
 .profile-infos__map
 
+.profile-infos__members
+  +clearfix
+
 @media(max-width:767px)
   .profile-tabs--profile-navigation
     .profile-tabs__label
@@ -166,13 +168,13 @@ $avatar-sum: $avatar-size + $avatar-margin
 
 .MembersItem
   +make-xs-column(12)
-
   +clearfix
   @extend .profile-card__innerDiv
   height: auto
   position: relative
+  //??
   margin-bottom: 12px
-
+  //??
 
 
 .MembersAvatar, .MembersName, .MembersPosition, .MembersEmail, .MembersPhone
@@ -182,6 +184,9 @@ $avatar-sum: $avatar-size + $avatar-margin
 .MembersAvatar
   margin-right: $avatar-margin
 
+  .avatar
+    width: $avatar-size
+    height: $avatar-size
 
   .nav-avatar
     width: $avatar-size
@@ -223,3 +228,12 @@ $avatar-sum: $avatar-size + $avatar-margin
     &::after
       color: #777
       font-size: 16px
+
+i.online-user
+  color: #4DDD35
+
+i.offline-user
+  color: #aaa
+
+i.chat-icon
+  color: #fff

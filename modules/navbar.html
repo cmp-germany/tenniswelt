@@ -1,80 +1,110 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <!--<div class="container">-->
-   <!-- Brand and toggle get grouped for better mobile display -->
-   <div class="navbar-header container">
-
-     <a class="navbar-brand" href="#1">
-       <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
-     </a>
-
-     <button class="navbar__tab navbar__tab--wall navbar__tab--active" data-toggle="collapse" data-target="#tab__wall" aria-expanded="false">
-      <i class="material-icons">&#xE871;</i>
-     </button>
-
-     <button class="navbar__tab navbar__tab--matching" data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
-      <i class="material-icons">&#xE915;</i>
-     </button>
-
-     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__chat" aria-expanded="false">
-      <i class="material-icons">&#xE0CB;</i>
-     </button>
-
-     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__search" aria-expanded="false">
-       <i class="material-icons">&#xE8B6;</i>
-     </button>
-
-     <div class="navbar__section collapse navbar-collapse navbar-left" id="tab__search">
-       <div class="navbar__section__content">
-
-       <h4 class="navbar__section__title">Suche</h4>
-       <form class="navbar-form navbar-form--mobile">
-         <div class="form-group">
-           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
-         </div>
-         <div class="form-group">
-           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
-         </div>
-         <div class="form-group form-group--small">
-           <label class="form-control-label" for="form-control-range">150</label>
-           <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
-           <button type="submit" class="button--nav-search btn btn-important">
-             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-             Finden
-           </button>
-         </div>
-       </form>
+  <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header container">
+      <a class="navbar-brand" href="#1">
+        <span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>
+      </a>
+      <button class="navbar__tab navbar__tab--wall navbar__tab--active" data-toggle="collapse" data-target="#tab__wall" aria-expanded="false">
+       <i class="material-icons">&#xE871;</i>
+      </button>
+      <button class="navbar__tab navbar__tab--matching" data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
+       <i class="material-icons">&#xE915;</i>
+      </button>
+      <button class="navbar__tab" data-toggle="collapse" data-target="#tab__chat" aria-expanded="false">
+       <i class="material-icons">&#xE0CB;</i>
+      </button>
+      <button class="navbar__tab" data-toggle="collapse" data-target="#tab__search" aria-expanded="false">
+        <i class="material-icons">&#xE8B6;</i>
+      </button>
+      <div class="navbar__section collapse navbar-collapse navbar-left" id="tab__search">
+        <div class="navbar__section__content">
+          <h4 class="navbar__section__title">Suche</h4>
+          <form class="navbar-form navbar-form--mobile">
+            <div class="form-group">
+              <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
+            </div>
+            <div class="form-group form-group--small">
+              <label class="form-control-label" for="form-control-range">150</label>
+              <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+              <button type="submit" class="button--nav-search btn btn-important">
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                Finden
+              </button>
+            </div>
+          </form>
         </div>
-     </div><!-- /.navbar-collapse -->
-
-     <button class="navbar__tab navbar__tab--always navbar__tab--profile" data-toggle="collapse" data-target="#tab__profile-options" aria-expanded="false">
-       <img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
-       <span class="caret"></span>
-     </button>
-
-     <button class="navbar__tab navbar__tab--search" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-       s
-     </button>
+      </div><!-- /.navbar-collapse -->
 
 
+      <button class="navbar__tab navbar__tab--always navbar__tab--profile" data-toggle="collapse" data-target="#tab--profile-options" aria-expanded="false">
+        <img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+        <span class="caret"></span>
+      </button>
+
+      <!--<button class="navbar__tab navbar__tab--notification">
+        <i class="material-icons mdl-badge mdl-badge--overlap">notifications_none</i>
+      </button>
+
+      <div class="navbar-notification">
+        <button class="navbar__tab navbar__tab--notification" data-toggle="collapse" data-target="#chat-notifications" aria-expanded="false">
+          <i class="material-icons mdl-badge mdl-badge--overlap">chat_bubble_outline</i>
+        </button>
+        <div class="notification-container collapse" id="chat-notifications">
+
+          <div class="notification notification--chat notification--unread">
+            <div class="notification__left">
+              <img src="gfx/profilbilder/p7.jpg" alt="Profilbild" class="notification__avatar"/>
+            </div>
+            <div class="notification__right">
+              <div class="notification__top">
+                <h4 class="notification__name">Kai Gärtner wirklich langer Name</h4>
+                <i class="notification__online-status material-icons online-status online-status--online">radio_button_checked</i>
+                <div class="notification__time">14:59</div>
+              </div>
+              <div class="notification__bottom">
+                <div class="notification__message-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="notification__unread-messages-number">(2)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notification notification--chat">
+            <div class="notification__left">
+              <img src="gfx/profilbilder/p7.jpg" alt="Profilbild" class="notification__avatar"/>
+            </div>
+            <div class="notification__right">
+              <div class="notification__top">
+                <h4 class="notification__name">Kai Gärtner</h4>
+                <i class="notification__online-status material-icons online-status">radio_button_checked</i>
+                <div class="notification__time">14:59</div>
+              </div>
+              <div class="notification__bottom">
+                <div class="notification__message-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notification notification--load-more">
+            <div class="notification__spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+          </div>
+
+        </div>
+
+      </div>-->
+        <script type="text/javascript" src="data/webserviceBase.js"></script>
+        <div id="FriendRequestsModuleRoot"></div>
+
+      <button class="navbar__tab navbar__tab--search" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        s
+      </button>
 
 
-     <!--<div style="float: right" class="dropdown">
-       <button class="btn btn-navbar dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    </div>
 
-       </button>
-       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-         <li><a href="#1">Nachrichten</a></li>
-         <li><a href="#1">Kontakt einladen</a></li>
-         <li><a href="#1">Einstellungen</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a href=".">Logout</a></li>
-       </ul>
-     </div>-->
-   </div>
-
-   <!-- Collect the nav links, forms, and other content for toggling -->
-
-  <!--</div><!-- /.container-fluid -->
 </nav>
 
 <div class="navbar__section navbar__section--matching collapse" style="" id="tab__matching">
@@ -276,20 +306,20 @@
   </div>
 </header>
 
-<nav class="navbar grand-navbar navbar-options collapse" id="tab__profile-options">
-   <div class="container">
+<nav class="navbar grand-navbar navbar-options collapse" id="tab--profile-options">
+  <div class="container">
     <div class="starters-navigation">
-     <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
-     <ul class="nav navbar-nav navbar-right">
-       <li class="starters-navigation__list-item"><a class="nav-button" href="messages.html"><i class="material-icons">&#xE0BE;</i> Nachrichten</a></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE80D;</i> Kontakt einladen</a></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE8B8;</i> Einstellungen</a></li>
-       <li role="separator" class="divider"></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="."><i class="material-icons">&#xE5C9;</i> Logout</a></li>
-     </ul>
+      <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="starters-navigation__list-item"><a class="nav-button" href="messages.html"><i class="material-icons">&#xE0BE;</i> Nachrichten</a></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE80D;</i> Kontakt einladen</a></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE8B8;</i> Einstellungen</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="."><i class="material-icons">&#xE5C9;</i> Logout</a></li>
+      </ul>
     </div>
-   </div>
- </nav>
+  </div>
+</nav>
 
 <nav class="navbar grand-navbar collapse navbar-collapse" id="navbar-collapse-1">
   <div class="container">

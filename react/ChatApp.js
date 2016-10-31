@@ -59,6 +59,21 @@ var ChatTab = React.createClass({
       return;
     }
     this.addMessage({user: "me", message: messageString});
+
+
+    $.ajax({
+      method: "GET",
+      url: "http://www.botlibre.com/rest/botlibre/form-chat",
+      data: {
+        instance: 14025522,
+        message: messageString,
+        application: '7149688237721015638'
+      }
+    })
+      .done(function( xml ) {
+        var messageString = xml.getElementsByTagName("message")["0"].childNodes["0"].data;
+        this.addMessage({user: this.props.partnerId, message: messageString});
+      }.bind(this));
   },
 
   componentDidMount: function() {
@@ -299,13 +314,7 @@ var ChatApp = React.createClass({
   },
 
   componentDidMount: function() {
-    this.signalR = {};
-    this.signalR.chat = $.connection.chat;
-    this.signalR.chat.connection.start({ transport: 'longPolling' }).always(function(e){
-      console.log('isCrossDomain: ' + this.signalR.chat.connection.isCrossDomain());
-      console.log(e);
-    }.bind(this));
-    //console.log("This is a test.");
+
   },
 
   render: function() {

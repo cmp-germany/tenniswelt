@@ -337,7 +337,8 @@ body
   color: #fff
   font-size: 16px
   width: 100px
-
+  display: inline-block
+  text-align: center
 
 
 .wall-widget--info
@@ -359,6 +360,7 @@ body
   margin-top: 7px
   padding-top: 8px
   border-top: solid 1px #ddd
+  overflow: hidden
 
 .comment__input
   margin-left: 5px
@@ -381,6 +383,7 @@ body
 
 .wall-widget--comment
   padding: 15px 20px 2px 20px
+  position: relative
 
 .account-avatar--comment
   width: 40px
@@ -414,7 +417,12 @@ body
   width: 83%
   width: calc(100% - 50px)
   font-size: 12px
+  padding-right: 20px
 
+.wall-widget--comment__delete
+  position: absolute
+  top: 20px
+  right: 20px
 
 
 .wall-widget--header

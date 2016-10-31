@@ -66,7 +66,7 @@ var replaceElements = function() {
 
   // When jQuery is loaded, wait for document to be ready
   checkReady(function($) {
-    $(document).ready(replaceElements);
+    //$(document).ready(replaceElements);
     $(document).ready(chatQuickFixes);
   });
 })();

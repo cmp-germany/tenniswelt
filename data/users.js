@@ -31,6 +31,47 @@ var users = {
   },
 
 
+  "green-gate": {
+    "id": "green-gate",
+    "name": "GreenGate AG",
+    "wallpaper": "gfx/wallpaper/wallpaper-green-gate.jpg",
+    "profileImage": "gfx/profilbilder/green-gate-logo.jpg",
+    "isCompanyProfile": true,
+    "companyInfo": {
+      "desc": "Die GreenGate AG mit Sitz in Windeck an der Sieg entwickelt seit dem Jahr 2000 hoch anpassungsfähige und innovative Softwarelösungen für die strategische Instandhaltung von Anlagen und Infrastrukturen. Schwerpunkte liegen auf den produzierenden Branchen (z.B.: Automobilzulieferer), und der Energie- und Wasserwirtschaft (z.B.: Stadtwerken).",
+      "name": "GreenGate AG",
+      "branche": "Softwarelösungen",
+      "mainLocation": "Windeck",
+      "country": "Deutschland",
+      "email": "info@greengate.de",
+      "tel": "+49 2243 92307 0",
+      "category": "Startup"
+    },
+    "mapData": {
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.751100718424!2d7.508347315743358!3d50.78018737952219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bebfdd58c96889%3A0x2db30323c8d022f2!2sAlte+Br%C3%BCcke+6%2C+51570+Windeck!5e0!3m2!1sde!2sde!4v1471512830308"
+    },
+    "street": "Alte Brücke 6",
+    "zip": "51570",
+    "city": "Windeck",
+    "website": "http://www.greengate.de/",
+    "timezone": "MESZ",
+    "keywords": [
+      "Information Technology",
+      "Information Technology - Supplies"
+    ],
+    "members": [
+      {
+        "id": "wolfgang-adams",
+        "name": "Wolfgang Adams",
+        "email": "w.adams@greengate.de",
+        "position": "Kommunikation",
+        "picture": "gfx/profilbilder/profilbild-adams.jpg",
+        "online": false
+      }
+    ]
+  },
+
+
   "stadt-koeln-startercenter": {
     "id": "stadt-koeln-startercenter",
     "name": "Stadt Köln Startercenter",
@@ -125,6 +166,21 @@ var users = {
     "zip": "50259",
     "city": "Pulheim",
     "website": "http://www.gfke.eu/",
+    "timezone": "MESZ",
+    "isOnline": false
+  },
+
+
+  "wolfgang-adams": {
+    "id": "wolfgang-adams",
+    "name": "Wolfgang Adams",
+    "wallpaper": "gfx/wallpaper/wallpaper-wolfgang-adams.jpg",
+    "profileImage": "gfx/profilbilder/profilbild-adams.jpg",
+    "isCompanyProfile": false,
+    "street": "Alte Brücke 6",
+    "zip": "51570",
+    "city": "Windeck",
+    "website": "",
     "timezone": "MESZ",
     "isOnline": false
   },

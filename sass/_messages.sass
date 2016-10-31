@@ -1,8 +1,141 @@
+html, body
+  height: 100%
 
-.msg-input
-  position: fixed
-  bottom: 0
+.msg-container
+  height: 100%
+  max-width: 1230px
+  padding-top: 20px
+  +display-flex(flex)
+  +xs
+    +flex-direction(column)
 
+  overflow-y: hidden
+
+$color-msg-conversations-border: #ebebeb
+
+
+.section-left--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  +align-self(flex-start)
+  min-width: 240px
+  margin: 0 15px
+  height: 100%
+
+.section-center--msg
+  +flex-grow(2)
+  +flex-basis(0)
+  margin: 0 15px
+  height: 100%
+
+.section-right--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  min-width: 240px
+  margin: 0 15px
+  height: 100%
+  +sm
+    display: none
+  +xs
+    display: none
+
+
+.wall-widget--msg
+  height: calc(100% - 40px)
+
+.wall-widget__content--scrollable
+  margin-left: -20px
+  margin-right: -20px
+  margin-top: -25px
+  padding: 25px 20px
+  overflow-y: auto
+  min-height: 0
+  height: auto
+  max-height: calc(100% - 46px)
+
+.wall-widget__content--full
+  padding: 0 !important
+
+.msg-conversation
+  height: 60px
+  box-sizing: content-box
+  padding-top: 10px
+  cursor: pointer
+  padding-left: 20px
+  padding-right: 20px
+  +display-flex(flex)
+  +flex-basis(auto)
+
+  &:last-child
+    .msg-conversation
+      &__right, &__center
+        border-bottom: none
+
+
+  &:hover
+    margin-top: -1px
+    padding-top: 11px
+    background-color: #f0f0f0
+
+  &--active
+    margin-top: -1px
+    padding-top: 11px
+    background-color: $color-msg-conversations-border
+
+  &__center
+    min-width: 0
+    border-bottom: 1px solid $color-msg-conversations-border
+    +flex-grow(1)
+    +display-flex(flex)
+    +flex-direction(column)
+    +justify-content(flex-start)
+
+  &__left
+    +flex-grow(0)
+    +flex-shrink(0)
+
+  &__right
+    +flex-grow(0)
+    +flex-shrink(0)
+    border-bottom: 1px solid $color-msg-conversations-border
+
+  &__avatar
+    width: 50px
+    margin-right: 10px
+
+  &__name
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    padding-bottom: 3px
+    font-size: medium
+
+  &__preview
+    color: #777
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  &__time
+    color: #777
+    font-size: 12px
+
+.section-center--msg
+  +display-flex(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(stretch)
+
+.msg-messages
+  +flex-grow(1)
+  +flex-shrink(1)
+
+  overflow-y: auto
+  margin-top: -20px
+  padding-top: 20px
+  padding-bottom: 20px
 
 
 .msg-message
@@ -65,6 +198,31 @@
       &__content
         text-align: right
         padding-top: 18px
+
+.msg-input-area
+  @extend .wall-widget
+  margin-top: 0
+  padding: 10px
+  +display-flex(flex)
+
+  &__text
+    +flex-grow(1)
+    border: none
+    resize: none
+    padding: 8px
+
+    &:focus
+      outline: none
+
+  &__send-a
+    margin-left: 10px
+    margin-bottom: 2.5px
+    +align-self(flex-end)
+    color: #333
+
+    &:hover, &:focus, &:active, &:visited
+      color: #333
+
 
 
 
