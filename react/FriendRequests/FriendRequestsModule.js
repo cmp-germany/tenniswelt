@@ -240,6 +240,7 @@ var FriendRequestsModule = React.createClass({
                   onDecline={this.declineFriendRequest}
                   onError={this.handleError}
                   onErrorRetry={this.errorRetry}
+                  currentLanguage={this.props.currentLanguage}
                   languageResource={this.getTranslation}/>
               );
           }.bind(this));
@@ -265,6 +266,7 @@ var FriendRequestsModule = React.createClass({
                 onDecline={this.declineFriendRequest}
                 onError={this.handleError}
                 onErrorRetry={this.errorRetry}
+                currentLanguage={this.props.currentLanguage}
                 languageResource={this.getTranslation}/>
             );
           }.bind(this));
