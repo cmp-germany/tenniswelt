@@ -1,10 +1,13 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
 var TimeAgo = require('react-timeago').default;
-import germanStrings from 'react-timeago/lib/language-strings/de-short';
-import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
 
 const formatter = buildFormatter(germanStrings);
+var languages = {
+  'de-DE': require('react-timeago/lib/language-strings/de-short'),
+  'en-US': require('react-timeago/lib/language-strings/en-short.js')
+};
+var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var Notification = React.createClass({
   mixins: [ CVM ],
