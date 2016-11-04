@@ -1,9 +1,10 @@
 var React = require('react');
 var MaterialDesignMixin = require('../../mixins/MaterialDesignMixin.js');
 var CVM = require("react-component-visibility");
+var TimerMixin = require('react-timer-mixin');
 
 var NotificationLoadMore = React.createClass({
-	mixins: [MaterialDesignMixin, CVM],
+	mixins: [MaterialDesignMixin, CVM, TimerMixin],
 
 	getInitialState: function() {
 		return {
@@ -11,13 +12,20 @@ var NotificationLoadMore = React.createClass({
 		}
 	},
 
+	componentDidMount() {
+		this.setInterval(this.componentVisibilityChanged, 500);
+	},
+
 	onLoadingDone: function() {
-		this.setState({isLoading: false});
+		if(this.isMounted()) {
+			this.setState({isLoading: false});
+		}
 	},
 
 	componentVisibilityChanged: function() {
     var visible = this.state.visible;
     if (visible && !this.state.isLoading && this.props.onLoadMore) {
+			this.setState({isLoading: true});
       this.props.onLoadMore(this.onLoadingDone);
     }
   },
@@ -29,5 +37,7 @@ var NotificationLoadMore = React.createClass({
 			</div>
 		);
 	}
+	
 });
+
 module.exports = NotificationLoadMore;

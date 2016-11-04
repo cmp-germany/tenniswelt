@@ -1,5 +1,5 @@
 window.serverpaths = {
-  "webserviceBase": "http://test_koelndemo.cmpg.eu:3000",
+  "webserviceBase": "http://test_koelndemo.cmpg.eu",
   "friendRequestsPaths": {
     "getActive": "/api/Friend/ActiveFriendRequests",
     "postIsSeen": "/api/Friend/SetSeenState",
@@ -7,5 +7,5 @@ window.serverpaths = {
     "decline": "/api/Friend/DeleteFriendRequest"
   }
 }
-window.userId = "496E3F91-EDDE-4929-8A83-A5B800CB9397";
+window.currentUserId = "496E3F91-EDDE-4929-8A83-A5B800CB9397";
 window.currentLanguage = "en-US";
