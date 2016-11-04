@@ -1,11 +1,9 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
 var TimeAgo = require('react-timeago').default;
-
-const formatter = buildFormatter(germanStrings);
 var languages = {
-  'de-DE': require('react-timeago/lib/language-strings/de-short'),
-  'en-US': require('react-timeago/lib/language-strings/en-short.js')
+  'de-DE': require('react-timeago/lib/language-strings/de-short').default,
+  'en-US': require('react-timeago/lib/language-strings/en-short.js').default
 };
 var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
@@ -14,7 +12,8 @@ var Notification = React.createClass({
 
   getInitialState: function() {
     return {
-      IsSeen: this.props.data.IsSeen
+      IsSeen: this.props.data.IsSeen,
+      formatter: buildFormatter(languages[this.props.currentLanguage])
     }
   },
 
@@ -161,7 +160,7 @@ var Notification = React.createClass({
     //when there is no time value, ignore it
     var timeAgo = "";
     if (data.DateCreatedUtc) {
-      timeAgo = (<TimeAgo date={data.DateCreatedUtc} formatter={formatter} />);
+      timeAgo = (<TimeAgo date={data.DateCreatedUtc} formatter={this.state.formatter} />);
     }
 
     return (
