@@ -37,49 +37,38 @@ var FriendRequestsModule = React.createClass({
 
   loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
-    this.serverRequest = $.get(
-      getAllFriendRequestsUrl,
-      {
-        userid: this.props.userId,
-        currentLanguage: this.props.currentLanguage,
-        pageNumber: pageNumber,
-        pageSize: this.props.pageSize
-      },
-      function (result) {
-        if(result.success){
+    this.serverRequest = $.get(getAllFriendRequestsUrl, {
+      userid: this.props.userId,
+      currentLanguage: this.props.currentLanguage,
+      pageNumber: pageNumber,
+      pageSize: this.props.pageSize
+    }, function(result) {
+      if (result.success) {
 
-          var friendRequests;
-          friendRequests = this.state.friendRequests;
-          Array.prototype.push.apply(friendRequests, result.data.friendRequests);
+        var friendRequests;
+        friendRequests = this.state.friendRequests;
+        Array.prototype.push.apply(friendRequests, result.data.friendRequests);
 
-          var newState;
-          if (friendRequests.length < result.data.allCount) {
-            newState = "loadMore";
-          } else {
-            newState = "loaded";
-          }
-          this.setState({
-            currentState: newState,
-            unseenRequestsCount: result.data.unseenRequestsCount,
-            friendRequests: friendRequests,
-            allCount: result.data.allCount,
-            languageResource: result.data.languageResource
-          });
-
-          if (onLoadingDone) {
-            onLoadingDone();
-          }
-
+        var newState;
+        if (friendRequests.length < result.data.allCount) {
+          newState = "loadMore";
+        } else {
+          newState = "loaded";
         }
-        else{
-          var error = null;
-          if(result)
-            error = result.data;
-          this.setState({currentState: "error", errorMessage: error });
+        this.setState({currentState: newState, unseenRequestsCount: result.data.unseenRequestsCount, friendRequests: friendRequests, allCount: result.data.allCount, languageResource: result.data.languageResource});
+
+        if (onLoadingDone) {
+          onLoadingDone();
         }
-      }.bind(this)
-    ).fail(function(jqXHR, textStatus, errorThrown){
-      this.setState({currentState: "error", errorMessage: textStatus });
+
+      } else {
+        var error = null;
+        if (result)
+          error = result.data;
+        this.setState({currentState: "error", errorMessage: error});
+      }
+    }.bind(this)).fail(function(jqXHR, textStatus, errorThrown) {
+      this.setState({currentState: "error", errorMessage: textStatus});
     }.bind(this));
   },
 
@@ -97,7 +86,6 @@ var FriendRequestsModule = React.createClass({
   componentWillUnmount: function() {
     this.serverRequest.abort();
   },
-
 
   removeWithTimeout: function(friendRequestId, timeOut) {
     setTimeout(function() {
@@ -193,47 +181,57 @@ var FriendRequestsModule = React.createClass({
     var badge;
 
     switch (this.state.currentState) {
-      case "error": {
-        var errorMessage = "error";
-        if (this.state.errorMessage)
-          errorMessage = this.state.errorMessage;
-        notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage={errorMessage} onReload={this.onReload}/>;
-        badge = "!";
-      } break;
+      case "error":
+        {
+          var errorMessage = "error";
+          if (this.state.errorMessage)
+            errorMessage = this.state.errorMessage;
+          notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage={errorMessage} onReload={this.onReload}/>;
+          badge = "!";
+        }
+        break;
 
-      case "initLoading": {
-        notifications = <NotificationLoadMore/>;
-        badge = null;
-      } break;
+      case "initLoading":
+        {
+          notifications = <NotificationLoadMore/>;
+          badge = null;
+        }
+        break;
 
-      case "loaded": {
-        notifications = this.state.friendRequests.map(function(data) {
-          if (data.DateAccepted) {
-            return;
+      case "loaded":
+        {
+          notifications = this.state.friendRequests.map(function(data) {
+            if (data.DateAccepted) {
+              return;
+            }
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+          }.bind(this));
+          if (this.state.friendRequests.length == 0) {
+            notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>
           }
-          return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} languageResource={this.getTranslation}/>);
-        }.bind(this));
-        if (this.state.friendRequests.length == 0) {
-          notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>
+          badge = this.state.unseenRequestsCount;
         }
-      } break;
+        break;
 
-      case "loadMore" : {
-        notifications = this.state.friendRequests.map(function(data) {
-          if (data.DateAccepted) {
-            return;
+      case "loadMore":
+        {
+          notifications = this.state.friendRequests.map(function(data) {
+            if (data.DateAccepted) {
+              return;
+            }
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+          }.bind(this));
+          if (this.state.friendRequests.length == 0) {
+            notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>;
           }
-          return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} languageResource={this.getTranslation}/>);
-        }.bind(this));
-        if (this.state.friendRequests.length == 0) {
-          notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>;
+          if (Array.isArray(notifications)) {
+            notifications.push(<NotificationLoadMore key="loadMore" onLoadMore={this.onLoadMore}/>);
+          } else {
+            notifications = (<NotificationLoadMore/>);
+          }
+          badge = this.state.unseenRequestsCount;
         }
-        if (Array.isArray(notifications)) {
-          notifications.push(<NotificationLoadMore key="loadMore" onLoadMore={this.onLoadMore}/>);
-        } else {
-          notifications = (<NotificationLoadMore/>);
-        }
-      } break;
+        break;
 
     }
 
