@@ -14,8 +14,8 @@ function initReactComponents() {
       currentLanguage={window.currentLanguage}
       webserviceBase={window.serverpaths.webserviceBase}
       servicePaths={window.serverpaths.friendRequestsPaths}
-      pageSize="5"
-    />, 
+      pageSize="2"
+    />,
     document.getElementById('FriendRequestsModuleRoot')
   );
 }

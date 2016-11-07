@@ -1,5 +1,5 @@
 window.serverpaths = {
-  "webserviceBase": "http://localhost:3000",
+  "webserviceBase": "http://test_koelndemo.cmpg.eu",
   "friendRequestsPaths": {
     "getActive": "/api/Friend/ActiveFriendRequests",
     "postIsSeen": "/api/Friend/SetSeenState",

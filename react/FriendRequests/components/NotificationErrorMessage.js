@@ -9,6 +9,7 @@ var NotificationErrorMessage = React.createClass({
     }
     catch(err){
       console.log(word + " is not translated!");
+      return word;
     }
   },
   render: function(){
