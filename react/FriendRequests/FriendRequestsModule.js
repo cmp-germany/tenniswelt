@@ -96,6 +96,13 @@ var FriendRequestsModule = React.createClass({
     this.setState({friendRequests: allData});
   },
 
+  removeFriendRequest: function(friendRequestId) {
+    var allData = this.state.friendRequests;
+    var index = allData.findIndex(x => x.Id === friendRequestId);
+    allData.splice(index, 1);
+    this.setState({allData});
+  },
+
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
     var friendRequest = this.getFriendRequest(friendRequestId);
     friendRequest.IsSeen = true;
@@ -113,10 +120,7 @@ var FriendRequestsModule = React.createClass({
 
   removeWithTimeout: function(friendRequestId, timeOut) {
     setTimeout(function() {
-      var allData = this.state.friendRequests;
-      var index = allData.findIndex(x => x.Id === friendRequestId);
-      allData.splice(index, 1);
-      this.setState({allData});
+      this.removeFriendRequest(friendRequestId);
     }.bind(this), timeOut);
   },
 
