@@ -125,27 +125,26 @@ var FriendRequestsModule = React.createClass({
   },
 
   acceptFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isLoading = true;
-    this.setState({friendRequests: allData});
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isLoading = true;
+    this.setFriendRequest(friendRequest);
     var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.accept;
     $.post(acceptFriendRequestUrl, {
       friendRequestId: friendRequestId
     }, function(result) {
       if (result.success) {
-        allData[index].isLoading = false;
-        allData[index].isAccepted = true;
-        this.setState({friendRequests: allData});
+        friendRequest.isLoading = false;
+        friendRequest.isAccepted = true;
+        this.setFriendRequest(friendRequest);
         this.removeWithTimeout(friendRequestId, TimeOut);
         if (typeof refreshChatUserList === "function") {
-          refreshChatUserList(allData[index].UserId);
-          refreshChatUserList(allData[index].FriendUserId);
+          refreshChatUserList(friendRequest.UserId);
+          refreshChatUserList(friendRequest.FriendUserId);
         }
       } else {
-        allData[index].isLoading = false;
-        allData[index].isError = true;
-        this.setState({friendRequests: allData});
+        friendRequest.isLoading = false;
+        friendRequest.isError = true;
+        this.setFriendRequest(friendRequest);
       }
     }.bind(this));
   },
