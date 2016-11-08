@@ -84,12 +84,19 @@ var FriendRequestsModule = React.createClass({
     this.loadData(loadPageNumber, onLoadingDone);
   },
 
-  onSeen: function(friendRequestId) {
+  onSeen: function(friendRequestId, unseenRequestsCount = null) {
+    console.log('onSeen is called. friendRequestId: ', friendRequestId);
     var allData = this.state.friendRequests;
+    console.log('allData: ', allData);
     var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isSeen = true;
+    console.log('index: ', index);
+    allData[index].IsSeen = true;
     this.setState({allData});
-    this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
+    if (unseenRequestsCount) {
+      this.setState({unseenRequestsCount});
+    } else {
+      this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
+    }
   },
 
   componentWillUnmount: function() {

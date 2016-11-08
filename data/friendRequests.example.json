@@ -1,8 +1,8 @@
 {
   "success": true,
   "data": {
-    "unseenRequestsCount": 0,
-    "allCount": 7,
+    "unseenRequestsCount": 1,
+    "allCount": 2,
     "friendRequests": [
       {
         "Id": "ba194f49-33f1-4386-9ac8-8c41f5fc13e2",
@@ -23,7 +23,7 @@
         "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
         "DateCreated": "2016-10-21T14:45:32.247",
         "DateAccepted": null,
-        "IsSeen": true,
+        "IsSeen": false,
         "IsAccepted": false,
         "ProfilePicture": "/Upload/user/AvatarImage/bd3eae8a-9a98-415d-b718-a63b0107d8c0/bd3eae8a-9a98-415d-b718-a63b0107d8c0_m.Jpeg",
         "ShownName": "Kevin Gyamfi",

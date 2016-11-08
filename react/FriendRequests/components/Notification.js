@@ -29,11 +29,10 @@ var Notification = React.createClass({
           seen: true
         },
         function(result){
-          if (result.succes) {
-            console.log(result);
+          if (result.success) {
             this.props.onSeen(this.props.data.Id);
           }
-        }
+        }.bind(this)
       ).fail(function (result){
         console.error(result);
       });
