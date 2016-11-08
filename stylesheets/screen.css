@@ -8365,7 +8365,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   background-color: lightgrey;
 }
 
-/* Köln header */
+/* K├╢ln header */
 /*.koln-header{display:inline-block;position:fixed;width:1200px;z-index:2000;float:left;height:120px;line-height:45px;background-image:url('/Upload/koeln-header_gray.jpg');}
 .koln-address{width:440px;margin-top:7px;float:right;line-height:20px;color:#fff;text-align:right;padding-right:15px;}
 .tsa-addressspan{display:inline-block;float:right;line-height:20px;color:#fff;margin-right:10px;padding:0;}
@@ -8384,7 +8384,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #KolnHeadTitle a{color:#fff;}
 .Deph3{border-top:none!important;padding-left:15px!important;line-height:15px!important;font-size:12px!important;padding-bottom:8px!important;}
 .Deph2{padding-left:10px!important;}*/
-/* Köln header END */
+/* K├╢ln header END */
 /* DefaultColor */
 /*.ItemSelected,.BgAlt,.comment-composer a.regular-button, .group-info  .styled-button, .addthis_button img, img[id^="imgLike_"], .tabs-wrapper .tabs li .selected,
 .PeopleSearch a, #user-profile-tabs, .tabs-wrapper .tabs li .selected, .logout_content, .people-search .options div.button-wrapper a, .chat-users .chat-users-header,
@@ -11862,7 +11862,7 @@ i.chat-icon {
   color: #4DDD35;
 }
 
-/* Anpassungen für die Plattform */
+/* Anpassungen f├╝r die Plattform */
 /* line 56, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
@@ -14454,9 +14454,29 @@ html, body {
   height: 100%;
   padding: 8px;
   font-size: 14px;
-  width: 80%;
+  width: 65%;
 }
 /* line 226, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .type-message .attach-file {
+  width: 15%;
+  margin: 0;
+  color: #E9002F;
+  text-align: center;
+  height: 100%;
+  float: left;
+  line-height: 38px;
+  padding: 0px 6px;
+  background: none;
+  border: 0;
+  border-left: 1px solid #E9002F;
+  border-right: 1px solid #E9002F;
+}
+/* line 239, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .type-message .attach-file:hover {
+  background-color: #E9002F;
+  color: #ffffff;
+}
+/* line 243, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message .chat-send {
   width: 20%;
   margin: 0;
@@ -14465,25 +14485,26 @@ html, body {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   height: 100%;
+  line-height: 48px;
 }
-/* line 234, ../sass/_chat-design.sass */
+/* line 252, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message .chat-send:hover {
   background-color: #E9002F;
   color: #ffffff;
 }
 
 @media(max-width:767px) {
-  /* line 240, ../sass/_chat-design.sass */
+  /* line 258, ../sass/_chat-design.sass */
   .main-chat-container.collapse {
     display: none;
   }
-  /* line 242, ../sass/_chat-design.sass */
+  /* line 260, ../sass/_chat-design.sass */
   .main-chat-container.collapse.in {
     display: block;
     height: 100%;
     background-color: #f9f9f9;
   }
-  /* line 246, ../sass/_chat-design.sass */
+  /* line 264, ../sass/_chat-design.sass */
   .main-chat-container.collapse.in::after {
     content: "Kein Chat aktiv.";
     display: block;
@@ -14492,7 +14513,7 @@ html, body {
     left: 10px;
   }
 
-  /* line 254, ../sass/_chat-design.sass */
+  /* line 272, ../sass/_chat-design.sass */
   .chat-users {
     position: fixed;
     float: left;
@@ -14500,14 +14521,14 @@ html, body {
     box-shadow: none;
     z-index: 7002;
   }
-  /* line 262, ../sass/_chat-design.sass */
+  /* line 280, ../sass/_chat-design.sass */
   .chat-users .chat-users-body .user-list {
     height: 320px;
     height: calc(100vh - 137px);
     max-height: none;
   }
 
-  /* line 267, ../sass/_chat-design.sass */
+  /* line 285, ../sass/_chat-design.sass */
   .chat-sessions {
     position: static;
     margin-bottom: 30px;
@@ -14518,22 +14539,22 @@ html, body {
     padding: 0;
     border-radius: 0;
   }
-  /* line 277, ../sass/_chat-design.sass */
+  /* line 295, ../sass/_chat-design.sass */
   .chat-sessions .chat-session {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 30px;
   }
-  /* line 282, ../sass/_chat-design.sass */
+  /* line 300, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-session-header {
     display: none;
   }
-  /* line 284, ../sass/_chat-design.sass */
+  /* line 302, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-session-header.chat-active {
     display: block;
   }
-  /* line 286, ../sass/_chat-design.sass */
+  /* line 304, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-message-holder {
     height: 290px;
     height: calc(100vh - 160px);
