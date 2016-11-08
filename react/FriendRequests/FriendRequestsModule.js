@@ -37,7 +37,6 @@ var FriendRequestsModule = React.createClass({
 
   loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
-    var getAllFriendRequestsUrl = "data/friendRequests.example.json";
     this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
       userid: this.props.userId,
       currentLanguage: this.props.currentLanguage,
@@ -85,11 +84,8 @@ var FriendRequestsModule = React.createClass({
   },
 
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
-    console.log('onSeen is called. friendRequestId: ', friendRequestId);
     var allData = this.state.friendRequests;
-    console.log('allData: ', allData);
     var index = allData.findIndex(x => x.Id === friendRequestId);
-    console.log('index: ', index);
     allData[index].IsSeen = true;
     this.setState({allData});
     if (unseenRequestsCount) {

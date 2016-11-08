@@ -18,10 +18,7 @@ var Notification = React.createClass({
 
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
-    console.log('visible: ', visible);
-    console.log('this.props.data.IsSeen: ', this.props.data.IsSeen);
     if (visible && !this.props.data.IsSeen) {
-      console.log("NOW!");
       $.post(
         this.props.webserviceBase + this.props.servicePaths.postIsSeen,
         {
@@ -31,11 +28,19 @@ var Notification = React.createClass({
         function(result){
           if (result.success) {
             this.props.onSeen(this.props.data.Id);
+          } else {
+            console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
+            console.error("jqXHR: ", jqXHR);
+            console.error("textStatus: ", textStatus);
+            console.error("errorThrown: ", errorThrown);
           }
         }.bind(this)
-      ).fail(function (result){
-        console.error(result);
-      });
+      ).fail(function (jqXHR, textStatus, errorThrown){
+        console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
+        console.error("jqXHR: ", jqXHR);
+        console.error("textStatus: ", textStatus);
+        console.error("errorThrown: ", errorThrown);
+      }.bind(this));
     }
   },
 
