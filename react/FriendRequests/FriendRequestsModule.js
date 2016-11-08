@@ -105,13 +105,13 @@ var FriendRequestsModule = React.createClass({
 
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
     var friendRequest = this.getFriendRequest(friendRequestId);
-    friendRequest.IsSeen = true;
-    this.setFriendRequest(friendRequest);
     if (unseenRequestsCount) {
       this.setState({unseenRequestsCount});
-    } else {
+    } else if (!friendRequest.IsSeen) {
       this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
     }
+    friendRequest.IsSeen = true;
+    this.setFriendRequest(friendRequest);
   },
 
   componentWillUnmount: function() {
@@ -125,6 +125,7 @@ var FriendRequestsModule = React.createClass({
   },
 
   acceptFriendRequest: function(friendRequestId) {
+    this.onSeen(friendRequestId);
     var friendRequest = this.getFriendRequest(friendRequestId);
     friendRequest.isLoading = true;
     this.setFriendRequest(friendRequest);
@@ -150,30 +151,30 @@ var FriendRequestsModule = React.createClass({
   },
 
   declineFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isLoading = true;
-    this.setState({allData});
+    this.onSeen(friendRequestId);
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isLoading = true;
+    this.setFriendRequest(friendRequest);
     var declineFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
     try {
       $.post(declineFriendRequestUrl, {
         friendRequestId: friendRequestId
       }, function(result) {
         if (result.success) {
-          allData[index].isLoading = false;
-          allData[index].isDeleted = true;
-          this.setState({allData});
+          friendRequest.isLoading = false;
+          friendRequest.isDeleted = true;
+          this.setFriendRequest(friendRequest);
           this.removeWithTimeout(friendRequestId, TimeOut);
         } else {
-          allData[index].isLoading = false;
-          allData[index].isError = true;
-          this.setState({friendRequests: allData});
+          friendRequest.isLoading = false;
+          friendRequest.isError = true;
+          this.setFriendRequest(friendRequest);
         }
       }.bind(this));
     } catch (e) {
-      allData[index].isLoading = false;
-      allData[index].isError = true;
-      this.setState({friendRequests: allData});
+      friendRequest.isLoading = false;
+      friendRequest.isError = true;
+      this.setFriendRequest(friendRequest);
     }
   },
 
