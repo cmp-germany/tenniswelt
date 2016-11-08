@@ -180,15 +180,14 @@ var FriendRequestsModule = React.createClass({
 
   handleError: function(friendRequestId, errorMessage) {
     var message = friendRequestId + ' has error: ' + errorMessage;
-    console.log(message);
+    console.error(message);
     //Todo: handle error in a better way please.
     if (this.state) {
       if (this.state.friendRequests) {
-        var allData = this.state.friendRequests;
-        var index = allData.findIndex(x => x.Id === friendRequestId);
-        allData[index].isError = true;
-        allData[index].errorMessage = message;
-        this.setState({allData});
+        var friendRequest = this.getFriendRequest(friendRequestId);
+        friendRequest.isError = true;
+        friendRequest.errorMessage = message;
+        this.setFriendRequest(friendRequest);
       }
     }
   },
