@@ -12,19 +12,27 @@ var Notification = React.createClass({
 
   getInitialState: function() {
     return {
-      IsSeen: this.props.data.IsSeen,
       formatter: buildFormatter(languages[this.props.currentLanguage])
     }
   },
 
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
+    console.log('visible: ', visible);
+    console.log('this.props.data.IsSeen: ', this.props.data.IsSeen);
     if (visible && !this.props.data.IsSeen) {
+      console.log("NOW!");
       $.post(
         this.props.webserviceBase + this.props.servicePaths.postIsSeen,
         {
           friendRequestId: this.props.data.Id,
           seen: true
+        },
+        function(result){
+          if (result.succes) {
+            console.log(result);
+            this.props.onSeen(this.props.data.Id);
+          }
         }
       ).fail(function (result){
         console.error(result);
@@ -57,10 +65,10 @@ var Notification = React.createClass({
       this.errorHandler(id, err, 'acceptHandler');
     }
   },
-  
+
   declineHandler: function(){
     try{
-      this.props.onDecline(this.props.data.Id); 
+      this.props.onDecline(this.props.data.Id);
     }
     catch(err){
       var id = 0;
@@ -83,7 +91,7 @@ var Notification = React.createClass({
       this.errorHandler(id, err, 'errorRetryHandler');
     }
   },
-  
+
   getTranslation: function(word){
     if(!word)return "";
     try{
@@ -109,7 +117,7 @@ var Notification = React.createClass({
     );
 
     //Highlight, if not seen
-    if (!this.state.IsSeen) {
+    if (!this.props.data.IsSeen) {
       containerClassName += " notification--unread";
     }
 
