@@ -37,7 +37,7 @@ var FriendRequestsModule = React.createClass({
 
   loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
-    this.serverRequest = $.get(getAllFriendRequestsUrl, {
+    this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
       userid: this.props.userId,
       currentLanguage: this.props.currentLanguage,
       pageNumber: pageNumber,
@@ -81,6 +81,18 @@ var FriendRequestsModule = React.createClass({
 
     // loadData. Call the function onLoadingDone after Loading is done
     this.loadData(loadPageNumber, onLoadingDone);
+  },
+
+  onSeen: function(friendRequestId, unseenRequestsCount = null) {
+    var allData = this.state.friendRequests;
+    var index = allData.findIndex(x => x.Id === friendRequestId);
+    allData[index].IsSeen = true;
+    this.setState({allData});
+    if (unseenRequestsCount) {
+      this.setState({unseenRequestsCount});
+    } else {
+      this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
+    }
   },
 
   componentWillUnmount: function() {
@@ -204,7 +216,7 @@ var FriendRequestsModule = React.createClass({
             if (data.DateAccepted) {
               return;
             }
-            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
             notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>
@@ -219,7 +231,7 @@ var FriendRequestsModule = React.createClass({
             if (data.DateAccepted) {
               return;
             }
-            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
             notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>;

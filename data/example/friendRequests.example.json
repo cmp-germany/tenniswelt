@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "data": {
+    "unseenRequestsCount": 1,
+    "allCount": 2,
+    "friendRequests": [
+      {
+        "Id": "ba194f49-33f1-4386-9ac8-8c41f5fc13e2",
+        "UserId": "29d56968-91e1-4653-8393-a6950134c5c4",
+        "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "DateCreated": "2016-10-28T15:24:51.403",
+        "DateAccepted": null,
+        "IsSeen": true,
+        "IsAccepted": false,
+        "ProfilePicture": "/Upload/user/AvatarImage/29d56968-91e1-4653-8393-a6950134c5c4/29d56968-91e1-4653-8393-a6950134c5c4_m.Jpeg",
+        "ShownName": "Younis Waleed",
+        "TimeUtcMillieseconds": 1477664691403,
+        "DateCreatedUtc": "2016-10-28T14:24:51.403Z"
+      },
+      {
+        "Id": "03fc290c-4218-489a-b9d1-ce9b120f58f6",
+        "UserId": "bd3eae8a-9a98-415d-b718-a63b0107d8c0",
+        "FriendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "DateCreated": "2016-10-21T14:45:32.247",
+        "DateAccepted": null,
+        "IsSeen": false,
+        "IsAccepted": false,
+        "ProfilePicture": "/Upload/user/AvatarImage/bd3eae8a-9a98-415d-b718-a63b0107d8c0/bd3eae8a-9a98-415d-b718-a63b0107d8c0_m.Jpeg",
+        "ShownName": "Kevin Gyamfi",
+        "TimeUtcMillieseconds": 1477057532247,
+        "DateCreatedUtc": "2016-10-21T13:45:32.247Z"
+      }
+    ],
+    "languageResource": {
+      "acceptFriend": "Accept",
+      "declineFriend": "Decline",
+      "friendRequestAccepted": "Request Accepted",
+      "friendRequestDeclined": "Request Denied",
+      "friendRequestErrorHappened": "Error",
+      "retry": "Retry"
+    }
+  }
+}

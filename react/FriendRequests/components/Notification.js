@@ -12,7 +12,6 @@ var Notification = React.createClass({
 
   getInitialState: function() {
     return {
-      IsSeen: this.props.data.IsSeen,
       formatter: buildFormatter(languages[this.props.currentLanguage])
     }
   },
@@ -25,10 +24,23 @@ var Notification = React.createClass({
         {
           friendRequestId: this.props.data.Id,
           seen: true
-        }
-      ).fail(function (result){
-        console.error(result);
-      });
+        },
+        function(result){
+          if (result.success) {
+            this.props.onSeen(this.props.data.Id);
+          } else {
+            console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
+            console.error("jqXHR: ", jqXHR);
+            console.error("textStatus: ", textStatus);
+            console.error("errorThrown: ", errorThrown);
+          }
+        }.bind(this)
+      ).fail(function (jqXHR, textStatus, errorThrown){
+        console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
+        console.error("jqXHR: ", jqXHR);
+        console.error("textStatus: ", textStatus);
+        console.error("errorThrown: ", errorThrown);
+      }.bind(this));
     }
   },
 
@@ -57,10 +69,10 @@ var Notification = React.createClass({
       this.errorHandler(id, err, 'acceptHandler');
     }
   },
-  
+
   declineHandler: function(){
     try{
-      this.props.onDecline(this.props.data.Id); 
+      this.props.onDecline(this.props.data.Id);
     }
     catch(err){
       var id = 0;
@@ -83,7 +95,7 @@ var Notification = React.createClass({
       this.errorHandler(id, err, 'errorRetryHandler');
     }
   },
-  
+
   getTranslation: function(word){
     if(!word)return "";
     try{
@@ -109,7 +121,7 @@ var Notification = React.createClass({
     );
 
     //Highlight, if not seen
-    if (!this.state.IsSeen) {
+    if (!this.props.data.IsSeen) {
       containerClassName += " notification--unread";
     }
 
