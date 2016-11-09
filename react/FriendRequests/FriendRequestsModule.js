@@ -193,10 +193,9 @@ var FriendRequestsModule = React.createClass({
   },
 
   errorRetry: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isError = false;
-    this.setState({allData});
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isError = false;
+    this.setFriendRequest(friendRequest);
   },
 
   mainIconClicked: function() {
