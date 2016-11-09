@@ -85,22 +85,36 @@ var FriendRequestsModule = React.createClass({
 
   getFriendRequest: function(friendRequestId) {
     var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    return allData[index];
+    var friendRequest;
+    allData.forEach(function(tempFriendRequest) {
+      if (tempFriendRequest.Id == friendRequestId) {
+        friendRequest = tempFriendRequest;
+      }
+    });
+    if (!friendRequest) {
+      console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
+    }
+    return friendRequest;
   },
 
   setFriendRequest: function(friendRequest) {
     var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequest.Id);
-    allData[index] = friendRequest;
+    allData.forEach(function(tempFriendRequest, index, array) {
+      if (tempFriendRequest.Id == friendRequest.Id) {
+        array[index] = friendRequest;
+      }
+    });
     this.setState({friendRequests: allData});
   },
 
   removeFriendRequest: function(friendRequestId) {
     var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData.splice(index, 1);
-    this.setState({allData});
+    allData.forEach(function(tempFriendRequest, index, array) {
+      if (tempFriendRequest.Id == friendRequestId) {
+        array.splice(index, 1);
+      }
+    });
+    this.setState({friendRequests: allData});
   },
 
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
