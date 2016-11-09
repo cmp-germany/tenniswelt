@@ -8,7 +8,7 @@ $( document ).ready(function(){
 });
 
 function initReactComponents() {
-  ReactDOM.render(
+  window.reactFriendRequestsApp = ReactDOM.render(
     <FriendRequestsModule
       userId={window.currentUserId}
       currentLanguage={window.currentLanguage}
