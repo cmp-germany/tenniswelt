@@ -17,9 +17,8 @@ var FriendRequestsModule = React.createClass({
     this.loadData();
   },
 
-  onReload: function() {
-    this.setState({unseenRequestsCount: null, friendRequests: [], currentState: "initLoading"});
-    this.loadData();
+  componentWillUnmount: function() {
+    this.serverRequest.abort();
   },
 
   getTranslation: function(word) {
@@ -33,6 +32,40 @@ var FriendRequestsModule = React.createClass({
     } else {
       return languageResource[word];
     }
+  },
+
+  getFriendRequest: function(friendRequestId) {
+    var allData = this.state.friendRequests;
+    var friendRequest;
+    allData.forEach(function(tempFriendRequest) {
+      if (tempFriendRequest.Id == friendRequestId) {
+        friendRequest = tempFriendRequest;
+      }
+    });
+    if (!friendRequest) {
+      console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
+    }
+    return friendRequest;
+  },
+
+  setFriendRequest: function(friendRequest) {
+    var allData = this.state.friendRequests;
+    allData.forEach(function(tempFriendRequest, index, array) {
+      if (tempFriendRequest.Id == friendRequest.Id) {
+        array[index] = friendRequest;
+      }
+    });
+    this.setState({friendRequests: allData});
+  },
+
+  removeFriendRequest: function(friendRequestId) {
+    var allData = this.state.friendRequests;
+    allData.forEach(function(tempFriendRequest, index, array) {
+      if (tempFriendRequest.Id == friendRequestId) {
+        array.splice(index, 1);
+      }
+    });
+    this.setState({friendRequests: allData});
   },
 
   loadData: function(pageNumber = 1, onLoadingDone) {
@@ -72,6 +105,11 @@ var FriendRequestsModule = React.createClass({
     }.bind(this));
   },
 
+  onReload: function() {
+    this.setState({unseenRequestsCount: null, friendRequests: [], currentState: "initLoading"});
+    this.loadData();
+  },
+
   onLoadMore: function(onLoadingDone) {
     // calculate the pageNumber, which needs to be loaded
     var currentCount = this.state.friendRequests.length;
@@ -83,40 +121,6 @@ var FriendRequestsModule = React.createClass({
     this.loadData(loadPageNumber, onLoadingDone);
   },
 
-  getFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var friendRequest;
-    allData.forEach(function(tempFriendRequest) {
-      if (tempFriendRequest.Id == friendRequestId) {
-        friendRequest = tempFriendRequest;
-      }
-    });
-    if (!friendRequest) {
-      console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
-    }
-    return friendRequest;
-  },
-
-  setFriendRequest: function(friendRequest) {
-    var allData = this.state.friendRequests;
-    allData.forEach(function(tempFriendRequest, index, array) {
-      if (tempFriendRequest.Id == friendRequest.Id) {
-        array[index] = friendRequest;
-      }
-    });
-    this.setState({friendRequests: allData});
-  },
-
-  removeFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    allData.forEach(function(tempFriendRequest, index, array) {
-      if (tempFriendRequest.Id == friendRequestId) {
-        array.splice(index, 1);
-      }
-    });
-    this.setState({friendRequests: allData});
-  },
-
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
     var friendRequest = this.getFriendRequest(friendRequestId);
     if (unseenRequestsCount) {
@@ -126,10 +130,6 @@ var FriendRequestsModule = React.createClass({
     }
     friendRequest.IsSeen = true;
     this.setFriendRequest(friendRequest);
-  },
-
-  componentWillUnmount: function() {
-    this.serverRequest.abort();
   },
 
   removeWithTimeout: function(friendRequestId, timeOut) {
