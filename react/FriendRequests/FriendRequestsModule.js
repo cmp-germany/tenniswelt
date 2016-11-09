@@ -6,6 +6,11 @@ const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
 const TimeOut = 1000; //milliseconds
 
+const _     = {};
+_.find      = require("lodash/find");
+_.findIndex = require("lodash/findIndex");
+_.remove    = require("lodash/remove");
+
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
@@ -35,13 +40,7 @@ var FriendRequestsModule = React.createClass({
   },
 
   getFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var friendRequest;
-    allData.forEach(function(tempFriendRequest) {
-      if (tempFriendRequest.Id == friendRequestId) {
-        friendRequest = tempFriendRequest;
-      }
-    });
+    var friendRequest = _.find(this.state.friendRequests, {Id: friendRequestId});
     if (!friendRequest) {
       console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
     }
@@ -50,21 +49,14 @@ var FriendRequestsModule = React.createClass({
 
   setFriendRequest: function(friendRequest) {
     var allData = this.state.friendRequests;
-    allData.forEach(function(tempFriendRequest, index, array) {
-      if (tempFriendRequest.Id == friendRequest.Id) {
-        array[index] = friendRequest;
-      }
-    });
+    var index = _.findIndex(allData, {Id: friendRequest.Id});
+    allData[index] = friendRequest;
     this.setState({friendRequests: allData});
   },
 
   removeFriendRequest: function(friendRequestId) {
     var allData = this.state.friendRequests;
-    allData.forEach(function(tempFriendRequest, index, array) {
-      if (tempFriendRequest.Id == friendRequestId) {
-        array.splice(index, 1);
-      }
-    });
+    _.remove(allData, {Id: friendRequestId});
     this.setState({friendRequests: allData});
   },
 
