@@ -8910,6 +8910,13 @@ body form {
 /* line 1, ../sass/_material-snackbar.sass */
 .mdl-snackbar {
   z-index: 8000;
+  background-color: rgba(19, 35, 51, 0.9);
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+/* line 7, ../sass/_material-snackbar.sass */
+.mdl-snackbar__action {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* line 1, ../sass/_navbar.sass */
