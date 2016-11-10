@@ -1,13 +1,16 @@
-var FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var $ = require('jquery');
+const FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
+const React                = require('react');
+const ReactDOM             = require('react-dom');
+const $                    = require('jquery');
+const NotificationModule   = require('../react/Notification/NotificationModule');
 
 $( document ).ready(function(){
   initReactComponents();
 });
 
 function initReactComponents() {
+
+  ////////////////////////////// FRIEND REQUESTS //////////////////////////////
   window.reactFriendRequestsApp = ReactDOM.render(
     <FriendRequestsModule
       userId={window.currentUserId}
@@ -17,5 +20,12 @@ function initReactComponents() {
       pageSize="2"
     />,
     document.getElementById('FriendRequestsModuleRoot')
+  );
+
+  ////////////////////////////// NOTIFICATIONS ////////////////////////////////
+  $('body').append('<div id="NotificationModuleRoot" />');
+  window.reactNotificationApp = ReactDOM.render(
+    <NotificationModule />,
+    document.getElementById('NotificationModuleRoot')
   );
 }

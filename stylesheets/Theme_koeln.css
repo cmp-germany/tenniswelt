@@ -8221,6 +8221,127 @@ button.close {
     transform: rotate(-130deg);
   }
 }
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
+/* Dialog */
+/* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  cursor: default;
+  background-color: #323232;
+  z-index: 3;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  will-change: transform;
+  transform: translate(0, 80px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+  pointer-events: none;
+}
+@media (max-width: 479px) {
+  /* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar {
+    width: 100%;
+    left: 0;
+    min-height: 48px;
+    max-height: 80px;
+  }
+}
+@media (min-width: 480px) {
+  /* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar {
+    min-width: 288px;
+    max-width: 568px;
+    border-radius: 2px;
+    transform: translate(-50%, 80px);
+  }
+}
+/* line 47, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar--active {
+  transform: translate(0, 0);
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+@media (min-width: 480px) {
+  /* line 47, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar--active {
+    transform: translate(-50%, 0);
+  }
+}
+/* line 57, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__text {
+  padding: 14px 12px 14px 24px;
+  vertical-align: middle;
+  color: white;
+  float: left;
+}
+/* line 64, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action {
+  background: transparent;
+  border: none;
+  color: rgb(233, 0, 47);
+  float: right;
+  text-transform: uppercase;
+  padding: 14px 24px 14px 12px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow: hidden;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+}
+/* line 81, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action::-moz-focus-inner {
+  border: 0;
+}
+/* line 84, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action:not([aria-hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* line 1, ../sass/_old-theme-koeln.scss */
 #HeadLogo {
   height: 75px;
@@ -8365,7 +8486,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
   background-color: lightgrey;
 }
 
-/* K├╢ln header */
+/* Köln header */
 /*.koln-header{display:inline-block;position:fixed;width:1200px;z-index:2000;float:left;height:120px;line-height:45px;background-image:url('/Upload/koeln-header_gray.jpg');}
 .koln-address{width:440px;margin-top:7px;float:right;line-height:20px;color:#fff;text-align:right;padding-right:15px;}
 .tsa-addressspan{display:inline-block;float:right;line-height:20px;color:#fff;margin-right:10px;padding:0;}
@@ -8384,7 +8505,7 @@ nav ul li a:hover, nav ul .selected a, .property-holder .reDropdown:hover span, 
 #KolnHeadTitle a{color:#fff;}
 .Deph3{border-top:none!important;padding-left:15px!important;line-height:15px!important;font-size:12px!important;padding-bottom:8px!important;}
 .Deph2{padding-left:10px!important;}*/
-/* K├╢ln header END */
+/* Köln header END */
 /* DefaultColor */
 /*.ItemSelected,.BgAlt,.comment-composer a.regular-button, .group-info  .styled-button, .addthis_button img, img[id^="imgLike_"], .tabs-wrapper .tabs li .selected,
 .PeopleSearch a, #user-profile-tabs, .tabs-wrapper .tabs li .selected, .logout_content, .people-search .options div.button-wrapper a, .chat-users .chat-users-header,
@@ -8786,6 +8907,11 @@ body form {
     background: transparent;
   }
 }
+/* line 1, ../sass/_material-snackbar.sass */
+.mdl-snackbar {
+  z-index: 8000;
+}
+
 /* line 1, ../sass/_navbar.sass */
 .navbar {
   border-radius: 0;
@@ -11862,7 +11988,7 @@ i.chat-icon {
   color: #4DDD35;
 }
 
-/* Anpassungen f├╝r die Plattform */
+/* Anpassungen für die Plattform */
 /* line 56, ../sass/_profile-kontakte.sass */
 #MyWallMid .wall-widget--matching {
   border: 0;
