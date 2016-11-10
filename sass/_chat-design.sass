@@ -3,6 +3,10 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700)
 
 $color-chat-tabs: $color-important
+
+@keyframes blinker
+  50%
+    opacity: 0
 .main-chat-container
   position: fixed
   bottom: 0
@@ -181,6 +185,7 @@ $color-chat-tabs: $color-important
 
           .loading-span
             color: $color-important
+            animation: blinker 1s linear infinite
 
         i
           font-size: 14px
