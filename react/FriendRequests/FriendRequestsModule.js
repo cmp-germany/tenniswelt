@@ -6,6 +6,11 @@ const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
 const TimeOut = 1000; //milliseconds
 
+const _     = {};
+_.find      = require("lodash/find");
+_.findIndex = require("lodash/findIndex");
+_.remove    = require("lodash/remove");
+
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
@@ -17,9 +22,8 @@ var FriendRequestsModule = React.createClass({
     this.loadData();
   },
 
-  onReload: function() {
-    this.setState({unseenRequestsCount: null, friendRequests: [], currentState: "initLoading"});
-    this.loadData();
+  componentWillUnmount: function() {
+    this.serverRequest.abort();
   },
 
   getTranslation: function(word) {
@@ -33,6 +37,27 @@ var FriendRequestsModule = React.createClass({
     } else {
       return languageResource[word];
     }
+  },
+
+  getFriendRequest: function(friendRequestId) {
+    var friendRequest = _.find(this.state.friendRequests, {Id: friendRequestId});
+    if (!friendRequest) {
+      console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
+    }
+    return friendRequest;
+  },
+
+  setFriendRequest: function(friendRequest) {
+    var allData = this.state.friendRequests;
+    var index = _.findIndex(allData, {Id: friendRequest.Id});
+    allData[index] = friendRequest;
+    this.setState({friendRequests: allData});
+  },
+
+  removeFriendRequest: function(friendRequestId) {
+    var allData = this.state.friendRequests;
+    _.remove(allData, {Id: friendRequestId});
+    this.setState({friendRequests: allData});
   },
 
   loadData: function(pageNumber = 1, onLoadingDone) {
@@ -72,6 +97,11 @@ var FriendRequestsModule = React.createClass({
     }.bind(this));
   },
 
+  onReload: function() {
+    this.setState({unseenRequestsCount: null, friendRequests: [], currentState: "initLoading"});
+    this.loadData();
+  },
+
   onLoadMore: function(onLoadingDone) {
     // calculate the pageNumber, which needs to be loaded
     var currentCount = this.state.friendRequests.length;
@@ -84,104 +114,94 @@ var FriendRequestsModule = React.createClass({
   },
 
   onSeen: function(friendRequestId, unseenRequestsCount = null) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].IsSeen = true;
-    this.setState({allData});
+    var friendRequest = this.getFriendRequest(friendRequestId);
     if (unseenRequestsCount) {
       this.setState({unseenRequestsCount});
-    } else {
+    } else if (!friendRequest.IsSeen) {
       this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
     }
-  },
-
-  componentWillUnmount: function() {
-    this.serverRequest.abort();
+    friendRequest.IsSeen = true;
+    this.setFriendRequest(friendRequest);
   },
 
   removeWithTimeout: function(friendRequestId, timeOut) {
     setTimeout(function() {
-      var allData = this.state.friendRequests;
-      var index = allData.findIndex(x => x.Id === friendRequestId);
-      allData.splice(index, 1);
-      this.setState({allData});
+      this.removeFriendRequest(friendRequestId);
     }.bind(this), timeOut);
   },
 
   acceptFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isLoading = true;
-    this.setState({friendRequests: allData});
+    this.onSeen(friendRequestId);
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isLoading = true;
+    this.setFriendRequest(friendRequest);
     var acceptFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.accept;
     $.post(acceptFriendRequestUrl, {
       friendRequestId: friendRequestId
     }, function(result) {
       if (result.success) {
-        allData[index].isLoading = false;
-        allData[index].isAccepted = true;
-        this.setState({friendRequests: allData});
+        friendRequest.isLoading = false;
+        friendRequest.isAccepted = true;
+        this.setFriendRequest(friendRequest);
         this.removeWithTimeout(friendRequestId, TimeOut);
         if (typeof refreshChatUserList === "function") {
-          refreshChatUserList(allData[index].UserId);
-          refreshChatUserList(allData[index].FriendUserId);
+          refreshChatUserList(friendRequest.UserId);
+          refreshChatUserList(friendRequest.FriendUserId);
         }
       } else {
-        allData[index].isLoading = false;
-        allData[index].isError = true;
-        this.setState({friendRequests: allData});
+        friendRequest.isLoading = false;
+        friendRequest.isError = true;
+        this.setFriendRequest(friendRequest);
       }
     }.bind(this));
   },
 
   declineFriendRequest: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isLoading = true;
-    this.setState({allData});
+    this.onSeen(friendRequestId);
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isLoading = true;
+    this.setFriendRequest(friendRequest);
     var declineFriendRequestUrl = this.props.webserviceBase + this.props.servicePaths.decline;
     try {
       $.post(declineFriendRequestUrl, {
         friendRequestId: friendRequestId
       }, function(result) {
         if (result.success) {
-          allData[index].isLoading = false;
-          allData[index].isDeleted = true;
-          this.setState({allData});
+          friendRequest.isLoading = false;
+          friendRequest.isDeleted = true;
+          this.setFriendRequest(friendRequest);
           this.removeWithTimeout(friendRequestId, TimeOut);
         } else {
-          allData[index].isLoading = false;
-          allData[index].isError = true;
-          this.setState({friendRequests: allData});
+          friendRequest.isLoading = false;
+          friendRequest.isError = true;
+          this.setFriendRequest(friendRequest);
         }
       }.bind(this));
     } catch (e) {
-      allData[index].isLoading = false;
-      allData[index].isError = true;
-      this.setState({friendRequests: allData});
+      friendRequest.isLoading = false;
+      friendRequest.isError = true;
+      this.setFriendRequest(friendRequest);
     }
   },
 
   handleError: function(friendRequestId, errorMessage) {
     var message = friendRequestId + ' has error: ' + errorMessage;
-    console.log(message);
+    console.error(message);
     //Todo: handle error in a better way please.
     if (this.state) {
       if (this.state.friendRequests) {
-        var allData = this.state.friendRequests;
-        var index = allData.findIndex(x => x.Id === friendRequestId);
-        allData[index].isError = true;
-        allData[index].errorMessage = message;
-        this.setState({allData});
+        var friendRequest = this.getFriendRequest(friendRequestId);
+        friendRequest.isError = true;
+        friendRequest.errorMessage = message;
+        this.setFriendRequest(friendRequest);
       }
     }
   },
 
   errorRetry: function(friendRequestId) {
-    var allData = this.state.friendRequests;
-    var index = allData.findIndex(x => x.Id === friendRequestId);
-    allData[index].isError = false;
-    this.setState({allData});
+    var friendRequest = this.getFriendRequest(friendRequestId);
+    friendRequest.isError = false;
+    this.setFriendRequest(friendRequest);
   },
 
   mainIconClicked: function() {
