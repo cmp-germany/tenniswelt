@@ -1,8 +1,8 @@
-const react               = require('react');
+const React               = require('react');
 const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const materialDesignLite  = require('material-design-lite');
 
-var NotificationModule = react.createClass({
+var NotificationModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
   notify: function(notification) {
