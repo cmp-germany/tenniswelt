@@ -192,6 +192,9 @@ var FriendRequestsModule = React.createClass({
           friendRequest.isDeleted = true;
           this.setFriendRequest(friendRequest);
           this.removeWithTimeout(friendRequestId, TimeOut);
+          if (this.needsPageReload()) {
+            this.reloadPage();
+          }
         } else {
           friendRequest.isLoading = false;
           friendRequest.isError = true;
