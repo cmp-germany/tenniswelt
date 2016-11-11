@@ -26,6 +26,20 @@ var FriendRequestsModule = React.createClass({
     this.serverRequest.abort();
   },
 
+  needsPageReload: function() {
+    var thisUserArray = $('.wall-widget--side__actions').find('h3:contains("This User")');
+    if (thisUserArray.length > 0) {
+      return true;
+    }
+
+    thisUserArray = $('.wall-widget--side__actions').find('h3:contains("Dieser Benutzer")');
+    if (thisUserArray.length > 0) {
+      return true;
+    }
+
+    return false;
+  },
+
   getTranslation: function(word) {
     if (!word) {
       return "";
