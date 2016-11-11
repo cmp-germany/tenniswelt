@@ -37,7 +37,7 @@ var NotificationLoadMore = React.createClass({
 			</div>
 		);
 	}
-	
+
 });
 
 module.exports = NotificationLoadMore;
