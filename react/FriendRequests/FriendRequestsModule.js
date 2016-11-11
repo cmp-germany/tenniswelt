@@ -166,6 +166,9 @@ var FriendRequestsModule = React.createClass({
           refreshChatUserList(friendRequest.UserId);
           refreshChatUserList(friendRequest.FriendUserId);
         }
+        if (this.needsPageReload()) {
+          this.reloadPage();
+        }
       } else {
         friendRequest.isLoading = false;
         friendRequest.isError = true;
