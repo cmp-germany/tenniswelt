@@ -14985,33 +14985,34 @@ html, body {
 }
 
 /* line 2, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header {
+#profileModal .PopUp_header, #coverModal .PopUp_header {
   background-color: #3aa6e7;
   height: auto;
   overflow-x: auto;
 }
 /* line 6, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header .btnClosePopup {
+#profileModal .PopUp_header .btnClosePopup, #coverModal .PopUp_header .btnClosePopup {
   background-color: transparent;
+  background-image: none;
 }
-/* line 9, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header .lblHeader {
+/* line 10, ../sass/_change-profileimage.sass */
+#profileModal .PopUp_header .lblHeader, #coverModal .PopUp_header .lblHeader {
   font-size: 16px;
   margin: 5px 0;
   margin-top: 8px;
   margin-left: 15px;
 }
-/* line 15, ../sass/_change-profileimage.sass */
-#profileModal #profilePhotoIframe {
+/* line 16, ../sass/_change-profileimage.sass */
+#profileModal #profilePhotoIframe, #profileModal #coverPhotoIframe, #coverModal #profilePhotoIframe, #coverModal #coverPhotoIframe {
   border: none;
 }
 
-/* line 19, ../sass/_change-profileimage.sass */
+/* line 20, ../sass/_change-profileimage.sass */
 #cropId .btn.btn-default.btn-file, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-file::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-file::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-file::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-file::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-default.btn-file::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-default.btn-file::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-default.btn-file::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-default.btn-file::before, #cropId #TblPagesList .btn-default.btn-file.btnSaveProfile, #TblPagesList #cropId .btn-default.btn-file.btnSaveProfile, #cropId #TblPageEdit .btn-default.btn-file.btnSaveProfile, #TblPageEdit #cropId .btn-default.btn-file.btnSaveProfile, #cropId .btn.btn-save.ng-binding, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-save.ng-binding::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-save.ng-binding::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-save.ng-binding::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-save.ng-binding::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .btn-save.ng-binding.btnSaveProfile, #TblPagesList #cropId .btn-save.ng-binding.btnSaveProfile, #cropId #TblPageEdit .btn-save.ng-binding.btnSaveProfile, #TblPageEdit #cropId .btn-save.ng-binding.btnSaveProfile {
   background-color: #3aa6e7 !important;
   color: #ffffff;
 }
-/* line 22, ../sass/_change-profileimage.sass */
+/* line 23, ../sass/_change-profileimage.sass */
 #cropId .btn.btn-default.btn-file:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .btn-default.btn-file.btnSaveProfile:hover, #TblPagesList #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId #TblPageEdit .btn-default.btn-file.btnSaveProfile:hover, #TblPageEdit #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId .btn.btn-save.ng-binding:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .btn-save.ng-binding.btnSaveProfile:hover, #TblPagesList #cropId .btn-save.ng-binding.btnSaveProfile:hover, #cropId #TblPageEdit .btn-save.ng-binding.btnSaveProfile:hover, #TblPageEdit #cropId .btn-save.ng-binding.btnSaveProfile:hover {
   background-color: #1a8ed4 !important;
 }
