@@ -40,6 +40,10 @@ var FriendRequestsModule = React.createClass({
     return false;
   },
 
+  reloadPage: function() {
+    location.reload();
+  },
+
   getTranslation: function(word) {
     if (!word) {
       return "";
