@@ -112,12 +112,15 @@ $color-chat-tabs: $color-important
   right: 250px
 
   //HH
-  width: 250%
+  width: 2500%
+  height: 380px
+  top: 0px
 
   overflow: visible
 
   text-align: right
   padding-left: 0
+
 
   .chat-session
     text-align: left
@@ -125,13 +128,17 @@ $color-chat-tabs: $color-important
     vertical-align: bottom
     margin-right: 15px
     //float: right
-    box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+    //box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+    overflow: visible
+    position: relative
 
     .chat-session-header
       background-color: $color-chat-tabs
+      box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
       cursor: pointer
       position: relative
       height: 30px
+      width: 280px
       overflow: hidden
       font-family: 'Open Sans', sans-serif
       font-size: 14px
@@ -139,6 +146,14 @@ $color-chat-tabs: $color-important
       font-weight: bold
       white-space: nowrap
       border: none
+      position: absolute
+      top: -30px
+
+      &.chat-active
+        top: -379px
+        z-index: 1
+        box-shadow: none
+
 
     .chat-title
       padding-left: 3px
@@ -162,6 +177,11 @@ $color-chat-tabs: $color-important
       /* ie6-9
 
     .chat-session-body
+      width: 280px
+      position: absolute
+      top: -349px
+      box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+
       .chat-message-holder
         padding: 0
 
