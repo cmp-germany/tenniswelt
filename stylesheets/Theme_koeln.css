@@ -10783,64 +10783,78 @@ body a:hover {
   font-size: 16px;
   display: inline-block;
 }
-/* line 473, ../sass/_wall.sass */
+/* line 472, ../sass/_wall.sass */
+.wall-widget--activity-post .group-template {
+  width: 100%;
+}
+/* line 475, ../sass/_wall.sass */
 .wall-widget--activity-post .item {
   width: 100%;
 }
-/* line 476, ../sass/_wall.sass */
+/* line 478, ../sass/_wall.sass */
 .wall-widget--activity-post .item .post-file-attachment {
   border: 1px solid #d4d4d4;
+  margin-top: 15px;
   padding: 15px;
 }
-/* line 480, ../sass/_wall.sass */
+/* line 482, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 490, ../sass/_wall.sass */
 .wall-widget--activity-post .item .post-file-attachment .file-icon {
   float: left;
   width: 60px;
   text-align: center;
   margin-right: 15px;
 }
-/* line 486, ../sass/_wall.sass */
+/* line 496, ../sass/_wall.sass */
 .wall-widget--activity-post .item .post-file-attachment .file-icon i {
   font-size: 45px;
   line-height: 60px;
   color: #7b7b7b;
 }
-/* line 492, ../sass/_wall.sass */
+/* line 502, ../sass/_wall.sass */
 .wall-widget--activity-post .item .post-file-attachment .file-name a {
   display: block;
   float: left;
   margin-top: 15px;
 }
 
-/* line 497, ../sass/_wall.sass */
+/* line 507, ../sass/_wall.sass */
 .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 
-/* line 503, ../sass/_wall.sass */
+/* line 513, ../sass/_wall.sass */
 .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 507, ../sass/_wall.sass */
+/* line 517, ../sass/_wall.sass */
 .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 512, ../sass/_wall.sass */
+/* line 522, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 516, ../sass/_wall.sass */
+/* line 526, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 519, ../sass/_wall.sass */
+/* line 529, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -10849,27 +10863,27 @@ body a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 526, ../sass/_wall.sass */
+/* line 536, ../sass/_wall.sass */
 .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 529, ../sass/_wall.sass */
+/* line 539, ../sass/_wall.sass */
 .info p {
   margin-bottom: 3px;
 }
-/* line 532, ../sass/_wall.sass */
+/* line 542, ../sass/_wall.sass */
 .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 535, ../sass/_wall.sass */
+/* line 545, ../sass/_wall.sass */
 .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 541, ../sass/_wall.sass */
+/* line 551, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -10877,17 +10891,17 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 547, ../sass/_wall.sass */
+/* line 557, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
 }
-/* line 550, ../sass/_wall.sass */
+/* line 560, ../sass/_wall.sass */
 .wall-widget--partners header {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 554, ../sass/_wall.sass */
+/* line 564, ../sass/_wall.sass */
 .banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -10895,7 +10909,7 @@ body a:hover {
   height: auto;
 }
 
-/* line 560, ../sass/_wall.sass */
+/* line 570, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -10905,29 +10919,29 @@ body a:hover {
   padding: 2px 10px;
 }
 
-/* line 572, ../sass/_wall.sass */
+/* line 582, ../sass/_wall.sass */
 #MyWallMid .MiddleBlock {
   max-width: none;
 }
-/* line 575, ../sass/_wall.sass */
+/* line 585, ../sass/_wall.sass */
 #MyWallMid .wall {
   max-width: none;
 }
 
-/* line 580, ../sass/_wall.sass */
+/* line 590, ../sass/_wall.sass */
 #aspnetForm .wall-widget--filters .wall-widget--filter-select {
   margin-top: 15px;
 }
-/* line 584, ../sass/_wall.sass */
+/* line 594, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--info {
   font-size: 14px;
 }
-/* line 586, ../sass/_wall.sass */
+/* line 596, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--activity-post-text {
   font-size: 14px;
   margin-top: 20px;
 }
-/* line 589, ../sass/_wall.sass */
+/* line 599, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--actions__social {
   font-size: 14px;
 }
