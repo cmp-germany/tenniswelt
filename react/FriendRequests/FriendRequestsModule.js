@@ -6,7 +6,7 @@ const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
 const TimeOut = 1000; //milliseconds
 
-const _     = {};
+var _     = {};
 _.find      = require("lodash/find");
 _.findIndex = require("lodash/findIndex");
 _.remove    = require("lodash/remove");
@@ -257,10 +257,10 @@ var FriendRequestsModule = React.createClass({
       case "loaded":
         {
           notifications = this.state.friendRequests.map(function(data) {
-            if (data.DateAccepted) {
+            if (data.dateAccepted) {
               return;
             }
-            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
             notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>
@@ -272,10 +272,10 @@ var FriendRequestsModule = React.createClass({
       case "loadMore":
         {
           notifications = this.state.friendRequests.map(function(data) {
-            if (data.DateAccepted) {
+            if (data.dateAccepted) {
               return;
             }
-            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.Id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
+            return (<Notification webserviceBase={this.props.webserviceBase} servicePaths={this.props.servicePaths} data={data} key={data.id} onAccept={this.acceptFriendRequest} onDecline={this.declineFriendRequest} onError={this.handleError} onErrorRetry={this.errorRetry} onSeen={this.onSeen} currentLanguage={this.props.currentLanguage} languageResource={this.getTranslation}/>);
           }.bind(this));
           if (this.state.friendRequests.length == 0) {
             notifications = <NotificationErrorMessage languageResource={this.getTranslation} errorMessage="Keine Anfragen"/>;
