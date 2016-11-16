@@ -6,7 +6,7 @@ const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
 const TimeOut = 1000; //milliseconds
 
-var _     = {};
+var _       = {};
 _.find      = require("lodash/find");
 _.findIndex = require("lodash/findIndex");
 _.remove    = require("lodash/remove");
@@ -58,7 +58,7 @@ var FriendRequestsModule = React.createClass({
   },
 
   getFriendRequest: function(friendRequestId) {
-    var friendRequest = _.find(this.state.friendRequests, {Id: friendRequestId});
+    var friendRequest = _.find(this.state.friendRequests, {id: friendRequestId});
     if (!friendRequest) {
       console.error("getFriendRequest(): Cannot find friendRequest with the ID: ", friendRequestId);
     }
@@ -67,14 +67,14 @@ var FriendRequestsModule = React.createClass({
 
   setFriendRequest: function(friendRequest) {
     var allData = this.state.friendRequests;
-    var index = _.findIndex(allData, {Id: friendRequest.Id});
+    var index = _.findIndex(allData, {id: friendRequest.id});
     allData[index] = friendRequest;
     this.setState({friendRequests: allData});
   },
 
   removeFriendRequest: function(friendRequestId) {
     var allData = this.state.friendRequests;
-    _.remove(allData, {Id: friendRequestId});
+    _.remove(allData, {id: friendRequestId});
     this.setState({friendRequests: allData});
   },
 
@@ -135,10 +135,10 @@ var FriendRequestsModule = React.createClass({
     var friendRequest = this.getFriendRequest(friendRequestId);
     if (unseenRequestsCount) {
       this.setState({unseenRequestsCount});
-    } else if (!friendRequest.IsSeen) {
+    } else if (!friendRequest.isSeen) {
       this.setState({unseenRequestsCount: this.state.unseenRequestsCount - 1});
     }
-    friendRequest.IsSeen = true;
+    friendRequest.isSeen = true;
     this.setFriendRequest(friendRequest);
   },
 
@@ -163,8 +163,8 @@ var FriendRequestsModule = React.createClass({
         this.setFriendRequest(friendRequest);
         this.removeWithTimeout(friendRequestId, TimeOut);
         if (typeof refreshChatUserList === "function") {
-          refreshChatUserList(friendRequest.UserId);
-          refreshChatUserList(friendRequest.FriendUserId);
+          refreshChatUserList(friendRequest.userId);
+          refreshChatUserList(friendRequest.friendUserId);
         }
         if (this.needsPageReload()) {
           this.reloadPage();
