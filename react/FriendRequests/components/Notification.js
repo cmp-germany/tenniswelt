@@ -18,16 +18,16 @@ var Notification = React.createClass({
 
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
-    if (visible && !this.props.data.IsSeen) {
+    if (visible && !this.props.data.isSeen) {
       $.post(
         this.props.webserviceBase + this.props.servicePaths.postIsSeen,
         {
-          friendRequestId: this.props.data.Id,
+          friendRequestId: this.props.data.id,
           seen: true
         },
         function(result){
           if (result.success) {
-            this.props.onSeen(this.props.data.Id);
+            this.props.onSeen(this.props.data.id);
           } else {
             console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
             console.error("jqXHR: ", jqXHR);
@@ -51,7 +51,7 @@ var Notification = React.createClass({
             errorMessage += ", notificationId doesn\'t have an ID!";
           if(functionName)
             errorMessage = "in function: " + functionName + " " + errorMessage;
-          this.props.onError(this.props.data.Id, errorMessage);
+          this.props.onError(this.props.data.id, errorMessage);
           return;
         }
       console.log('Can\'t send the error!')
@@ -59,39 +59,39 @@ var Notification = React.createClass({
 
   acceptHandler: function(){
     try{
-      this.props.onAccept(this.props.data.Id);
+      this.props.onAccept(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'acceptHandler');
     }
   },
 
   declineHandler: function(){
     try{
-      this.props.onDecline(this.props.data.Id);
+      this.props.onDecline(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'declineHandler');
     }
   },
 
   errorRetryHandler: function(){
     try{
-      this.props.onErrorRetry(this.props.data.Id);
+      this.props.onErrorRetry(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'errorRetryHandler');
     }
   },
@@ -104,8 +104,8 @@ var Notification = React.createClass({
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'getTranslation');
     }
   },
@@ -121,7 +121,7 @@ var Notification = React.createClass({
     );
 
     //Highlight, if not seen
-    if (!this.props.data.IsSeen) {
+    if (!this.props.data.isSeen) {
       containerClassName += " notification--unread";
     }
 
@@ -171,18 +171,18 @@ var Notification = React.createClass({
 
     //when there is no time value, ignore it
     var timeAgo = "";
-    if (data.DateCreatedUtc) {
-      timeAgo = (<TimeAgo date={data.DateCreatedUtc} formatter={this.state.formatter} />);
+    if (data.dateCreatedUtc) {
+      timeAgo = (<TimeAgo date={data.dateCreatedUtc} formatter={this.state.formatter} />);
     }
 
     return (
       <div className={containerClassName}>
         <div className="notification__left">
-          <img src={this.props.webserviceBase + data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
+          <img src={this.props.webserviceBase + data.profilePicture} alt="Profilbild" className="notification__avatar" />
         </div>
         <div className="notification__right">
           <div className="notification__top">
-            <h4 className="notification__name">{data.ShownName}</h4>
+            <h4 className="notification__name">{data.shownName}</h4>
             <div className="notification__time">{timeAgo}</div>
           </div>
           {notificationBottom}
