@@ -178,11 +178,13 @@ var Notification = React.createClass({
     return (
       <div className={containerClassName}>
         <div className="notification__left">
-          <img src={this.props.webserviceBase + data.profilePicture} alt="Profilbild" className="notification__avatar" />
+          <a href={data.profileUrl}>
+            <img src={this.props.webserviceBase + data.profilePicture} alt="Profilbild" className="notification__avatar" />
+          </a>
         </div>
         <div className="notification__right">
           <div className="notification__top">
-            <h4 className="notification__name">{data.shownName}</h4>
+            <h4 className="notification__name"><a href={data.profileUrl}>{data.shownName}</a></h4>
             <div className="notification__time">{timeAgo}</div>
           </div>
           {notificationBottom}
