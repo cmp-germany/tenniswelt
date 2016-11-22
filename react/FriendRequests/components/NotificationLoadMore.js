@@ -13,7 +13,7 @@ var NotificationLoadMore = React.createClass({
 	},
 
 	componentDidMount() {
-		this.setInterval(this.componentVisibilityChanged, 500);
+		this.setInterval(this.checkComponentVisibility, 500);
 	},
 
 	onLoadingDone: function() {

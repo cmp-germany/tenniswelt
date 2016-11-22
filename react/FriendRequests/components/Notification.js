@@ -1,5 +1,6 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
+var TimerMixin = require('react-timer-mixin');
 var TimeAgo = require('react-timeago').default;
 var languages = {
   'de-DE': require('react-timeago/lib/language-strings/de-short').default,
@@ -8,12 +9,16 @@ var languages = {
 var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var Notification = React.createClass({
-  mixins: [ CVM ],
+  mixins: [ CVM, TimerMixin ],
 
   getInitialState: function() {
     return {
       formatter: buildFormatter(languages[this.props.currentLanguage])
     }
+  },
+
+  componentDidMount: function() {
+    this.setInterval(this.checkComponentVisibility, 500);
   },
 
   componentVisibilityChanged: function() {
