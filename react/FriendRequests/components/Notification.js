@@ -25,7 +25,7 @@ var Notification = React.createClass({
     var visible = this.state.visible;
     if (visible && !this.props.data.isSeen) {
       var url = this.props.webserviceBase + this.props.servicePaths.postIsSeen;
-      if (LOCALDATA) {
+      if (window.LOCALDATA) {
         url = "data/example/setSeenState.example.json"
       }
       $.post(

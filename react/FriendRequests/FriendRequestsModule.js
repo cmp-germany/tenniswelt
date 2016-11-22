@@ -83,7 +83,7 @@ var FriendRequestsModule = React.createClass({
 
   loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
-    if (LOCALDATA) {
+    if (window.LOCALDATA) {
       getAllFriendRequestsUrl = "data/example/friendRequests.example.json";
     }
     this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
