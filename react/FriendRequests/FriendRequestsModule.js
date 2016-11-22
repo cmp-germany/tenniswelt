@@ -12,7 +12,7 @@ _.findIndex = require("lodash/findIndex");
 _.remove    = require("lodash/remove");
 
 // set to true to use localdata instead of API calls
-window.LOCALDATA = true;
+// window.LOCALDATA = true;
 
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
