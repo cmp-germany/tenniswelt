@@ -11,6 +11,9 @@ _.find      = require("lodash/find");
 _.findIndex = require("lodash/findIndex");
 _.remove    = require("lodash/remove");
 
+// set to true to use localdata instead of API calls
+window.LOCALDATA = true;
+
 var FriendRequestsModule = React.createClass({
   mixins: [MaterialDesignMixin],
 
@@ -80,6 +83,9 @@ var FriendRequestsModule = React.createClass({
 
   loadData: function(pageNumber = 1, onLoadingDone) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
+    if (LOCALDATA) {
+      getAllFriendRequestsUrl = "data/example/friendRequests.example.json";
+    }
     this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
       userid: this.props.userId,
       currentLanguage: this.props.currentLanguage,

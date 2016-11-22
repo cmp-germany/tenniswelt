@@ -1,5 +1,6 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
+var TimerMixin = require('react-timer-mixin');
 var TimeAgo = require('react-timeago').default;
 var languages = {
   'de-DE': require('react-timeago/lib/language-strings/de-short').default,
@@ -8,7 +9,7 @@ var languages = {
 var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var Notification = React.createClass({
-  mixins: [ CVM ],
+  mixins: [ CVM, TimerMixin ],
 
   getInitialState: function() {
     return {
@@ -16,11 +17,19 @@ var Notification = React.createClass({
     }
   },
 
+  componentDidMount: function() {
+    this.setInterval(this.checkComponentVisibility, 500);
+  },
+
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
     if (visible && !this.props.data.isSeen) {
+      var url = this.props.webserviceBase + this.props.servicePaths.postIsSeen;
+      if (LOCALDATA) {
+        url = "data/example/setSeenState.example.json"
+      }
       $.post(
-        this.props.webserviceBase + this.props.servicePaths.postIsSeen,
+        url,
         {
           friendRequestId: this.props.data.id,
           seen: true
@@ -29,14 +38,12 @@ var Notification = React.createClass({
           if (result.success) {
             this.props.onSeen(this.props.data.id);
           } else {
-            console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
-            console.error("jqXHR: ", jqXHR);
-            console.error("textStatus: ", textStatus);
-            console.error("errorThrown: ", errorThrown);
+            console.error("error POST on ", url);
           }
-        }.bind(this)
+        }.bind(this),
+        "json"
       ).fail(function (jqXHR, textStatus, errorThrown){
-        console.error("error POST on ", this.props.webserviceBase + this.props.servicePaths.postIsSeen);
+        console.error("error POST on ", url);
         console.error("jqXHR: ", jqXHR);
         console.error("textStatus: ", textStatus);
         console.error("errorThrown: ", errorThrown);
