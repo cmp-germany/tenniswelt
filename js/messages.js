@@ -10,7 +10,7 @@ $( document ).ready(function(){
 function initReactComponents() {
   ////////////////////////////// MESSAGES //////////////////////////////
   window.reactMessagesApp = ReactDOM.render(
-    <MessagesModule />,
+    <MessagesModule users={window.users} />,
   document.getElementById('MessagesModuleRoot')
   );
 }

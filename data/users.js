@@ -1,4 +1,4 @@
-var users = {
+window.users = {
 
   "company-of-imagination": {
     "id": "company-of-imagination",

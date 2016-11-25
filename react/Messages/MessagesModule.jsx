@@ -1,99 +1,20 @@
-const React               = require('react');
+const React         = require('react');
+const WallWidget    = require('./components/WallWidget');
+const Conversations = require('./components/Conversations');
 
 var MessagesModule = React.createClass({
   render: function() {
     return (
       <div className="container-fluid msg-container">
         <div className="section-left section-left--msg">
-          <aside className="wall-widget wall-widget--side wall-widget--msg">
-            <header>
-              <div style={{display: 'table'}}>
-                <i className="material-icons">mail_outline</i><h3>Nachrichten</h3>
-              </div>
-            </header>
-            <div className="wall-widget__content--scrollable wall-widget__content--full">
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p1.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Volker Miller</h4>
-                  <p className="msg-conversation__preview">Danke dir lorem</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p7.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Kai Gärtner</h4>
-                  <p className="msg-conversation__preview">ipsum wirklich langer Text</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p6.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Wolfgang Winter</h4>
-                  <p className="msg-conversation__preview">wirklich langer Text</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p5.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Maria Kristhoff</h4>
-                  <p className="msg-conversation__preview">...</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p1.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Volker Miller</h4>
-                  <p className="msg-conversation__preview">Danke dir lorem</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation msg-conversation--active">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Mike Schnorr</h4>
-                  <p className="msg-conversation__preview">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p6.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Wolfgang Winter</h4>
-                  <p className="msg-conversation__preview">wirklich langer Text</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-              <div className="msg-conversation">
-                <div className="msg-conversation__left"><img src="gfx/profilbilder/p5.jpg" alt="Profilbild" className="msg-conversation__avatar" /></div>
-                <div className="msg-conversation__center">
-                  <h4 className="msg-conversation__name">Maria Kristhoff</h4>
-                  <p className="msg-conversation__preview">...</p>
-                </div>
-                <div className="msg-conversation__right">
-                  <div className="msg-conversation__time">14:59</div>
-                </div>
-              </div>
-            </div>
-          </aside>
+          <WallWidget
+            title="Nachrichten"
+            symbol="mail_outline"
+            contentScrollable={true}
+            contentFull={true}
+          >
+            <Conversations {...this.props} />
+          </WallWidget>
         </div>
 
         <div className="section-center section-center--msg">
