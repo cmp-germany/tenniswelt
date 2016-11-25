@@ -12457,6 +12457,11 @@ html, body {
 }
 
 /* line 4, ../sass/_messages.sass */
+#MessagesModuleRoot {
+  height: 100%;
+}
+
+/* line 7, ../sass/_messages.sass */
 .msg-container {
   height: 100%;
   max-width: 1230px;
@@ -12466,14 +12471,14 @@ html, body {
   overflow-y: hidden;
 }
 @media (max-width: 767px) {
-  /* line 4, ../sass/_messages.sass */
+  /* line 7, ../sass/_messages.sass */
   .msg-container {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
 
-/* line 17, ../sass/_messages.sass */
+/* line 20, ../sass/_messages.sass */
 .section-left--msg {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -12486,7 +12491,7 @@ html, body {
   height: 100%;
 }
 
-/* line 25, ../sass/_messages.sass */
+/* line 28, ../sass/_messages.sass */
 .section-center--msg {
   -webkit-flex-grow: 2;
   flex-grow: 2;
@@ -12496,7 +12501,7 @@ html, body {
   height: 100%;
 }
 
-/* line 31, ../sass/_messages.sass */
+/* line 34, ../sass/_messages.sass */
 .section-right--msg {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -12507,24 +12512,24 @@ html, body {
   height: 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 31, ../sass/_messages.sass */
+  /* line 34, ../sass/_messages.sass */
   .section-right--msg {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 31, ../sass/_messages.sass */
+  /* line 34, ../sass/_messages.sass */
   .section-right--msg {
     display: none;
   }
 }
 
-/* line 43, ../sass/_messages.sass */
+/* line 46, ../sass/_messages.sass */
 .wall-widget--msg {
   height: calc(100% - 40px);
 }
 
-/* line 46, ../sass/_messages.sass */
+/* line 49, ../sass/_messages.sass */
 .wall-widget__content--scrollable {
   margin-left: -20px;
   margin-right: -20px;
@@ -12536,12 +12541,12 @@ html, body {
   max-height: calc(100% - 46px);
 }
 
-/* line 56, ../sass/_messages.sass */
+/* line 59, ../sass/_messages.sass */
 .wall-widget__content--full {
   padding: 0 !important;
 }
 
-/* line 59, ../sass/_messages.sass */
+/* line 62, ../sass/_messages.sass */
 .msg-conversation {
   height: 60px;
   box-sizing: content-box;
@@ -12554,23 +12559,23 @@ html, body {
   -webkit-flex-basis: auto;
   flex-basis: auto;
 }
-/* line 71, ../sass/_messages.sass */
+/* line 74, ../sass/_messages.sass */
 .msg-conversation:last-child .msg-conversation__right, .msg-conversation:last-child .msg-conversation__center {
   border-bottom: none;
 }
-/* line 75, ../sass/_messages.sass */
+/* line 78, ../sass/_messages.sass */
 .msg-conversation:hover {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #f0f0f0;
 }
-/* line 80, ../sass/_messages.sass */
+/* line 83, ../sass/_messages.sass */
 .msg-conversation--active {
   margin-top: -1px;
   padding-top: 11px;
   background-color: #ebebeb;
 }
-/* line 85, ../sass/_messages.sass */
+/* line 88, ../sass/_messages.sass */
 .msg-conversation__center {
   min-width: 0;
   border-bottom: 1px solid #ebebeb;
@@ -12583,14 +12588,14 @@ html, body {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-/* line 93, ../sass/_messages.sass */
+/* line 96, ../sass/_messages.sass */
 .msg-conversation__left {
   -webkit-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
-/* line 97, ../sass/_messages.sass */
+/* line 100, ../sass/_messages.sass */
 .msg-conversation__right {
   -webkit-flex-grow: 0;
   flex-grow: 0;
@@ -12598,12 +12603,12 @@ html, body {
   flex-shrink: 0;
   border-bottom: 1px solid #ebebeb;
 }
-/* line 102, ../sass/_messages.sass */
+/* line 105, ../sass/_messages.sass */
 .msg-conversation__avatar {
   width: 50px;
   margin-right: 10px;
 }
-/* line 106, ../sass/_messages.sass */
+/* line 109, ../sass/_messages.sass */
 .msg-conversation__name {
   margin: 0;
   overflow: hidden;
@@ -12612,7 +12617,7 @@ html, body {
   padding-bottom: 3px;
   font-size: medium;
 }
-/* line 114, ../sass/_messages.sass */
+/* line 117, ../sass/_messages.sass */
 .msg-conversation__preview {
   color: #777;
   margin: 0;
@@ -12620,13 +12625,13 @@ html, body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 121, ../sass/_messages.sass */
+/* line 124, ../sass/_messages.sass */
 .msg-conversation__time {
   color: #777;
   font-size: 12px;
 }
 
-/* line 125, ../sass/_messages.sass */
+/* line 128, ../sass/_messages.sass */
 .section-center--msg {
   display: -webkit-flex;
   display: flex;
@@ -12638,7 +12643,7 @@ html, body {
   align-items: stretch;
 }
 
-/* line 131, ../sass/_messages.sass */
+/* line 134, ../sass/_messages.sass */
 .msg-messages {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -12650,7 +12655,7 @@ html, body {
   padding-bottom: 20px;
 }
 
-/* line 141, ../sass/_messages.sass */
+/* line 144, ../sass/_messages.sass */
 .msg-message {
   background-color: #fff;
   border: solid 1px #3aa6e7;
@@ -12661,18 +12666,18 @@ html, body {
   width: 80%;
   min-width: 300px;
 }
-/* line 150, ../sass/_messages.sass */
+/* line 153, ../sass/_messages.sass */
 .msg-message__avatar {
   width: 50px;
   margin-right: 10px;
   float: left;
 }
-/* line 159, ../sass/_messages.sass */
+/* line 162, ../sass/_messages.sass */
 .msg-message__time {
   float: right;
   color: #777;
 }
-/* line 162, ../sass/_messages.sass */
+/* line 165, ../sass/_messages.sass */
 .msg-message__time:before {
   content: "access_time";
   font-family: "Material Icons";
@@ -12704,11 +12709,11 @@ html, body {
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 167, ../sass/_messages.sass */
+/* line 170, ../sass/_messages.sass */
 .msg-message__content {
   margin-top: 5px;
 }
-/* line 173, ../sass/_messages.sass */
+/* line 176, ../sass/_messages.sass */
 .msg-message--other {
   float: left;
 }
@@ -12721,7 +12726,7 @@ html, body {
 .msg-message--other:after {
   clear: both;
 }
-/* line 177, ../sass/_messages.sass */
+/* line 180, ../sass/_messages.sass */
 .msg-message--self {
   float: right;
 }
@@ -12734,18 +12739,18 @@ html, body {
 .msg-message--self:after {
   clear: both;
 }
-/* line 182, ../sass/_messages.sass */
+/* line 185, ../sass/_messages.sass */
 .msg-message--self .msg-message__avatar {
   float: right;
   margin-right: 0;
   margin-left: 10px;
 }
-/* line 187, ../sass/_messages.sass */
+/* line 190, ../sass/_messages.sass */
 .msg-message--self .msg-message__meta {
   width: calc(100% - 60px);
   float: right;
 }
-/* line 191, ../sass/_messages.sass */
+/* line 194, ../sass/_messages.sass */
 .msg-message--self .msg-message__name {
   float: right;
 }
@@ -12758,24 +12763,24 @@ html, body {
 .msg-message--self .msg-message__name:after {
   clear: both;
 }
-/* line 195, ../sass/_messages.sass */
+/* line 198, ../sass/_messages.sass */
 .msg-message--self .msg-message__time {
   float: left;
 }
-/* line 198, ../sass/_messages.sass */
+/* line 201, ../sass/_messages.sass */
 .msg-message--self .msg-message__content {
   text-align: right;
   padding-top: 18px;
 }
 
-/* line 202, ../sass/_messages.sass */
+/* line 205, ../sass/_messages.sass */
 .msg-input-area {
   margin-top: 0;
   padding: 10px;
   display: -webkit-flex;
   display: flex;
 }
-/* line 208, ../sass/_messages.sass */
+/* line 211, ../sass/_messages.sass */
 .msg-input-area__text {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -12783,11 +12788,11 @@ html, body {
   resize: none;
   padding: 8px;
 }
-/* line 214, ../sass/_messages.sass */
+/* line 217, ../sass/_messages.sass */
 .msg-input-area__text:focus {
   outline: none;
 }
-/* line 217, ../sass/_messages.sass */
+/* line 220, ../sass/_messages.sass */
 .msg-input-area__send-a {
   margin-left: 10px;
   margin-bottom: 2.5px;
@@ -12795,28 +12800,28 @@ html, body {
   align-self: flex-end;
   color: #333;
 }
-/* line 223, ../sass/_messages.sass */
+/* line 226, ../sass/_messages.sass */
 .msg-input-area__send-a:hover, .msg-input-area__send-a:focus, .msg-input-area__send-a:active, .msg-input-area__send-a:visited {
   color: #333;
 }
 
-/* line 229, ../sass/_messages.sass */
+/* line 232, ../sass/_messages.sass */
 .msg-contact-detail {
   margin-top: 17px;
   padding-bottom: 13px;
   border-bottom: 1px solid #ddd;
 }
-/* line 234, ../sass/_messages.sass */
+/* line 237, ../sass/_messages.sass */
 .msg-contact-detail:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
-/* line 239, ../sass/_messages.sass */
+/* line 242, ../sass/_messages.sass */
 .msg-contact-detail__title {
   font-weight: bold;
   font-size: 12px;
 }
-/* line 243, ../sass/_messages.sass */
+/* line 246, ../sass/_messages.sass */
 .msg-contact-detail__text {
   margin-top: 3px;
 }

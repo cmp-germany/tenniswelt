@@ -6,12 +6,13 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  entry: [
-    './js/navigation.js'
-  ],
+  entry: {
+    'navigation': './js/navigation.js',
+    'messages': './js/messages.js'
+  },
   output: {
     path: './js',
-    filename: 'navigation.bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [
