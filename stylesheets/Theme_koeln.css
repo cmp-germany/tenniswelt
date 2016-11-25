@@ -5574,28 +5574,29 @@ a.thumbnail.active {
 }
 
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
-.alert {
+.alert, .lblWrongLogin {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
 /* line 16, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
-.alert h4 {
+.alert h4, .lblWrongLogin h4 {
   margin-top: 0;
   color: inherit;
 }
 /* line 23, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
-.alert .alert-link {
+.alert .alert-link, .lblWrongLogin .alert-link {
   font-weight: bold;
 }
 /* line 28, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
-.alert > p,
-.alert > ul {
+.alert > p, .lblWrongLogin > p,
+.alert > ul,
+.lblWrongLogin > ul {
   margin-bottom: 0;
 }
 /* line 33, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
-.alert > p + p {
+.alert > p + p, .lblWrongLogin > p + p {
   margin-top: 5px;
 }
 
@@ -8220,6 +8221,127 @@ button.close {
     transform: rotate(-130deg);
   }
 }
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
+/* Dialog */
+/* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  cursor: default;
+  background-color: #323232;
+  z-index: 3;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  will-change: transform;
+  transform: translate(0, 80px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+  pointer-events: none;
+}
+@media (max-width: 479px) {
+  /* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar {
+    width: 100%;
+    left: 0;
+    min-height: 48px;
+    max-height: 80px;
+  }
+}
+@media (min-width: 480px) {
+  /* line 20, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar {
+    min-width: 288px;
+    max-width: 568px;
+    border-radius: 2px;
+    transform: translate(-50%, 80px);
+  }
+}
+/* line 47, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar--active {
+  transform: translate(0, 0);
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+@media (min-width: 480px) {
+  /* line 47, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+  .mdl-snackbar--active {
+    transform: translate(-50%, 0);
+  }
+}
+/* line 57, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__text {
+  padding: 14px 12px 14px 24px;
+  vertical-align: middle;
+  color: white;
+  float: left;
+}
+/* line 64, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action {
+  background: transparent;
+  border: none;
+  color: rgb(233, 0, 47);
+  float: right;
+  text-transform: uppercase;
+  padding: 14px 24px 14px 12px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow: hidden;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+}
+/* line 81, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action::-moz-focus-inner {
+  border: 0;
+}
+/* line 84, ../bower_components/material-design-lite/src/snackbar/_snackbar.scss */
+.mdl-snackbar__action:not([aria-hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* line 1, ../sass/_old-theme-koeln.scss */
 #HeadLogo {
   height: 75px;
@@ -8785,6 +8907,18 @@ body form {
     background: transparent;
   }
 }
+/* line 1, ../sass/_material-snackbar.sass */
+.mdl-snackbar {
+  z-index: 8000;
+  background-color: rgba(19, 35, 51, 0.9);
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+/* line 7, ../sass/_material-snackbar.sass */
+.mdl-snackbar__action {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* line 1, ../sass/_navbar.sass */
 .navbar {
   border-radius: 0;
@@ -9704,6 +9838,25 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper {
 /* line 12, ../sass/mixins/_buttons.sass */
 .button--light:hover, #TblPagesList .btnSaveProfile:hover, #TblPageEdit .btnSaveProfile:hover {
   background-color: #1470a7;
+}
+
+/* line 1, ../sass/_alerts.sass */
+.lblWrongLogin {
+  background-color: rgba(242, 222, 222, 0.8);
+  border-color: #ebccd1;
+  color: #a94442;
+  display: block;
+  margin-top: 8px;
+  border-radius: 0px;
+  border: none;
+}
+/* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.lblWrongLogin hr {
+  border-top-color: #e4b9c0;
+}
+/* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.lblWrongLogin .alert-link {
+  color: #843534;
 }
 
 /* line 3, ../sass/_form.sass */
@@ -10630,36 +10783,78 @@ body a:hover {
   font-size: 16px;
   display: inline-block;
 }
-
 /* line 472, ../sass/_wall.sass */
+.wall-widget--activity-post .group-template {
+  width: 100%;
+}
+/* line 475, ../sass/_wall.sass */
+.wall-widget--activity-post .item {
+  width: 100%;
+}
+/* line 478, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment {
+  border: 1px solid #d4d4d4;
+  margin-top: 15px;
+  padding: 15px;
+}
+/* line 482, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 490, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment .file-icon {
+  float: left;
+  width: 60px;
+  text-align: center;
+  margin-right: 15px;
+}
+/* line 496, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment .file-icon i {
+  font-size: 45px;
+  line-height: 60px;
+  color: #7b7b7b;
+}
+/* line 502, ../sass/_wall.sass */
+.wall-widget--activity-post .item .post-file-attachment .file-name a {
+  display: block;
+  float: left;
+  margin-top: 15px;
+}
+
+/* line 507, ../sass/_wall.sass */
 .account-avatar {
   display: inline-block;
   width: 60px;
   height: 60px;
 }
 
-/* line 478, ../sass/_wall.sass */
+/* line 513, ../sass/_wall.sass */
 .wall-widget--activity-post-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 482, ../sass/_wall.sass */
+/* line 517, ../sass/_wall.sass */
 .wall-widget--activity-post-text {
   text-align: left;
 }
 
-/* line 487, ../sass/_wall.sass */
+/* line 522, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--content {
   margin-top: 15px;
   text-align: center;
 }
-/* line 491, ../sass/_wall.sass */
+/* line 526, ../sass/_wall.sass */
 .wall-widget--news .wall-widget--button {
   margin-top: 10px;
 }
 
-/* line 494, ../sass/_wall.sass */
+/* line 529, ../sass/_wall.sass */
 .wall-widget--asidePost {
   text-align: left;
   width: 100%;
@@ -10668,27 +10863,27 @@ body a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 501, ../sass/_wall.sass */
+/* line 536, ../sass/_wall.sass */
 .info {
   font-size: 12px;
   vertical-align: baseline;
 }
-/* line 504, ../sass/_wall.sass */
+/* line 539, ../sass/_wall.sass */
 .info p {
   margin-bottom: 3px;
 }
-/* line 507, ../sass/_wall.sass */
+/* line 542, ../sass/_wall.sass */
 .info .wall-widget--info {
   font-size: 11px;
   text-align: right;
 }
-/* line 510, ../sass/_wall.sass */
+/* line 545, ../sass/_wall.sass */
 .info .wall-widget--info .material-icons {
   vertical-align: text-bottom;
   font-size: 14px;
 }
 
-/* line 516, ../sass/_wall.sass */
+/* line 551, ../sass/_wall.sass */
 .wall-widget--asidePost-Image {
   height: auto;
   margin: 0;
@@ -10696,17 +10891,17 @@ body a:hover {
   margin-right: 6px;
 }
 
-/* line 522, ../sass/_wall.sass */
+/* line 557, ../sass/_wall.sass */
 .wall-widget--partners {
   padding-bottom: 0;
 }
-/* line 525, ../sass/_wall.sass */
+/* line 560, ../sass/_wall.sass */
 .wall-widget--partners header {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 529, ../sass/_wall.sass */
+/* line 564, ../sass/_wall.sass */
 .banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -10714,7 +10909,7 @@ body a:hover {
   height: auto;
 }
 
-/* line 535, ../sass/_wall.sass */
+/* line 570, ../sass/_wall.sass */
 .wall-widget--filter-select-list {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -10724,31 +10919,31 @@ body a:hover {
   padding: 2px 10px;
 }
 
-/* line 547, ../sass/_wall.sass */
+/* line 582, ../sass/_wall.sass */
 #MyWallMid .MiddleBlock {
   max-width: none;
 }
-/* line 550, ../sass/_wall.sass */
+/* line 585, ../sass/_wall.sass */
 #MyWallMid .wall {
   max-width: none;
 }
 
-/* line 555, ../sass/_wall.sass */
+/* line 590, ../sass/_wall.sass */
 #aspnetForm .wall-widget--filters .wall-widget--filter-select {
   margin-top: 15px;
 }
-/* line 558, ../sass/_wall.sass */
-#aspnetForm .wall-widget--activity-post {
-  font-size: 14px;
-}
-/* line 559, ../sass/_wall.sass */
+/* line 594, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--info {
   font-size: 14px;
 }
-/* line 561, ../sass/_wall.sass */
+/* line 596, ../sass/_wall.sass */
 #aspnetForm .wall-widget--activity-post .wall-widget--activity-post-text {
   font-size: 14px;
   margin-top: 20px;
+}
+/* line 599, ../sass/_wall.sass */
+#aspnetForm .wall-widget--activity-post .wall-widget--actions__social {
+  font-size: 14px;
 }
 
 /* line 7, ../sass/_profile-about.sass */
@@ -13846,22 +14041,15 @@ html, body {
   margin-bottom: 0;
   height: 300px;
   background: -moz-radial-gradient(center, ellipse cover, white 0%, #dddddd 100%);
-  /* ff3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #dddddd));
-  /* safari4+,chrome */
   background: -webkit-radial-gradient(center, ellipse cover, white 0%, #dddddd 100%);
-  /* safari5.1+,chrome10+ */
   background: -o-radial-gradient(center, ellipse cover, white 0%, #dddddd 100%);
-  /* opera 11.10+ */
   background: -ms-radial-gradient(center, ellipse cover, white 0%, #dddddd 100%);
-  /* ie10+ */
   background: radial-gradient(ellipse at center, #ffffff 0%, #dddddd 100%);
-  /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 );
-  /* ie6-9 */
 }
 
-/* line 50, ../sass/_chat.sass */
+/* line 43, ../sass/_chat.sass */
 .chat__message {
   width: 100%;
   float: left;
@@ -13869,27 +14057,27 @@ html, body {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* line 57, ../sass/_chat.sass */
+/* line 50, ../sass/_chat.sass */
 .chat__message:first-child {
   margin-top: 20px;
 }
 
-/* line 60, ../sass/_chat.sass */
+/* line 53, ../sass/_chat.sass */
 .chat__message--bot {
   margin-left: 10px;
   font-style: italic;
 }
 
-/* line 64, ../sass/_chat.sass */
+/* line 57, ../sass/_chat.sass */
 .chat__message--user {
   padding-right: 4px;
 }
-/* line 66, ../sass/_chat.sass */
+/* line 59, ../sass/_chat.sass */
 .chat__message--user * {
   float: right;
   text-align: right;
 }
-/* line 69, ../sass/_chat.sass */
+/* line 62, ../sass/_chat.sass */
 .chat__message--user p {
   background-color: #ff5073;
   color: #fff;
@@ -13897,35 +14085,35 @@ html, body {
   padding: 3px 10px;
   margin-right: -9px;
 }
-/* line 76, ../sass/_chat.sass */
+/* line 69, ../sass/_chat.sass */
 .chat__message--user .chat__text {
   margin-left: auto;
 }
 
-/* line 80, ../sass/_chat.sass */
+/* line 73, ../sass/_chat.sass */
 .chat__message--partner * {
   float: left;
   text-align: left;
 }
-/* line 83, ../sass/_chat.sass */
+/* line 76, ../sass/_chat.sass */
 .chat__message--partner p {
   background-color: #67bbed;
   color: #fff;
   min-height: 30px;
   padding: 3px 10px;
 }
-/* line 89, ../sass/_chat.sass */
+/* line 82, ../sass/_chat.sass */
 .chat__message--partner .chat__text {
   margin-right: auto;
 }
 
-/* line 92, ../sass/_chat.sass */
+/* line 85, ../sass/_chat.sass */
 .chat__text-container {
   max-width: 70%;
   display: inline-block;
 }
 
-/* line 96, ../sass/_chat.sass */
+/* line 89, ../sass/_chat.sass */
 .chat__text {
   display: inline-block;
   max-width: 210px;
@@ -13934,7 +14122,7 @@ html, body {
   padding: 3px 6px;
 }
 
-/* line 105, ../sass/_chat.sass */
+/* line 98, ../sass/_chat.sass */
 .chat-window {
   position: absolute;
   bottom: 0;
@@ -13945,7 +14133,7 @@ html, body {
   max-width: 290px;
 }
 
-/* line 116, ../sass/_chat.sass */
+/* line 109, ../sass/_chat.sass */
 .chat__header {
   background-color: #E9002F;
   cursor: pointer;
@@ -13954,7 +14142,7 @@ html, body {
   overflow: hidden;
 }
 
-/* line 124, ../sass/_chat.sass */
+/* line 117, ../sass/_chat.sass */
 .chat__header-name {
   padding: 5px 0 0 14px;
   color: #fff;
@@ -13962,7 +14150,7 @@ html, body {
   white-space: nowrap;
 }
 
-/* line 130, ../sass/_chat.sass */
+/* line 123, ../sass/_chat.sass */
 .chat__header-buttons {
   position: absolute;
   right: 0;
@@ -13972,7 +14160,7 @@ html, body {
   box-shadow: 0px 0px 30px 20px #E9002F;
 }
 
-/* line 138, ../sass/_chat.sass */
+/* line 131, ../sass/_chat.sass */
 .button--isOnline {
   color: #fff;
   margin: 0;
@@ -13980,24 +14168,24 @@ html, body {
   background-color: transparent;
   border: none;
 }
-/* line 144, ../sass/_chat.sass */
+/* line 137, ../sass/_chat.sass */
 .button--isOnline:focus, .button--isOnline:active {
   outline: none;
 }
 
-/* line 147, ../sass/_chat.sass */
+/* line 140, ../sass/_chat.sass */
 .button--close-chat {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
 }
-/* line 152, ../sass/_chat.sass */
+/* line 145, ../sass/_chat.sass */
 .button--close-chat:focus, .button--close-chat:active {
   outline: none;
 }
 
-/* line 156, ../sass/_chat.sass */
+/* line 149, ../sass/_chat.sass */
 .chat__image {
   width: 30px;
   height: auto;
@@ -14005,7 +14193,7 @@ html, body {
   margin-left: 14px;
 }
 
-/* line 162, ../sass/_chat.sass */
+/* line 155, ../sass/_chat.sass */
 .chat__name {
   font-size: 12px;
   width: 115px;
@@ -14014,38 +14202,38 @@ html, body {
   margin-left: 5px;
 }
 
-/* line 171, ../sass/_chat.sass */
+/* line 164, ../sass/_chat.sass */
 .chat__content ul {
   padding: 0;
   list-style: none;
 }
 
-/* line 176, ../sass/_chat.sass */
+/* line 169, ../sass/_chat.sass */
 .chat__list {
   height: 380px;
   overflow-y: scroll;
 }
 
-/* line 181, ../sass/_chat.sass */
+/* line 174, ../sass/_chat.sass */
 .chat__list-item {
   padding: 7px 0;
   margin: 7px 0;
 }
-/* line 185, ../sass/_chat.sass */
+/* line 178, ../sass/_chat.sass */
 .chat__list-item:hover {
   background-color: #fff;
 }
-/* line 188, ../sass/_chat.sass */
+/* line 181, ../sass/_chat.sass */
 .chat__list-item:last-child {
   margin-bottom: 20px;
 }
 
-/* line 191, ../sass/_chat.sass */
+/* line 184, ../sass/_chat.sass */
 .chat__actions {
   width: 100%;
 }
 
-/* line 194, ../sass/_chat.sass */
+/* line 187, ../sass/_chat.sass */
 .form-chat {
   display: inline-block;
   border: none;
@@ -14057,7 +14245,7 @@ html, body {
   color: #444;
 }
 
-/* line 204, ../sass/_chat.sass */
+/* line 197, ../sass/_chat.sass */
 .form-chat--messagebox {
   width: calc(100% - 50px);
   min-height: 40px;
@@ -14066,7 +14254,7 @@ html, body {
   margin: 0;
 }
 
-/* line 211, ../sass/_chat.sass */
+/* line 204, ../sass/_chat.sass */
 .button--chat {
   vertical-align: top;
   border: none;
@@ -14078,13 +14266,13 @@ html, body {
   padding: 5px 7px;
 }
 
-/* line 221, ../sass/_chat.sass */
+/* line 214, ../sass/_chat.sass */
 .button--chat-search {
   margin: 0;
   padding: 4px 8px;
 }
 
-/* line 225, ../sass/_chat.sass */
+/* line 218, ../sass/_chat.sass */
 .button--filter-switch {
   padding: 0;
   margin: 0;
@@ -14097,23 +14285,23 @@ html, body {
   color: #eee;
 }
 
-/* line 236, ../sass/_chat.sass */
+/* line 229, ../sass/_chat.sass */
 .button--filter-switch--active {
   background-color: #ff1d4b;
 }
 
-/* line 240, ../sass/_chat.sass */
+/* line 233, ../sass/_chat.sass */
 .button--filter-switch--deactive {
   background-color: #ffb6c5;
 }
 
-/* line 245, ../sass/_chat.sass */
+/* line 238, ../sass/_chat.sass */
 .alignment--center {
   text-align: center;
   margin-top: 15px;
 }
 
-/* line 251, ../sass/_chat.sass */
+/* line 244, ../sass/_chat.sass */
 .online-status--chat .material-icons {
   color: #777;
   float: right;
@@ -14122,25 +14310,30 @@ html, body {
   font-size: 16px;
 }
 
-/* line 259, ../sass/_chat.sass */
+/* line 252, ../sass/_chat.sass */
 .online-status--chat-header .material-icons {
   color: inherit;
 }
-/* line 261, ../sass/_chat.sass */
+/* line 254, ../sass/_chat.sass */
 .online-status--chat-header .material-icons.mdl-icon-close-color {
   color: #fff;
 }
 
-/* line 265, ../sass/_chat.sass */
+/* line 258, ../sass/_chat.sass */
 .online-status--online .material-icons {
   color: #4DDD35;
 }
-/* line 268, ../sass/_chat.sass */
+/* line 261, ../sass/_chat.sass */
 .online-status--online .material-icons.mdl-icon-close-color {
   color: #fff;
 }
 
-/* line 7, ../sass/_chat-design.sass */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/* line 10, ../sass/_chat-design.sass */
 .main-chat-container {
   position: fixed;
   bottom: 0;
@@ -14149,15 +14342,15 @@ html, body {
   overflow: visible;
   z-index: 7500;
 }
-/* line 14, ../sass/_chat-design.sass */
+/* line 17, ../sass/_chat-design.sass */
 .main-chat-container.collapse {
   display: block;
 }
-/* line 18, ../sass/_chat-design.sass */
+/* line 21, ../sass/_chat-design.sass */
 .main-chat-container .chat-user-holder .offline {
   background: none;
 }
-/* line 20, ../sass/_chat-design.sass */
+/* line 23, ../sass/_chat-design.sass */
 .main-chat-container .chat-user-holder .offline::after {
   font-family: "Material Icons";
   font-weight: normal;
@@ -14191,11 +14384,11 @@ html, body {
   -webkit-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 28, ../sass/_chat-design.sass */
+/* line 31, ../sass/_chat-design.sass */
 .main-chat-container .chat-user-holder .online {
   background: none;
 }
-/* line 30, ../sass/_chat-design.sass */
+/* line 33, ../sass/_chat-design.sass */
 .main-chat-container .chat-user-holder .online::after {
   font-family: "Material Icons";
   font-weight: normal;
@@ -14230,7 +14423,7 @@ html, body {
   border-radius: 12px;
 }
 
-/* line 39, ../sass/_chat-design.sass */
+/* line 42, ../sass/_chat-design.sass */
 .chat-users {
   position: fixed;
   float: right;
@@ -14238,7 +14431,7 @@ html, body {
   width: 250px;
   box-shadow: 0px 3px 34px -2px rgba(0, 0, 0, 0.75);
 }
-/* line 47, ../sass/_chat-design.sass */
+/* line 50, ../sass/_chat-design.sass */
 .chat-users .chat-users-header {
   background-color: #E9002F;
   cursor: pointer;
@@ -14252,23 +14445,23 @@ html, body {
   white-space: nowrap;
   border-radius: 0px;
 }
-/* line 60, ../sass/_chat-design.sass */
+/* line 63, ../sass/_chat-design.sass */
 .chat-users .user-list {
   height: 380px;
   overflow-y: scroll;
 }
-/* line 65, ../sass/_chat-design.sass */
+/* line 68, ../sass/_chat-design.sass */
 .chat-users .chat-user-holder {
   background-color: inherit;
   padding: 7px 0;
   margin: 7px 0;
   height: auto;
 }
-/* line 70, ../sass/_chat-design.sass */
+/* line 73, ../sass/_chat-design.sass */
 .chat-users .chat-user-holder:hover {
   background-color: #ffffff;
 }
-/* line 73, ../sass/_chat-design.sass */
+/* line 76, ../sass/_chat-design.sass */
 .chat-users .nav-avatar {
   margin: 0;
   border-radius: 0;
@@ -14277,7 +14470,7 @@ html, body {
   margin: 0 4px;
   margin-left: 14px;
 }
-/* line 81, ../sass/_chat-design.sass */
+/* line 84, ../sass/_chat-design.sass */
 .chat-users .user-name {
   line-height: normal;
   font-size: 12px;
@@ -14286,12 +14479,12 @@ html, body {
   padding-left: 5px;
   font-weight: 700;
 }
-/* line 89, ../sass/_chat-design.sass */
+/* line 92, ../sass/_chat-design.sass */
 .chat-users .chat-search {
   width: 100%;
   background-color: inherit;
 }
-/* line 93, ../sass/_chat-design.sass */
+/* line 96, ../sass/_chat-design.sass */
 .chat-users INPUT[type="text"] {
   display: inline-block;
   border: none;
@@ -14305,31 +14498,36 @@ html, body {
   border-radius: 0;
 }
 
-/* line 105, ../sass/_chat-design.sass */
+/* line 108, ../sass/_chat-design.sass */
 .chat-sessions {
   position: absolute;
   float: right;
   z-index: 7001;
   right: 250px;
-  width: 250%;
+  width: 2500%;
+  height: 380px;
+  top: 0px;
   overflow: visible;
   text-align: right;
   padding-left: 0;
 }
-/* line 119, ../sass/_chat-design.sass */
+/* line 125, ../sass/_chat-design.sass */
 .chat-sessions .chat-session {
   text-align: left;
   display: inline-block;
   vertical-align: bottom;
   margin-right: 15px;
-  box-shadow: 0px 3px 34px -5px rgba(0, 0, 0, 0.75);
+  overflow: visible;
+  position: relative;
 }
-/* line 127, ../sass/_chat-design.sass */
+/* line 135, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-header {
   background-color: #E9002F;
+  box-shadow: 0px 3px 34px -5px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   position: relative;
   height: 30px;
+  width: 280px;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -14337,12 +14535,20 @@ html, body {
   font-weight: bold;
   white-space: nowrap;
   border: none;
+  position: absolute;
+  top: -30px;
 }
-/* line 140, ../sass/_chat-design.sass */
+/* line 152, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-header.chat-active {
+  top: -379px;
+  z-index: 1;
+  box-shadow: none;
+}
+/* line 158, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-title {
   padding-left: 3px;
 }
-/* line 143, ../sass/_chat-design.sass */
+/* line 161, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-message-holder {
   border: none;
   height: 300px;
@@ -14361,17 +14567,62 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=1 );
   /* ie6-9 */
 }
-/* line 162, ../sass/_chat-design.sass */
+/* line 179, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body {
+  width: 280px;
+  position: absolute;
+  top: -349px;
+  box-shadow: 0px 3px 34px -5px rgba(0, 0, 0, 0.75);
+}
+/* line 185, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message-holder {
   padding: 0;
 }
-/* line 165, ../sass/_chat-design.sass */
+/* line 188, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container {
+  background: #fff;
+  border-bottom: 1px solid #E9002F;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 5px;
+  color: #666;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 50px;
+  max-height: 100px;
+  overflow-y: scroll;
+  width: 100%;
+}
+/* line 202, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container label {
+  margin: 2px 0px;
+  width: 100%;
+}
+/* line 206, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container label .filename {
+  word-break: break-all;
+}
+/* line 209, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container label .delete-file {
+  color: #E9002F;
+}
+/* line 212, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container label .loading-span {
+  color: #E9002F;
+  animation: blinker 1s linear infinite;
+}
+/* line 216, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .attached-files-container i {
+  font-size: 14px;
+  vertical-align: middle;
+}
+/* line 220, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message {
   border: none;
   padding: 0;
   margin: 5px 0;
 }
-/* line 169, ../sass/_chat-design.sass */
+/* line 224, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message .nav-avatar {
   margin-top: 15px;
   margin-left: 14px;
@@ -14380,18 +14631,18 @@ html, body {
   height: 30px !important;
   border-radius: 0;
 }
-/* line 177, ../sass/_chat-design.sass */
+/* line 232, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message .message-content {
   max-width: 80%;
 }
-/* line 179, ../sass/_chat-design.sass */
+/* line 234, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message .message-content strong {
   font-size: 0px;
   margin: 0;
   line-height: normal;
-  visibility: hidden;
+  visibility: visible;
 }
-/* line 184, ../sass/_chat-design.sass */
+/* line 239, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message .message-content div {
   display: inline-block;
   font-family: "PT Sans Narrow", sans-serif;
@@ -14403,37 +14654,56 @@ html, body {
   padding-top: 5px;
   padding-left: 7px;
 }
-/* line 195, ../sass/_chat-design.sass */
-.chat-sessions .chat-session .chat-session-body .chat-message .message-content:hover strong {
-  visibility: visible;
+/* line 250, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .chat-message .message-content .chat-message-file {
+  font-size: 12px;
+  display: block;
+  font-weight: normal;
+  color: #fff;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.2);
 }
-/* line 199, ../sass/_chat-design.sass */
+/* line 257, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .chat-message .message-content .chat-message-file i {
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 14px;
+}
+/* line 261, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .chat-message .message-content .chat-message-file a {
+  color: #fff;
+}
+/* line 263, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .chat-message .message-content .chat-message-file a:hover {
+  color: #fff;
+}
+/* line 267, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message--partner .nav-avatar {
   float: right;
   margin-right: 14px;
   margin-left: 4px;
 }
-/* line 204, ../sass/_chat-design.sass */
+/* line 272, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message--partner .message-content {
   float: right;
 }
-/* line 206, ../sass/_chat-design.sass */
+/* line 274, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message--partner .message-content strong {
   width: 100%;
   text-align: right;
 }
-/* line 209, ../sass/_chat-design.sass */
+/* line 277, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .chat-message--partner .message-content div {
   background-color: #67bbed;
   padding-left: 10px;
   padding-right: 7px;
   float: right;
 }
-/* line 216, ../sass/_chat-design.sass */
+/* line 284, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message {
   height: 50px;
 }
-/* line 218, ../sass/_chat-design.sass */
+/* line 286, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message .chat-new-message {
   margin: 0;
   border: none;
@@ -14441,9 +14711,29 @@ html, body {
   height: 100%;
   padding: 8px;
   font-size: 14px;
-  width: 80%;
+  width: 65%;
 }
-/* line 227, ../sass/_chat-design.sass */
+/* line 295, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .type-message .attach-file {
+  width: 15%;
+  margin: 0;
+  color: #E9002F;
+  text-align: center;
+  height: 100%;
+  float: left;
+  line-height: 38px;
+  padding: 0px 6px;
+  background: none;
+  border: 0;
+  border-left: 1px solid #E9002F;
+  border-right: 1px solid #E9002F;
+}
+/* line 308, ../sass/_chat-design.sass */
+.chat-sessions .chat-session .chat-session-body .type-message .attach-file:hover {
+  background-color: #E9002F;
+  color: #ffffff;
+}
+/* line 312, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message .chat-send {
   width: 20%;
   margin: 0;
@@ -14452,25 +14742,26 @@ html, body {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   height: 100%;
+  line-height: 48px;
 }
-/* line 235, ../sass/_chat-design.sass */
+/* line 321, ../sass/_chat-design.sass */
 .chat-sessions .chat-session .chat-session-body .type-message .chat-send:hover {
   background-color: #E9002F;
   color: #ffffff;
 }
 
 @media(max-width:767px) {
-  /* line 241, ../sass/_chat-design.sass */
+  /* line 327, ../sass/_chat-design.sass */
   .main-chat-container.collapse {
     display: none;
   }
-  /* line 243, ../sass/_chat-design.sass */
+  /* line 329, ../sass/_chat-design.sass */
   .main-chat-container.collapse.in {
     display: block;
     height: 100%;
     background-color: #f9f9f9;
   }
-  /* line 247, ../sass/_chat-design.sass */
+  /* line 333, ../sass/_chat-design.sass */
   .main-chat-container.collapse.in::after {
     content: "Kein Chat aktiv.";
     display: block;
@@ -14479,7 +14770,7 @@ html, body {
     left: 10px;
   }
 
-  /* line 255, ../sass/_chat-design.sass */
+  /* line 341, ../sass/_chat-design.sass */
   .chat-users {
     position: fixed;
     float: left;
@@ -14487,14 +14778,14 @@ html, body {
     box-shadow: none;
     z-index: 7002;
   }
-  /* line 263, ../sass/_chat-design.sass */
+  /* line 349, ../sass/_chat-design.sass */
   .chat-users .chat-users-body .user-list {
     height: 320px;
     height: calc(100vh - 137px);
     max-height: none;
   }
 
-  /* line 268, ../sass/_chat-design.sass */
+  /* line 354, ../sass/_chat-design.sass */
   .chat-sessions {
     position: static;
     margin-bottom: 30px;
@@ -14505,22 +14796,22 @@ html, body {
     padding: 0;
     border-radius: 0;
   }
-  /* line 278, ../sass/_chat-design.sass */
+  /* line 364, ../sass/_chat-design.sass */
   .chat-sessions .chat-session {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 30px;
   }
-  /* line 283, ../sass/_chat-design.sass */
+  /* line 369, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-session-header {
     display: none;
   }
-  /* line 285, ../sass/_chat-design.sass */
+  /* line 371, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-session-header.chat-active {
     display: block;
   }
-  /* line 287, ../sass/_chat-design.sass */
+  /* line 373, ../sass/_chat-design.sass */
   .chat-sessions .chat-session .chat-message-holder {
     height: 290px;
     height: calc(100vh - 160px);
@@ -14763,6 +15054,16 @@ html, body {
 .DivWallPreviewPhoto {
   padding: 2px 10px;
 }
+/* line 4, ../sass/_image-preview.sass */
+.DivWallPreviewPhoto .post-file-attachment {
+  margin-top: 15px;
+  width: 100px;
+  padding: 5px 15px;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  word-wrap: break-word;
+}
 
 /* line 1, ../sass/_footer-tmp.sass */
 #DivImpresum {
@@ -14781,33 +15082,34 @@ html, body {
 }
 
 /* line 2, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header {
+#profileModal .PopUp_header, #coverModal .PopUp_header {
   background-color: #3aa6e7;
   height: auto;
   overflow-x: auto;
 }
 /* line 6, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header .btnClosePopup {
+#profileModal .PopUp_header .btnClosePopup, #coverModal .PopUp_header .btnClosePopup {
   background-color: transparent;
+  background-image: none;
 }
-/* line 9, ../sass/_change-profileimage.sass */
-#profileModal .PopUp_header .lblHeader {
+/* line 10, ../sass/_change-profileimage.sass */
+#profileModal .PopUp_header .lblHeader, #coverModal .PopUp_header .lblHeader {
   font-size: 16px;
   margin: 5px 0;
   margin-top: 8px;
   margin-left: 15px;
 }
-/* line 15, ../sass/_change-profileimage.sass */
-#profileModal #profilePhotoIframe {
+/* line 16, ../sass/_change-profileimage.sass */
+#profileModal #profilePhotoIframe, #profileModal #coverPhotoIframe, #coverModal #profilePhotoIframe, #coverModal #coverPhotoIframe {
   border: none;
 }
 
-/* line 19, ../sass/_change-profileimage.sass */
+/* line 20, ../sass/_change-profileimage.sass */
 #cropId .btn.btn-default.btn-file, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-file::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-file::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-file::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-file::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-default.btn-file::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-default.btn-file::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-default.btn-file::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-default.btn-file::before, #cropId #TblPagesList .btn-default.btn-file.btnSaveProfile, #TblPagesList #cropId .btn-default.btn-file.btnSaveProfile, #cropId #TblPageEdit .btn-default.btn-file.btnSaveProfile, #TblPageEdit #cropId .btn-default.btn-file.btnSaveProfile, #cropId .btn.btn-save.ng-binding, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-save.ng-binding::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-save.ng-binding::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-save.ng-binding::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-save.ng-binding::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-save.ng-binding::before, #cropId #TblPagesList .btn-save.ng-binding.btnSaveProfile, #TblPagesList #cropId .btn-save.ng-binding.btnSaveProfile, #cropId #TblPageEdit .btn-save.ng-binding.btnSaveProfile, #TblPageEdit #cropId .btn-save.ng-binding.btnSaveProfile {
   background-color: #3aa6e7 !important;
   color: #ffffff;
 }
-/* line 22, ../sass/_change-profileimage.sass */
+/* line 23, ../sass/_change-profileimage.sass */
 #cropId .btn.btn-default.btn-file:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-file:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-default.btn-file:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-default.btn-file:hover::before, #cropId #TblPagesList .btn-default.btn-file.btnSaveProfile:hover, #TblPagesList #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId #TblPageEdit .btn-default.btn-file.btnSaveProfile:hover, #TblPageEdit #cropId .btn-default.btn-file.btnSaveProfile:hover, #cropId .btn.btn-save.ng-binding:hover, #cropId #TblPagesList .TrItem td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(5) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(5) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrItem td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrItem td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .TrAlt td:nth-child(6) a.btn-save.ng-binding:hover::before, #TblPagesList .TrAlt td:nth-child(6) #cropId a.btn-save.ng-binding:hover::before, #cropId #TblPagesList .btn-save.ng-binding.btnSaveProfile:hover, #TblPagesList #cropId .btn-save.ng-binding.btnSaveProfile:hover, #cropId #TblPageEdit .btn-save.ng-binding.btnSaveProfile:hover, #TblPageEdit #cropId .btn-save.ng-binding.btnSaveProfile:hover {
   background-color: #1a8ed4 !important;
 }

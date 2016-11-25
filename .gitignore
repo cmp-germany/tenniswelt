@@ -2,3 +2,5 @@ bower_components/bootstrap/node_modules
 .sass-cache
 .DS_Store
 node_modules
+output.json
+etc/

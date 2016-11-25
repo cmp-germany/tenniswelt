@@ -1,32 +1,53 @@
 var React = require('react');
 var CVM = require("react-component-visibility");
+var TimerMixin = require('react-timer-mixin');
 var TimeAgo = require('react-timeago').default;
-import germanStrings from 'react-timeago/lib/language-strings/de-short';
-import buildFormatter from 'react-timeago/lib/formatters/buildFormatter';
-
-const formatter = buildFormatter(germanStrings);
+var languages = {
+  'de-DE': require('react-timeago/lib/language-strings/de-short').default,
+  'en-US': require('react-timeago/lib/language-strings/en-short.js').default
+};
+var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var Notification = React.createClass({
-  mixins: [ CVM ],
+  mixins: [ CVM, TimerMixin ],
 
   getInitialState: function() {
     return {
-      IsSeen: this.props.data.IsSeen
+      formatter: buildFormatter(languages[this.props.currentLanguage])
     }
+  },
+
+  componentDidMount: function() {
+    this.setInterval(this.checkComponentVisibility, 500);
   },
 
   componentVisibilityChanged: function() {
     var visible = this.state.visible;
-    if (visible && !this.props.data.IsSeen) {
+    if (visible && !this.props.data.isSeen) {
+      var url = this.props.webserviceBase + this.props.servicePaths.postIsSeen;
+      if (window.LOCALDATA) {
+        url = "data/example/setSeenState.example.json"
+      }
       $.post(
-        this.props.webserviceBase + this.props.servicePaths.postIsSeen,
+        url,
         {
-          friendRequestId: this.props.data.Id,
+          friendRequestId: this.props.data.id,
           seen: true
-        }
-      ).fail(function (result){
-        console.error(result);
-      });
+        },
+        function(result){
+          if (result.success) {
+            this.props.onSeen(this.props.data.id);
+          } else {
+            console.error("error POST on ", url);
+          }
+        }.bind(this),
+        "json"
+      ).fail(function (jqXHR, textStatus, errorThrown){
+        console.error("error POST on ", url);
+        console.error("jqXHR: ", jqXHR);
+        console.error("textStatus: ", textStatus);
+        console.error("errorThrown: ", errorThrown);
+      }.bind(this));
     }
   },
 
@@ -37,7 +58,7 @@ var Notification = React.createClass({
             errorMessage += ", notificationId doesn\'t have an ID!";
           if(functionName)
             errorMessage = "in function: " + functionName + " " + errorMessage;
-          this.props.onError(this.props.data.Id, errorMessage);
+          this.props.onError(this.props.data.id, errorMessage);
           return;
         }
       console.log('Can\'t send the error!')
@@ -45,43 +66,43 @@ var Notification = React.createClass({
 
   acceptHandler: function(){
     try{
-      this.props.onAccept(this.props.data.Id);
+      this.props.onAccept(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'acceptHandler');
     }
   },
-  
+
   declineHandler: function(){
     try{
-      this.props.onDecline(this.props.data.Id); 
+      this.props.onDecline(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'declineHandler');
     }
   },
 
   errorRetryHandler: function(){
     try{
-      this.props.onErrorRetry(this.props.data.Id);
+      this.props.onErrorRetry(this.props.data.id);
     }
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'errorRetryHandler');
     }
   },
-  
+
   getTranslation: function(word){
     if(!word)return "";
     try{
@@ -90,8 +111,8 @@ var Notification = React.createClass({
     catch(err){
       var id = 0;
       if(this.props.data)
-        if(this.props.data.Id)
-          id = this.props.data.Id;
+        if(this.props.data.id)
+          id = this.props.data.id;
       this.errorHandler(id, err, 'getTranslation');
     }
   },
@@ -107,7 +128,7 @@ var Notification = React.createClass({
     );
 
     //Highlight, if not seen
-    if (!this.state.IsSeen) {
+    if (!this.props.data.isSeen) {
       containerClassName += " notification--unread";
     }
 
@@ -157,18 +178,20 @@ var Notification = React.createClass({
 
     //when there is no time value, ignore it
     var timeAgo = "";
-    if (data.DateCreatedUtc) {
-      timeAgo = (<TimeAgo date={data.DateCreatedUtc} formatter={formatter} />);
+    if (data.dateCreatedUtc) {
+      timeAgo = (<TimeAgo date={data.dateCreatedUtc} formatter={this.state.formatter} />);
     }
 
     return (
       <div className={containerClassName}>
         <div className="notification__left">
-          <img src={this.props.webserviceBase + data.ProfilePicture} alt="Profilbild" className="notification__avatar" />
+          <a href={data.profileUrl}>
+            <img src={this.props.webserviceBase + data.profilePicture} alt="Profilbild" className="notification__avatar" />
+          </a>
         </div>
         <div className="notification__right">
           <div className="notification__top">
-            <h4 className="notification__name">{data.ShownName}</h4>
+            <h4 className="notification__name"><a href={data.profileUrl}>{data.shownName}</a></h4>
             <div className="notification__time">{timeAgo}</div>
           </div>
           {notificationBottom}

@@ -13,3 +13,5 @@ $(document).ready(function() {
     });
   });
 });
+
+window.LOCALDATA = true;
