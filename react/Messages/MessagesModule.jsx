@@ -1,8 +1,21 @@
-const React         = require('react');
-const WallWidget    = require('./components/WallWidget');
-const Conversations = require('./components/Conversations');
+const React                = require('react');
+const WallWidget           = require('./components/WallWidget');
+const Conversations        = require('./components/Conversations');
+const ConversationMessages = require('./components/ConversationMessages');
+
+var currentUserId = "wolfgang-adams";
+
+
 
 var MessagesModule = React.createClass({
+
+  getInitialState: function() {
+    return ({
+      conversations: this.props.conversationsData,
+      activeConversation: this.props.conversationsData[5]
+    });
+  },
+
   render: function() {
     return (
       <div className="container-fluid msg-container">
@@ -13,33 +26,12 @@ var MessagesModule = React.createClass({
             contentScrollable={true}
             contentFull={true}
           >
-            <Conversations {...this.props} />
+            <Conversations conversationsData={this.state.conversations} />
           </WallWidget>
         </div>
 
         <div className="section-center section-center--msg">
-          <div className="msg-messages">
-            <div className="msg-message msg-message--other">
-              <img src="gfx/profilbilder/mike-schnorr.jpg" alt className="msg-message__avatar" />
-              <header className="msg-message__meta">
-                <a href="profile-about.html" className="msg-message__name">Mike Schnorr</a>
-                <div className="msg-message__time">Vor 2 Stunden</div>
-              </header>
-              <div className="msg-message__content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-            </div>
-            <div className="msg-message msg-message--self">
-              <img src="gfx/profilbilder/p4.jpg" className="msg-message__avatar" />
-              <header className="msg-message__meta">
-                <a href="profile-about.html" className="msg-message__name">Maxi Mustermann</a>
-                <div className="msg-message__time">Vor 2 Stunden</div>
-              </header>
-              <div className="msg-message__content">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </div>
-            </div>
-          </div>
+          <ConversationMessages messages={this.state.activeConversation.messages} {...this.props} />
           <div className="msg-input-area">
             <textarea placeholder="Schreibe eine Nachricht" rows={1} name="msg-input-area__text" id="msg-input-area__text" className="msg-input-area__text" defaultValue={""} />
             <a className="msg-input-area__send-a" href="#1"><i className="material-icons">send</i></a>

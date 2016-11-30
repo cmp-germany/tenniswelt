@@ -1,14 +1,14 @@
 const React = require('react');
 const Conversation = require('./Conversation');
 
-var conversationsData = require('../../../data/example/conversationsData');
 
 var Conversations = React.createClass({
-  conversationsData: conversationsData,
 
   render: function() {
 
-    var conversations = this.conversationsData.map(function(conversationData, index){
+    var conversationsData = this.props.conversationsData;
+
+    var renderedConversations = conversationsData.map(function(conversationData, index){
       return (
         <Conversation
           key={index}
@@ -20,7 +20,7 @@ var Conversations = React.createClass({
 
     return (
       <div>
-        {conversations}
+        {renderedConversations}
       </div>
     );
   }
