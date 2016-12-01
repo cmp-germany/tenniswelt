@@ -28,6 +28,9 @@ var Notification = React.createClass({
       if (window.LOCALDATA) {
         url = "data/example/setSeenState.example.json"
       }
+      if (typeof updateFriendrequestsCount === "function") {
+          updateFriendrequestsCount(this.props.data.id);
+        }
       $.post(
         url,
         {
