@@ -1,5 +1,6 @@
-const React   = require('react');
-const TimeAgo = require('react-timeago').default;
+const React               = require('react');
+const TimeAgo             = require('react-timeago').default;
+const MaterialDesignMixin = require('../../mixins/MaterialDesignMixin.js');
 
 const languages = {
   'de-DE': require('react-timeago/lib/language-strings/de').default,
@@ -24,6 +25,14 @@ var ConversationMessage = React.createClass({
     var msgMessageModifier = "";
     msgMessageModifier += (user.id == currentUser.id) ? "msg-message--self" : "msg-message--other";
 
+    var msgStati = {
+      loading: <div className="msg-message__status msg-message__status--loading" />,
+      sent: <div className="msg-message__status msg-message__status--sent" />,
+      read: <div className="msg-message__status msg-message__status--read" />
+    }
+    var msgStatus = msgStati[message.status];
+
+
     return (
       <div className={"msg-message " + msgMessageModifier}>
         <img src={user.profileImage} alt={"Avatar von " + user.name} className="msg-message__avatar" />
@@ -36,6 +45,7 @@ var ConversationMessage = React.createClass({
         <div className="msg-message__content">
           {message.content}
         </div>
+        {msgStatus}
       </div>
     )
   }

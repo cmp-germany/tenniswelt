@@ -1,7 +1,10 @@
-const React                = require('react');
-const WallWidget           = require('./components/WallWidget');
-const Conversations        = require('./components/Conversations');
-const ConversationMessages = require('./components/ConversationMessages');
+const React                    = require('react');
+const WallWidget               = require('./components/WallWidget');
+const Conversations            = require('./components/Conversations');
+const ConversationMessages     = require('./components/ConversationMessages');
+const conversationStore        = require('./stores/ConversationStore').default;
+const currentConversationStore = require('./stores/CurrentConversationStore').default;
+const InputArea                = require('./components/InputArea');
 
 var currentUserId = "wolfgang-adams";
 
@@ -11,9 +14,17 @@ var MessagesModule = React.createClass({
 
   getInitialState: function() {
     return ({
-      conversations: this.props.conversationsData,
-      activeConversation: this.props.conversationsData[5]
+      conversations: conversationStore.getAll(),
+      activeConversation: currentConversationStore.getConversation()
     });
+  },
+
+  componentWillMount: function() {
+    currentConversationStore.on("change", () => {
+      this.setState({
+        activeConversation: currentConversationStore.getConversation()
+      });
+    })
   },
 
   render: function() {
@@ -32,10 +43,7 @@ var MessagesModule = React.createClass({
 
         <div className="section-center section-center--msg">
           <ConversationMessages messages={this.state.activeConversation.messages} {...this.props} />
-          <div className="msg-input-area">
-            <textarea placeholder="Schreibe eine Nachricht" rows={1} name="msg-input-area__text" id="msg-input-area__text" className="msg-input-area__text" defaultValue={""} />
-            <a className="msg-input-area__send-a" href="#1"><i className="material-icons">send</i></a>
-          </div>
+          <InputArea />
         </div>
 
         <div className="section-right--msg">

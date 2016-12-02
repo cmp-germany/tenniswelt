@@ -147,6 +147,7 @@ $color-msg-conversations-border: #ebebeb
   padding: 20px
   width: 80%
   min-width: 300px
+  position: relative
 
 
 
@@ -169,6 +170,19 @@ $color-msg-conversations-border: #ebebeb
 
   &__content
     margin-top: 5px
+
+  &__status
+    color: #777
+    position: absolute
+    bottom: 1.4px
+    right: 3.9px
+
+    &--loading::before
+      +make-material-icon('query_builder', 14px)
+    &--sent::before
+      +make-material-icon('done', 14px)
+    &--read::before
+      +make-material-icon('done_all', 14px)
 
 
 
