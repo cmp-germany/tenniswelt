@@ -96,6 +96,9 @@ var FriendRequestsModule = React.createClass({
 
         var friendRequests;
         friendRequests = this.state.friendRequests;
+        if (pageNumber == 0) {
+          friendRequests = [];
+        }
         Array.prototype.push.apply(friendRequests, result.data.friendRequests);
 
         var newState;
