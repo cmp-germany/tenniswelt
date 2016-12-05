@@ -5,7 +5,6 @@ class InputAreaStore extends EventEmitter{
   constructor() {
     super()
     this.userInput = "Ok, let me think about that...";
-    this.currentUser = "wolfgang-adams";
 
     this.handleAction = {
 
@@ -17,10 +16,6 @@ class InputAreaStore extends EventEmitter{
         this.setUserInput("");
       }.bind(this),
     };
-  }
-
-  getCurrentUser() {
-    return this.currentUser;
   }
 
   getUserInput() {

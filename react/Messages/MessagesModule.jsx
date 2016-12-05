@@ -49,7 +49,7 @@ var MessagesModule = React.createClass({
         </div>
 
         <div className="section-center section-center--msg">
-          <ConversationMessages messages={this.state.activeConversation.messages} {...this.props} />
+          <ConversationMessages messages={this.state.activeConversation.messages} />
           <InputArea />
         </div>
 

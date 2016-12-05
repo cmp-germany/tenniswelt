@@ -1,15 +1,13 @@
 const React            = require('react');
 const inputAreaStore   = require('../stores/InputAreaStore').default;
 const inputAreaActions = require('../actions/InputAreaActions');
+const currentUserStore = require('../stores/CurrentUserStore').default;
 
 
 var InputArea = React.createClass({
 
   getInitialState: function() {
-    return ({
-      userInput: inputAreaStore.getUserInput(),
-      currentUser: inputAreaStore.getCurrentUser(),
-    })
+    return this.getStateFromStore();
   },
 
   handleChange: function(e) {
@@ -34,18 +32,22 @@ var InputArea = React.createClass({
   },
 
   componentWillMount: function() {
-    inputAreaStore.on("change", this.loadDataFromStore);
+    inputAreaStore.on("change", this.refreshStateFromStore);
   },
 
   componentWillUnmount: function() {
-    inputAreaStore.removeListener("change", this.loadDataFromStore);
+    inputAreaStore.removeListener("change", this.refreshStateFromStore);
   },
 
-  loadDataFromStore: function() {
-    this.setState({
+  getStateFromStore: function() {
+    return {
       userInput: inputAreaStore.getUserInput(),
-      currentUser: inputAreaStore.getCurrentUser(),
-    });
+      currentUser: currentUserStore.getCurrentUser().id,
+    }
+  },
+
+  refreshStateFromStore: function() {
+    this.setState(this.getStateFromStore());
   },
 
   render: function() {
