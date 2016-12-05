@@ -34,12 +34,18 @@ var InputArea = React.createClass({
   },
 
   componentWillMount: function() {
-    inputAreaStore.on("change", function(){
-      this.setState({
-        userInput: inputAreaStore.getUserInput(),
-        currentUser: inputAreaStore.getCurrentUser(),
-      });
-    }.bind(this));
+    inputAreaStore.on("change", this.loadDataFromStore);
+  },
+
+  componentWillUnmount: function() {
+    inputAreaStore.removeListener("change", this.loadDataFromStore);
+  },
+
+  loadDataFromStore: function() {
+    this.setState({
+      userInput: inputAreaStore.getUserInput(),
+      currentUser: inputAreaStore.getCurrentUser(),
+    });
   },
 
   render: function() {

@@ -5,6 +5,7 @@ const ConversationMessages     = require('./components/ConversationMessages');
 const conversationStore        = require('./stores/ConversationStore').default;
 const currentConversationStore = require('./stores/CurrentConversationStore').default;
 const InputArea                = require('./components/InputArea');
+const ContactInfos             = require('./components/ContactInfos');
 
 var currentUserId = "wolfgang-adams";
 
@@ -20,11 +21,17 @@ var MessagesModule = React.createClass({
   },
 
   componentWillMount: function() {
-    currentConversationStore.on("change", () => {
-      this.setState({
-        activeConversation: currentConversationStore.getConversation()
-      });
-    })
+    currentConversationStore.on("change", this.getConversation);
+  },
+
+  componentWillUnmount: function() {
+    currentConversationStore.removeListener("change", this.getConversation);
+  },
+
+  getConversation: function() {
+    this.setState({
+      activeConversation: currentConversationStore.getConversation()
+    });
   },
 
   render: function() {
@@ -47,30 +54,15 @@ var MessagesModule = React.createClass({
         </div>
 
         <div className="section-right--msg">
-          <aside className="wall-widget wall-widget--side wall-widget--msg">
-            <header>
-              <i className="material-icons">info_outline</i><h3>Kontaktinfo</h3>
-            </header>
-            <div className="wall-widget__content--scrollable">
-              <img src="gfx/profilbilder/mike-schnorr.jpg" alt className="img-responsive" />
-              <div className="msg-contact-detail">
-                <div className="msg-contact-detail__title">Name</div>
-                <div className="msg-contact-detail__text">Mike Schnorr</div>
-              </div>
-              <div className="msg-contact-detail">
-                <div className="msg-contact-detail__title">Status</div>
-                <div className="msg-contact-detail__text">Auf der Arbeit...</div>
-              </div>
-              <div className="msg-contact-detail">
-                <div className="msg-contact-detail__title">Online Status</div>
-                <div className="msg-contact-detail__text">zuletzt online heute 15:21</div>
-              </div>
-              <div className="msg-contact-detail">
-                <div className="msg-contact-detail__title">Telefon</div>
-                <div className="msg-contact-detail__text">+49 1743 9847304</div>
-              </div>
-            </div>
-          </aside></div>
+          <WallWidget
+            title="Kontaktinfo"
+            symbol="info_outline"
+            contentScrollable={true}
+            contentFull={false}
+          >
+            <ContactInfos />
+          </WallWidget>
+        </div>
       </div>
 
     );
