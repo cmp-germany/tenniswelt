@@ -81,11 +81,13 @@ var FriendRequestsModule = React.createClass({
     this.setState({friendRequests: allData});
   },
 
-  loadData: function(pageNumber = 1, onLoadingDone) {
+  loadData: function(pageNumber = 1, onLoadingDone, cleanTheList = false) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
     if (window.LOCALDATA) {
       getAllFriendRequestsUrl = "data/example/friendRequests.example.json";
     }
+    if(cleanTheList)
+        pageNumber = 1;
     this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
       userid: this.props.userId,
       currentLanguage: this.props.currentLanguage,
@@ -96,7 +98,7 @@ var FriendRequestsModule = React.createClass({
 
         var friendRequests;
         friendRequests = this.state.friendRequests;
-        if (pageNumber == 0) {
+        if (cleanTheList) {
           friendRequests = [];
         }
         Array.prototype.push.apply(friendRequests, result.data.friendRequests);
