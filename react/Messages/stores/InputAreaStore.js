@@ -4,7 +4,7 @@ import dispatcher from "../dispatcher";
 class InputAreaStore extends EventEmitter{
   constructor() {
     super()
-    this.userInput = "Ok, let me think about that...";
+    this.userInput = "";
 
     this.handleAction = {
 

@@ -11,12 +11,7 @@ $( document ).ready(function(){
 function initReactComponents() {
   ////////////////////////////// MESSAGES //////////////////////////////
   window.reactMessagesApp = ReactDOM.render(
-    <MessagesModule
-      users={window.users}
-      currentUser={window.users['wolfgang-adams']}
-      currentLanguage="de-DE"
-      conversationsData={conversationsData}
-    />,
+    <MessagesModule currentLanguage="de-DE" />,
     document.getElementById('MessagesModuleRoot')
   );
 }

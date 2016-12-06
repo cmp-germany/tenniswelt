@@ -7,9 +7,6 @@ const currentConversationStore = require('./stores/CurrentConversationStore').de
 const InputArea                = require('./components/InputArea');
 const ContactInfos             = require('./components/ContactInfos');
 
-var currentUserId = "wolfgang-adams";
-
-
 
 var MessagesModule = React.createClass({
 
@@ -49,7 +46,7 @@ var MessagesModule = React.createClass({
         </div>
 
         <div className="section-center section-center--msg">
-          <ConversationMessages messages={this.state.activeConversation.messages} />
+          <ConversationMessages messages={this.state.activeConversation.messages} currentLanguage={this.props.currentLanguage} />
           <InputArea />
         </div>
 
