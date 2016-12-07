@@ -9,7 +9,7 @@ var Conversation = React.createClass({
   render: function() {
     var user = this.props.conversation.user;
     var conversation = this.props.conversation.conversation;
-    var conversationClass = conversation.isActive ?
+    var conversationClass = this.props.conversation.isActive ?
       "msg-conversation msg-conversation--active" :
       "msg-conversation";
     return (

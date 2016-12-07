@@ -60,6 +60,4 @@ class ContactInfosStore extends EventEmitter {
 const contactInfosStore = new ContactInfosStore;
 dispatcher.register(contactInfosStore.handleActions.bind(contactInfosStore));
 
-window.dispatcher = dispatcher;
-
 export default contactInfosStore;

@@ -47,6 +47,4 @@ class CurrentConversationStore extends EventEmitter {
 const currentConversationStore = new CurrentConversationStore;
 dispatcher.register(currentConversationStore.handleActions.bind(currentConversationStore));
 
-window.dispatcher = dispatcher;
-
 export default currentConversationStore;

@@ -1,5 +1,6 @@
 import { EventEmitter } from "events";
 import _ from "lodash";
+import dispatcher from "../dispatcher";
 
 class ConversationStore extends EventEmitter {
   constructor() {
@@ -48,10 +49,10 @@ class ConversationStore extends EventEmitter {
       {
         id: "conversation005",
         user: window.users['mike-schnoor'],
+        isActive: true,
         conversation: {
           preview: "ipsum wirklich langer Text",
-          time: "14:59",
-          isActive: true
+          time: "14:59"
         },
         messages: [
           {
@@ -83,6 +84,14 @@ class ConversationStore extends EventEmitter {
         }
       }
     ]
+
+    this.changeActiveConversation = this.changeActiveConversation.bind(this);
+
+    this.handleAction = {
+
+      'CONVERSATION__SELECTED': this.changeActiveConversation,
+
+    }
   }
 
   getAll(){
@@ -93,8 +102,28 @@ class ConversationStore extends EventEmitter {
     var conversation = _.find(this.conversations, {id});
     return conversation;
   }
+
+  changeActiveConversation(action){
+    var id = action.conversationId;
+
+    // unset the current Conversation
+    var currentConversationIndex = _.findIndex(this.conversations, {isActive: true});
+    this.conversations[currentConversationIndex].isActive = false;
+
+    // set the new Conversation
+    var newConversationIndex = _.findIndex(this.conversations, {id});
+    this.conversations[newConversationIndex].isActive = true;
+
+    // notify for changes
+    this.emit("change");
+  }
+
+  handleActions(action) {
+    return (this.handleAction[action.type]) ? this.handleAction[action.type](action): null;
+  }
 }
 
 const conversationStore = new ConversationStore;
+dispatcher.register(conversationStore.handleActions.bind(conversationStore));
 
 export default conversationStore;

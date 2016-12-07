@@ -32,6 +32,4 @@ class CurrentUserStore extends EventEmitter {
 const currentUserStore = new CurrentUserStore;
 dispatcher.register(currentUserStore.handleActions.bind(currentUserStore));
 
-window.dispatcher = dispatcher;
-
 export default currentUserStore;

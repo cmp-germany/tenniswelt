@@ -277,6 +277,4 @@ class UsersStore extends EventEmitter {
 const usersStore = new UsersStore;
 dispatcher.register(usersStore.handleActions.bind(usersStore));
 
-window.dispatcher = dispatcher;
-
 export default usersStore;
