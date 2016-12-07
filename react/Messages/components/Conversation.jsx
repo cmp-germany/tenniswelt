@@ -1,14 +1,19 @@
 const React = require('react');
+const conversationActions = require('../actions/ConversationActions');
 
 var Conversation = React.createClass({
+  onClick: function() {
+    conversationActions.select(this.props.conversation.id);
+  },
+
   render: function() {
-    var user = this.props.user;
-    var conversation = this.props.conversation;
+    var user = this.props.conversation.user;
+    var conversation = this.props.conversation.conversation;
     var conversationClass = conversation.isActive ?
       "msg-conversation msg-conversation--active" :
       "msg-conversation";
     return (
-      <div
+      <div onClick={this.onClick}
         className={conversationClass}
       >
         <div className="msg-conversation__left">

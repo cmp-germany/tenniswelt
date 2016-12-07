@@ -12,8 +12,7 @@ var Conversations = React.createClass({
       return (
         <Conversation
           key={index}
-          user={conversationData.user}
-          conversation={conversationData.conversation}
+          conversation={conversationData}
         />
       );
     });

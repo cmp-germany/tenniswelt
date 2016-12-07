@@ -22,8 +22,16 @@ var ConversationMessage = React.createClass({
     const currentUser = this.props.currentUser;
     const message = this.props.message;
 
+    const isSystemMessage = this.props.isSystemMessage;
+
     var msgMessageModifier = "";
-    msgMessageModifier += (user.id == currentUser.id) ? "msg-message--self" : "msg-message--other";
+    if (isSystemMessage) {
+      msgMessageModifier += "msg-message--system-message";
+    }
+    if (user && currentUser) {
+      msgMessageModifier += (user.id == currentUser.id) ? "msg-message--self" : "msg-message--other";
+    }
+
 
     var msgStati = {
       loading: <div className="msg-message__status msg-message__status--loading" />,
@@ -32,6 +40,15 @@ var ConversationMessage = React.createClass({
     }
     var msgStatus = msgStati[message.status];
 
+    if (isSystemMessage) {
+      return (
+        <div className={"msg-message " + msgMessageModifier}>
+          <div className="msg-message__content">
+            {message.content}
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div className={"msg-message " + msgMessageModifier}>

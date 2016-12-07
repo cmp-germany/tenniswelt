@@ -2781,6 +2781,7 @@ html, body { height: 100%; }
 .msg-message--other { float: left; }
 .msg-message--other:before, .msg-message--other:after { content: " "; display: table; }
 .msg-message--other:after { clear: both; }
+.msg-message--system-message { background-color: #f9f9f9; margin-left: auto; margin-right: auto; border-top-color: #ebebeb; border-left-color: #ebebeb; }
 .msg-message--self { float: right; }
 .msg-message--self:before, .msg-message--self:after { content: " "; display: table; }
 .msg-message--self:after { clear: both; }

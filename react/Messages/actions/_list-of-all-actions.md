@@ -15,10 +15,9 @@
 		- [`MESSAGE__SEEN`](#messageseen)
 		- [`MESSAGE__RECEIVED`](#messagereceived)
 	- [Users](#users)
-		- [`USERS`](#users)
-		- [`CONVERSATIONS__CHANGE`](#conversationschange)
-		- [`CURRENT_CONVERSATION__DISPLAY_MESSAGE`](#currentconversationdisplaymessage)
 		- [`USERS__ADDED`](#usersadded)
+	- [Conversation](#conversation)
+		- [`CONVERSATION__SELECTED`](#conversationselected)
 
 <!-- /TOC -->
 
@@ -109,10 +108,18 @@ This action appears, when the user gets a Message from another user.
 
 ### Users
 
-#### `USERS`
-
-#### `CONVERSATIONS__CHANGE`
-
-#### `CURRENT_CONVERSATION__DISPLAY_MESSAGE`
-
 #### `USERS__ADDED`
+
+### Conversation
+
+#### `CONVERSATION__SELECTED`
+
+This action appears whenever the user intents to change to another conversation.
+
+##### Example
+```js
+{
+  type: "CONVERSATION__SELECTED",
+  conversationId: "JLKJD540-DJLKJD332-JDK"
+}
+```

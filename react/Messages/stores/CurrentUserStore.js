@@ -1,24 +1,12 @@
 import { EventEmitter } from "events";
+import usersStore from "./UsersStore";
 
 import dispatcher from "../dispatcher";
 
 class CurrentUserStore extends EventEmitter {
   constructor() {
     super();
-    this.currentUser = {
-      "id": "wolfgang-adams",
-      "profilePage": "profile-about.html?userId=wolfgang-adams",
-      "name": "Wolfgang Adams",
-      "wallpaper": "gfx/wallpaper/wallpaper-wolfgang-adams.jpg",
-      "profileImage": "gfx/profilbilder/profilbild-adams.jpg",
-      "isCompanyProfile": false,
-      "street": "Alte Brücke 6",
-      "zip": "51570",
-      "city": "Windeck",
-      "website": "",
-      "timezone": "MESZ",
-      "isOnline": false
-    },
+    this.currentUserId = "wolfgang-adams";
 
 
     this.handleAction = {
@@ -32,7 +20,7 @@ class CurrentUserStore extends EventEmitter {
   }
 
   getCurrentUser() {
-    return this.currentUser;
+    return usersStore.getUserById(this.currentUserId);
   }
 
   handleActions(action) {

@@ -54,17 +54,31 @@ var ConversationMessages = React.createClass({
     const currentUser = this.state.currentUser;
     const currentLanguage = this.props.currentLanguage;
 
-    var renderedConversationMessages = this.state.messages.map(function(element, index){
-      return (
+    var renderedConversationMessages;
+    if (this.state.messages) {
+      renderedConversationMessages = this.state.messages.map(function(element, index){
+        return (
+          <ConversationMessage
+            message={element}
+            key={index}
+            user={users[element.user]}
+            currentUser={currentUser}
+            currentLanguage={currentLanguage}
+          />
+        );
+      });
+    }
+
+    if(!renderedConversationMessages) {
+      renderedConversationMessages = (
         <ConversationMessage
-          message={element}
-          key={index}
-          user={users[element.user]}
+          isSystemMessage={true}
+          message={{content: "Diese Konversation hat noch keine Nachrichten."}}
           currentUser={currentUser}
           currentLanguage={currentLanguage}
         />
       );
-    });
+    }
 
     return (
       <div className="msg-messages">
