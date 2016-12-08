@@ -206,6 +206,13 @@ var FriendRequestsModule = React.createClass({
           friendRequest.isDeleted = true;
           this.setFriendRequest(friendRequest);
           this.removeWithTimeout(friendRequestId, TimeOut);
+          if (typeof refreshUserLists === "function") {
+            refreshUserLists(friendRequest.userId);
+            refreshUserLists(friendRequest.friendUserId);
+          }
+          else{
+            console.log("refreshUserLists is not defined!")
+          }
           if (this.needsPageReload()) {
             this.reloadPage();
           }
