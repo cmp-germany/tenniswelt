@@ -173,9 +173,12 @@ var FriendRequestsModule = React.createClass({
         friendRequest.isAccepted = true;
         this.setFriendRequest(friendRequest);
         this.removeWithTimeout(friendRequestId, TimeOut);
-        if (typeof refreshChatUserList === "function") {
-          refreshChatUserList(friendRequest.userId);
-          refreshChatUserList(friendRequest.friendUserId);
+        if (typeof refreshUserLists === "function") {
+          refreshUserLists(friendRequest.userId);
+          refreshUserLists(friendRequest.friendUserId);
+        }
+        else{
+          console.log("refreshUserLists is not defined!")
         }
         if (this.needsPageReload()) {
           this.reloadPage();
