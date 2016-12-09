@@ -127,10 +127,6 @@ This action appears, when the user gets a new Message from another user.
 ```
 
 
-### Users
-
-#### `USER__ADDED`
-
 ### Conversation
 
 #### `CONVERSATION__SELECTED`

@@ -1,42 +1,34 @@
 import { EventEmitter } from "events";
 
+import currentConversationStore from "./CurrentConversationStore";
+
 import dispatcher from "../dispatcher";
 
 class ContactInfoStore extends EventEmitter {
   constructor() {
     super();
-    this.contactDetails = [
-      {title: "Status", content: "Auf der Arbeit..."},
-      {title: "Online Status", content: "zuletzt online heute 15:21"},
-      {title: "Telefon", content: "+49 1743 9847304"},
-    ];
-    this.contactAvatar = "gfx/profilbilder/mike-schnorr.jpg";
-    this.contactName = "Mike Schnorr";
 
+    this.refreshData = this.refreshData.bind(this);
+
+
+    this.refreshData();
 
     this.handleAction = {
 
-      'CONVERSATIONS__CHANGE': function(action) {
-        // load new user
-        var newContactDetails = [
-          {title: "Status", content: "Auf der Arbeit..."},
-          {title: "Online Status", content: "zuletzt online heute 15:21"},
-          {title: "Telefon", content: "+49 1743 9847304"},
-          {title: "Zusätzliches", content: "Dieser Benutzer wurde neu geladen"},
-        ];
-        var newContactAvatar = "gfx/profilbilder/mike-schnorr.jpg";
-        var newContactName = "Mike Schnorr";
-
-        // insert data into Store
-        this.contactDetails = newContactDetails;
-        this.contactAvatar = newContactAvatar;
-        this.contactName = newContactName;
-
-        // call components to update
-        this.emit("change");
-      }.bind(this),
+      'CONVERSATION__SELECTED': this.refreshData,
 
     }
+  }
+
+  refreshData() {
+    var user = currentConversationStore.getConversation().user;
+    this.contactAvatar = user.profileImage;
+    this.contactName   = user.name;
+    this.contactDetails = [
+      {title: "Status", content: user.isOnline ? "Online" : "Nicht Online"},
+      {title: "Herkunft", content: user.city},
+    ];
+    this.emit("change");
   }
 
   getDetails() {
