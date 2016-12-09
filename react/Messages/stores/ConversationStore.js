@@ -86,9 +86,15 @@ class ConversationStore extends EventEmitter {
     ]
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
+    this.addMessage = this.addMessage.bind(this);
 
     this.handleAction = {
 
+      'MESSAGE__SENDING': this.addMessage,
+      'MESSAGE__SENT': this.updateListeners,
+      'MESSAGE__SENT_REMOTE': this.addMessage,
+      'MESSAGE__SEEN': this.updateListeners,
+      'MESSAGE__RECEIVED': this.updateListeners,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
 
     }
@@ -101,6 +107,33 @@ class ConversationStore extends EventEmitter {
   getConversationById(id){
     var conversation = _.find(this.conversations, {id});
     return conversation;
+  }
+
+  addMessage(action){
+    var conversationIndex = _.findIndex(this.conversations, {id: action.conversationId});
+    if (!this.conversations[conversationIndex].messages) {
+      this.conversations[conversationIndex].messages = [];
+    }
+
+    var status;
+    switch (action.type) {
+      case "MESSAGE__SENDING":
+        status = "sending";
+        break;
+      case "MESSAGE__SENT_REMOTE":
+        status = "sent";
+        break;
+      default:
+
+    }
+
+    this.conversations[conversationIndex].messages.push({
+      user: action.user,
+      time: action.time,
+      content: action.text,
+      status: status
+    })
+
   }
 
   changeActiveConversation(action){
