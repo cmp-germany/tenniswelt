@@ -105,7 +105,7 @@ This action appears, when the message was seen by the other user. It uses the se
 {
   type: "MESSAGE__SEEN",
   id: "FLKJKJE-DJKLDJE-DIDL",
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 

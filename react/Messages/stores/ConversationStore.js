@@ -87,14 +87,15 @@ class ConversationStore extends EventEmitter {
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
     this.addMessageOnAction = this.addMessageOnAction.bind(this);
-    this.updateMessageOnAction = this.updateMessageOnAction.bind(this);
+    this.onMessageSent = this.onMessageSent.bind(this);
+    this.onMessageSeen = this.onMessageSeen.bind(this);
 
     this.handleAction = {
 
       'MESSAGE__SENDING': this.addMessageOnAction,
-      'MESSAGE__SENT': this.updateMessageOnAction,
+      'MESSAGE__SENT': this.onMessageSent,
       'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
-      'MESSAGE__SEEN': this.updateListeners,
+      'MESSAGE__SEEN': this.onMessageSeen,
       'MESSAGE__RECEIVED': this.updateListeners,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
 
@@ -110,7 +111,23 @@ class ConversationStore extends EventEmitter {
     return conversation;
   }
 
-  updateMessageOnAction(action){
+  onMessageSeen(action){
+    var conversation = _.find(
+      this.conversations,
+      {id: action.conversationId}
+    );
+
+    var message = _.find(
+      conversation.messages,
+      {id: action.id}
+    );
+
+    message.status = "seen";
+
+    this.emit("change");
+  }
+
+  onMessageSent(action){
     var conversation = _.find(
       this.conversations,
       {id: action.conversationId}
@@ -138,7 +155,7 @@ class ConversationStore extends EventEmitter {
     var status;
     switch (action.type) {
       case "MESSAGE__SENDING":
-        status = "loading";
+        status = "sending";
         break;
       case "MESSAGE__SENT_REMOTE":
         status = "sent";
