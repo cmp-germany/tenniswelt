@@ -2,7 +2,7 @@ import { EventEmitter } from "events";
 
 import dispatcher from "../dispatcher";
 
-class ContactInfosStore extends EventEmitter {
+class ContactInfoStore extends EventEmitter {
   constructor() {
     super();
     this.contactDetails = [
@@ -57,7 +57,7 @@ class ContactInfosStore extends EventEmitter {
 
 }
 
-const contactInfosStore = new ContactInfosStore;
-dispatcher.register(contactInfosStore.handleActions.bind(contactInfosStore));
+const contactInfoStore = new ContactInfoStore;
+dispatcher.register(contactInfoStore.handleActions.bind(contactInfoStore));
 
-export default contactInfosStore;
+export default contactInfoStore;

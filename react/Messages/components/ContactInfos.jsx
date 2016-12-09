@@ -1,6 +1,6 @@
 const React             = require('react');
 const ContactDetail     = require('./ContactDetail');
-const contactInfosStore = require('../stores/ContactInfosStore').default;
+const contactInfoStore = require('../stores/ContactInfoStore').default;
 
 var ContactInfos = React.createClass({
   getInitialState: function() {
@@ -8,18 +8,18 @@ var ContactInfos = React.createClass({
   },
 
   componentWillMount: function() {
-    contactInfosStore.on("change", this.refreshFromStoreData);
+    contactInfoStore.on("change", this.refreshFromStoreData);
   },
 
   componentWillUnmount: function() {
-    contactInfosStore.removeListener("change", this.refreshFromStoreData);
+    contactInfoStore.removeListener("change", this.refreshFromStoreData);
   },
 
   getStoreData: function() {
     return {
-      contactDetails: contactInfosStore.getDetails(),
-      contactName: contactInfosStore.getName(),
-      contactAvatar: contactInfosStore.getAvatar(),
+      contactDetails: contactInfoStore.getDetails(),
+      contactName: contactInfoStore.getName(),
+      contactAvatar: contactInfoStore.getAvatar(),
     };
   },
 
