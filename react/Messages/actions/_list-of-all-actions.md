@@ -120,9 +120,9 @@ This action appears, when the user gets a new Message from another user.
   type: "MESSAGE__RECEIVED",
   text: "Hey Wolfgang!",
   id: "FLKJKJE-DJKLDJE-DIDL",
-	conversationId: "conversation005",
-  user: "mike-schnorr",
-  time: "1481036426535",
+  conversationId: "conversation005",
+  user: "mike-schnoor",
+  time: 1481036426535,
 }
 ```
 

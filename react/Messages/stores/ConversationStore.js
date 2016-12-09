@@ -96,7 +96,7 @@ class ConversationStore extends EventEmitter {
       'MESSAGE__SENT': this.onMessageSent,
       'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
       'MESSAGE__SEEN': this.onMessageSeen,
-      'MESSAGE__RECEIVED': this.updateListeners,
+      'MESSAGE__RECEIVED': this.addMessageOnAction,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
 
     }
