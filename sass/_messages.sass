@@ -1,6 +1,9 @@
 html, body
   height: 100%
 
+#MessagesModuleRoot
+  height: 100%
+
 .msg-container
   height: 100%
   max-width: 1230px
@@ -144,6 +147,7 @@ $color-msg-conversations-border: #ebebeb
   padding: 20px
   width: 80%
   min-width: 300px
+  position: relative
 
 
 
@@ -167,12 +171,32 @@ $color-msg-conversations-border: #ebebeb
   &__content
     margin-top: 5px
 
+  &__status
+    color: #777
+    position: absolute
+    bottom: 1.4px
+    right: 3.9px
+
+    &--loading::before
+      +make-material-icon('query_builder', 14px)
+    &--sent::before
+      +make-material-icon('done', 14px)
+    &--read::before
+      +make-material-icon('done_all', 14px)
+
 
 
 
   &--other
     float: left
     +clearfix
+
+  &--system-message
+    background-color: $color-background-widget
+    margin-left: auto
+    margin-right: auto
+    border-top-color: $color-msg-conversations-border
+    border-left-color: $color-msg-conversations-border
 
   &--self
     float: right

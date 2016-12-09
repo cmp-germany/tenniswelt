@@ -31,8 +31,11 @@
     <!-- Auto Size -->
     <script src="bower_components/autosize/dist/autosize.min.js" charset="utf-8"></script>
 
+    <!-- Data -->
+    <script src="data/users.js" charset="utf-8"></script>
+
     <!-- Custom JS -->
-    <script src="js/wall.js" charset="utf-8"></script>
+    <script src="js/messages.bundle.js" charset="utf-8"></script>
     <script src="js/modules.js" charset="utf-8"></script>
 
   </head>
@@ -40,185 +43,7 @@
     <!-- Navigation -->
     <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
 
-    <div class="container-fluid msg-container">
-
-      <!-- Left Sidebar -->
-
-      <div class="section-left section-left--msg">
-
-        <aside class="wall-widget wall-widget--side wall-widget--msg">
-          <header>
-            <div style="display:table;">
-              <i class="material-icons">mail_outline</i><h3>Nachrichten</h3>
-            </div>
-          </header>
-
-          <div class="wall-widget__content--scrollable wall-widget__content--full">
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p1.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Volker Miller</h4>
-                <p class="msg-conversation__preview">Danke dir lorem</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p7.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Kai Gärtner</h4>
-                <p class="msg-conversation__preview">ipsum wirklich langer Text</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p6.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Wolfgang Winter</h4>
-                <p class="msg-conversation__preview">wirklich langer Text</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p5.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Maria Kristhoff</h4>
-                <p class="msg-conversation__preview">...</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p1.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Volker Miller</h4>
-                <p class="msg-conversation__preview">Danke dir lorem</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation msg-conversation--active">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/mike-schnorr.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Mike Schnorr</h4>
-                <p class="msg-conversation__preview">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p6.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Wolfgang Winter</h4>
-                <p class="msg-conversation__preview">wirklich langer Text</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-            <div class="msg-conversation">
-              <div class="msg-conversation__left"><img src="gfx/profilbilder/p5.jpg" alt="Profilbild" class="msg-conversation__avatar"/></div>
-              <div class="msg-conversation__center">
-                <h4 class="msg-conversation__name">Maria Kristhoff</h4>
-                <p class="msg-conversation__preview">...</p>
-              </div>
-              <div class="msg-conversation__right">
-                <div class="msg-conversation__time">14:59</div>
-              </div>
-            </div>
-
-          </div>
-
-        </aside>
-
-      </div>
-
-      <!-- Main Column -->
-      <div class="section-center section-center--msg">
-
-        <div class="msg-messages">
-
-          <div class="msg-message msg-message--other">
-            <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="msg-message__avatar">
-            <header class="msg-message__meta">
-              <a href="profile-about.html" class="msg-message__name">Mike Schnorr</a>
-              <div class="msg-message__time">Vor 2 Stunden</div>
-            </header>
-            <div class="msg-message__content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </div>
-
-          <div class="msg-message msg-message--self">
-            <img src="gfx/profilbilder/p4.jpg" class="msg-message__avatar">
-            <header class="msg-message__meta">
-              <a href="profile-about.html" class="msg-message__name">Maxi Mustermann</a>
-              <div class="msg-message__time">Vor 2 Stunden</div>
-            </header>
-            <div class="msg-message__content">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-          </div>
-
-        </div>
-
-        <div class="msg-input-area">
-          <textarea placeholder="Schreibe eine Nachricht" rows="1" name="msg-input-area__text" id="msg-input-area__text" class="msg-input-area__text"></textarea>
-          <script type="text/javascript">
-            autosize($('#msg-input-area__text'));
-          </script>
-          <a class="msg-input-area__send-a" href="#1"><i class="material-icons">send</i></a>
-        </div>
-
-      </div>
-
-      <!-- Right Sidebar -->
-
-      <div class="section-right--msg">
-
-        <aside class="wall-widget wall-widget--side wall-widget--msg">
-          <header>
-            <i class="material-icons">info_outline</i><h3>Kontaktinfo</h3>
-          </header>
-          <div class="wall-widget__content--scrollable">
-            <img src="gfx/profilbilder/mike-schnorr.jpg" alt="" class="img-responsive">
-            <div class="msg-contact-detail">
-              <div class="msg-contact-detail__title">Name</div>
-              <div class="msg-contact-detail__text">Mike Schnorr</div>
-            </div>
-            <div class="msg-contact-detail">
-              <div class="msg-contact-detail__title">Status</div>
-              <div class="msg-contact-detail__text">Auf der Arbeit...</div>
-            </div>
-            <div class="msg-contact-detail">
-              <div class="msg-contact-detail__title">Online Status</div>
-              <div class="msg-contact-detail__text">zuletzt online heute 15:21</div>
-            </div>
-            <div class="msg-contact-detail">
-              <div class="msg-contact-detail__title">Telefon</div>
-              <div class="msg-contact-detail__text">+49 1743 9847304</div>
-            </div>
-          </div>
-        </aside>
-
-      </div>
-
+    <div id="MessagesModuleRoot">
     </div>
 
   </body>

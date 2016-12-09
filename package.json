@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "exports-loader": "^0.6.3",
+    "flux": "^3.1.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.16.6",
     "material-design-lite": "^1.2.1",
