@@ -60,6 +60,7 @@ This action appears, when the user intends to send a message. The Message is not
   localId: "3940495",
   user: "mike-schnorr",
   time: "1481036426535",
+  conversationId: "conversation005",
 }
 ```
 
@@ -73,6 +74,23 @@ This action appears, when sending was successfully completed at the server. The 
   type: "MESSAGE__SENT",
   localId: "3940495",
   id: "FLKJKJE-DJKLDJE-DIDL"
+	conversationId: "conversation005",
+}
+```
+
+#### `MESSAGE__SENT_REMOTE`
+
+This action appears, when the a message from the User was send by another device. It doesn't contain a localId (because it doesn't need to be referenced), but instead contains all the other details, that are necessary for displaying the message correctly.
+
+##### Example
+```js
+{
+  type: "MESSAGE__SENT",
+	text: "Hey John!",
+  user: "mike-schnorr",
+  time: "1481036426535",
+  id: "FLKJKJE-DJKLDJE-DIDL"
+	conversationId: "conversation005",
 }
 ```
 
@@ -86,13 +104,14 @@ This action appears, when the message was seen by the other user. It uses the se
 {
   type: "MESSAGE__SEEN",
   id: "FLKJKJE-DJKLDJE-DIDL",
+	conversationId: "conversation005",
 }
 ```
 
 
 #### `MESSAGE__RECEIVED`
 
-This action appears, when the user gets a Message from another user.
+This action appears, when the user gets a new Message from another user.
 
 ##### Example
 ```js
@@ -100,6 +119,7 @@ This action appears, when the user gets a Message from another user.
   type: "MESSAGE__RECEIVED",
   text: "Hey Wolfgang!",
   id: "FLKJKJE-DJKLDJE-DIDL",
+	conversationId: "conversation005",
   user: "mike-schnorr",
   time: "1481036426535",
 }
