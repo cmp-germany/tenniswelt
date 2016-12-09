@@ -12,6 +12,7 @@
 	- [Message](#message)
 		- [`MESSAGE__SENDING`](#messagesending)
 		- [`MESSAGE__SENT`](#messagesent)
+		- [`MESSAGE__SENT_REMOTE`](#messagesentremote)
 		- [`MESSAGE__SEEN`](#messageseen)
 		- [`MESSAGE__RECEIVED`](#messagereceived)
 	- [Users](#users)
