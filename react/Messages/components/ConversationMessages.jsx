@@ -1,7 +1,7 @@
 const React                    = require('react');
 const ConversationMessage      = require('./ConversationMessage');
 const currentConversationStore = require('../stores/CurrentConversationStore').default;
-const usersStore               = require('../stores/UsersStore').default;
+const userStore               = require('../stores/UserStore').default;
 const currentUserStore         = require('../stores/CurrentUserStore').default;
 
 
@@ -14,12 +14,12 @@ var ConversationMessages = React.createClass({
 
   componentWillMount: function() {
     currentConversationStore.on("change", this.refreshStateFromStore);
-    usersStore.on("change", this.refreshStateFromStore);
+    userStore.on("change", this.refreshStateFromStore);
   },
 
   componentWillUnmount: function() {
     currentConversationStore.removeListener("change", this.refreshStateFromStore);
-    usersStore.removeListener("change", this.refreshStateFromStore);
+    userStore.removeListener("change", this.refreshStateFromStore);
   },
 
   componentWillUpdate: function() {
@@ -38,7 +38,7 @@ var ConversationMessages = React.createClass({
   getStateFromStore: function() {
     return {
       messages: currentConversationStore.getConversation().messages,
-      users: usersStore.getUsers(),
+      users: userStore.getUsers(),
       currentUser: currentUserStore.getCurrentUser(),
     };
   },

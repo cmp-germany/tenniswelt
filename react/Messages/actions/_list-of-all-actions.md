@@ -16,7 +16,7 @@
 		- [`MESSAGE__SEEN`](#messageseen)
 		- [`MESSAGE__RECEIVED`](#messagereceived)
 	- [Users](#users)
-		- [`USERS__ADDED`](#usersadded)
+		- [`USER__ADDED`](#usersadded)
 	- [Conversation](#conversation)
 		- [`CONVERSATION__SELECTED`](#conversationselected)
 
@@ -129,7 +129,7 @@ This action appears, when the user gets a new Message from another user.
 
 ### Users
 
-#### `USERS__ADDED`
+#### `USER__ADDED`
 
 ### Conversation
 

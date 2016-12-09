@@ -2,7 +2,7 @@ import { EventEmitter } from "events";
 
 import dispatcher from "../dispatcher";
 
-class UsersStore extends EventEmitter {
+class UserStore extends EventEmitter {
   constructor() {
     super();
     this.users = {
@@ -253,7 +253,7 @@ class UsersStore extends EventEmitter {
 
     this.handleAction = {
 
-      'USERS__ADDED': function(action) {
+      'USER__ADDED': function(action) {
         // Do something with action
       }.bind(this),
 
@@ -274,7 +274,7 @@ class UsersStore extends EventEmitter {
 
 }
 
-const usersStore = new UsersStore;
-dispatcher.register(usersStore.handleActions.bind(usersStore));
+const userStore = new UserStore;
+dispatcher.register(userStore.handleActions.bind(userStore));
 
-export default usersStore;
+export default userStore;
