@@ -15,6 +15,7 @@ class CurrentConversationStore extends EventEmitter {
 
       'MESSAGE__SENDING': this.updateListeners,
       'MESSAGE__SENT': this.updateListeners,
+      'MESSAGE__SENT_REMOTE': this.updateListeners,
       'MESSAGE__SEEN': this.updateListeners,
       'MESSAGE__RECEIVED': this.updateListeners,
       'CONVERSATION__SELECTED': this.changeConversation,

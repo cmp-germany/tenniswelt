@@ -87,11 +87,11 @@ This action appears, when the a message from the User was send by another device
 ```js
 {
   type: "MESSAGE__SENT_REMOTE",
-	text: "Hey John!",
+  text: "Hey John!",
   user: "mike-schnorr",
   time: "1481036426535",
   id: "FLKJKJE-DJKLDJE-DIDL"
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 

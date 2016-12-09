@@ -152,9 +152,11 @@ class ConversationStore extends EventEmitter {
       time: action.time,
       content: action.text,
       localId: action.localId,
+      id: action.id,
       status: status
-    })
+    });
 
+    this.emit("change");
   }
 
   changeActiveConversation(action){
