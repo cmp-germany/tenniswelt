@@ -81,11 +81,13 @@ var FriendRequestsModule = React.createClass({
     this.setState({friendRequests: allData});
   },
 
-  loadData: function(pageNumber = 1, onLoadingDone) {
+  loadData: function(pageNumber = 1, onLoadingDone, cleanTheList = false) {
     var getAllFriendRequestsUrl = this.props.webserviceBase + this.props.servicePaths.getActive;
     if (window.LOCALDATA) {
       getAllFriendRequestsUrl = "data/example/friendRequests.example.json";
     }
+    if(cleanTheList)
+        pageNumber = 1;
     this.serverRequest = $.getJSON(getAllFriendRequestsUrl, {
       userid: this.props.userId,
       currentLanguage: this.props.currentLanguage,
@@ -96,6 +98,9 @@ var FriendRequestsModule = React.createClass({
 
         var friendRequests;
         friendRequests = this.state.friendRequests;
+        if (cleanTheList) {
+          friendRequests = [];
+        }
         Array.prototype.push.apply(friendRequests, result.data.friendRequests);
 
         var newState;
@@ -168,9 +173,12 @@ var FriendRequestsModule = React.createClass({
         friendRequest.isAccepted = true;
         this.setFriendRequest(friendRequest);
         this.removeWithTimeout(friendRequestId, TimeOut);
-        if (typeof refreshChatUserList === "function") {
-          refreshChatUserList(friendRequest.userId);
-          refreshChatUserList(friendRequest.friendUserId);
+        if (typeof refreshUserLists === "function") {
+          refreshUserLists(friendRequest.userId);
+          refreshUserLists(friendRequest.friendUserId);
+        }
+        else{
+          console.log("refreshUserLists is not defined!")
         }
         if (this.needsPageReload()) {
           this.reloadPage();
@@ -198,6 +206,13 @@ var FriendRequestsModule = React.createClass({
           friendRequest.isDeleted = true;
           this.setFriendRequest(friendRequest);
           this.removeWithTimeout(friendRequestId, TimeOut);
+          if (typeof refreshUserLists === "function") {
+            refreshUserLists(friendRequest.userId);
+            refreshUserLists(friendRequest.friendUserId);
+          }
+          else{
+            console.log("refreshUserLists is not defined!")
+          }
           if (this.needsPageReload()) {
             this.reloadPage();
           }
