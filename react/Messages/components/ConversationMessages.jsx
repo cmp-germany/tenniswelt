@@ -57,7 +57,6 @@ var ConversationMessages = React.createClass({
     var renderedConversationMessages;
     if (this.state.messages) {
       renderedConversationMessages = this.state.messages.map(function(element, index){
-        console.log("rendering message", element);
         return (
           <ConversationMessage
             message={element}

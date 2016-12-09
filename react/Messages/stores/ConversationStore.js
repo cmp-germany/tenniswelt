@@ -86,13 +86,14 @@ class ConversationStore extends EventEmitter {
     ]
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
-    this.addMessage = this.addMessage.bind(this);
+    this.addMessageOnAction = this.addMessageOnAction.bind(this);
+    this.updateMessageOnAction = this.updateMessageOnAction.bind(this);
 
     this.handleAction = {
 
-      'MESSAGE__SENDING': this.addMessage,
-      'MESSAGE__SENT': this.updateListeners,
-      'MESSAGE__SENT_REMOTE': this.addMessage,
+      'MESSAGE__SENDING': this.addMessageOnAction,
+      'MESSAGE__SENT': this.updateMessageOnAction,
+      'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
       'MESSAGE__SEEN': this.updateListeners,
       'MESSAGE__RECEIVED': this.updateListeners,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
@@ -109,7 +110,26 @@ class ConversationStore extends EventEmitter {
     return conversation;
   }
 
-  addMessage(action){
+  updateMessageOnAction(action){
+    var conversation = _.find(
+      this.conversations,
+      {id: action.conversationId}
+    );
+
+    var message = _.find(
+      conversation.messages,
+      {localId: action.localId}
+    );
+
+    if (action.type == "MESSAGE__SENT") {
+      message.status = "sent";
+      message.id = action.id;
+    }
+
+    this.emit("change");
+  }
+
+  addMessageOnAction(action){
     var conversationIndex = _.findIndex(this.conversations, {id: action.conversationId});
     if (!this.conversations[conversationIndex].messages) {
       this.conversations[conversationIndex].messages = [];
@@ -118,7 +138,7 @@ class ConversationStore extends EventEmitter {
     var status;
     switch (action.type) {
       case "MESSAGE__SENDING":
-        status = "sending";
+        status = "loading";
         break;
       case "MESSAGE__SENT_REMOTE":
         status = "sent";
@@ -131,6 +151,7 @@ class ConversationStore extends EventEmitter {
       user: action.user,
       time: action.time,
       content: action.text,
+      localId: action.localId,
       status: status
     })
 

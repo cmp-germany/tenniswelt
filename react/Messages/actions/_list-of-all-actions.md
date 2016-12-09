@@ -86,7 +86,7 @@ This action appears, when the a message from the User was send by another device
 ##### Example
 ```js
 {
-  type: "MESSAGE__SENT",
+  type: "MESSAGE__SENT_REMOTE",
 	text: "Hey John!",
   user: "mike-schnorr",
   time: "1481036426535",
