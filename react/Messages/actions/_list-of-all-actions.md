@@ -137,6 +137,7 @@ This action appears whenever the user intents to change to another conversation.
 ```js
 {
   type: "CONVERSATION__SELECTED",
-  conversationId: "JLKJD540-DJLKJD332-JDK"
+  fromConversationId: "old-conversation-id-12393"
+  conversationId: "new-conversation-id-14394"
 }
 ```
