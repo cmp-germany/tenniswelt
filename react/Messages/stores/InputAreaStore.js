@@ -19,7 +19,7 @@ class InputAreaStore extends EventEmitter{
         this.setUserInput(action.text);
       }.bind(this),
 
-      "INPUT_AREA__SENDING": function(action) {
+      "MESSAGE__SENDING": function(action) {
         this.setUserInput("");
       }.bind(this),
 

@@ -23,6 +23,10 @@ class CurrentUserStore extends EventEmitter {
     return userStore.getUserById(this.currentUserId);
   }
 
+  getId() {
+    return this.currentUserId;
+  }
+
   handleActions(action) {
     return (this.handleAction[action.type]) ? this.handleAction[action.type](action): null;
   }
