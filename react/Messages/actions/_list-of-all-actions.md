@@ -12,10 +12,11 @@
 	- [Message](#message)
 		- [`MESSAGE__SENDING`](#messagesending)
 		- [`MESSAGE__SENT`](#messagesent)
+		- [`MESSAGE__SENT_REMOTE`](#messagesentremote)
 		- [`MESSAGE__SEEN`](#messageseen)
 		- [`MESSAGE__RECEIVED`](#messagereceived)
 	- [Users](#users)
-		- [`USERS__ADDED`](#usersadded)
+		- [`USER__ADDED`](#usersadded)
 	- [Conversation](#conversation)
 		- [`CONVERSATION__SELECTED`](#conversationselected)
 
@@ -85,12 +86,12 @@ This action appears, when the a message from the User was send by another device
 ##### Example
 ```js
 {
-  type: "MESSAGE__SENT",
-	text: "Hey John!",
+  type: "MESSAGE__SENT_REMOTE",
+  text: "Hey John!",
   user: "mike-schnorr",
   time: "1481036426535",
   id: "FLKJKJE-DJKLDJE-DIDL"
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 
@@ -104,7 +105,7 @@ This action appears, when the message was seen by the other user. It uses the se
 {
   type: "MESSAGE__SEEN",
   id: "FLKJKJE-DJKLDJE-DIDL",
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 
@@ -119,16 +120,12 @@ This action appears, when the user gets a new Message from another user.
   type: "MESSAGE__RECEIVED",
   text: "Hey Wolfgang!",
   id: "FLKJKJE-DJKLDJE-DIDL",
-	conversationId: "conversation005",
-  user: "mike-schnorr",
-  time: "1481036426535",
+  conversationId: "conversation005",
+  user: "mike-schnoor",
+  time: 1481036426535,
 }
 ```
 
-
-### Users
-
-#### `USERS__ADDED`
 
 ### Conversation
 
@@ -140,6 +137,7 @@ This action appears whenever the user intents to change to another conversation.
 ```js
 {
   type: "CONVERSATION__SELECTED",
-  conversationId: "JLKJD540-DJLKJD332-JDK"
+  fromConversationId: "old-conversation-id-12393"
+  conversationId: "new-conversation-id-14394"
 }
 ```

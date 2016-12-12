@@ -11,18 +11,26 @@ const ContactInfos             = require('./components/ContactInfos');
 var MessagesModule = React.createClass({
 
   getInitialState: function() {
-    return ({
+    return this.getStateFromStore();
+  },
+
+  getStateFromStore: function() {
+    return {
       conversations: conversationStore.getAll(),
-      activeConversation: currentConversationStore.getConversation()
-    });
+      activeConversation: currentConversationStore.getConversation(),
+    };
+  },
+
+  refreshStateFromStore: function() {
+    this.setState(this.getStateFromStore());
   },
 
   componentWillMount: function() {
-    currentConversationStore.on("change", this.getConversation);
+    currentConversationStore.on("change", this.refreshStateFromStore);
   },
 
   componentWillUnmount: function() {
-    currentConversationStore.removeListener("change", this.getConversation);
+    currentConversationStore.removeListener("change", this.refreshStateFromStore);
   },
 
   getConversation: function() {
@@ -41,7 +49,10 @@ var MessagesModule = React.createClass({
             contentScrollable={true}
             contentFull={true}
           >
-            <Conversations conversationsData={this.state.conversations} />
+            <Conversations
+              conversationsData={this.state.conversations}
+              currentLanguage={this.props.currentLanguage}
+            />
           </WallWidget>
         </div>
 

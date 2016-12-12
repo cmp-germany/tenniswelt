@@ -7,12 +7,14 @@ var Conversations = React.createClass({
   render: function() {
 
     var conversationsData = this.props.conversationsData;
+    var currentLanguage = this.props.currentLanguage;
 
     var renderedConversations = conversationsData.map(function(conversationData, index){
       return (
         <Conversation
-          key={index}
+          key={conversationData.id}
           conversation={conversationData}
+          currentLanguage={currentLanguage}
         />
       );
     });

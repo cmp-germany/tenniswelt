@@ -1,5 +1,5 @@
 import { EventEmitter } from "events";
-import usersStore from "./UsersStore";
+import userStore from "./UserStore";
 
 import dispatcher from "../dispatcher";
 
@@ -20,7 +20,11 @@ class CurrentUserStore extends EventEmitter {
   }
 
   getCurrentUser() {
-    return usersStore.getUserById(this.currentUserId);
+    return userStore.getUserById(this.currentUserId);
+  }
+
+  getId() {
+    return this.currentUserId;
   }
 
   handleActions(action) {

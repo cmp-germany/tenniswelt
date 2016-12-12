@@ -10,11 +10,13 @@ class CurrentConversationStore extends EventEmitter {
     this.currentConversationId = "conversation005";
     this.updateListeners = this.updateListeners.bind(this);
     this.changeConversation = this.changeConversation.bind(this);
+    this.getConversationID = this.getConversationID.bind(this);
 
     this.handleAction = {
 
       'MESSAGE__SENDING': this.updateListeners,
       'MESSAGE__SENT': this.updateListeners,
+      'MESSAGE__SENT_REMOTE': this.updateListeners,
       'MESSAGE__SEEN': this.updateListeners,
       'MESSAGE__RECEIVED': this.updateListeners,
       'CONVERSATION__SELECTED': this.changeConversation,
@@ -32,6 +34,10 @@ class CurrentConversationStore extends EventEmitter {
       this.currentConversationId
     );
     return conversation;
+  }
+
+  getConversationID(){
+    return this.currentConversationId;
   }
 
   updateListeners(){

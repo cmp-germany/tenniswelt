@@ -34,9 +34,9 @@ var ConversationMessage = React.createClass({
 
 
     var msgStati = {
-      loading: <div className="msg-message__status msg-message__status--loading" />,
+      sending: <div className="msg-message__status msg-message__status--loading" />,
       sent: <div className="msg-message__status msg-message__status--sent" />,
-      read: <div className="msg-message__status msg-message__status--read" />
+      seen: <div className="msg-message__status msg-message__status--read" />
     }
     var msgStatus = msgStati[message.status];
 

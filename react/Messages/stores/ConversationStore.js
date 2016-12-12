@@ -9,51 +9,39 @@ class ConversationStore extends EventEmitter {
       {
         id: "conversation000",
         user: window.users['volker-miller'],
-        conversation: {
-          preview: "Daaanke dir lorem",
-          time: "14:59"
-        }
+        preview: "Daaanke dir lorem",
+        time: 1481554543234,
       },
       {
         id: "conversation001",
         user: window.users['kai-gaertner'],
-        conversation: {
-          preview: "ipsum wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "ipsum wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation002",
         user: window.users['wolfgang-winter'],
-        conversation: {
-          preview: "wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation003",
         user: window.users['maria-kristhoff'],
-        conversation: {
-          preview: "...",
-          time: "14:59"
-        }
+        preview: "...",
+        time: 1481554543234,
       },
       {
         id: "conversation004",
         user: window.users['volker-miller'],
-        conversation: {
-          preview: "Danke dir lorem",
-          time: "14:59"
-        }
+        preview: "Danke dir lorem",
+        time: 1481554543234,
       },
       {
         id: "conversation005",
         user: window.users['mike-schnoor'],
         isActive: true,
-        conversation: {
-          preview: "ipsum wirklich langer Text",
-          time: "14:59"
-        },
+        preview: "ipsum wirklich langer Text",
+        time: 1481554543234,
         messages: [
           {
             user: "mike-schnoor",
@@ -70,31 +58,29 @@ class ConversationStore extends EventEmitter {
       {
         id: "conversation006",
         user: window.users['wolfgang-winter'],
-        conversation: {
-          preview: "wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation007",
         user: window.users['maria-kristhoff'],
-        conversation: {
-          preview: "...",
-          time: "14:59"
-        }
+        preview: "...",
+        time: 1481554543234,
       }
     ]
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
-    this.addMessage = this.addMessage.bind(this);
+    this.addMessageOnAction = this.addMessageOnAction.bind(this);
+    this.onMessageSent = this.onMessageSent.bind(this);
+    this.onMessageSeen = this.onMessageSeen.bind(this);
 
     this.handleAction = {
 
-      'MESSAGE__SENDING': this.addMessage,
-      'MESSAGE__SENT': this.updateListeners,
-      'MESSAGE__SENT_REMOTE': this.addMessage,
-      'MESSAGE__SEEN': this.updateListeners,
-      'MESSAGE__RECEIVED': this.updateListeners,
+      'MESSAGE__SENDING': this.addMessageOnAction,
+      'MESSAGE__SENT': this.onMessageSent,
+      'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
+      'MESSAGE__SEEN': this.onMessageSeen,
+      'MESSAGE__RECEIVED': this.addMessageOnAction,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
 
     }
@@ -109,7 +95,42 @@ class ConversationStore extends EventEmitter {
     return conversation;
   }
 
-  addMessage(action){
+  onMessageSeen(action){
+    var conversation = _.find(
+      this.conversations,
+      {id: action.conversationId}
+    );
+
+    var message = _.find(
+      conversation.messages,
+      {id: action.id}
+    );
+
+    message.status = "seen";
+
+    this.emit("change");
+  }
+
+  onMessageSent(action){
+    var conversation = _.find(
+      this.conversations,
+      {id: action.conversationId}
+    );
+
+    var message = _.find(
+      conversation.messages,
+      {localId: action.localId}
+    );
+
+    if (action.type == "MESSAGE__SENT") {
+      message.status = "sent";
+      message.id = action.id;
+    }
+
+    this.emit("change");
+  }
+
+  addMessageOnAction(action){
     var conversationIndex = _.findIndex(this.conversations, {id: action.conversationId});
     if (!this.conversations[conversationIndex].messages) {
       this.conversations[conversationIndex].messages = [];
@@ -131,9 +152,22 @@ class ConversationStore extends EventEmitter {
       user: action.user,
       time: action.time,
       content: action.text,
+      localId: action.localId,
+      id: action.id,
       status: status
-    })
+    });
 
+    this.conversations[conversationIndex].preview = action.text;
+
+    this.conversations[conversationIndex].time = action.time;
+
+    var sortedConversations = _.orderBy(this.conversations, ['time'], ['desc']);
+
+    this.conversations = sortedConversations;
+
+    console.log(this.conversations);
+
+    this.emit("change");
   }
 
   changeActiveConversation(action){
