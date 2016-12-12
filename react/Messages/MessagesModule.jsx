@@ -15,6 +15,7 @@ var MessagesModule = React.createClass({
   },
 
   getStateFromStore: function() {
+    console.log("activeConversation: ", currentConversationStore.getConversation());
     return {
       conversations: conversationStore.getAll(),
       activeConversation: currentConversationStore.getConversation(),
@@ -31,12 +32,6 @@ var MessagesModule = React.createClass({
 
   componentWillUnmount: function() {
     currentConversationStore.removeListener("change", this.refreshStateFromStore);
-  },
-
-  getConversation: function() {
-    this.setState({
-      activeConversation: currentConversationStore.getConversation()
-    });
   },
 
   render: function() {

@@ -7,7 +7,7 @@ import dispatcher from "../dispatcher";
 class CurrentConversationStore extends EventEmitter {
   constructor() {
     super();
-    this.currentConversationId = "conversation005";
+    this.currentConversationId = conversationStore.getActiveConversationId();
     this.updateListeners = this.updateListeners.bind(this);
     this.changeConversation = this.changeConversation.bind(this);
     this.getConversationID = this.getConversationID.bind(this);
@@ -30,6 +30,7 @@ class CurrentConversationStore extends EventEmitter {
   }
 
   getConversation(){
+    console.log("try to get conversation id: ", this.currentConversationId);
     var conversation = conversationStore.getConversationById(
       this.currentConversationId
     );

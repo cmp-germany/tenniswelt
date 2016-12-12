@@ -1,78 +1,33 @@
 import { EventEmitter } from "events";
 import _ from "lodash";
 import dispatcher from "../dispatcher";
+import rest from "../api/rest";
 
 class ConversationStore extends EventEmitter {
   constructor() {
     super();
-    this.conversations = [
-      {
-        id: "conversation000",
-        user: window.users['volker-miller'],
-        preview: "Daaanke dir lorem",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation001",
-        user: window.users['kai-gaertner'],
-        preview: "ipsum wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation002",
-        user: window.users['wolfgang-winter'],
-        preview: "wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation003",
-        user: window.users['maria-kristhoff'],
-        preview: "...",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation004",
-        user: window.users['volker-miller'],
-        preview: "Danke dir lorem",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation005",
-        user: window.users['mike-schnoor'],
-        isActive: true,
-        preview: "ipsum wirklich langer Text",
-        time: 1481554543234,
-        messages: [
-          {
-            user: "mike-schnoor",
-            time: "2016-11-30T15:30:57+00:00",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          },
-          {
-            user: "wolfgang-adams",
-            time: "2016-11-30T15:31:59+00:00",
-            content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          },
-        ]
-      },
-      {
-        id: "conversation006",
-        user: window.users['wolfgang-winter'],
-        preview: "wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation007",
-        user: window.users['maria-kristhoff'],
-        preview: "...",
-        time: 1481554543234,
-      }
-    ]
+    this.conversations = []
+
+    rest.getUserNonGroupSessions(null, function(data){
+      this.conversations = data.map(function(element, index){
+        return {
+          id: element.Id,
+          user: element.ChatParticipantUserId,
+          isActive: index == 0,
+          time: element.DateCreated,
+          messages: [],
+        }
+      })
+      this.emit("change");
+    }.bind(this));
+
+
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
     this.addMessageOnAction = this.addMessageOnAction.bind(this);
     this.onMessageSent = this.onMessageSent.bind(this);
     this.onMessageSeen = this.onMessageSeen.bind(this);
+    this.getActiveConversationId = this.getActiveConversationId.bind(this);
 
     this.handleAction = {
 
@@ -168,6 +123,11 @@ class ConversationStore extends EventEmitter {
     console.log(this.conversations);
 
     this.emit("change");
+  }
+
+  getActiveConversationId(){
+    var activeConversation = _.find(this.conversations, {isActive: true});
+    return activeConversation ? activeConversation.id : null;
   }
 
   changeActiveConversation(action){
