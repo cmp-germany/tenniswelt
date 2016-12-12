@@ -1,14 +1,28 @@
-const React = require('react');
+const React               = require('react');
 const conversationActions = require('../actions/ConversationActions');
+const TimeAgo             = require('react-timeago').default;
+
+const languages = {
+  'de-DE': require('react-timeago/lib/language-strings/de-short').default,
+  'en-US': require('react-timeago/lib/language-strings/en-short').default
+};
+var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var Conversation = React.createClass({
+
+  getInitialState: function() {
+    return {
+      formatter: buildFormatter(languages[this.props.currentLanguage])
+    }
+  },
+
   onClick: function() {
     conversationActions.select(this.props.conversation.id);
   },
 
   render: function() {
     var user = this.props.conversation.user;
-    var conversation = this.props.conversation.conversation;
+    var conversation = this.props.conversation;
     var conversationClass = this.props.conversation.isActive ?
       "msg-conversation msg-conversation--active" :
       "msg-conversation";
@@ -28,7 +42,9 @@ var Conversation = React.createClass({
           <p className="msg-conversation__preview">{conversation.preview}</p>
         </div>
         <div className="msg-conversation__right">
-          <div className="msg-conversation__time">{conversation.time}</div>
+          <div className="msg-conversation__time">
+            <TimeAgo date={conversation.time} formatter={this.state.formatter} />
+            </div>
         </div>
       </div>
     );

@@ -9,51 +9,39 @@ class ConversationStore extends EventEmitter {
       {
         id: "conversation000",
         user: window.users['volker-miller'],
-        conversation: {
-          preview: "Daaanke dir lorem",
-          time: "14:59"
-        }
+        preview: "Daaanke dir lorem",
+        time: 1481554543234,
       },
       {
         id: "conversation001",
         user: window.users['kai-gaertner'],
-        conversation: {
-          preview: "ipsum wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "ipsum wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation002",
         user: window.users['wolfgang-winter'],
-        conversation: {
-          preview: "wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation003",
         user: window.users['maria-kristhoff'],
-        conversation: {
-          preview: "...",
-          time: "14:59"
-        }
+        preview: "...",
+        time: 1481554543234,
       },
       {
         id: "conversation004",
         user: window.users['volker-miller'],
-        conversation: {
-          preview: "Danke dir lorem",
-          time: "14:59"
-        }
+        preview: "Danke dir lorem",
+        time: 1481554543234,
       },
       {
         id: "conversation005",
         user: window.users['mike-schnoor'],
         isActive: true,
-        conversation: {
-          preview: "ipsum wirklich langer Text",
-          time: "14:59"
-        },
+        preview: "ipsum wirklich langer Text",
+        time: 1481554543234,
         messages: [
           {
             user: "mike-schnoor",
@@ -70,18 +58,14 @@ class ConversationStore extends EventEmitter {
       {
         id: "conversation006",
         user: window.users['wolfgang-winter'],
-        conversation: {
-          preview: "wirklich langer Text",
-          time: "14:59"
-        }
+        preview: "wirklich langer Text",
+        time: 1481554543234,
       },
       {
         id: "conversation007",
         user: window.users['maria-kristhoff'],
-        conversation: {
-          preview: "...",
-          time: "14:59"
-        }
+        preview: "...",
+        time: 1481554543234,
       }
     ]
 
@@ -173,9 +157,15 @@ class ConversationStore extends EventEmitter {
       status: status
     });
 
-    console.log(this.conversations[conversationIndex].conversation.preview);
+    this.conversations[conversationIndex].preview = action.text;
 
-    this.conversations[conversationIndex].conversation.preview = action.text;
+    this.conversations[conversationIndex].time = action.time;
+
+    var sortedConversations = _.orderBy(this.conversations, ['time'], ['desc']);
+
+    this.conversations = sortedConversations;
+
+    console.log(this.conversations);
 
     this.emit("change");
   }
