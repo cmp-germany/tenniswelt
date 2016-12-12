@@ -164,7 +164,7 @@ class ConversationStore extends EventEmitter {
 
     }
 
-    var newLength = this.conversations[conversationIndex].messages.push({
+    this.conversations[conversationIndex].messages.push({
       user: action.user,
       time: action.time,
       content: action.text,
@@ -173,9 +173,9 @@ class ConversationStore extends EventEmitter {
       status: status
     });
 
-    var newMessage = this.conversations[conversationIndex].messages[newLength -1];
+    console.log(this.conversations[conversationIndex].conversation.preview);
 
-    this.conversations[conversationIndex].preview = newMessage;
+    this.conversations[conversationIndex].conversation.preview = action.text;
 
     this.emit("change");
   }
