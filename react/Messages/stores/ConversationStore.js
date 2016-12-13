@@ -17,6 +17,7 @@ class ConversationStore extends EventEmitter {
     this.getActiveConversation = this.getActiveConversation.bind(this);
     this.isLoading = this.isLoading.bind(this);
     this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
+    this.getAll = this.getAll.bind(this);
 
     this.handleAction = {
 
@@ -32,7 +33,15 @@ class ConversationStore extends EventEmitter {
   }
 
   getAll(){
-    return this.conversations;
+    return this.conversations.map(function(element){
+      var newElement = element;
+      if (this.getActiveConversationId() == element.id) {
+        newElement.isActive = true;
+      } else {
+        newElement.isActive = false;
+      }
+      return newElement;
+    }.bind(this));
   }
 
   getConversationById(id){
@@ -45,7 +54,6 @@ class ConversationStore extends EventEmitter {
   }
 
   onConversationListLoaded(action){
-    console.log("onConversationListLoaded:", action);
     this.conversations = action.conversations;
     this.isLoadingProp = false;
     this.emit("change");
@@ -125,12 +133,24 @@ class ConversationStore extends EventEmitter {
   }
 
   getActiveConversationId(){
-    var activeConversation = _.find(this.conversations, {isActive: true});
+    var activeConversation = this.getActiveConversation();
     return activeConversation ? activeConversation.id : null;
   }
 
   getActiveConversation(){
-    this.
+    var activeConversation = _.find(this.conversations, {isActive: true});
+
+    if (activeConversation) {
+      return activeConversation;
+    }
+
+    if (this.conversations.length < 1) {
+      return null;
+    }
+
+    if (this.conversations.length > 0) {
+      return this.conversations[0];
+    }
   }
 
   changeActiveConversation(action){
