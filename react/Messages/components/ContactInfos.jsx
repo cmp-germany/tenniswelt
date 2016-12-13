@@ -33,9 +33,13 @@ var ContactInfos = React.createClass({
     var avatar = this.state.contactAvatar;
 
     var contactDetails = this.state.contactDetails;
-    var renderedContactDetails = contactDetails.map(function(element, index) {
-      return <ContactDetail key={element.title} title={element.title}>{element.content}</ContactDetail>
-    });
+    var renderedContactDetails = "";
+    if (contactDetails) {
+      renderedContactDetails = contactDetails.map(function(element, index) {
+        return <ContactDetail key={element.title} title={element.title}>{element.content}</ContactDetail>
+      });
+    }
+
 
     return (
       <div>

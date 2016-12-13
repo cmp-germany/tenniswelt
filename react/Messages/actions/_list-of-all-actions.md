@@ -127,7 +127,9 @@ This action appears, when the user gets a new Message from another user.
 ```
 
 
+
 ### Conversation
+
 
 #### `CONVERSATION__SELECTED`
 
@@ -137,7 +139,45 @@ This action appears whenever the user intents to change to another conversation.
 ```js
 {
   type: "CONVERSATION__SELECTED",
-  fromConversationId: "old-conversation-id-12393"
-  conversationId: "new-conversation-id-14394"
+  fromConversationId: "old-conversation-id-12393",
+  conversationId: "new-conversation-id-14394",
+}
+```
+
+
+#### `CONVERSATION__LOAD_LIST`
+
+This action appears in the initializing process. It notifies that the list of
+Conversations should be loaded.
+
+##### Example
+```js
+{
+  type: "CONVERSATION__LOAD_LIST"
+}
+```
+
+
+#### `CONVERSATION__LIST_LOADED`
+
+This action appears when the initial load of the conversation is finished. It
+includes all data of the loading results.
+
+##### Example
+```js
+{
+  type: "CONVERSATION__LIST_LOADED",
+	conversations: [
+	  {
+	    id: "conversation005",
+			user: {
+				id: "17b713b9-0536-465f-b265-a6b700bfd4b2",
+				name: "John Doe",
+				avatar: "gfx/profilbilder/unknown.png",
+			},
+	    preview: "ipsum wirklich langer Text",
+	    time: 1481554543234,
+	  },
+	]
 }
 ```

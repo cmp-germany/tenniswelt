@@ -6,28 +6,17 @@ import rest from "../api/rest";
 class ConversationStore extends EventEmitter {
   constructor() {
     super();
-    this.conversations = []
-
-    rest.getUserNonGroupSessions(null, function(data){
-      this.conversations = data.map(function(element, index){
-        return {
-          id: element.Id,
-          user: element.ChatParticipantUserId,
-          isActive: index == 0,
-          time: element.DateCreated,
-          messages: [],
-        }
-      })
-      this.emit("change");
-    }.bind(this));
-
-
+    this.conversations = [];
+    this.isLoadingProp = true;
 
     this.changeActiveConversation = this.changeActiveConversation.bind(this);
     this.addMessageOnAction = this.addMessageOnAction.bind(this);
     this.onMessageSent = this.onMessageSent.bind(this);
     this.onMessageSeen = this.onMessageSeen.bind(this);
     this.getActiveConversationId = this.getActiveConversationId.bind(this);
+    this.getActiveConversation = this.getActiveConversation.bind(this);
+    this.isLoading = this.isLoading.bind(this);
+    this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
 
     this.handleAction = {
 
@@ -37,6 +26,7 @@ class ConversationStore extends EventEmitter {
       'MESSAGE__SEEN': this.onMessageSeen,
       'MESSAGE__RECEIVED': this.addMessageOnAction,
       'CONVERSATION__SELECTED': this.changeActiveConversation,
+      'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
 
     }
   }
@@ -48,6 +38,17 @@ class ConversationStore extends EventEmitter {
   getConversationById(id){
     var conversation = _.find(this.conversations, {id});
     return conversation;
+  }
+
+  isLoading(){
+    return this.isLoadingProp;
+  }
+
+  onConversationListLoaded(action){
+    console.log("onConversationListLoaded:", action);
+    this.conversations = action.conversations;
+    this.isLoadingProp = false;
+    this.emit("change");
   }
 
   onMessageSeen(action){
@@ -120,14 +121,16 @@ class ConversationStore extends EventEmitter {
 
     this.conversations = sortedConversations;
 
-    console.log(this.conversations);
-
     this.emit("change");
   }
 
   getActiveConversationId(){
     var activeConversation = _.find(this.conversations, {isActive: true});
     return activeConversation ? activeConversation.id : null;
+  }
+
+  getActiveConversation(){
+    this.
   }
 
   changeActiveConversation(action){

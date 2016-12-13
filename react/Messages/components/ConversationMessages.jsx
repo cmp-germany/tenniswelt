@@ -36,8 +36,10 @@ var ConversationMessages = React.createClass({
 
 
   getStateFromStore: function() {
+    var currentConversation = currentConversationStore.getConversation();
+    var messages = currentConversation ? currentConversation.messages : null;
     return {
-      messages: currentConversationStore.getConversation().messages,
+      messages,
       users: userStore.getUsers(),
       currentUser: currentUserStore.getCurrentUser(),
     };

@@ -1,4 +1,5 @@
 import dispatcher from "../dispatcher";
+import rest from "../api/rest";
 
 import currentConversationStore from "../stores/CurrentConversationStore";
 
@@ -9,4 +10,24 @@ export function select(newConversationId){
     conversationId: newConversationId,
     fromConversationId,
   });
+}
+
+export function load(){
+
+  //notify, that we are going to load
+  dispatcher.dispatch({
+    type: "CONVERSATION__LOAD_LIST"
+  });
+
+  //tell the websevice to load
+  rest.getConversationList({/*data*/}, function(result){
+
+    //when loading done, notify with data
+    dispatcher.dispatch({
+      type: "CONVERSATION__LIST_LOADED",
+      conversations: result.conversations,
+    });
+
+  });
+
 }

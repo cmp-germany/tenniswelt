@@ -30,7 +30,6 @@ class CurrentConversationStore extends EventEmitter {
   }
 
   getConversation(){
-    console.log("try to get conversation id: ", this.currentConversationId);
     var conversation = conversationStore.getConversationById(
       this.currentConversationId
     );

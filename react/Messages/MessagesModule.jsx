@@ -6,6 +6,7 @@ const conversationStore        = require('./stores/ConversationStore').default;
 const currentConversationStore = require('./stores/CurrentConversationStore').default;
 const InputArea                = require('./components/InputArea');
 const ContactInfos             = require('./components/ContactInfos');
+const conversationActions      = require('./actions/ConversationActions');
 
 
 var MessagesModule = React.createClass({
@@ -15,7 +16,6 @@ var MessagesModule = React.createClass({
   },
 
   getStateFromStore: function() {
-    console.log("activeConversation: ", currentConversationStore.getConversation());
     return {
       conversations: conversationStore.getAll(),
       activeConversation: currentConversationStore.getConversation(),
@@ -27,14 +27,29 @@ var MessagesModule = React.createClass({
   },
 
   componentWillMount: function() {
+    conversationActions.load();
     currentConversationStore.on("change", this.refreshStateFromStore);
+    conversationStore.on("change", this.refreshStateFromStore);
   },
 
   componentWillUnmount: function() {
     currentConversationStore.removeListener("change", this.refreshStateFromStore);
+    conversationStore.removeListener("change", this.refreshStateFromStore);
   },
 
   render: function() {
+    var conversationMessages;
+    if (this.state.activeConversation) {
+      conversationMessages = <ConversationMessages
+        messages={this.state.activeConversation.messages}
+        currentLanguage={this.props.currentLanguage}
+      />
+    } else {
+      conversationMessages = <ConversationMessages
+        currentLanguage={this.props.currentLanguage}
+      />
+    }
+
     return (
       <div className="container-fluid msg-container">
         <div className="section-left section-left--msg">
@@ -52,7 +67,7 @@ var MessagesModule = React.createClass({
         </div>
 
         <div className="section-center section-center--msg">
-          <ConversationMessages messages={this.state.activeConversation.messages} currentLanguage={this.props.currentLanguage} />
+          {conversationMessages}
           <InputArea />
         </div>
 
