@@ -23,7 +23,7 @@ class ContactInfoStore extends EventEmitter {
   refreshData() {
     var currentConversation = currentConversationStore.getConversation();
     var user = currentConversation ? currentConversation.user : null;
-    this.contactAvatar = user ? user.profileImage : "";
+    this.contactAvatar = user ? user.avatar : "";
     this.contactName   = user ? user.name : "";
     if(user){
       this.contactDetails = [
