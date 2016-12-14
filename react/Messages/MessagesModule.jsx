@@ -27,7 +27,7 @@ var MessagesModule = React.createClass({
   },
 
   componentWillMount: function() {
-    conversationActions.load();
+    conversationActions.loadList();
     currentConversationStore.on("change", this.refreshStateFromStore);
     conversationStore.on("change", this.refreshStateFromStore);
   },

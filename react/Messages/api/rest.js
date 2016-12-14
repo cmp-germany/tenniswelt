@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 const rest = {
+
   getUserNonGroupSessions: function(data, callback) {
     axios({
       method: 'get',
@@ -11,6 +12,7 @@ const rest = {
         callback(response.data);
       });
   },
+
 
   getConversationList: function(data, callback) {
     axios({
@@ -34,7 +36,31 @@ const rest = {
         });
         callback({conversations});
       });
-  }
+  },
+
+
+  getConversationMessages: function(data, callback) {
+    axios({
+      method: 'get',
+      url: 'data/example/getSessionMessages.example.json',
+      params: {
+        conversationId: data.conversationId,
+      },
+    })
+      .then(function(response) {
+
+        //convert to expected format
+        var messages = response.data.map(function(element, index) {
+          return {
+            user: element.UserId,
+            time: element.DateCreated,
+            content: element.Message,
+            id: element.Id,
+          }
+        });
+        callback({messages});
+      });
+  },
 }
 
 module.exports = rest;
