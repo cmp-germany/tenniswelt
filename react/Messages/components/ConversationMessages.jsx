@@ -4,6 +4,7 @@ const currentConversationStore = require('../stores/CurrentConversationStore').d
 const userStore                = require('../stores/UserStore').default;
 const currentUserStore         = require('../stores/CurrentUserStore').default;
 const conversationActions      = require('../actions/ConversationActions');
+const _                        = require('lodash');
 
 
 var ConversationMessages = React.createClass({
@@ -35,8 +36,10 @@ var ConversationMessages = React.createClass({
     }
 
     // Do I need to load new data?
+    console.log("isLoading: ", this.state.isLoading);
+    console.log("isLoaded: ", this.state.isLoaded);
     if (!this.state.isLoading && !this.state.isLoaded) {
-      conversationActions.load();
+      _.before(2, conversationActions.load);
     }
   },
 

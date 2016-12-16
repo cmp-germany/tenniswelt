@@ -2,7 +2,7 @@ const axios = require('axios');
 
 var localBase = "";
 
-localPaths = {
+var localPaths = {
   base: localBase,
   getUserNonGroupSessions: localBase +  "data/example/getUserNonGroupSessions.example.json",
 }
@@ -18,18 +18,6 @@ if (window.LOCALDATA) {
 }
 
 const rest = {
-
-  getUserNonGroupSessions: function(data, callback) {
-    axios({
-      method: 'get',
-      url: 'data/example/getUserNonGroupSessions.example.json',
-      params: data,
-    })
-      .then(function(response) {
-        callback(response.data);
-      });
-  },
-
 
   getConversationList: function(data, callback) {
     axios({

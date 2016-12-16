@@ -41,8 +41,10 @@ export function load(conversationId){
   }
 
   //notify, that we are going to load
-  dispatcher.dispatch({
-    type: "CONVERSATION__LOAD",
+  setTimeout(function () {
+    dispatcher.dispatch({
+      type: "CONVERSATION__LOAD",
+    });
   });
 
   //tell the websevice to load
