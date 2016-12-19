@@ -32,7 +32,7 @@ var Conversation = React.createClass({
       >
         <div className="msg-conversation__left">
           <img
-            src={user.profileImage}
+            src={user.avatar}
             alt={"Profilbild von " + user.name}
             className="msg-conversation__avatar"
           />

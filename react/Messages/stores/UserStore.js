@@ -268,6 +268,26 @@ class UserStore extends EventEmitter {
     return this.users[id];
   }
 
+  getUser(id) {
+
+    //return getUserById(id); //this one will be the final one.
+
+    return {
+      "id": "volker-miller",
+      "profilePage": "profile-about.html?userId=volker-miller",
+      "name": "Volker Miller",
+      "wallpaper": "gfx/wallpaper/wallpaper-1.jpeg",
+      "profileImage": "gfx/profilbilder/p1.jpg",
+      "isCompanyProfile": false,
+      "street": "August-Euler-Str. 3",
+      "zip": "50259",
+      "city": "Pulheim",
+      "website": "http://www.gfke.eu/",
+      "timezone": "MESZ",
+      "isOnline": true
+    };
+  }
+
   handleActions(action) {
     return (this.handleAction[action.type]) ? this.handleAction[action.type](action): null;
   }

@@ -29,7 +29,6 @@ class InputAreaStore extends EventEmitter{
   }
 
   onConversationSelected(action){
-    console.log(action);
     //save the currentInput
     this.conversationInputs[action.fromConversationId] = this.userInput;
 

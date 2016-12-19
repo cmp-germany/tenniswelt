@@ -21,13 +21,16 @@ class ContactInfoStore extends EventEmitter {
   }
 
   refreshData() {
-    var user = currentConversationStore.getConversation().user;
-    this.contactAvatar = user.profileImage;
-    this.contactName   = user.name;
-    this.contactDetails = [
-      {title: "Status", content: user.isOnline ? "Online" : "Nicht Online"},
-      {title: "Herkunft", content: user.city},
-    ];
+    var currentConversation = currentConversationStore.getConversation();
+    var user = currentConversation ? currentConversation.user : null;
+    this.contactAvatar = user ? user.avatar : "";
+    this.contactName   = user ? user.name : "";
+    if(user){
+      this.contactDetails = [
+        {title: "Status", content: user.isOnline ? "Online" : "Nicht Online"},
+        {title: "Herkunft", content: user.city},
+      ];
+    }
     this.emit("change");
   }
 

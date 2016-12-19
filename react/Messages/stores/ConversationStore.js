@@ -1,78 +1,24 @@
 import { EventEmitter } from "events";
 import _ from "lodash";
 import dispatcher from "../dispatcher";
+import rest from "../api/rest";
 
 class ConversationStore extends EventEmitter {
   constructor() {
     super();
-    this.conversations = [
-      {
-        id: "conversation000",
-        user: window.users['volker-miller'],
-        preview: "Daaanke dir lorem",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation001",
-        user: window.users['kai-gaertner'],
-        preview: "ipsum wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation002",
-        user: window.users['wolfgang-winter'],
-        preview: "wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation003",
-        user: window.users['maria-kristhoff'],
-        preview: "...",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation004",
-        user: window.users['volker-miller'],
-        preview: "Danke dir lorem",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation005",
-        user: window.users['mike-schnoor'],
-        isActive: true,
-        preview: "ipsum wirklich langer Text",
-        time: 1481554543234,
-        messages: [
-          {
-            user: "mike-schnoor",
-            time: "2016-11-30T15:30:57+00:00",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          },
-          {
-            user: "wolfgang-adams",
-            time: "2016-11-30T15:31:59+00:00",
-            content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          },
-        ]
-      },
-      {
-        id: "conversation006",
-        user: window.users['wolfgang-winter'],
-        preview: "wirklich langer Text",
-        time: 1481554543234,
-      },
-      {
-        id: "conversation007",
-        user: window.users['maria-kristhoff'],
-        preview: "...",
-        time: 1481554543234,
-      }
-    ]
+    this.conversations = [];
+    this.isLoadingProp = true;
 
-    this.changeActiveConversation = this.changeActiveConversation.bind(this);
+    this.onConversationSelected = this.onConversationSelected.bind(this);
     this.addMessageOnAction = this.addMessageOnAction.bind(this);
     this.onMessageSent = this.onMessageSent.bind(this);
     this.onMessageSeen = this.onMessageSeen.bind(this);
+    this.getActiveConversationId = this.getActiveConversationId.bind(this);
+    this.getActiveConversation = this.getActiveConversation.bind(this);
+    this.isLoading = this.isLoading.bind(this);
+    this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
+    this.onConversationLoaded = this.onConversationLoaded.bind(this);
+    this.getAll = this.getAll.bind(this);
 
     this.handleAction = {
 
@@ -81,18 +27,47 @@ class ConversationStore extends EventEmitter {
       'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
       'MESSAGE__SEEN': this.onMessageSeen,
       'MESSAGE__RECEIVED': this.addMessageOnAction,
-      'CONVERSATION__SELECTED': this.changeActiveConversation,
+      'CONVERSATION__SELECTED': this.onConversationSelected,
+      'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
+      'CONVERSATION__LOADED': this.onConversationLoaded,
 
     }
   }
 
   getAll(){
-    return this.conversations;
+    return this.conversations.map(function(element){
+      var newElement = element;
+      if (this.getActiveConversationId() == element.id) {
+        newElement.isActive = true;
+      } else {
+        newElement.isActive = false;
+      }
+      return newElement;
+    }.bind(this));
   }
 
   getConversationById(id){
     var conversation = _.find(this.conversations, {id});
     return conversation;
+  }
+
+  isLoading(){
+    return this.isLoadingProp;
+  }
+
+  onConversationLoaded(action){
+    var conversation = _.find(this.conversations, {id: action.conversationId});
+    if (!conversation) {
+      console.error("There is no conversation with conversationId ", action.conversationId);
+    }
+    conversation.messages = action.messages;
+    this.emit("change");
+  }
+
+  onConversationListLoaded(action){
+    this.conversations = action.conversations;
+    this.isLoadingProp = false;
+    this.emit("change");
   }
 
   onMessageSeen(action){
@@ -165,12 +140,32 @@ class ConversationStore extends EventEmitter {
 
     this.conversations = sortedConversations;
 
-    console.log(this.conversations);
-
     this.emit("change");
   }
 
-  changeActiveConversation(action){
+  getActiveConversationId(){
+    var activeConversation = this.getActiveConversation();
+    var retValue = activeConversation ? activeConversation.id : null;
+    return retValue;
+  }
+
+  getActiveConversation(){
+    var activeConversation = _.find(this.conversations, {isActive: true});
+
+    if (activeConversation) {
+      return activeConversation;
+    }
+
+    if (this.conversations.length < 1) {
+      return null;
+    }
+
+    if (this.conversations.length > 0) {
+      return this.conversations[0];
+    }
+  }
+
+  onConversationSelected(action){
     var id = action.conversationId;
 
     // unset the current Conversation
