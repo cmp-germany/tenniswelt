@@ -2,7 +2,7 @@ const axios = require('axios');
 
 var localBase = "";
 
-localPaths = {
+var localPaths = {
   base: localBase,
   getUserNonGroupSessions: localBase +  "data/example/getUserNonGroupSessions.example.json",
 }
@@ -17,17 +17,9 @@ if (window.LOCALDATA) {
   apiPaths = localPaths;
 }
 
+var imageBase = "http://test_koelndemo.cmpg.eu";
+
 const rest = {
-  getUserNonGroupSessions: function(data, callback) {
-    axios({
-      method: 'get',
-      url: 'data/example/getUserNonGroupSessions.example.json',
-      params: data,
-    })
-      .then(function(response) {
-        callback(response.data);
-      });
-  },
 
   getConversationList: function(data, callback) {
     axios({
@@ -35,7 +27,6 @@ const rest = {
       url: 'data/example/getUserNonGroupSessions.example.json',
     })
       .then(function(response) {
-        console.log(response.data);
 
         //convert to expected format
         var conversations = response.data.map(function(element, index) {
@@ -44,7 +35,7 @@ const rest = {
             user: {
               id: element.user.id,
               name: element.user.name,
-              avatar: element.user.avatar,
+              avatar: imageBase + element.user.avatar,
             },
             preview: element.lastMessageText,
             time: element.lastMessageDate,
@@ -52,7 +43,32 @@ const rest = {
         });
         callback({conversations});
       });
-  }
+  },
+
+
+  getConversationMessages: function(data, callback) {
+    axios({
+      method: 'get',
+      url: 'data/example/getSessionMessages.example.json',
+      params: {
+        conversationId: data.conversationId,
+      },
+    })
+      .then(function(response) {
+        console.log(response.data);
+
+        //convert to expected format
+        var messages = response.data.map(function(element, index) {
+          return {
+            user: element.UserId,
+            time: element.DateCreated,
+            content: element.Message,
+            id: element.Id,
+          }
+        });
+        callback({messages});
+      });
+  },
 }
 
 module.exports = rest;

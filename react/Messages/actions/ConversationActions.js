@@ -12,7 +12,8 @@ export function select(newConversationId){
   });
 }
 
-export function load(){
+
+export function loadList(){
 
   //notify, that we are going to load
   dispatcher.dispatch({
@@ -28,6 +29,37 @@ export function load(){
       conversations: result.conversations,
     });
 
+  });
+
+}
+
+
+export function load(conversationId){
+
+  if(!conversationId){
+    conversationId = currentConversationStore.getConversationID();
+  }
+
+  if(!conversationId){
+    console.error("No currentConversationID");
+    return;
+  }
+
+  //notify, that we are going to load
+  dispatcher.dispatch({
+    type: "CONVERSATION__LOAD",
+    conversationId,
+  });
+
+  //tell the websevice to load
+  rest.getConversationMessages({conversationId}, function(result){
+
+    //when loading done, notify with data
+    dispatcher.dispatch({
+      type: "CONVERSATION__LOADED",
+      conversationId,
+      messages: result.messages,
+    });
   });
 
 }

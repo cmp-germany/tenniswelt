@@ -181,3 +181,34 @@ includes all data of the loading results.
 	]
 }
 ```
+
+
+#### `CONVERSATION__LOAD`
+
+This action appears when a conversation is selected, and there is not yet any
+data. This action will trigger loading messages of that conversation.
+
+##### Example
+```js
+{
+  type: "CONVERSATION__LOAD",
+	conversationId: "conversation005",
+}
+```
+
+
+#### `CONVERSATION__LOADED`
+
+This action appears when a conversation is selected, and there is not yet any
+data. This action will trigger loading messages of that conversation.
+
+##### Example
+```js
+{
+  type: "CONVERSATION__LOADED",
+	conversationId: "conversation005",
+	messages: [
+		...
+	]
+}
+```

@@ -1,6 +1,7 @@
 const React               = require('react');
 const TimeAgo             = require('react-timeago').default;
 const MaterialDesignMixin = require('../../mixins/MaterialDesignMixin.js');
+const userStore           = require('../stores/UserStore').default;
 
 const languages = {
   'de-DE': require('react-timeago/lib/language-strings/de').default,
@@ -11,9 +12,18 @@ var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').defa
 var ConversationMessage = React.createClass({
 
   getInitialState: function() {
+    this.formatter = buildFormatter(languages[this.props.currentLanguage]);
+    return this.getStateFromStore();
+  },
+
+  getStateFromStore: function() {
     return {
-      formatter: buildFormatter(languages[this.props.currentLanguage])
+      formatter: this.formatter,
     }
+  },
+
+  refreshStateFromStore: function() {
+    this.setState(this.getStateFromStore());
   },
 
   render: function() {

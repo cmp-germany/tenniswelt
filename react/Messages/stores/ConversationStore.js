@@ -9,7 +9,7 @@ class ConversationStore extends EventEmitter {
     this.conversations = [];
     this.isLoadingProp = true;
 
-    this.changeActiveConversation = this.changeActiveConversation.bind(this);
+    this.onConversationSelected = this.onConversationSelected.bind(this);
     this.addMessageOnAction = this.addMessageOnAction.bind(this);
     this.onMessageSent = this.onMessageSent.bind(this);
     this.onMessageSeen = this.onMessageSeen.bind(this);
@@ -17,6 +17,7 @@ class ConversationStore extends EventEmitter {
     this.getActiveConversation = this.getActiveConversation.bind(this);
     this.isLoading = this.isLoading.bind(this);
     this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
+    this.onConversationLoaded = this.onConversationLoaded.bind(this);
     this.getAll = this.getAll.bind(this);
 
     this.handleAction = {
@@ -26,8 +27,9 @@ class ConversationStore extends EventEmitter {
       'MESSAGE__SENT_REMOTE': this.addMessageOnAction,
       'MESSAGE__SEEN': this.onMessageSeen,
       'MESSAGE__RECEIVED': this.addMessageOnAction,
-      'CONVERSATION__SELECTED': this.changeActiveConversation,
+      'CONVERSATION__SELECTED': this.onConversationSelected,
       'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
+      'CONVERSATION__LOADED': this.onConversationLoaded,
 
     }
   }
@@ -51,6 +53,15 @@ class ConversationStore extends EventEmitter {
 
   isLoading(){
     return this.isLoadingProp;
+  }
+
+  onConversationLoaded(action){
+    var conversation = _.find(this.conversations, {id: action.conversationId});
+    if (!conversation) {
+      console.error("There is no conversation with conversationId ", action.conversationId);
+    }
+    conversation.messages = action.messages;
+    this.emit("change");
   }
 
   onConversationListLoaded(action){
@@ -134,7 +145,8 @@ class ConversationStore extends EventEmitter {
 
   getActiveConversationId(){
     var activeConversation = this.getActiveConversation();
-    return activeConversation ? activeConversation.id : null;
+    var retValue = activeConversation ? activeConversation.id : null;
+    return retValue;
   }
 
   getActiveConversation(){
@@ -153,7 +165,7 @@ class ConversationStore extends EventEmitter {
     }
   }
 
-  changeActiveConversation(action){
+  onConversationSelected(action){
     var id = action.conversationId;
 
     // unset the current Conversation
