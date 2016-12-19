@@ -13,9 +13,10 @@ class CurrentConversationStore extends EventEmitter {
     this.changeConversation = this.changeConversation.bind(this);
     this.getConversationID = this.getConversationID.bind(this);
     this.isLoaded = this.isLoaded.bind(this);
+    this.isLoading = this.isLoading.bind(this);
     this.onConversationLoaded = this.onConversationLoaded.bind(this);
     this.onConversationLoad = this.onConversationLoad.bind(this);
-
+    this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
     this.loadedConversation = {};
     this.loadingConversation = {};
 
@@ -30,8 +31,13 @@ class CurrentConversationStore extends EventEmitter {
       'CONVERSATION__SELECTED': this.changeConversation,
       'CONVERSATION__LOADED': this.onConversationLoaded,
       'CONVERSATION__LOAD': this.onConversationLoad,
+      'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
 
     }
+  }
+
+  onConversationListLoaded(action){
+    this.currentConversationID = conversationStore.getActiveConversationId();
   }
 
   onConversationLoad(action){
@@ -55,10 +61,6 @@ class CurrentConversationStore extends EventEmitter {
 
   changeConversation(action){
     this.currentConversationId = action.conversationId;
-    if (!this.isLoaded()) {
-      console.log(conversationActions);
-      conversationActions.load();
-    }
     this.emit("change");
   }
 

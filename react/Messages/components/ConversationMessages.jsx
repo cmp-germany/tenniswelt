@@ -36,10 +36,8 @@ var ConversationMessages = React.createClass({
     }
 
     // Do I need to load new data?
-    console.log("isLoading: ", this.state.isLoading);
-    console.log("isLoaded: ", this.state.isLoaded);
-    if (!this.state.isLoading && !this.state.isLoaded) {
-      _.before(2, conversationActions.load);
+    if (!this.state.isLoading && !this.state.isLoaded && currentConversationStore.getConversation()) {
+      conversationActions.load();
     }
   },
 

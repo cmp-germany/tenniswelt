@@ -40,10 +40,16 @@ export function load(conversationId){
     conversationId = currentConversationStore.getConversationID();
   }
 
+  if(!conversationId){
+    console.error("No currentConversationID");
+    return;
+  }
+
   //notify, that we are going to load
   setTimeout(function () {
     dispatcher.dispatch({
       type: "CONVERSATION__LOAD",
+      conversationId,
     });
   });
 
@@ -53,6 +59,7 @@ export function load(conversationId){
     //when loading done, notify with data
     dispatcher.dispatch({
       type: "CONVERSATION__LOADED",
+      conversationId,
       messages: result.messages,
     });
   });

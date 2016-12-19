@@ -134,7 +134,8 @@ class ConversationStore extends EventEmitter {
 
   getActiveConversationId(){
     var activeConversation = this.getActiveConversation();
-    return activeConversation ? activeConversation.id : null;
+    var retValue = activeConversation ? activeConversation.id : null;
+    return retValue;
   }
 
   getActiveConversation(){

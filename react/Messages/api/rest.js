@@ -17,6 +17,8 @@ if (window.LOCALDATA) {
   apiPaths = localPaths;
 }
 
+var imageBase = "http://test_koelndemo.cmpg.eu";
+
 const rest = {
 
   getConversationList: function(data, callback) {
@@ -25,7 +27,6 @@ const rest = {
       url: 'data/example/getUserNonGroupSessions.example.json',
     })
       .then(function(response) {
-        console.log(response.data);
 
         //convert to expected format
         var conversations = response.data.map(function(element, index) {
@@ -34,7 +35,7 @@ const rest = {
             user: {
               id: element.user.id,
               name: element.user.name,
-              avatar: element.user.avatar,
+              avatar: imageBase + element.user.avatar,
             },
             preview: element.lastMessageText,
             time: element.lastMessageDate,
