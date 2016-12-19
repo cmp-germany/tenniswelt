@@ -55,6 +55,7 @@ const rest = {
       },
     })
       .then(function(response) {
+        console.log(response.data);
 
         //convert to expected format
         var messages = response.data.map(function(element, index) {
