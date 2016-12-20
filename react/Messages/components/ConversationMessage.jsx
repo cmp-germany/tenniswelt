@@ -28,7 +28,7 @@ var ConversationMessage = React.createClass({
 
   render: function() {
 
-    const user = this.props.user;
+    var user = this.props.user;
     const currentUser = this.props.currentUser;
     const message = this.props.message;
 
@@ -60,9 +60,14 @@ var ConversationMessage = React.createClass({
       );
     }
 
+    if (!user) {
+      user = {};
+      user.name = "User nicht gefunden"
+    }
+
     return (
       <div className={"msg-message " + msgMessageModifier}>
-        <img src={user.profileImage} alt={"Avatar von " + user.name} className="msg-message__avatar" />
+        <img src={user.avatar} alt={"Avatar von " + user.name} className="msg-message__avatar" />
         <header className="msg-message__meta">
           <a href={user.profilePage} className="msg-message__name">{user.name}</a>
           <div className="msg-message__time">

@@ -1,4 +1,5 @@
 import { EventEmitter } from "events";
+import _ from "lodash";
 
 import dispatcher from "../dispatcher";
 
@@ -6,20 +7,28 @@ class UserStore extends EventEmitter {
   constructor() {
     super();
     this.users = {
-      "me": {
-        "id": "me",
-        "isOnline": true
+      "496e3f91-edde-4929-8a83-a5b800cb9397": {
+        "id": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "isOnline": true,
+        "name": "Ich",
+        "avatar": "gfx/profilbilder/p4.jpg",
       }
     };
 
+    this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
 
     this.handleAction = {
-
-      'USER__ADDED': function(action) {
-        // Do something with action
-      }.bind(this),
-
+      'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
     }
+  }
+
+  onConversationListLoaded(action) {
+    _.forEach(action.conversations, function(conversation){
+      var user = conversation.user;
+      this.users[user.id] = user;
+      this.users[user.id].id = user.id;
+    }.bind(this));
+    this.emit("change");
   }
 
   getUsers() {
@@ -31,23 +40,7 @@ class UserStore extends EventEmitter {
   }
 
   getUser(id) {
-
-    //return getUserById(id); //this one will be the actual right call.
-
-    return {
-      "id": "volker-miller",
-      "profilePage": "profile-about.html?userId=volker-miller",
-      "name": "Volker Miller",
-      "wallpaper": "gfx/wallpaper/wallpaper-1.jpeg",
-      "profileImage": "gfx/profilbilder/p1.jpg",
-      "isCompanyProfile": false,
-      "street": "August-Euler-Str. 3",
-      "zip": "50259",
-      "city": "Pulheim",
-      "website": "http://www.gfke.eu/",
-      "timezone": "MESZ",
-      "isOnline": true
-    };
+    return this.getUserById(id);
   }
 
   handleActions(action) {

@@ -84,12 +84,12 @@ var ConversationMessages = React.createClass({
 
     var renderedConversationMessages;
     if (this.state.messages) {
-      renderedConversationMessages = this.state.messages.map(function(element, index){
+      renderedConversationMessages = this.state.messages.map(function(element){
         var user = users[element.user];
         return (
           <ConversationMessage
             message={element}
-            key={index}
+            key={element.id}
             user={user}
             currentUser={currentUser}
             currentLanguage={currentLanguage}

@@ -1,7 +1,6 @@
 const React            = require('react');
 const inputAreaStore   = require('../stores/InputAreaStore').default;
 const inputAreaActions = require('../actions/InputAreaActions');
-const currentUserStore = require('../stores/CurrentUserStore').default;
 const messageActions   = require('../actions/MessageActions');
 
 var InputArea = React.createClass({
@@ -40,7 +39,6 @@ var InputArea = React.createClass({
   getStateFromStore: function() {
     return {
       userInput: inputAreaStore.getUserInput(),
-      currentUser: currentUserStore.getCurrentUser().id,
     }
   },
 

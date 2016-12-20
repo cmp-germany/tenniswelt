@@ -6,7 +6,7 @@ import dispatcher from "../dispatcher";
 class CurrentUserStore extends EventEmitter {
   constructor() {
     super();
-    this.currentUserId = "wolfgang-adams";
+    this.currentUserId = "496e3f91-edde-4929-8a83-a5b800cb9397";
 
 
     this.handleAction = {
