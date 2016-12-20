@@ -12,6 +12,7 @@ class CurrentConversationStore extends EventEmitter {
     this.updateListeners = this.updateListeners.bind(this);
     this.changeConversation = this.changeConversation.bind(this);
     this.getConversationID = this.getConversationID.bind(this);
+    this.getUserId = this.getUserId.bind(this);
     this.isLoaded = this.isLoaded.bind(this);
     this.isLoading = this.isLoading.bind(this);
     this.onConversationLoaded = this.onConversationLoaded.bind(this);
@@ -73,6 +74,11 @@ class CurrentConversationStore extends EventEmitter {
 
   getConversationID(){
     return this.currentConversationId;
+  }
+
+  getUserId(){
+    var conversation = this.getConversation();
+    return conversation ? conversation.user.id : null;
   }
 
   updateListeners(){

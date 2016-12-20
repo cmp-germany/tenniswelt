@@ -1,6 +1,7 @@
 import { EventEmitter } from "events";
 
 import currentConversationStore from "./CurrentConversationStore";
+import userStore from "./UserStore";
 
 import dispatcher from "../dispatcher";
 
@@ -21,14 +22,13 @@ class ContactInfoStore extends EventEmitter {
   }
 
   refreshData() {
-    var currentConversation = currentConversationStore.getConversation();
-    var user = currentConversation ? currentConversation.user : null;
+    var currentUserId = currentConversationStore.getUserId();
+    var user = userStore.getUser(currentUserId);
     this.contactAvatar = user ? user.avatar : "";
     this.contactName   = user ? user.name : "";
     if(user){
       this.contactDetails = [
         {title: "Status", content: user.isOnline ? "Online" : "Nicht Online"},
-        {title: "Herkunft", content: user.city},
       ];
     }
     this.emit("change");
