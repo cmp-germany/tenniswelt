@@ -1,7 +1,9 @@
 import { EventEmitter } from "events";
-import _ from "lodash";
+import _                from "lodash";
 
-import dispatcher from "../dispatcher";
+import dispatcher       from "../dispatcher";
+
+import * as userActions from "../actions/UserActions";
 
 class UserStore extends EventEmitter {
   constructor() {
@@ -44,7 +46,22 @@ class UserStore extends EventEmitter {
   }
 
   getUserById(id) {
-    return this.users[id];
+
+    if (!id) {
+      return null;
+    }
+
+    var user = this.users[id];
+
+    if (!user) {
+      user = {id, isLoading: true};
+      this.users[id] = user;
+      setTimeout(function () {
+        userActions.load({userId: id});
+      });
+    }
+
+    return user;
   }
 
   getUser(id) {

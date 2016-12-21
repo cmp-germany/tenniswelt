@@ -224,7 +224,7 @@ This action appears when a conversation was selected, the loading of that data w
 
 #### `USER__LOAD`
 
-This action appears when a conversation is selected, and there is not yet data about the user, who is associated with the selected conversation. This action will trigger loading user details of that user.
+This action appears when data from a user - which details hasn't been loaded yet - is requested. This action will trigger loading user details of that user.
 
 ##### Example
 ```js

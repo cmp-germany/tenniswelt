@@ -15,13 +15,6 @@ export function select(newConversationId){
     conversationId: newConversationId,
     fromConversationId,
   });
-
-  // When the user isn't loaded yet, load it.
-  var userId = conversationStore.getConversationById(newConversationId).user.id;
-  var user = userStore.getUser(userId);
-  if (!user) {
-    userActions.load({userId});
-  }
 }
 
 
