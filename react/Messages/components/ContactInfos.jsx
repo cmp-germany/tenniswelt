@@ -1,6 +1,7 @@
-const React             = require('react');
-const ContactDetail     = require('./ContactDetail');
-const contactInfoStore = require('../stores/ContactInfoStore').default;
+const React                 = require('react');
+const ContactDetail         = require('./ContactDetail');
+const contactInfoStore      = require('../stores/ContactInfoStore').default;
+const ContactInfoController = require('../controller/ContactInfoController');
 
 var ContactInfos = React.createClass({
   getInitialState: function() {
@@ -20,6 +21,8 @@ var ContactInfos = React.createClass({
       contactDetails: contactInfoStore.getDetails(),
       contactName: contactInfoStore.getName(),
       contactAvatar: contactInfoStore.getAvatar(),
+      isLoading: contactInfoStore.isLoading(),
+      hasData: contactInfoStore.hasData(),
     };
   },
 
