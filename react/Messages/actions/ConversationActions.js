@@ -1,15 +1,27 @@
-import dispatcher from "../dispatcher";
-import rest from "../api/rest";
+import dispatcher               from "../dispatcher";
+import rest                     from "../api/rest";
 
 import currentConversationStore from "../stores/CurrentConversationStore";
+import userStore                from "../stores/UserStore";
+import conversationStore        from "../stores/ConversationStore";
+
+import * as userActions         from "./UserActions";
 
 export function select(newConversationId){
+  // Notify that a selection was made.
   var fromConversationId = currentConversationStore.getConversationID();
   dispatcher.dispatch({
     type: "CONVERSATION__SELECTED",
     conversationId: newConversationId,
     fromConversationId,
   });
+
+  // When the user isn't loaded yet, load it.
+  var userId = conversationStore.getConversationById(newConversationId).user.id;
+  var user = userStore.getUser(userId);
+  if (!user) {
+    userActions.load({userId});
+  }
 }
 
 

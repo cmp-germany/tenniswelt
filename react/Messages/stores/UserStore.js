@@ -15,19 +15,27 @@ class UserStore extends EventEmitter {
       }
     };
 
-    this.onConversationListLoaded = this.onConversationListLoaded.bind(this);
+    this.onUserLoad = this.onUserLoad.bind(this);
+    this.onUserLoaded = this.onUserLoaded.bind(this);
 
     this.handleAction = {
-      'CONVERSATION__LIST_LOADED': this.onConversationListLoaded,
+      'USER__LOAD': this.onUserLoad,
+      'USER__LOADED': this.onUserLoaded,
     }
   }
 
-  onConversationListLoaded(action) {
-    _.forEach(action.conversations, function(conversation){
-      var user = conversation.user;
-      this.users[user.id] = user;
-      this.users[user.id].id = user.id;
-    }.bind(this));
+  onUserLoad(action) {
+    var user = this.users[action.userId];
+    if (user) {
+      user.isLoading = true;
+    } else {
+      user = {isLoading: true}
+    }
+    this.emit("change");
+  }
+
+  onUserLoaded(action) {
+    this.users[action.userId] = action.user;
     this.emit("change");
   }
 
@@ -51,7 +59,5 @@ class UserStore extends EventEmitter {
 
 const userStore = new UserStore;
 dispatcher.register(userStore.handleActions.bind(userStore));
-
-window.userStore = userStore;
 
 export default userStore;

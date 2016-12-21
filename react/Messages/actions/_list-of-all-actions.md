@@ -15,10 +15,15 @@
 		- [`MESSAGE__SENT_REMOTE`](#messagesentremote)
 		- [`MESSAGE__SEEN`](#messageseen)
 		- [`MESSAGE__RECEIVED`](#messagereceived)
-	- [Users](#users)
-		- [`USER__ADDED`](#usersadded)
 	- [Conversation](#conversation)
 		- [`CONVERSATION__SELECTED`](#conversationselected)
+		- [`CONVERSATION__LOAD_LIST`](#conversationloadlist)
+		- [`CONVERSATION__LIST_LOADED`](#conversationlistloaded)
+		- [`CONVERSATION__LOAD`](#conversationload)
+		- [`CONVERSATION__LOADED`](#conversationloaded)
+	- [User](#user)
+		- [`USER__LOAD`](#userload)
+		- [`USER__LOADED`](#userloaded)
 
 <!-- /TOC -->
 
@@ -75,7 +80,7 @@ This action appears, when sending was successfully completed at the server. The 
   type: "MESSAGE__SENT",
   localId: "3940495",
   id: "FLKJKJE-DJKLDJE-DIDL"
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 
@@ -167,18 +172,18 @@ includes all data of the loading results.
 ```js
 {
   type: "CONVERSATION__LIST_LOADED",
-	conversations: [
-	  {
-	    id: "conversation005",
-			user: {
-				id: "17b713b9-0536-465f-b265-a6b700bfd4b2",
-				name: "John Doe",
-				avatar: "gfx/profilbilder/unknown.png",
-			},
-	    preview: "ipsum wirklich langer Text",
-	    time: 1481554543234,
-	  },
-	]
+  conversations: [
+    {
+      id: "conversation005",
+      user: {
+        id: "17b713b9-0536-465f-b265-a6b700bfd4b2",
+        name: "John Doe",
+        avatar: "gfx/profilbilder/unknown.png",
+      },
+      preview: "ipsum wirklich langer Text",
+      time: 1481554543234,
+    },
+  ]
 }
 ```
 
@@ -192,23 +197,55 @@ data. This action will trigger loading messages of that conversation.
 ```js
 {
   type: "CONVERSATION__LOAD",
-	conversationId: "conversation005",
+  conversationId: "conversation005",
 }
 ```
 
 
 #### `CONVERSATION__LOADED`
 
-This action appears when a conversation is selected, and there is not yet any
-data. This action will trigger loading messages of that conversation.
+This action appears when a conversation was selected, the loading of that data was triggered and now the loading process is completed. This action contains the loaded messages.
 
 ##### Example
 ```js
 {
   type: "CONVERSATION__LOADED",
-	conversationId: "conversation005",
-	messages: [
-		...
-	]
+  conversationId: "conversation005",
+  messages: [
+    ...
+  ]
+}
+```
+
+
+
+### User
+
+
+#### `USER__LOAD`
+
+This action appears when a conversation is selected, and there is not yet data about the user, who is associated with the selected conversation. This action will trigger loading user details of that user.
+
+##### Example
+```js
+{
+  type: "USER__LOAD",
+  userId: "userId49873",
+}
+```
+
+
+#### `USER__LOADED`
+
+This action appears when the loading of user data was triggered and now the loading process is completed. This action contains the details of the loaded user.
+
+##### Example
+```js
+{
+  type: "USER__LOADED",
+  userId: "userId49873",
+  user: {
+    ...
+  }
 }
 ```

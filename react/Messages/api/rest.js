@@ -4,7 +4,9 @@ var localBase = "";
 
 var localPaths = {
   base: localBase,
-  getUserNonGroupSessions: localBase +  "data/example/getUserNonGroupSessions.example.json",
+  getConversationList: localBase + 'data/example/getUserNonGroupSessions.example.json',
+  getConversationMessages: localBase + 'data/example/getSessionMessages.example.json',
+  getUserDetails: localBase + "data/example/getUserDetails/",
 }
 
 var apiBase = "http://test_koelndemo.cmpg.eu";
@@ -19,12 +21,13 @@ if (window.LOCALDATA) {
 
 var imageBase = "http://test_koelndemo.cmpg.eu";
 
+
 const rest = {
 
   getConversationList: function(data, callback) {
     axios({
       method: 'get',
-      url: 'data/example/getUserNonGroupSessions.example.json',
+      url: apiPaths.getConversationList,
     })
       .then(function(response) {
 
@@ -49,7 +52,7 @@ const rest = {
   getConversationMessages: function(data, callback) {
     axios({
       method: 'get',
-      url: 'data/example/getSessionMessages.example.json',
+      url: apiPaths.getConversationMessages,
       params: {
         conversationId: data.conversationId,
       },
@@ -66,6 +69,24 @@ const rest = {
         });
         callback({messages});
       });
+  },
+
+
+  getUserDetails: function(data, callback) {
+    var userId = data.userId;
+    axios({
+      method: 'get',
+      url: apiPaths.getUserDetails + userId + ".json",
+    }).then(function(response){
+      var data = response.data;
+      var user = {
+        id: data.id,
+        name: data.name,
+        isOnline: data.isOnline,
+        avatar: imageBase + data.avatar,
+      };
+      callback({user});
+    })
   },
 }
 
