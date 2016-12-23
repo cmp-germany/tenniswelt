@@ -4,7 +4,7 @@ var localBase = "";
 
 var localPaths = {
   base: localBase,
-  getConversationList: localBase + 'data/example/getUserNonGroupSessions.example.json',
+  getConversationList: localBase + 'data/example/getUserSessions.example.json',
   getConversationMessages: localBase + 'data/example/getSessionMessages.example.json',
   getUserDetails: localBase + "data/example/getUserDetails/",
 }
