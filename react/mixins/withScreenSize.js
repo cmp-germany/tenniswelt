@@ -1,69 +1,84 @@
 const React  = require('react');
 
-import {xs, sm, md, lg} from "../Messages/styles/mediaSizes.js";
 import matchmedia from "matchmedia-polyfill";
+import _ from "lodash";
 
-var mqlxs = window.matchMedia(xs);
-var mqlsm = window.matchMedia(sm);
-var mqlmd = window.matchMedia(md);
-var mqllg = window.matchMedia(lg);
+function withScreenSize(WrappedComponent, screenSizes) {
 
-function withScreenSize(WrappedComponent) {
+  //create an array of objects
+  var screenSizeObjects = _.map(screenSizes, function(v, k){
+    return {id: k, size: v};
+  });
+
+  //get out the max size (size: false)
+  var max = _.find(screenSizeObjects, {size: false});
+  screenSizeObjects = _.filter(screenSizeObjects, function(screenSizeObject){
+    return screenSizeObject.size
+  });
+
+  //sort the properties by size
+  screenSizeObjects = _.sortBy(screenSizeObjects, 'size');
+
+  //add the max size at the end
+  if (max) {
+    screenSizeObjects.push(max);
+  }
+
+  //create the media strings
+  var lastValue;
+  var mediaStringObjects = screenSizeObjects.map(function(screenSizeObject){
+    var mediaStringObject = {id: screenSizeObject.id};
+
+    if (!lastValue) {
+      mediaStringObject.mediaString =
+        "(max-width: " + screenSizeObject.size + "px)";
+
+    } else if (!screenSizeObject.size) {
+      mediaStringObject.mediaString =
+        "(min-width: " + (lastValue + 1) + "px)";
+
+    } else {
+      mediaStringObject.mediaString =
+        "(min-width: " + (lastValue + 1) + "px) and (max-width: " + screenSizeObject.size + "px)";
+    }
+
+    lastValue = screenSizeObject.size;
+    return mediaStringObject
+
+  })
+
+  //create the media query list objects
+  var mqls = mediaStringObjects.map(function(mediaStringObject){
+    mediaStringObject.mql = window.matchMedia(mediaStringObject.mediaString);
+    return mediaStringObject;
+  });
 
   return React.createClass({
 
     getInitialState: function() {
+      var matches = _.find(mqls, function(mql){return mql.mql.matches});
 
-      var screenSize;
-      if (mqlxs.matches) {
-        screenSize = "xs";
-      }
-      if (mqlsm.matches) {
-        screenSize = "sm";
-      }
-      if (mqlmd.matches) {
-        screenSize = "md";
-      }
-      if (mqllg.matches) {
-        screenSize = "lg";
-      }
-
-      return {screenSize};
+      return {
+        screenSize: matches.id,
+      };
     },
 
     componentWillMount: function() {
-      mqlxs.addListener(this.onMediaChangeXs);
-      mqlsm.addListener(this.onMediaChangeSm);
-      mqlmd.addListener(this.onMediaChangeMd);
-      mqllg.addListener(this.onMediaChangeLg);
+      _.forEach(mqls, function(mql){
+        mql.listener = function(data){
+          this.onMediaChange(data, mql.id);
+        }.bind(this);
+        mql.mql.addListener(mql.listener);
+      }.bind(this));
     },
 
     componentWillUnmount: function() {
-      mqlxs.removeListener(this.onMediaChangeXs);
-      mqlsm.removeListener(this.onMediaChangeSm);
-      mqlmd.removeListener(this.onMediaChangeMd);
-      mqllg.removeListener(this.onMediaChangeLg);
+      _.forEach(mqls, function(mql){
+        mql.mql.removeListener(mql.listener);
+      });
     },
-
-    onMediaChangeXs: function(data) {
-      this.onMediaChange(data, "xs");
-    },
-
-    onMediaChangeSm: function(data) {
-      this.onMediaChange(data, "sm");
-    },
-
-    onMediaChangeMd: function(data) {
-      this.onMediaChange(data, "md");
-    },
-
-    onMediaChangeLg: function(data) {
-      this.onMediaChange(data, "lg");
-    },
-
 
     onMediaChange: function(data, size) {
-      console.log(data);
       if (data.matches) {
         this.setState({screenSize: size});
       }
@@ -75,7 +90,6 @@ function withScreenSize(WrappedComponent) {
       )
     }
   });
-
 
 }
 

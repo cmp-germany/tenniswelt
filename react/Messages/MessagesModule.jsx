@@ -8,6 +8,7 @@ const InputArea                = require('./components/InputArea');
 const ContactInfos             = require('./components/ContactInfos');
 const conversationActions      = require('./actions/ConversationActions');
 const withScreenSize           = require('../mixins/withScreenSize');
+const screenSizes              = require('./styles/screenSizes').default;
 
 
 var MessagesModule = React.createClass({
@@ -88,4 +89,4 @@ var MessagesModule = React.createClass({
   }
 })
 
-module.exports = withScreenSize(MessagesModule);
+module.exports = withScreenSize(MessagesModule, screenSizes);
