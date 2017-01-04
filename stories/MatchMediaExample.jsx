@@ -1,34 +1,76 @@
 const React  = require('react');
 
+import {xs, sm, md, lg} from "../react/Messages/styles/mediaSizes.js";
+import matchmedia from "matchmedia-polyfill";
 
-
-
-var mql = window.matchMedia("(orientation: portrait)");
+var mqlxs = window.matchMedia(xs);
+var mqlsm = window.matchMedia(sm);
+var mqlmd = window.matchMedia(md);
+var mqllg = window.matchMedia(lg);
 
 var MatchMediaExample = React.createClass({
 
-  getInitialState: function() { return {
-    matches: mql.matches
-  }},
+  getInitialState: function() {
+
+    var screenSize;
+    if (mqlxs.matches) {
+      screenSize = "xs";
+    }
+    if (mqlsm.matches) {
+      screenSize = "sm";
+    }
+    if (mqlmd.matches) {
+      screenSize = "md";
+    }
+    if (mqllg.matches) {
+      screenSize = "lg";
+    }
+
+    return {screenSize};
+  },
 
   componentWillMount: function() {
-    mql.addListener(this.onMediaChange);
+    mqlxs.addListener(this.onMediaChangeXs);
+    mqlsm.addListener(this.onMediaChangeSm);
+    mqlmd.addListener(this.onMediaChangeMd);
+    mqllg.addListener(this.onMediaChangeLg);
   },
 
   componentWillUnmount: function() {
-    mql.removeListener(this.onMediaChange);
+    mqlxs.removeListener(this.onMediaChangeXs);
+    mqlsm.removeListener(this.onMediaChangeSm);
+    mqlmd.removeListener(this.onMediaChangeMd);
+    mqllg.removeListener(this.onMediaChangeLg);
   },
 
-  onMediaChange: function(data) {
+  onMediaChangeXs: function(data) {
+    this.onMediaChange(data, "xs");
+  },
+
+  onMediaChangeSm: function(data) {
+    this.onMediaChange(data, "sm");
+  },
+
+  onMediaChangeMd: function(data) {
+    this.onMediaChange(data, "md");
+  },
+
+  onMediaChangeLg: function(data) {
+    this.onMediaChange(data, "lg");
+  },
+
+
+  onMediaChange: function(data, size) {
     console.log(data);
-    this.setState({matches: data.matches});
+    if (data.matches) {
+      this.setState({screenSize: size});
+    }
   },
 
   render: function() {
     return (
       <div>
-        {!this.state.matches && <p>Ich bin im Portrait</p>}
-        {this.state.matches && <p>Ich bin nicht im Portrait</p>}
+        {this.state.screenSize}
       </div>
     )
   }

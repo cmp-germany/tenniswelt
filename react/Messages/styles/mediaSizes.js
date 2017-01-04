@@ -1,7 +1,11 @@
-const xs = "('min-width: 500px')";
+const minSm = 768;
+const minMd = 992;
+const minLg = 1200;
 
-const minWidthSmall  = "('min-width: 500px')";
-const minWidthMedium = "('min-width: 800px')";
 
+const xs = "(max-width: " + (minSm - 1)  + "px)";
+const sm = "(min-width: " + (minSm) + "px) and (max-width: " + (minMd - 1) + "px)";
+const md = "(min-width: " + (minMd) + "px) and (max-width: " + (minLg - 1) + "px)";
+const lg = "(min-width: " + (minLg) + "px)";
 
-export {minWidthSmall, minWidthMedium}
+export {xs, sm, md, lg}
