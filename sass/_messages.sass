@@ -127,14 +127,48 @@ $color-msg-conversations-border: #ebebeb
   +justify-content(flex-start)
   +align-items(stretch)
 
+.msg-messages-container
+  +flex-grow(1)
+  +flex-shrink(1)
+
+  +display-flex(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(stretch)
+
+.msg-messages-header
+  +flex-grow(0)
+  +flex-shrink(0)
+
+  +display-flex(flex)
+  +align-items(center)
+
+  background-color: $color-background-widget
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: 20px
+  padding-bottom: 15px
+  margin-top: 20px
+  border: solid 1px #eee
+  border-bottom: solid 1px $color-primary
+  height: 66px
+
+.msg-messages-header__title
+  +flex-grow(1)
+  +flex-shrink(1)
+
+.msg-messages-header__buttons
+  +flex-grow(0)
+  +flex-shrink(0)
+
+  .material-icons
+    font-size: 30px
+
 .msg-messages
   +flex-grow(1)
   +flex-shrink(1)
 
   overflow-y: auto
-  margin-top: -20px
-  padding-top: 20px
-  padding-bottom: 20px
 
 
 .msg-message

@@ -6,6 +6,9 @@ import userStore                from "../stores/UserStore";
 import conversationStore        from "../stores/ConversationStore";
 
 import * as userActions         from "./UserActions";
+import * as currentViewActions  from "../actions/CurrentViewActions";
+
+window.currentViewActions = currentViewActions;
 
 export function select(newConversationId){
   // Notify that a selection was made.
@@ -15,6 +18,7 @@ export function select(newConversationId){
     conversationId: newConversationId,
     fromConversationId,
   });
+  currentViewActions.navigateTo("MESSAGES");
 }
 
 
@@ -51,10 +55,10 @@ export function load(conversationId){
   }
 
   //notify, that we are going to load
-  dispatcher.dispatch({
-    type: "CONVERSATION__LOAD",
-    conversationId,
-  });
+  // dispatcher.dispatch({
+  //   type: "CONVERSATION__LOAD",
+  //   conversationId,
+  // });
 
   //tell the websevice to load
   rest.getConversationMessages({conversationId}, function(result){

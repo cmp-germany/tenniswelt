@@ -2271,6 +2271,7 @@ body a:hover { color: #3aa6e7; }
 
 .wall-widget--side header { border-bottom: solid 1px #3aa6e7; margin-right: -20px; margin-left: -20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 15px; margin-bottom: 25px; }
 .wall-widget--side header i { display: table-cell; vertical-align: middle; width: 35px; font-size: 30px; color: #1470a7; }
+.wall-widget--side header i.material-icons--clickable { color: #E9002F; }
 .wall-widget--side header h3, .wall-widget--side header .MembersTitle { display: table-cell; vertical-align: middle; font-size: 20px; }
 
 .wall-widget--matching .wall-widget--content { margin-top: 25px; text-align: center; }
@@ -2761,7 +2762,16 @@ html, body { height: 100%; }
 
 .section-center--msg { display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: stretch; align-items: stretch; }
 
-.msg-messages { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; overflow-y: auto; margin-top: -20px; padding-top: 20px; padding-bottom: 20px; }
+.msg-messages-container { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: stretch; align-items: stretch; }
+
+.msg-messages-header { -webkit-flex-grow: 0; flex-grow: 0; -webkit-flex-shrink: 0; flex-shrink: 0; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background-color: #f9f9f9; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 15px; margin-top: 20px; border: solid 1px #eee; border-bottom: solid 1px #3aa6e7; height: 66px; }
+
+.msg-messages-header__title { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; }
+
+.msg-messages-header__buttons { -webkit-flex-grow: 0; flex-grow: 0; -webkit-flex-shrink: 0; flex-shrink: 0; }
+.msg-messages-header__buttons .material-icons { font-size: 30px; }
+
+.msg-messages { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; overflow-y: auto; }
 
 .msg-message { background-color: #fff; border: solid 1px #3aa6e7; border-bottom-color: #eee; border-right-color: #eee; margin-top: 20px; padding: 20px; width: 80%; min-width: 300px; position: relative; }
 .msg-message__avatar { width: 50px; margin-right: 10px; float: left; }

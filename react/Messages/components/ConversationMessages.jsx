@@ -1,10 +1,12 @@
-const React                    = require('react');
-const ConversationMessage      = require('./ConversationMessage');
-const currentConversationStore = require('../stores/CurrentConversationStore').default;
-const userStore                = require('../stores/UserStore').default;
-const currentUserStore         = require('../stores/CurrentUserStore').default;
-const conversationActions      = require('../actions/ConversationActions');
-const _                        = require('lodash');
+const React                         = require('react');
+const ConversationMessagesContainer = require('./ConversationMessagesContainer');
+const ConversationMessage           = require('./ConversationMessage');
+const WallWidget                    = require('./WallWidget');
+const currentConversationStore      = require('../stores/CurrentConversationStore').default;
+const userStore                     = require('../stores/UserStore').default;
+const currentUserStore              = require('../stores/CurrentUserStore').default;
+const conversationActions           = require('../actions/ConversationActions');
+const _                             = require('lodash');
 
 
 var ConversationMessages = React.createClass({
@@ -36,9 +38,9 @@ var ConversationMessages = React.createClass({
     }
 
     // Do I need to load new data?
-    if (!this.state.isLoading && !this.state.isLoaded && currentConversationStore.getConversation()) {
-      conversationActions.load();
-    }
+    // if (!this.state.isLoading && !this.state.isLoaded && currentConversationStore.getConversation()) {
+    //   conversationActions.load();
+    // }
   },
 
 
@@ -114,9 +116,9 @@ var ConversationMessages = React.createClass({
     }
 
     return (
-      <div className="msg-messages">
+      <ConversationMessagesContainer>
         {renderedConversationMessages}
-      </div>
+      </ConversationMessagesContainer>
     )
   }
 });
