@@ -8,6 +8,8 @@
 - [Components Based Action types](#components-based-action-types)
 	- [Input Area](#input-area)
 		- [`INPUT_AREA__CHANGE`](#inputareachange)
+	- [CurrentView](#currentview)
+		- [`CURRENT_VIEW__CHANGE`](#currentviewchange)
 - [Model Based Action types](#model-based-action-types)
 	- [Message](#message)
 		- [`MESSAGE__SENDING`](#messagesending)
@@ -44,6 +46,22 @@ Whenever the User changes the content of the Input Bar at the center-bottom, thi
 {
   type: "INPUT_AREA__CHANGE",
   text: "This is the users new input..."
+}
+```
+
+### CurrentView
+
+#### `CURRENT_VIEW__CHANGE`
+
+Whenever the User "navigates" through the content in the way, that he wants see another type of content he is currently viewing, this event is trigerred.
+
+There are currently 3 different views, the user can navigate to: `CONTACT_LIST`, `MESSAGES`, `CONTACT_DETAILS`.
+
+##### Example
+```js
+{
+	type: "CURRENT_VIEW__CHANGE",
+	toView: "MESSAGES",
 }
 ```
 

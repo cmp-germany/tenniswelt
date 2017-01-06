@@ -9,6 +9,7 @@ const ContactInfos             = require('./components/ContactInfos');
 const conversationActions      = require('./actions/ConversationActions');
 const withScreenSize           = require('../mixins/withScreenSize');
 const screenSizes              = require('./styles/screenSizes').default;
+const currentViewStore         = require('./stores/currentViewStore').default;
 
 
 var MessagesModule = React.createClass({
@@ -21,6 +22,7 @@ var MessagesModule = React.createClass({
     return {
       conversations: conversationStore.getAll(),
       activeConversation: currentConversationStore.getConversation(),
+      currentView: currentViewStore.get(),
     };
   },
 
@@ -32,6 +34,7 @@ var MessagesModule = React.createClass({
     conversationActions.loadList();
     currentConversationStore.on("change", this.refreshStateFromStore);
     conversationStore.on("change", this.refreshStateFromStore);
+    currentViewStore.on("change", this.refreshStateFromStore);
   },
 
   componentWillUnmount: function() {
@@ -52,40 +55,180 @@ var MessagesModule = React.createClass({
       />
     }
 
-    return (
-      <div className="container-fluid msg-container">
-        <div className="section-left section-left--msg">
-          <WallWidget
-            title="Nachrichten"
-            symbol="mail_outline"
-            contentScrollable={true}
-            contentFull={true}
-          >
-            <Conversations
-              conversationsData={this.state.conversations}
-              currentLanguage={this.props.currentLanguage}
-            />
-          </WallWidget>
-        </div>
+    if (this.props.screenSize == "xs") {
 
-        <div className="section-center section-center--msg">
-          {conversationMessages}
-          <InputArea />
-        </div>
+      if (this.state.currentView == "CONTACT_LIST") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-left section-left--msg">
+              <WallWidget
+                title="Nachrichten"
+                symbol="mail_outline"
+                contentScrollable={true}
+                contentFull={true}
+              >
+                <Conversations
+                  conversationsData={this.state.conversations}
+                  currentLanguage={this.props.currentLanguage}
+                />
+              </WallWidget>
+            </div>
+          </div>
+        )
+      } else if (this.state.currentView == "MESSAGES") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-center section-center--msg">
+              {conversationMessages}
+              <InputArea />
+            </div>
+          </div>
+        )
+      } else if (this.state.currentView == "CONTACT_DETAILS") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-right--msg">
+              <WallWidget
+                title="Kontaktinfo"
+                symbol="info_outline"
+                contentScrollable={true}
+                contentFull={false}
+              >
+                <ContactInfos />
+              </WallWidget>
+            </div>
+          </div>
+        );
+      }
+    }
 
-        <div className="section-right--msg">
-          <WallWidget
-            title="Kontaktinfo"
-            symbol="info_outline"
-            contentScrollable={true}
-            contentFull={false}
-          >
-            <ContactInfos />
-          </WallWidget>
-        </div>
-      </div>
+    if (this.props.screenSize == "sm" || this.props.screenSize == "md") {
 
-    );
+      if (this.state.currentView == "CONTACT_LIST" || this.state.currentView == "MESSAGES") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-left section-left--msg">
+              <WallWidget
+                title="Nachrichten"
+                symbol="mail_outline"
+                contentScrollable={true}
+                contentFull={true}
+              >
+                <Conversations
+                  conversationsData={this.state.conversations}
+                  currentLanguage={this.props.currentLanguage}
+                />
+              </WallWidget>
+            </div>
+
+            <div className="section-center section-center--msg">
+              {conversationMessages}
+              <InputArea />
+            </div>
+
+          </div>
+        )
+      }
+
+      if (this.state.currentView == "CONTACT_DETAILS") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-left section-left--msg">
+              <WallWidget
+                title="Nachrichten"
+                symbol="mail_outline"
+                contentScrollable={true}
+                contentFull={true}
+              >
+                <Conversations
+                  conversationsData={this.state.conversations}
+                  currentLanguage={this.props.currentLanguage}
+                />
+              </WallWidget>
+            </div>
+
+            <div className="section-right--msg">
+              <WallWidget
+                title="Kontaktinfo"
+                symbol="info_outline"
+                contentScrollable={true}
+                contentFull={false}
+              >
+                <ContactInfos />
+              </WallWidget>
+            </div>
+          </div>
+        );
+      }
+
+    }
+
+    if (this.props.screenSize == "lg") {
+
+      if (this.state.currentView == "CONTACT_LIST" || this.state.currentView == "MESSAGES") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-left section-left--msg">
+              <WallWidget
+                title="Nachrichten"
+                symbol="mail_outline"
+                contentScrollable={true}
+                contentFull={true}
+              >
+                <Conversations
+                  conversationsData={this.state.conversations}
+                  currentLanguage={this.props.currentLanguage}
+                />
+              </WallWidget>
+            </div>
+
+            <div className="section-center section-center--msg">
+              {conversationMessages}
+              <InputArea />
+            </div>
+
+          </div>
+        )
+      }
+
+      if (this.state.currentView == "CONTACT_DETAILS") {
+        return (
+          <div className="container-fluid msg-container">
+            <div className="section-left section-left--msg">
+              <WallWidget
+                title="Nachrichten"
+                symbol="mail_outline"
+                contentScrollable={true}
+                contentFull={true}
+              >
+                <Conversations
+                  conversationsData={this.state.conversations}
+                  currentLanguage={this.props.currentLanguage}
+                />
+              </WallWidget>
+            </div>
+
+            <div className="section-center section-center--msg">
+              {conversationMessages}
+              <InputArea />
+            </div>
+
+            <div className="section-right--msg">
+              <WallWidget
+                title="Kontaktinfo"
+                symbol="info_outline"
+                contentScrollable={true}
+                contentFull={false}
+              >
+                <ContactInfos />
+              </WallWidget>
+            </div>
+          </div>
+
+        );
+      }
+
+    }
   }
 })
 
