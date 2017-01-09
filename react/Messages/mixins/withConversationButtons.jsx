@@ -1,5 +1,4 @@
 const React              = require('react');
-const currentViewActions = require('../actions/CurrentViewActions');
 const currentViewStore   = require('../stores/CurrentViewStore').default;
 const NavigationButton   = require('../components/NavigationButton');
 const withScreenSize     = require('../../mixins/withScreenSize');
