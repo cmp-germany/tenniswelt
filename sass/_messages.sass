@@ -13,6 +13,9 @@ html, body
 
 $color-msg-conversations-border: #ebebeb
 
+=section-no-padding
+  margin-left: -15px
+  margin-right: -15px
 
 .section-left--msg
   +flex-grow(1)
@@ -22,8 +25,7 @@ $color-msg-conversations-border: #ebebeb
   margin: 0 15px
   height: 100%
   +xs
-    margin-left: -15px
-    margin-right: -15px
+    +section-no-padding
 
 
 
@@ -32,6 +34,10 @@ $color-msg-conversations-border: #ebebeb
   +flex-basis(0)
   margin: 0 15px
   height: 100%
+  +xs
+    +section-no-padding
+    width: 100%
+
 
 =section-right-sm-md
   +flex-grow(2)
@@ -165,17 +171,17 @@ $color-msg-conversations-border: #ebebeb
   border-bottom: solid 1px $color-primary
   height: 66px
 
-.msg-messages-header__title
-  +flex-grow(1)
-  +flex-shrink(1)
-  font-size: 20px
+  &__title
+    +flex-grow(1)
+    +flex-shrink(1)
+    font-size: 20px
 
-.msg-messages-header__buttons
-  +flex-grow(0)
-  +flex-shrink(0)
+  &__buttons
+    +flex-grow(0)
+    +flex-shrink(0)
 
-  .material-icons
-    font-size: 30px
+    .material-icons
+      font-size: 30px
 
 .msg-messages
   +flex-grow(1)
@@ -199,10 +205,6 @@ $color-msg-conversations-border: #ebebeb
     margin-right: 10px
     float: left
 
-  &__meta
-
-  &__name
-
   &__time
     float: right
     color: #777
@@ -212,6 +214,7 @@ $color-msg-conversations-border: #ebebeb
       margin-right: 2px
 
   &__content
+    +force-wrap
     margin-top: 5px
 
   &__status
