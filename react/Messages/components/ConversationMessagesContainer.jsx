@@ -3,6 +3,23 @@ const withConversationButtons = require('../mixins/withConversationButtons');
 const currentViewActions      = require('../actions/CurrentViewActions');
 
 var ConversationMessagesContainer = React.createClass({
+  componentWillUpdate: function() {
+    var node = ReactDOM.findDOMNode(this.messagesDiv);
+    this.shouldScrollBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
+  },
+
+  componentDidUpdate: function() {
+    if (this.shouldScrollBottom) {
+      var node = ReactDOM.findDOMNode(this.messagesDiv);
+      node.scrollTop = node.scrollHeight;
+    }
+  },
+
+  componentDidMount: function() {
+    var node = ReactDOM.findDOMNode(this.messagesDiv);
+    node.scrollTop = node.scrollHeight;
+  },
+
   render: function() {
     return (
       <div className="msg-messages-container">
@@ -13,7 +30,7 @@ var ConversationMessagesContainer = React.createClass({
             {this.props.conversationButtons}
           </div>
         </div>
-        <div className="msg-messages">
+        <div className="msg-messages" ref={(div) => { this.messagesDiv = div; }} >
           {this.props.children}
         </div>
       </div>

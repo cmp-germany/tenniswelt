@@ -26,19 +26,6 @@ var ConversationMessages = React.createClass({
     userStore.removeListener("change", this.refreshStateFromStore);
   },
 
-  componentWillUpdate: function() {
-    var node = ReactDOM.findDOMNode(this);
-    this.shouldScrollBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
-  },
-
-  componentDidUpdate: function() {
-    if (this.shouldScrollBottom) {
-      var node = ReactDOM.findDOMNode(this);
-      node.scrollTop = node.scrollHeight;
-    }
-  },
-
-
   getStateFromStore: function() {
     var currentConversation = currentConversationStore.getConversation();
     var messages = currentConversation ? currentConversation.messages : null;

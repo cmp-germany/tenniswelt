@@ -50,25 +50,28 @@ const rest = {
 
 
   getConversationMessages: function(data, callback) {
-    axios({
-      method: 'get',
-      url: apiPaths.getConversationMessages,
-      params: {
-        conversationId: data.conversationId,
-      },
-    })
-      .then(function(response) {
-        //convert to expected format
-        var messages = response.data.map(function(element, index) {
-          return {
-            user: element.UserId,
-            time: element.DateCreated,
-            content: element.Message,
-            id: element.Id,
-          }
+    setTimeout(function () {
+      axios({
+        method: 'get',
+        url: apiPaths.getConversationMessages,
+        params: {
+          conversationId: data.conversationId,
+        },
+      })
+        .then(function(response) {
+          //convert to expected format
+          var messages = response.data.map(function(element, index) {
+            return {
+              user: element.UserId,
+              time: element.DateCreated,
+              content: element.Message,
+              id: element.Id,
+            }
+          });
+          callback({messages});
         });
-        callback({messages});
-      });
+    }, 2000);
+
   },
 
 
