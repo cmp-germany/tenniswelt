@@ -63,7 +63,7 @@ function withScreenSize(WrappedComponent, screenSizes) {
       };
     },
 
-    componentWillMount: function() {
+    componentDidMount: function() {
       _.forEach(mqls, function(mql){
         mql.listener = function(data){
           this.onMediaChange(data, mql.id);
@@ -79,6 +79,7 @@ function withScreenSize(WrappedComponent, screenSizes) {
     },
 
     onMediaChange: function(data, size) {
+      console.log("onMediaChange. WrappedComponent: ", this.props);
       if (data.matches) {
         this.setState({screenSize: size});
       }

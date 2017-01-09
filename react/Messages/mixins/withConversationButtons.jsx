@@ -1,22 +1,27 @@
 const React              = require('react');
 const currentViewActions = require('../actions/CurrentViewActions');
 const currentViewStore   = require('../stores/CurrentViewStore').default;
+const NavigationButton   = require('../components/NavigationButton');
+const withScreenSize     = require('../../mixins/withScreenSize');
+const screenSizes        = require('../styles/screenSizes').default;
 
 var withConversationButtons = function(WrappedComponent) {
-  return React.createClass({
+  var withConversationButtonsWrapper = React.createClass({
 
-    conversationButtons: (
-      <a href="script:void(0)" onClick={() => {currentViewActions.navigateTo('CONTACT_DETAILS');}}>
-        <i className="material-icons">info_outline</i>
-      </a>
-    ),
+    conversationButtons: <NavigationButton icon="info_outline" navigateTo="CONTACT_DETAILS" />,
+
+    backButton: <NavigationButton icon="arrow_back" navigateTo="CONTACT_LIST"/>,
 
     getState: function() {
       var conversationButtons;
+      var backButton;
       if (currentViewStore.get() != "CONTACT_DETAILS") {
         conversationButtons = this.conversationButtons;
       }
-      return {conversationButtons}
+      if (this.props.screenSize == "xs") {
+        backButton = this.backButton;
+      }
+      return {conversationButtons, backButton}
     },
 
     getInitialState: function() {
@@ -43,11 +48,14 @@ var withConversationButtons = function(WrappedComponent) {
       return (
         <WrappedComponent
           {...this.props}
-          conversationButtons={this.state.conversationButtons}
+          {...this.state}
         />
       );
     }
   });
+  console.log(screenSizes);
+
+  return withScreenSize(withConversationButtonsWrapper, screenSizes);
 }
 
 module.exports = withConversationButtons;

@@ -43,7 +43,6 @@ var MessagesModule = React.createClass({
   },
 
   render: function() {
-    var conversationMessages = <ConversationMessages {...this.props} />;
 
     var sectionLeft = (
       <div className="section-left section-left--msg">
@@ -63,7 +62,7 @@ var MessagesModule = React.createClass({
 
     var sectionCenter = (
       <div className="section-center section-center--msg">
-        {conversationMessages}
+        <ConversationMessages {...this.props} />
         <InputArea />
       </div>
     );

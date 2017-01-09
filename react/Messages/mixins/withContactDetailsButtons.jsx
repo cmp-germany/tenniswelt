@@ -1,15 +1,12 @@
 const React              = require('react');
-const currentViewActions = require('../actions/CurrentViewActions.js');
+const currentViewActions = require('../actions/CurrentViewActions');
+const NavigationButton   = require('../components/NavigationButton');
 
 var withContactDetailsButtons = function(WrappedComponent) {
   return React.createClass({
 
     getInitialState: function() {
-      var contactDetailsButtons = (
-        <a href="script:void(0)" onClick={() => {currentViewActions.navigateTo('MESSAGES');}}>
-          <i className="material-icons material-icons--clickable">arrow_back</i>
-        </a>
-      )
+      var contactDetailsButtons = <NavigationButton icon="arrow_back" navigateTo="MESSAGES" />
       return {contactDetailsButtons}
     },
 

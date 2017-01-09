@@ -31,12 +31,20 @@ $color-msg-conversations-border: #ebebeb
   margin: 0 15px
   height: 100%
 
+=section-right-sm-md
+  +flex-grow(2)
+
 .section-right--msg
   +flex-grow(1)
   +flex-basis(0)
   min-width: 240px
   margin: 0 15px
   height: 100%
+  +sm
+    +section-right-sm-md
+  +md
+    +section-right-sm-md
+
 
 
 .wall-widget--msg

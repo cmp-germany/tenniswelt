@@ -36,11 +36,6 @@ var ConversationMessages = React.createClass({
       var node = ReactDOM.findDOMNode(this);
       node.scrollTop = node.scrollHeight;
     }
-
-    // Do I need to load new data?
-    // if (!this.state.isLoading && !this.state.isLoaded && currentConversationStore.getConversation()) {
-    //   conversationActions.load();
-    // }
   },
 
 

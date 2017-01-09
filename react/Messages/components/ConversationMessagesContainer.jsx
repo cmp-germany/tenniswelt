@@ -6,6 +6,7 @@ var ConversationMessagesContainer = React.createClass({
     return (
       <div className="msg-messages-container">
         <div className="msg-messages-header">
+          <div className="msg-messages-header__back-button">{this.props.backButton}</div>
           <div className="msg-messages-header__title">THIS IS A HEADER</div>
           <div className="msg-messages-header__buttons">
             {this.props.conversationButtons}
