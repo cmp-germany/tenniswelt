@@ -2768,7 +2768,7 @@ html, body { height: 100%; }
 
 .msg-messages-header { -webkit-flex-grow: 0; flex-grow: 0; -webkit-flex-shrink: 0; flex-shrink: 0; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background-color: #f9f9f9; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 15px; margin-top: 20px; border: solid 1px #eee; border-bottom: solid 1px #3aa6e7; height: 66px; }
 
-.msg-messages-header__title { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; }
+.msg-messages-header__title { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; font-size: 20px; }
 
 .msg-messages-header__buttons { -webkit-flex-grow: 0; flex-grow: 0; -webkit-flex-shrink: 0; flex-shrink: 0; }
 .msg-messages-header__buttons .material-icons { font-size: 30px; }

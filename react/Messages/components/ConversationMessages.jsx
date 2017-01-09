@@ -65,6 +65,7 @@ var ConversationMessages = React.createClass({
       currentUser: currentUserStore.getCurrentUser(),
       isLoaded: currentConversationStore.isLoaded(),
       isLoading: currentConversationStore.isLoading(),
+      title: currentConversation.user.name,
     };
   },
 
@@ -111,7 +112,7 @@ var ConversationMessages = React.createClass({
     }
 
     return (
-      <ConversationMessagesContainer>
+      <ConversationMessagesContainer title={this.state.title} >
         {renderedConversationMessages}
       </ConversationMessagesContainer>
     )

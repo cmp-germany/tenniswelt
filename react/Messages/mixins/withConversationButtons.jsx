@@ -53,7 +53,6 @@ var withConversationButtons = function(WrappedComponent) {
       );
     }
   });
-  console.log(screenSizes);
 
   return withScreenSize(withConversationButtonsWrapper, screenSizes);
 }
