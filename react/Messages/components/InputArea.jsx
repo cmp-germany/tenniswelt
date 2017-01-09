@@ -2,6 +2,7 @@ const React            = require('react');
 const inputAreaStore   = require('../stores/InputAreaStore').default;
 const inputAreaActions = require('../actions/InputAreaActions');
 const messageActions   = require('../actions/MessageActions');
+const autosize         = require('autosize');
 
 var InputArea = React.createClass({
 
@@ -32,8 +33,17 @@ var InputArea = React.createClass({
     inputAreaStore.on("change", this.refreshStateFromStore);
   },
 
+  componentDidMount: function() {
+    autosize(this.textarea);
+  },
+
+  componentDidUpdate: function() {
+    autosize.update(this.textarea);
+  },
+
   componentWillUnmount: function() {
     inputAreaStore.removeListener("change", this.refreshStateFromStore);
+    autosize.destroy(this.textarea);
   },
 
   getStateFromStore: function() {
@@ -58,6 +68,7 @@ var InputArea = React.createClass({
           value={this.state.userInput}
           onKeyDown={this.checkReturn}
           onChange={this.handleChange}
+          ref={(textarea) => {this.textarea = textarea;}}
         />
       <a className="msg-input-area__send-a" href="#1" onClick={this.handleSend}>
         <i className="material-icons">send</i></a>
