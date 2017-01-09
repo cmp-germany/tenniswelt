@@ -2734,9 +2734,9 @@ html, body { height: 100%; }
 #MessagesModuleRoot { height: 100%; }
 
 .msg-container { height: 100%; max-width: 1230px; padding-top: 20px; display: -webkit-flex; display: flex; overflow-y: hidden; }
-@media (max-width: 767px) { .msg-container { -webkit-flex-direction: column; flex-direction: column; } }
 
 .section-left--msg { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-basis: 0; flex-basis: 0; -webkit-align-self: flex-start; align-self: flex-start; min-width: 240px; margin: 0 15px; height: 100%; }
+@media (max-width: 767px) { .section-left--msg { margin-left: -15px; margin-right: -15px; } }
 
 .section-center--msg { -webkit-flex-grow: 2; flex-grow: 2; -webkit-flex-basis: 0; flex-basis: 0; margin: 0 15px; height: 100%; }
 
@@ -2745,12 +2745,13 @@ html, body { height: 100%; }
 @media (min-width: 992px) and (max-width: 1229px) { .section-right--msg { -webkit-flex-grow: 2; flex-grow: 2; } }
 
 .wall-widget--msg { height: calc(100% - 40px); }
+@media (max-width: 767px) { .wall-widget--msg { height: calc(100% - 20px); } }
 
 .wall-widget__content--scrollable { margin-left: -20px; margin-right: -20px; margin-top: -25px; padding: 25px 20px; overflow-y: auto; min-height: 0; height: auto; max-height: calc(100% - 46px); }
 
 .wall-widget__content--full { padding: 0 !important; }
 
-.msg-conversation { height: 60px; box-sizing: content-box; padding-top: 10px; cursor: pointer; padding-left: 20px; padding-right: 20px; display: -webkit-flex; display: flex; -webkit-flex-basis: auto; flex-basis: auto; }
+.msg-conversation { height: 60px; box-sizing: content-box; padding-top: 10px; cursor: pointer; padding-left: 20px; padding-right: 20px; display: -webkit-flex; display: flex; }
 .msg-conversation:last-child .msg-conversation__right, .msg-conversation:last-child .msg-conversation__center { border-bottom: none; }
 .msg-conversation:hover { margin-top: -1px; padding-top: 11px; background-color: #f0f0f0; }
 .msg-conversation--active { margin-top: -1px; padding-top: 11px; background-color: #ebebeb; }

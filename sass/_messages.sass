@@ -9,9 +9,6 @@ html, body
   max-width: 1230px
   padding-top: 20px
   +display-flex(flex)
-  +xs
-    +flex-direction(column)
-
   overflow-y: hidden
 
 $color-msg-conversations-border: #ebebeb
@@ -24,6 +21,11 @@ $color-msg-conversations-border: #ebebeb
   min-width: 240px
   margin: 0 15px
   height: 100%
+  +xs
+    margin-left: -15px
+    margin-right: -15px
+
+
 
 .section-center--msg
   +flex-grow(2)
@@ -49,6 +51,8 @@ $color-msg-conversations-border: #ebebeb
 
 .wall-widget--msg
   height: calc(100% - 40px)
+  +xs
+    height: calc(100% - 20px)
 
 .wall-widget__content--scrollable
   margin-left: -20px
@@ -71,7 +75,7 @@ $color-msg-conversations-border: #ebebeb
   padding-left: 20px
   padding-right: 20px
   +display-flex(flex)
-  +flex-basis(auto)
+  //+flex-basis(auto)
 
   &:last-child
     .msg-conversation
