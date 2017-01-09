@@ -2776,6 +2776,7 @@ html, body { height: 100%; }
 .msg-messages { -webkit-flex-grow: 1; flex-grow: 1; -webkit-flex-shrink: 1; flex-shrink: 1; overflow-y: auto; }
 
 .msg-message { background-color: #fff; border: solid 1px #3aa6e7; border-bottom-color: #eee; border-right-color: #eee; margin-top: 20px; padding: 20px; width: 80%; min-width: 300px; position: relative; }
+.msg-message:last-of-type { margin-bottom: 20px; }
 .msg-message__avatar { width: 50px; margin-right: 10px; float: left; }
 .msg-message__time { float: right; color: #777; }
 .msg-message__time:before { content: "access_time"; font-family: "Material Icons"; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased; vertical-align: -1px; margin-right: 2px; }
