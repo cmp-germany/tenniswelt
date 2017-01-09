@@ -266,6 +266,7 @@ $color-msg-conversations-border: #ebebeb
   @extend .wall-widget
   margin-top: 0
   padding: 10px
+  +flex-shrink(0)
   +display-flex(flex)
 
   &__text
@@ -273,11 +274,15 @@ $color-msg-conversations-border: #ebebeb
     border: none
     resize: none
     padding: 8px
+    +xs
+
 
     &:focus
       outline: none
 
   &__send-a
+    +flex-grow(0)
+    +flex-shrink(0)
     margin-left: 10px
     margin-bottom: 2.5px
     +align-self(flex-end)

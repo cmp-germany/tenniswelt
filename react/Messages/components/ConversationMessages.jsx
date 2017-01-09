@@ -65,7 +65,7 @@ var ConversationMessages = React.createClass({
       currentUser: currentUserStore.getCurrentUser(),
       isLoaded: currentConversationStore.isLoaded(),
       isLoading: currentConversationStore.isLoading(),
-      title: currentConversation.user.name,
+      title: currentConversation ? currentConversation.user.name : null,
     };
   },
 
