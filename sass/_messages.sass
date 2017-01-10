@@ -224,6 +224,8 @@ $color-msg-conversations-border: #ebebeb
   &__content
     +force-wrap
     margin-top: 5px
+    +sm
+      max-width: 396px
 
   &__status
     color: #777
@@ -242,7 +244,7 @@ $color-msg-conversations-border: #ebebeb
 
 
   &--other
-    +align-self(flex-end)
+    +align-self(flex-start)
 
   &--system-message
     background-color: $color-background-widget
@@ -252,7 +254,7 @@ $color-msg-conversations-border: #ebebeb
     border-left-color: $color-msg-conversations-border
 
   &--self
-    +align-self(flex-start)
+    +align-self(flex-end)
     +clearfix
 
     .msg-message

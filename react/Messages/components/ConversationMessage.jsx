@@ -4,8 +4,8 @@ const MaterialDesignMixin = require('../../mixins/MaterialDesignMixin.js');
 const userStore           = require('../stores/UserStore').default;
 
 const languages = {
-  'de-DE': require('react-timeago/lib/language-strings/de').default,
-  'en-US': require('react-timeago/lib/language-strings/en').default
+  'de-DE': require('react-timeago/lib/language-strings/de-short').default,
+  'en-US': require('react-timeago/lib/language-strings/en-short').default
 };
 var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
