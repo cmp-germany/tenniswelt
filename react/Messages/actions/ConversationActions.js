@@ -8,7 +8,6 @@ import conversationStore        from "../stores/ConversationStore";
 import * as userActions         from "./UserActions";
 import * as currentViewActions  from "../actions/CurrentViewActions";
 
-window.currentViewActions = currentViewActions;
 
 export function select(newConversationId){
   // Notify that a selection was made.
