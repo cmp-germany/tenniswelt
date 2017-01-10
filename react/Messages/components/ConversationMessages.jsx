@@ -1,10 +1,12 @@
-const React                    = require('react');
-const ConversationMessage      = require('./ConversationMessage');
-const currentConversationStore = require('../stores/CurrentConversationStore').default;
-const userStore                = require('../stores/UserStore').default;
-const currentUserStore         = require('../stores/CurrentUserStore').default;
-const conversationActions      = require('../actions/ConversationActions');
-const _                        = require('lodash');
+const React                         = require('react');
+const ConversationMessagesContainer = require('./ConversationMessagesContainer');
+const ConversationMessage           = require('./ConversationMessage');
+const WallWidget                    = require('./WallWidget');
+const currentConversationStore      = require('../stores/CurrentConversationStore').default;
+const userStore                     = require('../stores/UserStore').default;
+const currentUserStore              = require('../stores/CurrentUserStore').default;
+const conversationActions           = require('../actions/ConversationActions');
+const _                             = require('lodash');
 
 
 var ConversationMessages = React.createClass({
@@ -23,24 +25,6 @@ var ConversationMessages = React.createClass({
     currentConversationStore.removeListener("change", this.refreshStateFromStore);
     userStore.removeListener("change", this.refreshStateFromStore);
   },
-
-  componentWillUpdate: function() {
-    var node = ReactDOM.findDOMNode(this);
-    this.shouldScrollBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
-  },
-
-  componentDidUpdate: function() {
-    if (this.shouldScrollBottom) {
-      var node = ReactDOM.findDOMNode(this);
-      node.scrollTop = node.scrollHeight;
-    }
-
-    // Do I need to load new data?
-    if (!this.state.isLoading && !this.state.isLoaded && currentConversationStore.getConversation()) {
-      conversationActions.load();
-    }
-  },
-
 
   getStateFromStore: function() {
     var currentConversation = currentConversationStore.getConversation();
@@ -68,6 +52,7 @@ var ConversationMessages = React.createClass({
       currentUser: currentUserStore.getCurrentUser(),
       isLoaded: currentConversationStore.isLoaded(),
       isLoading: currentConversationStore.isLoading(),
+      title: currentConversation ? currentConversation.user.name : null,
     };
   },
 
@@ -114,9 +99,9 @@ var ConversationMessages = React.createClass({
     }
 
     return (
-      <div className="msg-messages">
+      <ConversationMessagesContainer title={this.state.title} >
         {renderedConversationMessages}
-      </div>
+      </ConversationMessagesContainer>
     )
   }
 });

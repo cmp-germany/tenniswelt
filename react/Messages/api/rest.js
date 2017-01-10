@@ -28,24 +28,23 @@ const rest = {
     axios({
       method: 'get',
       url: apiPaths.getConversationList,
-    })
-      .then(function(response) {
+    }).then(function(response) {
 
-        //convert to expected format
-        var conversations = response.data.map(function(element, index) {
-          return {
-            id: element.id,
-            user: {
-              id: element.user.id,
-              name: element.user.name,
-              avatar: imageBase + element.user.avatar,
-            },
-            preview: element.lastMessageText,
-            time: element.lastMessageDate,
-          }
-        });
-        callback({conversations});
+      //convert to expected format
+      var conversations = response.data.map(function(element, index) {
+        return {
+          id: element.id,
+          user: {
+            id: element.user.id,
+            name: element.user.name,
+            avatar: imageBase + element.user.avatar,
+          },
+          preview: element.lastMessageText,
+          time: element.lastMessageDate,
+        }
       });
+      callback({conversations});
+    });
   },
 
 
@@ -56,19 +55,18 @@ const rest = {
       params: {
         conversationId: data.conversationId,
       },
-    })
-      .then(function(response) {
-        //convert to expected format
-        var messages = response.data.map(function(element, index) {
-          return {
-            user: element.UserId,
-            time: element.DateCreated,
-            content: element.Message,
-            id: element.Id,
-          }
-        });
-        callback({messages});
+    }).then(function(response) {
+      //convert to expected format
+      var messages = response.data.map(function(element, index) {
+        return {
+          user: element.UserId,
+          time: element.DateCreated,
+          content: element.Message,
+          id: element.Id,
+        }
       });
+      callback({messages});
+    });
   },
 
 

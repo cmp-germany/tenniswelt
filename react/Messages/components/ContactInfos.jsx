@@ -45,7 +45,7 @@ var ContactInfos = React.createClass({
 
     return (
       <div>
-        <img src={avatar} alt={"Profilbild von " + name} className="img-responsive" />
+        <img src={avatar} alt={"Profilbild von " + name} className="img-responsive msg-contact-image" />
         <ContactDetail title="Name">{name}</ContactDetail>
         {renderedContactDetails}
       </div>

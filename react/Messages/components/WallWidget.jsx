@@ -1,4 +1,5 @@
-const React = require('react');
+const React                     = require('react');
+const withContactDetailsButtons = require('../mixins/withContactDetailsButtons');
 
 var WallWidget = React.createClass({
   render: function() {
@@ -7,11 +8,16 @@ var WallWidget = React.createClass({
     contentClasses += this.props.contentScrollable ? "wall-widget__content--scrollable " : "";
     contentClasses += this.props.contentFull       ? "wall-widget__content--full "       : "";
 
+    var symbol = <i className="material-icons">{this.props.symbol}</i>;
+    if(this.props.withContactDetailsButtons) {
+      symbol = this.props.contactDetailsButtons;
+    }
+
     return (
       <aside className="wall-widget wall-widget--side wall-widget--msg">
         <header>
           <div style={{display: 'table'}}>
-            <i className="material-icons">{this.props.symbol}</i><h3>{this.props.title}</h3>
+            {symbol}<h3>{this.props.title}</h3>
           </div>
         </header>
         <div className={contentClasses}>
@@ -22,4 +28,4 @@ var WallWidget = React.createClass({
   }
 });
 
-module.exports = WallWidget;
+module.exports = withContactDetailsButtons(WallWidget);
