@@ -51,6 +51,8 @@ $color-msg-conversations-border: #ebebeb
     +section-right-sm-md
   +md
     +section-right-sm-md
+  +xs
+    +section-no-padding
 
 
 
@@ -168,7 +170,7 @@ $color-msg-conversations-border: #ebebeb
   margin-top: 20px
   border: solid 1px #eee
   border-bottom: solid 1px $color-primary
-  height: 66px
+  height: 67px
 
   &__title
     +flex-grow(1)
@@ -185,17 +187,21 @@ $color-msg-conversations-border: #ebebeb
 .msg-messages
   +flex-grow(1)
   +flex-shrink(1)
+  +display-flex(flex)
+  +flex-direction(column)
 
   overflow-y: auto
 
 
 .msg-message
+
   +card-style($color-primary)
   margin-top: 20px
   padding: 20px
-  width: 80%
+  max-width: 80%
   min-width: 300px
   position: relative
+  +clearfix
 
   &:last-of-type
     margin-bottom: 20px
@@ -236,8 +242,7 @@ $color-msg-conversations-border: #ebebeb
 
 
   &--other
-    float: left
-    +clearfix
+    +align-self(flex-end)
 
   &--system-message
     background-color: $color-background-widget
@@ -247,7 +252,7 @@ $color-msg-conversations-border: #ebebeb
     border-left-color: $color-msg-conversations-border
 
   &--self
-    float: right
+    +align-self(flex-start)
     +clearfix
 
     .msg-message
@@ -303,6 +308,12 @@ $color-msg-conversations-border: #ebebeb
       color: #333
 
 
+
+
+
+.msg-contact-image
+  margin-left: auto
+  margin-right: auto
 
 
 .msg-contact-detail
