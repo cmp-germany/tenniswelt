@@ -1,4 +1,5 @@
 const FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
+const ChatNotificationsModule = require('../react/ChatNotifications/ChatNotificationsModule');
 const React                = require('react');
 const ReactDOM             = require('react-dom');
 const $                    = require('jquery');
