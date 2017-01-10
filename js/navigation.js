@@ -38,4 +38,5 @@ function initReactComponents() {
       pageSize="5"
     />,
     document.getElementById('ChatNotificationsModuleRoot')
+  );
 }
