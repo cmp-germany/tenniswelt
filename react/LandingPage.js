@@ -69,10 +69,18 @@ var KeyFeatureModule = React.createClass({
   render: function () {
     var data = this.props.data;
 
+    var icon;
+    if (data.icon) {
+      icon = <i className="material-icons key-feature__icon text-center">{data.icon}</i>;
+    }
+    if (data.picture) {
+      icon = <img src={data.picture} className="key-feature__icon text-center"/>;
+    }
+
     return (
       <div className={"col-md-5 key-feature clearfix " + this.props.additionalClasses}>
         <div className="col-xs-2">
-          <i className="material-icons key-feature__icon text-center">{data.icon}</i>
+          {icon}
         </div>
         <div className="col-xs-10">
           <h3 className="key-feature__headline">
@@ -81,7 +89,7 @@ var KeyFeatureModule = React.createClass({
           <p className="key-feature__description">
             {data.text}
           </p>
-          <a href={data.button.url} className="btn btn-primary">{data.button.text}</a>
+          <a href={data.button.url} target={data.button.target ? data.button.target : null} className="btn btn-primary">{data.button.text}</a>
         </div>
       </div>
     );

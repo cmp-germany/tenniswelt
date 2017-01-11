@@ -2237,7 +2237,9 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .key-feature { margin-bottom: 40px; }
 
-.key-feature__icon { color: #3aa6e7; font-size: 60px; margin-left: -15px; display: block; }
+.key-feature__icon { color: #3aa6e7; font-size: 60px; margin-left: -15px; display: block; height: 60px; }
+@media (min-width: 768px) and (max-width: 991px) { .key-feature__icon { margin-left: auto; margin-right: auto; } }
+@media (max-width: 767px) { .key-feature__icon { margin-left: auto; margin-right: auto; } }
 
 .key-feature__headline { margin-top: 0; padding-bottom: 10px; border-bottom: solid 1px #3aa6e7; }
 
