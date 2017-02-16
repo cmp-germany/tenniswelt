@@ -113,6 +113,10 @@ var ChatNotificationsModule = React.createClass({
   	this.forceUpdate();
   },
 
+  testFunction: function(){
+    alert("Test");
+  },
+
 	//Events and callbacks
   getInitialState: function() {
     return {unseenMessagesCount: null, messageThreads: [], userIds: [], currentState: "initLoading", threadsCount: 0}
