@@ -113,8 +113,19 @@ var ChatNotificationsModule = React.createClass({
   	this.forceUpdate();
   },
 
-  testFunction: function(){
-    alert("Test");
+  setSeenUser: function(userId){
+    var chatThreads = [];
+    $.each(this.state.messageThreads, function(key, value) {
+      var userObject = $.grep(result, function(e){ return userId == value.ToUserId; }.bind(this));
+       if(userObject.length > 0){
+        if(!value.isSeen)
+          this.state.unseenMessagesCount = this.state.unseenMessagesCount - value.countOfUnreadMessages;
+        value.isSeen = true;
+      }
+      chatThreads.push(value);
+    }.bind(this));
+    this.state.messageThreads= chatThreads;
+    this.forceUpdate();
   },
 
 	//Events and callbacks
