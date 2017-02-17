@@ -206,7 +206,7 @@ var ChatNotificationsModule = React.createClass({
 
   	return (
       <div className="navbar-notification">
-        <a href='javascript:void(0)' className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#chat-notifications" aria-expanded="false" onClick={this.mainIconClicked}>
+        <a href='javascript:void(0)' className="navbar-notification__toggle-button" data-toggle="collapse" id="chat-notifications-toggle-btn" data-target="#chat-notifications" aria-expanded="false" onClick={this.mainIconClicked}>
           <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badge}>
             chat_bubble_outline
           </i>

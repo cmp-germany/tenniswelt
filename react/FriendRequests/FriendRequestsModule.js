@@ -318,7 +318,7 @@ var FriendRequestsModule = React.createClass({
 
     return (
       <div className="navbar-notification">
-        <a href='javascript:void(0)' className="navbar-notification__toggle-button" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false" onClick={this.mainIconClicked}>
+        <a href='javascript:void(0)' className="navbar-notification__toggle-button" id="friend-requests-notifications-toggle-btn" data-toggle="collapse" data-target="#friend-requests" aria-expanded="false" onClick={this.mainIconClicked}>
           <i className="material-icons mdl-badge mdl-badge--overlap" data-badge={badge}>
             people_outline
           </i>
