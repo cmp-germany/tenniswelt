@@ -119,6 +119,7 @@ var ChatNotificationsModule = React.createClass({
       if(value.ToUserId == userId){
         if(!value.IsSeen)
           this.state.unseenMessagesCount = this.state.unseenMessagesCount - value.CountOfUnreadMessages;
+        value.CountOfUnreadMessages = 0;
         value.IsSeen = true;
       }
       chatThreads.push(value);
