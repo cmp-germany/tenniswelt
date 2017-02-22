@@ -6,6 +6,9 @@ const MaterialDesignMixin = require('../mixins/MaterialDesignMixin');
 const NotificationLoadMore = require("./components/NotificationLoadMore");
 const TimeOut = 1000; //milliseconds
 
+import withScreenSize from "../mixins/withScreenSize";
+import screenSizes    from "./styles/screenSizes";
+
 var _       = {};
 _.find      = require("lodash/find");
 _.findIndex = require("lodash/findIndex");
@@ -331,4 +334,4 @@ var FriendRequestsModule = React.createClass({
   }
 });
 
-module.exports = FriendRequestsModule;
+module.exports = withScreenSize(FriendRequestsModule, screenSizes);
