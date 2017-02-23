@@ -58,7 +58,7 @@ var ChatThread = React.createClass({
           </div>
           <div className="notification__bottom">
             <div className="notification__message-preview">
-              {data.LastMessage}
+              {message}
             </div>
             {count}
           </div>
