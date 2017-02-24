@@ -2168,6 +2168,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 .notification__error::before--circle { background-color: #E9002F; color: #fff; font-size: 30.6px; height: 36px; padding-top: 3.24px; width: 36px; vertical-align: middle; -moz-border-radius: 18px; -webkit-border-radius: 18px; border-radius: 18px; }
 .notification__error-link { margin-left: 5px; }
 
+@media (max-width: 767px) { .navbar__tab:nth-child(4), .navbar-notification__toggle-button:nth-child(4) { display: none; } }
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile { border-radius: 0; border: none; text-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 
 .btn-important { background-color: #E9002F; color: #fff; }
