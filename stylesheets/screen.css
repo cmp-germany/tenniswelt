@@ -2173,7 +2173,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 @media (max-width: 767px) { .navbar__tab:nth-child(4), .navbar-notification__toggle-button:nth-child(4) { display: none; }
   .navbar__tab.navbar__tab--search, .navbar__tab--search.navbar-notification__toggle-button { display: none; }
   #ChatNotificationsModuleRoot, #FriendRequestsModuleRoot { float: right; } }
-@media (min-width: 768px) and (max-width: 991px) { #FriendRequestsModuleRoot { float: right; } }
+@media (min-width: 768px) and (max-width: 991px) { #ChatNotificationsModuleRoot, #FriendRequestsModuleRoot { float: right; } }
 .btn, #TblPagesList .TrItem td:nth-child(5) a::before, #TblPagesList .TrAlt td:nth-child(5) a::before, #TblPagesList .TrItem td:nth-child(6) a::before, #TblPagesList .TrAlt td:nth-child(6) a::before, #TblPagesList .btnSaveProfile, #TblPageEdit .btnSaveProfile { border-radius: 0; border: none; text-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 
 .btn-important { background-color: #E9002F; color: #fff; }
