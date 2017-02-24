@@ -15,6 +15,13 @@ var ChatThread = React.createClass({
     //this.props.openChatSession(userId);
   },
 
+  formatMessage: function(message){
+    if(message.indexOf("'chat-message-file'") != -1){
+      return "File Attachments";
+    }
+    return message;
+  },
+
   render: function() {
     var data = this.props.data;
     var containerClassName = "notification notification--chat";
@@ -29,6 +36,8 @@ var ChatThread = React.createClass({
     if (data.LastMessageDate) {
       timeAgo = (<TimeAgo date={data.LastMessageDate} formatter={this.state.formatter} />);
     }
+
+    var message = this.formatMessage(data.LastMessage);
 
     var count;
     if (data.CountOfUnreadMessages > 0){
@@ -49,7 +58,7 @@ var ChatThread = React.createClass({
           </div>
           <div className="notification__bottom">
             <div className="notification__message-preview">
-              {data.LastMessage}
+              {message}
             </div>
             {count}
           </div>
