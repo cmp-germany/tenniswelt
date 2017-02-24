@@ -2404,7 +2404,7 @@ body a:hover { color: #3aa6e7; }
 .wall-widget--activity-post .item .post-file-attachment::after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 .wall-widget--activity-post .item .post-file-attachment .file-icon { float: left; width: 60px; text-align: center; margin-right: 15px; }
 .wall-widget--activity-post .item .post-file-attachment .file-icon i { font-size: 45px; line-height: 60px; color: #7b7b7b; }
-.wall-widget--activity-post .item .post-file-attachment .file-name a { display: block; float: left; margin-top: 15px; }
+.wall-widget--activity-post .item .post-file-attachment .file-name a { display: block; float: left; margin-top: 15px; font-size: 16px; }
 
 .account-avatar { display: inline-block; width: 60px; height: 60px; }
 
