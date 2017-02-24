@@ -59,11 +59,15 @@
   max-height: 331px
   min-width: 270px
   +xs
-    right: inherit
-    width: calc(100% + 30px)
-    margin-left: -15px
-    margin-right: -15px
+    right: -100px
+    top: 50px
+    width: 100vw
     max-height: initial
+
+#ChatNotificationsModuleRoot
+  .notification-container
+    +xs
+      right: -60px
 
 
 .notification
@@ -240,3 +244,14 @@
 +xs
   .navbar__tab:nth-child(4)
     display: none
+
+  .navbar__tab.navbar__tab--search
+    display: none
+
+  #ChatNotificationsModuleRoot, #FriendRequestsModuleRoot
+    float: right
+
+
++sm
+  #FriendRequestsModuleRoot
+    float: right
