@@ -2234,6 +2234,9 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .register-form__info-text { font-size: 12px; }
 
+.group-selector { float: left; border: 1px solid #fff; width: 110px; padding: 3px 10px; text-align: center; margin: 0 10px 10px 0; color: #fff; background-color: transparent; cursor: pointer; }
+.group-selector--active { background-color: #E9002F; cursor: default; }
+
 .key-feature { margin-bottom: 40px; }
 
 .key-feature__icon { color: #3aa6e7; font-size: 60px; margin-left: -15px; display: block; height: 60px; }

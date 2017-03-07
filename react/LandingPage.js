@@ -153,6 +153,39 @@ var InputFieldsList = React.createClass({
   }
 });
 
+var InputFieldGroups = React.createClass({
+
+  getInitialState: function() {
+    return ({selectedGroup: 0});
+  },
+
+  onGroupSelectorClick: function(index) {
+    this.setState({selectedGroup: index});
+  },
+
+  render: function() {
+    var groups = this.props.groups;
+
+    var groupSelectors = groups.map(function(element, index){
+      var classes = "group-selector";
+      if (this.state.selectedGroup == index) {
+        classes += " group-selector--active";
+      }
+
+      return (
+        <div key={index} className={classes} onClick={() => this.onGroupSelectorClick(index)}>{element.name}</div>
+      );
+    }.bind(this));
+
+    return (
+      <div>
+        <div>{groupSelectors}</div>
+        <InputFieldsList fields={groups[this.state.selectedGroup].fields} />
+      </div>
+    );
+  }
+})
+
 var TitleWithRegisterForm = React.createClass({
   render: function() {
 
@@ -186,7 +219,7 @@ var TitleWithRegisterForm = React.createClass({
                 <form id="register-form" className="register-form register-form--slide">
                   <p className="register-form__intro-text text-center">{data.contents.formTitle}</p>
 
-                  <InputFieldsList fields={data.inputFields} />
+                  <InputFieldGroups groups={data.inputFields} />
 
                   <p className="register-form__info-text">{data.contents.buttonAdditionalText}</p>
                   <button type="submit" className="btn btn-primary btn-block">{data.contents.buttonText}</button>
