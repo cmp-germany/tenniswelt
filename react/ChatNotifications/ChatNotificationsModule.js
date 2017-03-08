@@ -74,7 +74,7 @@ var ChatNotificationsModule = React.createClass({
   },
   updateChatUsersStatus: function(){
     var updateChatUserOnlineStatuses = this.props.webserviceBase + this.props.servicePaths.chatService;
-    var data = "";
+    var data = "userIds=";
     if(this.state.userIds.length>0)
     	data = "userIds=" + this.state.userIds.join("&userIds=");
 		$.ajax({
