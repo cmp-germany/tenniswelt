@@ -75,30 +75,32 @@ var ChatNotificationsModule = React.createClass({
   updateChatUsersStatus: function(){
     var updateChatUserOnlineStatuses = this.props.webserviceBase + this.props.servicePaths.chatService;
     var data = "";
-    if(this.state.userIds.length>0)
+    if(this.state.userIds.length>0){
     	data = "userIds=" + this.state.userIds.join("&userIds=");
-		$.ajax({
-		  url: updateChatUserOnlineStatuses,
-		  data: data, 
-	    type: 'POST',
-	    contentType: "application/x-www-form-urlencoded",
-	    dataType: "json"
-		}).done(function(result) {
-			if(result.length > 0){
-				var chatThreads = [];
-				$.each(this.state.messageThreads, function(key, value) {
-					var userObject = $.grep(result, function(e){ return e.userId == value.ToUserId; }.bind(this));
-					if(userObject.length > 0){
-						value.isOnline = userObject[0].online ;
-						chatThreads.push(value);
-					}
-				}.bind(this));
-				this.state.messageThreads= chatThreads;
-				this.forceUpdate();
-			}
-		}.bind(this)).fail(function(jqXHR, textStatus, errorThrown) {
-      this.setState({currentState: "error", errorMessage: textStatus});
-    }.bind(this));
+    
+  		$.ajax({
+  		  url: updateChatUserOnlineStatuses,
+  		  data: data, 
+  	    type: 'POST',
+  	    contentType: "application/x-www-form-urlencoded",
+  	    dataType: "json"
+  		}).done(function(result) {
+  			if(result.length > 0){
+  				var chatThreads = [];
+  				$.each(this.state.messageThreads, function(key, value) {
+  					var userObject = $.grep(result, function(e){ return e.userId == value.ToUserId; }.bind(this));
+  					if(userObject.length > 0){
+  						value.isOnline = userObject[0].online ;
+  						chatThreads.push(value);
+  					}
+  				}.bind(this));
+  				this.state.messageThreads= chatThreads;
+  				this.forceUpdate();
+  			}
+  		}.bind(this)).fail(function(jqXHR, textStatus, errorThrown) {
+        this.setState({currentState: "error", errorMessage: textStatus});
+      }.bind(this));
+    }
   },
   updateUnseenCount: function(sessionId, unseenCount){
   	var messagesArray = this.state.messageThreads;
