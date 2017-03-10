@@ -166,6 +166,10 @@ var InputFieldGroups = React.createClass({
   render: function() {
     var groups = this.props.groups;
 
+    if (!groups.name) {
+      return <InputFieldsList fields={groups} />
+    }
+
     var groupSelectors = groups.map(function(element, index){
       var classes = "group-selector";
       if (this.state.selectedGroup == index) {
