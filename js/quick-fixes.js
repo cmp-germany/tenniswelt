@@ -53,20 +53,20 @@ var replaceElements = function() {
 };
 
 var fixProfileMenu = function() {
-  var tabProfile = $('#tab--profile-options');
+  var tabProfile = $('#tab__profile-options');
   if (!tabProfile.length) {
     console.log("not found :-(");
     setTimeout(fixProfileMenu, 500);
   }
   else {
     console.log('FOUND!!!');
-    $('#tab--profile-options').on('show.bs.collapse', function(event) {
+    $('#tab__profile-options').on('show.bs.collapse', function(event) {
       console.log(event);
       var parent = $(event.target).parents('.navbar-options');
       console.log(parent);
       parent.css('display', 'block');
     });
-    $('#tab--profile-options').on('hidden.bs.collapse', function(event) {
+    $('#tab__profile-options').on('hidden.bs.collapse', function(event) {
       console.log(event);
       var parent = $(event.target).parents('.navbar-options');
       console.log(parent);
