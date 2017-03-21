@@ -52,6 +52,29 @@ var replaceElements = function() {
   $('.navbar-brand, .navbar__section__title').html('<span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>');
 };
 
+var fixProfileMenu = function() {
+  var tabProfile = $('#tab--profile-options');
+  if (!tabProfile.length) {
+    console.log("not found :-(");
+    setTimeout(fixProfileMenu, 500);
+  }
+  else {
+    console.log('FOUND!!!');
+    $('#tab--profile-options').on('show.bs.collapse', function(event) {
+      console.log(event);
+      var parent = $(event.target).parents('.navbar-options');
+      console.log(parent);
+      parent.css('display', 'block');
+    });
+    $('#tab--profile-options').on('hidden.bs.collapse', function(event) {
+      console.log(event);
+      var parent = $(event.target).parents('.navbar-options');
+      console.log(parent);
+      parent.css('display', 'none');
+    });
+  }
+};
+
 // This waits for jQuery to be loaded
 (function() {
   var checkReady = function(callback) {
@@ -68,5 +91,6 @@ var replaceElements = function() {
   checkReady(function($) {
     //$(document).ready(replaceElements);
     $(document).ready(chatQuickFixes);
+    $(document).ready(fixProfileMenu);
   });
 })();
