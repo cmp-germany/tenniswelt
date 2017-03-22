@@ -2027,6 +2027,7 @@ body form { background-color: transparent; }
 .navbar { border-radius: 0; background-color: rgba(19, 35, 51, 0.9); }
 .navbar .navbar-brand__title { font-family: "Pacifico", cursive; color: #3aa6e7; font-size: 30px; }
 .navbar .navbar-brand__subtitle { font-family: "Open Sans", sans-serif; color: #fff; }
+.navbar .navbar-brand__img { height: 50px; margin-top: -15px; }
 
 .navbar-inverse { background-image: none; }
 

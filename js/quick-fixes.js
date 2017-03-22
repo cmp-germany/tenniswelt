@@ -49,7 +49,7 @@ var chatQuickFixes = function () {
 
 
 var replaceElements = function() {
-  $('.navbar-brand, .navbar__section__title').html('<span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>');
+  $('.navbar-brand, .navbar__section__title').html('<img src="gfx/logo_besser_lernen_lg.png" alt="" class="navbar-brand__img">');
 };
 
 var fixProfileMenu = function() {
