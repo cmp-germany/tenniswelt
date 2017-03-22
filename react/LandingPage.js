@@ -166,7 +166,7 @@ var InputFieldGroups = React.createClass({
   render: function() {
     var groups = this.props.groups;
 
-    if (!groups[0].name) {
+    if (!groups.name) {
       return <InputFieldsList fields={groups} />
     }
 

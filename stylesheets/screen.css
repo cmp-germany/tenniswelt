@@ -2211,7 +2211,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .slide--with-background__inner-div { background-color: rgba(0, 0, 0, 0.1); margin-top: -50px; padding-top: 50px; margin-bottom: -50px; padding-bottom: 50px; width: 100%; }
 
-.slide--with-background__text { color: #fff; font-weight: lighter; padding-left: 5px; padding-top: 10px; padding-bottom: 5px; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.5); }
+.slide--with-background__text { color: #fff; font-weight: lighter; }
 
 .slide--title { background-image: url("../gfx/landing-hintergrund.jpg"); background-attachment: scroll; background-position: 100% 50%; }
 .slide--title .slide--with-background__inner-div { background-color: transparent; }
