@@ -2189,6 +2189,9 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .form-control--navbar, .form-control--options-navbar { border: solid 1px #747474; background-color: transparent; color: #333; }
 
+.navbar-form input.form-control.form-control--options-navbar { width: 150px; }
+.navbar-form input.form-control.form-control--options-navbar#form-control-range { width: 110px; }
+
 .form-control::-webkit-input-placeholder { color: #6a6a6a; }
 
 .form-control:-moz-placeholder { color: #6a6a6a; }
