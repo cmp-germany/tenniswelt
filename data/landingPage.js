@@ -1,21 +1,21 @@
 window.contentLandingPage = [
   { module: "TitleWithRegisterForm",
     contents: {
-      title: "Treten Sie jetzt mit der Kölner Gründerszene in Kontakt!",
+      title: "Unsere Maßstäbe - Tradition und Innovation",
       text:
-        "Werden Sie Teil der Startup Szene und treten Sie einem internationalem Portal bei. Hier finden Sie alle Möglichkeiten, die Sie für Ihr aufstrebendes Unternehmen brauchen: Kommunizieren Sie mit Gleichgesinnten, tauschen Sie Ihr Wissen aus, finden Sie Ihre Kunden und entdecken Sie die Finanzierungsmöglichkeiten, die Ihrer Geschäftsidee den nötigen Boost verleihen.",
+        "Die Tradition des Berufskollegs Deutzer Freiheit bei der Vorbereitung auf das kaufmännische Berufsleben, als dualer Partner in der Berufsausbildung oder bei der beruflichen Weiterbildung in der Fachschule ist verbunden mit einer Reihe von uns initiierter Innovationen. So waren wir eine der erstenberufsbildenden Schulen in NRW, die einen Teil des Unterrichts durch Auflösung der Stundentafel in Wahlpflicht-Kursen erteilten und Pilotschule in NRW zur Erprobung von Blockunterricht in der Berufsschule sowie Vorreiter bei bildungsgangübergreifenden Kooperationen und Neuerungen in der Berufsfachschule.",
       formTitle: "Kostenlos registrieren und ein Jahr unverbindlich testen.",
       buttonAdditionalText: 'Per Klick auf "Jetzt Mitglied werden" stimmen Sie unseren AGB und Datenschutzrichtlinien zu.',
       buttonText: "Jetzt Mitglied werden"
     },
     pictures: {
       background: {
-        src: "gfx/landing-hintergrund.jpg",
-        positionX: "100%",
+        src: "http://source.unsplash.com/y83Je1OC6Wc/1920x1080",
+        positionX: "50%",
         positionY: "50%"
       },
       motiv: {
-        src: "gfx/flieger-junge.png"
+        //src: "gfx/flieger-junge.png"
       }
     },
     inputFields: [
