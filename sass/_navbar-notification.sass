@@ -58,6 +58,13 @@
   overflow-y: auto
   max-height: 331px
   min-width: 270px
+  +xs
+    position: fixed
+    right: 0
+    left: 0
+    top: 50px
+    width: 100%
+    max-height: initial
 
 
 .notification
@@ -228,3 +235,20 @@
 
   &__error-link
     margin-left: 5px
+
+// remove chat icon in xs
+
++xs
+  .navbar__tab:nth-child(4)
+    display: none
+
+  .navbar__tab.navbar__tab--search
+    display: none
+
+  #ChatNotificationsModuleRoot, #FriendRequestsModuleRoot
+    float: right
+
+
++sm
+  #ChatNotificationsModuleRoot, #FriendRequestsModuleRoot
+    float: right
