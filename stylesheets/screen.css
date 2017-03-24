@@ -2239,6 +2239,9 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .register-form__info-text { font-size: 12px; }
 
+.group-selector { float: left; border: 1px solid #fff; width: 110px; padding: 3px 10px; text-align: center; margin: 0 10px 10px 0; color: #fff; background-color: transparent; cursor: pointer; }
+.group-selector--active { background-color: #E9002F; cursor: default; }
+
 .key-feature { margin-bottom: 40px; }
 
 .key-feature__icon { color: #3aa6e7; font-size: 60px; margin-left: -15px; display: block; height: 60px; }
@@ -2409,6 +2412,8 @@ body a:hover { color: #3aa6e7; }
 .wall-widget--activity-post-image { max-width: 100%; height: auto; }
 
 .wall-widget--activity-post-text { text-align: left; }
+
+.shared-by { text-align: left; font-size: 12px; font-weight: bold; color: #e20512; margin-bottom: 0px; }
 
 .wall-widget--news .wall-widget--content { margin-top: 15px; text-align: center; }
 .wall-widget--news .wall-widget--button { margin-top: 10px; }
@@ -3317,7 +3322,7 @@ html, body { height: 100%; }
   .navbar.navbar-options .starters-navigation .starters-navigation__list-item, * .starters-navigation .starters-navigation__list-item { width: 100%; background-color: transparent; border-bottom: solid 1px #ccc; margin-bottom: 15px; padding-bottom: 3px; margin: 0; }
   .navbar.navbar-options .starters-navigation .starters-navigation__list-item:first-child, * .starters-navigation .starters-navigation__list-item:first-child { margin-top: 15px; }
   .navbar.navbar-options .starters-navigation .starters-navigation__list-item:last-child, * .starters-navigation .starters-navigation__list-item:last-child { margin: 0; }
-  .navbar.grand-navbar { background-color: #e8eaeb; height: calc(100vh - 48px); top: 48px; position: fixed; border: none; overflow-y: auto; }
+  .navbar.grand-navbar { background-color: #e8eaeb; height: calc(100vh - 48px) !important; top: 48px; position: fixed; border: none; overflow-y: auto; display: none; }
   .navbar.grand-navbar .nav-button, .navbar.grand-navbar .nav-button:active, .navbar.grand-navbar .nav-button:focus, .navbar.grand-navbar .nav-button:visited { width: 100%; text-align: left; border: none; margin: 0; background-color: transparent; color: #ff4167; }
   .navbar.grand-navbar .nav-button .material-icons, .navbar.grand-navbar .nav-button:active .material-icons, .navbar.grand-navbar .nav-button:focus .material-icons, .navbar.grand-navbar .nav-button:visited .material-icons { vertical-align: bottom; }
   .dropdown-menu--starters .dropdown-button--starters { color: #ff6a88; }
