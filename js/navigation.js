@@ -4,6 +4,7 @@ const React                = require('react');
 const ReactDOM             = require('react-dom');
 const $                    = require('jquery');
 const NotificationModule   = require('../react/Notification/NotificationModule');
+const NavbarMenuModule     = require('../react/Navbar/NavbarMenuModule').default;
 
 $( document ).ready(function(){
   initReactComponents();
@@ -30,7 +31,6 @@ function initReactComponents() {
     document.getElementById('NotificationModuleRoot')
   );
   //////////////////////////// CHAT NOTIFICATIONS /////////////////////////////
-  //==> Goes Here
   window.reactMessageRequestsApp = ReactDOM.render(
     <ChatNotificationsModule
       userId={window.currentUserId}
@@ -39,5 +39,11 @@ function initReactComponents() {
       pageSize="5"
     />,
     document.getElementById('ChatNotificationsModuleRoot')
+  );
+
+  //////////////////////////// NAVBAR MENU ////////////////////////////////////
+  ReactDOM.render(
+    <NavbarMenuModule />,
+    document.getElementById('NavbarMenuModule')
   );
 }

@@ -1,0 +1,21 @@
+{
+  "Stichwortsuche": {
+    "Startups": "suche.html?index=unternehmen&suche=startup",
+    "Private Investoren": "suche.html?index=unternehmen&suche=privateInvestoren",
+    "Institutionelle Investoren": "suche.html?index=unternehmen&suche=institutionelleInvestoren",
+    "Förderung": {
+      "Institutionelle Förderung": "suche.html?index=unternehmen&suche=institutionelleFoerderungen",
+      "Privatwirtschaftliche Förderung": "suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung",
+      "Staatliche Förderung": "suche.html?index=unternehmen&suche=staatlicheFoederungen",
+    },
+    "Gründerzentrum": "suche.html?index=unternehmen&suche=gruenderzentrum",
+    "Business Angels": "suche.html?index=unternehmen&suche=businessAngels",
+    "Dienstleister": "suche.html?index=unternehmen&suche=dienstleister",
+    "Einkäufer": "suche.html?index=unternehmen&suche=einkaeufer",
+    "Co-Working Spaces": "suche.html?index=unternehmen&suche=co_workingSpaces",
+  },
+  "Startup-Leitfaden": "#",
+  "Gruppen": "#",
+  "Eventkalender": "#",
+  "Suchen / Bieten": "#",
+}
