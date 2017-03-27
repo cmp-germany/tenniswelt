@@ -4,4 +4,4 @@ bower_components/bootstrap/node_modules
 node_modules
 output.json
 etc/
-./stylesheets/*.css.map
+stylesheets/*.css.map
