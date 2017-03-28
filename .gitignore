@@ -6,3 +6,5 @@ output.json
 npm-debug.log
 etc/
 stylesheets/*.css.map
+js/*.bundle.js
+js/*.bundle.js.map
