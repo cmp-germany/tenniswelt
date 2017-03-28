@@ -1,4 +1,5 @@
-import React from 'react';
+import React   from 'react';
+import TargetA from './TargetA';
 
 class ThirdLevelButton extends React.Component {
 
@@ -12,7 +13,7 @@ class ThirdLevelButton extends React.Component {
     var data = this.props.data;
 
     return (
-      <li><a href={data} className="dropdown-button--starters">{name}</a></li>
+      <li><TargetA href={data} className="dropdown-button--starters">{name}</TargetA></li>
     );
   }
 }

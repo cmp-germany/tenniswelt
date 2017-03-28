@@ -1,11 +1,12 @@
-const FriendRequestsModule = require('../react/FriendRequests/FriendRequestsModule');
+const FriendRequestsModule    = require('../react/FriendRequests/FriendRequestsModule');
 const ChatNotificationsModule = require('../react/ChatNotifications/ChatNotificationsModule');
-const React                = require('react');
-const ReactDOM             = require('react-dom');
-const $                    = require('jquery');
-const NotificationModule   = require('../react/Notification/NotificationModule');
-const NavbarMenuModule     = require('../react/Navbar/NavbarMenuModule').default;
-const navbarMenuData       = require('../data/navbarMenu.json');
+const React                   = require('react');
+const ReactDOM                = require('react-dom');
+const $                       = require('jquery');
+const NotificationModule      = require('../react/Notification/NotificationModule');
+const NavbarMenuModule        = require('../react/Navbar/NavbarMenuModule').default;
+const navbarMenuData          = require('../data/navbarMenu.json');
+console.log(navbarMenuData);
 
 $( document ).ready(function(){
   initReactComponents();

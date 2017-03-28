@@ -1,6 +1,7 @@
 import React             from 'react';
 import _                 from 'lodash';
 import SecondLevelButton from './SecondLevelButton';
+import TargetA           from './TargetA';
 
 class FirstLevelButton extends React.Component {
 
@@ -15,7 +16,7 @@ class FirstLevelButton extends React.Component {
 
     if (_.isString(data)) {
       return (
-        <li className="starters-navigation__list-item"><a href={data} className="nav-button">{name}</a></li>
+        <li className="starters-navigation__list-item"><TargetA href={data} className="nav-button">{name}</TargetA></li>
       );
     }
 
