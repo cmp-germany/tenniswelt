@@ -1,4 +1,4 @@
-image: mkenney/npm
+image: samueldebruyn/debian-git
 
 pipelines:
   branches:
@@ -12,7 +12,9 @@ pipelines:
       - step:
           script:
             - apt-get update
+            - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+            - apt-get -qq install -y nodejs
+            - npm install
+            - npm run compile
             - apt-get -qq install git-ftp
-            - yarn
-            - yarn run compile
             - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
