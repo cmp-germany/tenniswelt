@@ -5,6 +5,7 @@ const ReactDOM             = require('react-dom');
 const $                    = require('jquery');
 const NotificationModule   = require('../react/Notification/NotificationModule');
 const NavbarMenuModule     = require('../react/Navbar/NavbarMenuModule').default;
+const navbarMenuData       = require('../data/navbarMenu.json');
 
 $( document ).ready(function(){
   initReactComponents();
@@ -43,7 +44,7 @@ function initReactComponents() {
 
   //////////////////////////// NAVBAR MENU ////////////////////////////////////
   ReactDOM.render(
-    <NavbarMenuModule />,
+    <NavbarMenuModule data={navbarMenuData} />,
     document.getElementById('NavbarMenuModule')
   );
 }
