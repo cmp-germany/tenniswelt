@@ -1,3 +1,3 @@
-!messages.bundle.js
-!navigation.bundle.js
-!vendor.bundle.js
+!js/messages.bundle.js
+!js/navigation.bundle.js
+!js/vendor.bundle.js
