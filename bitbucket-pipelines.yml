@@ -20,4 +20,4 @@ pipelines:
             - apt-get -qq install git-ftp
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
             - apt-get -qq install ftp
-            - curl -T "{js/messages.bundle.js,js/navigation.bundle.js,js/vendor.bundle.js}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
