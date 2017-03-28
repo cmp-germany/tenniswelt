@@ -11,7 +11,7 @@ class NavbarMenuModule extends React.Component {
 
   render() {
     console.log(this.props.data);
-    var firstLevelButtons = _.map(this.props.data, function(value, key){
+    var firstLevelButtons = _.map(this.props.data, (value, key) => {
       return <FirstLevelButton name={key} data={value} key={key} />;
     });
     return (
