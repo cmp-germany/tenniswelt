@@ -20,3 +20,4 @@ pipelines:
             - npm run compile
             - apt-get -qq install git-ftp
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
+            - ftp -u ftp://$FTP_USERNAME:$FTP_PASSWORD@$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/ js/*.bundle.js
