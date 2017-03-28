@@ -1,15 +1,12 @@
 {
-  "Test External Link": "https://example.com",
   "Stichwortsuche": {
     "Startups": "suche.html?index=unternehmen&suche=startup",
-    "Test External Link": "https://example.com",
     "Private Investoren": "suche.html?index=unternehmen&suche=privateInvestoren",
     "Institutionelle Investoren": "suche.html?index=unternehmen&suche=institutionelleInvestoren",
     "Förderung": {
       "Institutionelle Förderung": "suche.html?index=unternehmen&suche=institutionelleFoerderungen",
       "Privatwirtschaftliche Förderung": "suche.html?index=unternehmen&suche=privatwirtschaftlicheFoerderung",
-      "Staatliche Förderung": "suche.html?index=unternehmen&suche=staatlicheFoederungen",
-      "Test External Link": "https://example.com"
+      "Staatliche Förderung": "suche.html?index=unternehmen&suche=staatlicheFoederungen"
     },
     "Gründerzentrum": "suche.html?index=unternehmen&suche=gruenderzentrum",
     "Business Angels": "suche.html?index=unternehmen&suche=businessAngels",
