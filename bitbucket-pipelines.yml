@@ -13,7 +13,6 @@ pipelines:
           script:
             - apt-get update
             - apt-get -qq install curl
-            - apt-get -qq install
             - curl -sL https://deb.nodesource.com/setup_7.x | bash -
             - apt-get -qq install -y nodejs
             - npm install
