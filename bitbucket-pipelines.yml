@@ -19,9 +19,8 @@ pipelines:
             - npm run compile
             - apt-get -qq install git-ftp
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
-            - apt-get -qq install ftp
             - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
-            - apt-get -qq install ruby
+            - apt-get -qq install ruby ruby-dev
             - gem update --system
             - gem install compass
             - compass compile
