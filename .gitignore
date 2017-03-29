@@ -8,3 +8,4 @@ etc/
 stylesheets/*.css.map
 js/*.bundle.js
 js/*.bundle.js.map
+stylesheets/
