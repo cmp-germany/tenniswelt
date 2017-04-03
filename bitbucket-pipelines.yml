@@ -1,26 +1,17 @@
-image: samueldebruyn/debian-git
+image: kaisky89/debian-git-node-compass
 
 pipelines:
   branches:
     gh-pages:
       - step:
           script:
-            - apt-get update
-            - apt-get -qq install git-ftp
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/
     BPS-235-compile-js-and-css-on-server:
       - step:
           script:
-            - apt-get update
-            - apt-get -qq install curl
-            - curl -sL https://deb.nodesource.com/setup_7.x | bash -
-            - apt-get -qq install -y nodejs
             - npm install
             - npm run compile
-            - apt-get -qq install git-ftp
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
             - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
-            - apt-get -qq install ruby ruby-dev gcc make
-            - gem update --system
-            - gem install compass
             - compass compile
+            - curl -T "{$(echo stylesheets/* | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/stylesheets/ --user $FTP_USERNAME:$FTP_PASSWORD
