@@ -38,13 +38,17 @@
     <script type="text/javascript">
       window.LOCALDATA = true;
     </script>
+
+    <!-- Webpack Vendor -->
+    <script src="js/vendor.bundle.js" charset="utf-8"></script>
+
     <script src="js/messages.bundle.js" charset="utf-8"></script>
     <script src="js/modules.js" charset="utf-8"></script>
 
   </head>
   <body>
     <!-- Navigation -->
-    <div data-module="navbar.html" data-additional-js="js/navigation.js"></div>
+    <div data-module="navbar.html" data-additional-js="js/navigation.bundle.js"></div>
 
     <div id="MessagesModuleRoot">
     </div>
