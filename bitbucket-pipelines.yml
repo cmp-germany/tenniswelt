@@ -6,12 +6,17 @@ pipelines:
       - step:
           script:
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/
-    BPS-235-compile-js-and-css-on-server:
-      - step:
-          script:
             - npm install
             - npm run compile
+            - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/js/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - compass compile
+            - curl -T "{$(echo stylesheets/* | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/stylesheets/ --user $FTP_USERNAME:$FTP_PASSWORD
+    test:
+      - step:
+          script:
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
+            - npm install
+            - npm run compile
             - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
             - compass compile
             - curl -T "{$(echo stylesheets/* | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/stylesheets/ --user $FTP_USERNAME:$FTP_PASSWORD
