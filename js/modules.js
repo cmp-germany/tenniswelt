@@ -1,3 +1,5 @@
+$.ajaxSetup({ cache: false });
+
 $(document).ready(function() {
   $("div[data-module]").each(function(){
     var moduleName = $(this).attr("data-module")
