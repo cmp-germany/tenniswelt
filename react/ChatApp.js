@@ -184,9 +184,7 @@ var ChatTab = React.createClass({
                   this.sendButton = sendButton
                 }.bind(this)}
                 >
-                <span
-                  className='glyphicon glyphicon-menu-right'
-                  aria-hidden='true' />
+                <i className='material-icons'>send</i>
               </button>
             </div>
           </div>
@@ -230,9 +228,9 @@ var ChatTabContacts = React.createClass({
             <button className='chat__title-button' />
           </header>
           <div id='chat-list' className='collapse chat__content'>
-            <div className='chat__actions alignment--center'>
-              <input className='form-chat' type='text' name='chat-search' placeholder='Suche...' />
-              <button className='btn btn-important button--chat button--chat-search' type='button' name='chat-search-button'><span className='glyphicon glyphicon-menu-right' aria-hidden='true' /></button>
+            <div className='chat__actions'>
+              <input className='form-chat form-chat--search' type='text' name='chat-search' placeholder='Suche...' />
+              <button className='btn btn-important button--chat button--chat-search' type='button' name='chat-search-button'><i className='material-icons'>search</i></button>
             </div>
             <ul className='chat__list'>
               {contacts}
@@ -285,7 +283,7 @@ var ChatApp = React.createClass({
 
   popUpChatTab: function (partnerId) {
     this.toPopUp.push(partnerId)
-    // $('#chat-' + partnerId).collapse("show");
+    // $('#chat-' + partnerId).collapse('show');
   },
 
   removeChat: function (partnerId) {
