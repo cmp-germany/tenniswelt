@@ -11,7 +11,8 @@
     "watch": "webpack --watch --colors --progress",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "version": "node refresh-version.js"
+    "version": "node refresh-version.js",
+    "change-title": "node change-title.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "lodash": "^4.16.6",
     "matchmedia-polyfill": "^0.3.0",
     "material-design-lite": "^1.2.1",
+    "minimist": "^1.2.0",
     "react": "^15.3.2",
     "react-component-visibility": "^2.0.0",
     "react-timeago": "^3.1.3",
