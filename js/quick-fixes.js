@@ -49,7 +49,7 @@ var chatQuickFixes = function () {
 
 
 var replaceElements = function() {
-  $('.navbar-brand, .navbar__section__title').html('<span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>');
+  // $('.navbar-brand, .navbar__section__title').html('<span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>');
 };
 
 // This waits for jQuery to be loaded
