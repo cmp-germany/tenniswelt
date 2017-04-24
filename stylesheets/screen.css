@@ -2219,7 +2219,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .slide--with-background__text { color: #fff; font-weight: lighter; background-color: rgba(0, 0, 0, 0.5); -webkit-box-shadow: #000 0 0 50px; box-shadow: #000 0 0 50px; }
 
-.slide--title { background-image: url(gfx/landing-page/fotolia_95019069.jpg); background-attachment: scroll; background-position: 30% 60%; }
+.slide--title { background-image: url(../gfx/landing-page/fotolia_95019069.jpg); background-attachment: scroll; background-position: 30% 60%; }
 .slide--title .slide--with-background__inner-div { background-color: transparent; }
 
 @media(max-width: 768px) { .slide--title { background-position: 80% 50%; } }
