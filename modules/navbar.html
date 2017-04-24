@@ -1,80 +1,60 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <!--<div class="container">-->
-   <!-- Brand and toggle get grouped for better mobile display -->
-   <div class="navbar-header container">
-
-     <a class="navbar-brand" href="#1">
-       <span class="navbar-brand__title">Tennis</span> <span class="navbar-brand__subtitle">Community</span>
-     </a>
-
-     <button class="navbar__tab navbar__tab--wall navbar__tab--active" data-toggle="collapse" data-target="#tab__wall" aria-expanded="false">
-      <i class="material-icons">&#xE871;</i>
-     </button>
-
-     <button class="navbar__tab navbar__tab--matching" data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
-      <i class="material-icons">&#xE915;</i>
-     </button>
-
-     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__chat" aria-expanded="false">
-      <i class="material-icons">&#xE0CB;</i>
-     </button>
-
-     <button class="navbar__tab" data-toggle="collapse" data-target="#tab__search" aria-expanded="false">
-       <i class="material-icons">&#xE8B6;</i>
-     </button>
-
-     <div class="navbar__section collapse navbar-collapse navbar-left" id="tab__search">
-       <div class="navbar__section__content">
-
-       <h4 class="navbar__section__title">Suche</h4>
-       <form class="navbar-form navbar-form--mobile">
-         <div class="form-group">
-           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
-         </div>
-         <div class="form-group">
-           <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
-         </div>
-         <div class="form-group form-group--small">
-           <label class="form-control-label" for="form-control-range">150</label>
-           <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
-           <button type="submit" class="button--nav-search btn btn-important">
-             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-             Finden
-           </button>
-         </div>
-       </form>
+  <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header container">
+      <a class="navbar-brand" href="#1">
+        <span class="navbar-brand__title">Tennis</span> <span class="navbar-brand__subtitle">Community</span>
+      </a>
+      <button class="navbar__tab navbar__tab--wall navbar__tab--active" data-toggle="collapse" data-target="#tab__wall" aria-expanded="false">
+       <i class="material-icons">&#xE871;</i>
+      </button>
+      <button class="navbar__tab navbar__tab--matching" data-toggle="collapse" data-target="#tab__matching" aria-expanded="false">
+       <i class="material-icons">&#xE915;</i>
+      </button>
+      <button class="navbar__tab" data-toggle="collapse" data-target="#tab__chat" aria-expanded="false">
+       <i class="material-icons">&#xE0CB;</i>
+      </button>
+      <button class="navbar__tab" data-toggle="collapse" data-target="#tab__search" aria-expanded="false">
+        <i class="material-icons">&#xE8B6;</i>
+      </button>
+      <div class="navbar__section collapse navbar-collapse navbar-left" id="tab__search">
+        <div class="navbar__section__content">
+          <h4 class="navbar__section__title">Suche</h4>
+          <form class="navbar-form navbar-form--mobile">
+            <div class="form-group">
+              <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="suche" placeholder="Suchen">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control--navbar form-control--options-navbar" name="region" placeholder="Region">
+            </div>
+            <div class="form-group form-group--small">
+              <label class="form-control-label" for="form-control-range">150</label>
+              <input id="form-control-range" class="form-control form-control--navbar form-control--options-navbar form-control--range-navbar" type="range" min="0" max="100" value="0" tabindex="0">
+              <button type="submit" class="button--nav-search btn btn-important">
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                Finden
+              </button>
+            </div>
+          </form>
         </div>
-     </div><!-- /.navbar-collapse -->
-
-     <button class="navbar__tab navbar__tab--always navbar__tab--profile" data-toggle="collapse" data-target="#tab__profile-options" aria-expanded="false">
-       <img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
-       <span class="caret"></span>
-     </button>
-
-     <button class="navbar__tab navbar__tab--search" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-       s
-     </button>
+      </div><!-- /.navbar-collapse -->
 
 
+      <button class="navbar__tab navbar__tab--always navbar__tab--profile" data-toggle="collapse" data-target="#tab__profile-options" aria-expanded="false">
+        <img class="nav-avatar" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+        <span class="caret"></span>
+      </button>
+        <script type="text/javascript" src="data/webserviceBase.js?v=1491406208"></script>
+        <div id="FriendRequestsModuleRoot"></div>
+        <div id="ChatNotificationsModuleRoot"></div>
+
+      <button class="navbar__tab navbar__tab--search" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        s
+      </button>
 
 
-     <!--<div style="float: right" class="dropdown">
-       <button class="btn btn-navbar dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    </div>
 
-       </button>
-       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-         <li><a href="#1">Nachrichten</a></li>
-         <li><a href="#1">Kontakt einladen</a></li>
-         <li><a href="#1">Einstellungen</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a href=".">Logout</a></li>
-       </ul>
-     </div>-->
-   </div>
-
-   <!-- Collect the nav links, forms, and other content for toggling -->
-
-  <!--</div><!-- /.container-fluid -->
 </nav>
 
 <div class="navbar__section navbar__section--matching collapse" style="" id="tab__matching">
@@ -276,55 +256,26 @@
   </div>
 </header>
 
-<nav class="navbar grand-navbar navbar-options collapse" id="tab__profile-options">
-   <div class="container">
+<nav class="navbar grand-navbar navbar-options">
+  <div class="container">
     <div class="starters-navigation">
-     <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
-     <ul class="nav navbar-nav navbar-right">
-       <li class="starters-navigation__list-item"><a class="nav-button" href="messages.html"><i class="material-icons">&#xE0BE;</i> Nachrichten</a></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE80D;</i> Kontakt einladen</a></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE8B8;</i> Einstellungen</a></li>
-       <li role="separator" class="divider"></li>
-       <li class="starters-navigation__list-item"><a class="nav-button" href="."><i class="material-icons">&#xE5C9;</i> Logout</a></li>
-     </ul>
+      <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
+      <ul class="nav navbar-nav navbar-right collapse" id="tab__profile-options">
+        <li class="starters-navigation__list-item"><a class="nav-button" href="messages.html"><i class="material-icons">&#xE0BE;</i> Nachrichten</a></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE80D;</i> Kontakt einladen</a></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="#1"><i class="material-icons">&#xE8B8;</i> Einstellungen</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="starters-navigation__list-item"><a class="nav-button" href="."><i class="material-icons">&#xE5C9;</i> Logout</a></li>
+      </ul>
     </div>
-   </div>
- </nav>
+  </div>
+</nav>
 
 <nav class="navbar grand-navbar collapse navbar-collapse" id="navbar-collapse-1">
   <div class="container">
     <div class="starters-navigation" id="navbar-starters">
       <h4 class="navbar__section__title"><span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span></h4>
-      <ul class="nav navbar-nav navbar-right ">
-        <li class="starters-navigation__list-item dropdown">
-          <button class="nav-button dropdown-toggle" type="button" id="dropdown-stichwortsuche" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Stichwortsuche <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-left dropdown-menu--starters" aria-labelledby="dropdown-stichwortsuche">
-            <li><a href="#1" class="dropdown-button--starters">Meisterschaften</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Mannschaftsspiele</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Anstehende Turniere</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Turnierergebnisse</a></li>
-            <li><a href="suche.html?index=unternehmen&suche=tennisanlagen" class="dropdown-button--starters">Tennisanlagen</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Talente</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Sponsoren</a></li>
-          </ul>
-        </li>
-        <li class="starters-navigation__list-item"><a href="paywall.html" class="nav-button">Marcs Tennis Tracker</a></li>
-        <li class="starters-navigation__list-item"><a target="_blank" href="http://www.tennis-point.de" class="nav-button">Equipment</a></li>
-        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Verband</a></li>
-        <li class="starters-navigation__list-item dropdown">
-          <button class="nav-button dropdown-toggle" type="button" id="dropdown-gruppen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Gruppen <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-left dropdown-menu--starters" aria-labelledby="dropdown-gruppen">
-            <li><a href="#1" class="dropdown-button--starters">Tennisvereine (e.V.)</a></li>
-            <li><a href="#1" class="dropdown-button--starters">Tennishallen</a></li>
-            <li><a target="_blank" href="http://www.mkgoellner.de/coaches.html" class="dropdown-button--starters">Tennistrainer</a></li>
-          </ul>
-        </li>
-        <li class="starters-navigation__list-item"><a href="#" class="nav-button">Eventkalender</a></li>
-      </ul>
+      <div id="NavbarMenuModule"></div>
     </div>
   </div>
 </nav>

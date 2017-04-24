@@ -3,6 +3,10 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700)
 
 $color-chat-tabs: $color-important
+
+@keyframes blinker
+  50%
+    opacity: 0
 .main-chat-container
   position: fixed
   bottom: 0
@@ -108,12 +112,15 @@ $color-chat-tabs: $color-important
   right: 250px
 
   //HH
-  width: 250%
+  width: 2500%
+  height: 380px
+  top: 0px
 
   overflow: visible
 
   text-align: right
   padding-left: 0
+
 
   .chat-session
     text-align: left
@@ -121,13 +128,17 @@ $color-chat-tabs: $color-important
     vertical-align: bottom
     margin-right: 15px
     //float: right
-    box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+    //box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+    overflow: visible
+    position: relative
 
     .chat-session-header
       background-color: $color-chat-tabs
+      box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
       cursor: pointer
       position: relative
       height: 30px
+      width: 280px
       overflow: hidden
       font-family: 'Open Sans', sans-serif
       font-size: 14px
@@ -135,6 +146,14 @@ $color-chat-tabs: $color-important
       font-weight: bold
       white-space: nowrap
       border: none
+      position: absolute
+      top: -30px
+
+      &.chat-active
+        top: -379px
+        z-index: 1
+        box-shadow: none
+
 
     .chat-title
       padding-left: 3px
@@ -158,8 +177,45 @@ $color-chat-tabs: $color-important
       /* ie6-9
 
     .chat-session-body
+      width: 280px
+      position: absolute
+      top: -349px
+      box-shadow: 0px 3px 34px -5px rgba(0,0,0,0.75)
+
       .chat-message-holder
         padding: 0
+
+      .attached-files-container
+        background: #fff
+        border-bottom: 1px solid $color-important
+        font-size: 12px
+        line-height: 14px
+        padding: 5px
+        color: #666
+        position: absolute
+        bottom: 0px
+        margin-bottom: 50px
+        max-height: 100px
+        overflow-y: scroll
+        width: 100%
+
+        label
+          margin: 2px 0px
+          width: 100%
+
+          .filename
+            word-break: break-all
+
+          .delete-file
+            color: $color-important
+
+          .loading-span
+            color: $color-important
+            animation: blinker 1s linear infinite
+
+        i
+          font-size: 14px
+          vertical-align: middle
 
       .chat-message
         border: none
@@ -179,7 +235,7 @@ $color-chat-tabs: $color-important
             font-size: 0px
             margin: 0
             line-height: normal
-            visibility: hidden
+            visibility: visible
           div
             display: inline-block
             font-family: 'PT Sans Narrow', sans-serif
@@ -190,9 +246,22 @@ $color-chat-tabs: $color-important
             padding: 3px 10px
             padding-top: 5px
             padding-left: 7px
-          &:hover
-            strong
-              visibility: visible
+
+          .chat-message-file
+            font-size: 12px
+            display: block
+            font-weight: normal
+            color: #fff
+            padding: 5px
+            background: rgba(0,0,0,0.2)
+            i
+              vertical-align: middle
+              margin-right: 5px
+              font-size: 14px
+            a
+              color: #fff
+              &:hover
+                color: #fff
 
       .chat-message--partner
         .nav-avatar
@@ -221,7 +290,24 @@ $color-chat-tabs: $color-important
           height: 100%
           padding: 8px
           font-size: 14px
-          width: 80%
+          width: 65%
+
+        .attach-file
+          width: 15%
+          margin: 0
+          color: $color-important
+          text-align: center
+          height: 100%
+          float: left
+          line-height: 38px
+          padding: 0px 6px
+          background: none
+          border: 0
+          border-left: 1px solid $color-important
+          border-right: 1px solid $color-important
+          &:hover
+            background-color: $color-important
+            color: #ffffff
 
         .chat-send
           width: 20%
@@ -231,6 +317,7 @@ $color-chat-tabs: $color-important
           text-align: center
           font-family: 'Open Sans', sans-serif
           height: 100%
+          line-height: 48px
           &:hover
             background-color: $color-important
             color: #ffffff

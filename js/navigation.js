@@ -1,83 +1,50 @@
+const FriendRequestsModule    = require('../react/FriendRequests/FriendRequestsModule');
+const ChatNotificationsModule = require('../react/ChatNotifications/ChatNotificationsModule');
+const React                   = require('react');
+const ReactDOM                = require('react-dom');
+const $                       = require('jquery');
+const NotificationModule      = require('../react/Notification/NotificationModule');
+const NavbarMenuModule        = require('../react/Navbar/NavbarMenuModule').default;
+const navbarMenuData          = require('../data/navbarMenu.json');
+
 $( document ).ready(function(){
-  navbar();
-  $( window ).resize(function() {
-    navbar();
-  });
-
-  $('.navbar__tab').click(function(){
-    var ariaExpanded = $(this).attr('aria-expanded');
-    $(".navbar__section").collapse('hide');
-    $(".navbar.grand-navbar").collapse('hide');
-    $('.navbar__tab').removeClass('navbar__tab--active');
-
-    $(this).addClass('navbar__tab--active');
-
-    if(ariaExpanded === 'true') {
-      $('.navbar__tab').removeClass('navbar__tab--active');
-      $('.navbar__tab--wall').addClass('navbar__tab--active');
-    }
-
-    if ($( window ).width() <= 767) {
-      $( "body > .container" ).css( "display", "none" );
-    }
-
-    if ($( ".navbar__tab--wall" ).hasClass("navbar__tab--active")) {
-      $( "body > .container" ).css( "display", "block" );
-    }
-  });
-
-
-
-
-  $('.navbar__matching-button').click(function(){
-    $('.navbar__matching-button').removeClass('navbar__matching-button--active');
-    $(this).addClass('navbar__matching-button--active');
-  });
-
-  $('#navbar__matching-button--matching').click(function(){
-    $('#navbar-filter--matching').css( "display", "block" );
-    $('#navbar-filter--gruppen-matching').css( "display", "none" );
-    $('#navbar-resultate--matching').css( "display", "block" );
-    $('#navbar-resultate--gruppen-matching').css( "display", "none" );
-  });
-
-  $('#navbar__matching-button--gruppenmatching').click(function(){
-    $('#navbar-filter--gruppen-matching').css( "display", "block" );
-    $('#navbar-filter--matching').css( "display", "none" );
-    $('#navbar-resultate--gruppen-matching').css( "display", "block" );
-    $('#navbar-resultate--matching').css( "display", "none" );
-  });
+  initReactComponents();
 });
 
-function navbar() {
-  if( $(window).width() > 767 ) {
-    var docked = false;
-    var menu = $('#navbar-collapse-1');
-    var init = menu.offset().top;
+function initReactComponents() {
 
-    $(window).scroll(function()
-      {
-        if (!docked && (menu.offset().top - $("body").scrollTop() < 50))
-        {
-            menu.css({
-                position : "fixed",
-                top: 50,
-            });
-            docked = true;
-        }
-        else if(docked && ($("body").scrollTop()+50) <= init)
-        {
-            menu.css({
-                position : "absolute",
-                top: init + 'px',
-            });
+  ////////////////////////////// FRIEND REQUESTS //////////////////////////////
+  window.reactFriendRequestsApp = ReactDOM.render(
+    <FriendRequestsModule
+      userId={window.currentUserId}
+      currentLanguage={window.currentLanguage}
+      webserviceBase={window.serverpaths.webserviceBase}
+      servicePaths={window.serverpaths.friendRequestsPaths}
+      pageSize="5"
+    />,
+    document.getElementById('FriendRequestsModuleRoot')
+  );
 
-            docked = false;
-          }
-      });
-  }
-}
+  ////////////////////////////// NOTIFICATIONS ////////////////////////////////
+  $('body').append('<div id="NotificationModuleRoot" />');
+  window.reactNotificationApp = ReactDOM.render(
+    <NotificationModule />,
+    document.getElementById('NotificationModuleRoot')
+  );
+  //////////////////////////// CHAT NOTIFICATIONS /////////////////////////////
+  window.reactMessageRequestsApp = ReactDOM.render(
+    <ChatNotificationsModule
+      userId={window.currentUserId}
+      webserviceBase={window.serverpaths.webserviceBase}
+      servicePaths={window.serverpaths.messageNotificationsPaths}
+      pageSize="5"
+    />,
+    document.getElementById('ChatNotificationsModuleRoot')
+  );
 
-function tab() {
-
+  //////////////////////////// NAVBAR MENU ////////////////////////////////////
+  ReactDOM.render(
+    <NavbarMenuModule data={navbarMenuData} />,
+    document.getElementById('NavbarMenuModule')
+  );
 }

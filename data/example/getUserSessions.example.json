@@ -1,0 +1,121 @@
+[ {
+	"lastMessageDate": "2016-11-28T14:51:18.187",
+	"lastMessageText": null,
+	"id": "4d6019a0-9962-47ae-9203-a6cc0122508e",
+	"user": {
+		"id": "17b713b9-0536-465f-b265-a6b700bfd4b2",
+		"name": "Waleed Younis",
+		"userName": "wyounis",
+		"avatar": "/Upload/user/AvatarImage/NoImage.jpg"
+	}
+}, {
+	"lastMessageDate": "2016-11-28T16:10:39.203",
+	"lastMessageText": "test",
+	"id": "577208ff-f640-4d5d-a797-a6c100e2e0c9",
+	"user": {
+		"id": "f2da54de-f0aa-4ec3-b6af-a6c0011eb93e",
+		"name": "waleed younis",
+		"userName": "waleed123",
+		"avatar": "/Upload/user/AvatarImage/NoImage.jpg"
+	}
+}, {
+	"lastMessageDate": "2016-11-09T10:39:05.53",
+	"lastMessageText": null,
+	"id": "8a298eba-24bf-4dea-a9ec-a6b900d55893",
+	"user": {
+		"id": "42fc053f-cef7-42c5-b146-a51c019c3cf7",
+		"name": "footprints e.V.",
+		"userName": "16",
+		"avatar": "/Upload/user/AvatarImage/42fc053f-cef7-42c5-b146-a51c019c3cf7/42fc053f-cef7-42c5-b146-a51c019c3cf7_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-11-17T11:39:02.843",
+	"lastMessageText": "<label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/image-2016-09-12-21-46-40-871_42691,5186286574.png'>image-2016-09-12-21-46-40-871.png</a></label><label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/image-2016-10-05-15-24-15-856_42691,5185995949.png'>image-2016-10-05-15-24-15-856.png</a></label><label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/image-2016-09-12-21-46-40-871_42691,5185752546.png'>image-2016-09-12-21-46-40-871.png</a></label><label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/image-2016-10-05-15-24-15-856_42691,51855375.png'>image-2016-10-05-15-24-15-856.png</a></label><label cla",
+	"id": "c150c5bd-2683-45fd-8e8c-a69b00b60e74",
+	"user": {
+		"id": "bd3eae8a-9a98-415d-b718-a63b0107d8c0",
+		"name": "Kevin Gyamfi",
+		"userName": "kk",
+		"avatar": "/Upload/user/AvatarImage/bd3eae8a-9a98-415d-b718-a63b0107d8c0/bd3eae8a-9a98-415d-b718-a63b0107d8c0_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-11-03T15:17:53.84",
+	"lastMessageText": "9",
+	"id": "8e1c2de3-6fab-4406-a9bf-a67400d723c9",
+	"user": {
+		"id": "3c52afc5-ce7d-42a9-9e82-a51c019c790c",
+		"name": "COLUMBUS HOLDING AG",
+		"userName": "20",
+		"avatar": "/Upload/user/AvatarImage/3c52afc5-ce7d-42a9-9e82-a51c019c790c/3c52afc5-ce7d-42a9-9e82-a51c019c790c_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-07-26T18:19:50.963",
+	"lastMessageText": null,
+	"id": "4b6866fe-c5f0-4c8c-9a4b-a64f017444bb",
+	"user": {
+		"id": "4db9c298-bf47-4e67-a621-a60401084fe7",
+		"name": "DNTRUST GmbH",
+		"userName": "dntrust",
+		"avatar": "/Upload/user/AvatarImage/4db9c298-bf47-4e67-a621-a60401084fe7/4db9c298-bf47-4e67-a621-a60401084fe7_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-07-21T11:24:28.033",
+	"lastMessageText": "hi",
+	"id": "9260e47e-fae4-40e6-8058-a63300c6fcca",
+	"user": {
+		"id": "0c55a715-945c-42ed-bb4b-a48e0182d9ac",
+		"name": "Gesellschaft für kommunalen Einkauf mbH",
+		"userName": "gfke",
+		"avatar": "/Upload/user/AvatarImage/0c55a715-945c-42ed-bb4b-a48e0182d9ac/0c55a715-945c-42ed-bb4b-a48e0182d9ac_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-06-22T10:34:01.037",
+	"lastMessageText": null,
+	"id": "d174d25b-2b51-4591-a58d-a62d00e61b99",
+	"user": {
+		"id": "67c919e2-8df4-476a-b312-c26f82a36cfb",
+		"name": "General Administrator",
+		"userName": "admin",
+		"avatar": "/Upload/user/AvatarImage/67c919e2-8df4-476a-b312-c26f82a36cfb/67c919e2-8df4-476a-b312-c26f82a36cfb_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-05-31T11:05:40.167",
+	"lastMessageText": null,
+	"id": "5520e550-da4a-4999-bd08-a61700efc46c",
+	"user": {
+		"id": "ad505676-71b0-46d2-84ec-a464013c5344",
+		"name": "Denis Kawel",
+		"userName": "d.kawel",
+		"avatar": "/Upload/user/AvatarImage/ad505676-71b0-46d2-84ec-a464013c5344/ad505676-71b0-46d2-84ec-a464013c5344_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-04-04T12:27:06.533",
+	"lastMessageText": null,
+	"id": "6480f383-d5de-42dc-a89a-a5de01089ee1",
+	"user": {
+		"id": "f6ab8b38-a3c3-447d-ab86-a46401426f54",
+		"name": "WTC Boston",
+		"userName": "wtc.boston",
+		"avatar": "/Upload/user/AvatarImage/f6ab8b38-a3c3-447d-ab86-a46401426f54/f6ab8b38-a3c3-447d-ab86-a46401426f54_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-07-25T11:10:14.517",
+	"lastMessageText": "does it appear?",
+	"id": "f01ec70a-ef29-4c5f-92cb-a5c5014e4a09",
+	"user": {
+		"id": "5eca9d16-e208-4047-b939-a45601135808",
+		"name": "Thomas Brambring",
+		"userName": "thomas",
+		"avatar": "/Upload/user/AvatarImage/5eca9d16-e208-4047-b939-a45601135808/5eca9d16-e208-4047-b939-a45601135808_o.Jpeg"
+	}
+}, {
+	"lastMessageDate": "2016-11-29T13:19:32.247",
+	"lastMessageText": "<label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/14593142_10157519522430333_1304589816_n_42703,5965321875.jpg'>14593142_10157519522430333_1304589816_n.jpg</a></label><label class='chat-message-file'><i class='material-icons'>&#xE85D;</i><a target='_blank' href='/Upload/user/Chat/496e3f91-edde-4929-8a83-a5b800cb9397/7e7a_42703,5964633912.jpg'>7e7a.jpg</a></label>",
+	"id": "040731ba-b397-4a3e-b321-a5b80116e85b",
+	"user": {
+		"id": "1065b80c-06ff-46bb-af2c-809f5c885ac0",
+		"name": "Schachar Landoy",
+		"userName": "joer",
+		"avatar": "/Upload/user/AvatarImage/1065b80c-06ff-46bb-af2c-809f5c885ac0/1065b80c-06ff-46bb-af2c-809f5c885ac0_o.Jpeg"
+	}
+}]

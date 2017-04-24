@@ -1,0 +1,25 @@
+image: kaisky89/debian-git-node-compass
+
+pipelines:
+  branches:
+    gh-pages:
+      - step:
+          script:
+            - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/
+            - npm install
+            - npm run version
+            - curl -T "{$(echo *.html | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - curl -T "{$(echo modules/*.html | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/modules/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - npm run compile
+            - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/js/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - compass compile
+            - curl -T "{$(echo stylesheets/* | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/stylesheets/ --user $FTP_USERNAME:$FTP_PASSWORD
+    test:
+      - step:
+          script:
+            - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/
+            - npm install
+            - npm run compile
+            - curl -T "{$(echo js/*.bundle.js | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/js/ --user $FTP_USERNAME:$FTP_PASSWORD
+            - compass compile
+            - curl -T "{$(echo stylesheets/* | tr ' ' ',')}" ftp://$SERVER_ADDRESS/cmpg.eu/starters.koeln--test/stylesheets/ --user $FTP_USERNAME:$FTP_PASSWORD

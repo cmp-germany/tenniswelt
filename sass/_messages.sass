@@ -1,14 +1,210 @@
+html, body
+  height: 100%
+
+#MessagesModuleRoot
+  height: 100%
+
+.msg-container
+  height: 100%
+  max-width: 1230px
+  padding-top: 20px
+  +display-flex(flex)
+  overflow-y: hidden
+
+$color-msg-conversations-border: #ebebeb
+
+=section-no-padding
+  margin-left: -15px
+  margin-right: -15px
+
+.section-left--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  +align-self(flex-start)
+  min-width: 240px
+  margin: 0 15px
+  height: 100%
+  +xs
+    +section-no-padding
+
+
+.section-center--msg
+  +flex-grow(2)
+  +flex-basis(0)
+  margin: 0 15px
+  height: 100%
+  +xs
+    +section-no-padding
+    width: 100%
+
+
+=section-right-sm-md
+  +flex-grow(2)
+
+.section-right--msg
+  +flex-grow(1)
+  +flex-basis(0)
+  min-width: 240px
+  margin: 0 15px
+  height: 100%
+  +sm
+    +section-right-sm-md
+  +md
+    +section-right-sm-md
+  +xs
+    +section-no-padding
 
 
 
+.wall-widget--msg
+  height: calc(100% - 40px)
+  +xs
+    height: calc(100% - 20px)
+
+.wall-widget__content--scrollable
+  margin-left: -20px
+  margin-right: -20px
+  margin-top: -25px
+  padding: 25px 20px
+  overflow-y: auto
+  min-height: 0
+  height: auto
+  max-height: calc(100% - 46px)
+
+.wall-widget__content--full
+  padding: 0 !important
+
+.msg-conversation
+  height: 60px
+  box-sizing: content-box
+  padding-top: 10px
+  cursor: pointer
+  padding-left: 20px
+  padding-right: 20px
+  +display-flex(flex)
+  //+flex-basis(auto)
+
+  &:last-child
+    .msg-conversation
+      &__right, &__center
+        border-bottom: none
+
+
+  &:hover
+    margin-top: -1px
+    padding-top: 11px
+    background-color: #f0f0f0
+
+  &--active
+    margin-top: -1px
+    padding-top: 11px
+    background-color: $color-msg-conversations-border
+
+  &__center
+    min-width: 0
+    border-bottom: 1px solid $color-msg-conversations-border
+    +flex-grow(1)
+    +display-flex(flex)
+    +flex-direction(column)
+    +justify-content(flex-start)
+
+  &__left
+    +flex-grow(0)
+    +flex-shrink(0)
+
+  &__right
+    +flex-grow(0)
+    +flex-shrink(0)
+    border-bottom: 1px solid $color-msg-conversations-border
+
+  &__avatar
+    width: 50px
+    margin-right: 10px
+
+  &__name
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    padding-bottom: 3px
+    font-size: medium
+
+  &__preview
+    color: #777
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  &__time
+    color: #777
+    font-size: 12px
+
+.section-center--msg
+  +display-flex(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(stretch)
+
+.msg-messages-container
+  +flex-grow(1)
+  +flex-shrink(1)
+
+  +display-flex(flex)
+  +flex-direction(column)
+  +justify-content(flex-start)
+  +align-items(stretch)
+
+.msg-messages-header
+  +flex-grow(0)
+  +flex-shrink(0)
+
+  +display-flex(flex)
+  +align-items(center)
+
+  background-color: $color-background-widget
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: 20px
+  padding-bottom: 15px
+  margin-top: 20px
+  border: solid 1px #eee
+  border-bottom: solid 1px $color-primary
+  height: 67px
+
+  &__title
+    +flex-grow(1)
+    +flex-shrink(1)
+    font-size: 20px
+
+  &__buttons
+    +flex-grow(0)
+    +flex-shrink(0)
+
+    .material-icons
+      font-size: 30px
+
+.msg-messages
+  +flex-grow(1)
+  +flex-shrink(1)
+  +display-flex(flex)
+  +flex-direction(column)
+
+  overflow-y: auto
 
 
 .msg-message
+
   +card-style($color-primary)
   margin-top: 20px
   padding: 20px
-  width: 80%
+  max-width: 80%
   min-width: 300px
+  position: relative
+  +clearfix
+
+  &:last-of-type
+    margin-bottom: 20px
 
 
 
@@ -16,10 +212,6 @@
     width: 50px
     margin-right: 10px
     float: left
-
-  &__meta
-
-  &__name
 
   &__time
     float: right
@@ -30,17 +222,39 @@
       margin-right: 2px
 
   &__content
+    +force-wrap
     margin-top: 5px
+    +sm
+      max-width: 396px
+
+  &__status
+    color: #777
+    position: absolute
+    bottom: 1.4px
+    right: 3.9px
+
+    &--loading::before
+      +make-material-icon('query_builder', 14px)
+    &--sent::before
+      +make-material-icon('done', 14px)
+    &--read::before
+      +make-material-icon('done_all', 14px)
 
 
 
 
   &--other
-    float: left
-    +clearfix
+    +align-self(flex-start)
+
+  &--system-message
+    background-color: $color-background-widget
+    margin-left: auto
+    margin-right: auto
+    border-top-color: $color-msg-conversations-border
+    border-left-color: $color-msg-conversations-border
 
   &--self
-    float: right
+    +align-self(flex-end)
     +clearfix
 
     .msg-message
@@ -64,6 +278,44 @@
         text-align: right
         padding-top: 18px
 
+.msg-input-area
+  @extend .wall-widget
+  margin-top: 0
+  +xs
+    margin-bottom: 0
+  padding: 10px
+  +flex-shrink(0)
+  +display-flex(flex)
+
+  &__text
+    +flex-grow(1)
+    border: none
+    resize: none
+    padding: 8px
+    +xs
+
+
+    &:focus
+      outline: none
+
+  &__send-a
+    +flex-grow(0)
+    +flex-shrink(0)
+    margin-left: 10px
+    margin-bottom: 2.5px
+    +align-self(flex-end)
+    color: #333
+
+    &:hover, &:focus, &:active, &:visited
+      color: #333
+
+
+
+
+
+.msg-contact-image
+  margin-left: auto
+  margin-right: auto
 
 
 .msg-contact-detail

@@ -69,10 +69,18 @@ var KeyFeatureModule = React.createClass({
   render: function () {
     var data = this.props.data;
 
+    var icon;
+    if (data.icon) {
+      icon = <i className="material-icons key-feature__icon text-center">{data.icon}</i>;
+    }
+    if (data.picture) {
+      icon = <img src={data.picture} className="key-feature__icon text-center"/>;
+    }
+
     return (
       <div className={"col-md-5 key-feature clearfix " + this.props.additionalClasses}>
         <div className="col-xs-2">
-          <i className="material-icons key-feature__icon text-center">{data.icon}</i>
+          {icon}
         </div>
         <div className="col-xs-10">
           <h3 className="key-feature__headline">
@@ -81,7 +89,7 @@ var KeyFeatureModule = React.createClass({
           <p className="key-feature__description">
             {data.text}
           </p>
-          <a href={data.button.url} className="btn btn-primary">{data.button.text}</a>
+          <a href={data.button.url} target={data.button.target ? data.button.target : null} className="btn btn-primary">{data.button.text}</a>
         </div>
       </div>
     );
@@ -145,6 +153,44 @@ var InputFieldsList = React.createClass({
   }
 });
 
+var InputFieldGroups = React.createClass({
+
+  getInitialState: function() {
+    return ({selectedGroup: 0});
+  },
+
+  onGroupSelectorClick: function(index) {
+    this.setState({selectedGroup: index});
+  },
+
+  render: function() {
+    var groups = this.props.groups;
+    console.log(groups);
+
+    if (!groups[0].name) {
+      return <InputFieldsList fields={groups} />
+    }
+
+    var groupSelectors = groups.map(function(element, index){
+      var classes = "group-selector";
+      if (this.state.selectedGroup == index) {
+        classes += " group-selector--active";
+      }
+
+      return (
+        <div key={index} className={classes} onClick={() => this.onGroupSelectorClick(index)}>{element.name}</div>
+      );
+    }.bind(this));
+
+    return (
+      <div>
+        <div>{groupSelectors}</div>
+        <InputFieldsList fields={groups[this.state.selectedGroup].fields} />
+      </div>
+    );
+  }
+})
+
 var TitleWithRegisterForm = React.createClass({
   render: function() {
 
@@ -178,7 +224,7 @@ var TitleWithRegisterForm = React.createClass({
                 <form id="register-form" className="register-form register-form--slide">
                   <p className="register-form__intro-text text-center">{data.contents.formTitle}</p>
 
-                  <InputFieldsList fields={data.inputFields} />
+                  <InputFieldGroups groups={data.inputFields} />
 
                   <p className="register-form__info-text">{data.contents.buttonAdditionalText}</p>
                   <button type="submit" className="btn btn-primary btn-block">{data.contents.buttonText}</button>

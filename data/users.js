@@ -1,7 +1,8 @@
-var users = {
+window.users = {
 
   "company-of-imagination": {
     "id": "company-of-imagination",
+    "profilePage": "profile-about.html?userId=company-of-imagination",
     "name": "Company of Imagination Ltd.",
     "wallpaper": "gfx/wallpaper_company.jpg",
     "profileImage": "gfx/profile_company.jpg",
@@ -33,6 +34,7 @@ var users = {
 
   "green-gate": {
     "id": "green-gate",
+    "profilePage": "profile-about.html?userId=green-gate",
     "name": "GreenGate AG",
     "wallpaper": "gfx/wallpaper/wallpaper-green-gate.jpg",
     "profileImage": "gfx/profilbilder/green-gate-logo.jpg",
@@ -62,6 +64,7 @@ var users = {
     "members": [
       {
         "id": "wolfgang-adams",
+        "profilePage": "profile-about.html?userId=wolfgang-adams",
         "name": "Wolfgang Adams",
         "email": "w.adams@greengate.de",
         "position": "Kommunikation",
@@ -113,6 +116,7 @@ var users = {
 
   "stadt-koeln-startercenter": {
     "id": "stadt-koeln-startercenter",
+    "profilePage": "profile-about.html?userId=stadt-koeln-startercenter",
     "name": "Stadt Köln Startercenter",
     "wallpaper": "gfx/wallpaper/wallpaper-11.jpeg",
     "profileImage": "gfx/profilbilder/stadt-koeln-startcenter.jpg",
@@ -140,6 +144,7 @@ var users = {
 
   "cologne-invest-gmbh": {
     "id": "cologne-invest-gmbh",
+    "profilePage": "profile-about.html?userId=cologne-invest-gmbh",
     "name": "CologneInvest GmbH",
     "wallpaper": "gfx/wallpaper/wallpaper-12.jpeg",
     "profileImage": "gfx/profilbilder/cologne-invest.jpg",
@@ -167,6 +172,7 @@ var users = {
 
   "mike-schnoor": {
     "id": "mike-schnoor",
+    "profilePage": "profile-about.html?userId=mike-schnoor",
     "name": "Mike Schnoor",
     "wallpaper": "gfx/wallpaper/wallpaper-13.jpeg",
     "profileImage": "gfx/profilbilder/mike-schnorr.jpg",
@@ -182,6 +188,7 @@ var users = {
 
   "volker-miller": {
     "id": "volker-miller",
+    "profilePage": "profile-about.html?userId=volker-miller",
     "name": "Volker Miller",
     "wallpaper": "gfx/wallpaper/wallpaper-1.jpeg",
     "profileImage": "gfx/profilbilder/p1.jpg",
@@ -197,6 +204,7 @@ var users = {
 
   "kai-gaertner": {
     "id": "kai-gaertner",
+    "profilePage": "profile-about.html?userId=kai-gaertner",
     "name": "Kai Gärtner",
     "wallpaper": "gfx/wallpaper/wallpaper-7.jpeg",
     "profileImage": "gfx/profilbilder/p7.jpg",
@@ -212,6 +220,7 @@ var users = {
 
   "wolfgang-adams": {
     "id": "wolfgang-adams",
+    "profilePage": "profile-about.html?userId=wolfgang-adams",
     "name": "Wolfgang Adams",
     "wallpaper": "gfx/wallpaper/wallpaper-wolfgang-adams.jpg",
     "profileImage": "gfx/profilbilder/profilbild-adams.jpg",
@@ -242,6 +251,7 @@ var users = {
 
   "wolfgang-winter": {
     "id": "wolfgang-winter",
+    "profilePage": "profile-about.html?userId=wolfgang-winter",
     "name": "Wolfgang Winter",
     "wallpaper": "gfx/wallpaper/wallpaper-6.jpeg",
     "profileImage": "gfx/profilbilder/p6.jpg",
@@ -257,6 +267,7 @@ var users = {
 
   "maria-kristhoff": {
     "id": "maria-kristhoff",
+    "profilePage": "profile-about.html?userId=maria-kristhoff",
     "name": "Maria Kristhoff",
     "wallpaper": "gfx/wallpaper/wallpaper-5.jpeg",
     "profileImage": "gfx/profilbilder/p5.jpg",
@@ -271,6 +282,7 @@ var users = {
 
   "me": {
     "id": "me",
+    "profilePage": "profile-about.html?userId=me",
     "name": "Alex Untereich",
     "wallpaper": "",
     "profileImage": "gfx/profilbilder/p4.jpg",

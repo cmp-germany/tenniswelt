@@ -1,0 +1,20 @@
+{
+  "Stichwortsuche": {
+    "Meisterschaften": "#1",
+    "Mannschaftsspiele": "#1",
+    "Anstehende Turniere": "#1",
+    "Turnierergebnisse": "#1",
+    "Tennisanlagen": "suche.html?index=unternehmen&suche=tennisanlagen",
+    "Talente": "#1",
+    "Sponsoren": "#1"
+  },
+  "Marcs Tennis Tracker": "paywall.html",
+  "Equipment": "http://www.tennis-point.de",
+  "Verband": "#1",
+  "Gruppen": {
+    "Tennisvereine (e.V.)": "#1",
+    "Tennishallen": "#1",
+    "Tennistrainer": "http://www.mkgoellner.de/coaches.html"
+  },
+  "Eventkalender": "#1"
+}

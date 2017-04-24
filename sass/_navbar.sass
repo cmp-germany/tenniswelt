@@ -44,7 +44,7 @@
   position: absolute
   min-height: 0
   width: 100%
-  height: 30px
+  height: 0 !important
   background-color: transparent
   //background-color: rgba(#132333, 0.9)
   color: $color-navbar-font
@@ -101,6 +101,7 @@
 .form-control-label
   position: absolute
   color: #ccc
+  z-index: 1
   //font-weight: normal
   top: 2px
   margin-left: 40px
@@ -140,6 +141,8 @@ input[type=range].form-control--range-navbar
   -webkit-appearance: none
   width: 110px
   margin: 0
+  z-index: 2
+  position: relative
   &:focus
     outline: none
   &::-webkit-slider-runnable-track
@@ -251,7 +254,7 @@ input[type=range].form-control--range-navbar
 
   //style
   background-color: $color-important
-  background-color: rgba($color-important, 0.85)
+  background-color: rgba($color-header-buttons-background, 0.85)
   //border-left: solid 3px #fff
 
   .dropdown-button--starters
@@ -296,6 +299,16 @@ input[type=range].form-control--range-navbar
   .material-icons
     font-size: 30px
     vertical-align: bottom
+
+  &--notification
+    display: inline
+    float: right
+
+    margin: 0
+    margin-top: 12px
+
+    padding: 0
+
 
 .navbar__tab--always
   display: inline

@@ -20,20 +20,76 @@ window.contentLandingPage = [
     },
     inputFields: [
       {
-        inputType: "text",
-        label: "Ihr Name"
+        name: "Privat",
+        fields: [
+          {
+            inputType: "text",
+            label: "Vorname"
+          },
+          {
+            inputType: "text",
+            label: "Nachname"
+          },
+          {
+            inputType: "text",
+            label: "Benutzername"
+          },
+          {
+            inputType: "email",
+            label: "E-Mail"
+          },
+          {
+            inputType: "password",
+            label: "Passwort"
+          },
+          {
+            inputType: "password",
+            label: "Passwort wiederholen"
+          }
+        ]
       },
       {
-        inputType: "email",
-        label: "E-Mail Adresse"
-      },
-      {
-        inputType: "password",
-        label: "Passwort vergeben"
-      },
-      {
-        inputType: "password",
-        label: "Passwort wiederholen"
+        name: "Unternehmen",
+        fields: [
+          {
+            inputType: "text",
+            label: "Name des Unternehmens"
+          },
+          {
+            inputType: "select",
+            options: [
+              "Kategorie 1",
+              "Kategorie 2",
+              "Kategorie 3",
+              "Kategorie 4"
+            ]
+          },
+          {
+            inputType: "select",
+            options: [
+              "Branche 1",
+              "Branche 2",
+              "Branche 3",
+              "Branche 4"
+            ]
+          },
+          {
+            inputType: "text",
+            label: "Benutzername"
+          },
+          {
+            inputType: "email",
+            label: "E-Mail Adresse"
+          },
+          {
+            inputType: "password",
+            label: "Passwort vergeben"
+          },
+          {
+            inputType: "password",
+            label: "Passwort wiederholen"
+          }
+        ]
       }
     ]
   },

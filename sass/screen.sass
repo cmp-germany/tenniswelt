@@ -1,10 +1,3 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
-
 // global variables
 @import variables
 @import fonts
@@ -15,6 +8,14 @@
 
 // compass Framework
 @import compass/css3/border-radius
+@import compass/css3/flexbox
+@import compass/typography/text/ellipsis
+@import compass/typography/text/force-wrap
+
+// material design lite Framework
+@import badge/badge
+@import spinner/spinner
+@import snackbar/snackbar
 
 // selfmade mixins
 @import mixins/media
@@ -25,12 +26,16 @@
 @import old-theme-koeln
 
 // general things - used in almost every site
+
 @import general
-@import navbar
-@import buttons
-@import form
 @import material-icons
 @import material-inputs
+@import material-snackbar
+@import navbar
+@import navbar-notification
+@import buttons
+@import alerts
+@import form
 
 // sites - design for a certain site
 @import landing-page
@@ -70,6 +75,7 @@
 @import image-preview
 @import footer-tmp
 @import change-profileimage
+@import invite-friends
 
 // mediascreens - special handling of some responsive issues
 @import wall-mediascreens

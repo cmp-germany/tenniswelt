@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tennis Community</title>
+
+    <!-- #### CSS #### -->
+
+    <!-- Own SASS Stuff -->
+    <link href="stylesheets/screen.css?v=1491406208" media="screen, projection" rel="stylesheet" type="text/css" />
+
+
+    <!-- #### JS #### -->
+
+    <!-- JQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js?v=1491406208" charset="utf-8"></script>
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js?v=1491406208" charset="utf-8"></script>
+
+    <!-- React.js -->
+    <script src="bower_components/react/react.js?v=1491406208"></script>
+    <script src="bower_components/react/react-dom.js?v=1491406208"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js?v=1491406208"></script>
+
+    <!-- Custom JS -->
+    <script src="js/wall.js?v=1491406208" charset="utf-8"></script>
+    <script src="js/modules.js?v=1491406208" charset="utf-8"></script>
+
+    <!-- Webpack Vendor -->
+    <script src="js/vendor.bundle.js?v=1491406208" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+    <div class="popup-back active"></div>
+    <div class="popup col-md-6 col-md-offset-3">
+      <div class="popup__header">
+        Kontakt einladen
+      </div>
+      <div class="popup__content">
+        <div id="PnlForm" class="DivRegister">
+          <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                        <input name="RptEmailsList$ctl00$TxtEmail" type="text" id="RptEmailsList_ctl00_TxtEmail" placeholder="E-mail" class="">
+                    </div>
+                    <div><a id="RptEmailsList_ctl00_BtnAdd" class="BtnAdd" style="cursor: default; background-color: rgb(170, 170, 170);">ADD</a></div>
+
+                    <div>
+                        <input name="RptEmailsList$ctl01$TxtEmail" type="text" placeholder="E-mail">
+                    </div>
+                    <div><a id="RptEmailsList_ctl01_BtnAdd" class="BtnAdd" onclick="ShowItem('Txt_8F0EEEB5', 'Btn_8F0EEEB5', 'Btn_7D87B67B'); return false;">ADD</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div><input name="TxtSubject" type="text" id="TxtSubject" placeholder="Subject" class=""></div></td>
+                </tr>
+                <tr>
+                  <td><div><textarea name="TxtMessage" rows="8" cols="20" id="TxtMessage" placeholder="Message"></textarea></div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div><input type="submit" name="BtnSend" value="Send Email" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;BtnSend&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="BtnSend" class="BtnSend platform-bgcolor"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    <!-- Navigation -->
+    <div data-module="navbar.html" data-additional-js="js/navigation.bundle.js?v=1491406208"></div>
+
+    <div class="container">
+
+      <!-- Left Sidebar -->
+      <div class="section-left col-md-3 hidden-sm hidden-xs">
+
+        <div data-module="matching.html" data-additional-js="js/wall.js?v=1491406208"></div>
+
+        <div data-module="group-matching.html"></div>
+
+      </div>
+
+      <!-- Main Column -->
+      <div class="section-center col-md-6">
+        <div class="wall-widget wall-widget--newPost">
+          <textarea name="name" rows="8" placeholder="Was machen Sie gerade?"></textarea>
+          <div class="wall-widget--actions wall-widget--actions__left">
+            <ul>
+              <li><i class="material-icons">&#xE412;</i></li>
+              <li><i class="material-icons">&#xE55F;</i></li>
+            </ul>
+          </div>
+          <div class="wall-widget--actions wall-widget--actions__right">
+            <button class="wall-widget--button wall-widget--button__blue" type="button" name="button">Posten</button>
+          </div>
+        </div>
+
+        <div class="wall-widget wall-widget--activities">
+          <header class="wall-widget--header">
+            <h3>Neuste Aktivitäten</h3>
+          </header>
+
+          <div class="wall-post">
+            <article class="wall-widget--activity-post">
+              <header class="wall-widget--header">
+                <div class="wall-widget--header__left">
+                  <img class="account-avatar" src="gfx/profilbilder/p8.jpg" alt="Profilbild" />
+                  <h4><a href="#1">Max Mustermann</a></h4>
+                </div>
+                <div class="wall-widget--header__right">
+                  <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+                </div>
+              </header>
+              <div class="wall-widget--content">
+                <img class="wall-widget--activity-post-image" src="gfx/beispiel.jpg" alt="imgage" />
+              </div>
+              <div class="wall-widget--actions wall-widget--actions__social">
+                <ul>
+                  <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                  <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                  <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
+                </ul>
+              </div>
+            </article>
+            <div class="wall-widget--comment-section">
+              <button class="wall-widget--button comment-button--loadmore" type="button" name="button"><i class="material-icons">&#xE316;</i>Mehr</button>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Maxi Mustermann</a>
+                  Lorem Ipsum! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 20 Minuten</label>
+                </p>
+              </div>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Wolfgang Adams</a>
+                  Cool!
+                  <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 10 Minuten</label>
+                </p>
+              </div>
+              <div class="wall-widget--comment">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                <p class="wall-widget--comment__comment">
+                  <a class="comment-account-link" href="#">Maxi Mustermann</a>
+                  JA
+                  <label class="comment-date"><i class="material-icons">&#xE192;</i> Vor 3 Minuten</label>
+                </p>
+              </div>
+              <div class="wall-widget--comment wall-widget--comment__input">
+                <img class="account-avatar--comment" src="gfx/profilbilder/p4.jpg" alt="Profilbild" />
+                <input type="text" class="comment__input" placeholder="Kommentieren..."/>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="wall-post">
+            <article class="wall-widget--activity-post">
+              <header class="wall-widget--header">
+                <div class="wall-widget--header__left">
+                  <img class="account-avatar" src="gfx/profilbilder/p3.jpg" alt="Profilbild" />
+                  <h4><a href="#1">Maxi Mustermann</a></h4>
+                </div>
+                <div class="wall-widget--header__right">
+                  <span class="wall-widget--info" ><i class="material-icons">&#xE192;</i> Vor 2 Stunden</span>
+                </div>
+              </header>
+              <div class="wall-widget--content">
+                <p class="wall-widget--activity-post-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div class="wall-widget--actions wall-widget--actions__social">
+                <ul>
+                  <li><a href=""><i class="material-icons">&#xE8DC;</i>Gefällt mir</a></li>
+                  <li><a href=""><i class="material-icons">&#xE0B9;</i>Kommentieren</a></li>
+                  <li><a href=""><i class="material-icons">&#xE80D;</i>Teilen</a></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="section-right col-md-3 hidden-sm hidden-xs">
+
+        <div data-module="messages.html"></div>
+
+        <div data-module="preferred-partners.html"></div>
+
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div id="chat-app"></div>
+    <script type="text/javascript">var reactChatApp;</script>
+    <script src="data/users.js?v=1491406208" charset="utf-8"></script>
+    <script src="react/ChatApp.js?v=1491406208" type="text/babel" charset="utf-8"></script>
+
+  </body>
+</html>

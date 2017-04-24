@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "data": {
+    "unseenRequestsCount": 1,
+    "allCount": 4,
+    "friendRequests": [
+      {
+        "id": "1387232b-f8f4-462d-b461-6c4dfac9f433",
+        "userId": "ade65b9d-2f8a-47bc-aa23-a4640154908b",
+        "friendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "dateCreated": "2016-10-05T16:13:29.113",
+        "dateAccepted": null,
+        "isSeen": false,
+        "isAccepted": false,
+        "profilePicture": "/Upload/user/AvatarImage/ade65b9d-2f8a-47bc-aa23-a4640154908b/ade65b9d-2f8a-47bc-aa23-a4640154908b_m.Jpeg",
+        "shownName": "John Smith",
+        "timeUtcMillieseconds": 1475680409113,
+        "dateCreatedUtc": "2016-10-05T15:13:29.113Z",
+        "profileUrl": "/profile/j.smith/"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "userId": "10e416d7-4668-4beb-839e-a4640150abc4",
+        "friendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "dateCreated": "2016-10-05T15:53:21.157",
+        "dateAccepted": null,
+        "isSeen": true,
+        "isAccepted": false,
+        "profilePicture": "/Upload/user/AvatarImage/10e416d7-4668-4beb-839e-a4640150abc4/10e416d7-4668-4beb-839e-a4640150abc4_m.Jpeg",
+        "shownName": "Rosaria Gonzales",
+        "timeUtcMillieseconds": 1475679201157,
+        "dateCreatedUtc": "2016-10-05T14:53:21.157Z",
+        "profileUrl": "/profile/r.gonzales/"
+      },
+      {
+        "id": "e22d7945-2d2d-468d-9f68-a696011eeeee",
+        "userId": "8196a8a8-e6a3-4278-aaaa-a64e019a00c7",
+        "friendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "dateCreated": "2016-10-05T15:40:13.387",
+        "dateAccepted": null,
+        "isSeen": true,
+        "isAccepted": false,
+        "profilePicture": "/Upload/user/AvatarImage/8196a8a8-e6a3-4278-aaaa-a64e019a00c7/8196a8a8-e6a3-4278-aaaa-a64e019a00c7_m.Jpeg",
+        "shownName": "Electronic Masters",
+        "timeUtcMillieseconds": 1475678413387,
+        "dateCreatedUtc": "2016-10-05T14:40:13.387Z",
+        "profileUrl": "/profile/emasters/"
+      },
+      {
+        "id": "3e8c92c8-dcde-4dd9-a970-a696011e1e02",
+        "userId": "1065b80c-06ff-46bb-af2c-809f5c885ac0",
+        "friendUserId": "496e3f91-edde-4929-8a83-a5b800cb9397",
+        "dateCreated": "2016-10-05T15:37:32.94",
+        "dateAccepted": null,
+        "isSeen": true,
+        "isAccepted": false,
+        "profilePicture": "/Upload/user/AvatarImage/1065b80c-06ff-46bb-af2c-809f5c885ac0/1065b80c-06ff-46bb-af2c-809f5c885ac0_m.Jpeg",
+        "shownName": "Schachar Landoy",
+        "timeUtcMillieseconds": 1475678252940,
+        "dateCreatedUtc": "2016-10-05T14:37:32.94Z",
+        "profileUrl": "/profile/JoeR/"
+      }
+    ],
+    "languageResource": {
+      "acceptFriend": "Accept",
+      "declineFriend": "Decline",
+      "friendRequestAccepted": "Request Accepted",
+      "friendRequestDeclined": "Request Denied",
+      "friendRequestErrorHappened": "Error",
+      "retry": "Retry"
+    }
+  }
+}
