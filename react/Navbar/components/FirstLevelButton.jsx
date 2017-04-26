@@ -15,6 +15,16 @@ class FirstLevelButton extends React.Component {
     var data = this.props.data;
 
     if (_.isString(data)) {
+      if (name == "fairwaltungskatalog") {
+        return (
+          <li className="starters-navigation__list-item">
+            <TargetA href={data} className="nav-button">
+              <img className="nav-button__img" src="gfx/cropped-cropped-fairwaltungskatalog-logo-512-1-270x270.png" alt="" />
+              {name}
+            </TargetA>
+          </li>
+        )
+      }
       return (
         <li className="starters-navigation__list-item"><TargetA href={data} className="nav-button">{name}</TargetA></li>
       );
