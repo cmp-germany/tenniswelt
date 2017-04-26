@@ -1944,13 +1944,15 @@ body form { background-color: transparent; }
 .navbar.grand-navbar { transform: translateZ(0); -webkit-transform: translateZ(0); -webkit-backface-visibility: hidden; z-index: 1; position: absolute; min-height: 0; width: 100%; height: 0 !important; background-color: transparent; color: #373C53; font-size: 14px; margin-bottom: 0; top: 350px; }
 .navbar.grand-navbar .nav-button, .navbar.grand-navbar .nav-button:active, .navbar.grand-navbar .nav-button:focus, .navbar.grand-navbar .nav-button:visited { height: 30px; border: none; color: #373C53; padding: 5px 20px; margin-left: 7px; font-weight: bold; outline: none; }
 .navbar.grand-navbar #navbar-starters .nav-button { color: #fff; background-color: rgba(103, 159, 73, 0.85); }
+.navbar.grand-navbar #navbar-starters .nav-button__img { height: 25px; margin-top: -2.8px; margin-right: -6.5px; }
 .navbar.grand-navbar #navbar-starters .nav-button:hover { background-color: rgba(103, 159, 73, 0.95); }
 
 .navbar.navbar-options { position: fixed; top: 50px; z-index: 3; width: 100%; }
 .navbar.navbar-options .starters-navigation__list-item { float: none; background-color: rgba(255, 255, 255, 0.9); padding: 0; padding-bottom: 4px; border: none; }
-.navbar.navbar-options .starters-navigation__list-item .nav-button { margin: 0; background-color: transparent; padding-bottom: 5px; border: none; }
+.navbar.navbar-options .starters-navigation__list-item .nav-button { margin: 0; background-color: transparent; padding-bottom: 5px; border: none; color: #373C53; }
 .navbar.navbar-options .starters-navigation__list-item .material-icons { vertical-align: bottom; }
 .navbar.navbar-options .starters-navigation__list-item:hover { background-color: #373C53; }
+.navbar.navbar-options .starters-navigation__list-item:hover a { color: #fff; }
 
 .form-group--nav { width: 200px; margin-left: 10px; }
 
@@ -2148,8 +2150,8 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .register-form__info-text { font-size: 12px; }
 
-.group-selector { float: left; border: 1px solid #fff; width: 110px; padding: 3px 10px; text-align: center; margin: 0 10px 10px 0; color: #fff; background-color: transparent; cursor: pointer; }
-.group-selector--active { background-color: #679F49; cursor: default; }
+.group-selector { float: left; border: 1px solid #fff; width: 110px; padding: 3px 10px; text-align: center; margin: 0 10px 10px 0; color: #fff; background-color: rgba(51, 51, 51, 0.3); cursor: pointer; }
+.group-selector--active { background-color: #373C53; cursor: default; }
 
 .key-feature { margin-bottom: 40px; }
 
