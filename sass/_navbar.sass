@@ -81,7 +81,7 @@
 
   .starters-navigation__list-item
     float: none
-    background-color: rgba($color-navbar, 0.9)
+    background-color: rgba($color-navmenu-bg, 0.9)
     padding: 0
     padding-bottom: 4px
     border: none
@@ -90,10 +90,15 @@
       background-color: transparent
       padding-bottom: 5px
       border: none
+      color: $color-navmenu
     .material-icons
       vertical-align: bottom
     &:hover
-      background-color: $color-primary
+      background-color: $color-navmenu-hover-bg
+      a
+        color: $color-navmenu-hover
+
+
 
 .form-group--nav
   width: 200px
