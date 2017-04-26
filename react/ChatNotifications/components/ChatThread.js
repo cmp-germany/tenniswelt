@@ -3,13 +3,19 @@ var CVM = require("react-component-visibility");
 var TimerMixin = require('react-timer-mixin');
 var TimeAgo = require('react-timeago').default;
 var languages = {
-  'de-DE': require('react-timeago/lib/language-strings/de-short').default,
-  'en-US': require('react-timeago/lib/language-strings/en-short.js').default
+  'de-DE': require('react-timeago/lib/language-strings/de').default,
+  'en-US': require('react-timeago/lib/language-strings/en').default
 };
 var buildFormatter = require('react-timeago/lib/formatters/buildFormatter').default;
 
 var ChatThread = React.createClass({
   mixins: [ CVM, TimerMixin ],
+
+  getInitialState: function() {
+    return {
+      formatter: buildFormatter(languages[window.currentLanguage])
+    }
+  },
 
   onThreadClick: function(userId){
     //this.props.openChatSession(userId);
