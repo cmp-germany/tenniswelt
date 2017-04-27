@@ -2190,9 +2190,11 @@ body a:hover { color: #373C53; }
 .wall-widget header h3, #TblPagesList header h3, .msg-input-area header h3, #Wall_Services header h3, .wall-widget header .MembersTitle, #TblPagesList header .MembersTitle, .msg-input-area header .MembersTitle, #Wall_Services header .MembersTitle { display: table-cell; vertical-align: middle; font-size: 20px; }
 
 .wall-widget--side header { border-bottom: solid 1px #373C53; margin-right: -20px; margin-left: -20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 15px; margin-bottom: 25px; height: 66px; }
+.wall-widget--side header > div { width: 100%; }
 .wall-widget--side header i { display: table-cell; vertical-align: middle; width: 35px; font-size: 30px; color: #0e1016; }
 .wall-widget--side header i.material-icons--clickable { color: #679F49; }
 .wall-widget--side header h3, .wall-widget--side header .MembersTitle { display: table-cell; vertical-align: middle; font-size: 20px; }
+.wall-widget--side header .aServicesEdit { float: right; }
 
 .wall-widget--matching .wall-widget--content { margin-top: 25px; text-align: center; }
 
