@@ -2431,9 +2431,13 @@ i.chat-icon { color: #fff; }
 
 .button-block { font-size: 16px; width: 100%; margin-bottom: 10px; display: flex; align-items: center; }
 
-.button-block__text { width: calc(100% - 21px); }
+.button-block__text { width: calc(100% - 21px); text-align: center; }
+
+a:hover .button-block__text { color: #fff; }
 
 .button-block__icons { width: 20px; display: flex; align-items: center; }
+
+a:hover .button-block__icons { color: #fff; }
 
 .matching-options { margin: 20px 0; padding: 0 20px; padding-bottom: 20px; background-color: #f9f9f9; border: solid 1px #eee; }
 
