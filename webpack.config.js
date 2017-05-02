@@ -8,14 +8,19 @@ module.exports = {
   },
   entry: {
     'navigation': './js/navigation.js',
-    'messages': './js/messages.js'
+    'messages': './js/messages.js',
+    'landingPage': './react/LandingPage.js'
   },
   output: {
     path: './js',
     filename: '[name].bundle.js'
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor.bundle.js")
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "vendor",
+      filename: "vendor.bundle.js",
+      minChunks: 2,
+    })
   ],
   module: {
     loaders: [
