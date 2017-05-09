@@ -4,22 +4,32 @@ Frontend for Code for the platform starters.koeln.
 
 ## Preview
 
-### Landing Page
+please visit [cmpg.eu/starters.koeln](http://cmpg.eu/starters.koeln)
 
-[![](http://download.united-studios.com/Bildschirmfoto%202016-07-05%20um%2016.53.01.png)](https://cmp-germany.github.io/starters.koeln)
+## 8 Schritte fürs Portal Design
 
-### Wall
+### 1. Farben anpassen
+> `sass/_variables.sass:1`
 
-[![](http://download.united-studios.com/wall.png)](https://cmp-germany.github.io/starters.koeln/wall.html)
+### 2. Logo austauschen
+> `index.html:50`  
+> `sass/_navbar.sass:15`  
+> `modules/navbar.html:6`
 
-### Profil - Über Uns
+### 3. Titel ändern
+> `data/title.js`
 
-[![](http://download.united-studios.com/profile-about.png)](https://cmp-germany.github.io/starters.koeln/profile-about.html)
+### 4. Landingpage Content
+> `data/landingPage.js`
 
-### Einstellungen
+### 5. Header Bild
+> `sass/_navbar.sass:22`
 
-[![](http://download.united-studios.com/settings.png)](https://cmp-germany.github.io/starters.koeln/settings.html)
+### 6. Preferred Partner
+> `modules/preferred-partners.html`
 
-### Suche
+### 7. Navbar Menu
+> `data/navbarMenu.json`
 
-[![](http://download.united-studios.com/suche.png)](https://cmp-germany.github.io/starters.koeln/suche.html)
+### 8. Readme ändern
+> `README.md`
