@@ -8,6 +8,7 @@ pipelines:
             - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/
             - npm install
             - npm run version
+            - npm run change-title-pipeline
             - curl -T "{$(echo *.html | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/ --user $FTP_USERNAME:$FTP_PASSWORD
             - curl -T "{$(echo modules/*.html | tr ' ' ',')}" ftp://$SERVER_ADDRESS/$PATH_TO_WEBSITE/modules/ --user $FTP_USERNAME:$FTP_PASSWORD
             - npm run compile

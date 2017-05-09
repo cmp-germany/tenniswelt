@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "version": "node refresh-version.js",
-    "change-title": "node change-title.js"
+    "change-title": "node change-title.js",
+    "change-title-pipeline": "node change-title-pipeline.js"
   },
   "repository": {
     "type": "git",
