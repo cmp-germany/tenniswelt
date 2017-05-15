@@ -2,7 +2,7 @@ const screenSizes = {
   xs: 767,
   sm: 991,
   md: 1199,
-  lg: false,
-};
+  lg: false
+}
 
-export default screenSizes;
+export default screenSizes

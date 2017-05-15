@@ -1,6 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
-
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   resolve: {
@@ -18,9 +17,9 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-      filename: "vendor.bundle.js",
-      minChunks: 2,
+      name: 'vendor',
+      filename: 'vendor.bundle.js',
+      minChunks: 2
     })
   ],
   module: {
@@ -31,7 +30,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015'],
-          plugins: [],
+          plugins: []
         }
       },
       {
@@ -43,4 +42,4 @@ module.exports = {
     ]
   },
   devtool: 'eval-source-map'
-};
+}

@@ -1,1 +1,1 @@
-module.exports = "starters.koeln";
+module.exports = 'starters.koeln'

@@ -1,13 +1,13 @@
-var componentHandler = require('exports?componentHandler!material-design-lite/material.js');
+var componentHandler = require('exports?componentHandler!material-design-lite/material.js')
 
 var MaterialDesignMixin = {
   componentDidMount: function () {
-    componentHandler.upgradeDom();
+    componentHandler.upgradeDom()
   },
 
   componentDidUpdate: function () {
-    componentHandler.upgradeDom();
+    componentHandler.upgradeDom()
   }
 }
 
-module.exports = MaterialDesignMixin;
+module.exports = MaterialDesignMixin

@@ -16,46 +16,46 @@
  *  limitations under the License
  *
  */
-'use strict';
+'use strict'
 
-var through = require('through2');
-var escodegen = require('escodegen');
-var acorn = require('acorn');
+var through = require('through2')
+var escodegen = require('escodegen')
+var acorn = require('acorn')
 
-function uniffe(contents) {
-  var comments = [];
-  var tokens = [];
+function uniffe (contents) {
+  var comments = []
+  var tokens = []
 
   var ast = acorn.parse(contents, {
     ranges: true,
     onComment: comments,
     onToken: tokens
-  });
+  })
 
-  escodegen.attachComments(ast, comments, tokens);
+  escodegen.attachComments(ast, comments, tokens)
 
   if (ast.body[0].expression === undefined ||
       ast.body[0].expression.callee === undefined) {
-    return contents;
+    return contents
   }
 
-  var rootProgram = ast.body[0].expression.callee.body;
+  var rootProgram = ast.body[0].expression.callee.body
 
-  rootProgram.type = 'Program';
+  rootProgram.type = 'Program'
   // drop use strict
-  rootProgram.body = rootProgram.body.slice(1);
+  rootProgram.body = rootProgram.body.slice(1)
   // attach all leading comments from outside iffe
-  rootProgram.leadingComments = ast.body[0].leadingComments;
+  rootProgram.leadingComments = ast.body[0].leadingComments
 
-  return escodegen.generate(rootProgram, {comment: true});
+  return escodegen.generate(rootProgram, {comment: true})
 }
 
-module.exports = function() {
-  return through.obj(function(file, enc, cb) {
+module.exports = function () {
+  return through.obj(function (file, enc, cb) {
     if (file.isBuffer()) {
-      file.contents = new Buffer(uniffe(file.contents.toString(enc)), enc);
+      file.contents = new Buffer(uniffe(file.contents.toString(enc)), enc)
     }
 
-    cb(null, file);
-  });
-};
+    cb(null, file)
+  })
+}
