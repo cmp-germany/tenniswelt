@@ -13,7 +13,8 @@
     "build-storybook": "build-storybook",
     "version": "node refresh-version.js",
     "change-title": "node change-title.js",
-    "change-title-pipeline": "node change-title-pipeline.js"
+    "change-title-pipeline": "node change-title-pipeline.js",
+    "convert-navbar-json": "node convert-navbar-json.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "exports-loader": "^0.6.3",
     "flux": "^3.1.0",
     "json-loader": "^0.5.4",
+    "jsonfile": "^3.0.0",
     "lodash": "^4.16.6",
     "matchmedia-polyfill": "^0.3.0",
     "material-design-lite": "^1.2.1",
