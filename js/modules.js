@@ -1,7 +1,7 @@
 $.ajaxSetup({ cache: false })
 
 $(document).ready(function () {
-  $('div[data-module]').each(function () {
+  $('div[data-module]').each(function myself () {
     var moduleName = $(this).attr('data-module')
     $.get({
       url: './modules/' + moduleName,
@@ -11,6 +11,7 @@ $(document).ready(function () {
         if (additionalJs) {
           $.getScript(additionalJs)
         }
+        $(this).find('div[data-module]').each(myself)
       }.bind(this)
     })
   })
