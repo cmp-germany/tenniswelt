@@ -4,12 +4,13 @@ var webpack = require('webpack');
 
 module.exports = {
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.json']
   },
   entry: {
     'navigation': './js/navigation.js',
     'messages': './js/messages.js',
-    'landingPage': './react/LandingPage.js'
+    'landingPage': './react/LandingPage.js',
+    'chat': './react/ChatApp.js'
   },
   output: {
     path: './js',

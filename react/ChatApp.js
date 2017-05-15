@@ -1,3 +1,6 @@
+import React    from 'react';
+import ReactDOM from 'react-dom';
+
 var conversations = {
   "volker-miller": [
     {
@@ -373,7 +376,9 @@ var ChatApp = React.createClass({
   }
 });
 
-reactChatApp = ReactDOM.render(
+console.log("chat-test");
+
+window.reactChatApp = ReactDOM.render(
   <ChatApp />,
   document.getElementById('chat-app')
 );
