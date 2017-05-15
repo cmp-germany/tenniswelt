@@ -12,9 +12,8 @@ please visit [cmpg.eu/starters.koeln](http://cmpg.eu/starters.koeln)
 > `sass/_variables.sass:1`
 
 ### 2. Logo austauschen
-> `index.html:50`  
-> `sass/_navbar.sass:15`  
-> `modules/navbar.html:6`
+> `modules/logo.html:2`  
+> `sass/_navbar.sass:15`
 
 ### 3. Titel ändern
 > `data/title.js`
