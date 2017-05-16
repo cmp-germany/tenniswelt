@@ -13,8 +13,8 @@ please visit [cmpg.eu/starters.koeln](http://cmpg.eu/starters.koeln)
 - Install [Git](https://git-scm.com/downloads)
 - Install [node.js](https://nodejs.org/de/)
 - Install [ruby](https://rubyinstaller.org/)
-  - 2.2.6 (32Bit)
-  - "Add Ruby executables to your PATH"
+    - 2.2.6 (32Bit)
+    - "Add Ruby executables to your PATH"
 - Install Compass (Visual Studio Code -> `ctrl` + `ö`):
 ```
 gem update --system
