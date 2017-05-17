@@ -1,3 +1,6 @@
+import React    from 'react'
+import ReactDOM from 'react-dom'
+
 var ProfileHeader = React.createClass({
   render: function () {
     var onlineIconClasses
