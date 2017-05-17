@@ -9,7 +9,8 @@ module.exports = {
     'navigation': './js/navigation.js',
     'messages': './js/messages.js',
     'landingPage': './react/LandingPage.js',
-    'chat': './react/ChatApp.js'
+    'chat': './react/ChatApp.js',
+    'profile-about': './react/profile-about.js'
   },
   output: {
     path: './js',
