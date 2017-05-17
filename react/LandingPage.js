@@ -173,7 +173,7 @@ var InputFieldGroups = React.createClass({
 
     var groupSelectors = groups.map(function (element, index) {
       var classes = 'group-selector'
-      if (this.state.selectedGroup == index) {
+      if (this.state.selectedGroup === index) {
         classes += ' group-selector--active'
       }
 
@@ -355,6 +355,6 @@ var LandingPageApp = React.createClass({
 })
 
 ReactDOM.render(
-  <LandingPageApp data={contentLandingPage} />,
+  <LandingPageApp data={window.contentLandingPage} />,
   document.getElementById('react-app-landing-page')
 )
