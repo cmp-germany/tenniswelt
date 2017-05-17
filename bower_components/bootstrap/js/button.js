@@ -1,34 +1,33 @@
 /* ========================================================================
- * Bootstrap: button.js v3.3.6
+ * Bootstrap: button.js v3.3.7
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
-
-+function ($) {
-  'use strict';
++(function ($) {
+  'use strict'
 
   // BUTTON PUBLIC CLASS DEFINITION
   // ==============================
 
   var Button = function (element, options) {
-    this.$element  = $(element)
-    this.options   = $.extend({}, Button.DEFAULTS, options)
+    this.$element = $(element)
+    this.options = $.extend({}, Button.DEFAULTS, options)
     this.isLoading = false
   }
 
-  Button.VERSION  = '3.3.6'
+  Button.VERSION = '3.3.7'
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
   }
 
   Button.prototype.setState = function (state) {
-    var d    = 'disabled'
-    var $el  = this.$element
-    var val  = $el.is('input') ? 'val' : 'html'
+    var d = 'disabled'
+    var $el = this.$element
+    var val = $el.is('input') ? 'val' : 'html'
     var data = $el.data()
 
     state += 'Text'
@@ -41,10 +40,10 @@
 
       if (state == 'loadingText') {
         this.isLoading = true
-        $el.addClass(d).attr(d, d)
+        $el.addClass(d).attr(d, d).prop(d, true)
       } else if (this.isLoading) {
         this.isLoading = false
-        $el.removeClass(d).removeAttr(d)
+        $el.removeClass(d).removeAttr(d).prop(d, false)
       }
     }, this), 0)
   }
@@ -71,15 +70,14 @@
     }
   }
 
-
   // BUTTON PLUGIN DEFINITION
   // ========================
 
-  function Plugin(option) {
+  function Plugin (option) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.button')
-      var options = typeof option == 'object' && option
+      var $this = $(this)
+      var data = $this.data('bs.button')
+      var options = typeof option === 'object' && option
 
       if (!data) $this.data('bs.button', (data = new Button(this, options)))
 
@@ -90,9 +88,8 @@
 
   var old = $.fn.button
 
-  $.fn.button             = Plugin
+  $.fn.button = Plugin
   $.fn.button.Constructor = Button
-
 
   // BUTTON NO CONFLICT
   // ==================
@@ -102,19 +99,22 @@
     return this
   }
 
-
   // BUTTON DATA-API
   // ===============
 
   $(document)
     .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
-      var $btn = $(e.target)
-      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
+      var $btn = $(e.target).closest('.btn')
       Plugin.call($btn, 'toggle')
-      if (!($(e.target).is('input[type="radio"]') || $(e.target).is('input[type="checkbox"]'))) e.preventDefault()
+      if (!($(e.target).is('input[type="radio"], input[type="checkbox"]'))) {
+        // Prevent double click on radios, and the double selections (so cancellation) on checkboxes
+        e.preventDefault()
+        // The target component still receive the focus
+        if ($btn.is('input,button')) $btn.trigger('focus')
+        else $btn.find('input:visible,button:visible').first().trigger('focus')
+      }
     })
     .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
     })
-
-}(jQuery);
+}(jQuery))

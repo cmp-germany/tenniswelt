@@ -1,21 +1,27 @@
-var path = require('path');
-var webpack = require('webpack');
-
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.json']
   },
   entry: {
     'navigation': './js/navigation.js',
-    'messages': './js/messages.js'
+    'messages': './js/messages.js',
+    'landingPage': './react/LandingPage.js',
+    'chat': './react/ChatApp.js',
+    'profile-about': './react/profile-about.js'
   },
   output: {
     path: './js',
     filename: '[name].bundle.js'
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor.bundle.js")
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.bundle.js',
+      minChunks: 2
+    })
   ],
   module: {
     loaders: [
@@ -25,7 +31,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015'],
-          plugins: [],
+          plugins: []
         }
       },
       {
@@ -37,4 +43,4 @@ module.exports = {
     ]
   },
   devtool: 'eval-source-map'
-};
+}

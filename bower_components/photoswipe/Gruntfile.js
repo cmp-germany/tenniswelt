@@ -1,31 +1,30 @@
 /**
- * 
+ *
  * Run 'grunt' to generate JS and CSS in folder 'dist' and site in folder '_site'
  * *
  * Run 'grunt watch' to automatically regenerate '_site' when you change files in 'src' or in 'website'
- * 
+ *
  */
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+  'use strict'
 
-  'use strict';
-
-  var jekyllConfig = "isLocal : false \r\n"+
-      "permalink: /:title/ \r\n"+
+  var jekyllConfig = 'isLocal : false \r\n' +
+      'permalink: /:title/ \r\n' +
       "exclude: ['.json', '.rvmrc', '.rbenv-version', 'README.md', 'Rakefile'," +
-                "'changelog.md', 'compiler.jar', 'private', '.htaccess'," + 
-                "'photoswipe.sublime-project', 'photoswipe.sublime-workspace'] \r\n"+
+                "'changelog.md', 'compiler.jar', 'private', '.htaccess'," +
+                "'photoswipe.sublime-project', 'photoswipe.sublime-workspace'] \r\n" +
 
-      "auto: true \r\n"+
-      "pswpversion: <%= pkg.version %> \r\n"+
-      "siteversion: 1.0.4 \r\n"+
-      "markdown: redcarpet \r\n"+
-      "kramdown: \r\n"+
-      "  input: GFM \r\n";
-  
-  var awsDefaults = {};
-  if( grunt.file.exists('./aws-keys.json') ) {
-    awsDefaults = grunt.file.readJSON('./aws-keys.json');
+      'auto: true \r\n' +
+      'pswpversion: <%= pkg.version %> \r\n' +
+      'siteversion: 1.0.4 \r\n' +
+      'markdown: redcarpet \r\n' +
+      'kramdown: \r\n' +
+      '  input: GFM \r\n'
+
+  var awsDefaults = {}
+  if (grunt.file.exists('./aws-keys.json')) {
+    awsDefaults = grunt.file.readJSON('./aws-keys.json')
   }
 
   grunt.initConfig({
@@ -37,7 +36,7 @@ module.exports = function(grunt) {
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; */\n',
 
-    defaultUIBanner:  '/*! PhotoSwipe Default UI - <%= pkg.version %> - ' +
+    defaultUIBanner: '/*! PhotoSwipe Default UI - <%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; */\n',
@@ -46,10 +45,10 @@ module.exports = function(grunt) {
     clean: {
       files: ['dist']
     },
-    
-    sass: {                            
-      dist: {                      
-        files: {      
+
+    sass: {
+      dist: {
+        files: {
           'dist/photoswipe.css': 'src/css/main.scss',
           'dist/default-skin/default-skin.css': 'src/css/default-skin/default-skin.scss'
         }
@@ -57,7 +56,7 @@ module.exports = function(grunt) {
     },
 
     // https://github.com/nDmitry/grunt-autoprefixer
-    autoprefixer: { 
+    autoprefixer: {
       options: {
         browsers: ['last 3 versions', 'android 3', 'ie 9', 'bb 10']
       },
@@ -103,16 +102,16 @@ module.exports = function(grunt) {
           src: 'website',
           dest: '_site',
           url: 'local',
-          raw: jekyllConfig + "url: local"
+          raw: jekyllConfig + 'url: local'
         }
-        
+
       },
       production: {
         options: {
           src: 'website',
           dest: '_production',
           url: 'production',
-          raw: jekyllConfig + "url: production"
+          raw: jekyllConfig + 'url: production'
         }
       }
     },
@@ -159,7 +158,7 @@ module.exports = function(grunt) {
     cssmin: {
       compress: {
         files: {
-          "website/site-assets/all.min.css": ["website/site-assets/site.css", "website/dist/photoswipe.css"]
+          'website/site-assets/all.min.css': ['website/site-assets/site.css', 'website/dist/photoswipe.css']
         }
       }
     },
@@ -190,98 +189,87 @@ module.exports = function(grunt) {
       }
     }
 
-
-  });
-
+  })
 
   // grunt pswpbuild --pswp-exclude=ajax,image
-  grunt.task.registerMultiTask('pswpbuild', 'Makes PhotoSwipe core JS file.', function() {
-
+  grunt.task.registerMultiTask('pswpbuild', 'Makes PhotoSwipe core JS file.', function () {
     var files = this.data.src,
-        includes = grunt.option('pswp-exclude'),
-        basePath = this.data.basePath,
-        newContents = this.data.banner;
+      includes = grunt.option('pswp-exclude'),
+      basePath = this.data.basePath,
+      newContents = this.data.banner
 
-    newContents += "(function (root, factory) { \n"+
+    newContents += '(function (root, factory) { \n' +
       "\tif (typeof define === 'function' && define.amd) {\n" +
-        "\t\tdefine(factory);\n" +
+        '\t\tdefine(factory);\n' +
       "\t} else if (typeof exports === 'object') {\n" +
-        "\t\tmodule.exports = factory();\n" +
-      "\t} else {\n" +
-        "\t\troot.PhotoSwipe = factory();\n" +
-      "\t}\n" +
-    "})(this, function () {\n\n" +
-      "\t'use strict';\n"+
-      "\tvar PhotoSwipe = function(template, UiClass, items, options){\n";
-      
+        '\t\tmodule.exports = factory();\n' +
+      '\t} else {\n' +
+        '\t\troot.PhotoSwipe = factory();\n' +
+      '\t}\n' +
+    '})(this, function () {\n\n' +
+      "\t'use strict';\n" +
+      '\tvar PhotoSwipe = function(template, UiClass, items, options){\n'
 
-    if(includes) {
-      includes = includes.split(/[\s,]+/); // 'a,b,c' => ['a','b','c']
+    if (includes) {
+      includes = includes.split(/[\s,]+/) // 'a,b,c' => ['a','b','c']
       var removeA = function (arr) {
-          var what, a = arguments, L = a.length, ax;
-          while (L > 1 && arr.length) {
-              what = a[--L];
-              while ((ax= arr.indexOf(what)) !== -1) {
-                  arr.splice(ax, 1);
-              }
+        var what, a = arguments, L = a.length, ax
+        while (L > 1 && arr.length) {
+          what = a[--L]
+          while ((ax = arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1)
           }
-          return arr;
-      };
+        }
+        return arr
+      }
 
-      includes.forEach(function( name ) {
-        if(name) {
-           
-           grunt.log.writeln( 'removed "'+name +'"' );
-           files = removeA(files, name);
-         }
-      });
+      includes.forEach(function (name) {
+        if (name) {
+          grunt.log.writeln('removed "' + name + '"')
+          files = removeA(files, name)
+        }
+      })
     }
-    
-    grunt.log.writeln( 'Your build is made of:'+files );
 
-    files.forEach(function( name ) {
+    grunt.log.writeln('Your build is made of:' + files)
+
+    files.forEach(function (name) {
       // Wrap each module with a pience of code to be able to exlude it, stolen for modernizr.com
-      newContents += "\n/*>>"+name+"*/\n"; 
-      newContents += grunt.file.read( basePath + name + '.js' ) + '\n';
-      newContents += "\n/*>>"+name+"*/\n"; 
-    });
+      newContents += '\n/*>>' + name + '*/\n'
+      newContents += grunt.file.read(basePath + name + '.js') + '\n'
+      newContents += '\n/*>>' + name + '*/\n'
+    })
 
+    newContents += '\tframework.extend(self, publicMethods); };\n'
+    newContents += '\treturn PhotoSwipe;\n'
+    newContents += '});'
 
-    newContents+= "\tframework.extend(self, publicMethods); };\n";
-    newContents+= "\treturn PhotoSwipe;\n";
-    newContents+= "});";
+    grunt.file.write(this.data.dest, newContents)
 
-
-    grunt.file.write( this.data.dest, newContents );
-
-    var uiContents = grunt.file.read( basePath + 'ui/photoswipe-ui-default.js' );
-    uiContents = this.data.defaultUIBanner + uiContents;
-    grunt.file.write( this.data.uidest, uiContents );
-  });
-
-
-
+    var uiContents = grunt.file.read(basePath + 'ui/photoswipe-ui-default.js')
+    uiContents = this.data.defaultUIBanner + uiContents
+    grunt.file.write(this.data.uidest, uiContents)
+  })
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-aws-s3');
-  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.loadNpmTasks('grunt-contrib-concat')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-jshint')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-sass')
+  grunt.loadNpmTasks('grunt-autoprefixer')
+  grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-jekyll')
+  grunt.loadNpmTasks('grunt-contrib-cssmin')
+  grunt.loadNpmTasks('grunt-aws-s3')
+  grunt.loadNpmTasks('grunt-svgmin')
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'pswpbuild','uglify', 'copy', 'jekyll:dev']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'pswpbuild', 'uglify', 'copy', 'jekyll:dev'])
 
-  grunt.registerTask('production', ['sass', 'autoprefixer', 'pswpbuild', 'uglify', 'copy', 'cssmin', 'jekyll:production']);
-  grunt.registerTask('nosite', ['sass', 'autoprefixer', 'pswpbuild', 'uglify']);
-  grunt.registerTask('hint', ['jshint']);
-  grunt.registerTask('awsupload', ['aws_s3']);
-
-};
+  grunt.registerTask('production', ['sass', 'autoprefixer', 'pswpbuild', 'uglify', 'copy', 'cssmin', 'jekyll:production'])
+  grunt.registerTask('nosite', ['sass', 'autoprefixer', 'pswpbuild', 'uglify'])
+  grunt.registerTask('hint', ['jshint'])
+  grunt.registerTask('awsupload', ['aws_s3'])
+}

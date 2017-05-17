@@ -1,8 +1,8 @@
-/*Chat im Responsive*/
+/* Chat im Responsive */
 var chatQuickFixes = function () {
-  $('.chat-sessions').on("click", ".chat-session-header", function(){
-    if($( window ).width() < 767) $('.chat-users-body').css('display', 'block');
-  });
+  $('.chat-sessions').on('click', '.chat-session-header', function () {
+    if ($(window).width() < 767) $('.chat-users-body').css('display', 'block')
+  })
 
   // chat is appearing later than document.onLoad.
   // So, we need to get an event listener for
@@ -11,86 +11,82 @@ var chatQuickFixes = function () {
   // so, better, proper use of on():
   // http://stackoverflow.com/questions/8021436/turning-live-into-on-in-jquery
 
-  $('.main-chat-container').on("click", ".chat-user-holder", function(){
-    if($( window ).width() < 767) $('.chat-users-body').css('display', 'none');
-  });
+  $('.main-chat-container').on('click', '.chat-user-holder', function () {
+    if ($(window).width() < 767) $('.chat-users-body').css('display', 'none')
+  })
 
-  //Check if we are on /companies
-  if(window.location.href.indexOf("Companies") > -1) {
-    $("body").addClass("noasides")
+  // Check if we are on /companies
+  if (window.location.href.indexOf('Companies') > -1) {
+    $('body').addClass('noasides')
   }
 
+  // Chat collapse when any tab is clickes
+  $('.navbar-fixed-top').on('click', '.navbar__tab', function () {
+    var ariaExpanded = $(this).attr('aria-expanded')
+    $('.navbar__section').collapse('hide')
+    $('.navbar.grand-navbar').collapse('hide')
+    $('.main-chat-container').collapse('hide') // <-- THIS
+    $('.navbar__tab').removeClass('navbar__tab--active')
 
-  //Chat collapse when any tab is clickes
-  $('.navbar-fixed-top').on("click", ".navbar__tab",function(){
-    var ariaExpanded = $(this).attr('aria-expanded');
-    $(".navbar__section").collapse('hide');
-    $(".navbar.grand-navbar").collapse('hide');
-    $(".main-chat-container").collapse('hide'); //<-- THIS
-    $('.navbar__tab').removeClass('navbar__tab--active');
+    $(this).addClass('navbar__tab--active')
 
-    $(this).addClass('navbar__tab--active');
-
-    if(ariaExpanded === 'true') {
-      $('.navbar__tab').removeClass('navbar__tab--active');
-      $('.navbar__tab--wall').addClass('navbar__tab--active');
+    if (ariaExpanded === 'true') {
+      $('.navbar__tab').removeClass('navbar__tab--active')
+      $('.navbar__tab--wall').addClass('navbar__tab--active')
     }
 
-    if ($( window ).width() <= 767) {
-      $( "body > .container" ).css( "display", "none" );
+    if ($(window).width() <= 767) {
+      $('body > .container').css('display', 'none')
     }
 
-    if ($( ".navbar__tab--wall" ).hasClass("navbar__tab--active")) {
-      $( "body > .container" ).css( "display", "block" );
+    if ($('.navbar__tab--wall').hasClass('navbar__tab--active')) {
+      $('body > .container').css('display', 'block')
     }
-  });
-};
+  })
+}
 
-
-
-var replaceElements = function() {
+var replaceElements = function () {
   // $('.navbar-brand, .navbar__section__title').html('<span class="navbar-brand__title">starters.</span><span class="navbar-brand__subtitle">koeln</span>');
-};
+}
 
-var fixProfileMenu = function() {
-  var tabProfile = $('#tab__profile-options');
+var fixProfileMenu = function () {
+  var tabProfile = $('#tab__profile-options')
   if (!tabProfile.length) {
-    console.log("not found :-(");
-    setTimeout(fixProfileMenu, 500);
-  }
-  else {
-    console.log('FOUND!!!');
-    $('#tab__profile-options').on('show.bs.collapse', function(event) {
-      console.log(event);
-      var parent = $(event.target).parents('.navbar-options');
-      console.log(parent);
-      parent.css('display', 'block');
-    });
-    $('#tab__profile-options').on('hidden.bs.collapse', function(event) {
-      console.log(event);
-      var parent = $(event.target).parents('.navbar-options');
-      console.log(parent);
-      parent.css('display', 'none');
-    });
+    console.log('not found :-(')
+    setTimeout(fixProfileMenu, 500)
+  } else {
+    console.log('FOUND!!!')
+    $('#tab__profile-options').on('show.bs.collapse', function (event) {
+      console.log(event)
+      var parent = $(event.target).parents('.navbar-options')
+      console.log(parent)
+      parent.css('display', 'block')
+    })
+    $('#tab__profile-options').on('hidden.bs.collapse', function (event) {
+      console.log(event)
+      var parent = $(event.target).parents('.navbar-options')
+      console.log(parent)
+      parent.css('display', 'none')
+    })
   }
 };
 
 // This waits for jQuery to be loaded
-(function() {
-  var checkReady = function(callback) {
+(function () {
+  var checkReady = function (callback) {
     if (window.jQuery) {
-      callback(jQuery);
+      callback(jQuery)
     } else {
-      window.setTimeout(function() {
-        checkReady(callback);
-      }, 20);
+      window.setTimeout(function () {
+        checkReady(callback)
+      }, 20)
     }
-  };
+  }
 
   // When jQuery is loaded, wait for document to be ready
-  checkReady(function($) {
-    //$(document).ready(replaceElements);
-    $(document).ready(chatQuickFixes);
-    $(document).ready(fixProfileMenu);
-  });
-})();
+  checkReady(function ($) {
+    // $(document).ready(replaceElements);
+    $(document).ready(chatQuickFixes)
+    $(document).ready(fixProfileMenu)
+  })
+})()

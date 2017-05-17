@@ -1,11 +1,11 @@
-import { Dispatcher } from "flux";
+import { Dispatcher } from 'flux'
 
-const dispatcher = new Dispatcher;
+const dispatcher = new Dispatcher()
 
-window.dispatcher = dispatcher;
+window.dispatcher = dispatcher
 
-dispatcher.register(function(action){
-  console.log("dispatcher: ", action);
+dispatcher.register(function (action) {
+  console.log('dispatcher: ', action)
 })
 
-export default dispatcher;
+export default dispatcher

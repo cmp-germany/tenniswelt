@@ -1934,6 +1934,7 @@ body form { background-color: transparent; }
 .navbar-brand__title { font-family: "Pacifico", cursive; color: #373C53; font-size: 30px; }
 .navbar-brand__subtitle { font-family: "Open Sans", sans-serif; color: #000; }
 .navbar-brand__logo { height: 50px; margin-top: -15px; }
+.navbar-brand .navbar-brand__img { height: 40px; margin-top: -12px; }
 
 .navbar-inverse { background-image: none; }
 
@@ -2163,7 +2164,7 @@ input[type=range].form-control--range-navbar:focus::-ms-fill-upper { background:
 
 .profile-card, .register-card { max-width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 30px; }
 
-.profile-card__innerDiv, .MembersItem { padding: 10px; border-top: 1px solid #373C53; border-left: 1px solid #373C53; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background-color: #fff; height: 145px; }
+.profile-card__innerDiv, #MyWallMid .MembersListItem, .MembersItem { padding: 10px; border-top: 1px solid #373C53; border-left: 1px solid #373C53; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background-color: #fff; height: 145px; }
 
 .profile-card__image { padding-left: 0; }
 
@@ -2394,6 +2395,13 @@ body a:hover { color: #373C53; }
 
 @media(max-width:767px) { .profile-tabs--profile-navigation .profile-tabs__label { display: none; }
   .profile-tabs--profile-navigation .material-icons { display: block; } }
+#MyWallMid .MembersListItem { position: relative; overflow: hidden; margin-bottom: 12px; padding: 10px 15px; height: auto; }
+#MyWallMid .MembersListItem .nav-avatar { width: 80px !important; height: 80px !important; }
+#MyWallMid .MembersListItem .kontakt-card__actions, #MyWallMid .MembersListItem .matching-site .wall-widget--actions, .matching-site #MyWallMid .MembersListItem .wall-widget--actions { right: 5px; bottom: 0; }
+#MyWallMid .MembersListItem .profile-header__action-button { margin-right: 0; margin-left: -3px; }
+#MyWallMid .MembersListName { color: #679F49; }
+#MyWallMid .MembersListName:hover { color: #373C53; }
+
 .MembersMain:before, .MembersMain:after { content: " "; display: table; }
 .MembersMain:after { clear: both; }
 
@@ -3039,15 +3047,12 @@ html, body { height: 100%; }
 
 .chat__actions { width: 100%; }
 
-.form-chat { display: inline-block; border: none; width: 80%; padding: 3px 10px; margin-bottom: 10px; outline: none; font-size: 16px; color: #444; }
+.form-chat { display: inline-block; border: none; width: 80%; padding: 3px 10px; margin-bottom: 10px; outline: none; font-size: 16px; color: #444; min-height: 40px; padding-top: 5px; margin: 0; }
+.form-chat--search { width: calc(100% - 40px); }
+.form-chat--messagebox { width: calc(100% - 40px); }
 
-.form-chat--messagebox { width: calc(100% - 50px); min-height: 40px; font-size: 16px; padding-top: 5px; margin: 0; }
-
-.button--chat { vertical-align: top; border: none; padding: 2px 6px; border: none; color: #fefefe; margin-left: 11px; margin-top: 5px; padding: 5px 7px; }
-
-.button--chat-search { margin: 0; padding: 4px 8px; }
-
-.button--filter-switch { padding: 0; margin: 0; background-color: transparent; border: none; width: 49%; color: #777; height: 30px; font-weight: bold; color: #eee; }
+.button--chat { vertical-align: top; border: none; color: #fefefe; height: 40px; width: 40px; padding-left: 8px; padding-top: 8px; }
+.button--filter-switch { padding: 0; margin: 0; background-color: transparent; border: none; width: 50%; height: 30px; font-weight: bold; color: #fff; }
 
 .button--filter-switch--active { background-color: #81b863; }
 
