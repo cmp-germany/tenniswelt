@@ -364,8 +364,6 @@ var ChatApp = React.createClass({
   }
 })
 
-console.log('chat-test')
-
 window.reactChatApp = ReactDOM.render(
   <ChatApp />,
   document.getElementById('chat-app')
