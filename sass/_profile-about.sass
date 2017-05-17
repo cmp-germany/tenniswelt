@@ -151,6 +151,33 @@ $profile-fix-size: $profile-picture-size + $profile-buttons-size
 
 // For the Live Page: Company members
 
+#MyWallMid
+
+  .MembersListItem
+    @extend .profile-card__innerDiv
+    position: relative
+    overflow: hidden
+    margin-bottom: 12px
+    padding: 10px 15px
+    height: auto
+
+    .nav-avatar
+      width: 80px !important
+      height: 80px !important
+
+    .kontakt-card__actions
+      right: 5px
+      bottom: 0
+
+    .profile-header__action-button
+      margin-right: 0
+      margin-left: -3px
+
+  .MembersListName
+    color: $color-important
+    &:hover
+      color: $color-primary
+
 .MembersMain
   @extend .profile-infos
   +clearfix
