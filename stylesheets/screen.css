@@ -2390,6 +2390,9 @@ body a:hover { color: #373C53; }
 
 .profile-infos__read { margin-top: 7px; }
 
+.profile-infos__label { font-size: 14px; }
+@media (min-width: 992px) and (max-width: 1229px) { .profile-infos__label { text-align: left !important; } }
+
 .profile-infos__members:before, .profile-infos__members:after { content: " "; display: table; }
 .profile-infos__members:after { clear: both; }
 
